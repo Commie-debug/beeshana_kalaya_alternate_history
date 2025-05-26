@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Beeshana Kalaya: An Alternate History
 
 @start_menu_2
 
@@ -46,27 +46,19 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['left', 'nationalist', 'labour'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
+Q.left_strength = 25;
+Q.left_dissent = 10;
+Q.labor_strength = 15;
 Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.nationalist_strength = 25;
+Q.nationalist_dissent = 5;
 
 // secret events...
 Q.unions_independent = 0;
-Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
-
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
+Q.left_resign = 0;
+Q.nationalist_split = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -623,10 +615,12 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1980
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+Sri Lanka is on the brink. The conservative neo-liberal government of executive president JR Jayawardene has signifcantly privatised the economy, grown closer to the US and enacted a new consitution with an powerful executive. From the north east the TULF became the largest opposition party on a platform of seccession as tamils anger over their discrimation by successive governments, tamil militant groups are gaining popularity from the dissilusioned youth. For now they are preoccupied witb fighting each other than the government though the situation can very quickly expand into an open revolt.
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
+Under their leader Rohana Wijeweera, the JVP garners much support from the rural poor and the clergy in the sinhalese south west. Esspousing a revolutionary and violent form of socialism, they advocate for a revolution to liberate the Sri Lankan people, their views on the tamils are complicated. With their experience from their last revolt they have the potential to cause issues for the conservative UNP.
+
+In all of this, the SLFP stands at a precipice. Having dramaticaly lost in 77' the SLFP is split between sinhalese nationalist, labour unions, militant socialists and reformists. In these unstable times the SLFP will have to carve its own path.
 
 
