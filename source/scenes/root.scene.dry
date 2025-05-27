@@ -86,8 +86,8 @@ Q.iron_front_formed = 0;
 // people's party support
 Q.peoples_party_support = 0;
 // support for nationalizations
-Q.nationalization_support = 0;
-Q.nationalization_adopted = 0;
+Q.nationalization_support = 1;
+Q.nationalization_adopted = 1;
 // moderate economic plan
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
@@ -95,24 +95,20 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.cpsl_relation = 50;
+Q.tulf_relation = 10;
+Q.jvp_relation = 15;
+Q.nssp_relation = 35;
+Q.lssp_relation = 35;
+Q.unp_relation = 10;
+Q.cwc_relation = 10;
 
-Q.kpd_leader = "Thälmann";
-// alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
+Q.unp_leader = "JR Jayawardene";
+Q.jvp_leader = "Rohana Wijeweera";
+Q.tulf_leader = "A. Amirthalingam";
 
 // hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
+Q.jr_relation = 10;
 
 
 // Does the SPD lead in Prussia?
@@ -212,107 +208,114 @@ Q.economic_growth = 4.4;
 // economic expansion timer
 Q.economic_expansion = 0;
 
-// quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
-Q.workers_qol = 100;
-Q.rural_qol = 100;
-Q.unemployed_qol = 100;
-Q.old_middle_qol = 100;
-Q.new_middle_qol = 100;
+Q.classes = ['upper', 'middle', 'state', 'worker', 'rural', 'unemployed', 'clergy'];
+Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'other'];
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
-
-// TODO: add 'sapd' later on
-Q.sapd_formed = 0;
+// if SLPP, SLMP formed
+Q.slpp_formed = 0;
+Q.slmp_formed = 0;
+Q.slmc_formed = 0;
+Q.npp_formed = 0;
+Q.tna_formed = 0;
+Q.eros_formed = 0;
+Q.dplf_formed = 0;
+Q.eros_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
+Q.workers_slfp = 60;
+Q.workers_jvp = 20;
+Q.workers_cpsl = 5;
+Q.workers_lssp = 0;
+Q.workers_nssp = 0;
+Q.workers_tulf = 5;
+Q.workers_cwc = 0;
+Q.workers_unp = 10;
 Q.workers_other = 10;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.middle_slfp = 60;
+Q.middle_jvp = 20;
+Q.middle_cpsl = 5;
+Q.middle_lssp = 0;
+Q.middle_nssp = 0;
+Q.middle_tulf = 5;
+Q.middle_cwc = 0;
+Q.middle_unp = 10;
+Q.middle_other = 10;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.state_slfp = 60;
+Q.state_jvp = 20;
+Q.state_cpsl = 5;
+Q.state_lssp = 0;
+Q.state_nssp = 0;
+Q.state_tulf = 5;
+Q.state_cwc = 0;
+Q.state_unp = 10;
+Q.state_other = 10;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
+Q.upper_slfp = 60;
+Q.upper_jvp = 20;
+Q.upper_cpsl = 5;
+Q.upper_lssp = 0;
+Q.upper_nssp = 0;
+Q.upper_tulf = 5;
+Q.upper_cwc = 0;
+Q.upper_unp = 10;
+Q.upper_other = 10;
+
+Q.rural_slfp = 60;
+Q.rural_jvp = 20;
+Q.rural_cpsl = 5;
+Q.rural_lssp = 0;
+Q.rural_nssp = 0;
+Q.rural_tulf = 5;
+Q.rural_cwc = 0;
+Q.rural_unp = 10;
 Q.rural_other = 10;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.clergy_slfp = 60;
+Q.clergy_jvp = 20;
+Q.clergy_cpsl = 5;
+Q.clergy_lssp = 0;
+Q.clergy_nssp = 0;
+Q.clergy_tulf = 5;
+Q.clergy_cwc = 0;
+Q.clergy_unp = 10;
+Q.clergy_other = 10;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.unemployed_slfp = 60;
+Q.unemployed_jvp = 20;
+Q.unemployed_cpsl = 5;
+Q.unemployed_lssp = 0;
+Q.unemployed_nssp = 0;
+Q.unemployed_tulf = 5;
+Q.unemployed_cwc = 0;
+Q.unemployed_unp = 10;
+Q.unemployed_other = 10;
 
-
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
+// Current Parliment composition
+// % of Parliment in Jan 1980
 // source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
-Q.other_r = 9;
+Q.slfp_r = 29.72;
+Q.jvp_r = 0;
+Q.cpsl_r = 0;
+Q.lssp_r = 0;
+Q.nssp_r = 0;
+Q.tulf_r = 18;
+Q.cwc_r = 1;
+Q.unp_r = 50.92;
+Q.other_r = 1;
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
-
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
-
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
+Q.old_slfp_r = 29.72;
+Q.old_jvp_r = 0;
+Q.old_cpsl_r = 0;
+Q.old_lssp_r = 0;
+Q.old_nssp_r = 0;
+Q.old_tulf_r = 18;
+Q.old_cwc_r = 1;
+Q.old_unp_r = 50.92;
+Q.old_other_r = 1;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -323,17 +326,20 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
-Q.z_in_government = 1;
-Q.ddp_in_government = 0;
-Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
-Q.kpd_in_government = 0;
-Q.nsdap_in_government = 0;
+Q.president = "JR Jayawardene";
+// starting prime_minister: Ranasinghe Premadasa
+Q.prime_minister = "Ranasinghe Premadasa";
+Q.prime_minister_party = 'UNP';
+Q.slfp_in_government = 0;
+Q.jvp_in_government = 0;
+Q.cpsl_in_government = 0;
+Q.lssp_in_government = 0;
+Q.nssp_in_government = 0;
+Q.tulf_in_government = 0;
+Q.cwc_in_government = 1;
+Q.unp_in_government = 1;
+
+Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'other'];
 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
@@ -356,7 +362,7 @@ Q.in_minority_government = 0;
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
 // dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
+Q.jvp_coalition_dissent = 0;
 
 // does the SPD tolerate the government even if it is not a participant?
 Q.spd_toleration = 0;
