@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1980;
+Q.year = 1981;
 Q.month = 1;
 Q.week = 1
 // how many actions have been taken this month?
@@ -617,14 +617,7 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1980
+= 1981
 
-Sri Lanka is on the brink of chaos. The conservative UNP government of JR Jayawardene enacted a new constiution establishing a powerfull presidency. With their supermajority in parliment they whield near full control of the state. With their control, much of the economy has been privatised, free trade zones established for the the exploitation of workers and independent unions have been further supressed. While they may have came to power on a wave of popularity, their recent actions against critiques has generated little positivity for the future.
-
-From the north east the TULF became the largest opposition party on a platform of seccession as tamils anger over their discrimation by successive governments and the requring pogroms, tamil militant groups are gaining popularity from the dissilusioned youth who seek total liberation from Sri Lanka. For now they are preoccupied witb fighting each other than the government though the situation can very quickly expand into an open civil conflict.
-
-Under their leader Rohana Wijeweera, the relegalised JVP garners much support from the rural poor and the clergy in the sinhalese south west. Esspousing revolutionary socialism, they advocate for a revolution to liberate the Sri Lankan people, their views on the tamils vary from comradery to open hatred. With their experience from their last revolt they have the potential to cause further issues for the UNP.
-
-In all of this, the SLFP stands at a cross roads. Having dramaticaly lost in 77' and our main leader Mrs Sirimavo Bandaranaiake's civil liberties by the UNP, we are split between nationalists led by her son Anura, the reformists led by her daughter Chandrika, the trade unions and militant socialists. For now we must prepare for the nations first elections, perhaps parliment or the presidency may sway towards us in these unstable times?
-
+Sri Lanka is on the brink of chaos. WIP
 
