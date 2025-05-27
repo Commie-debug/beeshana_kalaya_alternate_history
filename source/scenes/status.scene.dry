@@ -73,10 +73,6 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-
-Q.classes = ['upper', 'middle', 'state', 'worker', 'rural', 'unemployed', 'clergy'];
-Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'other'];
-
 {!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">Z</span>!}: [+ jvp_relation : relationships +]
 
 {!<span class="tooltip-text" title="Communist Party Of Sri Lanka">Z</span>!}: [+ cpsl_relation : relationships +]
