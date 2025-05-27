@@ -37,22 +37,23 @@ Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Reichstag composition:
 
-# 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_r +]%
-# 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
-# 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
+
+{!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ spd_r +]%
+
+{!<span class="tooltip-text" title="United National Party">UNP</span>!}: [+ z_r +]%
+
+{!<span class="tooltip-text" title="Tamil United Liberation Front">TULF</span>!}: [+ kpd_r +]%
+
+{!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">JVP</span>!}: [+ ddp_r +]%
+
+{!<span class="tooltip-text" title="Communist Party of Sri Lanka">CPSL</span>!}: [+ dvp_r +]%
+
+{!<span class="tooltip-text" title="Lanka Sama Samaja Party">LSSP</span>!}: [+ dnvp_r +]%
+
+{!<span class="tooltip-text" title="Nava Sama Samaja Party">NSSP</span>!}: [+ nsdap_r +]%
+
+{!<span class="tooltip-text" title="Ceylon Workers Congress">CWC</span>!}: [+ nsdap_r +]%
+
 Others: [+ other_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
@@ -75,19 +76,19 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">Z</span>!}: [+ jvp_relation : relationships +]
+{!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">JVP</span>!}: [+ jvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party Of Sri Lanka">Z</span>!}: [+ cpsl_relation : relationships +]
+{!<span class="tooltip-text" title="Communist Party Of Sri Lanka">CPSL</span>!}: [+ cpsl_relation : relationships +]
 
-{!<span class="tooltip-text" title="Lanka Sama Samaja Party">Z</span>!}: [+ lssp_relation : relationships +]
+{!<span class="tooltip-text" title="Lanka Sama Samaja Party">LSSP</span>!}: [+ lssp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Nava Sama Samaja Party">Z</span>!}: [+ nssp_relation : relationships +]
+{!<span class="tooltip-text" title="Nava Sama Samaja Party">NSSP</span>!}: [+ nssp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Tamil United Liberation Front">Z</span>!}: [+ tulf_relation : relationships +]
+{!<span class="tooltip-text" title="Tamil United Liberation Front">TULF</span>!}: [+ tulf_relation : relationships +]
 
-{!<span class="tooltip-text" title="Ceylon Workers Congress">Z</span>!}: [+ cwc_relation : relationships +]
+{!<span class="tooltip-text" title="Ceylon Workers Congress">CWC</span>!}: [+ cwc_relation : relationships +]
 
-{!<span class="tooltip-text" title="United National Party">Z</span>!}: [+ unp_relation : relationships +]
+{!<span class="tooltip-text" title="United National Party">UNP</span>!}: [+ unp_relation : relationships +]
 
 = Internal Factions of the SLFP
 
@@ -95,7 +96,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Trade Unions and Labour organisations">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Nationalists">Reformist</span>!} strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Nationalists">Nationalist</span>!} strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
 
 @paramilitaries
