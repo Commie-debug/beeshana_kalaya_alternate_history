@@ -590,7 +590,7 @@ For more information on the politics and government of Sri Lanka, see the "Libra
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; Q.cwc_relation = 10; Q.unp_relation = 10; Q.lssp_relation = 35; Q.nssp_relation = 35; Q.jvp_relation = 15; Q.tulf_relation = 10; Q.cpsl_relation = 50; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; budget = 5;
 go-to: 1928_main
 
 @1928_hard
