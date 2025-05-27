@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-Week[+ week +] [+ month : month +] [+ year +]
+Week [+ week +] [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
@@ -67,11 +67,13 @@ Inflation: [+ inflation_2 +]%
 
 Economic growth: [+ economic_growth_2 +]%
 
+
 # = Public Opinion
 
 @politics
 
 = Inter-party Relations
+
 
 {!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">Z</span>!}: [+ jvp_relation : relationships +]
 
@@ -86,7 +88,6 @@ Economic growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="Ceylon Workers Congress">Z</span>!}: [+ cwc_relation : relationships +]
 
 {!<span class="tooltip-text" title="United National Party">Z</span>!}: [+ unp_relation : relationships +]
-
 
 = Internal Factions of the SLFP
 
