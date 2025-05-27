@@ -139,19 +139,19 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 @tamil
 #= Tamil Situation
-WIP
+#WIP
 
 @interior
 #= Interior Polices
-WIP
+#WIP
 
 @economy
 #= Economic Situation
-WIP
+#WIP
 
 @territory
 #= Territorial Control
-WIP
+#WIP
 
 @polls
 on-arrival: {!
