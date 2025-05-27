@@ -10,16 +10,3 @@ tags: event
 = Rubber rice pact Expires
 
 The 1952 Ceylon-China trade agreement has offically expired. 
-
-Eventually...
-
-- @crushed
-- @long_war
-- @sdapo_victory
-
-@crushed
-title: The rebellious Schutzbund has been crushed.
-on-arrival: austria_defeat = 1
-view-if: sdapo_strength < 4
-
-The uprising lasted for no more than a few days before it was crushed. The Schutzbund and SDAPÖ were too weak and too divided to stand against the forces of the state.
