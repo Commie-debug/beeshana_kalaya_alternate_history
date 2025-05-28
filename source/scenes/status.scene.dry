@@ -20,7 +20,7 @@ Week [+ week +] [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
-SlFP position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+SLFP position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
 [? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -35,7 +35,7 @@ President: [+ president +]
 
 Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
-Reichstag composition:
+Parliament composition:
 
 
 {!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ spd_r +]%
@@ -156,21 +156,19 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+SLFP: [+ slfp_votes +]%
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+UNP: [+ unp_votes +]%
 
-Z + BVP: [+ z_votes +]%
+TULF: [+ tulf_votes +]%
 
-KPD: [+ kpd_votes +]%
+CPSL: [+ cpsl_votes +]%
 
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
+LSSP: [+ lssp_votes +]%
 
-DVP: [+ dvp_votes +]%
+NSSP: [+ nssp_votes +]%
 
-DNVP: [+ dnvp_votes +]%
-
-NSDAP: [+ nsdap_votes +]%
+JVP: [+ jvp_votes +]%
 
 Others: [+ other_votes +]%
 
