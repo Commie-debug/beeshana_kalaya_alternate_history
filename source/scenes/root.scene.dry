@@ -102,7 +102,7 @@ Q.yellowcats_formed = 0;
 Q.eagles_formed = 0;
 Q.scorpions_formed = 0;
 
-Q.prra_formed = 0;
+Q.prra_formed = 1;
 Q.djv_formed = 0;
 Q.ppat_formed = 0;
 
