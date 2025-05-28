@@ -62,36 +62,6 @@ Q.unions_independent = 0;
 Q.left_resign = 0;
 Q.nationalist_split = 0;
 
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
-Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
-Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
-Q.radicalization = 0;
-// Support for the WTB plan and proto-Keynesian works creation plans in general
-Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
-Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1928
-Q.democratization = 0;
-// Support for a communist coalition relative to 1928
-Q.communist_coalition = 0;
-// economic_plan: have we adopted *any* economic plan?
-// 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
-Q.economic_plan = 0;
-// have we officially adopted the WTB plan?
-Q.wtb_adopted = 0;
-// have we formed the iron front?
-Q.iron_front_formed = 0;
-// people's party support
-Q.peoples_party_support = 0;
-// support for nationalizations
-Q.nationalization_support = 1;
-Q.nationalization_adopted = 1;
-// moderate economic plan
-Q.moderate_plan_support = 0;
-Q.moderate_plan_adopted = 0;
-
 // organizations
 
 // inter-party relations
@@ -111,44 +81,64 @@ Q.tulf_leader = "A. Amirthalingam";
 // hmm... maybe we can play nice with Hindenburg???
 Q.jr_relation = 10;
 
+// The array of forces - paramilitary groups & rebels(sinhalese)
+// The array of forces - paramilitary groups & rebels(sinhalese)
+Q.jss_strength = 2000;
+Q.jss_militancy = 0.69;
 
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
+Q.slfpt_strenght = 2000;
+Q.slfpt_militancy = 0.24;
 
-// The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
-Q.women_in_rb = 0;
-Q.rb_banned = 0;
-Q.sh_strength = 500;
-Q.sh_militancy = 0.5;
-Q.sh_banned = 0;
-Q.sh_banned_prussia = 0;
-Q.sa_strength = 80;
-Q.sa_militancy = 0.5;
-Q.sa_banned = 0;
-Q.sa_banned_prussia = 0;
-Q.rfb_strength = 130;
-Q.rfb_militancy = 0.5;
-Q.rfb_banned = 0;
-Q.rfb_banned_prussia = 0;
+Q.unpt_strenght = 2000;
+Q.unpt_militancy = 0.24;
 
-Q.interior_police_strength = 50;
-Q.interior_police_militancy = 1;
-Q.interior_police_loyalty = 0.45;
+Q.jvpt_strenght = 2000;
+Q.jvpt_militancy = 0.24;
 
-Q.prussian_police_strength = 90;
-Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
+Q.epdp_formed = 0;
+Q.tmvp_formed = 0;
+Q.blackcats_formed = 0;
+Q.yellowcats_formed = 0;
+Q.eagles_formed = 0;
+Q.scorpions_formed = 0;
 
-// strength includes actual military and de facto reserves?
-Q.reichswehr_strength = 100;
-Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.prra_formed = 0;
+Q.djv_formed = 0;
+Q.ppat_formed = 0;
+
+//tamil rebel groups
+
+Q.ltte_strenght = 200;
+Q.ltte_militancy = 0.24;
+
+Q.eros_strenght = 200;
+Q.eros_militancy = 0.24;
+
+Q.telo_strenght = 200;
+Q.telo_militancy = 0.24;
+
+Q.eprlf_strenght = 200;
+Q.eprlf_militancy = 0.24;
+
+Q.plote_strenght = 200;
+Q.plote_militancy = 0.24;
+
+Q.eprlf_formed = 0;
+Q.endlf_formed = 0;
+Q.tna_formed = 0;
+
+// army and official paramilitaries
+
+Q.homeg_strength = 100;
+Q.homeg_loyalty = 0.7;
+
+Q.civilsec_formed = 0;
+Q.stf_formed = 0;
+
+Q.slp_strength = 10;
+Q.slp_loyalty = 0.7;
+Q.slaf_strength = 100;
+Q.slaf_loyalty = 0.7;
 
 // The state of the country
 
@@ -223,7 +213,6 @@ Q.slpp_formed = 0;
 Q.slmp_formed = 0;
 Q.slmc_formed = 0;
 Q.npp_formed = 0;
-Q.tna_formed = 0;
 Q.eros_formed = 0;
 Q.dplf_formed = 0;
 Q.pflt_formed = 0;
