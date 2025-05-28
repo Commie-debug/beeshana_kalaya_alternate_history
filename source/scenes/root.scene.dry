@@ -117,9 +117,6 @@ Q.eros_militancy = 0.24;
 Q.telo_strenght = 200;
 Q.telo_militancy = 0.24;
 
-Q.eprlf_strenght = 200;
-Q.eprlf_militancy = 0.24;
-
 Q.plote_strenght = 200;
 Q.plote_militancy = 0.24;
 
