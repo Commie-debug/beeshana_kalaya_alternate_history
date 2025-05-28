@@ -18,7 +18,7 @@ if (Q.economic_growth) {
 
 Week [+ week +] [+ month : month +] [+ year +]
 
-Current situation in the North-East: [+ tamil_war : war +]
+Current situation in the North-East: [+ tamil_war +]
 
 Resources available: [+ resources +]
 
