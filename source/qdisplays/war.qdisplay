@@ -4,6 +4,7 @@
 (..0.05) None
 (0.05..0.14) Ceasefire
 (0.14..0.24) Skirmishes
-(0.24..0.44) Regular Clashes
-(0.44..0.69) Intense Clashes
-(0.69..1) Full Scale War
+(0.24..0.44) Skirmishes
+(0.44..0.69) Regular Clashes
+(0.69..1) Intense ClashesFull Scale War
+(1..) Full Scale War
