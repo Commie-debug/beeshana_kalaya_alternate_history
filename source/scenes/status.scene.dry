@@ -38,21 +38,23 @@ Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 Parliament composition:
 
 
-{!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ spd_r +]%
+{!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ slfp_r +]%
 
-{!<span class="tooltip-text" title="United National Party">UNP</span>!}: [+ z_r +]%
+{!<span class="tooltip-text" title="United National Party">UNP</span>!}: [+ unp_r +]%
 
-{!<span class="tooltip-text" title="Tamil United Liberation Front">TULF</span>!}: [+ kpd_r +]%
+{!<span class="tooltip-text" title="Tamil United Liberation Front">TULF</span>!}: [+ tulf_r +]%
 
-{!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">JVP</span>!}: [+ ddp_r +]%
+{!<span class="tooltip-text" title="All Ceylon Tamil Congress">CWC</span>!}: [+ actc_r +]%
 
-{!<span class="tooltip-text" title="Communist Party of Sri Lanka">CPSL</span>!}: [+ dvp_r +]%
+{!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">JVP</span>!}: [+ jvp_r +]%
 
-{!<span class="tooltip-text" title="Lanka Sama Samaja Party">LSSP</span>!}: [+ dnvp_r +]%
+{!<span class="tooltip-text" title="Communist Party of Sri Lanka">CPSL</span>!}: [+ cpsl_r +]%
 
-{!<span class="tooltip-text" title="Nava Sama Samaja Party">NSSP</span>!}: [+ nsdap_r +]%
+{!<span class="tooltip-text" title="Lanka Sama Samaja Party">LSSP</span>!}: [+ lssp_r +]%
 
-{!<span class="tooltip-text" title="Ceylon Workers Congress">CWC</span>!}: [+ nsdap_r +]%
+{!<span class="tooltip-text" title="Nava Sama Samaja Party">NSSP</span>!}: [+ nssp_r +]%
+
+{!<span class="tooltip-text" title="Ceylon Workers Congress">CWC</span>!}: [+ cwc_r +]%
 
 Others: [+ other_r +]%
 
@@ -85,6 +87,8 @@ Economic growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="Nava Sama Samaja Party">NSSP</span>!}: [+ nssp_relation : relationships +]
 
 {!<span class="tooltip-text" title="Tamil United Liberation Front">TULF</span>!}: [+ tulf_relation : relationships +]
+
+{!<span class="tooltip-text" title="All Ceylon Tamil Congress">ACTC</span>!}: [+ actc_relation : relationships +]
 
 {!<span class="tooltip-text" title="Ceylon Workers Congress">CWC</span>!}: [+ cwc_relation : relationships +]
 
