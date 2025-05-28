@@ -194,6 +194,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 
 Support for the Republic: [+ pro_republic_disp +]%
 
+# = Tamil Situation
 
 @tamil
 on-arrival: {!
@@ -204,13 +205,10 @@ if (Q.tamil_war) {
 
 = Tamil Situation
 
-
-Current situation in the North-East: [+ tamil_war_2 : war +]
-
+Current situation in the North-East: [+ tamil_war : war +]
 
 @interior
 
 = Interior Polices
-
 
 We are fucked bro
