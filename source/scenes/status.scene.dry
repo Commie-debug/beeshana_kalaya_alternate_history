@@ -197,16 +197,8 @@ Support for the Republic: [+ pro_republic_disp +]%
 # = Tamil Situation
 
 @tamil
-on-arrival: {!
-if (Q.tamil_war) {
-    Q.tamil_war_2 = Q.tamil_war.toFixed(1);
-}
-!}
 
 = Tamil Situation
-
-
-They hate us bro V2
 
 Current situation in the North-East: [+ tamil_war_2 : war +]
 
