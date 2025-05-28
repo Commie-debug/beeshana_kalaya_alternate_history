@@ -60,10 +60,8 @@ Q.nationalist_dissent = 5;
 // tamil situattion
 Q.tamil_war=0.04
 
-
 //southern/sinhalese/jvp situatiion
 Q.jvp_war=0.02
-
 
 // secret events...
 Q.unions_independent = 0;
