@@ -203,6 +203,7 @@ if (Q.tamil_war) {
 !}
 
 = Tamil Situation
+Current situation in the North-East: [+ rb_militancy : militancy +]
 
 Current situation in the North-East: [+ tamil_war_2 : war +]
 
