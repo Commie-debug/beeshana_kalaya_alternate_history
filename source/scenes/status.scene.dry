@@ -166,6 +166,8 @@ UNP: [+ unp_votes +]%
 
 TULF: [+ tulf_votes +]%
 
+TULF: [+ actc_votes +]%
+
 CPSL: [+ cpsl_votes +]%
 
 LSSP: [+ lssp_votes +]%
@@ -192,11 +194,18 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 
 Support for the Republic: [+ pro_republic_disp +]%
 
+
 @tamil
+on-arrival: {!
+if (Q.tamil_war) {
+    Q.tamil_war_2 = Q.tamil_war.toFixed(1);
+}
+!]
 
 = Tamil Situation
 
-Current situation in the North-East: [+ tamil_war : war +]
+Current situation in the North-East: [+ tamil_war_2 : war +]
+
 
 @interior
 
