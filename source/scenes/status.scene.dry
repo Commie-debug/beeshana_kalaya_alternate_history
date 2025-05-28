@@ -37,7 +37,6 @@ Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Parliament composition:
 
-
 {!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ slfp_r +]%
 
 {!<span class="tooltip-text" title="United National Party">UNP</span>!}: [+ unp_r +]%
@@ -120,6 +119,7 @@ if (Q.sa_strength) {
 !}
 
 = Paramilitaries
+
 
 {!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
 
@@ -204,11 +204,13 @@ if (Q.tamil_war) {
 
 = Tamil Situation
 
+
 Current situation in the North-East: [+ tamil_war_2 : war +]
 
 
 @interior
 
 = Interior Polices
+
 
 We are fucked bro
