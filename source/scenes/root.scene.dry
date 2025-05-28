@@ -57,6 +57,9 @@ Q.labor_dissent = 5;
 Q.nationalist_strength = 25;
 Q.nationalist_dissent = 5;
 
+// tamil situattion
+Q.war=0.04
+
 // secret events...
 Q.unions_independent = 0;
 Q.left_resign = 0;
