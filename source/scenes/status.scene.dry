@@ -18,6 +18,8 @@ if (Q.economic_growth) {
 
 Week [+ week +] [+ month : month +] [+ year +]
 
+Current situation in the North-East: [+ tamil_war : war +]
+
 Resources available: [+ resources +]
 
 SLFP position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
