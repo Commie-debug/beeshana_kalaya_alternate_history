@@ -166,7 +166,7 @@ UNP: [+ unp_votes +]%
 
 TULF: [+ tulf_votes +]%
 
-TULF: [+ actc_votes +]%
+ACTC: [+ actc_votes +]%
 
 CPSL: [+ cpsl_votes +]%
 
@@ -197,12 +197,25 @@ Support for the Republic: [+ pro_republic_disp +]%
 
 @tamil
 on-arrival: {!
+if (Q.rb_strength) {
+    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+}
+if (Q.rfb_strength) {
+    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
+}
+if (Q.sh_strength) {
+    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
+}
+if (Q.sa_strength) {
+    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+}
 if (Q.tamil_war) {
     Q.tamil_war_2 = Q.tamil_war.toFixed(1);
 }
 !}
 
 = Tamil Situation
+
 Current situation in the North-East: [+ rb_militancy : militancy +]
 
 Current situation in the North-East: [+ tamil_war_2 : war +]
