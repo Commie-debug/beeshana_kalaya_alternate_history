@@ -62,7 +62,7 @@ Q.tamil_war=0.04
 
 
 //southern/sinhalese/jvp situatiion
-Q.jvp_war=0.04
+Q.jvp_war=0.02
 
 
 // secret events...
@@ -217,7 +217,7 @@ Q.economic_growth = 4.4;
 Q.economic_expansion = 0;
 
 Q.classes = ['upper', 'middle', 'state', 'worker', 'rural', 'unemployed', 'clergy'];
-Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'other'];
+Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
 
 // if SLPP, SLMP formed
 Q.slpp_formed = 0;
@@ -239,6 +239,7 @@ Q.workers_nssp = 0;
 Q.workers_tulf = 5;
 Q.workers_cwc = 0;
 Q.workers_unp = 10;
+Q.workers_actc = 10;
 Q.workers_other = 10;
 
 Q.middle_slfp = 60;
@@ -249,6 +250,7 @@ Q.middle_nssp = 0;
 Q.middle_tulf = 5;
 Q.middle_cwc = 0;
 Q.middle_unp = 10;
+Q.middle_actc = 10;
 Q.middle_other = 10;
 
 Q.state_slfp = 60;
@@ -259,6 +261,7 @@ Q.state_nssp = 0;
 Q.state_tulf = 5;
 Q.state_cwc = 0;
 Q.state_unp = 10;
+Q.state_actc = 10;
 Q.state_other = 10;
 
 Q.upper_slfp = 60;
@@ -269,6 +272,7 @@ Q.upper_nssp = 0;
 Q.upper_tulf = 5;
 Q.upper_cwc = 0;
 Q.upper_unp = 10;
+Q.upper_actc = 10;
 Q.upper_other = 10;
 
 Q.rural_slfp = 60;
@@ -279,6 +283,7 @@ Q.rural_nssp = 0;
 Q.rural_tulf = 5;
 Q.rural_cwc = 0;
 Q.rural_unp = 10;
+Q.rural_actc = 10;
 Q.rural_other = 10;
 
 Q.clergy_slfp = 60;
@@ -289,6 +294,7 @@ Q.clergy_nssp = 0;
 Q.clergy_tulf = 5;
 Q.clergy_cwc = 0;
 Q.clergy_unp = 10;
+Q.clergy_actc = 10;
 Q.clergy_other = 10;
 
 Q.unemployed_slfp = 60;
@@ -299,6 +305,7 @@ Q.unemployed_nssp = 0;
 Q.unemployed_tulf = 5;
 Q.unemployed_cwc = 0;
 Q.unemployed_unp = 10;
+Q.unemployed_actc = 10;
 Q.unemployed_other = 10;
 
 
@@ -313,6 +320,7 @@ Q.nssp_r = 0;
 Q.tulf_r = 18;
 Q.cwc_r = 1;
 Q.unp_r = 50.92;
+Q.actc_r = 0;
 Q.other_r = 1;
 
 // diff from prev
@@ -324,6 +332,7 @@ Q.old_nssp_r = 0;
 Q.old_tulf_r = 18;
 Q.old_cwc_r = 1;
 Q.old_unp_r = 50.92;
+Q.old_actc_r = 0;
 Q.old_other_r = 1;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
@@ -347,6 +356,7 @@ Q.nssp_in_government = 0;
 Q.tulf_in_government = 0;
 Q.cwc_in_government = 1;
 Q.unp_in_government = 1;
+Q.actc_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
