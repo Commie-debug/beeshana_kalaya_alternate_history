@@ -57,12 +57,6 @@ Q.labor_dissent = 5;
 Q.nationalist_strength = 25;
 Q.nationalist_dissent = 5;
 
-// tamil situattion
-Q.tamil_war=0.04
-
-//southern/sinhalese/jvp situatiion
-Q.jvp_war=0.02
-
 // secret events...
 Q.unions_independent = 0;
 Q.left_resign = 0;
@@ -157,6 +151,12 @@ Q.reichswehr_militancy = 5;
 Q.reichswehr_loyalty = 0.2;
 
 // The state of the country
+
+// tamil situattion
+Q.tamil_war=0.14
+
+//southern/sinhalese/jvp situatiion
+Q.jvp_war=0.05
 
 // popular opinion
 // national ideology - on a binary scale
