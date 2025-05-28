@@ -104,17 +104,29 @@ Economic growth: [+ economic_growth_2 +]%
 
 @paramilitaries
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.slfpt_strength) {
+    Q.slfpt_strength_2 = Q.slfpt_strength.toFixed(1);
 }
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
+if (Q.jss_strength) {
+    Q.jss_strength_2 = Q.jss_strength.toFixed(1);
 }
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
+if (Q.unpt_strength) {
+    Q.unpt_strength_2 = Q.unpt_strength.toFixed(1);
 }
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+if (Q.jvpt_strength) {
+    Q.jvpt_strength_2 = Q.jvpt_strength.toFixed(1);
+}
+if (Q.ltte_strength) {
+    Q.ltte_strength_2 = Q.ltte_strength.toFixed(1);
+}
+if (Q.telo_strength) {
+    Q.telo_strength_2 = Q.telo_strength.toFixed(1);
+}
+if (Q.eros_strength) {
+    Q.eros_strength_2 = Q.eros_strength.toFixed(1);
+}
+if (Q.plote_strength) {
+    Q.plote_strength_2 = Q.plote_strength.toFixed(1);
 }
 !}
 
@@ -142,8 +154,17 @@ JVP Thugs Militarization: [+ jvpt_militancy : militancy +]
 
 LTTE Militarization: [+ ltte_militancy : militancy +]
 
+{!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!} Strength: [+ eros_strength_2 +] thousand
 
+EROS Militarization: [+ eros_militancy : militancy +]
 
+{!<span class="tooltip-text" title="Tamil Eelam Liberation Organisation">TELO</span>!} Strength: [+ telo_strength_2 +] thousand
+
+TELO Militarization: [+ telo_militancy : militancy +]
+
+{!<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam">PLOTE</span>!} Strength: [+ plote_strength_2 +] thousand
+
+PLOTE Militarization: [+ plote_militancy : militancy +]
 
 = Military & State Paramilitaries
 
