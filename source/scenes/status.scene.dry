@@ -57,17 +57,19 @@ Parliament composition:
 
 Others: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
-
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Economics
 
 Inflation: [+ inflation_2 +]%
 
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+Unemployment: [+ unemployed_2 +]% 
 
 Economic growth: [+ economic_growth_2 +]%
+
+Government Budget: [+ budget +]
+
+Government Trade: [+ trade +]
 
 
 # = Public Opinion
