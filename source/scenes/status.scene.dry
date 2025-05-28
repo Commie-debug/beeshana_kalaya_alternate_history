@@ -120,28 +120,45 @@ if (Q.sa_strength) {
 
 = Political Paramilitaries
 
-
 {!<span class="tooltip-text" title="Thugs affiliated with the SLFP.">SLFP Thugs</span>!} Strength: [+ slfpt_strength_2 +] thousand
 
-SLFP Thugs: [+ slfpt_militancy : militancy +]
+SLFP Thugs Militarization: [+ slfpt_militancy : militancy +]
 
-[? if prra_formed == 1 : 
-    {!<span class="tooltip-text" title="Thugs affiliated with the SLFP.">SLFP Thugs</span>!} Strength: [+ slfpt_strength_2 +] thousand
-    <br>
-    SLFP Thugs: [+ slfpt_militancy : militancy +]
-?]
+{!<span class="tooltip-text" title="UNP Union/Paramilitary.">JSS</span>!} Strength: [+ jss_strength_2 +] thousand
 
-= Official military/paramilitaries
+JSS Militarization: [+ jss_militancy : militancy +]
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+{!<span class="tooltip-text" title="Thugs affiliated with the SLFP.">UNP Thugs</span>!} Strength: [+ unpt_strength_2 +] thousand
 
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+UNP Thugs Militarization: [+ unpt_militancy : militancy +]
 
-Prussian police: [+ prussian_police_strength +] thousand members.
+{!<span class="tooltip-text" title="Thugs affiliated with the JVP.">JVP Thugs</span>!} Strength: [+ jvpt_strength_2 +] thousand
 
-Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
+JVP Thugs Militarization: [+ jvpt_militancy : militancy +]
 
-[? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
+= Tamil Militant Groups
+
+{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ LTTE_strength_2 +] thousand
+
+LTTE Militarization: [+ ltte_militancy : militancy +]
+
+
+
+
+= Military & State Paramilitaries
+
+
+Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops.
+
+SLAF Loyalty: [+ slaf_loyalty : loyalty +]
+
+Sri Lanka Police: [+ slp_strength +] thousand members.
+
+Sri Lanka Police loyalty: [+ slp_loyalty : loyalty +]
+
+Home Guard: [+ homeg_strength +] thousand troops.
+
+Home Guard Loyalty: [+ homeg_loyalty : loyalty +]
 
 @polls
 on-arrival: {!
