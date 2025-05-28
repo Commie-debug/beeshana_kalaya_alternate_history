@@ -125,8 +125,11 @@ if (Q.sa_strength) {
 
 SLFP Thugs: [+ slfpt_militancy : militancy +]
 
-[? if prra_formed : <span class="tooltip-text" title="Paramilitary of the SLFP">PRRA</span>!} Strength: [+ slfpt_strength_2 +] thousand ?]
-[? if prra_formed : PRRA: [+ slfpt_militancy : militancy +] ?]
+[? if prra_formed == 1 : 
+    {!<span class="tooltip-text" title="Thugs affiliated with the SLFP.">SLFP Thugs</span>!} Strength: [+ slfpt_strength_2 +] thousand
+    <br>
+    SLFP Thugs: [+ slfpt_militancy : militancy +]
+?]
 
 = Official military/paramilitaries
 
