@@ -200,7 +200,7 @@ on-arrival: {!
 if (Q.tamil_war) {
     Q.tamil_war_2 = Q.tamil_war.toFixed(1);
 }
-!]
+!}
 
 = Tamil Situation
 
