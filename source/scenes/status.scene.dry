@@ -276,6 +276,9 @@ Q.economic_growth_2 = '0';
 if (Q.economic_growth) {
     Q.economic_growth_2 = Q.economic_growth.toFixed(1);
 }
+if (Q.inequality) {
+    Q.inequality_2 = Q.inequality.toFixed(1);
+}
 !}
 
 = Economy
@@ -292,5 +295,5 @@ Terms of Trade: [+ trade +]
 
 Foreign Debt: [+ foreign_debt +]% of GDP
 
-Inequality: [+ inequality : equality +]
+Inequality: [+ inequality_2 : equality +]
 
