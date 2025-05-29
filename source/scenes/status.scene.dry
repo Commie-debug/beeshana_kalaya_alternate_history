@@ -226,6 +226,7 @@ Support for the government: [+ gov_support_disp +]%
 # = Tamil Situation
 
 @tamil
+on-arrival: {!
 if (Q.tamil_war) {
     Q.tamil_war_2 = Q.tamil_war.toFixed(1);
 }
