@@ -295,7 +295,7 @@ Government Budget: [+ budget +]
 
 Terms of Trade: [+ trade +]
 
-Foreign Debt: [+ foreign_debt +]% of GDP
+Foreign Debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
