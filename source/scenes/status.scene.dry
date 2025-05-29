@@ -288,4 +288,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 Government Budget: [+ budget +]
 
-Government Trade: [+ trade +]
+Terms of Trade: [+ trade +]
+
+Foreign Debt: [+ foreign_debt +]% of GDP
+
+Inequality: [+ inequality +]
+
