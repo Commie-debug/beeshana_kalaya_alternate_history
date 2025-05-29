@@ -56,8 +56,7 @@ Q.nationalist_strength = 25;
 Q.nationalist_dissent = 5;
 
 // secret events...
-Q.unions_independent = 0;
-Q.left_resign = 0;
+Q.left_split = 0;
 Q.nationalist_split = 0;
 
 // organizations
@@ -137,19 +136,21 @@ Q.slaf_loyalty = 0.7;
 // The state of the country
 
 // tamil situation
-Q.tamil_war=0.14
+Q.tamil_war=0.14;
 
 //southern/sinhalese/jvp situatiion
-Q.jvp_war=0.00
+Q.jvp_war=0.00;
 
 // popular opinion
 // national ideology - on a binary scale
 // sinhalese nationalism (as a proportion of sinhalese population)
 Q.sinhala_nationalism = 60;
 // tamil nationalism (as a proportion of tamil population)
-Q.tamil_nationalism = 75
+Q.tamil_nationalism = 75;
 // socialism vs capitalism
 Q.socialism = 40;
+// government support
+Q.gov_support = 60;
 
 Q.emergency_rule = 0;
 
