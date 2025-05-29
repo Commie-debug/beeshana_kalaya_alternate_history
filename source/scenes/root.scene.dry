@@ -135,7 +135,7 @@ Q.slaf_loyalty = 0.7;
 // The state of the country
 
 // tamil situation
-Q.tamil_war=0.14;
+Q.tamil_war=0.24;
 
 //southern/sinhalese/jvp situatiion
 Q.jvp_war=0.00;
