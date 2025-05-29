@@ -60,7 +60,8 @@ Others: [+ other_r +]%
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
 Next presidential election: [+ next_pres_election_month : month +] [+ next_pres_election_year +]
-Next parlimentary election: [+ next_parl_election_month : month +] [+ next_parl_election_year +]
+
+Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl_election_year +]
 
 = Economics
 
