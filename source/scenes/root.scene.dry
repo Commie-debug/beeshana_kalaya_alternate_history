@@ -136,20 +136,20 @@ Q.slaf_loyalty = 0.7;
 
 // The state of the country
 
-// tamil situattion
+// tamil situation
 Q.tamil_war=0.14
 
 //southern/sinhalese/jvp situatiion
-Q.jvp_war=0.05
+Q.jvp_war=0.00
 
 // popular opinion
 // national ideology - on a binary scale
-// nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 60;
+// sinhalese nationalism (as a proportion of sinhalese population)
+Q.sinhala_nationalism = 60;
+// tamil nationalism (as a proportion of tamil population)
+Q.tamil_nationalism = 75
 // socialism vs capitalism
 Q.socialism = 40;
-// pro-republic vs anti-republic
-Q.pro_republic = 59;
 
 Q.emergency_rule = 0;
 
