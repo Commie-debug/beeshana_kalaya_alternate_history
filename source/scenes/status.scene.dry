@@ -159,9 +159,10 @@ Home Guard: [+ homeg_strength +] thousand troops. Loyalty: [+ homeg_loyalty : lo
 
 @polls
 on-arrival: {!
-Q.pro_republic_disp = Math.round(Q.pro_republic);
-Q.nationalism_disp = Math.round(Q.nationalism);
+Q.sinhala_nationalism_disp = Math.round(Q.sinhala_nationalism);
+Q.tamil_nationalism_disp = Math.round(Q.tamil_nationalism);
 Q.socialism_disp = Math.round(Q.socialism);
+Q.gov_support_disp = Math.round(Q.gov_support);
 !}
 
 = Projected election results
@@ -216,6 +217,11 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, 
 Clergy: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Upper Class: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+
+Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
+Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
+Support for socialism: [+ socialism_disp +]%
+Support for the government: [+ gov_support_disp +]%
 
 # = Tamil Situation
 
