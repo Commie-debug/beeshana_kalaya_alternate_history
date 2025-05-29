@@ -292,5 +292,5 @@ Terms of Trade: [+ trade +]
 
 Foreign Debt: [+ foreign_debt +]% of GDP
 
-Inequality: [+ inequality +]
+Inequality: [+ inequality : equality +]
 
