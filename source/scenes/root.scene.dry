@@ -168,7 +168,7 @@ Q.capital_strike_progress = 0;
 
 Q.budget = 4;
 Q.trade = 4;
-Q.inequality = 0.4;
+Q.inequality = 15;
 Q.foreign_debt = 5;
 Q.inflation = 2.9;
 Q.economic_growth = 4.4;
