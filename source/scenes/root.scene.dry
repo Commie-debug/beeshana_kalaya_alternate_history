@@ -353,64 +353,35 @@ Q.spd_toleration = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
-// is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.defence_minister = 'JR Jayawardene';
+Q.defence_minister_party = 'UNP';
 
-// have we reformed these institutions to be more democratic?
-Q.judicial_reform = 0;
-Q.bureaucratic_reform = 0;
-Q.military_reform = 0;
-Q.womens_rights = 0;
-// level of welfare relative to 1928 (can go negative)
-Q.welfare = 0;
-// level of support for farmers
-Q.agricultural_policy = 0;
-Q.land_reform = 0;
-// works-creation programs (i.e. WTB-plan) - how much have they implemented?
-Q.works_program = 0;
-Q.wtb_implemented = 0;
-// Relations with the Western countries (France, UK).
-Q.west_relation = 0;
-// Relations with the Eastern countries (Poland, Czechoslovakia)
-Q.east_relation = 0;
-// Relations with the Soviet Union
-Q.soviet_relation = 0;
-// How much have we exposed the secret rearmament programs?
-Q.rearmament_exposed = 0;
-// reparations vs baseline: young plan is -1.
-Q.reparations = 0;
-Q.reparations_negotiation = 0;
-// nationalization_progress is part of the left economic plan.
-Q.nationalization_progress = 0;
-// socializations is part of the economic democracy card.
-Q.socializations = 0;
-Q.nationalize_budget = 4;
-// have there been any factory takeovers?
-Q.factory_takeovers = 0;
-// progress on the moderate economic plan
-Q.moderate_plan_progress = 0;
-// European Union negotiation process
-Q.eu = 0;
-Q.eu_progress = 0;
-// science/education
-Q.science = 0;
-Q.education_science = 0;
+Q.justice_minister = 'Nissanka Wijeyeratne';
+Q.justice_minister_party = 'UNP';
+Q.education_minister = 'Nissanka Wijeyeratne';
+Q.education_minister_party = 'UNP';
+Q.finance_minister = 'Ronnie de Mel';
+Q.finance_minister_party = 'UNP';
+Q.justice_minister = 'K. W. Devanayakam';
+Q.justice_minister_party = 'UNP';
+Q.trade_minister = 'Lalith Athulathmudali';
+Q.trade_minister_party = 'UNP';
+Q.foreign_minister = 'A. C. S. Hameed';
+Q.foreign_minister_party = 'UNP';
+Q.mahaweli_minister = 'Gamini Dissanayake';
+Q.mahaweli_minister_party = 'UNP';
+Q.labour_minister = 'C. P. J. Seneviratne';
+Q.labour_minister_party = 'UNP';
+Q.social_minister = 'Asoka Karunaratne';
+Q.social_minister_party = 'UNP';
+Q.youth_employment_minister = 'Ranil Wickremesinghe';
+Q.youth_employment_minister_party = 'UNP';
+Q.economic_minister = 'JR Jayawardene';
+Q.economic_minister_party = 'UNP';
+Q.culture_internal_minister = 'E. L. B. Hurulle';
+Q.culture_internal_minister_party = 'UNP';
+Q.tourism_minister = 'Wimala Kannangara';
+Q.tourism_minister_party = 'UNP';
 
 // Tax rates relative to 1928 baseline
 Q.lower_tax_rates = 0;
@@ -420,9 +391,9 @@ Q.tariffs = 0;
 Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
-// did the SPD vote against the previous government in a vote of no confidence?
+// did the SLFP vote against the previous government in a vote of no confidence?
 Q.spd_no_confidence = 0;
-// was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
+// was the last SLFP government taken down in a vote of no confidence by right-wing coalition partners?
 Q.no_confidence_against_spd = 0;
 
 // Advisors/Leaders
@@ -474,7 +445,7 @@ Q.n_elections = 0;
 // number of elections without a clear majority.
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
-Q.in_election = 1;
+Q.in_election = 0;
 Q.next_pres_election_year = 1982;
 Q.next_pres_election_month = 10;
 Q.next_parl_election_year = 1983;
