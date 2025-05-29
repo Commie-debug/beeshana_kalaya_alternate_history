@@ -175,7 +175,6 @@ Q.capital_strike_progress = 0;
 Q.budget = 4;
 Q.trade = 4;
 Q.inequality = 0.4;
-Q.inequality = 0.4;
 Q.foreign_debt = 5;
 
 // Proportion of different social groups
