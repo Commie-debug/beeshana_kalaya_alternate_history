@@ -219,22 +219,20 @@ Clergy: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [
 Upper Class: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
+
 Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
+
 Support for socialism: [+ socialism_disp +]%
+
 Support for the government: [+ gov_support_disp +]%
 
 # = Tamil Situation
 
 @tamil
-on-arrival: {!
-if (Q.tamil_war) {
-    Q.tamil_war_2 = Q.tamil_war.toFixed(1);
-}
-!}
 
 = Tamil Situation
 
-Current situation in the North-East: [+ tamil_war_2 : war +]
+Current situation in the North-East: [+ tamil_war +]
 
 @interior
                                         
