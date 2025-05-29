@@ -176,16 +176,17 @@ Q.budget = 4;
 Q.trade = 4;
 Q.inequality = 0.4;
 Q.foreign_debt = 5;
+Q.inflation = 2.9;
+Q.economic_growth = 4.4;
 
 // Proportion of different social groups
-Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.worker = 17; 
+Q.middle = 18;
+Q.upper = 4; 
+Q.rural = 32;
+Q.unemployed = 12;
+Q.clergy = 5;
+Q.state_workers = 12;
 
 //proportion of races
 Q.sinhala_proportion = 73.95
@@ -194,25 +195,13 @@ Q.itamil_proportion = 5.51
 Q.muslim_proportion = 7.05
 Q.other_proportion = 0.78
 
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
-
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
-Q.income = 1600;
-// what about incomes for different classes? rural workers? middle-class workers?
-
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
-
-// economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
-
 // economic expansion timer
 Q.economic_expansion = 0;
 
 Q.classes = ['upper', 'middle', 'state', 'worker', 'rural', 'unemployed', 'clergy'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
 
-// if SLPP, SLMP formed
+// formable parties
 Q.slpp_formed = 0;
 Q.slmp_formed = 0;
 Q.slmc_formed = 0;
@@ -334,7 +323,6 @@ Q.party_support_records = [];
 // inflation and unemployment records
 Q.economic_records = [];
 
-
 // State of the government
 Q.president = "JR Jayawardene";
 // starting prime_minister: Ranasinghe Premadasa
@@ -350,16 +338,6 @@ Q.cwc_in_government = 1;
 Q.unp_in_government = 1;
 Q.actc_in_government = 0;
 
-Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
-Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
-Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
-Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
-Q.in_left_front = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
 Q.in_spd_majority = 0;
@@ -367,11 +345,6 @@ Q.grand_coalition_failed = 0;
 // if the SPD is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
-
-// if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
-Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.jvp_coalition_dissent = 0;
 
 // does the SPD tolerate the government even if it is not a participant?
 Q.spd_toleration = 0;
