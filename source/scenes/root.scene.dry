@@ -128,7 +128,6 @@ Q.homeg_strength = 100;
 Q.homeg_loyalty = 0.7;
 
 Q.civilsec_formed = 0;
-Q.stf_formed = 0;
 
 Q.slp_strength = 10;
 Q.slp_loyalty = 0.7;
@@ -391,15 +390,6 @@ Q.finance_minister_party = 'Z';
 Q.agriculture_minister = 'Schiele';
 Q.agriculture_minister_party = 'DNVP';
 
-// Events: what has occurred?
-Q.panzerkreuzer_seen = 0;
-Q.panzerkreuzer_funded = 0;
-Q.panzerkreuzer_failed = 0;
-Q.unemployment_insurance_seen = 0;
-// unemployment insurance event is seen if the unemployment level is at least 4 more than the threshold...
-Q.unemployment_insurance_threshold = 10;
-Q.blutmai = 0;
-
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
@@ -628,5 +618,8 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1980
 
-Sri Lanka is on the brink of chaos. WIP
+Sri Lanka is on the brink of chaos. The incumbent UNP under JR was managed to improve the economy thanks to their pro-market reforms, but the continued rise in prices has led to tensions. The anger is most felt in the underdeveloped south where the JVP garners most of their support. Under their leader Rohana, they esspouse revolutionary socialism with though sinhalese nationalism is gaining favour.
 
+In the north-east dominated by the Sri-Lankan Tamils anger grows. Their discrimation and alienation by successive governments has led to the rise of a seccesionist movement exemplfied in the TULF. For the large number of unemployed youth the TULF's non-violent approach does not go far enough. Since 1975 a number of Tamil militant groups have been formed to fight for their indepent state. For now they are preoccupied with fighting each other, but their existance is far from a stabilising factor.
+
+We in the SLFP are in chaos as well. Since our leader Sirimavo was stripped of her civil rights by the UNP government, our party is split. On the left there are the democratic socialists of Chandrika and Sirimavo advocating for reforming towards socialism, one thr right led by Maitripala and Anura are the nationalists advocating for closer ties with the UNP and sinhalese nationalism. For now the party is still whole but the division is likely to boil over into a split. We must be prepared for the worst to come.
