@@ -577,9 +577,9 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"We will not allow this country to be sold piece by piece to imperialists and their local agents. If we must die, let us die like heroes."*
+> *"Sri Lanka’s modern history is a chronicle of missed opportunities, of moments when the country might have stepped back from the brink, but instead plunged forward into the abyss."*
 
- - Rohana Wijeweera, 1987
+ - Gordon Weiss, The Cage: The Fight for Sri Lanka and the Last Days of the Tamil Tigers, 2011
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
@@ -625,8 +625,8 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1980
 
-Sri Lanka is on the brink of chaos. The incumbent UNP under JR was managed to improve the economy thanks to their pro-market reforms, but the continued rise in prices has led to tensions. The anger is most felt in the underdeveloped south where the JVP garners most of their support. Under their leader Rohana, they esspouse revolutionary socialism with though sinhalese nationalism is gaining favour.
+Sri Lanka stands at a precipice. The ruling UNP, under J.R. Jayewardene, has spurred economic growth through pro-market reforms, but soaring prices and deepening inequality have ignited widespread discontent. Nowhere is this anger more palpable than in the underdeveloped south, where the JVP—led by Rohana Wijeweera—champions revolutionary socialism, even as Sinhalese nationalism gains traction within its ranks.
 
-In the north-east dominated by the Sri-Lankan Tamils anger grows. Their discrimation and alienation by successive governments has led to the rise of a seccesionist movement exemplfied in the TULF. For the large number of unemployed youth the TULF's non-violent approach does not go far enough. Since 1975 a number of Tamil militant groups have been formed to fight for their independent state. For now they are preoccupied with fighting each other, but their existance is far from a stabilising factor.
+In the Tamil-majority north and east, resentment simmers. Decades of systemic discrimination and political alienation have fueled a secessionist movement, embodied by the TULF. Yet, for many unemployed Tamil youth, the TULF’s nonviolent resistance falls short. Since 1975, militant factions have emerged, each vying for an independent Tamil state. For now, they remain locked in internecine strife—but their very presence threatens to destabilize the region further.
 
-We in the SLFP are in chaos as well. Since our leader Sirimavo was stripped of her civil rights by the UNP government, our party is split. On the left there are the democratic socialists of Chandrika and Sirimavo advocating for reforming towards socialism, one thr right led by Maitripala and Anura are the nationalists advocating for closer ties with the UNP and sinhalese nationalism. For now the party is still whole but the division is likely to boil over into a split. We must be prepared for the worst to come.
+Even within the SLFP, chaos reigns. With Sirimavo Bandaranaike stripped of her civil rights by the UNP government, the party is fracturing. On one flank, Chandrika and Sirimavo push for democratic socialism; on the other, the nationalist faction—led by Maitripala and Anura—demands closer ties with the UNP and embraces Sinhalese nationalism. The party remains intact—for now. But as tensions rise, a split seems inevitable. We must brace as storm clouds gather over paradise.
