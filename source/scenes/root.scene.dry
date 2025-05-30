@@ -414,6 +414,8 @@ Q.tourism_minister = 'Wimala Kannangara';
 Q.tourism_minister_party = 'UNP';
 Q.highway_minister = 'Ranasinghe Premadasa';
 Q.highway_minister_party = 'UNP';
+Q.natsecurity_minister = 'Lalith Athulathmudali';
+Q.natsecurity_minister_party = 'UNP';
 
 // Tax rates relative to 1981 baseline
 Q.lower_tax_rates = 0;
