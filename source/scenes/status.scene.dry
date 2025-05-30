@@ -283,6 +283,9 @@ if (Q.economic_growth) {
 if (Q.inequality) {
     Q.inequality_2 = Q.inequality.toFixed(1);
 }
+if (Q.exchange_rate) {
+    Q.exchange_rate_2 = Q.exchange_rate.toFixed(1);
+}
 !}
 
 = Economy
@@ -293,11 +296,13 @@ Unemployment: [+ unemployed_2 +]%
 
 Economic growth: [+ economic_growth_2 +]%
 
-Government Budget: [+ budget +]
+Exchange rate: [+ exchange_rate_2 : exchng +] exchange rate
 
-Terms of Trade: [+ trade +]
+Government budget: [+ budget +]
 
-Foreign Debt: [+ foreign_debt +]
+Terms of trade: [+ trade +]
+
+Foreign debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
