@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1980;
+Q.year = 1981;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -71,6 +71,7 @@ Q.cwc_relation = 10;
 Q.actc_relation = 10;
 
 Q.unp_leader = "JR Jayawardene";
+Q.slfp_leader = "Sirimavo Bandaranaike";
 Q.jvp_leader = "Rohana Wijeweera";
 Q.tulf_leader = "A. Amirthalingam";
 
@@ -196,12 +197,12 @@ Q.usa_relation = 65;
 Q.ussr_relation = 30;
 
 //india
-Q.india_tamil_support = 0.7;
+Q.india_tamil_support = 0.6;
 Q.ipkf_formed = 1;
 Q.ipkf_size = 0;
 Q.ipkf_moral = 0;
 Q.india_government = "INC";
-Q.india_pm = "Rajiv Gandhi";
+Q.india_pm = "Indira Gandhi";
 
 // Proportion of different social groups
 Q.worker = 17; 
@@ -408,6 +409,8 @@ Q.culture_internal_minister = 'E. L. B. Hurulle';
 Q.culture_internal_minister_party = 'UNP';
 Q.tourism_minister = 'Wimala Kannangara';
 Q.tourism_minister_party = 'UNP';
+Q.tourism_minister = 'Wimala Kannangara';
+Q.tourism_minister_party = 'UNP';
 
 // Tax rates relative to 1928 baseline
 Q.lower_tax_rates = 0;
@@ -601,4 +604,4 @@ Sri Lanka stands at a precipice. The ruling UNP, under J.R. Jayewardene, has spu
 
 In the Tamil-majority north and east, resentment simmers. Decades of systemic discrimination and political alienation have fueled a secessionist movement, embodied by the TULF. Yet, for many unemployed Tamil youth, the TULF’s nonviolent resistance falls short. Since 1975, militant factions have emerged, each vying for an independent Tamil state. For now, they remain locked in internecine strife—but their very presence threatens to destabilize the region further.
 
-Even within the SLFP, chaos reigns. With our catastrophic loss in 77, we are no longer even the main opposition party. The party is beggining to facture. On one flank, Chandrika and Sirimavo push for democratic socialism; on the other, the nationalist faction—led by Maitripala and Anura—demands closer ties with the UNP and embraces Sinhalese nationalism. The party remains intact—for now. But as tensions rise, a split seems inevitable. We must brace as storm clouds gather over paradise.
+Even within the SLFP, chaos reigns. Our leader Sirimavo Bandaranaike was stripped of her civil rights and expelled from parliament causing a rift within. On one flank, Chandrika and Sirimavo push for democratic socialism; on the other, the nationalist faction—led by Maitripala and Anura—demands closer ties with the UNP and embraces Sinhalese nationalism. The party remains intact—for now. But as tensions rise, a split seems inevitable. We must brace as storm clouds gather over paradise.
