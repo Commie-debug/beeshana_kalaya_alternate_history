@@ -174,6 +174,20 @@ Q.inflation = 2.9;
 Q.economic_growth = 4.4;
 Q.exchange_rate = 0.375;
 
+//foreign relations and india
+Q.india_relation = 20
+Q.china_relation = 55
+Q.usa_relation = 65
+Q.ussr_relation = 30
+
+//india
+Q.india_tamil_support = 0.7
+Q.ipkf_formed = 0
+Q.ipkf_size = 0
+Q.ipkf_moral = 0
+Q.india_government = "INC"
+Q.india_pm = "Indira Gandhi"
+
 // Proportion of different social groups
 Q.worker = 17; 
 Q.middle = 18;
