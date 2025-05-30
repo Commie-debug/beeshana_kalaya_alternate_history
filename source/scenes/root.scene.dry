@@ -134,9 +134,6 @@ Q.slaf_loyalty = 0.7;
 
 // The state of the country
 
-// tamil situation
-Q.tamil_war=0.24;
-
 //southern/sinhalese/jvp situatiion
 Q.jvp_war=0.00;
 
@@ -162,10 +159,28 @@ Q.constructive_vonc = 0;
 // reduction in presidential powers
 Q.presidential_powers = 0;
 
-// coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
-// when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
-Q.capital_strike_progress = 0;
+// tamil situation
+Q.tamil_war = 0.24;
 
+//from 0 to 1, 0 is full cooperation among all, 1 is none bassically a free for all
+Q.tamil_unity = 0.1;
+
+//how much morale the tamil militants have
+Q.tamil_morale = 0.15
+
+//percentage control over the north east by tamil militants
+Q.tamil_control = 0;
+
+//higher means more people joining the militants and abandoning the TULF, ACTC etc. Ie reducing party support
+//Will increase if the war is very violent against civillians or if sinhalese parties becoming nationalist, or laws are put/enforced that harm tamils
+//bassically anything that makes tamils pissed off
+//can be used to see if the militants are popular
+Q.tamil_radicalisation = 4;
+
+//who controls jaffna, greatly boosts militant support if held but will make inter violence more common
+Q.jaffna_control = "Sri Lanka";
+
+//economics
 Q.budget = 4;
 Q.trade = 4;
 Q.inequality = 0.5;
