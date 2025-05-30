@@ -1,6 +1,6 @@
 
-(..0) Pure Fixed
-(0..0.25) Adjustable Fixed
-(0.25..0.5) Managed Floating
-(0.5..0.75) Light-Touch Float
-(0.75..1) Pure Floating 
+(..0) Pure fixed
+(0..0.25) Adjustable fixed
+(0.25..0.5) Managed floating
+(0.5..0.75) Light-Touch float
+(0.75..1) Pure floating 
