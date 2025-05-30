@@ -335,8 +335,8 @@ on-arrival: {!
 if (Q.india_tamil_support) {
     Q.india_tamil_support_2 = Q.india_tamil_support.toFixed(1);
 }
-if (Q.ipkf_moral) {
-    Q.ipkf_moral_2 = Q.ipkf_moral.toFixed(1);
+if (Q.ipkf_morale) {
+    Q.ipkf_morale_2 = Q.ipkf_morale.toFixed(1);
 }
 !}
 
@@ -358,7 +358,7 @@ Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
 [? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
 
-[? if ipkf_formed = 1 : Indian morale: [+ ipkf_moral_2 : morale +] ?]
+[? if ipkf_formed = 1 : IPKF morale: [+ ipkf_morale_2 : morale +] ?]
 
 Indian ruling party: [+ india_government +]
 
