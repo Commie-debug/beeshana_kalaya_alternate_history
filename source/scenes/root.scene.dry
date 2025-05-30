@@ -197,7 +197,7 @@ Q.ussr_relation = 30;
 
 //india
 Q.india_tamil_support = 0.7;
-Q.ipkf_formed = 0;
+Q.ipkf_formed = 1;
 Q.ipkf_size = 0;
 Q.ipkf_moral = 0;
 Q.india_government = "INC";
