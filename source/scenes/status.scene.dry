@@ -344,11 +344,11 @@ USSR/Eastern Bloc: [+ ussr_relation : relationships +]
 
 Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
-IPKF: [+ ipkf_formed : gstatus +]  (Will only appear post 87)
+[? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +] ?]
 
-IPKF size: [+ ipkf_size +] thousand (Will only appear post 87)
+[? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
 
-Indian morale: [+ ipkf_moral_2 : militancy +] (Will only appear post 87)
+[? if ipkf_formed = 1 : Indian morale: [+ ipkf_moral_2 : militancy +] ?]
 
 Indian ruling party: [+ india_government +]
 
