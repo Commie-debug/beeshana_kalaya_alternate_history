@@ -172,7 +172,7 @@ Q.inequality = 0.5;
 Q.foreign_debt = 5;
 Q.inflation = 2.9;
 Q.economic_growth = 4.4;
-Q.exchange_rate = 1;
+Q.exchange_rate = 0.375;
 
 // Proportion of different social groups
 Q.worker = 17; 
