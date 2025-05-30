@@ -321,27 +321,37 @@ Fishing:
 Textile & apparel:
 
 @foreign
+on-arrival: {!
+if (Q.india_tamil_support) {
+    Q.india_tamil_support_2 = Q.india_tamil_support.toFixed(1);
+}
+if (Q.ipkf_moral) {
+    Q.ipkf_moral_2 = Q.ipkf_moral.toFixed(1);
+}
+!}
 
 = Foreign Relations
 
-India:
+India: [+ india_relation : relationships +]
 
-USA:
+USA: [+ usa_relation : relationships +]
 
-China(PRC):
+China(PRC): [+ china_relation : relationships +]
 
-USSR/Eastern Bloc:
+USSR/Eastern Bloc: [+ ussr_relation : relationships +]
 
 = Indian Involvement
 
-Indian support for Tamil militants:
+Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
-IPKF (Will only appear post 87)
+IPKF: [+ ipkf_formed : gstatus +]  (Will only appear post 87)
 
-IPKF size:
+IPKF size: [+ ipkf_size +] thousand (Will only appear post 87)
 
-Indian Morale (Will only appear post 87)
+Indian morale: [+ ipkf_moral_2 : militancy +] (Will only appear post 87)
 
-Indian Government: (INC or opposition, cane change in 84 or 89 with the election there)
+Indian ruling party: [+ india_government +]
+
+Indian Prime Minister: [+ india_pm +]
 
 
