@@ -252,6 +252,16 @@ if (Q.plote_strength) {
 
 Current situation in the North-East: [+ tamil_war : war +]
 
+Tamil unity: [+ tamil_unity : unity +]
+
+Tamil radicalisation: [+ tamil_radicalisation : radicalism +]
+
+Militant morale: [+ tamil_morale : morale +]
+
+Militant control of North-East: [+ tamil_control +]%
+
+Control of Jaffna: [+ jaffna_control +]
+
 = Tamil Militant Groups
 
 {!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ LTTE_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
@@ -348,10 +358,8 @@ Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
 [? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
 
-[? if ipkf_formed = 1 : Indian morale: [+ ipkf_moral_2 : militancy +] ?]
+[? if ipkf_formed = 1 : Indian morale: [+ ipkf_moral_2 : morale +] ?]
 
 Indian ruling party: [+ india_government +]
 
 Indian Prime Minister: [+ india_pm +]
-
-
