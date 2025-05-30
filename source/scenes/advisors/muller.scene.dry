@@ -1,38 +1,37 @@
-title: Hermann Müller
+title: Sirimavo Bandaranaike
 is-pinned-card: true 
-tags: advisor, centrist
-card-image: img/portraits/MüllerHermann.jpg
+tags: advisor, left
+card-image: img/portraits/BandaranaikeSirimavo.jpg
 new-page: true
 view-if: muller_advisor = 1
 
-= Herman Müller
+= Sirimavo Bandaranaike
 
 
-Müller is a former [? if chancellor = "Müller": and current ?] Chancellor, and is a long-time Social Democratic leader.
+Two time former Prime Minister, husband to party founder S.W.R.D Bandaranaike and current leader of the SLFP, Sirimavo is a stalwart follower of democratic socialism while holding symathies for sinhalese nationalism. 
 
-- @coalition
-- @toleration
+- @left
+- @relationsleft
 - @snap_election
 - @root: Return to main
 
-@coalition
-title: Negotiating with the Coalition
-subtitle: Müller can improve our relationships with our coalition partners.
+@left
+title: Support the left
+subtitle: Mrs Bandaranaike can push the party to the cause of democratic socialism, though this may lead to tensions with the nationalists.
 choose-if: advisor_action_timer <= 0 and spd_in_government = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The SPD is not in government. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 5; ddp_relation += 5; dvp_relation += 5
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; left_strength +=10; left_dissent -= 8; nationalist_dissent += 3;
 
-We have improved our relations with the Z, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
+The left has grown more popular among the party, but the nationalists have grown anxious. 
 
+@relationsleft
+title: Improve relations with our old allies
+subtitle: Mrs Bandaranaike's ties to her old United Front alliance can be used to gain allies.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0 
+on-arrival: advisor_action_timer = 6; left_dissent -= 3; nationalist_dissent += 2; cpsl_relation += 5*(1-dissent); lssp_relation += 5*(1-dissent); nssp_relation += 5*(1-dissent);
 
-@toleration
-title: Defending Toleration
-subtitle: Müller supports the toleration arrangement with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
-choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
-
-We have reduced dissent among the anti-toleration factions. 
+The SLFP has grown closer to CPSL, NSSP and LSSP raising hopes of a potential alliance in the future
 
 @snap_election
 title: Snap Election
