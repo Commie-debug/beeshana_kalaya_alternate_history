@@ -200,7 +200,7 @@ Q.ussr_relation = 30;
 Q.india_tamil_support = 0.6;
 Q.ipkf_formed = 0;
 Q.ipkf_size = 0;
-Q.ipkf_moral = 0;
+Q.ipkf_morale = 0;
 Q.india_government = "INC";
 Q.india_pm = "Indira Gandhi";
 
