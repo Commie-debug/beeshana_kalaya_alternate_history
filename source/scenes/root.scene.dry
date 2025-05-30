@@ -194,6 +194,7 @@ Q.exchange_rate = 0.375;
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
+Q.ftz_holidays = 0;
 
 //sectors and industries
 Q.tourism = 35;
