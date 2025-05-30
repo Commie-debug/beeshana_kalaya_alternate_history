@@ -316,19 +316,19 @@ Foreign debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
-= Sectors
+= Sector Development
 
-Tourism:
+Tourism: [+ tourism : sectordev +]
 
-Mining:
+Mining: [+ mining : sectordev +]
 
-Tea:
+Tea: [+ tea : sectordev +]
 
-Agriculture:
+Agriculture: [+ agriculture : sectordev +]
 
-Fishing:
+Fishing: [+ fishing : sectordev +]
 
-Textile & apparel:
+Textile & apparel: [+ textile : sectordev +]
 
 @foreign
 on-arrival: {!
