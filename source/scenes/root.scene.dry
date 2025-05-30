@@ -190,6 +190,14 @@ Q.inflation = 2.9;
 Q.economic_growth = 4.4;
 Q.exchange_rate = 0.375;
 
+//sectors and industries
+Q.tourism = 35;
+Q.mining = 55;
+Q.tea = 65;
+Q.agriculture = 55;
+Q.fishing = 25;
+Q.textile = 75;
+
 //foreign relations and india
 Q.india_relation = 20;
 Q.china_relation = 55;
