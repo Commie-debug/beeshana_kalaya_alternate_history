@@ -330,6 +330,16 @@ Fishing: [+ fishing : sectordev +]
 
 Textile & apparel: [+ textile : sectordev +]
 
+= Tax Rates (Based on 1981 baseline)
+
+Lower income tax: [+ lower_tax_rates +]
+
+Upper income tax: [+ Upper_tax_rates +]
+
+Tarrifs: [+ tariffs +]
+
+FTZ tax holidays: [? if ftz_holidays = 1 : Yes ?][? if ftz_holidays = 0 : No ?]
+
 @foreign
 on-arrival: {!
 if (Q.india_tamil_support) {
