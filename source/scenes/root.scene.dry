@@ -201,7 +201,7 @@ Q.ipkf_formed = 1;
 Q.ipkf_size = 0;
 Q.ipkf_moral = 0;
 Q.india_government = "INC";
-Q.india_pm = "Indira Gandhi";
+Q.india_pm = "Rajiv Gandhi";
 
 // Proportion of different social groups
 Q.worker = 17; 
