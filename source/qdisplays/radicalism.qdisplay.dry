@@ -1,0 +1,7 @@
+
+(..1) Nonexistent
+(1..2) Extremely low
+(2..5) Low
+(5..6) Moderate
+(7..9) High
+(9..) Extremely high
