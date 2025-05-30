@@ -365,15 +365,15 @@ Q.cwc_in_government = 1;
 Q.unp_in_government = 1;
 Q.actc_in_government = 0;
 
-// emergency government containing the SPD: only president Braun can do this.
+
 Q.in_emergency_government = 0;
 Q.in_spd_majority = 0;
 Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
+// if the SLFP is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
 
-// does the SPD tolerate the government even if it is not a participant?
+// does the SLFP tolerate the government even if it is not a participant?
 Q.spd_toleration = 0;
 
 // is the current government a presidential minority government?
@@ -382,15 +382,12 @@ Q.minority_government = 0;
 // ministries - which parties control the ministries?
 Q.defence_minister = 'JR Jayawardene';
 Q.defence_minister_party = 'UNP';
-
 Q.justice_minister = 'Nissanka Wijeyeratne';
 Q.justice_minister_party = 'UNP';
-Q.education_minister = 'Nissanka Wijeyeratne';
+Q.education_minister = 'Ranil Wickremesinghe';
 Q.education_minister_party = 'UNP';
 Q.finance_minister = 'Ronnie de Mel';
 Q.finance_minister_party = 'UNP';
-Q.justice_minister = 'K. W. Devanayakam';
-Q.justice_minister_party = 'UNP';
 Q.trade_minister = 'Lalith Athulathmudali';
 Q.trade_minister_party = 'UNP';
 Q.foreign_minister = 'A. C. S. Hameed';
@@ -401,18 +398,16 @@ Q.labour_minister = 'C. P. J. Seneviratne';
 Q.labour_minister_party = 'UNP';
 Q.social_minister = 'Asoka Karunaratne';
 Q.social_minister_party = 'UNP';
-Q.youth_employment_minister = 'Ranil Wickremesinghe';
-Q.youth_employment_minister_party = 'UNP';
 Q.economic_minister = 'JR Jayawardene';
 Q.economic_minister_party = 'UNP';
-Q.culture_internal_minister = 'E. L. B. Hurulle';
-Q.culture_internal_minister_party = 'UNP';
+Q.culture_minister = 'E. L. B. Hurulle';
+Q.culture_minister_party = 'UNP';
 Q.tourism_minister = 'Wimala Kannangara';
 Q.tourism_minister_party = 'UNP';
-Q.tourism_minister = 'Wimala Kannangara';
-Q.tourism_minister_party = 'UNP';
+Q.highway_minister = 'Ranasinghe Premadasa';
+Q.highway_minister_party = 'UNP';
 
-// Tax rates relative to 1928 baseline
+// Tax rates relative to 1981 baseline
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
