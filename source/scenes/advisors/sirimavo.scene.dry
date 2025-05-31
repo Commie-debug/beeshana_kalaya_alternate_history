@@ -3,7 +3,7 @@ is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/BandaranaikeSirimavo.jpg
 new-page: true
-view-if: muller_advisor = 1
+view-if: sirimavo_advisor = 1
 
 = Sirimavo Bandaranaike
 
