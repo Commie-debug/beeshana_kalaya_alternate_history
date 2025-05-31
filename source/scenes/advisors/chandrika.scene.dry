@@ -23,7 +23,7 @@ on-arrival: advisor_action_timer = 5; advisor_action_time = time; left_dissent -
 
 Tensions among the left and nationalists have reduced.
 
-@toleration
+@tamil
 title: Tamil appeal
 subtitle: Mrs Kumaratunge has sympathies with the marginalised Tamils, she can help the SLFP build ties with the Tamil parties and reduce Tamil radicalisation.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
