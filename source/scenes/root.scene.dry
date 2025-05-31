@@ -190,6 +190,9 @@ Q.inflation = 2.9;
 Q.economic_growth = 4.4;
 Q.exchange_rate = 0.375;
 
+// economic expansion timer
+Q.economic_expansion = 0;
+
 // Tax rates relative to 1981 baseline
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
@@ -203,6 +206,9 @@ Q.tea = 65;
 Q.agriculture = 55;
 Q.fishing = 25;
 Q.textile = 75;
+
+//interior policies
+
 
 //foreign relations and india
 Q.india_relation = 20;
@@ -233,9 +239,6 @@ Q.sltamil_proportion = 12.71
 Q.itamil_proportion = 5.51
 Q.muslim_proportion = 7.05
 Q.other_proportion = 0.78
-
-// economic expansion timer
-Q.economic_expansion = 0;
 
 Q.classes = ['upper', 'middle', 'state', 'worker', 'rural', 'unemployed', 'clergy'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
@@ -380,15 +383,12 @@ Q.unp_in_government = 1;
 Q.actc_in_government = 0;
 
 
-Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
+Q.in_emergency = 0;
+Q.in_slfp_majority = 0;
 Q.grand_coalition_failed = 0;
 // if the SLFP is ruling as part of a minority government
 Q.in_minority_government = 0;
-// national unity governmet
-
-// does the SLFP tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
+Q.slfp_in_government = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
@@ -427,7 +427,7 @@ Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
-Q.spd_no_confidence = 0;
+Q.slfp_no_confidence = 0;
 // was the last SLFP government taken down in a vote of no confidence by right-wing coalition partners?
 Q.no_confidence_against_spd = 0;
 
