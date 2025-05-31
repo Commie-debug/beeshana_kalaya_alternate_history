@@ -28,7 +28,7 @@ title: Tamil appeal
 subtitle: Mrs Kumaratunge has sympathies with the marginalised Tamils, she can help the SLFP build ties with the Tamil parties and reduce Tamil radicalisation.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; tulf_relation += 6*(1-dissent); actc_relation += 6*(1-dissent); nationalist_dissent += 5; tamil_radicalisation -=
+on-arrival: advisor_action_timer = 6; tulf_relation += 6*(1-dissent); actc_relation += 6*(1-dissent); nationalist_dissent += 5; tamil_radicalisation -= 2*(1+(left_strenght/100));
 
 The SLFP develops ties to the Tamil parties giving them new found confidence in the eyes of Tamils, the nationalists anger is palpable
 
