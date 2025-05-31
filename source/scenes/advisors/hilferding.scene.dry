@@ -1,51 +1,34 @@
-title: Rudolf Hilferding
+title: Chandrika Kumaratunge
 is-pinned-card: true
 tags: advisor, centrist
-card-image: img/portraits/HilferdingRudolf.jpg
-view-if: hilferding_advisor = 1
+card-image: img/portraits/KumaratungeChandrika.jpg
+view-if: chandrika_advisor = 1
 new-page: true
-#face-image: img/portraits/HilferdingRudolf.jpg
+#face-image: img/portraits/KumaratungeChandrika.jpg
 
-= Rudolf Hilferding
+= Chandrika Kumaratunge
 
-Hilferding is an economist and a disciple of Karl Kautsky. Originating from Vienna, Austria, he trained as a medical doctor, but later became involved in Marxist economics as a discipline. He has been the lead ideologist of our party since the Heidelberg Program of 1925.
+Daughter of Sirimavo Bandaranaike and husband of movie star Vijaya Kumaratunge. Mrs Kumaratunge is a rising figure in the SLFP. She is on left of the split and has sympathies for the Tamil plight.
 
-- @against_right_and_left
-- @toleration
-- @finance_ministry_
-- @economic_democracy_
+- @meditation
+- @tamil
 - @root: Return to main
 
-@against_right_and_left
-title: Against Right and Left
-subtitle: As a Centrist, Hilferding seeks to steer a course between the party's factions.
+@meditation
+title: Healing the split
+subtitle: As a pragmatist, Mrs Kumaratunge can reduce tensions among the party factions.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_strength -= 5; labor_strength -= 5; neorevisionist_strength -= 5; center_dissent -= 10
+on-arrival: advisor_action_timer = 5; advisor_action_time = time; left_dissent -= 5; nationalist_dissent -= 5; 
 
-We have reduced the strength of the dissident factions in the party.
+Tensions among the left and nationalists have reduced.
 
 @toleration
-title: Defending Toleration
-subtitle: Hilferding supports cooperation with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
-choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_dissent -= 10; neorevisionist_dissent -= 8; center_dissent -= 5
+title: Tamil appeal
+subtitle: Mrs Kumaratunge has sympathies with the marginalised Tamils, she can help the SLFP build ties with the Tamil parties and reduce Tamil radicalisation.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; tulf_relation += 6*(1-dissent); actc_relation += 6*(1-dissent); nationalist_dissent += 5; tamil_radicalisation -=
 
-We have reduced dissent among the anti-toleration factions.
+The SLFP develops ties to the Tamil parties giving them new found confidence in the eyes of Tamils, the nationalists anger is palpable
 
-@finance_ministry_
-title: Fiscal Policy
-subtitle: As Finance Minister, Hilferding can enact tax policies.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : SPD not in government: ?] [? if finance_minister_party != "SPD" : The SPD does not control the finance ministry. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government == 1 and finance_minister_party == "SPD"
-on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
-go-to: fiscal_policy
-
-@economic_democracy_
-title: Economic Democracy
-subtitle: Enact policies to build a more democratic economy.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : SPD not in government: ?] [? if labor_minister_party != "SPD" or (finance_minister_party != "SPD" and economic_minister_party != "SPD") : We do not have the necessary government ministers. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government == 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and (labor_minister_party == "SPD")
-on-arrival: advisor_action_timer = 6; economic_democracy_timer -= 10; last_advisor_action = 1
-go-to: economic_democracy
