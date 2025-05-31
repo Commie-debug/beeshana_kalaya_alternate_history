@@ -18,7 +18,7 @@ Two time former Prime Minister, husband to party founder S.W.R.D Bandaranaike an
 @left
 title: Support the left
 subtitle: Mrs Bandaranaike can push the party to the cause of democratic socialism, though this may lead to tensions with the nationalists.
-choose-if: advisor_action_timer <= 0 and spd_in_government = 1
+choose-if: advisor_action_timer <= 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; left_strength +=10; left_dissent -= 8; nationalist_dissent += 3;
 
