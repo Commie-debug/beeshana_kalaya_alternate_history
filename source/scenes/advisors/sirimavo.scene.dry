@@ -29,7 +29,7 @@ title: Improve relations with our old allies
 subtitle: Mrs Bandaranaike's ties to her old United Front alliance can be used to gain allies.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0 
-on-arrival: advisor_action_timer = 6; left_dissent -= 3; nationalist_dissent += 2; cpsl_relation += 5*(1-dissent); lssp_relation += 5*(1-dissent); nssp_relation += 5*(1-dissent);
+on-arrival: advisor_action_timer = 6; left_dissent -= 3; nationalist_dissent += 2; cpsl_relation += 6*(1-dissent); lssp_relation += 6*(1-dissent); nssp_relation += 5*(1-dissent);
 
 The SLFP has grown closer to CPSL, NSSP and LSSP raising hopes of a potential alliance in the future
 
