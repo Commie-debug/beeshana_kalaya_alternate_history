@@ -208,6 +208,19 @@ Q.fishing = 25;
 Q.textile = 75;
 
 //interior policies
+//Indian Tamil policies
+
+//Wheter they have all atained SL citizenship
+Q.itamil_franchsiment = 0;
+
+//standard of living for Indian tamils
+Q.itamil_education = 0;
+Q.itamil_infastructure = 0;
+Q.itamil_land = 0;
+
+//Sri Lankan tamil policies
+Q.tamil_sinhala_only = "Yes";
+Q.eastern_colonisation = "Yes"
 
 
 //foreign relations and india
