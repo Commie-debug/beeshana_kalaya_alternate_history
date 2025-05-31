@@ -12,7 +12,7 @@ Two time former Prime Minister, husband to party founder S.W.R.D Bandaranaike an
 
 - @left
 - @relationsleft
-- @snap_election
+- @primeminister
 - @root: Return to main
 
 @left
@@ -33,10 +33,10 @@ on-arrival: advisor_action_timer = 6; left_dissent -= 3; nationalist_dissent += 
 
 The SLFP has grown closer to CPSL, NSSP and LSSP raising hopes of a potential alliance in the future
 
-@snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Müller" : Müller must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+@primeminister
+title: Prime Minister
+subtitle: As Prime Minister, Mrs Bandaranaike can hold votes, reshuffle cabinet, etc
+unavailable-subtitle: [? if prime_minister != "Sirimavo Bandaranaike" : Sirimavo Bandaranaike must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0 and chancellor == "Müller"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
