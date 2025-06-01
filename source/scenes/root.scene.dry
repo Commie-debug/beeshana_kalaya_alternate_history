@@ -241,7 +241,7 @@ Q.south_education = 0.3;
 Q.south_infastructure = 0.35;
 //uses poverty qdisplay
 Q.south_poverty = 0.7;
-Q.south_land = 0.30;
+Q.south_land = 0.15;
 
 //police/seurity
 //pta strenght, 0-removed, 1-depowered, 2-empowered, 3-strenghtened
