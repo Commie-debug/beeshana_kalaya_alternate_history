@@ -142,7 +142,7 @@ if (Q.plote_strength) {
 
 = Tamil Militant Groups
 
-{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ LTTE_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
+{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
 
 {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
 
@@ -262,7 +262,7 @@ Control of Jaffna: [+ jaffna_control +]
 
 = Tamil Militant Groups
 
-{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ LTTE_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
+{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
 
 {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
 
