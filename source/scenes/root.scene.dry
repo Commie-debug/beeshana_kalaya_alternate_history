@@ -381,30 +381,30 @@ Q.unemployed_other = 10;
 
 
 // Current Parliment composition
-// % of Parliment in Jan 1980
+// Number of seats in Parliment in Jan 1980
 // source: wikipedia
-Q.slfp_r = 29.72;
+Q.slfp_r = 8;
 Q.jvp_r = 0;
 Q.cpsl_r = 0;
 Q.lssp_r = 0;
 Q.nssp_r = 0;
 Q.tulf_r = 18;
 Q.cwc_r = 1;
-Q.unp_r = 50.92;
+Q.unp_r = 140;
 Q.actc_r = 0;
-Q.other_r = 1;
+Q.other_r = 0;
 
 // diff from prev
-Q.old_slfp_r = 29.72;
+Q.old_slfp_r = 8;
 Q.old_jvp_r = 0;
 Q.old_cpsl_r = 0;
 Q.old_lssp_r = 0;
 Q.old_nssp_r = 0;
 Q.old_tulf_r = 18;
 Q.old_cwc_r = 1;
-Q.old_unp_r = 50.92;
+Q.old_unp_r = 140;
 Q.old_actc_r = 0;
-Q.old_other_r = 1;
+Q.old_other_r = 0;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
