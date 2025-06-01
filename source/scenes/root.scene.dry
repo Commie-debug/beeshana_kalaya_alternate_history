@@ -83,13 +83,13 @@ Q.jr_relation = 10;
 Q.jss_strength = 2000;
 Q.jss_militancy = 0.69;
 
-Q.slfpt_strenght = 2000;
+Q.slfpt_strength = 2000;
 Q.slfpt_militancy = 0.24;
 
-Q.unpt_strenght = 2000;
+Q.unpt_strength = 2000;
 Q.unpt_militancy = 0.24;
 
-Q.jvpt_strenght = 2000;
+Q.jvpt_strength = 2000;
 Q.jvpt_militancy = 0.24;
 
 Q.epdp_formed = 0;
@@ -105,16 +105,16 @@ Q.ppat_formed = 0;
 
 //tamil rebel groups
 
-Q.ltte_strenght = 200;
+Q.ltte_strength = 200;
 Q.ltte_militancy = 0.24;
 
-Q.eros_strenght = 200;
+Q.eros_strength = 200;
 Q.eros_militancy = 0.24;
 
-Q.telo_strenght = 200;
+Q.telo_strength = 200;
 Q.telo_militancy = 0.24;
 
-Q.plote_strenght = 200;
+Q.plote_strength = 200;
 Q.plote_militancy = 0.24;
 
 Q.eprlf_formed = 0;
