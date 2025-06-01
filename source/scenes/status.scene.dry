@@ -308,13 +308,13 @@ Indian Tamil land reform: [+ itamil_land : reform +]
 
 = Rural South West
 
-Rural education = [+ south_education : eduinfa +]
+Rural education: [+ south_education : eduinfa +]
 
-Rural infastructure = [+ south_infastructure : eduinfa +]
+Rural infastructure: [+ south_infastructure : eduinfa +]
 
-Rural poverty = [+ south_poverty : poverty +]
+Rural poverty: [+ south_poverty : poverty +]
 
-Rural land reforms = [+ south_land : reform +]
+Rural land reforms: [+ south_land : reform +]
 
 = Secuity forces
 
