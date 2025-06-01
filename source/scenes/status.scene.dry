@@ -271,8 +271,6 @@ Control of Jaffna: [+ jaffna_control +]
 {!<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam">PLOTE</span>!} Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
 
 @interior
-                                        
-= Interior Polices
 
 = Labour
 
@@ -288,33 +286,35 @@ North east autonomy: [+ north_east_autonomy : autonomy +]
 
 Eastern colonisation schemes: [+ eastern_colonisation +]
 
-North east infastructure: [+ north_east_infastructure : eduinfa +]
+Infastructure: [+ north_east_infastructure : eduinfa +]
 
-North east education: [+ north_east_education : eduinfa +]
+Education: [+ north_east_education : eduinfa +]
 
-North east unemployment: [+ north_east_unemployment : employment +]
+Unemployment: [+ north_east_unemployment : employment +]
+
+Land reform: [+ north_east_land : reform +]
 
 = Indian Tamils
 
 Indian Tamil Franchisment: [+ itamil_franchsiment +]
 
-Indian Tamil dissent: [+ itamil_dissent : dissent +]
+Dissent: [+ itamil_dissent : dissent +]
 
-Indian Tamil education: [+ itamil_education : eduinfa +]
+Education: [+ itamil_education : eduinfa +]
 
-Indian Tamil infastructure: [+ itamil_infastructure : eduinfa +]
+Infastructure: [+ itamil_infastructure : eduinfa +]
 
-Indian Tamil land reform: [+ itamil_land : reform +]
+Land reform: [+ itamil_land : reform +]
 
 = Rural South West
 
-Rural education: [+ south_education : eduinfa +]
+Education: [+ south_education : eduinfa +]
 
-Rural infastructure: [+ south_infastructure : eduinfa +]
+Infastructure: [+ south_infastructure : eduinfa +]
 
-Rural poverty: [+ south_poverty : poverty +]
+Poverty: [+ south_poverty : poverty +]
 
-Rural land reforms: [+ south_land : reform +]
+Land reforms: [+ south_land : reform +]
 
 = Secuity forces
 
