@@ -209,19 +209,54 @@ Q.textile = 75;
 
 //interior policies
 //Indian Tamil policies
-
 //Wheter they have all atained SL citizenship
-Q.itamil_franchsiment = 0;
-
-//standard of living for Indian tamils
-Q.itamil_education = 0;
-Q.itamil_infastructure = 0;
-Q.itamil_land = 0;
+Q.itamil_franchsiment = "No";
+//overall Indian tamil dissent, increases the longer their situation doesnt improve and can lead to strikes or sabotage of the tea sector
+//uses dissent qdisplay
+Q.itamil_dissent = 30;
+//both use eduinfa qdisplay
+Q.itamil_education = 0.1;
+Q.itamil_infastructure = 0.1;
+//uses reform qdisplay
+Q.itamil_land = 0.25;
 
 //Sri Lankan tamil policies
 Q.tamil_sinhala_only = "Yes";
 Q.eastern_colonisation = "Yes"
+Q.north_east_infastructure = 0.5;
+//land reform, use reform qdisplay
+Q.north_east_land = 0.25;
+Q.north_east_education = 0.6;
+Q.north_east_unemployment = 13;
+Q.north_east_autonomy = 1;
 
+//women
+Q.women_equal_pay = "No";
+//Uses equality qdisplay
+Q.women_patriarchy = 0.8;
+
+//rural(south west)
+//both use equinfa
+Q.south_education = 0.3;
+Q.south_infastructure = 0.35;
+//uses poverty qdisplay
+Q.south_poverty = 0.7;
+Q.south_land = 0.30;
+
+//police/seurity
+//pta strenght, 0-removed, 1-depowered, 2-empowered, 3-strenghtened
+Q.pta_strenght = 2;
+//removing corrupt police, reducing nationalist components, trying nationalists and riot instigators
+Q.police_reform = 0.1;
+
+//corruption (overall gov corruption, reduces support across all groups)
+Q.corruption_strenght = 45;
+
+//labour
+//uses strenght qdisplay
+Q.labour_unions_strenght = 10; 
+//uses equality qdisplay
+Q.ftz_conditions = 0.5;
 
 //foreign relations and india
 Q.india_relation = 20;
