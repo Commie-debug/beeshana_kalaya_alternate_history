@@ -1,0 +1,6 @@
+
+(..0.2) Very low
+(0.2..0.4) Low
+(0.4..0.6) Medium
+(0.6..0.8) High
+(0.8..) Very high
