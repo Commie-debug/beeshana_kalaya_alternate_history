@@ -8,7 +8,7 @@ view-if: sirimavo_advisor = 1
 = Sirimavo Bandaranaike
 
 
-Two time former Prime Minister, husband to party founder S.W.R.D Bandaranaike and current leader of the SLFP, Sirimavo is a stalwart follower of democratic socialism while holding symathies for sinhalese nationalism. 
+Two time former Prime Minister, husband to party founder S.W.R.D and current leader of the SLFP, Mrs Bandaranaike is a stalwart follower of democratic socialism while holding symathies for sinhalese nationalism. 
 
 - @left
 - @relationsleft
@@ -31,13 +31,13 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0 
 on-arrival: advisor_action_timer = 6; left_dissent -= 3; nationalist_dissent += 2; cpsl_relation += 6*(1-dissent); lssp_relation += 6*(1-dissent); nssp_relation += 5*(1-dissent);
 
-The SLFP has grown closer to CPSL, NSSP and LSSP raising hopes of a potential alliance in the future
+The SLFP has grown closer to CPSL, NSSP and LSSP, raising hopes of a potential alliance in the future.
 
 @primeminister
 title: Prime Minister
-subtitle: As Prime Minister, Mrs Bandaranaike can hold votes, reshuffle cabinet, etc
-unavailable-subtitle: [? if prime_minister != "Sirimavo Bandaranaike" : Sirimavo Bandaranaike must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0 and chancellor == "Müller"
+subtitle: As Prime Minister, Mrs Bandaranaike can hold votes on legislaton, reshuffle cabinet, call for [+ president +]'s impeachment.
+unavailable-subtitle: [? if prime_minister != "Sirimavo Bandaranaike" : Sirimavo Bandaranaike must be Prime Minister. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and prime_minister == "Sirimavo Bandaranaike"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
 We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
