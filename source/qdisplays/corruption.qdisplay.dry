@@ -1,0 +1,10 @@
+
+(..10) Low
+(10..20) Controlable
+(30..40) Manageable
+(40..50) Moderate
+(50..60) Average
+(60..70) Concerning
+(70..80) Severe
+(80..90) Prevalent
+(90..) Overwhelming
