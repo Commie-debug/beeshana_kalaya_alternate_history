@@ -43,7 +43,7 @@ go-to: rm_main
 Mrs Bandaranaike has been removed as an advisor. The Left faction disapproves.
 
 
-@remove_sirimavo
+@remove_chandrika
 title: Remove Chandrika
 view-if: chandrika_advisor = 1
 on-arrival: chandrika_advisor = 0; left_dissent += 5; n_advisors -= 1
