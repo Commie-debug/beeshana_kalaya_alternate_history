@@ -402,7 +402,7 @@ Foreign debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
-Sector Nationalisation: [+ [+ total_nationalisation +]/18 +]%
+Sector Nationalisation: [+ total_nationalisation +]/18%
 
 = Economic Sectors
 
