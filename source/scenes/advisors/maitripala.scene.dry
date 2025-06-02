@@ -17,7 +17,7 @@ Mr Senanayake is a prominet member of the SLFP having held a number of posts und
 @rural
 title: Rural rallying
 subtitle: Mr Senanayake is well respected for his rural polices under previous governments.
-choose-if: advisor_action_timer <= 0 and
+choose-if: advisor_action_timer <= 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 
