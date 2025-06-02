@@ -382,6 +382,7 @@ if (Q.inequality) {
 if (Q.exchange_rate) {
     Q.exchange_rate_2 = Q.exchange_rate.toFixed(1);
 }
+Q.total_nationalisation = Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national
 !}
 
 = Economy
@@ -402,19 +403,33 @@ Foreign debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
-= Sector Development
+Nationalisation: [+ total_nationalisation +]
+
+= Economic Sectors
 
 Tourism: [+ tourism : sectordev +]
 
+Tourism Nationalisation: [+ tourism_national : nationalisation +]
+
 Mining: [+ mining : sectordev +]
+
+Mining Nationalisation: [+ mining_national : nationalisation +]
 
 Tea: [+ tea : sectordev +]
 
+Tea Nationalisation: [+ tea_national : nationalisation +]
+
 Agriculture: [+ agriculture : sectordev +]
+
+Agriculture Nationalisation: [+ agriculture_national : nationalisation +]
 
 Fishing: [+ fishing : sectordev +]
 
+Fishing Nationalisation: [+ fishing_national : nationalisation +]
+
 Textile & apparel: [+ textile : sectordev +]
+
+Textile & apparel Nationalisation: [+ textile_national : nationalisation +]
 
 = Tax Rates (Based on 1981 baseline)
 
