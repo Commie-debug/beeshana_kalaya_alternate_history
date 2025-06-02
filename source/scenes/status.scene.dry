@@ -75,6 +75,8 @@ Others: [+ other_r +]%
 
 [? if slfp_in_government = 1 : Budget: [+ budget +] ?]
 
+[? if slfp_in_government = 1 and (president = "JR Jayawardene" or president = "Ranasinghe Premadasa" ): [+ president +] tensions: [+ president_tension : dissent +] ?]
+
 Next presidential election: [+ next_pres_election_month : month +] [+ next_pres_election_year +]
 
 Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl_election_year +]
@@ -160,6 +162,9 @@ if (Q.eros_strength) {
 if (Q.plote_strength) {
     Q.plote_strength_2 = Q.plote_strength.toFixed(1);
 }
+if (Q.eprlf_strength) {
+    Q.eprlf_strength_2 = Q.eprlf_strength.toFixed(1);
+}
 !}
 
 = Political Paramilitaries
@@ -177,6 +182,8 @@ if (Q.plote_strength) {
 {!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
 
 {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
+
+{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front">EPRLF</span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
 
 {!<span class="tooltip-text" title="Tamil Eelam Liberation Organisation">TELO</span>!} Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
 
@@ -276,6 +283,9 @@ if (Q.eros_strength) {
 if (Q.plote_strength) {
     Q.plote_strength_2 = Q.plote_strength.toFixed(1);
 }
+if (Q.eprlf_strength) {
+    Q.eprlf_strength_2 = Q.eprlf_strength.toFixed(1);
+}
 !}
 
 = Tamil Situation
@@ -295,6 +305,8 @@ Control of Jaffna: [+ jaffna_control +]
 = Tamil Militant Groups
 
 {!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
+
+{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front">EPRLF</span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
 
 {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
 
