@@ -440,7 +440,6 @@ Q.cwc_in_government = 1;
 Q.unp_in_government = 1;
 Q.actc_in_government = 0;
 
-
 Q.in_emergency = 0;
 Q.in_slfp_majority = 0;
 Q.grand_coalition_failed = 0;
@@ -449,7 +448,7 @@ Q.in_minority_government = 0;
 Q.slfp_in_government = 0;
 
 //if slfp comes to power in parliament while JR or premadasa is still president
-Q.jr_tension = 0;
+Q.president_tension = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
