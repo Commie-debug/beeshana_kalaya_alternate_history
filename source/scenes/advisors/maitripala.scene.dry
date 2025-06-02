@@ -23,6 +23,15 @@ on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 
 Our rallies in the impoverished rural Sri Lanka have raised our support there.
 
+@promote
+title: Promote nationalism
+subtitle: Mr Senanayakee can promote moderate nationalism within the party. The left will not be supportive.
+choose-if: advisor_action_timer <= 0 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; nationalist_strength +=10; nationalist_dissent -= 8; left_dissent += 3;
+
+Nationalism has grown more popular among the party, the left decry the shift. 
+
 @primeminister
 title: Prime Minister
 subtitle: As Prime Minister, Mr Senanayake can hold votes on legislaton, reshuffle cabinet, call for [+ president +]'s impeachment.
