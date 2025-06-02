@@ -379,8 +379,11 @@ if (Q.economic_growth) {
 if (Q.inequality) {
     Q.inequality_2 = Q.inequality.toFixed(1);
 }
-if (Q.exchange_rate) {
-    Q.exchange_rate_2 = Q.exchange_rate.toFixed(1);
+if (Q.total_nationalisation) {
+    Q.total_nationalisation_2 = (Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national)/18;
+}
+if (Q.total_nationalisation_2) {
+    Q.total_nationalisation_3 = Q.total_nationalisation_2.toFixed(1);
 }
 !}
 
@@ -402,7 +405,7 @@ Foreign debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
-Sector Nationalisation: [+ total_nationalisation +]/18%
+Sector Nationalisation: [+ total_nationalisation_3 +]%
 
 = Economic Sectors
 
