@@ -198,12 +198,19 @@ Q.tariffs = 0;
 Q.ftz_holidays = 1;
 
 //sectors and industries
+//nationalisation level is based on the nationalisation qdisplay
 Q.tourism = 35;
+Q.tourism_national = 1;
 Q.mining = 55;
+Q.mining_national = 2;
 Q.tea = 65;
+Q.tea_national = 3;
 Q.agriculture = 55;
+Q.agriculture_national = 2;
 Q.fishing = 25;
+Q.fishing_national = 0;
 Q.textile = 75;
+Q.textile_national = 1;
 
 //interior policies
 //Indian Tamil policies
@@ -255,6 +262,8 @@ Q.corruption_strenght = 45;
 Q.labour_unions_strenght = 10; 
 //uses equality qdisplay
 Q.ftz_conditions = 0.5;
+//addition of nationalisation level of each sector
+Q.total_nationalisation = Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national;
 
 //foreign relations and india
 Q.india_relation = 20;
