@@ -52,6 +52,15 @@ go-to: rm_main
 
 Mrs Kumaratunge has been removed as an advisor. The Left faction disapproves.
 
+@remove_maitripala
+title: Remove Maitripala
+view-if: maithripala_advisor = 1
+on-arrival: maithripala_advisor = 0; nationalist_dissent += 5; n_advisors -= 1
+tags: remove_advisor
+go-to: rm_main
+
+Mr Senanayake has been removed as an advisor. The Nationalist faction disapproves.
+
 ####################### adding advisors
 
 @add_advisors
@@ -86,17 +95,16 @@ view-if: n_advisors < 3
 # national
 
 @add_severing
-title: Carl Severing
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+title: Maithripala Senanayake 
+subtitle: Maithripala Senanayake is a moderate nationalist with a focus on rural development and progressive social policies. {!<br><br>!}[? if difficulty < 0 : Actions - Rural rallying, Prime Minister, Promote nationalism ?]
 is-card: true
-card-image: img/portraits/SeveringCarl.jpg
+card-image: img/portraits/SenanayakeMaithripala.jpg
 tags: national_advisor
-view-if: severing_advisor = 0 and n_advisors < 3
-on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: maithripala_advisor = 0 and n_advisors < 3
+on-arrival: maithripala_advisor = 1; n_advisors += 1; nationalist_strength += 5
 go-to: advisor_menu
 
-Carl Severing is now an advisor.
-
+Maithripala Senanayake is now an advisor.
 
 # left
 
