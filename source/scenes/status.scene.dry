@@ -73,7 +73,7 @@ Parliament composition (Number of seats out off 168):
 
 Others: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if slfp_in_government = 1 : Budget: [+ budget +] ?]
 
 Next presidential election: [+ next_pres_election_month : month +] [+ next_pres_election_year +]
 
@@ -403,7 +403,7 @@ Foreign debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
-Nationalisation: [+ total_nationalisation +]
+Sector Nationalisation: [+ [+ total_nationalisation +]/18+ ]%
 
 = Economic Sectors
 
