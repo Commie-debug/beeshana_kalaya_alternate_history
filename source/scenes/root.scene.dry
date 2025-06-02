@@ -109,13 +109,15 @@ Q.ltte_militancy = 0.24;
 Q.eros_strength = 200;
 Q.eros_militancy = 0.24;
 
+Q.eprlf_strength = 200;
+Q.eprlf_militancy = 0.24;
+
 Q.telo_strength = 200;
 Q.telo_militancy = 0.24;
 
 Q.plote_strength = 200;
 Q.plote_militancy = 0.24;
 
-Q.eprlf_formed = 0;
 Q.endlf_formed = 0;
 Q.tna_formed = 0;
 
@@ -445,6 +447,9 @@ Q.grand_coalition_failed = 0;
 // if the SLFP is ruling as part of a minority government
 Q.in_minority_government = 0;
 Q.slfp_in_government = 0;
+
+//if slfp comes to power in parliament while JR or premadasa is still president
+Q.jr_tension = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
