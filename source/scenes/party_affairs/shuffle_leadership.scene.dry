@@ -91,10 +91,9 @@ view-if: n_advisors < 3
 
 - #left_advisor
 
-
 # national
 
-@add_severing
+@add_maithripala
 title: Maithripala Senanayake 
 subtitle: Maithripala Senanayake is a moderate nationalist with a focus on rural development and progressive social policies. {!<br><br>!}[? if difficulty < 0 : Actions - Rural rallying, Prime Minister, Promote nationalism ?]
 is-card: true
