@@ -1,0 +1,33 @@
+title: Maithripala Senanayake 
+is-pinned-card: true
+tags: advisor, reformist
+card-image: img/portraits/SenanayakeMaithripala.jpg
+view-if: maithripala_advisor = 1
+new-page: true 
+
+= Maithripala Senanayake
+
+Mr Senanayake is a prominet member of the SLFP having held a number of posts under S.W.R.D and Mrs Bandaranaike. He is a moderate nationalist with a focus rural development and progressive social policies.
+
+- @rural
+- @promote
+- @primeminister
+- @root: Return to main
+
+@rural
+title: Rural rallying
+subtitle: Mr Senanayake is well respected for his rural polices under previous governments.
+choose-if: advisor_action_timer <= 0 and
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+
+Our rallies in the impoverished rural Sri Lanka have raised our support there.
+
+@primeminister
+title: Prime Minister
+subtitle: As Prime Minister, Mr Senanayake can hold votes on legislaton, reshuffle cabinet, call for [+ president +]'s impeachment.
+unavailable-subtitle: [? if prime_minister != "Sirimavo Bandaranaike" : Maithripala Senanayake must be Prime Minister. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and prime_minister == "Maithripala Senanayake"
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
