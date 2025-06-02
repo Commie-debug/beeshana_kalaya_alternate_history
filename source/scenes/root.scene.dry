@@ -653,7 +653,7 @@ go-to: 1981_main
 
 
 @1981_main
-audio: shuffle music/1981_1982/Sri Lanka Anthem.mp3 music
+audio: music/Sri Lanka Anthem.mp3 
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1981
