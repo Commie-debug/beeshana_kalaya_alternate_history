@@ -657,7 +657,7 @@ go-to: 1981_main
 
 
 @1981_main
-audio: music/1981_1982/Sri Lanka Anthem.mp3 
+audio: music/1981_1982/Sri_Lanka_Anthem.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
