@@ -589,16 +589,13 @@ Q.maithripala_advisor = 1; // Maitripala Senanayake
 //Ignore these ones plss
 
 // left advisors
-Q.sender_advisor = 0; // Toni Sender
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
 Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
 Q.seydewitz_advisor = 0; // Max Seydewitz
 
-
 //reformist
 Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 
 // centrist alternate advisors
@@ -607,14 +604,8 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Labor advisors
 Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 Q.wissell_advisor = 0; // Rudolf Wissell
 
-// Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
-
-Q.leber_advisor = 0; // Julius Leber (post-1930)
 Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 
 // Nonfactional advisors
@@ -640,11 +631,11 @@ For more information on the politics and government of Sri Lanka, see the "Libra
 
 @1981_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; budget = 5;
-go-to: 1981_main
+go-to: 1981_intro_1
 
 @1981_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
-go-to: 1981_main
+go-to: 1981_intro_1
 
 @1981_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
@@ -653,8 +644,26 @@ Q.difficulty = 2;
 Q.historical_mode = 1;
 this.state.disableSaves = true;
 !}
-go-to: 1981_main
+go-to: 1981_intro_1
 
+@1981_intro_1
+new-page: true
+
+Sri Lanka stands at a precipice. The UNP, under J.R. Jayewardene, has spurred growth through pro-market reforms, but soaring prices and inequality have ignited discontent. Nowhere is this anger fiercer than in the underdeveloped south, where under Rohana Wijeweera, the JVP champions revolutionary socialism, even as Sinhalese nationalism grows within its ranks.
+
+- @1981_intro_2: Next
+
+@1981_intro_2
+
+In the Tamil-majority north and east, resentment simmers. Decades of discrimination have fueled the TULF’s secessionist movement. Yet for many Tamil youth, nonviolence isn’t enough and since 1975, militant factions have emerged, each vying for independence. For now, they fight among themselves, but their presence alone threatens to destabilize the region further.
+
+- @1981_intro_3: Next
+
+@1981_intro_3
+
+Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from parliament has split the party. While she and Chandrika push for democratic socialism, the nationalist faction—led by Maitripala and Anura demands closer UNP ties and embraces Sinhalese hardliners. The party holds together—for now. But as tensions rise, a split seems inevitable. We must brace as storm clouds gather over paradise.
+
+- @1981_main: Start game
 
 @1981_main
 audio: music/1981_1982/Sri_Lanka_Anthem.mp3
@@ -663,9 +672,4 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1981
 
-Sri Lanka stands at a precipice. The UNP, under J.R. Jayewardene, has spurred growth through pro-market reforms, but soaring prices and inequality have ignited discontent. Nowhere is this anger fiercer than in the underdeveloped south, where under Rohana Wijeweera, the JVP champions revolutionary socialism, even as Sinhalese nationalism grows within its ranks.
-
-In the Tamil-majority north and east, resentment simmers. Decades of discrimination have fueled the TULF’s secessionist movement. Yet for many Tamil youth, nonviolence isn’t enough and since 1975, militant factions have emerged, each vying for independence. For now, they fight among themselves, but their presence alone threatens to destabilize the region further.
-
-Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from parliament has split the party. While she and Chandrika push for democratic socialism, the nationalist faction—led by Maitripala and Anura demands closer UNP ties and embraces Sinhalese hardliners. The party holds together—for now. But as tensions rise, a split seems inevitable. We must brace as storm clouds gather over paradise.
-
+We must prepare for the upcoming presidential elections while avoiding too much conflict within the party, it would be suic
