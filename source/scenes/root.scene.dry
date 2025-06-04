@@ -447,6 +447,9 @@ Q.grand_coalition_failed = 0;
 // if the SLFP is ruling as part of a minority government
 Q.in_minority_government = 0;
 Q.slfp_in_government = 0;
+//Wheter parliament has moved from colombo to SJK
+Q.new_parliament = 0;
+
 
 //if slfp comes to power in parliament while JR or premadasa is still president
 Q.president_tension = 0;
