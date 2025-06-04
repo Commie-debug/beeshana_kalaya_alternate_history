@@ -217,15 +217,61 @@ Q.gov_support_disp = Math.round(Q.gov_support);
 
 = Projected election results
 
+[? if slpp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_relation : relationships +] ?]
+
+[? if slmp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">SLMP</span>!}: [+ slmp_relation : relationships +] ?]
+
+{!<span class="tooltip-text" title="United National Party">UNP</span>!}: [+ unp_relation : relationships +]
+
+{!<span class="tooltip-text" title="Tamil United Liberation Front">TULF</span>!}: [+ tulf_relation : relationships +]
+
+[? if pflt_formed = 1 : {!<span class="tooltip-text" title="Peoples Front of Liberation Tigers">PFLT</span>!}: [+ pflt_relation : relationships +] ?]
+
+{!<span class="tooltip-text" title="All Ceylon Tamil Congress">ACTC</span>!}: [+ actc_relation : relationships +]
+
+[? if eros_formed = 1 : {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!}: [+ eros_relation : relationships +] ?]
+
+[? if dplf_formed = 1 : {!<span class="tooltip-text" title="Democratic Peoples Liberation Front">DPLF</span>!}: [+ dplf_relation : relationships +] ?]
+
+{!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">JVP</span>!}: [+ jvp_relation : relationships +]
+
+[? if npp_formed = 1 : {!<span class="tooltip-text" title="National Peoples Power">NPP</span>!}: [+ npp_relation : relationships +] ?]
+
+{!<span class="tooltip-text" title="Communist Party Of Sri Lanka">CPSL</span>!}: [+ cpsl_relation : relationships +]
+
+{!<span class="tooltip-text" title="Lanka Sama Samaja Party">LSSP</span>!}: [+ lssp_relation : relationships +]
+
+{!<span class="tooltip-text" title="Nava Sama Samaja Party">NSSP</span>!}: [+ nssp_relation : relationships +]
+
+[? if mep_formed = 1 : {!<span class="tooltip-text" title="Mahajana Eksath Peramuna">MEP</span>!}: [+ mep_relation : relationships +] ?]
+
+{!<span class="tooltip-text" title="Ceylon Workers Congress">CWC</span>!}: [+ cwc_relation : relationships +]
+
+[? if slmc_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Muslim Congress">SLMC</span>!}: [+ slmc_relation : relationships +] ?]
+
 (if the election were to be held now):
 
 SLFP: [+ slfp_votes +]%
+
+[? if slpp_formed: SLPP: [+ slpp_votes +]% ?]
+
+[? if slmp_formed: SLMP: [+ slmp_votes +]% ?]
 
 UNP: [+ unp_votes +]%
 
 TULF: [+ tulf_votes +]%
 
+[? if pflt_formed: PFLT: [+ pflt_votes +]% ?]
+
 ACTC: [+ actc_votes +]%
+
+[? if eros_formed: EROS: [+ eros_votes +]% ?]
+
+[? if dplf_formed: DPLF: [+ dplf_votes +]% ?]
+
+JVP: [+ jvp_votes +]%
+
+[? if npp_formed: NPP: [+ npp_votes +]% ?]
 
 CPSL: [+ cpsl_votes +]%
 
@@ -233,9 +279,11 @@ LSSP: [+ lssp_votes +]%
 
 NSSP: [+ nssp_votes +]%
 
-JVP: [+ jvp_votes +]%
+[? if mep_formed: MEP: [+ mep_votes +]% ?]
 
-Others: [+ other_votes +]%
+CWC: [+ cwc_votes +]%
+
+[? if slmc_formed: SLMC: [+ slmc_votes +]% ?]
 
 **Detailed results for each demographic**
 
