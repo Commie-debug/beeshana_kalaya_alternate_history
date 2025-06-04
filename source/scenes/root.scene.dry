@@ -661,12 +661,12 @@ In the Tamil-majority north and east, resentment simmers. Decades of discriminat
 
 @1981_intro_3
 
-Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from parliament has split the party. While she and Chandrika push for democratic socialism, the nationalist faction—led by Maitripala and Anura demands closer UNP ties and embraces Sinhalese hardliners. The party holds together—for now. But as tensions rise, a split seems inevitable. We must brace as storm clouds gather over paradise.
+Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from parliament has split the party. While she and Chandrika push for democratic socialism, the nationalist faction—led by Maitripala and Anura demands closer UNP ties and embraces Sinhalese hardliners. The party holds together—for now. But as tensions rise, a split seems inevitable.
 
 - @1981_main: Start game
 
 @1981_main
-audio: music/1981_1982/Sri_Lanka_Anthem.mp3
+audio: shuffle music/Sri_Lanka_Anthem.mp3 music/Vimukthi_Gee.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
