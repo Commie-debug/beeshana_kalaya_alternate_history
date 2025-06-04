@@ -45,7 +45,7 @@ max-cards: 6
 
 @party
 title: Party Affairs
-card-image: img/Vorwaerts_nr_1.png
+card-image: img/janadina_cover.jpg
 is-deck: true
 
 - #party_affairs
