@@ -283,15 +283,15 @@ Q.india_government = "INC";
 Q.india_pm = "Indira Gandhi";
 
 // Proportion of different social groups
-Q.worker = 17; 
-Q.middle = 18;
-Q.upper = 4; 
-Q.rural = 32;
-Q.unemployed = 12;
-Q.clergy = 5;
-Q.state_workers = 12;
+Q.worker = 25; 
+Q.middle = 10;
+Q.upper = 1; 
+Q.rural = 35;
+Q.unemployed = 13;
+Q.clergy = 1;
+Q.state_workers = 15;
 
-//proportion of races
+//proportion of races in 1981
 Q.sinhala_proportion = 73.95
 Q.sltamil_proportion = 12.71
 Q.itamil_proportion = 5.51
