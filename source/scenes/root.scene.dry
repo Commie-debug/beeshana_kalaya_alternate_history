@@ -21,6 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
+Q.week = 1;
 Q.year = 1981;
 Q.month = 1;
 // how many actions have been taken this month?
