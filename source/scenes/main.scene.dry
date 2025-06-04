@@ -52,7 +52,7 @@ is-deck: true
 
 @govt
 title: Government Affairs
-card-image: img/parliament_1.jpg 
+card-image: img/parliament_1.jpg
 is-deck: true
 
 - #govt_affairs
