@@ -52,7 +52,14 @@ is-deck: true
 
 @govt
 title: Government Affairs
-card-image: [? if new_parliament = 0 : img/parliament_1.jpg ?][? if new_parliament = 1 : img/parliament_2.jpg ?]
+card-image: img/parliament_1.jpg 
+if (Q.new_parliament = 0) {
+    card-image: img/parliament_1.jpg;
+}
+if (Q.new_parliament = 1) {
+    card-image: img/parliament_2.jpg;
+}
+!}
 is-deck: true
 
 - #govt_affairs
