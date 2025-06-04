@@ -139,7 +139,6 @@ go-to: menu
 
 @public_opinion
 on-arrival: {!
-on-arrival: {!
 Q.sinhala_nationalism_disp = Math.round(Q.sinhala_nationalism);
 Q.tamil_nationalism_disp = Math.round(Q.tamil_nationalism);
 Q.socialism_disp = Math.round(Q.socialism);
