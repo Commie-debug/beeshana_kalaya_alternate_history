@@ -315,9 +315,9 @@ Control of Jaffna: [+ jaffna_control +]
 
 {!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam">LTTE</span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front">EPRLF</span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
-
 {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
+
+{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front">EPRLF</span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
 
 {!<span class="tooltip-text" title="Tamil Eelam Liberation Organisation">TELO</span>!} Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
 
