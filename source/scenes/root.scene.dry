@@ -651,6 +651,18 @@ this.state.disableSaves = true;
 go-to: 1981_intro_1
 
 @1981_intro_1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/calm_before_storm.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 new-page: true
 face-image: img/calm_before_storm.jpg
 
@@ -661,6 +673,18 @@ Sri Lanka stands at a precipice. The UNP, under J.R. Jayewardene, has spurred gr
 - @1981_intro_2: Next
 
 @1981_intro_2
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/calm_before_storm_2.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 face-image: img/calm_before_storm_2.jpg
 
 In the Tamil-majority north and east, resentment simmers. Decades of discrimination have fueled the TULF’s secessionist movement. Yet for many Tamil youth, nonviolence isn’t enough and since 1975, militant factions have emerged, each vying for independence. For now, they fight among themselves, but their presence alone threatens to destabilize the region further.
@@ -668,6 +692,18 @@ In the Tamil-majority north and east, resentment simmers. Decades of discriminat
 - @1981_intro_3: Next
 
 @1981_intro_3
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/calm_before_storm_3.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 face-image: img/calm_before_storm_3.jpg
 
 Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from parliament has split the party. While she and Chandrika push for democratic socialism, the nationalist faction—led by Maitripala and Anura demands closer UNP ties and embraces Sinhalese hardliners. The party holds together—for now. But as tensions rise, a split seems inevitable.
