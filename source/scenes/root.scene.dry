@@ -60,6 +60,7 @@ Q.left_split = 0;
 Q.nationalist_split = 0;
 
 // organizations
+Q.slfp_union = 5;
 
 // inter-party relations
 Q.cpsl_relation = 50;
