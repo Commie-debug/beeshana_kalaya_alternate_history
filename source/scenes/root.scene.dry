@@ -664,7 +664,6 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 new-page: true
-face-image: img/calm_before_storm.jpg
 
 = Storm clouds on the horizion
 
@@ -685,7 +684,6 @@ on-display: {!
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
-face-image: img/calm_before_storm_2.jpg
 
 In the Tamil-majority north and east, resentment simmers. Decades of discrimination have fueled the TULF’s secessionist movement. Yet for many Tamil youth, nonviolence isn’t enough and since 1975, militant factions have emerged, each vying for independence. For now, they fight among themselves, but their presence alone threatens to destabilize the region further.
 
@@ -704,7 +702,6 @@ on-display: {!
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
-face-image: img/calm_before_storm_3.jpg
 
 Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from parliament has split the party. While she and Chandrika push for democratic socialism, the nationalist faction—led by Maitripala and Anura demands closer UNP ties and embraces Sinhalese hardliners. The party holds together—for now. But as tensions rise, a split seems inevitable.
 
