@@ -11,13 +11,13 @@ tags: party_affairs
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @upper: Wealthy elites, landowners, business magnates, and high-ranking politicians, who controlled much of the economy and political influence.
-- @middle: Educated professionals and civil servants who enjoyed relative stability but are affected by growing economic disparities.
-- @state: Government employees and public-sector workers, they are highly supportive of the incumbent government whose jobs depend on.
-- @worker: Urban and industrial laborers (factory workers, plantation workers) who struggle with low wages and weakened union movements.
-- @rural: Farmers and villagers dependent on agriculture, facing land shortages, poverty, and lack of infrastructure.
-- @unemployed: A growing segment, particularly among youth, due to limited job opportunities and economic stagnation.
-- @clergy: Buddhist monks, Hindu priests, Muslim mullahs are the devout. Mostly consisting of Budhists, they are incredibly influential for Sinhalese nationalism.
+- @upper: Wealthy elites, landowners, business magnates, and high-ranking politicians.
+- @middle: Educated professionals and civil servants of the middle class.
+- @state: Government employees and public-sector workers.
+- @worker: Urban and industrial laborers (factory workers, plantation workers).
+- @rural: Farmers and villagers dependent on agriculture and mining.
+- @unemployed: The unemployed.
+- @clergy: Buddhist monks, Hindu priests, Muslim mullahs and the devout.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 
