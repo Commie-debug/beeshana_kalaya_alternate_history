@@ -43,8 +43,6 @@ Prime minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +])
 
-Parliament composition:
-
 Parliament composition (Number of seats out off 168):
 
 {!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ slfp_r +]
