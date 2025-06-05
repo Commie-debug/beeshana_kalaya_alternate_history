@@ -15,11 +15,17 @@ In our media and campaign materials, who should we consider as our main opponent
 
 - @unp: The right-wing UNP and its neo-liberal ideology.
 - @jvp: The extremist JVP and their destabalizing rehtoric
-- @tamil: The TULF and its seccesionist platform.
+#add a tamil option for TULF/ACTC
 - @easy_discard
 
 @unp
-on-arrival: enemies = "unp"; left_strength += 5; nationalist_strength -= 3; left_dissent -= 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
+on-arrival: enemies = "unp"; left_strength += 5; nationalist_strength -= 3; left_dissent -= 5; unp_relation -= 10
 
 Attacking the UNP puts us at tension with the JR, none the less, the left supports this decision.
 
+@jvp
+on-arrival: enemies = "jvp"; left_strength -= 3; nationalist_strength += 3; left_dissent += 3; jvp_relation -= 10
+
+Given our rather hostile history, this decision suprises no one.
+
+@tamil
