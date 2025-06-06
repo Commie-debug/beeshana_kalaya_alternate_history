@@ -12,12 +12,10 @@ max-visits: 5
 
 Like most parties in Sri Lanka, we have employed the use of street thugs to protect our rallies, or for more......unpleasent jobs. 
 
-[? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : The Reichsbanner is having a more difficult time recruiting, as the SPD is no longer the dominant party among the workers. Many of its members have left. ?]
-
-- @militant: Fund more military-style training and equipment for the Reichsbanner.
-- @militant_2: Use our existing resources to support more training for the Reichsbanner.
-- @same: Keep the Reichsbanner as it is.
-- @cut_rb: Cut funding for the Reichsbanner.
+- @militant: Fund more military-style training and equipment for the thugs.
+- @militant_2: Use our existing resources to support more training for the thugs.
+- @same: Keep the thugs as it is.
+- @cut_rb: Cut funding for the thugs.
 - @women_rb
 - @easy_discard
 - @cancel_advisor_action
