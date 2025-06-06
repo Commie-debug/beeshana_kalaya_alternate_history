@@ -432,7 +432,7 @@ Q.prime_minister = "Ranasinghe Premadasa";
 Q.prime_minister_party = 'UNP';
 Q.opposition_leader = "A. Amirthalingam";
 Q.opposition_leader_party = "TULF";
-Q.slfp_in_government = 1;
+Q.slfp_in_government = 0;
 Q.jvp_in_government = 0;
 Q.cpsl_in_government = 0;
 Q.lssp_in_government = 0;
@@ -449,7 +449,6 @@ Q.grand_coalition_failed = 0;
 Q.in_minority_government = 0;
 //Wheter parliament has moved from colombo to SJK
 Q.new_parliament = 0;
-
 
 //if slfp comes to power in parliament while JR or premadasa is still president
 Q.president_tension = 0;
@@ -504,7 +503,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
             'iron_front', 'media', 'enemies',
-            'party_organizations', 'rally', 'reichsbanner',
+            'party_organizations', 'rally', 'thugs',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
             'party_disunity',
             // govt
@@ -535,7 +534,7 @@ Q.media_timer = 0;
 Q.enemies_timer = 0;
 Q.party_organizations_timer =  0;
 Q.rally_timer = 0;
-Q.reichsbanner_timer = 0;
+Q.thugs_timer = 0;
 Q.shuffle_leadership_timer = 0;
 Q.streetfighting_timer = 0;
 Q.peoples_party_timer = 0;
