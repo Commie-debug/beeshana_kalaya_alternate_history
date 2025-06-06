@@ -1,0 +1,15 @@
+title: Opposition in parliament
+new-page: true
+is-card: true
+view-if: opposition_timer <= 0 and slfp_in_government = 0
+on-arrival: opposition_timer += 6; month_actions += 1
+tags: govt_affairs
+card-image: img/opposition.jpg
+#subtitle: As a member of the opposition to the UNP we can mount some resistance to them....
+
+= Opposition in parliament
+
+While we may not be in control of parliament, we are still granted some powers under the 1978 constitution.
+
+#ADD some things such as introduce bills, votes of no confidence, impeachment of the president, crutinize the budget or ministries
+#take part in votes where SLFP can use relations with parties to gather support or otherwise from other opposition parties or dissident UNP members
