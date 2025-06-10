@@ -23,14 +23,14 @@ Herein contains relevant information about the government and politics of Sri La
 @government
 go-to: menu
 
-The Democratic Socialist Republic Of Sri Lanka
+The Democratic Socialist Republic Of Sri Lanka (explain lol)
 
 @weimar_timeline
 go-to: menu
 
 = Timeline of the SPD and the Republic (until 1928)
 
-**1875**: 
+**1946**: UNP founded by D.S Senanayke from a number of pro-dominion parties
 
 @curr_gov
 go-to: cabinet if slfp_in_government; menu if not slfp_in_government
@@ -162,32 +162,6 @@ view-if: (not historical_mode) or game_over
 go-to: menu
 
 **Projected election results** (if the election were to be held now):
-
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_votes +]%
-
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
-
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_votes +]%
-
-# 1928: 10, 1930: 13
-KPD: [+ kpd_votes +]%
-
-# 1928: 5, 1930: 4 (as DstP)
-[+ ddp_name +]: [+ ddp_votes +]%
-
-# 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
-
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_votes +]%
-
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_votes +]%
-
-# 1928: 9, 1930: 10
-Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
