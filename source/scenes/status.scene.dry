@@ -37,37 +37,21 @@ Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +]
 Parliament composition (Number of seats out off 168):
 
 {!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ slfp_r +]
-
 [? if slpp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_r +] ?]
-
 [? if slmp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">SLMP</span>!}: [+ slmp_r +] ?]
-
 {!<span class="tooltip-text" title="United National Party">UNP</span>!}: [+ unp_r +]
-
 {!<span class="tooltip-text" title="Tamil United Liberation Front">TULF</span>!}: [+ tulf_r +]
-
 [? if pflt_formed = 1 : {!<span class="tooltip-text" title="Peoples Front of Liberation Tigers">PFLT</span>!}: [+ pflt_r +] ?]
-
 {!<span class="tooltip-text" title="All Ceylon Tamil Congress">CWC</span>!}: [+ actc_r +]
-
 [? if eros_formed = 1 : {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!}: [+ eros_r +] ?]
-
 [? if dplf_formed = 1 : {!<span class="tooltip-text" title="Democratic Peoples Liberation Front">DPFL</span>!}: [+ dplf_r +] ?]
-
 {!<span class="tooltip-text" title="Janatha Vimukthi Peramuna">JVP</span>!}: [+ jvp_r +]
-
 [? if npp_formed = 1 : {!<span class="tooltip-text" title="National Peoples Power">NPP</span>!}: [+ npp_r +] ?]
-
 {!<span class="tooltip-text" title="Communist Party of Sri Lanka">CPSL</span>!}: [+ cpsl_r +]
-
 {!<span class="tooltip-text" title="Lanka Sama Samaja Party">LSSP</span>!}: [+ lssp_r +]
-
 {!<span class="tooltip-text" title="Nava Sama Samaja Party">NSSP</span>!}: [+ nssp_r +]
-
 [? if mep_formed = 1 : {!<span class="tooltip-text" title="Mahajana Eksath Peramuna">MEP</span>!}: [+ mep_r +] ?]
-
 {!<span class="tooltip-text" title="Ceylon Workers Congress">CWC</span>!}: [+ cwc_r +]
-
 [? if slmc_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Muslim Congress">SLMC</span>!}: [+ slmc_r +] ?]
 
 Others: [+ other_r +]%
