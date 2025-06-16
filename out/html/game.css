@@ -168,33 +168,28 @@ blockquote.attribution {
 blockquote + blockquote.attribution {
   margin-top: -1em;
 }
-/* Inline image styles */
-.inline-img {
+img.inline-img {
   display: inline !important;
   height: 1.2em !important;
   width: auto !important;
   max-width: none !important;
   max-height: none !important;
-  vertical-align: middle;
-  margin: 0 0.2em;
+  vertical-align: middle !important;
+  margin: 0 0.2em !important;
   border-radius: 2px;
 }
-
-.inline-img.small {
+img.inline-img.small {
   height: 0.9em !important;
 }
-
-.inline-img.medium {
+img.inline-img.medium {
   height: 1.5em !important;
 }
-
-.inline-img.large {
+img.inline-img.large {
   height: 2em !important;
 }
-
-.inline-img.icon {
+img.inline-img.icon {
   height: 1em !important;
-  margin: 0 0.1em;
+  margin: 0 0.1em !important;
 }
 /* This is mostly copied from undum. */
 #mid_panel {
