@@ -5,7 +5,7 @@ go-to: menu
 
 = The Library
 
-Herein contains relevant information about the government and politics of Sri Lanka.
+<img src="img/SAPD_logo.png" class="inline-img" alt="SAPD">Herein contains relevant information about the government and politics of Sri Lanka.
 
 @menu
 
@@ -13,6 +13,7 @@ Herein contains relevant information about the government and politics of Sri La
 - @weimar_timeline: Timeline of Sri Lanka before 1981
 - @curr_gov: Current government details
 - @demographics: Demographics
+- @Economics: Economics
 - @parties: Parties
 - @public_opinion: Public opinion (and projected election results)
 - @paramilitaries: Paramilitary and military groups
@@ -28,9 +29,16 @@ The Democratic Socialist Republic Of Sri Lanka (explain lol)
 @weimar_timeline
 go-to: menu
 
-= Timeline of the SPD and the Republic (until 1928)
+= Timeline of the SLFP and Sri Lanka (until 1981)
 
-**1946**: UNP founded by D.S Senanayke from a number of pro-dominion parties
+**1946**: UNP founded by D.S Senanayke from a number of pro-dominion parties  including the Ceylon National Congress, Sinhala Maha Sabha led by S.W.R.D Bandaranaike, and other right-leaning groups.
+
+**1947**: The UNP wins a plurality in Ceylon's first parliamentary elections, forming a coalition government with the Tamil Congress. Senanayake becomes the first Prime Minister of Ceylon.
+
+**1948**: Ceylon gains independence from the UK as a Dominion with the British monarch remaining as head of state.
+
+**1948**: 
+
 
 @curr_gov
 go-to: cabinet if slfp_in_government; menu if not slfp_in_government
@@ -115,6 +123,12 @@ Cultural: [+ culture_minister_party +]
 Tourism: [+ tourism_minister_party +]
 
 Highways & transport: [+ highway_minister_party +]
+
+@economics
+go-to: menu
+
+Time to learn economics
+
 
 @demographics
 go-to: menu
@@ -217,9 +231,9 @@ go-to: menu
 
 **CPSL** - *Communist Party Of Sri Lanka* - Established in 1943, the CPSL aligned with pro-Soviet Marxist-Leninist ideology, advocating for workers' rights and socialism. We have often being in coalition with them. 
 
-**LSSP** - *Lanka Sama Samaja Party* - As Sri Lanka's oldest socialist party, founded in 1935, the LSSP played a pivotal role in the independence movement and post-independence politics. The party focuses on workers' rights, social justice, and anti-colonialism. Their formidable trade unions have recently been crushed by the UNP.
+**LSSP** - *Lanka Sama Samaja Party (Lanka Equal Society Party)* - As Sri Lanka's oldest socialist party, founded in 1935, the LSSP played a pivotal role in the independence movement and post-independence politics. The party focuses on workers' rights, social justice, and anti-colonialism. Their formidable trade unions have recently been crushed by the UNP.
 
-**NSSP** - *Nava Sama Samaja Party* - Formed in 1977 following a split from the LSSP, the NSSP embraces Trotskyist ideology with a focus on self-determination and anti-authoritarianism. It has established itself as a vocal advocate for Tamil rights and democratic socialism.
+**NSSP** - *Nava Sama Samaja Party (New Equal Society Party)* - Formed in 1977 following a split from the LSSP, the NSSP embraces Trotskyist ideology with a focus on self-determination and anti-authoritarianism. It has established itself as a vocal advocate for Tamil rights and democratic socialism.
 
 [? if mep_formed: **MEP** - *Mahajana Eksath Peramuna* - Originally formed in 1956, the MEP has recently been reactivated, emphasizing Sinhalese nationalism and socialism. It is a minor political party ?]
 
