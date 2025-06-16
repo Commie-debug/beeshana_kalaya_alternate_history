@@ -169,20 +169,31 @@ blockquote + blockquote.attribution {
   margin-top: -1em;
 }
 /* Inline image styles */
+.inline-img {
+  display: inline !important;
+  height: 1.2em !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  vertical-align: middle;
+  margin: 0 0.2em;
+  border-radius: 2px;
+}
+
 .inline-img.small {
-  height: 0.9em;
+  height: 0.9em !important;
 }
 
 .inline-img.medium {
-  height: 1.5em;
+  height: 1.5em !important;
 }
 
 .inline-img.large {
-  height: 2em;
+  height: 2em !important;
 }
 
 .inline-img.icon {
-  height: 1em;
+  height: 1em !important;
   margin: 0 0.1em;
 }
 /* This is mostly copied from undum. */
