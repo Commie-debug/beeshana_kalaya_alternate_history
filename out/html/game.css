@@ -168,6 +168,23 @@ blockquote.attribution {
 blockquote + blockquote.attribution {
   margin-top: -1em;
 }
+/* Inline image styles */
+.inline-img.small {
+  height: 0.9em;
+}
+
+.inline-img.medium {
+  height: 1.5em;
+}
+
+.inline-img.large {
+  height: 2em;
+}
+
+.inline-img.icon {
+  height: 1em;
+  margin: 0 0.1em;
+}
 /* This is mostly copied from undum. */
 #mid_panel {
   margin: 0 16rem;
