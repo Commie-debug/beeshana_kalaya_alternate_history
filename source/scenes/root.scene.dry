@@ -650,7 +650,7 @@ this.state.disableSaves = true;
 go-to: 1981_intro_1
 
 @1981_intro_1
-audio: music/intro/SLBC_News_Theme.mp3 
+audio: music/special/SLBC_News_Theme.mp3 
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -708,7 +708,7 @@ Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from par
 - @1981_main: Start game
 
 @1981_main
-audio: shuffle music/Sri_Lanka_Anthem.mp3 music/Vimukthi_Gee.mp3
+audio: shuffle music/basic/Sri_Lanka_Anthem.mp3 music/basic/Vimukthi_Gee.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
