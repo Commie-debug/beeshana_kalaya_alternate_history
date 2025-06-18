@@ -5,7 +5,7 @@ go-to: menu
 
 = The Library
 
-<img src="img/slfp_symbol.jpg">Herein contains relevant information about the government and politics of Sri Lanka.
+<img src="img/temp_party_symbols.jpg">Herein contains relevant information about the government and politics of Sri Lanka.
 
 @menu
 
@@ -207,39 +207,39 @@ Upper Class: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, K
 @parties
 go-to: menu
 
-**SLFP** - *Sri Lanka Freedom Party* - This is us. Founded as a center-left party in 1954, we have switched back and forth from governing, normally in coaltion with other left wing parties and leading the opposition until 1977. We are advocates for democratic socialism with some factions promoting sinhalese nationalism. 
+<img src="img/temp_party_symbols.jpg">**SLFP** - *Sri Lanka Freedom Party* - This is us. Founded as a center-left party in 1954, we have switched back and forth from governing, normally in coaltion with other left wing parties and leading the opposition until 1977. We are advocates for democratic socialism with some factions promoting sinhalese nationalism. 
 
-[? if slpp_formed: **SLPP** - *Sri Lanka Podujana Peramuna* - A right wing sinhalese nationalist party. Formed after a recent split with the *Sri Lanka Freedom Party* ?]
+[? if slpp_formed: <img src="img/temp_party_symbols.jpg">**SLPP** - *Sri Lanka Podujana Peramuna* - A right wing sinhalese nationalist party. Formed after a recent split with the *Sri Lanka Freedom Party* ?]
 
-[? if slmp_formed: **SLMP** - *Sri Lanka Mahajana Pakshaya* - A left wing progressive party. Formed after a recent split with the *Sri Lanka Freedom Party* ?]
+[? if slmp_formed: <img src="img/temp_party_symbols.jpg">**SLMP** - *Sri Lanka Mahajana Pakshaya* - A left wing progressive party. Formed after a recent split with the *Sri Lanka Freedom Party* ?]
 
-**UNP** - *United National Party* - A center-right party led by [+ unp_leader +], promoting economic liberalization and open-market policies. Formed before independence they have switched back and forth between governing and opposition with us for decades. 
+<img src="img/temp_party_symbols.jpg">**UNP** - *United National Party* - A center-right party led by [+ unp_leader +], promoting economic liberalization and open-market policies. Formed before independence they have switched back and forth between governing and opposition with us for decades. 
 
-**TULF** - *Tamil United Liberation Front* - Currently the primary political voice for Tamil nationalism, advocating for Tamil rights and autonomy. Since 1977 they have activly advocated for seperatism from Sri Lanka. They are currently losing their influence to tamil militant groups. 
+<img src="img/temp_party_symbols.jpg">**TULF** - *Tamil United Liberation Front* - Currently the primary political voice for Tamil nationalism, advocating for Tamil rights and autonomy. Since 1977 they have activly advocated for seperatism from Sri Lanka. They are currently losing their influence to tamil militant groups. 
 
-[? if pflt_formed: **PFLT** - *Peoples Front Of Liberation Tigers* - The political front of the LTTE, they advocate for further autonomy for the north-east on a anti caste, revolutionary socialist platform. ?]
+[? if pflt_formed: <img src="img/temp_party_symbols.jpg">**PFLT** - *Peoples Front Of Liberation Tigers* - The political front of the LTTE, they advocate for further autonomy for the north-east on a anti caste, revolutionary socialist platform. ?]
 
-**ACTC** - *All Ceylon Tamil Congress* - Established in 1944, the ACTC was one of the earliest Tamil political parties, advocating for Tamil rights and federalism. They are gradulally losing influence to the TULF and the tamil militants dew to their moderate approach.
+<img src="img/temp_party_symbols.jpg">**ACTC** - *All Ceylon Tamil Congress* - Established in 1944, the ACTC was one of the earliest Tamil political parties, advocating for Tamil rights and federalism. They are gradulally losing influence to the TULF and the tamil militants dew to their moderate approach.
 
-[? if eros_formed: **EROS** - *Eelam Revolutionary Organisation Of Students* - Founded in 1975 in London by Tamil expatriates, EROS began as a Marxist think-tank before evolving into a militant group advocating for Tamil independence. It has recently joined democratic politics. ?]
+[? if eros_formed:<img src="img/temp_party_symbols.jpg"> **EROS** - *Eelam Revolutionary Organisation Of Students* - Founded in 1975 in London by Tamil expatriates, EROS began as a Marxist think-tank before evolving into a militant group advocating for Tamil independence. It has recently joined democratic politics. ?]
 
-[? if dplf_formed: **DPLF** - *Democratic Peoples Liberation Front* - Founded as the political front of the PLOTE and other smaller former militant groups. It advocates for Tamil autonomy and harsher measures against the LTTE. ?]
+[? if dplf_formed: <img src="img/temp_party_symbols.jpg">**DPLF** - *Democratic Peoples Liberation Front* - Founded as the political front of the PLOTE and other smaller former militant groups. It advocates for Tamil autonomy and harsher measures against the LTTE. ?]
 
-**JVP** - *Janatha Vimukthi Peramuna (Peoples Liberation Front)* - Established in 1965 by Rohana Wijeweera, its is a Marxist-Leninist party known for its failed insurrection in 1971 against the SLFP government. It advocates for a rural based revolutionary socialism. In recent years it has started adopting sinhalese nationalist positions. 
+<img src="img/temp_party_symbols.jpg">**JVP** - *Janatha Vimukthi Peramuna (Peoples Liberation Front)* - Established in 1965 by Rohana Wijeweera, its is a Marxist-Leninist party known for its failed insurrection in 1971 against the SLFP government. It advocates for a rural based revolutionary socialism. In recent years it has started adopting sinhalese nationalist positions. 
 
-[? if npp_formed: **NPP** - *National Peoples Power* - Founded after a recent split within the JVP. It is a broad left wing coalition that advocates for democratic socialism. It also contains communist, feminist and minority factions. ?]
+[? if npp_formed: <img src="img/temp_party_symbols.jpg">**NPP** - *National Peoples Power* - Founded after a recent split within the JVP. It is a broad left wing coalition that advocates for democratic socialism. It also contains communist, feminist and minority factions. ?]
 
-**CPSL** - *Communist Party Of Sri Lanka* - Established in 1943, the CPSL aligned with pro-Soviet Marxist-Leninist ideology, advocating for workers' rights and socialism. We have often being in coalition with them. 
+<img src="img/temp_party_symbols.jpg">**CPSL** - *Communist Party Of Sri Lanka* - Established in 1943, the CPSL aligned with pro-Soviet Marxist-Leninist ideology, advocating for workers' rights and socialism. We have often being in coalition with them. 
 
-**LSSP** - *Lanka Sama Samaja Party (Lanka Equal Society Party)* - As Sri Lanka's oldest socialist party, founded in 1935, the LSSP played a pivotal role in the independence movement and post-independence politics. The party focuses on workers' rights, social justice, and anti-colonialism. Their formidable trade unions have recently been crushed by the UNP.
+<img src="img/temp_party_symbols.jpg">**LSSP** - *Lanka Sama Samaja Party (Lanka Equal Society Party)* - As Sri Lanka's oldest socialist party, founded in 1935, the LSSP played a pivotal role in the independence movement and post-independence politics. The party focuses on workers' rights, social justice, and anti-colonialism. Their formidable trade unions have recently been crushed by the UNP.
 
-**NSSP** - *Nava Sama Samaja Party (New Equal Society Party)* - Formed in 1977 following a split from the LSSP, the NSSP embraces Trotskyist ideology with a focus on self-determination and anti-authoritarianism. It has established itself as a vocal advocate for Tamil rights and democratic socialism.
+<img src="img/temp_party_symbols.jpg">**NSSP** - *Nava Sama Samaja Party (New Equal Society Party)* - Formed in 1977 following a split from the LSSP, the NSSP embraces Trotskyist ideology with a focus on self-determination and anti-authoritarianism. It has established itself as a vocal advocate for Tamil rights and democratic socialism.
 
-[? if mep_formed: **MEP** - *Mahajana Eksath Peramuna* - Originally formed in 1956, the MEP has recently been reactivated, emphasizing Sinhalese nationalism and socialism. It is a minor political party ?]
+[? if mep_formed: <img src="img/temp_party_symbols.jpg">**MEP** - *Mahajana Eksath Peramuna* - Originally formed in 1956, the MEP has recently been reactivated, emphasizing Sinhalese nationalism and socialism. It is a minor political party ?]
 
-**CWC** - *Ceylon Workers Congress* -Representing Indian Tamil plantation workers, the CWC focuses on labor rights, social welfare, and political representation for their marginalised base. It has recently grown closer to the UNP under JR.
+<img src="img/temp_party_symbols.jpg">**CWC** - *Ceylon Workers Congress* -Representing Indian Tamil plantation workers, the CWC focuses on labor rights, social welfare, and political representation for their marginalised base. It has recently grown closer to the UNP under JR.
 
-[? if slmc_formed: **SLMC** - *Sri Lanka Muslim Congress* - Founded recently, the SLMC has emerged to represent the interests of the Muslim minority, particularly in the Eastern Province. The party aims to address grievances of the Muslim community and prevent youth from joining militant groups. ?]
+[? if slmc_formed: <img src="img/temp_party_symbols.jpg">**SLMC** - *Sri Lanka Muslim Congress* - Founded recently, the SLMC has emerged to represent the interests of the Muslim minority, particularly in the Eastern Province. The party aims to address grievances of the Muslim community and prevent youth from joining militant groups. ?]
 
 
 @paramilitaries
