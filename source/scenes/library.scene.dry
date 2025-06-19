@@ -33,13 +33,27 @@ go-to: menu
 
 **1946**: UNP founded by D.S Senanayke from a number of pro-dominion parties  including the Ceylon National Congress, Sinhala Maha Sabha led by S.W.R.D Bandaranaike, and other right-leaning groups.
 
-**1947**: The UNP wins a plurality in Ceylon's first parliamentary elections, forming a coalition government with the Tamil Congress. Senanayake becomes the first Prime Minister of Ceylon.
+**1947**: The UNP wins a plurality in Ceylon's first parliamentary elections, forming a coalition government with the ACTC. Senanayake becomes the first Prime Minister of Ceylon.
 
 **1948**: Ceylon gains independence from the UK as a Dominion with the British monarch remaining as head of state.
 
-**1948**: 
+**1948**: Ceylon Citizenship Act is enacted. This leads to the subeqsuent disenfranchisment and statelessness of Indian Tamils. 
 
+**1953**: A hartal(civil disobediance campaign) is launched by the LSSP and other left wing parties in response to the UNP governments reversal of the rice subsidy and welfare programs. Prime minister Dudley Senanayake would resign.
 
+**1956**: SLFP wins its first election on a socialist and sinhalese nationalist platform along with a coaltion consisting of smaller marxist parties. The SLFP and UNP campaigns deliberatly stirred ethnic tensions between Tamils and Sinhalese.
+
+**1956**: Violence erupts in the Gal Oya valley between the former majority Tamils and Sinhalese who had been settled under a government scheme.
+
+**1956**: Under the first SLFP government under S.W.R.D the Sinhala Only Act is enacted. The act replaced english with sinhala as the offical language of the country. This allowed more sinhalese to enter the civil service but also led to Tamils being disadvantaged forcing many to leave.
+
+**1958**: Following the abrogation pact between S.W.R.D and ITAK(Tamil federal party) leader S.J.V Chelvanayakam which granted limited autonomy for Tamil areas, island wide riots broke out leading further distruct between Sinhalese and Tamils.
+
+**1959**: S.W.R.D Bandaranaike is assasinated by a budhist monk 
+
+**1948**:
+
+**1948**:
 @curr_gov
 go-to: cabinet if slfp_in_government; menu if not slfp_in_government
 
