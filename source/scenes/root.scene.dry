@@ -393,7 +393,7 @@ Q.unemployed_other = 10;
 
 
 // Current Parliment composition
-// Number of seats in Parliment in Jan 1980
+// Number of seats in Parliment in Jan 1981
 // source: wikipedia
 Q.slfp_r = 8;
 Q.jvp_r = 0;
@@ -405,6 +405,16 @@ Q.cwc_r = 1;
 Q.unp_r = 140;
 Q.actc_r = 0;
 Q.other_r = 0;
+
+//Not yet formed parties
+Q.slmp = 0;
+Q.slpp = 0;
+Q.pflt = 0;
+Q.dplf = 0;
+Q.eros = 0;
+Q.npp = 0;
+Q.slmc = 0;
+Q.mep = 0;
 
 // diff from prev
 Q.old_slfp_r = 8;
