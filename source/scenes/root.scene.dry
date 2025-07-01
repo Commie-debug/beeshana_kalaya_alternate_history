@@ -718,7 +718,7 @@ Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from par
 - @1981_main: Start game
 
 @1981_main
-audio: shuffle music/basic/Sri_Lanka_Anthem.mp3 music/basic/Vimukthi_Gee.mp3
+audio: shuffle music/basic/Sri_Lanka_Anthem.mp3 music/basic/Vimukthi_Gee.mp3 music/basic/SLFP_Song.mp3 music/basic/Bandaranaike_song.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
