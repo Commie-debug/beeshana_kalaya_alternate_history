@@ -2,9 +2,9 @@ title: Election Simulation
 set-jump: post_election
 
 
-- @1928: 1928 historical scenario
-- @1930: 1930 historical scenario
-- @1932: 1932 (July) historical scenario
+- @1982: 1982 Presidential Election
+- @1988: 1988 Presidential Election
+- @1989: 1989 Parliamentary Election
 
 @1928
 on-arrival: {!
