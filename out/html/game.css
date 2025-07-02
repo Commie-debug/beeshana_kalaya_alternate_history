@@ -521,7 +521,9 @@ img {
   }
   .tools.right {
       float: none;
-      right: 0;
+      right: 0.4em;
+      position: relative;
+      z-index: 10;
   }
   #mid_panel {
       margin: 0 auto;
