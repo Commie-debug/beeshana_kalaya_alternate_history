@@ -212,8 +212,23 @@
       window.updateSidebar();
   };
 
+  window.changeTabRight = function(newTab, tabId) {
+    var tabButton = document.getElementById(tabId);
+    var tabButtons = document.getElementsByClassName('tab_button');
+    
+    var rightSidebar = document.getElementById('stats_sidebar_right');
+    var rightTabButtons = rightSidebar.getElementsByClassName('tab_button');
+    for (i = 0; i < rightTabButtons.length; i++) {
+        rightTabButtons[i].className = rightTabButtons[i].className.replace(' active', '');
+    }
+    tabButton.className += ' active';
+    window.statusTabRight = newTab;
+    window.updateSidebarRight();
+  };
+  
   window.onDisplayContent = function() {
       window.updateSidebar();
+      window.updateSidebarRight();
   };
 
   /*
@@ -250,6 +265,7 @@
 
   window.justLoaded = true;
   window.statusTab = "status";
+  window.statusTabRight = "status_right";
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
