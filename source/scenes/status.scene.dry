@@ -20,7 +20,7 @@ Week [+ week +] [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
-<span style="color: #00008B;">SLFP</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
+<span style="color: #00008B;">**SLFP**</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
 
 [? if slfp_in_government and not in_slfp_majority : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -36,15 +36,15 @@ Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +]
 
 Parliament composition:
 
-[? if slfp_r >= 1 : {!<span class="tooltip-text" title="Sri Lanka Freedom Party"><span style="color: #00008B;">SLFP</span></span>!}: [+ slfp_r +] ?]
+[? if slfp_r >= 1 : {!<span class="tooltip-text" title="Sri Lanka Freedom Party"><span style="color: #00008B;">**SLFP**</span></span>!}: [+ slfp_r +] ?]
 
 [? if slpp_formed = 1 and slpp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_r +] ?]
 
 [? if slmp_formed = 1 and slmp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">SLMP</span>!}: [+ slmp_r +] ?]
 
-[? if unp_r >=1 : {!<span class="tooltip-text" title="United National Party"><span style="color: #006400;">UNP</span></span>!}: [+ unp_r +] ?]
+[? if unp_r >=1 : {!<span class="tooltip-text" title="United National Party"><span style="color: #006400;">**UNP**</span></span>!}: [+ unp_r +] ?]
 
-[? if tulf_r >=1 : {!<span class="tooltip-text" title="Tamil United Liberation Front"><span style="color: #FEDF00;">TULF</span></span>!}: [+ tulf_r +] ?]
+[? if tulf_r >=1 : {!<span class="tooltip-text" title="Tamil United Liberation Front"><span style="color: #FEDF00;">**TULF**</span></span>!}: [+ tulf_r +] ?]
 
 [? if pflt_formed = 1 and pflt_r >= 1: {!<span class="tooltip-text" title="Peoples Front of Liberation Tigers">PFLT</span>!}: [+ pflt_r +] ?]
 
@@ -66,7 +66,7 @@ Parliament composition:
 
 [? if mep_formed = 1 and mep_r >= 1: {!<span class="tooltip-text" title="Mahajana Eksath Peramuna">MEP</span>!}: [+ mep_r +] ?]
 
-[? if cwc_r >=1 : {!<span class="tooltip-text" title="Ceylon Workers Congress"><span style="color: #E52B50;">CWC</span></span>!}: [+ cwc_r +] ?]
+[? if cwc_r >=1 : {!<span class="tooltip-text" title="Ceylon Workers Congress"><span style="color: #E52B50;">**CWC**</span></span>!}: [+ cwc_r +] ?]
 
 [? if slmc_formed = 1 and slmc_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Muslim Congress">SLMC</span>!}: [+ slmc_r +] ?]
 
