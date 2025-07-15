@@ -6,6 +6,13 @@ is-special: true
 
 Image of the electoral districts
 
+<span style="color: #DC143C;”>**PFLT**</span>
+
+<span style="color: #63B76C;”>**SLMC**</span>
+
+<span style="color: #9f005d;”>**NPP**</span>
+
+
 @news
 
 = News
@@ -37,11 +44,5 @@ Text that changes each month to show regional, local and international news
 <span style="color: #CE2029;">**DPLF**</span>
 
 <span style="color: #FF6347;">**MEP**</span>
-
-<span style="color: #DC143C;”>**PFLT**</span>
-
-<span style="color: #63B76C;”>**SLMC**</span>
-
-<span style="color: #9f005d;”>**NPP**</span>
 
 
