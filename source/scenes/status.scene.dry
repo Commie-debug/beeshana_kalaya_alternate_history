@@ -36,13 +36,13 @@ Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +]
 
 Parliament composition:
 
-[? if slfp_r >= 1 : {!<span class="tooltip-text" title="Sri Lanka Freedom Party"><span style="color: #00008B;">**SLFP**</span></span>!}: [+ slfp_r +] ?]
+[? if slfp_r >= 1 : <span class="tooltip-text" title="Sri Lanka Freedom Party" style="color: #00008B;">**SLFP**</span>: [+ slfp_r +]% ?]
 
 [? if slpp_formed = 1 and slpp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_r +] ?]
 
 [? if slmp_formed = 1 and slmp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">SLMP</span>!}: [+ slmp_r +] ?]
 
-[? if unp_r >=1 : {!<span class="tooltip-text" title="United National Party"><span style="color: #006400;">**UNP**</span></span>!}: [+ unp_r +] ?]
+[? if unp_r >= 1 : <span class="tooltip-text" title="United National Party" style="color: #006400;">**UNP**</span>: [+ unp_r +]% ?]
 
 [? if tulf_r >=1 : {!<span class="tooltip-text" title="Tamil United Liberation Front"><span style="color: #FEDF00;">**TULF**</span></span>!}: [+ tulf_r +] ?]
 
