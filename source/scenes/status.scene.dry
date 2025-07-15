@@ -77,23 +77,6 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-<span style="color: #00008B;">**SLFP**</span>
-<span style="color: #006400;">**UNP**</span>
-<span style="color: #F7D917;">**TULF**</span>
-<span style="color: #E52B50;">**CWC**</span>
-<span style="color: #FDCC01;">**ACTC**</span>
-<span style="color: #65000B;">**CPSL**</span>
-<span style="color: #FF2226;">**JVP**</span>
-<span style="color: #E52B50;">**SLPP**</span>
-<span style="color: #FF2400;">**EROS**</span>
-<span style="color: #A91101;">**LSSP**</span>
-<span style="color: #FF8080;">**NSSP**</span>
-<span style="color: #CE2029;">**DPLF**</span>
-<span style="color: #FF6347;">**MEP**</span>
-<span style="color: #FF6347;”>**PFLT**</span>
-<span style="color: #63B76C;”>**SLMC**</span>
-<span style="color: #9F005D;”>**NPP**</span>
-
 [? if slpp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_relation : relationships +] ?]
 
 [? if slmp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">SLMP</span>!}: [+ slmp_relation : relationships +] ?]
