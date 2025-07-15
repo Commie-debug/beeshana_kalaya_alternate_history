@@ -20,7 +20,7 @@ Week [+ week +] [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
-SLFP position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
+<span style="color: #00008B;">SLFP</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
 
 [? if slfp_in_government and not in_slfp_majority : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -36,7 +36,7 @@ Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +]
 
 Parliament composition:
 
-[? if slfp_r >= 1 : {!<span class="tooltip-text" title="Sri Lanka Freedom Party">SLFP</span>!}: [+ slfp_r +] ?]
+[? if slfp_r >= 1 : {!<span class="tooltip-text" title="Sri Lanka Freedom Party">(<span style="color: #00008B;">SLFP</span>)</span>!}: [+ slfp_r +] ?]
 
 [? if slpp_formed = 1 and slpp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_r +] ?]
 
