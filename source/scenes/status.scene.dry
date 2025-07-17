@@ -40,7 +40,7 @@ Parliament composition:
 [? if slpp_formed = 1 and slpp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_r +] ?]
 [? if slmp_formed = 1 and slmp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">SLMP</span>!}: [+ slmp_r +] ?]
 [? if unp_r >= 1 : <span class="tooltip-text" title="United National Party" style="color: #006400;">**UNP**</span>: [+ unp_r +] ?]
-[? if tulf_r >= 1 : <span class="tooltip-text" title="Tamil United Liberation Front" style="color: 	#F7D917;">**TULF**</span>: [+ tulf_r +] ?]
+[? if tulf_r >= 1 : <span class="tooltip-text" title="Tamil United Liberation Front" style="color: #F7D917;">**TULF**</span>: [+ tulf_r +] ?]
 [? if pflt_formed = 1 and pflt_r >= 1: {!<span class="tooltip-text" title="Peoples Front of Liberation Tigers">PFLT</span>!}: [+ pflt_r +] ?]
 [? if actc_r >= 1 : {!<span class="tooltip-text" title="All Ceylon Tamil Congress">CWC</span>!}: [+ actc_r +] ?]
 [? if eros_formed = 1 and eros_r >= 1: {!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">EROS</span>!}: [+ eros_r +] ?]
