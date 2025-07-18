@@ -572,6 +572,65 @@ img {
   }
 }
 
+/* Sri Lankan Districts Map Styles */
+.map-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--content-bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.district {
+    fill: var(--card-bg-color);
+    stroke: var(--border-color);
+    stroke-width: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.district:hover {
+    fill: var(--card-border-color);
+    stroke-width: 2;
+}
+
+.district.selected {
+    fill: #4a90e2;
+    stroke: #2c5aa0;
+    stroke-width: 2;
+}
+
+.district-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--tab-bg-color);
+    border-radius: 5px;
+    border-left: 4px solid #4a90e2;
+}
+
+.district-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.map-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 1.4em;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .district.selected {
+    fill: #6bb6ff;
+    stroke: #4a90e2;
+}
+
+body.dark-mode .district-info {
+    border-left-color: #6bb6ff;
+}
 
 /* New stuff just for this game */
 
