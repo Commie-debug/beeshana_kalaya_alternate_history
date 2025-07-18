@@ -6,6 +6,64 @@ is-special: true
 
 Image of the electoral districts
 
+<div class="map-container">
+    <h2 class="map-title">Electoral Districts of Sri Lanka</h2>
+    
+    <svg viewBox="0 0 400 600" width="100%" height="auto">
+        <!-- Northern Province -->
+        <path class="district" data-name="Jaffna" d="M180 40 L220 35 L240 45 L235 65 L210 70 L180 65 Z"/>
+        <path class="district" data-name="Kilinochchi" d="M180 65 L210 70 L205 90 L175 85 Z"/>
+        <path class="district" data-name="Mannar" d="M140 80 L175 85 L170 110 L135 105 Z"/>
+        <path class="district" data-name="Mullaitivu" d="M205 90 L235 85 L240 110 L210 115 Z"/>
+        <path class="district" data-name="Vavuniya" d="M170 110 L210 115 L205 140 L165 135 Z"/>
+        
+        <!-- North Central Province -->
+        <path class="district" data-name="Anuradhapura" d="M135 105 L205 140 L200 180 L130 175 Z"/>
+        <path class="district" data-name="Polonnaruwa" d="M200 180 L270 175 L275 210 L205 215 Z"/>
+        
+        <!-- Eastern Province -->
+        <path class="district" data-name="Trincomalee" d="M240 110 L290 105 L295 150 L245 155 Z"/>
+        <path class="district" data-name="Batticaloa" d="M275 210 L320 205 L325 260 L280 265 Z"/>
+        <path class="district" data-name="Ampara" d="M280 265 L325 260 L330 320 L285 325 Z"/>
+        
+        <!-- North Western Province -->
+        <path class="district" data-name="Kurunegala" d="M130 175 L200 180 L195 230 L125 225 Z"/>
+        <path class="district" data-name="Puttalam" d="M80 160 L130 175 L125 225 L75 210 Z"/>
+        
+        <!-- Western Province -->
+        <path class="district" data-name="Colombo" d="M125 225 L170 230 L165 270 L120 265 Z"/>
+        <path class="district" data-name="Gampaha" d="M120 265 L165 270 L160 300 L115 295 Z"/>
+        <path class="district" data-name="Kalutara" d="M115 295 L160 300 L155 340 L110 335 Z"/>
+        
+        <!-- Central Province -->
+        <path class="district" data-name="Kandy" d="M195 230 L245 235 L240 280 L190 275 Z"/>
+        <path class="district" data-name="Matale" d="M205 215 L275 210 L270 250 L200 255 Z"/>
+        <path class="district" data-name="Nuwara Eliya" d="M190 275 L240 280 L235 320 L185 315 Z"/>
+        
+        <!-- Sabaragamuwa Province -->
+        <path class="district" data-name="Ratnapura" d="M155 340 L205 345 L200 390 L150 385 Z"/>
+        <path class="district" data-name="Kegalle" d="M160 300 L210 305 L205 345 L155 340 Z"/>
+        
+        <!-- Uva Province -->
+        <path class="district" data-name="Badulla" d="M235 320 L285 325 L280 370 L230 365 Z"/>
+        <path class="district" data-name="Monaragala" d="M230 365 L280 370 L275 420 L225 415 Z"/>
+        
+        <!-- Southern Province -->
+        <path class="district" data-name="Galle" d="M150 385 L200 390 L195 430 L145 425 Z"/>
+        <path class="district" data-name="Matara" d="M145 425 L195 430 L190 470 L140 465 Z"/>
+        <path class="district" data-name="Hambantota" d="M190 470 L275 420 L280 470 L195 475 Z"/>
+    </svg>
+    
+    <div class="district-info">
+        <div class="district-name" id="selected-district">Click on a district to view information</div>
+    </div>
+</div>
+
+<script>
+    // Initialize the map when this content loads
+    window.onDistrictMapLoad();
+</script>
+
 @news
 
 = News
