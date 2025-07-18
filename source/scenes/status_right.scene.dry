@@ -4,10 +4,8 @@ is-special: true
 
 = The Nation
 
-Image of the electoral districts
-
 <div class="map-container">
-    <h2 class="map-title">Electoral Districts of Sri Lanka</h2>
+    <h2 class="map-title">Districts of Sri Lanka</h2>
     
     <svg viewBox="0 0 400 600" width="100%" height="auto">
         <!-- Northern Province -->
@@ -55,7 +53,7 @@ Image of the electoral districts
     </svg>
     
     <div class="district-info">
-        <div class="district-name" id="selected-district">Click on a district to view information</div>
+        <div class="district-name" id="selected-district"> </div>
     </div>
 </div>
 
