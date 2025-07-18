@@ -231,6 +231,39 @@
       window.updateSidebarRight();
   };
 
+  // Sri Lankan Districts Map Functions
+  window.initializeDistrictsMap = function() {
+      // Get all district elements
+      const districts = document.querySelectorAll('.district');
+      const selectedDistrictElement = document.getElementById('selected-district');
+      
+      // Add click event listeners to each district
+      districts.forEach(district => {
+          district.addEventListener('click', function() {
+              // Remove selected class from all districts
+              districts.forEach(d => d.classList.remove('selected'));
+              
+              // Add selected class to clicked district
+              this.classList.add('selected');
+              
+              // Update the display with the district name
+              const districtName = this.getAttribute('data-name');
+              selectedDistrictElement.textContent = districtName;
+              
+              // You can add more functionality here later
+              // For example: window.showDistrictStats(districtName);
+          });
+      });
+  };
+  
+  // Call this function when the page loads or when switching to Nation tab
+  window.onDistrictMapLoad = function() {
+      // Initialize the map after a short delay to ensure DOM is ready
+      setTimeout(function() {
+          window.initializeDistrictsMap();
+      }, 100);
+  };
+
   /*
    * This function copied from the code for Infinite Space Battle Simulator
    *
