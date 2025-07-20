@@ -81,7 +81,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if slmp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya" style="color: #663399;">**SLMP**</span>!}: [+ slmp_relation : relationships +] ?]
 
-{!<span class="tooltip-text" title="United National Party" style="color: #006400;">**UNP**</span>!}: [+ unp_relation : relationships +]
+{!<span class="tooltip-text" title="United National Party" style="color: #006400;">*UNP*</span>!}: [+ unp_relation : relationships +]
 
 {!<span class="tooltip-text" title="Tamil United Liberation Front" style="color: #F7D917;">**TULF**</span>!}: [+ tulf_relation : relationships +]
 
@@ -112,9 +112,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SLFP
 
-{!<span class="tooltip-text" title="The Left" style="color: #A91101;”>**Left**</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;”>**Nationalists**</span>!} strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span>!} strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
 
 @paramilitaries
