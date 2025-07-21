@@ -232,19 +232,20 @@
   };
 
   // Sri Lankan Districts Map Functions
-  window.initializeDistrictsMap = function() {
-    // Get all district elements
-    const districts = document.querySelectorAll('.district');
+  // District button functionality
+window.initializeDistrictButtons = function() {
+    // Get all district buttons
+    const districtButtons = document.querySelectorAll('.district-button');
     const selectedDistrictElement = document.getElementById('selected-district');
-    const districtInfoElement = document.getElementById('district-details');
+    const districtDetailsElement = document.getElementById('district-details');
     
-    // Add click event listeners to each district
-    districts.forEach(district => {
-        district.addEventListener('click', function() {
-            // Remove selected class from all districts
-            districts.forEach(d => d.classList.remove('selected'));
+    // Add click event listeners to each button
+    districtButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove selected class from all buttons
+            districtButtons.forEach(btn => btn.classList.remove('selected'));
             
-            // Add selected class to clicked district
+            // Add selected class to clicked button
             this.classList.add('selected');
             
             // Get the district name and data
@@ -252,35 +253,32 @@
             const districtData = window.dendryUI.dendryEngine.state.qualities.district_data[districtName];
             
             if (districtData) {
-                // Update the display with comprehensive district information
+                // Update the display with district information
                 selectedDistrictElement.textContent = districtData.name;
                 
-                // Create detailed information display
+                // Create simple information display
                 let detailsHTML = `
-                    <div class="district-stats">
-                        <p><strong>Province:</strong> ${districtData.province}</p>
-                        <p><strong>Population:</strong> ${districtData.population.toLocaleString()}</p>
-                    </div>
+                    <p><strong>Province:</strong> ${districtData.province}</p>
+                    <p><strong>Population:</strong> ${districtData.population.toLocaleString()}</p>
                 `;
                 
-                districtInfoElement.innerHTML = detailsHTML;
+                districtDetailsElement.innerHTML = detailsHTML;
             } else {
                 selectedDistrictElement.textContent = districtName;
-                districtInfoElement.innerHTML = '<p>No detailed information available for this district.</p>';
+                districtDetailsElement.innerHTML = '<p>No information available for this district.</p>';
             }
         });
     });
 };
 
-
-  
-  // Call this function when the page loads or when switching to Nation tab
+  // Update the existing onDistrictMapLoad function in game.js:
   window.onDistrictMapLoad = function() {
-      // Initialize the map after a short delay to ensure DOM is ready
+      // Initialize the buttons after a short delay to ensure DOM is ready
       setTimeout(function() {
-          window.initializeDistrictsMap();
+          window.initializeDistrictButtons();
       }, 100);
   };
+
 
   /*
    * This function copied from the code for Infinite Space Battle Simulator
