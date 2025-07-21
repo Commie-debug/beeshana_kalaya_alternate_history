@@ -77,13 +77,13 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-[? if slpp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna" style="color: #E52B50;">**SLPP**</span>!}: [+ slpp_relation : relationships +] ?]
+[? if slpp_formed = 1 : <span class="tooltip-text" title="Sri Lanka Podujana Peramuna" style="color: #E52B50;">**SLPP**</span>: [+ slpp_relation : relationships +] ?]
 
 [? if slmp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya" style="color: #663399;">**SLMP**</span>!}: [+ slmp_relation : relationships +] ?]
 
-{!<span class="tooltip-text" title="United National Party" style="color: #006400;">*UNP*</span>!}: [+ unp_relation : relationships +]
+<span class="tooltip-text" title="United National Party" style="color: #006400;">**UNP**</span>: [+ unp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Tamil United Liberation Front" style="color: #F7D917;">**TULF**</span>!}: [+ tulf_relation : relationships +]
+<span class="tooltip-text" title="Tamil United Liberation Front" style="color: #F7D917;">**TULF**</span>: [+ tulf_relation : relationships +]
 
 [? if pflt_formed = 1 : {!<span class="tooltip-text" title="Peoples Front of Liberation Tigers" style="color: #DC143C;">**PFLT**</span>!}: [+ pflt_relation : relationships +] ?]
 
