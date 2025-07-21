@@ -231,54 +231,6 @@
       window.updateSidebarRight();
   };
 
-  // Sri Lankan Districts Map Functions
-  // District button functionality
-window.initializeDistrictButtons = function() {
-    // Get all district buttons
-    const districtButtons = document.querySelectorAll('.district-button');
-    const selectedDistrictElement = document.getElementById('selected-district');
-    const districtDetailsElement = document.getElementById('district-details');
-    
-    // Add click event listeners to each button
-    districtButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove selected class from all buttons
-            districtButtons.forEach(btn => btn.classList.remove('selected'));
-            
-            // Add selected class to clicked button
-            this.classList.add('selected');
-            
-            // Get the district name and data
-            const districtName = this.getAttribute('data-name');
-            const districtData = window.dendryUI.dendryEngine.state.qualities.district_data[districtName];
-            
-            if (districtData) {
-                // Update the display with district information
-                selectedDistrictElement.textContent = districtData.name;
-                
-                // Create simple information display
-                let detailsHTML = `
-                    <p><strong>Province:</strong> ${districtData.province}</p>
-                    <p><strong>Population:</strong> ${districtData.population.toLocaleString()}</p>
-                `;
-                
-                districtDetailsElement.innerHTML = detailsHTML;
-            } else {
-                selectedDistrictElement.textContent = districtName;
-                districtDetailsElement.innerHTML = '<p>No information available for this district.</p>';
-            }
-        });
-    });
-};
-
-  // Update the existing onDistrictMapLoad function in game.js:
-  window.onDistrictMapLoad = function() {
-      // Initialize the buttons after a short delay to ensure DOM is ready
-      setTimeout(function() {
-          window.initializeDistrictButtons();
-      }, 100);
-  };
-
 
   /*
    * This function copied from the code for Infinite Space Battle Simulator
