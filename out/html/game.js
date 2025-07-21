@@ -260,42 +260,6 @@
                     <div class="district-stats">
                         <p><strong>Province:</strong> ${districtData.province}</p>
                         <p><strong>Population:</strong> ${districtData.population.toLocaleString()}</p>
-                        <p><strong>Area:</strong> ${districtData.area} km²</p>
-                        <p><strong>Ethnicity:</strong> ${districtData.ethnicity}</p>
-                        <p><strong>Economy:</strong> ${districtData.economy}</p>
-                        <p><strong>Development Level:</strong> ${districtData.development_level}</p>
-                        <p><strong>Security Situation:</strong> ${districtData.security_situation}</p>
-                        <p><strong>Tamil Militant Presence:</strong> ${districtData.tamil_militant_presence}</p>
-                        
-                        <div class="political-support">
-                            <h4>Political Support (1981):</h4>
-                            <div class="support-bars">
-                                <div class="support-item">
-                                    <span>SLFP: ${districtData.support_slfp}%</span>
-                                    <div class="support-bar">
-                                        <div class="support-fill slfp-color" style="width: ${districtData.support_slfp}%"></div>
-                                    </div>
-                                </div>
-                                <div class="support-item">
-                                    <span>UNP: ${districtData.support_unp}%</span>
-                                    <div class="support-bar">
-                                        <div class="support-fill unp-color" style="width: ${districtData.support_unp}%"></div>
-                                    </div>
-                                </div>
-                                <div class="support-item">
-                                    <span>TULF: ${districtData.support_tulf}%</span>
-                                    <div class="support-bar">
-                                        <div class="support-fill tulf-color" style="width: ${districtData.support_tulf}%"></div>
-                                    </div>
-                                </div>
-                                <div class="support-item">
-                                    <span>Other: ${districtData.support_other}%</span>
-                                    <div class="support-bar">
-                                        <div class="support-fill other-color" style="width: ${districtData.support_other}%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 `;
                 
@@ -307,6 +271,7 @@
         });
     });
 };
+
 
   
   // Call this function when the page loads or when switching to Nation tab
