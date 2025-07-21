@@ -573,32 +573,72 @@ img {
 }
 
 /* Sri Lankan Districts Map Styles */
-.map-container {
-    max-width: 400px;
+.districts-container {
+    max-width: 600px;
     margin: 0 auto;
     background: var(--content-bg-color);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.district {
-    fill: var(--card-bg-color);
-    stroke: var(--border-color);
-    stroke-width: 1;
+.districts-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 1.4em;
+}
+
+.province-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.province-section:last-of-type {
+    border-bottom: none;
+}
+
+.province-section h3 {
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.district-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.district-button {
+    background-color: white;
+    color: #333;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: "Minion Pro", Georgia, serif;
+    font-size: 0.9em;
     cursor: pointer;
     transition: all 0.2s ease;
+    min-width: 80px;
+    text-align: center;
 }
 
-.district:hover {
-    fill: var(--card-border-color);
-    stroke-width: 2;
+.district-button:hover {
+    background-color: #f0f0f0;
+    border-color: var(--text-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.district.selected {
-    fill: #4a90e2;
-    stroke: #2c5aa0;
-    stroke-width: 2;
+.district-button.selected {
+    background-color: #4a90e2;
+    color: white;
+    border-color: #2c5aa0;
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
 }
 
 .district-info {
@@ -607,100 +647,62 @@ img {
     background: var(--tab-bg-color);
     border-radius: 5px;
     border-left: 4px solid #4a90e2;
+    min-height: 60px;
 }
 
-.district-name {
+#selected-district {
     font-size: 1.2em;
     font-weight: bold;
     color: var(--text-color);
+    margin-bottom: 10px;
 }
 
-.map-title {
-    text-align: center;
-    margin-bottom: 20px;
+#district-details {
     color: var(--text-color);
-    font-size: 1.4em;
+    line-height: 1.5;
+}
+
+#district-details p {
+    margin: 5px 0;
+    text-indent: 0;
 }
 
 /* Dark mode adjustments */
-body.dark-mode .district.selected {
-    fill: #6bb6ff;
-    stroke: #4a90e2;
+body.dark-mode .district-button {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode .district-button:hover {
+    background-color: #3a3a3a;
+    border-color: #777;
+}
+
+body.dark-mode .district-button.selected {
+    background-color: #6bb6ff;
+    border-color: #4a90e2;
 }
 
 body.dark-mode .district-info {
     border-left-color: #6bb6ff;
 }
 
-.district-stats {
-    margin-top: 15px;
-    font-size: 0.9em;
-    line-height: 1.4;
-}
-
-.district-stats p {
-    margin: 5px 0;
-    text-indent: 0;
-}
-
-.political-support {
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border-color);
-}
-
-.political-support h4 {
-    margin: 0 0 10px 0;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.support-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.support-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.support-item span {
-    min-width: 80px;
-    font-size: 0.85em;
-    font-weight: bold;
-}
-
-.support-bar {
-    flex-grow: 1;
-    height: 12px;
-    background-color: var(--tab-bg-color);
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-}
-
-.support-fill {
-    height: 100%;
-    transition: width 0.3s ease;
-}
-
-.slfp-color {
-    background-color: #DC143C;
-}
-
-.unp-color {
-    background-color: #228B22;
-}
-
-.tulf-color {
-    background-color: #FF8C00;
-}
-
-.other-color {
-    background-color: #9370DB;
+/* Mobile adjustments */
+@media screen and (max-width: 560px) {
+    .districts-container {
+        padding: 15px;
+    }
+    
+    .district-buttons {
+        gap: 6px;
+    }
+    
+    .district-button {
+        padding: 6px 10px;
+        font-size: 0.85em;
+        min-width: 70px;
+    }
 }
 
 /* Mobile adjustments */
