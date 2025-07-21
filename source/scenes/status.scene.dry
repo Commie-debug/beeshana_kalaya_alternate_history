@@ -36,6 +36,8 @@ Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +]
 
 Parliament composition:
 
+Current Government: [+ current_gov +]
+
 [? if slfp_r >= 1 : <span class="tooltip-text" title="Sri Lanka Freedom Party" style="color: #00008B;">**SLFP**</span>: [+ slfp_r +] ?]
 [? if slpp_formed = 1 and slpp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_r +] ?]
 [? if slmp_formed = 1 and slmp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">SLMP</span>!}: [+ slmp_r +] ?]
