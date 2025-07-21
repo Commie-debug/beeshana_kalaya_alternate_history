@@ -437,9 +437,11 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "JR Jayawardene";
+Q.president_party = "UNP";
 // starting prime_minister: Ranasinghe Premadasa
 Q.prime_minister = "Ranasinghe Premadasa";
 Q.prime_minister_party = 'UNP';
+Q.current_gov = 'UNP & CWC'
 Q.opposition_leader = "A. Amirthalingam";
 Q.opposition_leader_party = "TULF";
 Q.slfp_in_government = 0;
