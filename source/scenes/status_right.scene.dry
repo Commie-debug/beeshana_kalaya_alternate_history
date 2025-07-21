@@ -53,7 +53,8 @@ is-special: true
     </svg>
     
     <div class="district-info">
-        <div class="district-name" id="selected-district"> </div>
+        <div class="district-name" id="selected-district">Click a district to view information</div>
+        <div id="district-details"></div>
     </div>
 </div>
 
@@ -61,6 +62,96 @@ is-special: true
     // Initialize the map when this content loads
     window.onDistrictMapLoad();
 </script>
+
+// Additional CSS to add to game.css:
+
+.district-stats {
+    margin-top: 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.district-stats p {
+    margin: 5px 0;
+    text-indent: 0;
+}
+
+.political-support {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.political-support h4 {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.support-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.support-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.support-item span {
+    min-width: 80px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.support-bar {
+    flex-grow: 1;
+    height: 12px;
+    background-color: var(--tab-bg-color);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.support-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.slfp-color {
+    background-color: #DC143C;
+}
+
+.unp-color {
+    background-color: #228B22;
+}
+
+.tulf-color {
+    background-color: #FF8C00;
+}
+
+.other-color {
+    background-color: #9370DB;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 560px) {
+    .support-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .support-item span {
+        min-width: auto;
+    }
+    
+    .support-bar {
+        width: 100%;
+    }
+}
 
 @news
 
