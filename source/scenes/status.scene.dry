@@ -112,9 +112,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SLFP
 
-{!<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span>!} strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
+<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
 
 @paramilitaries
