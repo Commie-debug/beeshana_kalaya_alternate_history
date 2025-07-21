@@ -4,107 +4,102 @@ is-special: true
 
 = The Nation
 
-<div class="map-container">
-    <h2 class="map-title">Districts of Sri Lanka</h2>
+= The Nation
+
+<div class="districts-container">
+    <h2 class="districts-title">Districts of Sri Lanka</h2>
     
-    <svg viewBox="0 0 500 700" width="100%" height="auto" id="sri-lanka-map">
-        <!-- Northern Province -->
-        <path class="district" data-name="Jaffna" d="M200,20 L280,15 L320,25 L340,45 L335,75 L310,85 L280,90 L250,85 L220,80 L200,70 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Kilinochchi" d="M200,70 L250,85 L280,90 L275,120 L245,125 L215,120 L200,110 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Mannar" d="M140,85 L200,110 L215,120 L210,150 L180,155 L150,150 L130,135 L125,115 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Mullaitivu" d="M275,120 L320,115 L350,125 L360,155 L340,165 L310,160 L285,155 L275,140 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Vavuniya" d="M210,150 L275,140 L285,155 L280,185 L250,190 L220,185 L205,170 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- North Central Province -->
-        <path class="district" data-name="Anuradhapura" d="M130,135 L205,170 L250,190 L245,240 L215,245 L185,240 L155,235 L125,225 L110,205 L115,185 L120,165 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Polonnaruwa" d="M245,240 L340,235 L365,245 L370,275 L355,295 L330,300 L300,295 L270,290 L250,275 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- Eastern Province -->
-        <path class="district" data-name="Trincomalee" d="M340,165 L380,160 L400,170 L410,200 L405,230 L385,240 L365,245 L340,235 L330,210 L335,185 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Batticaloa" d="M330,300 L385,295 L420,305 L435,335 L430,365 L415,375 L390,370 L365,365 L340,360 L325,340 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Ampara" d="M340,360 L415,375 L440,385 L450,415 L445,445 L425,465 L400,470 L375,465 L350,460 L335,440 L330,420 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- North Western Province -->
-        <path class="district" data-name="Kurunegala" d="M125,225 L185,240 L215,245 L210,285 L185,295 L160,300 L135,295 L110,285 L95,265 L100,245 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Puttalam" d="M60,200 L110,205 L125,225 L100,245 L95,265 L85,285 L70,295 L50,290 L35,275 L30,255 L35,235 L45,215 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- Western Province -->
-        <path class="district" data-name="Colombo" d="M110,285 L160,300 L155,330 L130,340 L105,345 L80,340 L70,325 L75,305 L85,285 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Gampaha" d="M135,295 L185,295 L180,325 L155,330 L130,340 L110,330 L105,315 L110,300 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Kalutara" d="M105,345 L155,330 L150,365 L125,375 L100,380 L75,375 L65,360 L70,345 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- Central Province -->
-        <path class="district" data-name="Kandy" d="M180,325 L230,320 L255,330 L260,360 L235,370 L210,375 L185,370 L165,360 L160,345 L165,330 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Matale" d="M210,285 L270,290 L275,315 L255,330 L230,320 L205,315 L185,305 L185,295 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Nuwara Eliya" d="M235,370 L285,365 L300,375 L305,405 L280,415 L255,420 L230,415 L215,405 L210,390 L215,375 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- Sabaragamuwa Province -->
-        <path class="district" data-name="Ratnapura" d="M150,365 L210,375 L215,405 L200,435 L175,445 L150,450 L125,445 L105,435 L100,415 L105,395 L115,375 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Kegalle" d="M150,365 L185,370 L210,375 L205,405 L180,410 L155,415 L130,410 L115,395 L120,380 L135,370 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- Uva Province -->
-        <path class="district" data-name="Badulla" d="M280,415 L335,410 L360,420 L365,450 L350,465 L325,470 L300,465 L275,460 L260,445 L255,430 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Monaragala" d="M325,470 L400,470 L420,480 L425,510 L410,530 L385,535 L360,530 L335,525 L315,515 L310,495 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- Southern Province -->
-        <path class="district" data-name="Galle" d="M125,445 L200,435 L195,470 L170,485 L145,490 L120,485 L100,475 L90,460 L95,445 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Matara" d="M120,485 L195,470 L190,505 L165,520 L140,525 L115,520 L95,510 L85,495 L90,480 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <path class="district" data-name="Hambantota" d="M165,520 L310,495 L385,535 L390,565 L370,585 L345,590 L320,585 L295,580 L270,575 L245,570 L220,565 L195,560 L170,555 L150,545 Z" fill="#ddd" stroke="#000" stroke-width="1"/>
-        
-        <!-- District Labels -->
-        <text x="260" y="50" text-anchor="middle" font-size="10" fill="#000">Jaffna</text>
-        <text x="245" y="105" text-anchor="middle" font-size="9" fill="#000">Kilinochchi</text>
-        <text x="165" y="125" text-anchor="middle" font-size="9" fill="#000">Mannar</text>
-        <text x="325" y="145" text-anchor="middle" font-size="9" fill="#000">Mullaitivu</text>
-        <text x="240" y="170" text-anchor="middle" font-size="9" fill="#000">Vavuniya</text>
-        <text x="180" y="200" text-anchor="middle" font-size="10" fill="#000">Anuradhapura</text>
-        <text x="310" y="270" text-anchor="middle" font-size="10" fill="#000">Polonnaruwa</text>
-        <text x="370" y="200" text-anchor="middle" font-size="9" fill="#000">Trincomalee</text>
-        <text x="375" y="340" text-anchor="middle" font-size="10" fill="#000">Batticaloa</text>
-        <text x="390" y="420" text-anchor="middle" font-size="10" fill="#000">Ampara</text>
-        <text x="155" y="270" text-anchor="middle" font-size="10" fill="#000">Kurunegala</text>
-        <text x="65" y="250" text-anchor="middle" font-size="9" fill="#000">Puttalam</text>
-        <text x="120" y="320" text-anchor="middle" font-size="10" fill="#000">Colombo</text>
-        <text x="155" y="315" text-anchor="middle" font-size="9" fill="#000">Gampaha</text>
-        <text x="120" y="365" text-anchor="middle" font-size="9" fill="#000">Kalutara</text>
-        <text x="215" y="350" text-anchor="middle" font-size="10" fill="#000">Kandy</text>
-        <text x="230" y="305" text-anchor="middle" font-size="9" fill="#000">Matale</text>
-        <text x="270" y="395" text-anchor="middle" font-size="9" fill="#000">Nuwara Eliya</text>
-        <text x="155" y="410" text-anchor="middle" font-size="10" fill="#000">Ratnapura</text>
-        <text x="170" y="390" text-anchor="middle" font-size="9" fill="#000">Kegalle</text>
-        <text x="315" y="445" text-anchor="middle" font-size="10" fill="#000">Badulla</text>
-        <text x="365" y="505" text-anchor="middle" font-size="9" fill="#000">Monaragala</text>
-        <text x="155" y="465" text-anchor="middle" font-size="10" fill="#000">Galle</text>
-        <text x="140" y="505" text-anchor="middle" font-size="10" fill="#000">Matara</text>
-        <text x="275" y="555" text-anchor="middle" font-size="10" fill="#000">Hambantota</text>
-    </svg>
+    <div class="province-section">
+        <h3>Northern Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Jaffna">Jaffna</button>
+            <button class="district-button" data-name="Kilinochchi">Kilinochchi</button>
+            <button class="district-button" data-name="Mannar">Mannar</button>
+            <button class="district-button" data-name="Mullaitivu">Mullaitivu</button>
+            <button class="district-button" data-name="Vavuniya">Vavuniya</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>North Central Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Anuradhapura">Anuradhapura</button>
+            <button class="district-button" data-name="Polonnaruwa">Polonnaruwa</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>Eastern Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Trincomalee">Trincomalee</button>
+            <button class="district-button" data-name="Batticaloa">Batticaloa</button>
+            <button class="district-button" data-name="Ampara">Ampara</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>North Western Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Kurunegala">Kurunegala</button>
+            <button class="district-button" data-name="Puttalam">Puttalam</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>Western Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Colombo">Colombo</button>
+            <button class="district-button" data-name="Gampaha">Gampaha</button>
+            <button class="district-button" data-name="Kalutara">Kalutara</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>Central Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Kandy">Kandy</button>
+            <button class="district-button" data-name="Matale">Matale</button>
+            <button class="district-button" data-name="Nuwara Eliya">Nuwara Eliya</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>Sabaragamuwa Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Ratnapura">Ratnapura</button>
+            <button class="district-button" data-name="Kegalle">Kegalle</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>Uva Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Badulla">Badulla</button>
+            <button class="district-button" data-name="Monaragala">Monaragala</button>
+        </div>
+    </div>
+    
+    <div class="province-section">
+        <h3>Southern Province</h3>
+        <div class="district-buttons">
+            <button class="district-button" data-name="Galle">Galle</button>
+            <button class="district-button" data-name="Matara">Matara</button>
+            <button class="district-button" data-name="Hambantota">Hambantota</button>
+        </div>
+    </div>
     
     <div class="district-info">
-        <div class="district-name" id="selected-district">Click a district to view information</div>
+        <div id="selected-district">Click a district button to view information</div>
         <div id="district-details"></div>
     </div>
 </div>
 
 <script>
-    // Initialize the map when this content loads
-    window.onDistrictMapLoad();
+    // Initialize the district buttons when this content loads
+    window.initializeDistrictButtons();
 </script>
+
+
 @news
 
 = News
