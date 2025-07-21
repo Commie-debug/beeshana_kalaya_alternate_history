@@ -233,28 +233,81 @@
 
   // Sri Lankan Districts Map Functions
   window.initializeDistrictsMap = function() {
-      // Get all district elements
-      const districts = document.querySelectorAll('.district');
-      const selectedDistrictElement = document.getElementById('selected-district');
-      
-      // Add click event listeners to each district
-      districts.forEach(district => {
-          district.addEventListener('click', function() {
-              // Remove selected class from all districts
-              districts.forEach(d => d.classList.remove('selected'));
-              
-              // Add selected class to clicked district
-              this.classList.add('selected');
-              
-              // Update the display with the district name
-              const districtName = this.getAttribute('data-name');
-              selectedDistrictElement.textContent = districtName;
-              
-              // You can add more functionality here later
-              // For example: window.showDistrictStats(districtName);
-          });
-      });
-  };
+    // Get all district elements
+    const districts = document.querySelectorAll('.district');
+    const selectedDistrictElement = document.getElementById('selected-district');
+    const districtInfoElement = document.getElementById('district-details');
+    
+    // Add click event listeners to each district
+    districts.forEach(district => {
+        district.addEventListener('click', function() {
+            // Remove selected class from all districts
+            districts.forEach(d => d.classList.remove('selected'));
+            
+            // Add selected class to clicked district
+            this.classList.add('selected');
+            
+            // Get the district name and data
+            const districtName = this.getAttribute('data-name');
+            const districtData = window.dendryUI.dendryEngine.state.qualities.district_data[districtName];
+            
+            if (districtData) {
+                // Update the display with comprehensive district information
+                selectedDistrictElement.textContent = districtData.name;
+                
+                // Create detailed information display
+                let detailsHTML = `
+                    <div class="district-stats">
+                        <p><strong>Province:</strong> ${districtData.province}</p>
+                        <p><strong>Population:</strong> ${districtData.population.toLocaleString()}</p>
+                        <p><strong>Area:</strong> ${districtData.area} km²</p>
+                        <p><strong>Ethnicity:</strong> ${districtData.ethnicity}</p>
+                        <p><strong>Economy:</strong> ${districtData.economy}</p>
+                        <p><strong>Development Level:</strong> ${districtData.development_level}</p>
+                        <p><strong>Security Situation:</strong> ${districtData.security_situation}</p>
+                        <p><strong>Tamil Militant Presence:</strong> ${districtData.tamil_militant_presence}</p>
+                        
+                        <div class="political-support">
+                            <h4>Political Support (1981):</h4>
+                            <div class="support-bars">
+                                <div class="support-item">
+                                    <span>SLFP: ${districtData.support_slfp}%</span>
+                                    <div class="support-bar">
+                                        <div class="support-fill slfp-color" style="width: ${districtData.support_slfp}%"></div>
+                                    </div>
+                                </div>
+                                <div class="support-item">
+                                    <span>UNP: ${districtData.support_unp}%</span>
+                                    <div class="support-bar">
+                                        <div class="support-fill unp-color" style="width: ${districtData.support_unp}%"></div>
+                                    </div>
+                                </div>
+                                <div class="support-item">
+                                    <span>TULF: ${districtData.support_tulf}%</span>
+                                    <div class="support-bar">
+                                        <div class="support-fill tulf-color" style="width: ${districtData.support_tulf}%"></div>
+                                    </div>
+                                </div>
+                                <div class="support-item">
+                                    <span>Other: ${districtData.support_other}%</span>
+                                    <div class="support-bar">
+                                        <div class="support-fill other-color" style="width: ${districtData.support_other}%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                districtInfoElement.innerHTML = detailsHTML;
+            } else {
+                selectedDistrictElement.textContent = districtName;
+                districtInfoElement.innerHTML = '<p>No detailed information available for this district.</p>';
+            }
+        });
+    });
+};
+
   
   // Call this function when the page loads or when switching to Nation tab
   window.onDistrictMapLoad = function() {
