@@ -27,7 +27,7 @@ The worst incident occurred in Jaffna, where a mob—possibly aided by local pol
 
 Tamils widely blame the Sinhalese police force and UNP members for inciting the attack. The government response has been muted, with few MPs condemning the destruction and some activly celebrating it.
 
-Tamil militant groups are gaining recruits as the TULF and ACTC face criticism for theur inaction. How should the SLFP respond?
+Tamil militant groups are gaining recruits as the TULF and ACTC face criticism for their inaction. How should the SLFP respond?
 
 - @condemn: We must condemn these heinous events and petition the government to act.
 - @comend: We should be against the violence while not explicitly condeming the Sinhalese mob or the UNP.
@@ -36,7 +36,7 @@ Tamil militant groups are gaining recruits as the TULF and ACTC face criticism f
 @condemn
 on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_nsdap -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 3
 
-Our act of condemnation has put us in good light among in the eyes of the TULF and ACTC.
+Our act of condemnation has put the SLFP on better standing with the TULF and ACTC, the governing UNP lashes out accusing us of being involved, the back and forth raises tensions with them considerably.
 
 @comend
 on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_nsdap -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 3
