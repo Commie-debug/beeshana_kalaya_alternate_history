@@ -333,10 +333,9 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Left**
+<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-**Nationalists**
-
+<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
 @figures
 title: Figures and Charts
