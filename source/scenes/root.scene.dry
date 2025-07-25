@@ -510,127 +510,127 @@ Q.district_data = {
     "Jaffna": {
         name: "Jaffna",
         province: "Northern Province",
-        population: 490621
+        votes: 
     },
     "Kilinochchi": {
         name: "Kilinochchi",
         province: "Northern Province",
-        population: 113510
+        votes: 
     },
     "Mannar": {
         name: "Mannar",
         province: "Northern Province",
-        population: 99570
+        votes: 
     },
     "Mullaitivu": {
         name: "Mullaitivu",
         province: "Northern Province",
-        population: 92238
+        votes: 
     },
     "Vavuniya": {
         name: "Vavuniya",
         province: "Northern Province",
-        population: 172115
+        votes: 
     },
     "Anuradhapura": {
         name: "Anuradhapura",
         province: "North Central Province",
-        population: 860575
+        votes: 
     },
     "Polonnaruwa": {
         name: "Polonnaruwa",
         province: "North Central Province",
-        population: 406088
+        votes: 
     },
     "Trincomalee": {
         name: "Trincomalee",
         province: "Eastern Province",
-        population: 379541
+        votes: 
     },
     "Batticaloa": {
         name: "Batticaloa",
         province: "Eastern Province",
-        population: 526567
+        votes: 
     },
     "Ampara": {
         name: "Ampara",
         province: "Eastern Province",
-        population: 649402
+        votes: 
     },
     "Kurunegala": {
         name: "Kurunegala",
         province: "North Western Province",
-        population: 1618465
+        votes: 
     },
     "Puttalam": {
         name: "Puttalam",
         province: "North Western Province",
-        population: 762370
+        votes:
     },
     "Colombo": {
         name: "Colombo",
         province: "Western Province",
-        population: 2324349
+        votes:
     },
     "Gampaha": {
         name: "Gampaha",
         province: "Western Province",
-        population: 2294641
+        votes:
     },
     "Kalutara": {
         name: "Kalutara",
         province: "Western Province",
-        population: 1221948
+        votes:
     },
     "Kandy": {
         name: "Kandy",
         province: "Central Province",
-        population: 1375382
+        votes:
     },
     "Matale": {
         name: "Matale",
         province: "Central Province",
-        population: 484531
+        votes:
     },
     "Nuwara Eliya": {
         name: "Nuwara Eliya",
         province: "Central Province",
-        population: 703555
+        votes: 
     },
     "Ratnapura": {
         name: "Ratnapura",
         province: "Sabaragamuwa Province",
-        population: 1088007
+        votes: 
     },
     "Kegalle": {
         name: "Kegalle",
         province: "Sabaragamuwa Province",
-        population: 840648
+        votes: 
     },
     "Badulla": {
         name: "Badulla",
         province: "Uva Province",
-        population: 815405
+        votes: 
     },
     "Monaragala": {
         name: "Monaragala",
         province: "Uva Province",
-        population: 451058
+        votes: 
     },
     "Galle": {
         name: "Galle",
         province: "Southern Province",
-        population: 1063334
+        votes: 
     },
     "Matara": {
         name: "Matara",
         province: "Southern Province",
-        population: 814937
+        votes: 
     },
     "Hambantota": {
         name: "Hambantota",
         province: "Southern Province",
-        population: 599903
+        votes: 
     }
 };
 
