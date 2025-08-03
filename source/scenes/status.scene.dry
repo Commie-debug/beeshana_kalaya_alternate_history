@@ -384,6 +384,8 @@ Equal Pay: [+ women_equal_pay +]
 
 Patriarchy: [+ women_patriarchy : equality +]
 
+Muslim marraige and divorce act: [? if muslim_marraige_law = 1 : Enforced ?] [? if muslim_marraige_law = 0 : Reformed ?]
+
 @economy
 on-arrival: {!
 if (Q.unemployed) {
