@@ -243,6 +243,7 @@ Q.north_east_autonomy = 1;
 Q.women_equal_pay = "No";
 //Uses equality qdisplay
 Q.women_patriarchy = 0.8;
+Q.muslim_marraige_law = 1;
 
 //rural(south west)
 //both use equinfa
