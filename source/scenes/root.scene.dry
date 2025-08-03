@@ -243,6 +243,7 @@ Q.north_east_autonomy = 1;
 Q.women_equal_pay = "No";
 //Uses equality qdisplay
 Q.women_patriarchy = 0.8;
+//1=Enforced, 0=Repealed/Reworked
 Q.muslim_marraige_law = 1;
 
 //rural(south west)
@@ -300,7 +301,7 @@ Q.itamil_proportion = 5.51
 Q.muslim_proportion = 7.05
 Q.other_proportion = 0.78
 
-Q.classes = ['upper', 'middle', 'state', 'worker', 'rural', 'unemployed', 'clergy'];
+Q.classes = ['upper', 'middle', 'worker', 'rural', 'unemployed', 'clergy'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
 
 // formable parties
@@ -336,17 +337,6 @@ Q.middle_cwc = 0;
 Q.middle_unp = 10;
 Q.middle_actc = 10;
 Q.middle_other = 10;
-
-Q.state_slfp = 60;
-Q.state_jvp = 20;
-Q.state_cpsl = 5;
-Q.state_lssp = 0;
-Q.state_nssp = 0;
-Q.state_tulf = 5;
-Q.state_cwc = 0;
-Q.state_unp = 10;
-Q.state_actc = 10;
-Q.state_other = 10;
 
 Q.upper_slfp = 60;
 Q.upper_jvp = 20;
