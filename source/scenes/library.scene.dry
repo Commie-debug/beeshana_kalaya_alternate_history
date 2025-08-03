@@ -166,8 +166,6 @@ go-to: menu
 
 **Middle Class**: Professionals such as doctors, lawyers, teachers, and small business owners educated in former colonial schools, though economic changes began to strain their financial stability. They make up around 10% of the population.
 
-**State Sector**: Employees in civil service, public education, and nationalized industries, who benefit from welfare policies but face challenges due to economic shifts and reduced job security. They make up around 15% of the population
-
 **Working Class**: Manual laborers, factory workers, service employees and garment workers who often face low wages, limited job security, and challenging working conditions, leading to frequent labor unrest. They make up around 25% of the population
 
 **Rural**: Primarily engaged in agriculture, mining and fishing, they face issues like land fragmentation and inadequate infrastructure, remaining largely disconnected from economic growth benefits. They make up around 35% of the population
@@ -230,8 +228,6 @@ Others:[+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_
 
 
 Working Class: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
-
-State Workers: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
 Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
