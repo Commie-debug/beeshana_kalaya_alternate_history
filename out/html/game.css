@@ -284,6 +284,36 @@ img.inline-img.icon {
     background-color: var(--tab-hover-color);
 }
 
+/* status buttons from scheimarnomics */
+.status_button {
+  font-family: "Minion Pro", Geor gia, serif;
+  color: var(--text-color);
+  background-color: var(--button-bg-color);
+  border: 2px solid var(--button-border-color);
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 4px;
+  box-shadow: 1px 1px 5px var(--bgBack-color);
+}
+.status_button:hover {
+  background-color: var(--hover-color);
+  border: 2px solid var(--htext-color);
+}
+.status_button_wide {
+  font-family: "Minion Pro", Geor gia, serif;
+  width: 220px;
+  color: var(--htext-color);
+  background-color: var(--button-bg-color);
+  border: 2px solid var(--button-border-color);
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 4px;
+  box-shadow: 1px 1px 5px var(--bgBack-color);
+}
+.status_button_wide:hover {
+  background-color: var(--hover-color);
+  border: 2px solid var(--htext-color);
+}
 
 .overlay {
     background: rgba(0,0,0,0.7);
