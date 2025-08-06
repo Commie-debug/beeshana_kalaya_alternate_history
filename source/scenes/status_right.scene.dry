@@ -5,7 +5,7 @@ is-special: true
 = The Nation
 
 Northern Province
-<button class = status_button >Jaffna District</button>
+<button class = status_button onclick ="outreach_focus" >Jaffna District</button>
 <button class = status_button >Killinochchi District</button>
 <button class = status_button >Vavuniya District</button>
 <button class = status_button >Mullaitivu District</button>
