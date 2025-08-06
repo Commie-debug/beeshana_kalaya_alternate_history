@@ -292,7 +292,6 @@ Q.upper = 1;
 Q.rural = 35;
 Q.unemployed = 13;
 Q.clergy = 1;
-Q.state_workers = 15;
 
 //proportion of races in 1981
 Q.sinhala_proportion = 73.95
@@ -447,7 +446,6 @@ Q.actc_in_government = 0;
 
 Q.in_emergency = 0;
 Q.in_slfp_majority = 0;
-Q.grand_coalition_failed = 0;
 // if the SLFP is ruling as part of a minority government
 Q.in_minority_government = 0;
 //Wheter parliament has moved from colombo to SJK
@@ -494,8 +492,10 @@ Q.electoral_threshold = 0;
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
 Q.slfp_no_confidence = 0;
-// was the last SLFP government taken down in a vote of no confidence by right-wing coalition partners?
-Q.no_confidence_against_spd = 0;
+// was the last SLFP government taken down in a vote of no confidence
+Q.no_confidence_against_slfp = 0;
+// was the last president impeached
+Q.last_prez_impeached = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;
