@@ -263,12 +263,6 @@
       return bar;
   };
 
-  function outreach_focus() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  
-  Q.united_focus = "outreach"
-  document.getElementById('status_right_focus').innerHTML = "We are reaching out to the leftwing of the Z and DDP.";
-
 
   window.justLoaded = true;
   window.statusTab = "status";
