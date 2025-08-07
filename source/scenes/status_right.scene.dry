@@ -5,47 +5,47 @@ is-special: true
 = The Nation
 
 Northern Province
-<button >Jaffna District</button>
-<button >Killinochchi District</button>
-<button >Vavuniya District</button>
-<button >Mullaitivu District</button>
-<button >Mannar District</button>
+Jaffna District
+Killinochchi District
+Vavuniya District
+Mullaitivu District
+Mannar District
 
 Eastern Province
-<button >Trincomalee District</button>
-<button >Batticaloa District</button>
-<button >Ampara District</button>
+Trincomalee District
+Batticaloa District
+Ampara District
 
 North Central Province
-<button >Anuradhapura District</button>
-<button >Polunnaruwa District</button>
+Anuradhapura District
+Polunnaruwa District
 
 North Western Province
-<button >Puttalam District</button>
-<button >Kurunegala District</button>
+Puttalam District
+Kurunegala District
 
 Central Province
-<button >Matale District</button>
-<button >Kandy District</button>
-<button >Nuwara Eliya District</button>
+Matale District
+Kandy District
+Nuwara Eliya District
 
 Western Province
-<button >Gampaha District</button>
-<button >Colombo District</button>
-<button >Kalutara District</button>
+Gampaha District
+Colombo District
+Kalutara District
 
 Sabaragamuwa Province
-<button >Kegalle District</button>
-<button >Ratnapura District</button>
+Kegalle District
+Ratnapura District
 
 Uva Province
-<button >Badulla District</button>
-<button >Monaragala District</button>
+Badulla District
+Monaragala District
 
 Southern Province
-<button >Galle District</button>
-<button >Matara District</button>
-<button >Hambantota District</button>
+Galle District
+Matara District
+Hambantota District
 
 Image of Sri Lankan Districts with buttons that can be clicked to show data on each district
 
