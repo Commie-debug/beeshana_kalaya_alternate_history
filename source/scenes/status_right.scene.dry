@@ -5,47 +5,47 @@ is-special: true
 = The Nation
 
 Northern Province
-<button class = status_button onclick ="outreach_focus" >Jaffna District</button>
-<button class = status_button >Killinochchi District</button>
-<button class = status_button >Vavuniya District</button>
-<button class = status_button >Mullaitivu District</button>
-<button class = status_button >Mannar District</button>
+<button class = status_button_wide >Jaffna District</button>
+<button class = status_button_wide >Killinochchi District</button>
+<button class = status_button_wide >Vavuniya District</button>
+<button class = status_button_wide >Mullaitivu District</button>
+<button class = status_button_wide >Mannar District</button>
 
 Eastern Province
-<button class = status_button >Trincomalee District</button>
-<button class = status_button >Batticaloa District</button>
-<button class = status_button >Ampara District</button>
+<button class = status_button_wide >Trincomalee District</button>
+<button class = status_button_wide >Batticaloa District</button>
+<button class = status_button_wide >Ampara District</button>
 
 North Central Province
-<button class = status_button >Anuradhapura District</button>
-<button class = status_button >Polunnaruwa District</button>
+<button class = status_button_wide >Anuradhapura District</button>
+<button class = status_button_wide >Polunnaruwa District</button>
 
 North Western Province
-<button class = status_button >Puttalam District</button>
-<button class = status_button >Kurunegala District</button>
+<button class = status_button_wide >Puttalam District</button>
+<button class = status_button_wide >Kurunegala District</button>
 
 Central Province
-<button class = status_button >Matale District</button>
-<button class = status_button >Kandy District</button>
-<button class = status_button >Nuwara Eliya District</button>
+<button class = status_button_wide >Matale District</button>
+<button class = status_button_wide >Kandy District</button>
+<button class = status_button_wide >Nuwara Eliya District</button>
 
 Western Province
-<button class = status_button >Gampaha District</button>
-<button class = status_button >Colombo District</button>
-<button class = status_button >Kalutara District</button>
+<button class = status_button_wide >Gampaha District</button>
+<button class = status_button_wide >Colombo District</button>
+<button class = status_button_wide >Kalutara District</button>
 
 Sabaragamuwa Province
-<button class = status_button >Kegalle District</button>
-<button class = status_button >Ratnapura District</button>
+<button class = status_button_wide >Kegalle District</button>
+<button class = status_button_wide >Ratnapura District</button>
 
 Uva Province
-<button class = status_button >Badulla District</button>
-<button class = status_button >Monaragala District</button>
+<button class = status_button_wide >Badulla District</button>
+<button class = status_button_wide >Monaragala District</button>
 
 Southern Province
-<button class = status_button >Galle District</button>
-<button class = status_button >Matara District</button>
-<button class = status_button >Hambantota District</button>
+<button class = status_button_wide >Galle District</button>
+<button class = status_button_wide >Matara District</button>
+<button class = status_button_wide >Hambantota District</button>
 
 Image of Sri Lankan Districts with buttons that can be clicked to show data on each district
 
