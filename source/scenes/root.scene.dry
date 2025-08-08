@@ -72,6 +72,10 @@ Q.unp_relation = 10;
 Q.cwc_relation = 10;
 Q.actc_relation = 10;
 
+//party ideologies
+//JVP is defined between revolutionary socialism at 1 to sinhalese budhist nationalism and anti-tamil racism at 10
+Q.jvp_ideology = 4;
+
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
 Q.jvp_leader = "Rohana Wijeweera";
