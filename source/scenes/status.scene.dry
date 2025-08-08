@@ -113,7 +113,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Party Ideologies
 
-JVP:[? if jvp_ideology >= 3 : Revolutionary socialism ?][? if jvp_ideology < 3 and jvp_ideology >= 6 : Revolutionary socialism & Sinhalese nationalism?][? if jvp_ideology > 6 : Sinhalese nationalism ?]
+<span style="color: #FF2226;">**JVP**</span>:[? if jvp_ideology >= 3 : Revolutionary socialism ?][? if jvp_ideology < 3 and jvp_ideology >= 6 : Revolutionary socialism & Sinhalese nationalism?][? if jvp_ideology > 6 : Sinhalese nationalism ?]
 
 = Internal Factions of the SLFP
 
