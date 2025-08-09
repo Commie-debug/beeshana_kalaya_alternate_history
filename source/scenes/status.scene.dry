@@ -158,25 +158,25 @@ if (Q.ipkf_morale) {
 
 = Political Paramilitaries
 
-{!<span class="tooltip-text" title="Thugs affiliated with the SLFP."><span style="color: #00008B;">**SLFP**</span> Thugs</span>!} Strength: [+ slfpt_strength_2 +] thousand, Militarization: [+ slfpt_militancy : militancy +]
+{!<span class="tooltip-text" title="Thugs affiliated with the SLFP."> <span style="color: #00008B;">**SLFP**</span> Thugs</span>!} Strength: [+ slfpt_strength_2 +] thousand, Militarization: [+ slfpt_militancy : militancy +]
 
-{!<span class="tooltip-text" title="UNP affiliated union/paramilitary."><span style="color: #006400;">**JSS**</span></span>!} Strength: [+ jss_strength_2 +] thousand, Militarization: [+ jss_militancy : militancy +]
+{!<span class="tooltip-text" title="UNP affiliated union/paramilitary."> <span style="color: #006400;">**JSS**</span></span>!} Strength: [+ jss_strength_2 +] thousand, Militarization: [+ jss_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Thugs affiliated with the UNP."><span style="color: #006400;">**UNP**</span> Thugs</span>!} Strength: [+ unpt_strength_2 +] thousand, Militarization: [+ unpt_militancy : militancy +]
+{!<span class="tooltip-text" title="Thugs affiliated with the UNP."> <span style="color: #006400;">**UNP**</span> Thugs</span>!} Strength: [+ unpt_strength_2 +] thousand, Militarization: [+ unpt_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Thugs affiliated with the JVP."><span style="color: #FF2226;">**JVP**</span> Thugs</span>!} Strength: [+ jvpt_strength_2 +] thousand, Militarization: [+ jvpt_militancy : militancy +]
+{!<span class="tooltip-text" title="Thugs affiliated with the JVP."> <span style="color: #FF2226;">**JVP**</span> Thugs</span>!} Strength: [+ jvpt_strength_2 +] thousand, Militarization: [+ jvpt_militancy : militancy +]
 
 = Tamil Militant Groups
 
-{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam"><span style="color: #DC143C;">**LTTE**</span> </span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
+{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam"> <span style="color: #DC143C;">**LTTE**</span> </span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students"><span style="color: #FF2400;">**EROS**</span></span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
+{!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students"> <span style="color: #FF2400;">**EROS**</span> </span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front"><span style="color: #FF4500;”>**EPRLF**</span></span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
+{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front"> <span style="color: #FF4500;”>**EPRLF**</span> </span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Tamil Eelam Liberation Organisation"><span style="color: #893F45;”>**TELO**</span></span>!} Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
+{!<span class="tooltip-text" title="Tamil Eelam Liberation Organisation"> <span style="color: #893F45;”>**TELO**</span> </span>!} Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam"><span style="color: #CE2029;">**PLOTE**</span></span>!} Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
+{!<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam"> <span style="color: #CE2029;">**PLOTE**</span> </span>!} Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
 
 = Military & State Paramilitaries
 
