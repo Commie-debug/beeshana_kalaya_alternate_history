@@ -299,6 +299,7 @@ Q.clergy = 1;
 
 //District data
 //Displayed one, default is colombo district
+Q.district_name = Colombo;
 Q.district_sinhala = 100;
 Q.district_sltamil = 100;
 Q.district_itamil = 100;
@@ -314,7 +315,7 @@ Q.district_clergy = 100;
 Q.district_control = [100];
 Q.district_education = 0.7;
 Q.district_infastructure = 0.9;
-Q.district_industries = [tourism, textile, fishing]
+Q.district_industries = [tourism, textile, fishing];
 
 //Western province
 Q.colombo_d_sinhala = 100;
@@ -332,14 +333,14 @@ Q.colombo_d_clergy = 100;
 Q.colombo_d_control = [100];
 Q.colombo_d_education = 0.7;
 Q.colombo_d_infastructure = 0.9;
-Q.colombo_d_industries = [tourism, textile, fishing]
+Q.colombo_d_industries = [tourism, textile, fishing];
 
 //proportion of races in 1981
-Q.sinhala_proportion = 73.95
-Q.sltamil_proportion = 12.71
-Q.itamil_proportion = 5.51
-Q.muslim_proportion = 7.05
-Q.other_proportion = 0.78
+Q.sinhala_proportion = 73.95;
+Q.sltamil_proportion = 12.71;
+Q.itamil_proportion = 5.51;
+Q.muslim_proportion = 7.05;
+Q.other_proportion = 0.78;
 
 Q.classes = ['upper', 'middle', 'worker', 'rural', 'unemployed', 'clergy'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
