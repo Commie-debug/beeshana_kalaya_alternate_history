@@ -299,7 +299,7 @@ Q.clergy = 1;
 
 //District data
 //Displayed one, default is colombo district
-Q.district_name = Colombo;
+Q.district_name = "Colombo";
 Q.district_sinhala = 100;
 Q.district_sltamil = 100;
 Q.district_itamil = 100;
