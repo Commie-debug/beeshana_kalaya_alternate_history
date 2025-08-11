@@ -313,7 +313,7 @@ Q.district_rural = 100;
 Q.district_unemployed = 100;
 Q.district_clergy = 100;
 
-Q.district_control = [100];
+Q.district_control = 100;
 Q.district_education = 0.7;
 Q.district_infastructure = 0.9;
 Q.district_industries = [tourism, textile, fishing];
@@ -332,7 +332,7 @@ Q.colombo_d_rural = 100;
 Q.colombo_d_unemployed = 100;
 Q.colombo_d_clergy = 100;
 
-Q.colombo_d_control = [100];
+Q.colombo_d_control = 100;
 Q.colombo_d_education = 0.7;
 Q.colombo_d_infastructure = 0.9;
 Q.colombo_d_industries = [tourism, textile, fishing];
