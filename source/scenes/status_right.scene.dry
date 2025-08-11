@@ -4,48 +4,10 @@ is-special: true
 
 = The Nation
 
-Northern Province
-Jaffna District
-Killinochchi District
-Vavuniya District
-Mullaitivu District
-Mannar District
-
-Eastern Province
-Trincomalee District
-Batticaloa District
-Ampara District
-
-North Central Province
-Anuradhapura District
-Polunnaruwa District
-
-North Western Province
-Puttalam District
-Kurunegala District
-
-Central Province
-Matale District
-Kandy District
-Nuwara Eliya District
-
 Western Province
-Gampaha District
-Colombo District
-Kalutara District
-
-Sabaragamuwa Province
-Kegalle District
-Ratnapura District
-
-Uva Province
-Badulla District
-Monaragala District
-
-Southern Province
-Galle District
-Matara District
-Hambantota District
+<button class = "status_button" onclick ="Gampaha_info()">Gampaha District</button>
+<button class = "status_button" onclick ="Colombo_info()">Colombo District</button>
+<button class = "status_button" onclick ="Kalutara_info()">Kalutara District</button>
 
 Image of Sri Lankan Districts with buttons that can be clicked to show data on each district
 
