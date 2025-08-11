@@ -10,6 +10,7 @@ Western Province
 <button class = "status_button" onclick ="Kalutara_info()">Kalutara District</button>
 
 [+ district_name +] District
+
 Sinhalese: [+ district_sinhala +]
 Sri Lankan Tamil: [+ district_sltamil +]
 Indian Tamil: [+ district_itamil +]
