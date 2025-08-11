@@ -12,33 +12,21 @@ Western Province
 [+ district_name +] District
 
 Sinhalese: [+ district_sinhala +]
-
 Sri Lankan Tamil: [+ district_sltamil +]
-
 Indian Tamil: [+ district_itamil +]
-
 Muslim: [+ district_muslim +]
-
 Others: [+ district_others +]
 
 Working class: [+ district_worker +]
-
 Middle class: [+ district_middle +]
-
 Upper class: [+ district_upper +]
-
 Rural: [+ district_rural +]
-
 Unemployed: [+ district_unemployed +]
-
 Clergy: [+ district_clergy +]
 
 Control: [+ district_control +]
-
 Education: [+ district_education : eduinfa +]
-
 Infastructure: [+ district_infastructure : eduinfa +]
-
 Industries: [+ district_industries +]
 
 @news
