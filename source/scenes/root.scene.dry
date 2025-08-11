@@ -310,6 +310,7 @@ Q.district_worker = 100;
 Q.district_middle = 100;
 Q.district_upper = 100;
 Q.district_rural = 100;
+Q.district_unemployed = 100;
 Q.district_clergy = 100;
 
 Q.district_control = [100];
@@ -328,6 +329,7 @@ Q.colombo_d_worker = 100;
 Q.colombo_d_middle = 100;
 Q.colombo_d_upper = 100;
 Q.colombo_d_rural = 100;
+Q.colombo_d_unemployed = 100;
 Q.colombo_d_clergy = 100;
 
 Q.colombo_d_control = [100];
