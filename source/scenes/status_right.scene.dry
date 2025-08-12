@@ -9,7 +9,7 @@ Western Province
 <button class = "status_button" onclick ="Colombo_info()">Colombo District</button>
 <button class = "status_button" onclick ="Kalutara_info()">Kalutara District</button>
 
-[+ district_name +] District
+= [+ district_name +] District
 
 Sinhalese: [+ district_sinhala +]
 Sri Lankan Tamil: [+ district_sltamil +]
