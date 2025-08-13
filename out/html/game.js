@@ -279,3 +279,11 @@
   };
 
 }());
+
+function Colombo_info() {
+
+var Q = window.dendryUI.dendryEngine.state.qualities;
+  
+Q.district_name = "Colombo";
+
+}
