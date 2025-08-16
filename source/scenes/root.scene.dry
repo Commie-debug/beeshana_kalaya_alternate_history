@@ -298,6 +298,7 @@ Q.unemployed = 13;
 Q.clergy = 1;
 
 //District data
+//All seat numbers for each district are based of the 1984
 //Displayed one, default is colombo district
 Q.district_name = "Kalutara";
 Q.district_sinhala = 100;
@@ -316,6 +317,7 @@ Q.district_clergy = 100;
 Q.district_control = 100;
 Q.district_education = 0.7;
 Q.district_infastructure = 0.9;
+Q.district_seats = 21;
 Q.district_industries = ['tourism', 'textile', 'fishing'];
 
 //Western province
@@ -335,6 +337,7 @@ Q.colombo_d_clergy = 100;
 Q.colombo_d_control = 100;
 Q.colombo_d_education = 0.7;
 Q.colombo_d_infastructure = 0.9;
+Q.colombo_d_seats = 21;
 Q.colombo_d_industries = ['tourism', 'textile', 'fishing'];
 
 //proportion of races in 1981
