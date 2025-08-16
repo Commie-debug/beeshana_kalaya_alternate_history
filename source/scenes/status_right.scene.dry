@@ -4,11 +4,6 @@ is-special: true
 
 = The Nation
 
-Western Province
-<button class = "status_button" onclick ="Gampaha_info()">Gampaha District</button>
-<button class = "status_button" onclick ="Colombo_info()">Colombo District</button>
-<button class = "status_button" onclick ="Kalutara_info()">Kalutara District</button>
-
 = [+ district_name +] District
 
 Sinhalese: [+ district_sinhala +]
@@ -29,6 +24,29 @@ Education: [+ district_education : eduinfa +]
 Infastructure: [+ district_infastructure : eduinfa +]
 Seats in parliament: [+ district_seats +]
 Industries: [+ district_industries +]
+
+Western Province
+<button class = "status_button" onclick ="Gampaha_info()">Gampaha District</button>
+<button class = "status_button" onclick ="Colombo_info()">Colombo District</button>
+<button class = "status_button" onclick ="Kalutara_info()">Kalutara District</button>
+
+Northern Province
+
+Eastern Province
+
+North Central Province
+
+North Western Province
+
+Central Province
+
+Western Province
+
+Sabaragamuwa Province
+
+Uva Province
+
+Southern Province
 
 @news
 
