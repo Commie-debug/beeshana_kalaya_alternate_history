@@ -286,4 +286,6 @@ var Q = window.dendryUI.dendryEngine.state.qualities;
   
 Q.district_name = "Colombo";
 
+window.changeTab('status_right.Actions_rb', 'Actions_rb', 'right');
+
 }
