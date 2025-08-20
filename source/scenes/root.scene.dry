@@ -700,6 +700,7 @@ this.state.disableSaves = true;
 go-to: skip_intro
 
 @skip_intro
+
 Would you like to skip the intro? (Recomended for first time playthroughs)
 
 - @1981_main: Yes
