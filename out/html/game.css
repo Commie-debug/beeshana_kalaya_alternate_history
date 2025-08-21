@@ -285,6 +285,8 @@ img.inline-img.icon {
 }
 
 /* status buttons from scheimarnomics */
+.tab_button_wide {width: 100%;}
+
 .status_button {
   font-family: "Minion Pro", Geor gia, serif;
   color: var(--text-color);
