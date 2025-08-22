@@ -17,6 +17,11 @@ body {
   padding: 0;
   line-height: 155%;
   overflow-y: scroll;
+  --button-bg-color: #f0f0f0;
+  --button-border-color: #876;
+  --bgBack-color: rgba(0,0,0,0.2);
+  --hover-color: rgba(0,0,0,0.1);
+  --htext-color: #431;
 }
 body.dark-mode {
   --bg-color: #000;
