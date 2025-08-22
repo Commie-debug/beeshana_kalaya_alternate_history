@@ -281,11 +281,22 @@
 }());
 
 function Colombo_info() {
-
-var Q = window.dendryUI.dendryEngine.state.qualities;
+  var Q = window.dendryUI.dendryEngine.state.qualities;
+  Q.district_name = "Colombo";
   
-Q.district_name = "Colombo";
+  window.updateSidebarRight();
+}
 
-window.changeTab('status_right.Actions_rb', 'Actions_rb', 'right');
+function Gampaha_info() {
+  var Q = window.dendryUI.dendryEngine.state.qualities;
+  Q.district_name = "Gampaha";
 
+  window.updateSidebarRight();
+}
+
+function Kalutara_info() {
+  var Q = window.dendryUI.dendryEngine.state.qualities;
+  Q.district_name = "Kalutara";
+
+  window.updateSidebarRight(); 
 }
