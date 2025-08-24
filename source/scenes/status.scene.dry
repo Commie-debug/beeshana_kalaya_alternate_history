@@ -15,8 +15,8 @@ if (Q.economic_growth) {
 !}
 
 = Status
-
-Week [+ week +] [+ month : month +] [+ year +]
+[? if india_landfall = 0 : [+ month : month +] [+ year +] ?]
+[? if india_landfall = 1 : Week [+ week +] [+ month : month +] [+ year +] ?]
 
 Resources available: [+ resources +]
 
