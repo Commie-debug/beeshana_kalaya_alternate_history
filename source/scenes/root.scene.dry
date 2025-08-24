@@ -27,6 +27,8 @@ Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 Q.day_actions = 0;
+//If 0, India hasnt intervened, time is month by month. If 1, India has intervened, time slows to week by week.
+Q.india_landfall = 0;
 
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
