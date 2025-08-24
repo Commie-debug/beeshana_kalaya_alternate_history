@@ -26,27 +26,47 @@ Seats in parliament: [+ district_seats +]
 Industries: [+ district_industries +]
 
 Western Province
-<button class = "status_button" onclick ="Gampaha_info()">Gampaha District</button>
-<button class = "status_button" onclick ="Colombo_info()">Colombo District</button>
-<button class = "status_button" onclick ="Kalutara_info()">Kalutara District</button>
+<button class="status_button" onclick="Gampaha_info()">Gampaha District</button>
+<button class="status_button" onclick="Colombo_info()">Colombo District</button>
+<button class="status_button" onclick="Kalutara_info()">Kalutara District</button>
 
 Northern Province
+<button class="status_button" onclick="Jaffna_info()">Jaffna District</button>
+<button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button>
+<button class="status_button" onclick="Mannar_info()">Mannar District</button>
+<button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button>
+<button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button>
 
 Eastern Province
-
-North Central Province
-
-North Western Province
+<button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button>
+<button class="status_button" onclick="Ampara_info()">Ampara District</button>
+<button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button>
 
 Central Province
-
-Western Province
-
-Sabaragamuwa Province
-
-Uva Province
+<button class="status_button" onclick="Kandy_info()">Kandy District</button>
+<button class="status_button" onclick="Matale_info()">Matale District</button>
+<button class="status_button" onclick="NuwaraEliya_info()">Nuwara Eliya District</button>
 
 Southern Province
+<button class="status_button" onclick="Galle_info()">Galle District</button>
+<button class="status_button" onclick="Matara_info()">Matara District</button>
+<button class="status_button" onclick="Hambantota_info()">Hambantota District</button>
+
+North Western Province
+<button class="status_button" onclick="Kurunegala_info()">Kurunegala District</button>
+<button class="status_button" onclick="Puttalam_info()">Puttalam District</button>
+
+North Central Province
+<button class="status_button" onclick="Anuradhapura_info()">Anuradhapura District</button>
+<button class="status_button" onclick="Polonnaruwa_info()">Polonnaruwa District</button>
+
+Uva Province
+<button class="status_button" onclick="Badulla_info()">Badulla District</button>
+<button class="status_button" onclick="Monaragala_info()">Monaragala District</button>
+
+Sabaragamuwa Province
+<button class="status_button" onclick="Ratnapura_info()">Ratnapura District</button>
+<button class="status_button" onclick="Kegalle_info()">Kegalle District</button>
 
 @news
 
