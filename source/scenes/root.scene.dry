@@ -277,6 +277,16 @@ Q.ftz_conditions = 0.5;
 //addition of nationalisation level of each sector
 Q.total_nationalisation = Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national;
 
+//students
+//uses strenght qdisplay
+Q.student_union_strenght = 30;
+//percentage 
+Q.student_union_jvp_control = 75;
+Q.student_union_cpsl_control = 12;
+Q.student_union_slfp_control = 5;
+Q.student_union_lssp_control = 5;
+Q.student_union_independent_control = 3;
+
 //foreign relations and india
 Q.india_relation = 20;
 Q.china_relation = 55;
