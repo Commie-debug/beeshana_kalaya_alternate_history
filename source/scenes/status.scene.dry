@@ -381,7 +381,7 @@ Student union strenght = [+ student_union_strenght : strenght +]
 
 <span style="color: #A91101;">**LSSP**</span> control: [+ student_union_lssp_control +]%
 
-<span style="color: #6B676;">**Independent**</span> control: [+ student_union_independent_control +]%
+<span style="color: #545454;">**Independent**</span> control: [+ student_union_independent_control +]%
 
 = Secuity forces
 
