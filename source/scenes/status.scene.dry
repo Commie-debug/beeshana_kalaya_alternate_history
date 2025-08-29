@@ -371,7 +371,7 @@ Land reforms: [+ south_land : reform +]
 
 = Student Unions
 
-Student union strenght = [+ student_union_strenght : strenght +]
+Student union strenght = [+ student_union_strenght : strength +]
 
 <span style="color: #FF2226;">**JVP**</span> control: [+ student_union_jvp_control +]%
 
