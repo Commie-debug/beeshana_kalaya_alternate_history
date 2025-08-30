@@ -1,6 +1,7 @@
 title: Game Over.
 new-page: true
 go-to: eg_menu
+audio: special_music/Yadamin_Banda.mp3
 on-arrival: {!
 Q.game_over = 1;
 // Achievements:
