@@ -126,8 +126,9 @@ Q.telo_militancy = 0.24;
 Q.plote_strength = 200;
 Q.plote_militancy = 0.24;
 
-Q.endlf_formed = 0;
-Q.tna_formed = 0;
+Q.endlf_formed = 0;//(amalgam of splinter groups from the EPRLF, PLOTE and TELO. Will form if Tamil unity is too low as a pro india faction and party)
+Q.tna_formed = 0;//tamil national army as a pro-india armed group to fight the LTTE
+Q.enlf_formed = 0;//Eelam national liberation front(every Tamil group united into one umbrella organisation between 84 and 86)
 
 // army and official paramilitaries
 
