@@ -29,15 +29,15 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +] ([+ president_party +])
+President: [+ president +] ([? if president_party = "UNP" : <span class="tooltip-text" style="color: #006400;">**UNP**</span> ?][? if president_party = "SLFP" : <span class="tooltip-text" style="color: #00008B;">**SLFP**</span> ?])
 
-Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
+Prime Minister: [+ prime_minister +] ([? if prime_minister_party = "UNP" : <span class="tooltip-text" style="color: #006400;">**UNP**</span> ?][? if prime_minister_party = "SLFP" : <span class="tooltip-text" style="color: #00008B;">**SLFP**</span> ?])
 
-Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +])
-
-Parliament composition:
+Leader of the Opposition: [+ opposition_leader +] ([? if opposition_leader_party = "UNP" : <span class="tooltip-text" style="color: #006400;">**UNP**</span> ?][? if opposition_leader_party = "SLFP" : <span class="tooltip-text" style="color: #00008B;">**SLFP**</span> ?][? if opposition_leader_party = "TULF" : <span class="tooltip-text" style="color: #F7D917;">**TULF**</span> ?])
 
 Current Government: [? if current_gov = 'UNP & CWC' : <span style="color: #006400;">**UNP**</span> & <span style="color: #E52B50;">**CWC**</span> ?][? if current_gov = 'SLFP' : <span style="color: #00008B;">**SLFP**</span> ?]
+
+Parliament composition:
 
 [? if slfp_r >= 1 : <span class="tooltip-text" title="Sri Lanka Freedom Party" style="color: #00008B;">**SLFP**</span>: [+ slfp_r +] ?]
 [? if slpp_formed = 1 and slpp_r >= 1: {!<span class="tooltip-text" title="Sri Lanka Podujana Peramuna">SLPP</span>!}: [+ slpp_r +] ?]
