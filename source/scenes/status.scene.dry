@@ -31,7 +31,7 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 President: [+ president +] ([? if president_party = "UNP" : <span style="color: #006400;">**UNP**</span> ?][? if president_party = "SLFP" : style="color: #00008B;">**SLFP**</span> ?])
 
-Prime Minister: [+ prime_minister +] ([? if prime_minister_party = "UNP" : <span class="tooltip-text" style="color: #006400;">**UNP**</span> ?][? if prime_minister_party = "SLFP" : <span style="color: #00008B;">**SLFP**</span> ?])
+Prime Minister: [+ prime_minister +] ([? if prime_minister_party = "UNP" : <span style="color: #006400;">**UNP**</span> ?][? if prime_minister_party = "SLFP" : <span style="color: #00008B;">**SLFP**</span> ?])
 
 Leader of the Opposition: [+ opposition_leader +] ([? if opposition_leader_party = "UNP" : <span style="color: #006400;">**UNP**</span> ?][? if opposition_leader_party = "SLFP" : <span style="color: #00008B;">**SLFP**</span> ?][? if opposition_leader_party = "TULF" : <span style="color: #F7D917;">**TULF**</span> ?])
 
@@ -150,15 +150,13 @@ if (Q.ipkf_morale) {
 
 = Political Paramilitaries
 
-{!<span class="tooltip-text" title="Thugs affiliated with the SLFP." style="color: #00008B;">**SLFP Thugs**</span>!} Strength: [+ slfpt_strength_2 +] thousand, Militarization: [+ slfpt_militancy : militancy +]
+{!<span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span>!} Strength: [+ slfpt_strength_2 +] thousand, Militarization: [+ slfpt_militancy : militancy +]
 
-{!<span class="tooltip-text" style="color: #006400;" title="UNP affiliated union/paramilitary.">**JSS**</span>!} Strength: [+ jss_strength_2 +] thousand, Militarization: [+ jss_militancy : militancy +]
+{!<span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span>!} Strength: [+ jss_strength_2 +] thousand, Militarization: [+ jss_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Thugs affiliated with the UNP." style="color: #006400;">**UNP Thugs**</span>!} Strength: [+ unpt_strength_2 +] thousand, Militarization: [+ unpt_militancy : militancy +]
+{!<span class="tooltip-text" title="Thugs affiliated with the UNP" style="color: #006400;">**UNP Thugs**</span>!} Strength: [+ unpt_strength_2 +] thousand, Militarization: [+ unpt_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Thugs affiliated with the JVP." style="color: #FF2226;">**JVP Thugs**</span>!} Strength: [+ jvpt_strength_2 +] thousand, Militarization: [+ jvpt_militancy : militancy +]
-
-<span style="color: #006400;">**UNP**</span>
+{!<span class="tooltip-text" title="Thugs affiliated with the JVP" style="color: #FF2226;">**JVP Thugs**</span>!} Strength: [+ jvpt_strength_2 +] thousand, Militarization: [+ jvpt_militancy : militancy +]
 
 = Tamil Militant Groups
 
