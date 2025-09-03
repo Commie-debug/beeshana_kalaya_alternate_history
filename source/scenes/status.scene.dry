@@ -150,25 +150,25 @@ if (Q.ipkf_morale) {
 
 = Political Paramilitaries
 
-{!<span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span>!} Strength: [+ slfpt_strength_2 +] thousand, Militarization: [+ slfpt_militancy : militancy +]
+<span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span> Strength: [+ slfpt_strength_2 +] thousand, Militarization: [+ slfpt_militancy : militancy +]
 
-{!<span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span>!} Strength: [+ jss_strength_2 +] thousand, Militarization: [+ jss_militancy : militancy +]
+<span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span> Strength: [+ jss_strength_2 +] thousand, Militarization: [+ jss_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Thugs affiliated with the UNP" style="color: #006400;">**UNP Thugs**</span>!} Strength: [+ unpt_strength_2 +] thousand, Militarization: [+ unpt_militancy : militancy +]
+<span class="tooltip-text" title="Thugs affiliated with the UNP" style="color: #006400;">**UNP Thugs**</span> Strength: [+ unpt_strength_2 +] thousand, Militarization: [+ unpt_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Thugs affiliated with the JVP" style="color: #FF2226;">**JVP Thugs**</span>!} Strength: [+ jvpt_strength_2 +] thousand, Militarization: [+ jvpt_militancy : militancy +]
+<span class="tooltip-text" title="Thugs affiliated with the JVP" style="color: #FF2226;">**JVP Thugs**</span> Strength: [+ jvpt_strength_2 +] thousand, Militarization: [+ jvpt_militancy : militancy +]
 
 = Tamil Militant Groups
 
-{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
+<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span> Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
+<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span> Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;”>**EPRLF**</span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
+<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;”>**EPRLF**</span> Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;”>**TELO**</span>!} Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
+<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;”>**TELO**</span> Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span>!} Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
+<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span> Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
 
 = Military & State Paramilitaries
 
@@ -304,15 +304,15 @@ Control of Jaffna: [+ jaffna_control +]
 
 = Tamil Militant Groups
 
-{!<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span>!} Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
+<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span> Strength: [+ ltte_strength_2 +] thousand, Militarization: [+ ltte_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span>!} Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
+<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span> Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;”>**EPRLF**</span>!} Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
+<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;”>**EPRLF**</span> Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;”>**TELO**</span>!} Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
+<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;”>**TELO**</span> Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span>!} Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
+<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span> Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
 
 @interior
 
