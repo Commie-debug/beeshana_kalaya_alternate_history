@@ -87,7 +87,6 @@ Q.tulf_leader = "A. Amirthalingam";
 Q.jr_relation = 10;
 
 // The array of forces - paramilitary groups & rebels(sinhalese)
-// The array of forces - paramilitary groups & rebels(sinhalese)
 Q.jss_strength = 2000;
 Q.jss_militancy = 0.69;
 
@@ -158,7 +157,7 @@ Q.socialism = 40;
 // government support
 Q.gov_support = 60;
 
-Q.emergency_rule = 0;
+Q.state_of_emergency = 0;
 
 // minimum percentage of votes to be represented in the Reichstag
 Q.electoral_threshold = 0;
@@ -167,7 +166,7 @@ Q.constitutional_reform = 0;
 // constructive vote of no confidence
 Q.constructive_vonc = 0;
 // reduction in presidential powers
-Q.presidential_powers = 0;
+Q.presidential_powers_reduced = 0;
 
 // tamil situation
 Q.tamil_war = 0.24;
