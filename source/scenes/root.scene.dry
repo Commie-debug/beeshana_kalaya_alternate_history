@@ -157,7 +157,7 @@ Q.socialism = 40;
 // government support
 Q.gov_support = 60;
 
-Q.state_of_emergency = 1;
+Q.state_of_emergency = 0;
 
 // minimum percentage of votes to be represented in the Reichstag
 Q.electoral_threshold = 0;
