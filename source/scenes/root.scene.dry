@@ -234,6 +234,7 @@ Q.itamil_education = 0.1;
 Q.itamil_infastructure = 0.1;
 //uses reform qdisplay
 Q.itamil_land = 0.25;
+Q.indian_tamil_caste_prevalance = 35;
 
 //Sri Lankan tamil policies
 Q.tamil_sinhala_only = "Yes";
@@ -244,6 +245,8 @@ Q.north_east_land = 0.25;
 Q.north_east_education = 0.6;
 Q.north_east_unemployment = 13;
 Q.north_east_autonomy = 1;
+//caste uses dissent qdisplay
+Q.lankan_tamil_caste_prevalance = 50;
 
 //women
 Q.women_equal_pay = "No";
@@ -259,6 +262,7 @@ Q.south_infastructure = 0.35;
 //uses poverty qdisplay
 Q.south_poverty = 0.7;
 Q.south_land = 0.15;
+Q.sinhalese_caste_prevalance = 22.5;
 
 //police/seurity
 //pta strenght, 0-removed, 1-depowered, 2-empowered, 3-strenghtened
