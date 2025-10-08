@@ -340,6 +340,8 @@ Unemployment: [+ north_east_unemployment : employment +]
 
 Land reform: [+ north_east_land : reform +]
 
+Caste prevalance: [+ lankan_tamil_caste_prevalance : dissent +]
+
 = Indian Tamils
 
 Indian Tamil Franchisment: [+ itamil_franchsiment +]
@@ -352,6 +354,8 @@ Infastructure: [+ itamil_infastructure : eduinfa +]
 
 Land reform: [+ itamil_land : reform +]
 
+Caste prevalance: [+ indian_tamil_caste_prevalance : dissent +]
+
 = Rural South West
 
 Education: [+ south_education : eduinfa +]
@@ -361,6 +365,8 @@ Infastructure: [+ south_infastructure : eduinfa +]
 Poverty: [+ south_poverty : poverty +]
 
 Land reforms: [+ south_land : reform +]
+
+Caste prevalance: [+ sinhalese_caste_prevalance : dissent +]
 
 = Student Unions
 
