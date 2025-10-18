@@ -456,8 +456,6 @@ Foreign debt: [+ foreign_debt +]
 
 Inequality: [+ inequality_2 : equality +]
 
-Sector Nationalisation: [+ total_nationalisation_3 +]%
-
 = Economic Sectors
 
 Tourism: [+ tourism : sectordev +]
