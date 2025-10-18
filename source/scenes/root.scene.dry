@@ -278,6 +278,16 @@ Q.corruption_strenght = 45;
 Q.labour_unions_strenght = 10; 
 //uses equality qdisplay
 Q.ftz_conditions = 0.5;
+//percentages
+Q.labour_union_slfp_control = 10;
+Q.labour_union_unp_control = 25;
+Q.labour_union_cpsl_control = 12;
+Q.labour_union_lssp_control = 20;
+Q.labour_union_cwc_control = 15;
+Q.labour_union_jvp_control = 8;
+Q.labour_union_independent_control = 10;
+
+
 //addition of nationalisation level of each sector
 Q.total_nationalisation = Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national;
 
