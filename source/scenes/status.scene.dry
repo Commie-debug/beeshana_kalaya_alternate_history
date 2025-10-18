@@ -324,6 +324,21 @@ Labour union strenght: [+ labour_unions_strenght : strength +]
 
 FTZ working conditions: [+ ftz_conditions : equality +]
 
+<span style="color: #00008B;">**SLFP**</span> control: [+ labour_union_slfp_control +]%
+
+<span style="color: #006400;">**UNP**</span> control: [+ labour_union_unp_control +]%
+
+<span style="color: #A91101;">**LSSP**</span> control: [+ labour_union_lssp_control +]%
+
+<span style="color: #E52B50;">**CWC**</span> control: [+ labour_union_cwc_control +]%
+
+<span style="color: #65000B;">**CPSL**</span> control: [+ labour_union_cpsl_control +]%
+
+<span style="color: #FF2226;">**JVP**</span> control: [+ labour_union_jvp_control +]%
+
+<span style="color: #545454;">**Independent**</span> control: [+ labour_union_independent_control +]%
+
+
 = Sri Lankan Tamils
 
 Sinhala Only: [+ tamil_sinhala_only +]
@@ -370,13 +385,13 @@ Caste prevalance: [+ sinhalese_caste_prevalance : dissent +]
 
 = Student Unions
 
-Student union strenght = [+ student_union_strenght : strength +]
+Student union strenght: [+ student_union_strenght : strength +]
+
+<span style="color: #00008B;">**SLFP**</span> control: [+ student_union_slfp_control +]%
 
 <span style="color: #FF2226;">**JVP**</span> control: [+ student_union_jvp_control +]%
 
 <span style="color: #65000B;">**CPSL**</span> control: [+ student_union_cpsl_control +]%
-
-<span style="color: #00008B;">**SLFP**</span> control: [+ student_union_slfp_control +]%
 
 <span style="color: #A91101;">**LSSP**</span> control: [+ student_union_lssp_control +]%
 
