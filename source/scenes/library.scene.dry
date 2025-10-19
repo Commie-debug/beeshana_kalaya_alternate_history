@@ -10,7 +10,7 @@ Herein contains relevant information about the government and politics of Sri La
 @menu
 
 - @government: Sri Lanka's system of government
-- @weimar_timeline: Timeline of Sri Lanka before 1981
+- @timeline: Timeline of Sri Lanka before 1981
 - @curr_gov: Current government details
 - @demographics: Demographics
 - @economics: Economics
@@ -24,14 +24,20 @@ Herein contains relevant information about the government and politics of Sri La
 @government
 go-to: menu
 
-The Democratic Socialist Republic Of Sri Lanka (explain lol)
+Sri Lanka, officially the Democratic Socialist Republic of Sri Lanka, is a presidential republic with a powerful president and a parliament with somewhat constrained authority. The President serves as both head of state and head of government, wielding substantial executive power, while Parliament is responsible for legislation but operates under considerable presidential influence.
 
-@weimar_timeline
+The President, modelled after the French president is elected by a ranked choice vote. The presidential term lasts six years, and the President can be re-elected. The role of the president extends far beyond ceremonial duties—the office possesses extensive governing powers including the authority to appoint the Prime Minister and Cabinet, dissolve Parliament at his discretion, and personally hold multiple ministerial portfolios. The President can govern through executive decree in many areas, bypassing Parliament and concentrating substantial decision-making authority in the presidency itself. The President also appoints provincial governors who represent the central government's authority in the regions.
+
+Parliament consists of 196 members elected through a system of proportional representation, giving parties seats roughly proportional to their vote share in each electoral district. Elections operate with voters casting their ballots in multi-member electoral districts that correspond to the country's administrative districts. Parliamentary terms last six years unless dissolved earlier by the President. Parliament is responsible for passing legislation and can scrutinise government actions, though its ability to check presidential power is limited by the powers of the president.
+
+Sri Lanka is divided into nine provinces, each headed by a governor appointed by the President. Below the provincial level, the country is organised into multiple administrative districts, each managed under the central government's authority. At the local level, governance is conducted through Municipal Councils, Urban Councils, and Village/Town Councils, responsible for local administration and services. 
+
+@timeline
 go-to: menu
 
 = Timeline of the SLFP and Sri Lanka (until 1981)
 
-**1946**: UNP founded by D.S Senanayke from a number of pro-dominion parties  including the Ceylon National Congress, Sinhala Maha Sabha led by S.W.R.D Bandaranaike, and other right-leaning groups.
+**1946**: UNP founded by D.S Senanayke from a number of pro-dominion parties including the Ceylon National Congress, Sinhala Maha Sabha led by S.W.R.D Bandaranaike, and other right-leaning groups.
 
 **1947**: Ceylon's first general strike in its history is put down bloodily by the colonial government.
 
@@ -65,7 +71,9 @@ go-to: menu
 
 **1971**: The JVP launches an attempted insurection on the United Front government. Initally successful in holding large sections of the south, the small inexperienced army would crush the rebels in 2 months. Rohana himself would be imprisoned and the JVP would be banned.
 
-**1972**:
+**1977**: The UNP achieves a landslide in parliament. The loss demotes the SLFP to 3rd largest in parliament with the TULF becoming the largest opposition party. JR immedietly begins his plans to reshape the nation. The TULF's openly separatist program instigates anti-tamil pogroms around the island.
+
+**1978**: Sri Lanka's 2nd and current republican constitution is introduced. It codifies the superiority of Buddhism and the Sinhala language with albiet limited provions for Tamil. JR assumes the new executive presidency holding vast powers with little no limits to it.
 
 @curr_gov
 go-to: cabinet if slfp_in_government; menu if not slfp_in_government
@@ -81,6 +89,8 @@ Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +]
 Parliament composition:
 
 Current Government: [? if current_gov = 'UNP & CWC' : <span style="color: #006400;">**UNP**</span> & <span style="color: #E52B50;">**CWC**</span> ?]
+
+[? if slfp_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 {!<span class="tooltip-text" title="Sri Lanka Freedom Party" style="color: #00008B;">**SLFP**</span>!}: [+ slfp_r +]
 
@@ -117,8 +127,6 @@ Current Government: [? if current_gov = 'UNP & CWC' : <span style="color: #00640
 [? if slmc_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Muslim Congress" style="color: #2DCF3E;">**SLMC**</span> !}: [+ slmc_r +] ?]
 
 <span style="color: #00008B;">**SLFP**</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
-
-[? if slfp_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 @cabinet
 go-to: menu
@@ -178,15 +186,15 @@ go-to: menu
 
 **Ethnic Groups**
 
-**Sinhalese**:
+**Sinhalese**: The islands largest ethnic group. Desendent's of centuries old settlers from India. The Sinhalese speak Sinhala, an Indo-Aryan language. The Sinhalese are followers of Buddhism with a significant minority following Christianity. They generally live in the South, West and Central provinces with several communities and settlements in the North-East. Sinhalese parties have dominated the island's politics for decades and their politics is thus incredibly varied based on area, class, religon, etc split mainly between the UNP, SLFP, JVP, etc. They make up 73.95% of the population.
 
-**Sri Lankan Tamil**:
+**Sri Lankan Tamil**: The islands second largest ethnic group. 12.71%
 
-**Indian Tamil**:
+**Indian Tamil**: 5.51%
 
-**Muslims**:
+**Muslims**: 7.05%
 
-**Others**:
+**Others**: 0.78%
 
 @public_opinion
 on-arrival: {!
