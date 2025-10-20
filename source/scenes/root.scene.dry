@@ -326,32 +326,32 @@ Q.clergy = 1;
 //District data
 //All seat numbers for each district are based of the 1984
 //Displayed one, default is colombo district
-Q.district_name = "Kalutara";
-Q.district_sinhala = 100;
-Q.district_sltamil = 100;
-Q.district_itamil = 100;
-Q.district_muslim = 100;
-Q.district_other = 100;
+Q.district_name = "District Name";
+Q.district_sinhala = 0;
+Q.district_sltamil = 0;
+Q.district_itamil = 0;
+Q.district_muslim = 0;
+Q.district_other = 0;
 
-Q.district_worker = 100;
-Q.district_middle = 100;
-Q.district_upper = 100;
-Q.district_rural = 100;
-Q.district_unemployed = 100;
-Q.district_clergy = 100;
+Q.district_worker = 0;
+Q.district_middle = 0;
+Q.district_upper = 0;
+Q.district_rural = 0;
+Q.district_unemployed = 0;
+Q.district_clergy = 0;
 
 Q.district_control = 100;
 Q.district_education = 0.7;
 Q.district_infastructure = 0.9;
 Q.district_seats = 21;
-Q.district_industries = ['tourism', 'textile', 'fishing'];
+Q.district_industries = ['Tourism', 'Textile', 'Fishing'];
 
 //Western province
-Q.colombo_d_sinhala = 100;
-Q.colombo_d_sltamil = 100;
-Q.colombo_d_itamil = 100;
-Q.colombo_d_muslim = 100;
-Q.colombo_d_other = 100;
+Q.colombo_d_sinhala = 77.61;
+Q.colombo_d_sltamil = 10.04;
+Q.colombo_d_itamil = 1.17;
+Q.colombo_d_muslim = 8.22;
+Q.colombo_d_other = 2.96;
 
 Q.colombo_d_worker = 100;
 Q.colombo_d_middle = 100;
