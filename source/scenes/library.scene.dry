@@ -86,9 +86,11 @@ Prime minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +])
 
-Parliament composition:
+<span style="color: #00008B;">**SLFP**</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
 
 Current Government: [? if current_gov = 'UNP & CWC' : <span style="color: #006400;">**UNP**</span> & <span style="color: #E52B50;">**CWC**</span> ?]
+
+Parliament composition:
 
 [? if slfp_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -126,12 +128,7 @@ Current Government: [? if current_gov = 'UNP & CWC' : <span style="color: #00640
 
 [? if slmc_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Muslim Congress" style="color: #2DCF3E;">**SLMC**</span> !}: [+ slmc_r +] ?]
 
-<span style="color: #00008B;">**SLFP**</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
-
-@cabinet
-go-to: menu
-
-Current cabinet:
+= Current cabinet
 
 Labor: [+ labor_minister_party +]
 
