@@ -137,9 +137,9 @@ Q.homeg_loyalty = 0.7;
 Q.civilsec_formed = 0;
 
 Q.slp_strength = 10;
-Q.slp_loyalty = 0.7;
+Q.slp_morale = 0.7;
 Q.slaf_strength = 100;
-Q.slaf_loyalty = 0.7;
+Q.slaf_morale = 0.7;
 
 // The state of the country
 
