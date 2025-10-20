@@ -130,7 +130,7 @@ Parliament composition:
 
 = Current cabinet
 
-Labor: [+ labor_minister_party +]
+Labor: [+ labour_minister_party +]
 
 Defence: [+ defence_minister_party +]
 
