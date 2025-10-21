@@ -183,13 +183,13 @@ go-to: menu
 
 **Ethnic Groups**
 
-**Sinhalese**: The islands largest ethnic group. Desendent's of centuries old settlers from India. The Sinhalese speak Sinhala, an Indo-Aryan language. The Sinhalese are followers of Buddhism with a significant minority following Christianity. They generally live in the South, West and Central provinces with several communities and settlements in the North-East. Sinhalese parties have dominated the island's politics for decades and their politics is thus incredibly varied based on area, class, religon, etc split mainly between the UNP, SLFP, JVP, etc. They make up 73.95% of the population.
+**Sinhalese**: The islands largest ethnic group. Originally from North India, their ancestors migrated centuries ago. The Sinhalese speak Sinhala, an Indo-Aryan language. They are followers of Buddhism with a significant minority following Christianity. They generally live in the South, West and Central provinces with several communities and settlements in the North-East. Sinhalese parties have dominated the island's politics for decades and their politics is thus incredibly varied based on area, class, religon, etc split mainly between the UNP, SLFP, JVP, etc. They make up 73.95% of the population.
 
-**Sri Lankan Tamil**: The islands second largest ethnic group. 12.71%
+**Sri Lankan Tamil**: The islands second largest ethnic group. Part of the larger Tamil people originating from south India, their ancestors have lived on the island for just as long as the Sinhalese. They speak Tamil, a Dravidian language and are followers of Hinduism (Mostly Shaivism) with a large Christian minority. They dominate the North-East with communites in every major city. Traditionally, Tamils have supported pro-federal parties though some have began to drift towards seperatism and rebellion. They make up 12.71% of the population.
 
-**Indian Tamil**: 5.51%
+**Muslims**: The most genetically diverse group in Sri Lanka. From descendents of Yemenis, Malays, Tamils, Arabs, etc, They are united by their common religon of Islam. Speaking mostly Tamil, most can speak Sinhala as a second language. The Muslims are generally spread throughout the island with large pockets in major cities and the North-East. Despite maintaing a seperate cultural identity to other groups, they have generally supported Sinhalese parties like the SLFP and UNP. Recently there has been a shift towards Tamil parties or even a seperate political identity. They make up 7.05% of the population.
 
-**Muslims**: 7.05%
+**Indian Tamil**: The youngest and more destitute of Sri Lanka. Descendent from . They make up around 5.51% of the population.
 
 **Others**: 0.78%
 
@@ -337,6 +337,8 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 Overall dissent: [+ dissent_percent : dissent +]
 
 <span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+
+The Left consists of the parties socialist and social democratic traditions. Advocates for a 
 
 <span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
