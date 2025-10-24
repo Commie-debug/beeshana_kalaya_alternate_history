@@ -338,6 +338,19 @@ FTZ working conditions: [+ ftz_conditions : equality +]
 
 <span style="color: #545454;">**Independent**</span> control: [+ labour_union_independent_control +]%
 
+= Student Unions
+
+Student union strenght: [+ student_union_strenght : strength +]
+
+<span style="color: #00008B;">**SLFP**</span> control: [+ student_union_slfp_control +]%
+
+<span style="color: #FF2226;">**JVP**</span> control: [+ student_union_jvp_control +]%
+
+<span style="color: #65000B;">**CPSL**</span> control: [+ student_union_cpsl_control +]%
+
+<span style="color: #A91101;">**LSSP**</span> control: [+ student_union_lssp_control +]%
+
+<span style="color: #545454;">**Independent**</span> control: [+ student_union_independent_control +]%
 
 = Sri Lankan Tamils
 
@@ -382,20 +395,6 @@ Poverty: [+ south_poverty : poverty +]
 Land reforms: [+ south_land : reform +]
 
 Caste prevalance: [+ sinhalese_caste_prevalance : dissent +]
-
-= Student Unions
-
-Student union strenght: [+ student_union_strenght : strength +]
-
-<span style="color: #00008B;">**SLFP**</span> control: [+ student_union_slfp_control +]%
-
-<span style="color: #FF2226;">**JVP**</span> control: [+ student_union_jvp_control +]%
-
-<span style="color: #65000B;">**CPSL**</span> control: [+ student_union_cpsl_control +]%
-
-<span style="color: #A91101;">**LSSP**</span> control: [+ student_union_lssp_control +]%
-
-<span style="color: #545454;">**Independent**</span> control: [+ student_union_independent_control +]%
 
 = Secuity forces
 
