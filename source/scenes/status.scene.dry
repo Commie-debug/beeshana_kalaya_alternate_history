@@ -166,9 +166,9 @@ if (Q.ipkf_morale) {
 
 <span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span> Strength: [+ eros_strength_2 +] thousand, Militarization: [+ eros_militancy : militancy +]
 
-<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;”>**EPRLF**</span> Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
+<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;">**EPRLF**</span> Strength: [+ eprlf_strength_2 +] thousand, Militarization: [+ eprlf_militancy : militancy +]
 
-<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;”>**TELO**</span> Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
+<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;">**TELO**</span> Strength: [+ telo_strength_2 +] thousand, Militarization: [+ telo_militancy : militancy +]
 
 <span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span> Strength: [+ plote_strength_2 +] thousand, Militarization: [+ plote_militancy : militancy +]
 
