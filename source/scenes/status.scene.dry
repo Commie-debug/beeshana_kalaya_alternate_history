@@ -174,17 +174,17 @@ if (Q.ipkf_morale) {
 
 = Military & State Paramilitaries
 
-Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops. Loyalty: [+ slaf_loyalty : loyalty +]
+Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops. Morale: [+ slaf_morale : loyalty +]
 
-Sri Lanka Police: [+ slp_strength +] thousand members. Loyalty: [+ slp_loyalty : loyalty +]
+Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : loyalty +]
 
-Home Guard: [+ homeg_strength +] thousand troops. Loyalty: [+ homeg_loyalty : loyalty +]
+Home Guard: [+ homeg_strength +] thousand members. Morale: [+ homeg_morale : loyalty +]
 
 [? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +] ?]
 
 [? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
 
-[? if ipkf_formed = 1 : IPKF morale: [+ ipkf_morale_2 : morale +] ?]
+[? if ipkf_formed = 1 : IPKF Morale: [+ ipkf_morale_2 : morale +] ?]
 
 @polls
 on-arrival: {!
