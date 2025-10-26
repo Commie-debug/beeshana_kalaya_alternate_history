@@ -73,28 +73,32 @@ header {
 #header-links {
   text-align: left;
   float: left;
-  display: inline-block;
   margin-bottom: 0.5em;
-  padding-left: 1em;
+  padding: 0;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
 #header-links a {
-  padding-right: 1em;
-}
-header h1, header h2 {
   display: inline-block;
-  font-weight: normal;
-  margin: 0;
-  font-size: 1em;
+  padding: 0.35em 0.9em;
+  margin-right: 0.4em;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
-header h1 {
-  font-weight: bold;
+#header-links a:last-of-type {
+  margin-right: 0;
 }
-header h2:before {
-  content: "by";
-  font-style: italic;
-  padding: 0 0.3em 0 0;
+#header-links a:first-of-type {
+  background-color: #5C0000;
+  color: #ff4747;
+}
+#header-links a:nth-of-type(2) {
+  background-color: #035600;
+  color: #4dff47;
+}
+#header-links a:nth-of-type(3) {
+  background-color: #002D58;
+  color: #55adff;
 }
 
 #content #read-marker {
