@@ -90,7 +90,7 @@ header {
 }
 #header-links a:first-of-type {
   background-color: #F7B718;
-  color: #FBDC8E;
+  color: #FFBC00;
 }
 #header-links a:nth-of-type(2) {
   background-color: #941E32;
@@ -98,7 +98,7 @@ header {
 }
 #header-links a:nth-of-type(3) {
   background-color: #DF7500;
-  color: #FF8300;
+  color: #FF9A2E;
 }
 header h1, header h2 {
   display: inline-block;
