@@ -1,1 +1,67 @@
+title: Ethnic Campaigning
+new-page: true
+on-arrival: month_actions += 1
+max-visits: 36
+is-card: true
+card-image: img/campaign.jpg
+frequency: 100
+tags: party_affairs
 
+= Campaigning
+
+Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
+
+- @sinhalese: Sinhalese are our largest voter base dominating the south and west. 
+- @tamilsl: It is nessecary that we expand our support to the Tamils of the north-east. It may be difficult knowing our previous administrations actions.
+- @tamilin: The Indian Tamils of the central province are small but their support may be needed to secure the tea plantations.
+- @muslim: Muslims around the island lack a voice for their more proggressive atitudes, it can serve as well to gain their support.
+- @others: The numerous smaller groups such as the Burghers have an important albeit small influence in Sri Lanka, surely it cant be harmful to gain their support?.
+- @class: We should go beyond ethnic lines and instead, campaign among the economic classes of the nation.
+- @root: We either don't want to or cannot campaign right now.
+- @easy_discard
+
+@sinhalese
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: worker_slfp += 6*(1-dissent);
+
+We have increased our campaigning among the Sinhalese people. 
+
+@tamilsl
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: worker_slfp += 6*(1-dissent);
+
+We have increased our campaigning among the Sri Lankan Tamils. 
+
+@tamilin
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: worker_slfp += 6*(1-dissent);
+
+We have increased our campaigning among the Indian Tamils. 
+
+@muslim
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: worker_slfp += 6*(1-dissent);
+
+We have increased our campaigning among the Muslims. 
+
+@others
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: worker_slfp += 6*(1-dissent);
+
+We have increased our campaigning among the smaller ethnic groups of Sri Lanka. 
+
+@class
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+go-to: campaigning_class
