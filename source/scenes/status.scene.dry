@@ -269,9 +269,6 @@ Support for socialism: [+ socialism_disp +]%
 
 Support for the government: [+ gov_support_disp +]%
 
-
-# = Tamil Situation
-
 @tamil
 on-arrival: {!
 if (Q.ltte_strength) {
