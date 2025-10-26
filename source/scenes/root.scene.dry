@@ -100,7 +100,6 @@ Q.jvpt_strength = 2000;
 Q.jvpt_militancy = 0.24;
 
 Q.epdp_formed = 0;
-Q.tmvp_formed = 0;
 Q.blackcats_formed = 0;
 Q.eagles_formed = 0;
 
