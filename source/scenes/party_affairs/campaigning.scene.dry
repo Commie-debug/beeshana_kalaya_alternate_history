@@ -13,7 +13,6 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 
 - @upper: Wealthy elites, landowners, business magnates, and high-ranking politicians.
 - @middle: Educated professionals and civil servants of the middle class.
-- @state: Government employees and public-sector workers.
 - @worker: Urban and industrial laborers (factory workers, plantation workers).
 - @rural: Farmers and villagers dependent on agriculture and mining.
 - @unemployed: The unemployed.
@@ -36,14 +35,6 @@ unavailable-subtitle: Not enough resources.
 on-arrival: middle_slfp += 6*(1-dissent);
 
 We have increased our campaigning among the middle class. 
-
-@state
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: state_slfp += 6*(1-dissent);
-
-We have increased our campaigning among state workers. 
 
 @worker
 subtitle: -1 resources
