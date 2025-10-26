@@ -70,7 +70,4 @@ on-arrival: clergy_slfp += 6*(1-dissent);
 We have increased our campaigning among the clergy.
 
 @ethnic
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
 go-to: campaigning_ethnic
