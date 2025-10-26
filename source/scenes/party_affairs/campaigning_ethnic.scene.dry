@@ -7,7 +7,7 @@ card-image: img/campaign.jpg
 frequency: 100
 tags: party_affairs
 
-= Campaigning
+= Ethnic Campaigning
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
@@ -61,7 +61,4 @@ on-arrival: worker_slfp += 6*(1-dissent);
 We have increased our campaigning among the smaller ethnic groups of Sri Lanka. 
 
 @class
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
 go-to: campaigning_class
