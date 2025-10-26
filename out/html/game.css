@@ -89,16 +89,16 @@ header {
   margin-right: 0;
 }
 #header-links a:first-of-type {
-  background-color: #5C0000;
-  color: #ff4747;
+  background-color: #F7B718;
+  color: #FBDC8E;
 }
 #header-links a:nth-of-type(2) {
-  background-color: #035600;
-  color: #4dff47;
+  background-color: #941E32;
+  color: #DB5168;
 }
 #header-links a:nth-of-type(3) {
-  background-color: #002D58;
-  color: #55adff;
+  background-color: #DF7500;
+  color: #FF8300;
 }
 header h1, header h2 {
   display: inline-block;
