@@ -26,6 +26,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; 
+
 //FUTURE, ADD PATHS FOR RECONCILIATION AND TO MAKE A PACT.
 
 @itamil
@@ -33,6 +34,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; 
+
 //FUTURE, ADD PATHS FOR FUTURE SUPPORT BEING DEPENDENT ON A CHANGE IN SLFP POSITION OR A PROMISE TO IMPROVE THEIR CONDITIONS. HIGH SUPPORT CAN MEAN A CWC THAT ABANDONS THE UNP FOR THE SLFP.
 
 @muslim
@@ -41,6 +43,7 @@ choose-if: resources >= 1
 view if: slmc_formed = 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; 
+
 //This is more or less dependent on providing security for muslims in the north east and being at least not-anti buisness for the muslim middle class.
 
 @tamil
@@ -48,6 +51,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; 
+
 //FUTURE, ADD PATHS FOR IF SLFP is nationalist, if they are the tamil parties may not care or even be angry at you. Also changes if the SLFP passes/supports anti-tamil laws in parliament or for greater military pressure on the militants. Greater support can be gained if SLFP becomes more pro-tamil.
 
 @communist
@@ -55,6 +59,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; 
+
 //FUTURE, ADD PATHS FOR a remaking of the UF. Or make future support for SLFP dependent on if they have/will pass worker/union friendly laws and start re-nationalising
 
 @spd_alone
