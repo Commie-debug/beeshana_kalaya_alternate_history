@@ -77,6 +77,16 @@ Q.actc_relation = 10;
 //party ideologies
 //JVP is defined between revolutionary socialism at 1 to sinhalese budhist nationalism and anti-tamil racism at 10
 Q.jvp_ideology = 4;
+//jvp_ideology >= 3 : Revolutionary socialism, if jvp_ideology < 3 and jvp_ideology >= 6 : Left-wing nationalism, if jvp_ideology > 6 : Sinhalese nationalism 
+
+//inter party dynamics
+//jvp
+//0-no reconciliation for 1971, 1-reconciled for 1971
+Q.jvp_reconciliation = 0;
+//0-no pact of support during the jvp insurgency, 1-pact has been betrayed by slfp
+Q.jvp_slfp_pact = 0;
+
+//WILL ADD OTHER BRANCHES FOR THE OTHER PARTIES
 
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
