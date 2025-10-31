@@ -1,117 +1,61 @@
 title: Inter-Party Relationships
 new-page: true
-view-if: year <= 1932 and inter_party_relationships_timer <= 0
+view-if: inter_party_relationships_timer <= 0
 tags: party_affairs
 is-card: true
 on-arrival: month_actions += 1; inter_party_relationships_timer = 6;
 card-image: img/sirimavo_&_perera.jpg
 max-visits: 12
-#subtitle: Building relations with the other political parties of Germany.
+#subtitle: Building relations with the other political parties of Sri Lanka.
 
 = Inter-Party Relationships
 
-The SPD cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the SPD, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The <span style="color: #00008B;">**SLFP**</span> has never governed without a coalition to support it. In the past we have allied with nationalists, communists or even trotskyists. With our precarious position and the rapid changes to in the nation, we may need to form new bonds or strenghten our older alliances.
 
-- @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
-- @center: Strengthen our bonds with the Catholic Center Party.
-- @kpd: Work towards repairing relationships with the Communist Party.
-- @spd_alone: The SPD can stand alone for now.
+- @jvp: Strengthen our bonds with the revolutionary marxist <span style="color: #FF2226;">**JVP**</span>. This may be difficult knowing our shared histories.
+- @tamil: Strengthen our bonds with the Tamil political parties like the <span style="color: #F7D917;">**TULF**</span> and <span style="color: #FDCC01;">**ACTC**</span>. The <span style="color: #0F52BA;">**Nationalists**</span> will not be happy with this.
+- @communist: Work towards repairing relationships with the <span style="color: #65000B;">**CPSL**</span>, <span style="color: #A91101;">**LSSP**</span> and maybe even the smaller <span style="color: #FF8080;">**NSSP**</span>.
+- @itamil: We could try forming a positive relationship with the Indian Tamil <span style="color: #E52B50;">**CWC**</span>. Once again our previous policy of repatriation will make this difficult.
+- @muslim: The newly formed <span style="color: #2DCF3E;">**SLMC**</span> presents a new possible ally. At least we have generally been indifferent to Muslim concerns?
+- @spd_alone: The SLFP can stand alone for now.
 - @easy_discard
 
 
-@kpd
+@jvp
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1
+on-arrival: resources -= 1; 
+//FUTURE, ADD PATHS FOR RECONCILIATION AND TO MAKE A PACT.
 
-@kpd_1
-on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; dvp_relation -= 3
-
-The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
-
-@kpd_rectification_of_history
-
-One stumbling block for our relations with the KPD is our history of conflict, dating back to 1918 and 1919. The KPD is especially contemptuous of Gustav Noske, the SPD "bloodhound" who reportedly ordered the violent suppression of the Spartacist uprising and other KPD revolts. They also blame us for the deaths of Rosa Luxemburg and Karl Liebknecht, two SPD-turned-KPD leaders who were killed during the suppression of the uprising.
-
-For further improvements in KPD relations, it might be necessary to expel Noske, and hold some sort of commemoration for Luxemburg and Liebknecht.
-
-- @yes_history: Yes, we must apologize for our past actions.
-- @no_history: No, we have no need to apologize.
-
-@yes_history
-on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; kpd_rectified_history = 1; z_relation -= 6; dvp_relation -= 6; ddp_relation -= 4; kpd_relation += 8*(1-dissent); coalition_dissent += 1
-
-As part of normalizing relations with the KPD, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
-
-This leads to tensions with the moderates and reformists within our party, and criticism from the conservative and liberal parties.
-
-@no_history
-on-arrival: kpd_relation -= 3
-
-We have no need to apologize for the actions of Ebert and Noske; it is the Communists' fault for launching a violent insurrection.
-
-
-@kpd_2
-on-arrival: kpd_relation += 8*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; dvp_relation -= 3
-
-After the success of the coalition government with the KPD, they are much more amenable to us.
-
-@kpd_blutmai
-on-arrival: kpd_relation += 3*(1 - dissent); reformist_dissent += 1
-
-After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
-
-@center
+@itamil
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
-go-to: center_op if z_in_government = 1 and spd_in_government = 0 and chancellor != "Brüning"; center_coalition if spd_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
+on-arrival: resources -= 1; 
+//FUTURE, ADD PATHS FOR FUTURE SUPPORT BEING DEPENDENT ON A CHANGE IN SLFP POSITION OR A PROMISE TO IMPROVE THEIR CONDITIONS. HIGH SUPPORT CAN MEAN A CWC THAT ABANDONS THE UNP FOR THE SLFP.
 
-@center_op
-on-arrival: z_relation += 5*(1 - dissent)
+@muslim
+subtitle: -1 resources
+choose-if: resources >= 1
+view if: slmc_formed = 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; 
+//This is more or less dependent on providing security for muslims in the north east and being at least not-anti buisness for the muslim middle class.
 
-We are currently in opposition to the Center-led government, but that does not preclude the general building of feelings of good will.
-
-@center_coalition
-on-arrival: z_relation += 8*(1 - dissent)
-
-We are currently coalition partners with them, so improving relations comes naturally.
-
-@center_bruning
-on-arrival: z_relation += 5*(1 - dissent)
-
-The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
-
-@liberals
+@tamil
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent)
-go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and year <= 1930; dvp_moribound if year > 1930
+on-arrival: resources -= 1; 
+//FUTURE, ADD PATHS FOR IF SLFP is nationalist, if they are the tamil parties may not care or even be angry at you. Also changes if the SLFP passes/supports anti-tamil laws in parliament or for greater military pressure on the militants. Greater support can be gained if SLFP becomes more pro-tamil.
 
-The [+ ddp_name +] has been one of our closest allies through the course of the Republic.
-
-@dvp_stresemann
-on-arrival: dvp_relation += 8*(1 - dissent)
-
-Gustav Stresemann, the leader of the DVP is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
-
-@dvp_loss
-on-arrival: dvp_relation += 5*(1 - dissent)
-
-With the death of Gustav Stresemann, the DVP is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
-
-However, given the influence of the DVP among the other right-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
-
-@dvp_moribound
-on-arrival: dvp_relation += 5*(1 - dissent)
-
-The liberal parties (both the [+ ddp_name +] and DVP) are electorally moribund, so perhaps our efforts are best spent elsewhere.
-
-However, given the influence of the DVP among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+@communist
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; 
+//FUTURE, ADD PATHS FOR a remaking of the UF. Or make future support for SLFP dependent on if they have/will pass worker/union friendly laws and start re-nationalising
 
 @spd_alone
 
