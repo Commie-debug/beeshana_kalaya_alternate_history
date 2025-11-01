@@ -1,11 +1,11 @@
 title: Labour Unions
 new-page: true
+on-arrival: month_actions += 1
+max-visits: 36
 is-card: true
-tags: labour_union
-on-arrival: month_actions += 1;
-card-image: img/1977_cabinet.jpg
-max-visits: 5
-#subtitle: Outside of electoral politics, the SLFP used to be a social world onto itself.
+card-image: img/campaign_1.jpg
+frequency: 100
+tags: party_affairs
 
 = Party Organizations
 
