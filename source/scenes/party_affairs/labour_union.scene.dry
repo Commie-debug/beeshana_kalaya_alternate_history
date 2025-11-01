@@ -3,56 +3,33 @@ new-page: true
 on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
-card-image: img/campaign_1.jpg
+card-image: img/labour_union.jpg
 frequency: 100
 tags: party_affairs
 
-= Party Organizations
+= Labour Unions
 
-In addition to being a political party, the SLFP used to be a social world onto itself, with a vast array of associated organizations which serve the social needs of their members from cradle to grave.
+While the SLFP is not renown for links to the organised labour movement, we maintain albiet tenious alliances with unions. Our former UF allies (<span style="color: #65000B;">**CPSL**</span> & <span style="color: #A91101;">**LSSP**</span> and recently the <span style="color: #FF8080;">**NSSP**</span>) maintained a formidable alliance with the labour movement.
 
-- @newspapers: Fund more newspapers and journalists.
-- @welfare: Fund more mutual aid and welfare programs.
-- @culture: Fund sports leagues, educational, and cultural programs.
-- @thug: Fund the street thugs.
-- @nothing: Do not increase funding for any program.
+That is in the past. Since the <span style="color: #006400;">**UNP's**</span> crushing of the 1980 strike, labour movements are at their lowest in history. Unions are fractured, companies are being given greater control away from trade unions, and the <span style="color: #006400;">**JSS**</span> makes sure that labour will not cause problems for the government. It is worse for the <span style="color: #00008B;">**SLFP**</span> owing to our internal disarray.
+
+- @resources We can send resources to our allied unions to help them expand and better support their fellow labourers.
+- @nothing: Do not increase funding and support.
 - @easy_discard
 
-@newspapers
+@resources
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
+subtitle: -1 resources 
 on-arrival: resources -= 1; media_timer = 0;
-go-to: media
 
-# TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
+//Sending resources will increase overall union power
 
+#Add more options for expanding SLFP control via reaching to independents, converting unions to us (with a bit of cash)
 
-@welfare
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent);
+#Working with unions affiliated already can after some time increase our relationship with that party
 
-We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
-
-@culture
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
-
-It is not enough for the SPD to solely be a political party. The Worker Singer's League, Worker's Sports, and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
-
-[? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
-
-@thug
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
-
-We have increased recruiting local thugs to support us.
+#If the thugs are sufficiently militarized, thugs can be used to intimidate unions to join us.
 
 @nothing
 
