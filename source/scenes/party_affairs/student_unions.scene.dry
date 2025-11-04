@@ -25,9 +25,9 @@ on-arrival: resources -= 1; media_timer = 0;
 
 //Sending resources will increase overall union power
 
-#Add more options for expanding SLFP control via reaching to independents, converting unions to us (with a bit of cash)
+#Add more options for expanding SLFP control via reaching to independents, converting unions to us (with a bit of cash).
 
-#Working with unions affiliated already can after some time increase our relationship with that party (Most usefull for the JVP
+#Working with unions affiliated already can after some time increase our relationship with that party (Most usefull for the JVP.
 
 #If the thugs are sufficiently militarized, thugs can be used to intimidate unions to join us.
                                                                                                        
@@ -35,6 +35,6 @@ on-arrival: resources -= 1; media_timer = 0;
 
 @nothing
 
-We do not fund any party organizations.
+We choose to not interact with the student union scene.
 
 - @return: Continue...
