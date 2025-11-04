@@ -1,7 +1,7 @@
 title: Student Unions
 new-page: true
 view-if: student_unions_timer <= 0
-tags: student_unions
+tags: party_affairs
 is-card: true
 on-arrival: month_actions += 1; student_unions_timer = 6;
 max-visits: 12
