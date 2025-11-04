@@ -3,7 +3,7 @@ new-page: true
 view-if: student_unions_timer <= 0
 tags: student_unions
 is-card: true
-on-arrival: month_actions += 1
+on-arrival: month_actions += 1; student_unions_timer = 6;
 max-visits: 12
 card-image: img/student_unions.jpg
 
