@@ -1,11 +1,11 @@
 title: Labour Unions
 new-page: true
-on-arrival: month_actions += 1
 view-if: labour_unions_timer <= 0
-max-visits: 12
+tags: labour_unions
 is-card: true
+on-arrival: month_actions += 1
+max-visits: 12
 card-image: img/labour_union.jpg
-tags: party_affairs
 
 = Labour Unions
 
