@@ -1,0 +1,40 @@
+title: Student Unions
+new-page: true
+view-if: student_unions_timer <= 0
+tags: student_unions
+is-card: true
+on-arrival: month_actions += 1
+max-visits: 12
+card-image: img/student_unions.jpg
+
+= Student Unions
+
+Among the higher educational facilities throughout the island, the youth and even faculty have since the 60s, been forming studet unions to represent their stances and views both on campus and on a national level. These unions have become a hotbed for revolutionary sentiment and growing dissent. 
+  
+In fact the <span style="color: #FF2226;">**JVP**</span>'s support base has been via the student unions during their revolt and still now. Other parties like the <span style="color: #65000B;">**CPSL**</span>, <span style="color: #A91101;">**LSSP**</span> and the <span style="color: #00008B;">**SLFP**</span> have a compartivly smaller support base in these unions. If we can gain the support of the student unions, it can put a dent in the <span style="color: #FF2226;">**JVP**</span> and be a powerfull force for us to implement. 
+  
+- @resources: We can send resources to our allied unions to help them expand and better support their constituents.
+- @nothing: Do not increase funding and support.
+- @easy_discard
+
+@resources
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; media_timer = 0;
+
+//Sending resources will increase overall union power
+
+#Add more options for expanding SLFP control via reaching to independents, converting unions to us (with a bit of cash)
+
+#Working with unions affiliated already can after some time increase our relationship with that party (Most usefull for the JVP
+
+#If the thugs are sufficiently militarized, thugs can be used to intimidate unions to join us.
+                                                                                                       
+#Student unions can be used to engage in protests, arm them for paramilitaries, apply pressure of the government etc.                                                                                                       
+
+@nothing
+
+We do not fund any party organizations.
+
+- @return: Continue...
