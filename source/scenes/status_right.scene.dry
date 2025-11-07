@@ -66,8 +66,8 @@ Sabaragamuwa Province
 <button class="status_button" onclick="Ratnapura_info()">Ratnapura District</button>
 <button class="status_button" onclick="Kegalle_info()">Kegalle District</button>
 
-@news
+@party
 
-= News
+= Party
 
-Text that changes each month to show regional, local and international news
+The parties leadership
