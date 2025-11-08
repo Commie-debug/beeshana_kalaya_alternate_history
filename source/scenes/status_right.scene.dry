@@ -71,7 +71,7 @@ Sabaragamuwa Province
 = Leader of the <span style="color: #00008B;">**SLFP**</span>
 
 <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [? if slfp_leader = "Sirimavo Bandaranaike" : Sirimavo Bandaranaike(<span style="color: #A91101;">**Left**</span>) ?] </p>
+<p style="text-align: center;margin-bottom: 0;"> [? if slfp_leader = "Sirimavo Bandaranaike" : Sirimavo Bandaranaike(<span style="color: #8C8C8C;">**Center**</span>) ?] </p>
 
 = Parliamentary Party Leader 
 
