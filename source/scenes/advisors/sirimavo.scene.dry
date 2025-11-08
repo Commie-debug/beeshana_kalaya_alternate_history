@@ -1,6 +1,6 @@
 title: Sirimavo Bandaranaike
 is-pinned-card: true 
-tags: advisor, left
+tags: advisor
 card-image: img/portraits/BandaranaikeSirimavo.jpg
 new-page: true
 view-if: sirimavo_advisor = 1
@@ -8,22 +8,12 @@ view-if: sirimavo_advisor = 1
 = Sirimavo Bandaranaike
 
 
-Two time former Prime Minister, husband to party founder S.W.R.D and current leader of the SLFP, Mrs Bandaranaike is a stalwart follower of democratic socialism while holding symathies for sinhalese nationalism. 
+Two time former Prime Minister, husband to party founder S.W.R.D and current leader of the <span style="color: #00008B;">**SLFP**</span>, Mrs Bandaranaike is a stalwart follower of democratic socialism while holding symathies for sinhalese nationalism. 
 
-- @left
 - @relationsleft
 - @primeminister
 - @end
 - @root: Return to main
-
-@left
-title: Support the left
-subtitle: Mrs Bandaranaike can push the party to the cause of democratic socialism, though this may lead to tensions with the nationalists.
-choose-if: advisor_action_timer <= 0 
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_strength +=10; left_dissent -= 8; nationalist_dissent += 3;
-
-The left has grown more popular among the party, but the nationalists have grown anxious. 
 
 @relationsleft
 title: Improve relations with our old allies
@@ -32,7 +22,7 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0 
 on-arrival: advisor_action_timer = 6; left_dissent -= 3; nationalist_dissent += 2; cpsl_relation += 6*(1-dissent); lssp_relation += 6*(1-dissent); nssp_relation += 5*(1-dissent);
 
-The SLFP has grown closer to CPSL, NSSP and LSSP, raising hopes of a potential alliance in the future.
+The <span style="color: #00008B;">**SLFP**</span> has grown closer to <span style="color: #65000B;">**CPSL**</span>, <span style="color: #FF8080;">**NSSP**</span> and <span style="color: #A91101;">**LSSP**</span>, raising hopes of a potential alliance in the future.
 
 @primeminister
 title: Prime Minister
