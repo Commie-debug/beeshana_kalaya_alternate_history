@@ -109,13 +109,6 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 
 <span style="color: #FF2226;">**JVP**</span>: [? if jvp_ideology >= 3 : Revolutionary socialism ?][? if jvp_ideology < 3 and jvp_ideology >= 6 : Left-wing nationalism?][? if jvp_ideology > 6 : Sinhalese nationalism ?]
 
-= Internal Factions of the SLFP
-
-<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
-
-<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
-
-
 @paramilitaries
 on-arrival: {!
 if (Q.slfpt_strength) {
