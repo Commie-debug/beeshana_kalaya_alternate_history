@@ -68,9 +68,8 @@ Sabaragamuwa Province
 
 @party
 
-= Party Leadership
+= Leader of the <span style="color: #00008B;">**SLFP**</span>
 
-<div style="text-align: center;">Leader of the <span style="color: #00008B;">**SLFP**</span></div>
 <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> Sirimavo Bandaranaike </p>
+<p style="text-align: center;margin-bottom: 0;"> [? if slfp_leader = "Sirimavo Bandaranaike" : Sirimavo Bandaranaike ?] </p>
 <h1>The Camarilla</h1>
