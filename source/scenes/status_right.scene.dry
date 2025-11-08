@@ -77,5 +77,6 @@ Sabaragamuwa Province
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;"> 
 <img src="img/portraits/BandaranaikeAnura.jpg" style="width: 50%; 60%;display: block;margin: auto;margin-bottom: 5px;">
 <img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 50%; 60%;display: block;margin: auto;margin-bottom: 5px;">
-
+</div>
+<div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 </div>
