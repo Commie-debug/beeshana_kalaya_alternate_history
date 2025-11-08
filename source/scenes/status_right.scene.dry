@@ -80,13 +80,13 @@ Sabaragamuwa Province
 
 = Internal Factions of the <span style="color: #00008B;">**SLFP**</span>
 
-<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> 
+<span class="tooltip-text" title="A faction consisting of socialists, social democrats, trade unionists, etc." style="color: #A91101;">**Left**</span> 
 
 Strength: [+ left_strength : strength +] 
 
 Dissent: [+ left_dissent : dissent +]
 
-<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> 
+<span class="tooltip-text" title="A faction of sinhalese buddhist nationalists, and economic conservatives." style="color: #0F52BA;">**Nationalists**</span> 
 
 Strength: [+ nationalist_strength : strength +] 
 
