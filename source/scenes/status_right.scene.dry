@@ -73,8 +73,14 @@ Sabaragamuwa Province
 <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <p style="text-align: center;margin-bottom: 0;"> [? if slfp_leader = "Sirimavo Bandaranaike" : Sirimavo Bandaranaike(<span style="color: #A91101;">**Left**</span>) ?] </p>
 
-= Parliamentary Party Leader of the <span style="color: #00008B;">**SLFP**
+= Parliamentary Party Leader 
 
 <div><img src="img/portraits/BandaranaikeAnura.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <p style="text-align: center;margin-bottom: 0;"> [? if slfp_parliament_leader = "Anura Bandaranaike" : Anura Bandaranaike(<span style="color: #0F52BA;">**Nationalist**</span>) ?] </p>
+
+= Internal Factions of the <span style="color: #00008B;">**SLFP**</span>
+
+<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+
+<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
