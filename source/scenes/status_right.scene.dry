@@ -80,7 +80,15 @@ Sabaragamuwa Province
 
 = Internal Factions of the <span style="color: #00008B;">**SLFP**</span>
 
-<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+<span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> 
 
-<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
+Strength: [+ left_strength : strength +] 
+
+Dissent: [+ left_dissent : dissent +]
+
+<span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> 
+
+Strength: [+ nationalist_strength : strength +] 
+
+Dissent: [+ nationalist_dissent : dissent +]
 
