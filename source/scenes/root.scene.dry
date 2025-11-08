@@ -91,6 +91,7 @@ Q.jvp_slfp_pact = 0;
 
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
+Q.slfp_parliament_leader = "Anura Bandaranaike";
 Q.jvp_leader = "Rohana Wijeweera";
 Q.tulf_leader = "A. Amirthalingam";
 
