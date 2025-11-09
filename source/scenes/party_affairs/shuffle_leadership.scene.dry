@@ -40,8 +40,7 @@ on-arrival: sirimavo_advisor = 0; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Mrs Bandaranaike has been removed as an advisor. The Left faction disapproves.
-
+Mrs Bandaranaike has been removed as an advisor. The party is shook.
 
 @remove_chandrika
 title: Remove Chandrika
@@ -97,6 +96,21 @@ view-if: n_advisors < 3
 
 - #center_advisor
 
+# center
+
+@add_sirimavo
+title: Sirimavo Bandaranaike
+subtitle: Mrs Bandaranaike is our party leader and former prime minister. {!<br><br>!}[? if difficulty < 0 : Actions - Improve relations with the old allies, Prime Minister ?]
+is-card: true
+card-image: img/portraits/BandaranaikeSirimavo.jpg
+view-if: sirimavo_advisor = 0 and n_advisors < 3 
+on-arrival: sirimavo_advisor = 1; n_advisors += 1;
+go-to: advisor_menu
+tags: center_advisor
+
+Sirimavo Bandaranaike is now an advisor.
+
+
 # national
 
 @add_maithripala
@@ -120,20 +134,6 @@ is-card: true
 card-image: national_advisor
 view-if: chandrika_advisor = 0 and n_advisors < 3 and left_split = 0
 on-arrival: chandrika_advisor = 1; n_advisors += 1; left_strength += 5
-go-to: advisor_menu
-tags: left_advisor
-
-Sirimavo Bandaranaike is now an advisor.
-
-# center
-
-@add_sirimavo
-title: Sirimavo Bandaranaike
-subtitle: Mrs Bandaranaike is our party leader and former prime minister. {!<br><br>!}[? if difficulty < 0 : Actions - Support the Left, Improve relations with the old allies, Prime Minister ?]
-is-card: true
-card-image: img/portraits/BandaranaikeSirimavo.jpg
-view-if: sirimavo_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: sirimavo_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
