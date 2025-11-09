@@ -36,7 +36,7 @@ tags: remove_advisor
 @remove_sirimavo
 title: Remove Sirimavo
 view-if: sirimavo_advisor = 1
-on-arrival: sirimavo_advisor = 0; left_dissent += 5; n_advisors -= 1
+on-arrival: sirimavo_advisor = 0; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
@@ -77,6 +77,7 @@ frequency: 1
 
 - @left: Add Leftists
 - @national: Add Nationalists
+- @center: Add Centrists
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
@@ -90,6 +91,11 @@ view-if: n_advisors < 3
 view-if: n_advisors < 3
 
 - #left_advisor
+
+@center
+view-if: n_advisors < 3
+
+- #center_advisor
 
 # national
 
@@ -107,18 +113,6 @@ Maithripala Senanayake is now an advisor.
 
 # left
 
-@add_sirimavo
-title: Sirimavo Bandaranaike
-subtitle: Mrs Bandaranaike is our party leader and former prime minister. {!<br><br>!}[? if difficulty < 0 : Actions - Support the Left, Improve relations with the old allies, Prime Minister ?]
-is-card: true
-card-image: img/portraits/BandaranaikeSirimavo.jpg
-view-if: sirimavo_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: sirimavo_advisor = 1; n_advisors += 1; left_strength += 5
-go-to: advisor_menu
-tags: left_advisor
-
-Sirimavo Bandaranaike is now an advisor.
-
 @add_chandrika
 title: Chandrika Kumaratunge
 subtitle: Mrs Kumaratunge is the daughter of party leader Mr Bandaranaike and husband to Vijaya Kumaratunge. {!<br><br>!}[? if difficulty < 0 : Actions - Heal the split, Tamil appeal ?]
@@ -126,6 +120,20 @@ is-card: true
 card-image: national_advisor
 view-if: chandrika_advisor = 0 and n_advisors < 3 and left_split = 0
 on-arrival: chandrika_advisor = 1; n_advisors += 1; left_strength += 5
+go-to: advisor_menu
+tags: left_advisor
+
+Sirimavo Bandaranaike is now an advisor.
+
+# center
+
+@add_sirimavo
+title: Sirimavo Bandaranaike
+subtitle: Mrs Bandaranaike is our party leader and former prime minister. {!<br><br>!}[? if difficulty < 0 : Actions - Support the Left, Improve relations with the old allies, Prime Minister ?]
+is-card: true
+card-image: img/portraits/BandaranaikeSirimavo.jpg
+view-if: sirimavo_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: sirimavo_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
