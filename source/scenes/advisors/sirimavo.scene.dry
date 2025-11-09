@@ -1,6 +1,6 @@
 title: Sirimavo Bandaranaike
 is-pinned-card: true 
-tags: advisor
+tags: advisor, center
 card-image: img/portraits/BandaranaikeSirimavo.jpg
 new-page: true
 view-if: sirimavo_advisor = 1
