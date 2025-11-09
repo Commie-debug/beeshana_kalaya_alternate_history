@@ -50,13 +50,16 @@ Q.dissent = 0.15;
 Q.dissent_percent = 15;
 
 // factions
-Q.factions = ['left', 'nationalist'];
+Q.factions = ['left', 'nationalist', 'center'];
 // should this be normalized to 100%?
 //no
 Q.left_strength = 25;
 Q.left_dissent = 10;
 Q.nationalist_strength = 25;
 Q.nationalist_dissent = 5;
+//Faction for only Sirimavo
+Q.center_strenght = 0;
+Q.center_dissent = 0;
 
 // secret events...
 Q.left_split = 0;
