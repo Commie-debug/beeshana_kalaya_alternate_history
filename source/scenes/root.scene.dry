@@ -472,14 +472,15 @@ Q.unemployed_other = 10;
 // Current Parliment composition
 // Number of seats in Parliment in Jan 1981
 // source: wikipedia
-Q.slfp_r = 8;
+Q.slfp_r = 7;
+//Lost on seat in 1980 to the UNP
 Q.jvp_r = 0;
 Q.cpsl_r = 0;
 Q.lssp_r = 0;
 Q.nssp_r = 0;
 Q.tulf_r = 18;
 Q.cwc_r = 1;
-Q.unp_r = 140;
+Q.unp_r = 141;
 Q.actc_r = 0;
 Q.other_r = 0;
 
