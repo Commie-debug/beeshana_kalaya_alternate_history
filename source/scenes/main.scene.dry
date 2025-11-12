@@ -2,15 +2,6 @@ title: Next month
 set-bg: img/map_2.jpg
 is-hand: true
 max-cards: 3
-on-arrival: {!
-if (Q.advisor_action_timer <= 0) {
-    Q.pinnedCardsDescription = 'Advisors - an action is available.';
-} else if (Q.advisor_action_timer == 1) {
-    Q.pinnedCardsDescription = 'Advisors - next action available in 1 month.';
-} else {
-    Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
-}
-!}
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
@@ -23,6 +14,15 @@ if (Q.advisor_action_timer <= 0) {
 set-bg: img/map_2.jpg
 is-hand: true
 max-cards: 6
+on-arrival: {!
+if (Q.advisor_action_timer <= 0) {
+    Q.pinnedCardsDescription = 'Advisors - an action is available.';
+} else if (Q.advisor_action_timer == 1) {
+    Q.pinnedCardsDescription = 'Advisors - next action available in 1 month.';
+} else {
+    Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
+}
+!}
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
