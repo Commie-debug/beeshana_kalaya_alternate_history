@@ -1,6 +1,6 @@
 const tooltipList = [{
     searchString: "Sri Lanka Armed Forces",
-    explanationText: "<img src=img/temp_party_symbols.png> The Socialist Party of Chile. <br> (Partido Socialista de Chile)"
+    explanationText: "<img src=img/temp_party_symbols.png> Sri Lanka Armed Forces"
     }, 
     {
     searchString: "placeholder",
