@@ -162,41 +162,41 @@
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
   window.displayText = function (text) {
-      return applyWholesome(text);
-  };
-  
-  function applyWholesome(str) {
-      const allWords = new Set([
-          ...tooltipList.map(t => t.searchString),
-          ...colourList.map(c => c.word)
-      ]);
-  
-      const regex = new RegExp(`\\b(${[...allWords].join('|')})\\b`, 'g');
-  
-      return str.replace(/(<(?:span|strong)[^>]*>.*?<\/(?:span|strong)>|<[^>]+>|[^<]+)/g, (segment) => {
-          if (segment.startsWith('<')) return segment;
-  
-          return segment.replace(regex, (match) => {
-              const tooltip = tooltipList.find(t => t.searchString === match);
-              const colour = colourList.find(c => c.word === match);
-  
-              let style = colour ? colour.style : '';
-              let innerText = match;
-  
-              if (colour && colour.img) {
-                  innerText = `<img src="${colour.img}" class="p_icon" alt="">${innerText}`;
-              }
-  
-              if (tooltip) {
-                  return `<span class='mytooltip' style='${style}'>${innerText}<span  class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
-              } else if (colour) {
-                  return `<span style='${style}'>${innerText}</span>`;
-              }
-  
-              return match;
-          });
-      });
-  }
+        return applyWholesome(text);
+    };
+
+    function applyWholesome(str) {
+        const allWords = new Set([
+            ...tooltipList.map(t => t.searchString),
+            ...colourList.map(c => c.word)
+        ]);
+
+        const regex = new RegExp(`\\b(${[...allWords].join('|')})\\b`, 'g');
+
+        return str.replace(/(<(?:span|strong)[^>]*>.*?<\/(?:span|strong)>|<[^>]+>|[^<]+)/g, (segment) => {
+            if (segment.startsWith('<')) return segment;
+
+            return segment.replace(regex, (match) => {
+                const tooltip = tooltipList.find(t => t.searchString === match);
+                const colour = colourList.find(c => c.word === match);
+
+                let style = colour ? colour.style : '';
+                let innerText = match;
+
+                if (colour && colour.img) {
+                    innerText = `<img src="${colour.img}" class="p_icon" alt="">${innerText}`;
+                }
+
+                if (tooltip) {
+                    return `<span class='mytooltip' style='${style}'>${innerText}<span  class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
+                } else if (colour) {
+                    return `<span style='${style}'>${innerText}</span>`;
+                }
+
+                return match;
+            });
+        });
+    }
 
   // This function allows you to do something in response to signals.
   window.handleSignal = function(signal, event, scene_id) {
@@ -311,6 +311,165 @@
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
 
+  // Western Province
+  function Colombo_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Colombo";
+    window.updateSidebarRight(); 
+  }
+  
+  function Gampaha_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Gampaha";
+    window.updateSidebarRight(); 
+  }
+  
+  function Kalutara_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Kalutara";
+    window.updateSidebarRight(); 
+  }
+  
+  // Central Province
+  function Kandy_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Kandy";
+    window.updateSidebarRight(); 
+  }
+  
+  function Matale_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Matale";
+    window.updateSidebarRight(); 
+  }
+  
+  function NuwaraEliya_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Nuwara Eliya";
+    window.updateSidebarRight(); 
+  }
+  
+  // Southern Province
+  function Galle_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Galle";
+    window.updateSidebarRight(); 
+  }
+  
+  function Matara_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Matara";
+    window.updateSidebarRight(); 
+  }
+  
+  function Hambantota_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Hambantota";
+    window.updateSidebarRight(); 
+  }
+  
+  // Northern Province
+  function Jaffna_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Jaffna";
+    window.updateSidebarRight(); 
+  }
+  
+  function Kilinochchi_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Kilinochchi";
+    window.updateSidebarRight(); 
+  }
+  
+  function Mannar_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Mannar";
+    window.updateSidebarRight(); 
+  }
+  
+  function Mullaitivu_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Mullaitivu";
+    window.updateSidebarRight(); 
+  }
+  
+  function Vavuniya_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Vavuniya";
+    window.updateSidebarRight(); 
+  }
+  
+  // Eastern Province
+  function Batticaloa_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Batticaloa";
+    window.updateSidebarRight(); 
+  }
+  
+  function Ampara_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Ampara";
+    window.updateSidebarRight(); 
+  }
+  
+  function Trincomalee_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Trincomalee";
+    window.updateSidebarRight(); 
+  }
+  
+  // North Western Province
+  function Kurunegala_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Kurunegala";
+    window.updateSidebarRight(); 
+  }
+  
+  function Puttalam_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Puttalam";
+    window.updateSidebarRight(); 
+  }
+  
+  // North Central Province
+  function Anuradhapura_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Anuradhapura";
+    window.updateSidebarRight(); 
+  }
+  
+  function Polonnaruwa_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Polonnaruwa";
+    window.updateSidebarRight(); 
+  }
+  
+  // Uva Province
+  function Badulla_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Badulla";
+    window.updateSidebarRight(); 
+  }
+  
+  function Monaragala_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Monaragala";
+    window.updateSidebarRight(); 
+  }
+  
+  // Sabaragamuwa Province
+  function Ratnapura_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Ratnapura";
+    window.updateSidebarRight(); 
+  }
+  
+  function Kegalle_info() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.district_name = "Kegalle";
+    window.updateSidebarRight(); 
+  }
+
 }());
 
 document.addEventListener('mousemove', e => {
@@ -320,161 +479,3 @@ document.addEventListener('mousemove', e => {
     });
 });
 
-// Western Province
-function Colombo_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Colombo";
-  window.updateSidebarRight(); 
-}
-
-function Gampaha_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Gampaha";
-  window.updateSidebarRight(); 
-}
-
-function Kalutara_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Kalutara";
-  window.updateSidebarRight(); 
-}
-
-// Central Province
-function Kandy_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Kandy";
-  window.updateSidebarRight(); 
-}
-
-function Matale_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Matale";
-  window.updateSidebarRight(); 
-}
-
-function NuwaraEliya_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Nuwara Eliya";
-  window.updateSidebarRight(); 
-}
-
-// Southern Province
-function Galle_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Galle";
-  window.updateSidebarRight(); 
-}
-
-function Matara_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Matara";
-  window.updateSidebarRight(); 
-}
-
-function Hambantota_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Hambantota";
-  window.updateSidebarRight(); 
-}
-
-// Northern Province
-function Jaffna_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Jaffna";
-  window.updateSidebarRight(); 
-}
-
-function Kilinochchi_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Kilinochchi";
-  window.updateSidebarRight(); 
-}
-
-function Mannar_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Mannar";
-  window.updateSidebarRight(); 
-}
-
-function Mullaitivu_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Mullaitivu";
-  window.updateSidebarRight(); 
-}
-
-function Vavuniya_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Vavuniya";
-  window.updateSidebarRight(); 
-}
-
-// Eastern Province
-function Batticaloa_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Batticaloa";
-  window.updateSidebarRight(); 
-}
-
-function Ampara_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Ampara";
-  window.updateSidebarRight(); 
-}
-
-function Trincomalee_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Trincomalee";
-  window.updateSidebarRight(); 
-}
-
-// North Western Province
-function Kurunegala_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Kurunegala";
-  window.updateSidebarRight(); 
-}
-
-function Puttalam_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Puttalam";
-  window.updateSidebarRight(); 
-}
-
-// North Central Province
-function Anuradhapura_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Anuradhapura";
-  window.updateSidebarRight(); 
-}
-
-function Polonnaruwa_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Polonnaruwa";
-  window.updateSidebarRight(); 
-}
-
-// Uva Province
-function Badulla_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Badulla";
-  window.updateSidebarRight(); 
-}
-
-function Monaragala_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Monaragala";
-  window.updateSidebarRight(); 
-}
-
-// Sabaragamuwa Province
-function Ratnapura_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Ratnapura";
-  window.updateSidebarRight(); 
-}
-
-function Kegalle_info() {
-  var Q = window.dendryUI.dendryEngine.state.qualities;
-  Q.district_name = "Kegalle";
-  window.updateSidebarRight(); 
-}
