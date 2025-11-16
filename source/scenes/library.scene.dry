@@ -251,9 +251,9 @@ go-to: menu
 
 <img src="img/temp_party_symbols.png"><span style="color: #00008B;">**SLFP**</span> - *Sri Lanka Freedom Party* - This is us. Founded as a center-left party in 1954, we have switched back and forth from governing, normally in coaltion with other left wing parties and leading the opposition until 1977. We are historically advocates for democratic socialism and promoters of sinhalese nationalism. 
 
-[? if slpp_formed: <img src="img/temp_party_symbols.png"><span style="color: #E52B50;">**SLPP**</span> - *Sri Lanka Podujana Peramuna* - A right wing sinhalese nationalist party. Formed after a recent split from the <span style="color: #00008B;">**SLFP**</span> ?]
+[? if slpp_formed: <img src="img/temp_party_symbols.png"><span style="color: #E52B50;">**SLPP**</span> - *Sri Lanka Podujana Peramuna (Sri Lanka Peoples Front)* - A right wing sinhalese nationalist party. Formed after a recent split from the <span style="color: #00008B;">**SLFP**</span> ?]
 
-[? if slmp_formed: <img src="img/temp_party_symbols.png"><span style="color: #663399;">**SLMP**</span> - *Sri Lanka Mahajana Pakshaya* - A left wing progressive party. Formed after a recent split from the <span style="color: #00008B;">**SLFP**</span> ?]
+[? if slmp_formed: <img src="img/temp_party_symbols.png"><span style="color: #663399;">**SLMP**</span> - *Sri Lanka Mahajana Pakshaya (Sri Lanka Peoples Party)* - A left wing progressive party. Formed after a recent split from the <span style="color: #00008B;">**SLFP**</span> ?]
 
 <img src="img/temp_party_symbols.png"><span style="color: #006400;">**UNP**</span> - *United National Party* - A center-right party led by [+ unp_leader +], promoting economic liberalization and open-market policies economically with an emphasis of sinhalese nationalism socially. Formed before independence they have switched back and forth between governing and opposition with us for decades. 
 
