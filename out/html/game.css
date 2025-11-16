@@ -308,6 +308,8 @@ img.inline-img.icon {
     background-color: var(--tab-hover-color);
 }
 
+
+/* tooltips from originalname/Dynamic Dev */
 .mytooltip {
   position: relative;
   cursor: pointer;
