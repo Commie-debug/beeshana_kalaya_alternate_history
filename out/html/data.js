@@ -1,10 +1,9 @@
 const colourList = [{
         word: "Sri Lanka Armed Forces",
-        style: "color: #BA0000; font-weight: bold;",
-        img: "img/temp_party_symbols.png"
+        style: "color: #002FA7; font-weight: bold;"
     }
 ];
 const tooltipList = [{
-    searchString: "Sri Lanka Police",
-    explanationText: "<img src=img/temp_party_symbols.png> Sri Lanka Police"
+    searchString: "Sri Lanka Armed Forces",
+    explanationText: "<img src=img/logos/SLAF_Logo> Sri Lanka Armed Forces"
 }];
