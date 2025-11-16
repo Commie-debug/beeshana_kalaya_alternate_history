@@ -12,6 +12,10 @@ const colourList = [{
 const tooltipList = [{
     searchString: "Sri Lanka Armed Forces",
     explanationText: "<img src=img/logos/SLAF_Logo.png> Sri Lanka Armed Forces"
+    },
+    {
+    searchString: "SLFP",
+    explanationText: "<img src=img/logos/SLFP_Logo.png> Sri Lanka Freedom Party"
     }
 ];
 
