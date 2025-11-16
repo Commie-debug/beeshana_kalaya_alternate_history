@@ -21,7 +21,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #00008B;">**SLFP**</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
+SLFP position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
 
 [? if slfp_in_government and not in_slfp_majority : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -31,13 +31,13 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 [? if state_of_emergency = 1 : <span>**State Of Emergency In Effect**</span> ?]
 
-President: [+ president +] ([? if president_party = "UNP" : <span style="color: #006400;">**UNP**</span> ?][? if president_party = "SLFP" : style="color: #00008B;">**SLFP**</span> ?])
+President: [+ president +] ([? if president_party = "UNP" : UNP ?][? if president_party = "SLFP" : SLFP)
 
-Prime Minister: [+ prime_minister +] ([? if prime_minister_party = "UNP" : <span style="color: #006400;">**UNP**</span> ?][? if prime_minister_party = "SLFP" : <span style="color: #00008B;">**SLFP**</span> ?])
+Prime Minister: [+ prime_minister +] ([? if prime_minister_party = "UNP" : UNP ?][? if prime_minister_party = "SLFP" : SLFP ?])
 
-Leader of the Opposition: [+ opposition_leader +] ([? if opposition_leader_party = "UNP" : <span style="color: #006400;">**UNP**</span> ?][? if opposition_leader_party = "SLFP" : <span style="color: #00008B;">**SLFP**</span> ?][? if opposition_leader_party = "TULF" : <span style="color: #F7D917;">**TULF**</span> ?])
+Leader of the Opposition: [+ opposition_leader +] ([? if opposition_leader_party = "UNP" : UNP ?][? if opposition_leader_party = "SLFP" : SLFP ?][? if opposition_leader_party = "TULF" : TULF ?])
 
-Current Government: [? if current_gov = 'UNP & CWC' : <span style="color: #006400;">**UNP**</span> & <span style="color: #E52B50;">**CWC**</span> ?][? if current_gov = 'SLFP' : <span style="color: #00008B;">**SLFP**</span> ?]
+Current Government: [? if current_gov = 'UNP & CWC' : UNP & CWC ?][? if current_gov = 'SLFP' : SLFP ?]
 
 Parliament composition:
 
