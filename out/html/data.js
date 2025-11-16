@@ -143,6 +143,22 @@ const tooltipList = [{
     {
     searchString: "SLMP",
     explanationText: "<img src=img/logos/SLMP_Logo.png> Sri Lanka Mahajana Pakshaya <br> (Sri Lanka Peoples Party)"
+    },
+    {
+    searchString: "LTTE",
+    explanationText: "<img src=img/logos/LTTE_Logo.png> Liberation Tigers <br> Of Tamil Eelam"
+    },
+    {
+    searchString: "EPRLF",
+    explanationText: "<img src=img/logos/EPRLF_Logo.png> Eelam Peoples Revolutionary <br> Liberation Front"
+    },
+    {
+    searchString: "TELO",
+    explanationText: "<img src=img/logos/TELO_Logo.png> Tamil Eelam <br> Liberation Organisation"
+    },
+    {
+    searchString: "PLOTE",
+    explanationText: "<img src=img/logos/PLOTE_Logo.png> Peoples Liberation <br> Organisation Of Tamil Eelam"
     }
 ];
 
