@@ -4,18 +4,15 @@ const colourList = [{
     },
     {
         word: "SLFP",
-        style: "color: #00008B; font-weight: bold;",
-        img: "img src=img/logos/SLFP_Logo.png"
+        style: "color: #00008B; font-weight: bold;"
     },
     {
         word: "UNP",
-        style: "color: #006400; font-weight: bold;",
-        img: "img src=img/logos/UNP_Logo.png"
+        style: "color: #006400; font-weight: bold;"
     },
     {
         word: "TULF",
-        style: "color: #F7D917; font-weight: bold;",
-        img: "img src=img/logos/TULF_Logo.png"
+        style: "color: #F7D917; font-weight: bold;"
     }
 ];
 
