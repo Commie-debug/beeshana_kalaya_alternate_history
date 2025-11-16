@@ -13,6 +13,38 @@ const colourList = [{
     {
         word: "TULF",
         style: "color: #F7D917; font-weight: bold;"
+    },
+    {
+        word: "CWC",
+        style: "color: #E52B50; font-weight: bold;"
+    },
+    {
+        word: "ACTC",
+        style: "color: #FDCC01; font-weight: bold;"
+    },
+    {
+        word: "CPSL",
+        style: "color: #65000B; font-weight: bold;"
+    },
+    {
+        word: "SLPP",
+        style: "color: #E52B50; font-weight: bold;"
+    },
+    {
+        word: "DPLF",
+        style: "color: #CE2029; font-weight: bold;"
+    },
+    {
+        word: "PFLT",
+        style: "color: #DC143C; font-weight: bold;"
+    },
+    {
+        word: "SLMC",
+        style: "color: #2DCF3E; font-weight: bold;"
+    },
+    {
+        word: "NPP",
+        style: "color: #9F005D; font-weight: bold;"
     }
 ];
 
@@ -31,6 +63,38 @@ const tooltipList = [{
     {
     searchString: "TULF",
     explanationText: "<img src=img/logos/TULF_Logo.png> Tamil United Liberation Front"
+    },
+    {
+    searchString: "CWC",
+    explanationText: "<img src=img/logos/CWC_Logo.png> Ceylon Workers Congress"
+    },
+    {
+    searchString: "ACTC",
+    explanationText: "<img src=img/logos/ACTC_Logo.png> All Ceylon Workers Congress"
+    },
+    {
+    searchString: "CPSL",
+    explanationText: "<img src=img/logos/CPSL_Logo.png> Communist Party Of Sri Lanka"
+    },
+    {
+    searchString: "SLPP",
+    explanationText: "<img src=img/logos/SLPP_Logo.png> Sri Lanka Podujana Peramuna <br> (Sri Lanka Peoples Front)"
+    },
+    {
+    searchString: "DPLF",
+    explanationText: "<img src=img/logos/DPLF_Logo.png> Democratic Peoples Liberation Front"
+    },
+    {
+    searchString: "PFLT",
+    explanationText: "<img src=img/logos/PFLT_Logo.png> Peoples Front Of Liberation Tigers"
+    },
+    {
+    searchString: "SLMC",
+    explanationText: "<img src=img/logos/SLMC_Logo.png> Sri Lanka Muslim Congress"
+    },
+    {
+    searchString: "NPP",
+    explanationText: "<img src=img/logos/NPP_Logo.png> National Peoples Power"
     }
 ];
 
