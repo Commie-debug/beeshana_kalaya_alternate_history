@@ -2,6 +2,7 @@ const colourList = [{
         word: "Sri Lanka Armed Forces",
         style: "color: #002FA7; font-weight: bold;",
     },
+    {
         word: "SLFP",
         style: "color: #00008B; font-weight: bold;",
         img: "img src=img/logos/SLFP_Logo.png"
