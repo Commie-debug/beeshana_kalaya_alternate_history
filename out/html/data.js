@@ -45,6 +45,30 @@ const colourList = [{
     {
         word: "NPP",
         style: "color: #9F005D; font-weight: bold;"
+    },
+    {
+        word: "JVP",
+        style: "color: #FF2226; font-weight: bold;"
+    },
+    {
+        word: "LSSP",
+        style: "color: #A91101; font-weight: bold;"
+    },
+    {
+        word: "NSSP",
+        style: "color: #FF8080; font-weight: bold;"
+    },
+    {
+        word: "MEP",
+        style: "color: #FF3915; font-weight: bold;"
+    },
+    {
+        word: "EROS",
+        style: "color: #FF2400; font-weight: bold;"
+    },
+    {
+        word: "SLMP",
+        style: "color: #663399; font-weight: bold;"
     }
 ];
 
@@ -95,7 +119,34 @@ const tooltipList = [{
     {
     searchString: "NPP",
     explanationText: "<img src=img/logos/NPP_Logo.png> National Peoples Power"
+    },
+    {
+    searchString: "JVP",
+    explanationText: "<img src=img/logos/JVP_Logo.png> Janatha Vimukthi Peramuna <br> (Peoples Liberation Front)"
+    },
+    {
+    searchString: "LSSP",
+    explanationText: "<img src=img/logos/LSSP_Logo.png> Lanka Sama Samaja Party <br> (Lanka Equal Society Party)"
+    },
+    {
+    searchString: "NSSP",
+    explanationText: "<img src=img/logos/NSSP_Logo.png> Nava Sama Samaja Party <br> (New Equal Society Party)"
+    },
+    {
+    searchString: "MEP",
+    explanationText: "<img src=img/logos/MEP_Logo.png> Mahajana Eksath Peramuna <br> (Peoples United Front)"
+    },
+    {
+    searchString: "EROS",
+    explanationText: "<img src=img/logos/EROS_Logo.png> Eelam Revolutionary Organisation <br> Of Students"
+    },
+    {
+    searchString: "SLMP",
+    explanationText: "<img src=img/logos/SLMP_Logo.png> Sri Lanka Mahajana Pakshaya <br> (Sri Lanka Peoples Party)"
     }
 ];
+
+
+
 
 
