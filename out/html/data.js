@@ -6,6 +6,16 @@ const colourList = [{
         word: "SLFP",
         style: "color: #00008B; font-weight: bold;",
         img: "img src=img/logos/SLFP_Logo.png"
+    },
+    {
+        word: "UNP",
+        style: "color: #006400; font-weight: bold;",
+        img: "img src=img/logos/UNP_Logo.png"
+    },
+    {
+        word: "TULF",
+        style: "color: #F7D917; font-weight: bold;",
+        img: "img src=img/logos/TULF_Logo.png"
     }
 ];
 
@@ -16,6 +26,14 @@ const tooltipList = [{
     {
     searchString: "SLFP",
     explanationText: "<img src=img/logos/SLFP_Logo.png> Sri Lanka Freedom Party"
+    },
+    {
+    searchString: "UNP",
+    explanationText: "<img src=img/logos/UNP_Logo.png> United National Party"
+    },
+    {
+    searchString: "TULF",
+    explanationText: "<img src=img/logos/TULF_Logo.png> Tamil United Liberation Front"
     }
 ];
 
