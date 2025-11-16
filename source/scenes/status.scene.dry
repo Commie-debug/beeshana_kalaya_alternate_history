@@ -31,13 +31,13 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 [? if state_of_emergency = 1 : <span>**State Of Emergency In Effect**</span> ?]
 
-President: [+ president +] ([? if president_party = "UNP" : UNP ?][? if president_party = "SLFP" : SLFP)
+President: [+ president +] ([+ president_party +])
 
-Prime Minister: [+ prime_minister +] ([? if prime_minister_party = "UNP" : UNP ?][? if prime_minister_party = "SLFP" : SLFP ?])
+Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
-Leader of the Opposition: [+ opposition_leader +] ([? if opposition_leader_party = "UNP" : UNP ?][? if opposition_leader_party = "SLFP" : SLFP ?][? if opposition_leader_party = "TULF" : TULF ?])
+Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +])
 
-Current Government: [? if current_gov = 'UNP & CWC' : UNP & CWC ?][? if current_gov = 'SLFP' : SLFP ?]
+Current Government: [+ current_gov +]
 
 Parliament composition:
 
