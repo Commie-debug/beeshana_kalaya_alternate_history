@@ -138,7 +138,7 @@ const tooltipList = [{
     },
     {
     searchString: "EROS",
-    explanationText: "<img src=img/logos/EROS_Logo.png> Eelam Revolutionary Organisation <br> Of Students"
+    explanationText: "<img src=img/logos/EROS_Logo.png> Eelam Revolutionary <br> Organisation Of Students"
     },
     {
     searchString: "SLMP",
