@@ -301,7 +301,6 @@ Q.labour_union_cwc_control = 15;
 Q.labour_union_jvp_control = 8;
 Q.labour_union_independent_control = 10;
 
-
 //addition of nationalisation level of each sector
 Q.total_nationalisation = Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national;
 
@@ -329,14 +328,6 @@ Q.ipkf_morale = 0;
 Q.india_government = "INC";
 Q.india_pm = "Indira Gandhi";
 
-// Proportion of different social groups
-Q.worker = 25; 
-Q.middle = 10;
-Q.upper = 1; 
-Q.rural = 35;
-Q.unemployed = 13;
-Q.clergy = 1;
-
 //District data
 //All seat numbers for each district are based of the 1984
 //Displayed one, default is colombo district
@@ -351,8 +342,6 @@ Q.district_worker = 0;
 Q.district_middle = 0;
 Q.district_upper = 0;
 Q.district_rural = 0;
-Q.district_unemployed = 0;
-Q.district_clergy = 0;
 
 Q.district_control = 100;
 Q.district_education = 0.7;
@@ -371,8 +360,6 @@ Q.colombo_d_worker = 100;
 Q.colombo_d_middle = 100;
 Q.colombo_d_upper = 100;
 Q.colombo_d_rural = 100;
-Q.colombo_d_unemployed = 100;
-Q.colombo_d_clergy = 100;
 
 Q.colombo_d_control = 100;
 Q.colombo_d_education = 0.7;
@@ -387,18 +374,24 @@ Q.itamil_proportion = 5.51;
 Q.muslim_proportion = 7.05;
 Q.other_proportion = 0.78;
 
-Q.classes = ['upper', 'middle', 'worker', 'rural', 'unemployed', 'clergy'];
+// Proportion of different social groups
+Q.worker = 25; 
+Q.middle = 20;
+Q.upper = 1; 
+Q.rural = 54;
+
+Q.classes = ['upper', 'middle', 'worker', 'rural'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
 
 // formable parties
-Q.slpp_formed = 1;
-Q.slmp_formed = 1;
-Q.slmc_formed = 1;
-Q.npp_formed = 1;
-Q.mep_formed = 1;
-Q.eros_formed = 1;
-Q.dplf_formed = 1;
-Q.pflt_formed = 1;
+Q.slpp_formed = 0;
+Q.slmp_formed = 0;
+Q.slmc_formed = 0;
+Q.npp_formed = 0;
+Q.mep_formed = 0;
+Q.eros_formed = 0;
+Q.dplf_formed = 0;
+Q.pflt_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -446,34 +439,11 @@ Q.rural_unp = 10;
 Q.rural_actc = 10;
 Q.rural_other = 10;
 
-Q.clergy_slfp = 60;
-Q.clergy_jvp = 20;
-Q.clergy_cpsl = 5;
-Q.clergy_lssp = 0;
-Q.clergy_nssp = 0;
-Q.clergy_tulf = 5;
-Q.clergy_cwc = 0;
-Q.clergy_unp = 10;
-Q.clergy_actc = 10;
-Q.clergy_other = 10;
-
-Q.unemployed_slfp = 60;
-Q.unemployed_jvp = 20;
-Q.unemployed_cpsl = 5;
-Q.unemployed_lssp = 0;
-Q.unemployed_nssp = 0;
-Q.unemployed_tulf = 5;
-Q.unemployed_cwc = 0;
-Q.unemployed_unp = 10;
-Q.unemployed_actc = 10;
-Q.unemployed_other = 10;
-
-
 // Current Parliment composition
 // Number of seats in Parliment in Jan 1981
 // source: wikipedia
 Q.slfp_r = 7;
-//Lost on seat in 1980 to the UNP
+//Lost one seat in 1980 to the UNP
 Q.jvp_r = 0;
 Q.cpsl_r = 0;
 Q.lssp_r = 0;
@@ -483,16 +453,6 @@ Q.cwc_r = 1;
 Q.unp_r = 141;
 Q.actc_r = 0;
 Q.other_r = 0;
-
-//Not yet formed parties
-Q.slmp = 0;
-Q.slpp = 0;
-Q.pflt = 0;
-Q.dplf = 0;
-Q.eros = 0;
-Q.npp = 0;
-Q.slmc = 0;
-Q.mep = 0;
 
 // diff from prev
 Q.old_slfp_r = 8;
