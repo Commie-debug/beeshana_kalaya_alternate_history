@@ -307,9 +307,9 @@ Control of Jaffna: [+ jaffna_control +]
 
 = Labour
 
-Labour union strenght: [+ labour_unions_strenght : strength +]
-
 FTZ working conditions: [+ ftz_conditions : equality +]
+
+Labour union strenght: [+ labour_unions_strenght : strength +]
 
 <span style="color: #00008B;">**SLFP**</span> control: [+ labour_union_slfp_control +]%
 
