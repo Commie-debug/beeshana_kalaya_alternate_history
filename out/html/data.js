@@ -107,7 +107,7 @@ const colourList = [{
         style: "color: #76D7EA; font-weight: bold;"
     },
     {
-        word: "NF(India)",
+        word: "NF",
         style: "color: #FF4500; font-weight: bold;"
     }
 ];
@@ -205,7 +205,7 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/INC_Logo.png> Indian National Congress"
     },
     {
-    searchString: "NF(India)",
+    searchString: "NF",
     explanationText: "<img src=img/logos/India_NF_Logo.png> National Front (India)"
     },
     {
