@@ -94,7 +94,7 @@ const tooltipList = [{
     },
     {
     searchString: "ACTC",
-    explanationText: "<img src=img/logos/ACTC_Logo.png> All Ceylon Workers Congress"
+    explanationText: "<img src=img/logos/ACTC_Logo.png> All Ceylon Tamil Congress"
     },
     {
     searchString: "CPSL",
