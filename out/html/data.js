@@ -69,6 +69,30 @@ const colourList = [{
     {
         word: "SLMP",
         style: "color: #663399; font-weight: bold;"
+    },
+    {
+        word: "PLOTE",
+        style: "color: #CE2029; font-weight: bold;"
+    },
+    {
+        word: "TELO",
+        style: "color: #893F45; font-weight: bold;"
+    },
+    {
+        word: "LTTE",
+        style: "color: #DC143C; font-weight: bold;"
+    },
+    {
+        word: "EPRLF",
+        style: "color: #FF4500; font-weight: bold;"
+    },
+    {
+        word: "INC",
+        style: "color: #DC143C; font-weight: bold;"
+    },
+    {
+        word: "NF(India)",
+        style: "color: #FF4500; font-weight: bold;"
     }
 ];
 
@@ -159,6 +183,14 @@ const tooltipList = [{
     {
     searchString: "PLOTE",
     explanationText: "<img src=img/logos/PLOTE_Logo.png> Peoples Liberation <br> Organisation Of Tamil Eelam"
+    },
+    {
+    searchString: "INC",
+    explanationText: "<img src=img/logos/INC_Logo.png> Indian National Congress"
+    },
+    {
+    searchString: "NF(India)",
+    explanationText: "<img src=img/logos/India_NF_Logo.png> National Front (India)"
     }
 ];
 
