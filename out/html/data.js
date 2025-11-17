@@ -3,6 +3,22 @@ const colourList = [{
         style: "color: #002FA7; font-weight: bold;"
     },
     {
+        word: "Sri Lanka Police",
+        style: "color: #454BF7; font-weight: bold;"
+    },
+    {
+        word: "JSS",
+        style: "color: #006400; font-weight: bold;"
+    },
+    {
+        word: "Civil Security",
+        style: "color: #954535; font-weight: bold;"
+    },
+    {
+        word: "Home Guard",
+        style: "color: #954535; font-weight: bold;"
+    },
+    {
         word: "SLFP",
         style: "color: #00008B; font-weight: bold;"
     },
@@ -191,6 +207,22 @@ const tooltipList = [{
     {
     searchString: "NF(India)",
     explanationText: "<img src=img/logos/India_NF_Logo.png> National Front (India)"
+    },
+    {
+    searchString: "Sri Lanka Police",
+    explanationText: "<img src=img/logos/Sri_Lanka_Police_Logo.png> Sri Lanka Police"
+    },
+    {
+    searchString: "JSS",
+    explanationText: "<img src=img/logos/JSS_Logo.png> Jathika Sevaka Sangamaya"
+    },
+    {
+    searchString: "Civil Security",
+    explanationText: "<img src=img/logos/Civil_Security_Logo.png> Civil Security"
+    },
+    {
+    searchString: "Home Guard",
+    explanationText: "<img src=img/logos/Home_Guard_Logo.png> Home Guard"
     }
 ];
 
