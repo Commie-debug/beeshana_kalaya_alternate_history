@@ -145,8 +145,8 @@ Q.enlf_formed = 0;//Eelam national liberation front(every Tamil group united int
 
 // army and official paramilitaries
 
-Q.homeg_strength = 100;
-Q.homeg_morale = 0.7;
+Q.homeg/civilsec_strength = 100;
+Q.homeg/civilsec_morale = 0.7;
 
 Q.civilsec_formed = 0;
 
