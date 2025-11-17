@@ -75,7 +75,7 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 
 [? if slpp_formed = 1 : <span class="tooltip-text" title="Sri Lanka Podujana Peramuna" style="color: #E52B50;">**SLPP**</span>: [+ slpp_relation : relationships +] ?]
 
-[? if slmp_formed = 1 : {!<span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya" style="color: #663399;">**SLMP**</span>!}: [+ slmp_relation : relationships +] ?]
+[? if slmp_formed = 1 : <span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya" style="color: #663399;">**SLMP**</span>: [+ slmp_relation : relationships +] ?]
 
 <span class="tooltip-text" title="United National Party" style="color: #006400;">**UNP**</span>: [+ unp_relation : relationships +]
 
