@@ -171,7 +171,7 @@ Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops. Morale: [+ slaf_mor
 
 Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : loyalty +]
 
-Home Guard: [+ homeg_strength +] thousand members. Morale: [+ homeg_morale : loyalty +]
+[? if civilsec_formed = 0 : Home Guard: ?][? if civilsec_formed = 1 : Civil Security: ?][+ homeg/civilsec_strength +] thousand members. Morale: [+ homeg/civilsec_morale : loyalty +]
 
 [? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +] ?]
 
