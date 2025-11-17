@@ -308,6 +308,38 @@ img.inline-img.icon {
     background-color: var(--tab-hover-color);
 }
 
+/* status buttons from scheimarnomics */
+.tab_button_wide {width: 100%;}
+
+.status_button {
+  font-family: "Minion Pro", Georgia, serif;
+  color: var(--text-color);
+  background-color: var(--button-bg-color);
+  border: 2px solid var(--button-border-color);
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 4px;
+  box-shadow: 1px 1px 5px var(--bgBack-color);
+}
+.status_button:hover {
+  background-color: var(--hover-color);
+  border: 2px solid var(--htext-color);
+}
+.status_button_wide {
+  font-family: "Minion Pro", Geor gia, serif;
+  width: 220px;
+  color: var(--htext-color);
+  background-color: var(--button-bg-color);
+  border: 2px solid var(--button-border-color);
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 4px;
+  box-shadow: 1px 1px 5px var(--bgBack-color);
+}
+.status_button_wide:hover {
+  background-color: var(--hover-color);
+  border: 2px solid var(--htext-color);
+}
 
 /* tooltips from originalname/Dynamic Dev */
 .mytooltip {
@@ -346,39 +378,6 @@ img.inline-img.icon {
   top: calc(var(--mouse-y, 0px) - 20px);
   left: calc(var(--mouse-x, 0px));
   transform: translate(-50%, -100%);
-}
-
-/* status buttons from scheimarnomics */
-.tab_button_wide {width: 100%;}
-
-.status_button {
-  font-family: "Minion Pro", Georgia, serif;
-  color: var(--text-color);
-  background-color: var(--button-bg-color);
-  border: 2px solid var(--button-border-color);
-  outline: none;
-  border-radius: 0.4rem;
-  padding: 4px;
-  box-shadow: 1px 1px 5px var(--bgBack-color);
-}
-.status_button:hover {
-  background-color: var(--hover-color);
-  border: 2px solid var(--htext-color);
-}
-.status_button_wide {
-  font-family: "Minion Pro", Geor gia, serif;
-  width: 220px;
-  color: var(--htext-color);
-  background-color: var(--button-bg-color);
-  border: 2px solid var(--button-border-color);
-  outline: none;
-  border-radius: 0.4rem;
-  padding: 4px;
-  box-shadow: 1px 1px 5px var(--bgBack-color);
-}
-.status_button_wide:hover {
-  background-color: var(--hover-color);
-  border: 2px solid var(--htext-color);
 }
 
 .overlay {
