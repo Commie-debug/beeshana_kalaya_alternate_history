@@ -191,8 +191,8 @@ Q.tamil_unity = 0.1;
 //how much morale the tamil militants have
 Q.tamil_morale = 0.15
 
-//percentage control over the north east by tamil militants
-Q.tamil_control = 0;
+//ontrol over the north east by tamil militants, based on radicalism qdisplay
+Q.tamil_control = 1.5;
 
 //higher means more people joining the militants and abandoning the TULF, ACTC etc. Ie reducing party support
 //Will increase if the war is very violent against civillians or if sinhalese parties becoming nationalist, or laws are put/enforced that harm tamils
