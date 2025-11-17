@@ -226,11 +226,11 @@ const tooltipList = [{
     },
     {
     searchString: "Northern Province",
-    explanationText: "<img src=img/logos/provinces/Northern_Logo.png> Northern Province"
+    explanationText: "<img src=img/logos/provinces/Northern_Map.png> Northern Province"
     },
     {
     searchString: "Western Province",
-    explanationText: "<img src=img/logos/provinces/Western_Logo.png> Western Province"
+    explanationText: "<img src=img/logos/provinces/Western_Map.png> Western Province"
     }
 ];
 
