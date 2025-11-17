@@ -205,6 +205,7 @@ Q.jaffna_control = "Sri Lanka";
 
 //economics
 Q.budget = 4;
+Q.unemployed = 6.5;
 Q.trade = 4;
 Q.inequality = 0.5;
 Q.foreign_debt = 5;
