@@ -223,6 +223,14 @@ const tooltipList = [{
     {
     searchString: "Home Guard",
     explanationText: "<img src=img/logos/Home_Guard_Logo.png> Home Guard"
+    },
+    {
+    searchString: "Northern Province",
+    explanationText: "<img src=img/logos/provinces/Northern_Logo.png> Northern Province"
+    },
+    {
+    searchString: "Western Province",
+    explanationText: "<img src=img/logos/provinces/Western_Logo.png> Western Province"
     }
 ];
 
