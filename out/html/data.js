@@ -88,7 +88,7 @@ const colourList = [{
     },
     {
         word: "INC",
-        style: "color: #DC143C; font-weight: bold;"
+        style: "color: #76D7EA; font-weight: bold;"
     },
     {
         word: "NF(India)",
