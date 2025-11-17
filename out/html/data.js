@@ -231,7 +231,35 @@ const tooltipList = [{
     {
     searchString: "Western Province",
     explanationText: "<img src=img/logos/provinces/Western_Map.png> Western Province"
-    }
+    },
+    {
+    searchString: "Central Province",
+    explanationText: "<img src=img/logos/provinces/Central_Map.png> Central Province"
+    },
+    {
+    searchString: "North Central Province",
+    explanationText: "<img src=img/logos/provinces/North_Central_Map.png> North Central Province"
+    },
+    {
+    searchString: "North Western Province",
+    explanationText: "<img src=img/logos/provinces/North_Western_Map.png> North Western Province"
+    },
+    {
+    searchString: "Southern Province",
+    explanationText: "<img src=img/logos/provinces/Southern_Map.png> Southern Province"
+    },
+    {
+    searchString: "Sabaragamuwa Province",
+    explanationText: "<img src=img/logos/provinces/Sabaragamuwa_Map.png> Sabaragamuwa Province"
+    },
+    {
+    searchString: "Uva Province",
+    explanationText: "<img src=img/logos/provinces/Uva_Map.png> Uva Province"
+    },
+    {
+    searchString: "Eastern Province",
+    explanationText: "<img src=img/logos/provinces/Eastern_Map.png> Eastern Province"
+    },
 ];
 
 
