@@ -59,8 +59,8 @@ North Central Province
 <button class="status_button" onclick="Polonnaruwa_info()">Polonnaruwa District</button>
 
 Uva Province
-<button class="status_button" onclick="Badulla_info()">Badulla District</button>
 <button class="status_button" onclick="Monaragala_info()">Monaragala District</button>
+<button class="status_button" onclick="Badulla_info()">Badulla District</button>
 
 Sabaragamuwa Province
 <button class="status_button" onclick="Ratnapura_info()">Ratnapura District</button>
