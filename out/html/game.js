@@ -313,13 +313,6 @@
 
 }());
 
-document.addEventListener('mousemove', e => {
-    document.querySelectorAll('.mytooltiptext').forEach(el => {
-        el.style.setProperty('--mouse-x', e.clientX + 'px');
-        el.style.setProperty('--mouse-y', e.clientY + 'px');
-    });
-});
-
 // Western Province
 function Colombo_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
@@ -478,3 +471,12 @@ function Kegalle_info() {
   Q.district_name = "Kegalle";
   window.updateSidebarRight(); 
 }
+
+document.addEventListener('mousemove', e => {
+    document.querySelectorAll('.mytooltiptext').forEach(el => {
+        el.style.setProperty('--mouse-x', e.clientX + 'px');
+        el.style.setProperty('--mouse-y', e.clientY + 'px');
+    });
+});
+
+
