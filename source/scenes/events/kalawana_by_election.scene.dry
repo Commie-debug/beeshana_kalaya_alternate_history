@@ -1,6 +1,5 @@
 title: Kalawana By-Elections Results
 new-page: true
-subtitle: An international treaty for peace
 view-if: year = 1981 and month = 2
 on-arrival: unp_r -= 1; cpsl_r += 1;
 max-visits: 1
