@@ -257,6 +257,10 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/provinces/Uva_Map.png> Uva Province"
     },
     {
+    searchString: "North Eastern Province",
+    explanationText: "<img src=img/logos/provinces/North_Eastern_Map.png> North Eastern Province"
+    },
+    {
     searchString: "Eastern Province",
     explanationText: "<img src=img/logos/provinces/Eastern_Map.png> Eastern Province"
     },
