@@ -1,6 +1,6 @@
 title: Kalawana By-Elections Results
 new-page: true
-view-if: year = 1981 and month = 2
+view-if: year = 1981 and month = 1 and week = 2;
 on-arrival: unp_r -= 1; cpsl_r += 1;
 max-visits: 1
 tags: event
