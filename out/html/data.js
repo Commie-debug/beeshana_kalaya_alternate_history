@@ -19,6 +19,38 @@ const colourList = [{
         style: "color: #954535; font-weight: bold;"
     },
     {
+        word: "Hostile",
+        style: "color: #FF0000; font-weight: bold;"
+    },
+    {
+        word: "Frigid",
+        style: "color: #FF4500; font-weight: bold;"
+    },
+    {
+        word: "Cold",
+        style: "color: #FF8C00; font-weight: bold;"
+    },
+    {
+        word: "Cool",
+        style: "color: #FFA500; font-weight: bold;"
+    },
+    {
+        word: "Neutral",
+        style: "color: #FFD700; font-weight: bold;"
+    },
+    {
+        word: "Warm",
+        style: "color: #9ACD32; font-weight: bold;"
+    },
+    {
+        word: "Friendly",
+        style: "color: #32CD32; font-weight: bold;"
+    },
+    {
+        word: "Very friendly",
+        style: "color: #008000; font-weight: bold;"
+    },
+    {
         word: "SLFP",
         style: "color: #00008B; font-weight: bold;"
     },
