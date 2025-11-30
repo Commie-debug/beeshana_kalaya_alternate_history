@@ -122,7 +122,7 @@ const tooltipList = [{
     },
     {
     searchString: "UNP",
-    explanationText: "<img src=img/logos/UNP_Logo.png> United National Party" [+ unp_relation : relationships +]
+    explanationText: "<img src=img/logos/UNP_Logo.png> United National Party "[+ unp_relation : relationships +]" Pls work"
     },
     {
     searchString: "TULF",
