@@ -165,6 +165,35 @@
         return applyWholesome(text);
     };
 
+    // Helper function to convert relationship number to text
+    function getRelationshipText(value) {
+        if (value === undefined || value === null) return '';
+        if (value <= 5) return 'Hostile';
+        if (value <= 14.9) return 'Frigid';
+        if (value <= 29.9) return 'Cold';
+        if (value <= 39.9) return 'Cool';
+        if (value <= 54.9) return 'Neutral';
+        if (value <= 64.9) return 'Warm';
+        if (value <= 74.9) return 'Friendly';
+        return 'Very friendly';
+    }
+
+    // Helper function to get dynamic tooltip content for parties with relations
+    function getDynamicTooltipContent(searchString, baseTooltip) {
+        var Q = window.dendryUI && window.dendryUI.dendryEngine && window.dendryUI.dendryEngine.state ? 
+                window.dendryUI.dendryEngine.state.qualities : null;
+        
+        if (!Q) return baseTooltip.explanationText;
+        
+        // Add relation info for UNP
+        if (searchString === 'UNP' && Q.unp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.unp_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        return baseTooltip.explanationText;
+    }
+
     function applyWholesome(str) {
         const allWords = new Set([
             ...tooltipList.map(t => t.searchString),
@@ -188,7 +217,8 @@
                 }
 
                 if (tooltip) {
-                    return `<span class='mytooltip' style='${style}'>${innerText}<span  class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
+                    var tooltipContent = getDynamicTooltipContent(match, tooltip);
+                    return `<span class='mytooltip' style='${style}'>${innerText}<span  class='mytooltiptext'>${tooltipContent}</span></span>`;
                 } else if (colour) {
                     return `<span style='${style}'>${innerText}</span>`;
                 }
