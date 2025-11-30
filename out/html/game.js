@@ -167,14 +167,14 @@
     //To get a value 
     function getRelationshipText(value) {
         if (value === undefined || value === null) return '';
-        if (value <= 5) return 'Hostile';
-        if (value <= 14.9) return 'Frigid';
-        if (value <= 29.9) return 'Cold';
-        if (value <= 39.9) return 'Cool';
-        if (value <= 54.9) return 'Neutral';
-        if (value <= 64.9) return 'Warm';
-        if (value <= 74.9) return 'Friendly';
-        return 'Very friendly';
+        if (value <= 5) return '<span style="color: #FF0000;">Hostile</span>';
+        if (value <= 14.9) return '<span style="color: #FF4500;">Frigid</span>';
+        if (value <= 29.9) return '<span style="color: #FF8C00;">Cold</span>';
+        if (value <= 39.9) return '<span style="color: #FFA500;">Cool</span>';
+        if (value <= 54.9) return '<span style="color: #FFD700;">Neutral</span>';
+        if (value <= 64.9) return '<span style="color: #9ACD32;">Warm</span>';
+        if (value <= 74.9) return '<span style="color: #32CD32;">Friendly</span>';
+        return '<span style="color: #008000;">Very friendly</span>';
     }
 
     //To check if extra dynamic or not
