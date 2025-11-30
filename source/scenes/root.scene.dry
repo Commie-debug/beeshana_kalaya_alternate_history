@@ -79,7 +79,7 @@ Q.tulf_relation = 10;
 Q.jvp_relation = 15;
 Q.nssp_relation = 35;
 Q.lssp_relation = 35;
-Q.unp_relation = 10;
+Q.unp_relation = 4;
 Q.cwc_relation = 10;
 Q.actc_relation = 10;
 
