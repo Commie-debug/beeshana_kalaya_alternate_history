@@ -160,12 +160,11 @@
 
   
   // This function allows you to modify the text before it's displayed.
-  // E.g. wrapping chat-like messages in spans.
   window.displayText = function (text) {
         return applyWholesome(text);
     };
-
-    // Helper function to convert relationship number to text
+  
+    //To get a value 
     function getRelationshipText(value) {
         if (value === undefined || value === null) return '';
         if (value <= 5) return 'Hostile';
@@ -178,22 +177,96 @@
         return 'Very friendly';
     }
 
-    // Helper function to get dynamic tooltip content for parties with relations
+    //To check if extra dynamic or not
     function getDynamicTooltipContent(searchString, baseTooltip) {
         var Q = window.dendryUI && window.dendryUI.dendryEngine && window.dendryUI.dendryEngine.state ? 
                 window.dendryUI.dendryEngine.state.qualities : null;
         
         if (!Q) return baseTooltip.explanationText;
         
-        // Add relation info for UNP
+        if (searchString === 'SLPP' && Q.slpp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.slpp_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'SLMP' && Q.slmp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.slmp_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+      
         if (searchString === 'UNP' && Q.unp_relation !== undefined) {
             var relationText = getRelationshipText(Q.unp_relation);
             return baseTooltip.explanationText + '<br>Relation: ' + relationText;
         }
         
+        if (searchString === 'TULF' && Q.tulf_relation !== undefined) {
+            var relationText = getRelationshipText(Q.tulf_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'PFLT' && Q.pflt_relation !== undefined) {
+            var relationText = getRelationshipText(Q.pflt_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'ACTC' && Q.actc_relation !== undefined) {
+            var relationText = getRelationshipText(Q.actc_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'EROS' && Q.eros_relation !== undefined) {
+            var relationText = getRelationshipText(Q.eros_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'DPLF' && Q.dplf_relation !== undefined) {
+            var relationText = getRelationshipText(Q.dplf_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'JVP' && Q.jvp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.jvp_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'NPP' && Q.npp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.npp_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'CPSL' && Q.cpsl_relation !== undefined) {
+            var relationText = getRelationshipText(Q.cpsl_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'LSSP' && Q.lssp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.lssp_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'NSSP' && Q.nssp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.nssp_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'MEP' && Q.mep_relation !== undefined) {
+            var relationText = getRelationshipText(Q.mep_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'CWC' && Q.cwc_relation !== undefined) {
+            var relationText = getRelationshipText(Q.cwc_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
+        if (searchString === 'SLMC' && Q.slmc_relation !== undefined) {
+            var relationText = getRelationshipText(Q.slmc_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+        
         return baseTooltip.explanationText;
     }
-
+  
     function applyWholesome(str) {
         const allWords = new Set([
             ...tooltipList.map(t => t.searchString),
