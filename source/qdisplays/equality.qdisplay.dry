@@ -1,8 +1,8 @@
 
 # equality for income and womens rights
 
-(..0.2) Very low
-(0.2..0.4) Low
-(0.4..0.6) Medium
-(0.6..0.8) High
-(0.8..) Very high
+(..0.2) <span style="color: #FF0000;">**Very low**</span>
+(0.2..0.4) <span style="color: #FF4500;">**Low**</span>
+(0.4..0.6) <span style="color: #FFD700;">**Medium**</span>
+(0.6..0.8) <span style="color: #9ACD32;">**High**</span>
+(0.8..) <span style="color: #008000;">**Very high**</span>
