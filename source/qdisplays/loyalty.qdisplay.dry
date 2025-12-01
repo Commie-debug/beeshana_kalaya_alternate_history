@@ -1,10 +1,10 @@
 
 # Morale and loyalties
-(..0.06) Completely disloyal
-(0.06..0.19) Very disloyal
-(0.19..0.31) Generally disloyal
-(0.31..0.41) Mostly disloyal
-(0.41..0.54) Divided
-(0.54..0.71) Mostly loyal
-(0.71..0.95) Generally loyal
-(0.95..) Completely loyal
+(..0.06) <span style="color: #FF0000;">**Completely disloyal**</span>
+(0.06..0.19) <span style="color: #FF4500;">**Very disloyal**</span>
+(0.19..0.31) <span style="color: #FF8C00;">**Generally disloyal**</span>
+(0.31..0.41) <span style="color: #FFA500;">**Mostly disloyal**</span>
+(0.41..0.54) <span style="color: #FFD700;">**Divided**</span>
+(0.54..0.71) <span style="color: #9ACD32;">**Mostly loyal**</span>
+(0.71..0.95) <span style="color: #32CD32;">**Generally loyal**</span>
+(0.95..) <span style="color: #008000;">**Completely loyal**</span>
