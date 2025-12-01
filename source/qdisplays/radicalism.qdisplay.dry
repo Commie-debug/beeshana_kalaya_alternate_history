@@ -1,7 +1,7 @@
 
-(..1) Nonexistent
-(1..2) Extremely low
-(2..5) Low
-(5..6) Moderate
-(7..9) High
-(9..) Extremely high
+(..1) <span style="color: #008000;">**Nonexistent**</span>
+(1..2) <span style="color: #32CD32;">**Extremely low**</span>
+(2..5) <span style="color: #9ACD32;">**Low**</span>
+(5..6) <span style="color: #FFD700;">**Moderate**</span>
+(7..9) <span style="color: #FF4500;">**High**</span>
+(9..) <span style="color: #FF0000;">**Extremely high**</span>
