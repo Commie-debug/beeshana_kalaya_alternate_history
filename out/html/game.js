@@ -176,6 +176,26 @@
         if (value <= 74.9) return '<span style="color: #32CD32;">Friendly</span>';
         return '<span style="color: #008000;">Very friendly</span>';
     }
+  
+    //To get a value 
+    function getMilitancyText(value) {
+        if (value === undefined || value === null) return 'Unknown';
+        if (value <= 0) return 'Unarmed';
+        if (value <= 1) return 'Poorly armed';
+        if (value <= 2) return 'Armed';
+        return 'Heavily armed';
+    }
+    
+    //To get a value 
+    function getLoyaltyText(value) {
+        if (value === undefined || value === null) return 'Unknown';
+        if (value <= 0.25) return 'Abysmal';
+        if (value <= 0.5) return 'Low';
+        if (value <= 0.75) return 'Medium';
+        if (value <= 1) return 'High';
+        if (value <= 1.25) return 'Very high';
+        return 'Fanatic';
+    }
 
     //To check if extra dynamic or not
     function getDynamicTooltipContent(searchString, baseTooltip) {
@@ -262,6 +282,61 @@
         if (searchString === 'SLMC' && Q.slmc_relation !== undefined) {
             var relationText = getRelationshipText(Q.slmc_relation);
             return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
+
+        / JSS (Jathika Sevaka Sangamaya)
+        if (searchString === 'JSS' && Q.jss_strength !== undefined) {
+            var strength = Q.jss_strength ? Q.jss_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.jss_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+     
+        if (searchString === 'LTTE' && Q.ltte_strength !== undefined) {
+            var strength = Q.ltte_strength ? Q.ltte_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.ltte_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+        
+        if (searchString === 'TELO' && Q.telo_strength !== undefined) {
+            var strength = Q.telo_strength ? Q.telo_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.telo_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+        
+        if (searchString === 'PLOTE' && Q.plote_strength !== undefined) {
+            var strength = Q.plote_strength ? Q.plote_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.plote_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+        
+        if (searchString === 'EPRLF' && Q.eprlf_strength !== undefined) {
+            var strength = Q.eprlf_strength ? Q.eprlf_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.eprlf_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+        
+        if (searchString === 'Sri Lanka Armed Forces' && Q.slaf_strength !== undefined) {
+            var strength = Q.slaf_strength ? Q.slaf_strength : '0';
+            var morale = getLoyaltyText(Q.slaf_morale);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+        }
+        
+        if (searchString === 'Sri Lanka Police' && Q.slp_strength !== undefined) {
+            var strength = Q.slp_strength ? Q.slp_strength : '0';
+            var morale = getLoyaltyText(Q.slp_morale);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+        }
+        
+        if (searchString === 'Civil Security' && Q.homeg_civilsec_strength !== undefined) {
+            var strength = Q.homeg_civilsec_strength ? Q.homeg_civilsec_strength : '0';
+            var morale = getLoyaltyText(Q.homeg_civilsec_morale);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+        }
+        
+        if (searchString === 'Home Guard' && Q.homeg_civilsec_strength !== undefined) {
+            var strength = Q.homeg_civilsec_strength ? Q.homeg_civilsec_strength : '0';
+            var morale = getLoyaltyText(Q.homeg_civilsec_morale);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
         }
         
         return baseTooltip.explanationText;
