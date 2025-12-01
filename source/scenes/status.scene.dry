@@ -16,6 +16,12 @@ if (Q.economic_growth) {
 
 = Status
 
+<span style="color: #DDA0DD;">**Weak**</span>
+<span style="color: #BA55D3;">**Moderate**</span>
+<span style="color: #9932CC;">**Strong**</span>
+<span style="color: #8B008B;">**Very strong**</span>
+<span style="color: #4B0082;">**Dominant**</span>
+
 Week [+ week +] [+ month : month +] [+ year +] 
 
 Resources available: [+ resources +]
