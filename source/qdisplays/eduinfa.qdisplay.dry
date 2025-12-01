@@ -1,7 +1,7 @@
 # education & infastucture
 
-(..0.2) Poor
-(0.2..0.4) Lackluster
-(0.4..0.6) Average
-(0.6..0.8) Refined
-(0.8..) High quality
+(..0.2) <span style="color: #FF0000;">**Poor**</span>
+(0.2..0.4) <span style="color: #FF4500;">**Lackluster**</span>
+(0.4..0.6) <span style="color: #FFD700;">**Average**</span>
+(0.6..0.8) <span style="color: #9ACD32;">**Refined**</span>
+(0.8..) <span style="color: #008000;">**High quality**</span>
