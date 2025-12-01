@@ -284,7 +284,6 @@
             return baseTooltip.explanationText + '<br>Relation: ' + relationText;
         }
 
-        / JSS (Jathika Sevaka Sangamaya)
         if (searchString === 'JSS' && Q.jss_strength !== undefined) {
             var strength = Q.jss_strength ? Q.jss_strength.toFixed(1) : '0';
             var militancy = getMilitancyText(Q.jss_militancy);
