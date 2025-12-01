@@ -177,24 +177,28 @@
         return '<span style="color: #008000;">Very friendly</span>';
     }
   
-    //To get a value 
     function getMilitancyText(value) {
         if (value === undefined || value === null) return 'Unknown';
-        if (value <= 0) return 'Unarmed';
-        if (value <= 1) return 'Poorly armed';
-        if (value <= 2) return 'Armed';
-        return 'Heavily armed';
+        if (value <= 0.05) return 'Nonexistant';
+        if (value <= 0.14) return 'Very low';
+        if (value <= 0.24) return 'Low';
+        if (value <= 0.44) return 'Medium-low';
+        if (value <= 0.69) return 'Medium';
+        if (value <= 1) return 'High';
+        return 'Very high';
     }
     
-    //To get a value 
+    // Helper function to convert loyalty/morale number to text
     function getLoyaltyText(value) {
         if (value === undefined || value === null) return 'Unknown';
-        if (value <= 0.25) return 'Abysmal';
-        if (value <= 0.5) return 'Low';
-        if (value <= 0.75) return 'Medium';
-        if (value <= 1) return 'High';
-        if (value <= 1.25) return 'Very high';
-        return 'Fanatic';
+        if (value <= 0.06) return 'Completely disloyal';
+        if (value <= 0.19) return 'Very disloyal';
+        if (value <= 0.31) return 'Generally disloyal';
+        if (value <= 0.41) return 'Mostly disloyal';
+        if (value <= 0.54) return 'Divided';
+        if (value <= 0.71) return 'Mostly loyal';
+        if (value <= 0.95) return 'Generally loyal';
+        return 'Completely loyal';
     }
 
     //To check if extra dynamic or not
