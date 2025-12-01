@@ -1,11 +1,11 @@
 
-(..10) Informal
-(10..20) Basic
-(20..30) Localised
-(30..40) Emerging
-(40..50) Established
-(50..60) Locally significant
-(60..70) Nationally significant
-(70..80) Advanced
-(80..90) Strategic
-(90..) National priority
+(..10) <span style="color: #FF0000;">**Informal**</span>
+(10..20) <span style="color: #FF4500;">**Basic**</span>
+(20..30) <span style="color: #FF8C00;">**Localised**</span>
+(30..40) <span style="color: #FFA500;">**Emerging**</span>
+(40..50) <span style="color: #FFD700;">**Established**</span>
+(50..60) <span style="color: #ADFF2F;">**Locally significant**</span>
+(60..70) <span style="color: #9ACD32;">**Nationally significant**</span>
+(70..80) <span style="color: #32CD32;">**Advanced**</span>
+(80..90) <span style="color: #228B22;">**Strategic**</span>
+(90..) <span style="color: #008000;">**National priority**</span>
