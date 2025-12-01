@@ -1,6 +1,6 @@
 
-(..0) Very low
-(1..1) Low
-(2..2) Medium
-(3..3) High
-(4..) Very high
+(..0) <span style="color: #008000;">**Very low**</span>
+(1..1) <span style="color: #9ACD32;">**Low**</span>
+(2..2) <span style="color: #FFD700;">**Medium**</span>
+(3..3) <span style="color: #FF4500;">**High**</span>
+(4..) <span style="color: #FF0000;">**Very high**</span>
