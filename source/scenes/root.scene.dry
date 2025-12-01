@@ -192,7 +192,7 @@ Q.tamil_war = 0.24;
 Q.tamil_unity = 0.1;
 
 //how much morale the tamil militants have
-Q.tamil_morale = 0.15
+Q.tamil_morale = 0.32
 
 //ontrol over the north east by tamil militants, based on radicalism qdisplay
 Q.tamil_control = 1.5;
@@ -328,7 +328,7 @@ Q.ussr_relation = 30;
 Q.india_tamil_support = 0.6;
 Q.ipkf_formed = 0;
 Q.ipkf_size = 0;
-Q.ipkf_morale = 0;
+Q.ipkf_morale = 0.8;
 Q.india_government = "INC";
 //Other option for government is the NF
 Q.india_pm = "Indira Gandhi";
