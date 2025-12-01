@@ -1,5 +1,5 @@
 
-(0..0) None
-(1..1) Minor
-(2..2) Partial
-(3..3) Major
+(0..0) <span style="color: #87CEEB;">**None**</span>
+(1..1) <span style="color: #6495ED;">**Minor**</span>
+(2..2) <span style="color: #4169E1;">**Partial**</span>
+(3..3) <span style="color: #0000CD;">**Major**</span>
