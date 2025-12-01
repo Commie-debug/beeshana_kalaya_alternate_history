@@ -176,7 +176,7 @@ Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : l
 
 [? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
 
-[? if ipkf_formed = 1 : IPKF Morale: [+ ipkf_morale_2 : morale +] ?]
+[? if ipkf_formed = 1 : IPKF Morale: [+ ipkf_morale_2 : loyalty +] ?]
 
 @polls
 on-arrival: {!
@@ -284,7 +284,7 @@ Tamil unity: [+ tamil_unity : unity +]
 
 Tamil radicalisation: [+ tamil_radicalisation : radicalism +]
 
-Militant morale: [+ tamil_morale : morale +]
+Militant morale: [+ tamil_morale : loyalty +]
 
 Militant control of North-East: [+ tamil_control : radicalism +]
 
@@ -505,7 +505,7 @@ Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
 [? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
 
-[? if ipkf_formed = 1 : IPKF morale: [+ ipkf_morale_2 : morale +] ?]
+[? if ipkf_formed = 1 : IPKF morale: [+ ipkf_morale_2 : loyalty +] ?]
 
 Indian ruling party: [+ india_government +]
 
