@@ -1,6 +1,7 @@
+#For the inter-tamil fighting
 
-(0..0.2) Gang war
-(0.2..0.4) Bloodied truce
-(0.4..0.6) Truce
-(0.6..0.8) Forced unity
-(0.8..1) Total unity
+(0..0.2) <span style="color: #FF0000;">**Gang war**</span>
+(0.2..0.4) <span style="color: #FF4500;">**Bloodied truce**</span>
+(0.4..0.6) <span style="color: #FFD700;">**Truce**</span>
+(0.6..0.8) <span style="color: #9ACD32;">**Forced unity**</span>
+(0.8..1) <span style="color: #008000;">**Total unity**</span>
