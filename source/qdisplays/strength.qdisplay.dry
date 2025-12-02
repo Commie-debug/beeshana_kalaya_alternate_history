@@ -1,8 +1,8 @@
 
-# faction and union strength
+# faction strength
 
-(0..10) <span style="color: #DDA0DD;">**Weak**</span>
-(10..25) <span style="color: #BA55D3;">**Moderate**</span>
-(25..40) <span style="color: #9932CC;">**Strong**</span>
-(40..60) <span style="color: #8B008B;">**Very strong**</span>
-(60..) <span style="color: #4B0082;">**Dominant**</span>
+(0..10) <span style="color: #ADD8E6;">**Weak**</span>
+(10..25) <span style="color: #6495ED;">**Moderate**</span>
+(25..40) <span style="color: #4169E1;">**Strong**</span>
+(40..60) <span style="color: #0000CD;">**Very strong**</span>
+(60..) <span style="color: #00008B;">**Dominant**</span>
