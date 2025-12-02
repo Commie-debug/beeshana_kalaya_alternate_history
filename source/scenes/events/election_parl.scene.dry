@@ -406,10 +406,6 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 
 The Center manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the KPD, whether we want to or not.
 
-- @civil_war: A civil war, then.
-
-
-
 @far_right_coalition
 title: Far-right coalition
 subtitle: NSDAP + DNVP ([+ far_right_coalition +]%)
@@ -724,8 +720,6 @@ go-to: hitler_chancellor
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"
 
 There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "NSDAP" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
-
-- @hitler_takes_power: What now?
 
 # if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
 
