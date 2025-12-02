@@ -67,8 +67,11 @@ Q.center_dissent = 0;
 Q.left_split = 0;
 Q.nationalist_split = 0;
 
-// events
+// ddc events
 Q.ddc_elections_boycott = 0;
+Q.lsspbacking = 0;
+Q.cpslbacking = 0;
+Q.nsspbacking = 0;
 
 // organizations
 Q.slfp_union = 5;
