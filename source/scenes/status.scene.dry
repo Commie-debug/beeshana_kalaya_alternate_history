@@ -308,7 +308,7 @@ Control of Jaffna: [+ jaffna_control +]
 
 FTZ working conditions: [+ ftz_conditions : equality +]
 
-Labour union strenght: [+ labour_unions_strenght : strength +]
+Labour union strenght: [+ labour_unions_strenght : union_strenght +]
 
 <span style="color: #00008B;">**SLFP**</span> control: [+ labour_union_slfp_control +]%
 
@@ -326,7 +326,7 @@ Labour union strenght: [+ labour_unions_strenght : strength +]
 
 = Student Unions
 
-Student union strenght: [+ student_union_strenght : strength +]
+Student union strenght: [+ student_union_strenght : union_strenght +]
 
 <span style="color: #00008B;">**SLFP**</span> control: [+ student_union_slfp_control +]%
 
