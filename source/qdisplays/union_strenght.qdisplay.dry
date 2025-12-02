@@ -1,0 +1,6 @@
+
+(0..10) <span style="color: #FFCCCB;">**Weak**</span>
+(10..25) <span style="color: #F08080;">**Moderate**</span>
+(25..40) <span style="color: #DC143C;">**Strong**</span>
+(40..60) <span style="color: #B22222;">**Very strong**</span>
+(60..) <span style="color: #8B0000;">**Dominant**</span>
