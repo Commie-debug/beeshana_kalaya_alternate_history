@@ -20,30 +20,6 @@ Week [+ week +] [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
 
-<span style="color: #ADD8E6;">**Weak**</span>
-<span style="color: #6495ED;">**Moderate**</span>
-<span style="color: #4169E1;">**Strong**</span>
-<span style="color: #0000CD;">**Very strong**</span>
-<span style="color: #00008B;">**Dominant**</span>
-
-<span style="color: #B0C4DE;">**Weak**</span>
-<span style="color: #7B98B5;">**Moderate**</span>
-<span style="color: #4A6FA5;">**Strong**</span>
-<span style="color: #2E4A7D;">**Very strong**</span>
-<span style="color: #1C3A5F;">**Dominant**</span>
-
-<span style="color: #AFEEEE;">**Weak**</span>
-<span style="color: #48D1CC;">**Moderate**</span>
-<span style="color: #20B2AA;">**Strong**</span>
-<span style="color: #008080;">**Very strong**</span>
-<span style="color: #004D4D;">**Dominant**</span>
-
-<span style="color: #D8A0A0;">**Weak**</span>
-<span style="color: #B06060;">**Moderate**</span>
-<span style="color: #8B3A3A;">**Strong**</span>
-<span style="color: #6B1A1A;">**Very strong**</span>
-<span style="color: #4A0000;">**Dominant**</span>
-
 SLFP position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
 
 [? if slfp_in_government and not in_slfp_majority : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
