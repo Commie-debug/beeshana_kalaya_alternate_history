@@ -420,8 +420,6 @@ on-arrival: chancellor = nsdap_leader; chancellor_party = "NSDAP"
 
 [? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ nsdap_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" : because it is what the constitution would stipulate. ?]
 
-- @hitler_takes_power: What do we do now?
-
 
 @far_right_fail
 on-arrival: chancellor = "Schleicher"; chancellor_party = "I"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
@@ -524,10 +522,6 @@ Whatever their reasoning is, the SPD has control over the ministries of governme
 on-arrival: reichswehr_loyalty += 0.1
 
 In response to the KPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
-
-- @civil_war: A civil war, then.
-
-
 
 @right_coalition
 title: Refuse to form a government, so that a right-wing coalition may be formed.
