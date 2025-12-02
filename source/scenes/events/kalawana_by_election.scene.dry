@@ -1,0 +1,24 @@
+title: Kalawana By-Elections Results
+new-page: true
+view-if: year = 1981 and month = 1 and week = 2
+on-arrival: unp_r -= 1; cpsl_r += 1;
+max-visits: 1
+tags: event
+
+= Kalawana By-Elections Results
+
+Following an election petition in the Kalawana Constituency, a by-election was held to challenge the incumbent MP Abeyrathne Pilapitiya(UNP). After a contested race, Sarath Muttetuwegama(CPSL) managed to unseat Abeyrathne Pilapitiya(UNP). He has thus become the only CPSL MP in parliament since 1977.
+  
+- @happy: We should congratulate Sarath Muttetuwegama, perhaps this is a sign of changing attitudes in Sri Lanka in favour of socialism?
+- @dont_care: This election result is hardly a sign of shifting attitudes, why should we care?
+
+@happy
+on-arrival: left_strength += 3; left_dissent -= 3; cpsl_relation += 5; nationalist_strength -= 3; nationalist_dissent += 3;
+
+Our positive attitude to the election has brought the SLFP and CPSL togheter and shifted internal party opinions.
+
+@dont_care
+on-arrival: nationalist_strength += 3; nationalist_dissent -= 3; left_dissent += 5; left_strength -= 3;
+
+Our passivity has brought further attention to the Nationalists who simply do not care about a random constituency falling to the reds.
+
