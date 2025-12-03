@@ -242,6 +242,8 @@ Q.fishing = 25;
 Q.fishing_national = 0;
 Q.textile = 75;
 Q.textile_national = 1;
+Q.rubber = 50;
+Q.rubber_national = 1;
 
 //interior policies
 //Indian Tamil policies
@@ -390,7 +392,7 @@ Q.gampaha_d_rural = 100;
 
 Q.gampaha_d_control = 100;
 Q.gampaha_d_infastructure = 0.9;
-Q.gampaha_d_seats = 21;
+Q.gampaha_d_seats = 17;
 Q.gampaha_d_industries = ['tourism', 'textile', 'fishing'];
 
 //kalutara
@@ -407,7 +409,7 @@ Q.kalutara_d_rural = 100;
 
 Q.kalutara_d_control = 100;
 Q.kalutara_d_infastructure = 0.9;
-Q.kalutara_d_seats = 21;
+Q.kalutara_d_seats = 11;
 Q.kalutara_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Northern province
@@ -425,7 +427,7 @@ Q.jaffna_d_rural = 100;
 
 Q.jaffna_d_control = 100;
 Q.jaffna_d_infastructure = 0.9;
-Q.jaffna_d_seats = 21;
+Q.jaffna_d_seats = 11;
 Q.jaffna_d_industries = ['tourism', 'textile', 'fishing'];
 
 //kilinochchi
@@ -442,7 +444,7 @@ Q.kilinochchi_d_rural = 100;
 
 Q.kilinochchi_d_control = 100;
 Q.kilinochchi_d_infastructure = 0.9;
-Q.kilinochchi_d_seats = 21;
+Q.kilinochchi_d_seats = 11;
 Q.kilinochchi_d_industries = ['tourism', 'textile', 'fishing'];
 
 //mannar
@@ -459,7 +461,7 @@ Q.mannar_d_rural = 100;
 
 Q.mannar_d_control = 100;
 Q.mannar_d_infastructure = 0.9;
-Q.mannar_d_seats = 21;
+Q.mannar_d_seats = 7;
 Q.mannar_d_industries = ['tourism', 'textile', 'fishing'];
 
 //mullaitivu
@@ -476,7 +478,7 @@ Q.mullaitivu_d_rural = 100;
 
 Q.mullaitivu_d_control = 100;
 Q.mullaitivu_d_infastructure = 0.9;
-Q.mullaitivu_d_seats = 21;
+Q.mullaitivu_d_seats = 7;
 Q.colombo_d_industries = ['tourism', 'textile', 'fishing'];
 
 //vavuniya
@@ -493,7 +495,7 @@ Q.vavuniya_d_rural = 100;
 
 Q.vavuniya_d_control = 100;
 Q.vavuniya_d_infastructure = 0.9;
-Q.vavuniya_d_seats = 21;
+Q.vavuniya_d_seats = 7;
 Q.vavuniya_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Eastern province
@@ -511,7 +513,7 @@ Q.batticaloa_d_rural = 100;
 
 Q.batticaloa_d_control = 100;
 Q.batticaloa_d_infastructure = 0.9;
-Q.batticaloa_d_seats = 21;
+Q.batticaloa_d_seats = 5;
 Q.batticaloa_d_industries = ['tourism', 'textile', 'fishing'];
 
 //ampara
@@ -528,7 +530,7 @@ Q.ampara_d_rural = 100;
 
 Q.ampara_d_control = 100;
 Q.ampara_d_infastructure = 0.9;
-Q.ampara_d_seats = 21;
+Q.ampara_d_seats = 5;
 Q.ampara_d_industries = ['tourism', 'textile', 'fishing'];
 
 //trincomalee
@@ -545,7 +547,7 @@ Q.trincomalee_d_rural = 100;
 
 Q.trincomalee_d_control = 100;
 Q.trincomalee_d_infastructure = 0.9;
-Q.trincomalee_d_seats = 21;
+Q.trincomalee_d_seats = 5;
 Q.trincomalee_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Central province
@@ -563,7 +565,7 @@ Q.kandy_d_rural = 100;
 
 Q.kandy_d_control = 100;
 Q.kandy_d_infastructure = 0.9;
-Q.kandy_d_seats = 21;
+Q.kandy_d_seats = 12;
 Q.kandy_d_industries = ['tourism', 'textile', 'fishing'];
 
 //matale
@@ -580,7 +582,7 @@ Q.matale_d_rural = 100;
 
 Q.matale_d_control = 100;
 Q.matale_d_infastructure = 0.9;
-Q.matale_d_seats = 21;
+Q.matale_d_seats = 5;
 Q.matale_d_industries = ['tourism', 'textile', 'fishing'];
 
 //nuwara eliya
@@ -597,7 +599,7 @@ Q.nuwaraeliya_d_rural = 100;
 
 Q.nuwaraeliya_d_control = 100;
 Q.nuwaraeliya_d_infastructure = 0.9;
-Q.nuwaraeliya_d_seats = 21;
+Q.nuwaraeliya_d_seats = 15;
 Q.nuwaraeliya_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Southern province
@@ -615,7 +617,7 @@ Q.galle_d_rural = 100;
 
 Q.galle_d_control = 100;
 Q.galle_d_infastructure = 0.9;
-Q.galle_d_seats = 21;
+Q.galle_d_seats = 11;
 Q.galle_d_industries = ['tourism', 'textile', 'fishing'];
 
 //matara
@@ -632,7 +634,7 @@ Q.matara_d_rural = 100;
 
 Q.matara_d_control = 100;
 Q.matara_d_infastructure = 0.9;
-Q.matara_d_seats = 21;
+Q.matara_d_seats = 10;
 Q.matara_d_industries = ['tourism', 'textile', 'fishing'];
 
 //hambantota
@@ -649,7 +651,7 @@ Q.hambantota_d_rural = 100;
 
 Q.hambantota_d_control = 100;
 Q.hambantota_d_infastructure = 0.9;
-Q.hambantota_d_seats = 21;
+Q.hambantota_d_seats = 7;
 Q.hambantota_d_industries = ['tourism', 'textile', 'fishing'];
 
 //North Western province
@@ -667,7 +669,7 @@ Q.kurunegala_d_rural = 100;
 
 Q.kurunegala_d_control = 100;
 Q.kurunegala_d_infastructure = 0.9;
-Q.kurunegala_d_seats = 21;
+Q.kurunegala_d_seats = 10;
 Q.kurunegala_d_industries = ['tourism', 'textile', 'fishing'];
 
 //puttalam
@@ -684,7 +686,7 @@ Q.puttalam_d_rural = 100;
 
 Q.puttalam_d_control = 100;
 Q.puttalam_d_infastructure = 0.9;
-Q.puttalam_d_seats = 21;
+Q.puttalam_d_seats = 15;
 Q.puttalam_d_industries = ['tourism', 'textile', 'fishing'];
 
 //North Central province
@@ -702,7 +704,7 @@ Q.anuradhapura_d_rural = 100;
 
 Q.anuradhapura_d_control = 100;
 Q.anuradhapura_d_infastructure = 0.9;
-Q.anuradhapura_d_seats = 21;
+Q.anuradhapura_d_seats = 10;
 Q.anuradhapura_d_industries = ['tourism', 'textile', 'fishing'];
 
 //polonnaruwa
@@ -719,7 +721,7 @@ Q.polonnaruwa_d_rural = 100;
 
 Q.polonnaruwa_d_control = 100;
 Q.polonnaruwa_d_infastructure = 0.9;
-Q.polonnaruwa_d_seats = 21;
+Q.polonnaruwa_d_seats = 12;
 Q.polonnaruwa_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Uva province
@@ -737,7 +739,7 @@ Q.monaragala_d_rural = 100;
 
 Q.monaragala_d_control = 100;
 Q.monaragala_d_infastructure = 0.9;
-Q.monaragala_d_seats = 21;
+Q.monaragala_d_seats = 9;
 Q.monaragala_d_industries = ['tourism', 'textile', 'fishing'];
 
 //badulla
@@ -754,7 +756,7 @@ Q.badulla_d_rural = 100;
 
 Q.badulla_d_control = 100;
 Q.badulla_d_infastructure = 0.9;
-Q.badulla_d_seats = 21;
+Q.badulla_d_seats = 9;
 Q.badulla_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Sabaragamuwa province
@@ -772,7 +774,7 @@ Q.ratnapura_d_rural = 100;
 
 Q.ratnapura_d_control = 100;
 Q.ratnapura_d_infastructure = 0.9;
-Q.ratnapura_d_seats = 21;
+Q.ratnapura_d_seats = 5;
 Q.ratnapura_d_industries = ['tourism', 'textile', 'fishing'];
 
 //kegalle
@@ -789,7 +791,7 @@ Q.kegalle_d_rural = 100;
 
 Q.kegalle_d_control = 100;
 Q.kegalle_d_infastructure = 0.9;
-Q.kegalle_d_seats = 21;
+Q.kegalle_d_seats = 8;
 Q.kegalle_d_industries = ['tourism', 'textile', 'fishing'];
 
 //proportion of races in 1981
