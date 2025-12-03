@@ -352,18 +352,19 @@ Q.district_upper = 0;
 Q.district_rural = 0;
 
 Q.district_control = 100;
-Q.district_education = 0;
 Q.district_infastructure = 0;
 Q.district_seats = 0;
 Q.district_industries = ['Major industries'];
 
+
+//ethnic stats sourced from 1981 cencus, killinochchi counted by lower divisions of the jaffna district per the 1981 cencus in wikipedia's killinochchi district page
 //Western province
 //colombo
-Q.colombo_d_sinhala = 77.61;
-Q.colombo_d_sltamil = 10.04;
-Q.colombo_d_itamil = 1.17;
-Q.colombo_d_muslim = 8.22;
-Q.colombo_d_other = 2.96;
+Q.colombo_d_sinhala = 77.6;
+Q.colombo_d_sltamil = 10.0;
+Q.colombo_d_itamil = 1.2;
+Q.colombo_d_muslim = 8.2;
+Q.colombo_d_other = 3.0;
 
 Q.colombo_d_worker = 100;
 Q.colombo_d_middle = 100;
@@ -371,17 +372,16 @@ Q.colombo_d_upper = 100;
 Q.colombo_d_rural = 100;
 
 Q.colombo_d_control = 100;
-Q.colombo_d_education = 0.7;
 Q.colombo_d_infastructure = 0.9;
 Q.colombo_d_seats = 21;
 Q.colombo_d_industries = ['tourism', 'textile', 'fishing'];
 
 //gampaha
-Q.gampaha_d_sinhala = 92;
-Q.gampaha_d_sltamil = 10.04;
-Q.gampaha_d_itamil = 1.17;
+Q.gampaha_d_sinhala = 92.0;
+Q.gampaha_d_sltamil = 3.5;
+Q.gampaha_d_itamil = 0.4;
 Q.gampaha_d_muslim = 2.7;
-Q.gampaha_d_other = 2.96;
+Q.gampaha_d_other = 1.4;
 
 Q.gampaha_d_worker = 100;
 Q.gampaha_d_middle = 100;
@@ -389,17 +389,16 @@ Q.gampaha_d_upper = 100;
 Q.gampaha_d_rural = 100;
 
 Q.gampaha_d_control = 100;
-Q.gampaha_d_education = 0.7;
 Q.gampaha_d_infastructure = 0.9;
 Q.gampaha_d_seats = 21;
 Q.gampaha_d_industries = ['tourism', 'textile', 'fishing'];
 
 //kalutara
-Q.kalutara_d_sinhala = 77.61;
-Q.kalutara_d_sltamil = 10.04;
-Q.kalutara_d_itamil = 1.17;
-Q.kalutara_d_muslim = 8.22;
-Q.kalutara_d_other = 2.96;
+Q.kalutara_d_sinhala = 87.2;
+Q.kalutara_d_sltamil = 1.2;
+Q.kalutara_d_itamil = 4.1;
+Q.kalutara_d_muslim = 7.4;
+Q.kalutara_d_other = 0.3;
 
 Q.kalutara_d_worker = 100;
 Q.kalutara_d_middle = 100;
@@ -407,18 +406,17 @@ Q.kalutara_d_upper = 100;
 Q.kalutara_d_rural = 100;
 
 Q.kalutara_d_control = 100;
-Q.kalutara_d_education = 0.7;
 Q.kalutara_d_infastructure = 0.9;
 Q.kalutara_d_seats = 21;
 Q.kalutara_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Northern province
 //jaffna
-Q.jaffna_d_sinhala = 77.61;
-Q.jaffna_d_sltamil = 10.04;
-Q.jaffna_d_itamil = 1.17;
-Q.jaffna_d_muslim = 8.22;
-Q.jaffna_d_other = 2.96;
+Q.jaffna_d_sinhala = 0.8;
+Q.jaffna_d_sltamil = 95.2;
+Q.jaffna_d_itamil = 2.4;
+Q.jaffna_d_muslim = 1.6;
+Q.jaffna_d_other = 0.0;
 
 Q.jaffna_d_worker = 100;
 Q.jaffna_d_middle = 100;
@@ -426,17 +424,16 @@ Q.jaffna_d_upper = 100;
 Q.jaffna_d_rural = 100;
 
 Q.jaffna_d_control = 100;
-Q.jaffna_d_education = 0.7;
 Q.jaffna_d_infastructure = 0.9;
 Q.jaffna_d_seats = 21;
 Q.jaffna_d_industries = ['tourism', 'textile', 'fishing'];
 
 //kilinochchi
-Q.kilinochchi_d_sinhala = 77.61;
-Q.kilinochchi_d_sltamil = 10.04;
-Q.kilinochchi_d_itamil = 1.17;
-Q.kilinochchi_d_muslim = 8.22;
-Q.kilinochchi_d_other = 2.96;
+Q.kilinochchi_d_sinhala = 0.8;
+Q.kilinochchi_d_sltamil = 94.9;
+Q.kilinochchi_d_itamil = 2.4;
+Q.kilinochchi_d_muslim = 1.7;
+Q.kilinochchi_d_other = 0.2;
 
 Q.kilinochchi_d_worker = 100;
 Q.kilinochchi_d_middle = 100;
@@ -444,17 +441,16 @@ Q.kilinochchi_d_upper = 100;
 Q.kilinochchi_d_rural = 100;
 
 Q.kilinochchi_d_control = 100;
-Q.kilinochchi_d_education = 0.7;
 Q.kilinochchi_d_infastructure = 0.9;
 Q.kilinochchi_d_seats = 21;
 Q.kilinochchi_d_industries = ['tourism', 'textile', 'fishing'];
 
 //mannar
-Q.mannar_d_sinhala = 77.61;
-Q.mannar_d_sltamil = 10.04;
-Q.mannar_d_itamil = 1.17;
-Q.mannar_d_muslim = 8.22;
-Q.mannar_d_other = 2.96;
+Q.mannar_d_sinhala = 8.2;
+Q.mannar_d_sltamil = 51.3;
+Q.mannar_d_itamil = 13.0;
+Q.mannar_d_muslim = 26.1;
+Q.mannar_d_other = 1.4;
 
 Q.mannar_d_worker = 100;
 Q.mannar_d_middle = 100;
@@ -462,17 +458,16 @@ Q.mannar_d_upper = 100;
 Q.mannar_d_rural = 100;
 
 Q.mannar_d_control = 100;
-Q.mannar_d_education = 0.7;
 Q.mannar_d_infastructure = 0.9;
 Q.mannar_d_seats = 21;
 Q.mannar_d_industries = ['tourism', 'textile', 'fishing'];
 
 //mullaitivu
-Q.mullaitivu_d_sinhala = 77.61;
-Q.mullaitivu_d_sltamil = 10.04;
-Q.mullaitivu_d_itamil = 1.17;
-Q.mullaitivu_d_muslim = 8.22;
-Q.mullaitivu_d_other = 2.96;
+Q.mullaitivu_d_sinhala = 5.2;
+Q.mullaitivu_d_sltamil = 75.4;
+Q.mullaitivu_d_itamil = 14.5;
+Q.mullaitivu_d_muslim = 4.7;
+Q.mullaitivu_d_other = 0.1;
 
 Q.mullaitivu_d_worker = 100;
 Q.mullaitivu_d_middle = 100;
@@ -480,17 +475,16 @@ Q.mullaitivu_d_upper = 100;
 Q.mullaitivu_d_rural = 100;
 
 Q.mullaitivu_d_control = 100;
-Q.mullaitivu_d_education = 0.7;
 Q.mullaitivu_d_infastructure = 0.9;
 Q.mullaitivu_d_seats = 21;
 Q.colombo_d_industries = ['tourism', 'textile', 'fishing'];
 
 //vavuniya
-Q.vavuniya_d_sinhala = 77.61;
-Q.vavuniya_d_sltamil = 10.04;
-Q.vavuniya_d_itamil = 1.17;
-Q.vavuniya_d_muslim = 8.22;
-Q.vavuniya_d_other = 2.96;
+Q.vavuniya_d_sinhala = 16.6;
+Q.vavuniya_d_sltamil = 56.8;
+Q.vavuniya_d_itamil = 19.6;
+Q.vavuniya_d_muslim = 6.8;
+Q.vavuniya_d_other = 0.2;
 
 Q.vavuniya_d_worker = 100;
 Q.vavuniya_d_middle = 100;
@@ -498,18 +492,17 @@ Q.vavuniya_d_upper = 100;
 Q.vavuniya_d_rural = 100;
 
 Q.vavuniya_d_control = 100;
-Q.vavuniya_d_education = 0.7;
 Q.vavuniya_d_infastructure = 0.9;
 Q.vavuniya_d_seats = 21;
 Q.vavuniya_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Eastern province
 //batticaloa
-Q.batticaloa_d_sinhala = 77.61;
-Q.batticaloa_d_sltamil = 10.04;
-Q.batticaloa_d_itamil = 1.17;
-Q.batticaloa_d_muslim = 8.22;
-Q.batticaloa_d_other = 2.96;
+Q.batticaloa_d_sinhala = 3.4;
+Q.batticaloa_d_sltamil = 70.8;
+Q.batticaloa_d_itamil = 1.2;
+Q.batticaloa_d_muslim = 23.9;
+Q.batticaloa_d_other = 0.7;
 
 Q.batticaloa_d_worker = 100;
 Q.batticaloa_d_middle = 100;
@@ -517,17 +510,16 @@ Q.batticaloa_d_upper = 100;
 Q.batticaloa_d_rural = 100;
 
 Q.batticaloa_d_control = 100;
-Q.batticaloa_d_education = 0.7;
 Q.batticaloa_d_infastructure = 0.9;
 Q.batticaloa_d_seats = 21;
 Q.batticaloa_d_industries = ['tourism', 'textile', 'fishing'];
 
 //ampara
-Q.ampara_d_sinhala = 77.61;
-Q.ampara_d_sltamil = 10.04;
-Q.ampara_d_itamil = 1.17;
-Q.ampara_d_muslim = 8.22;
-Q.ampara_d_other = 2.96;
+Q.ampara_d_sinhala = 37.8;
+Q.ampara_d_sltamil = 20.0;
+Q.ampara_d_itamil = 0.4;
+Q.ampara_d_muslim = 41.5;
+Q.ampara_d_other = 0.4;
 
 Q.ampara_d_worker = 100;
 Q.ampara_d_middle = 100;
@@ -535,17 +527,16 @@ Q.ampara_d_upper = 100;
 Q.ampara_d_rural = 100;
 
 Q.ampara_d_control = 100;
-Q.ampara_d_education = 0.7;
 Q.ampara_d_infastructure = 0.9;
 Q.ampara_d_seats = 21;
 Q.ampara_d_industries = ['tourism', 'textile', 'fishing'];
 
 //trincomalee
-Q.trincomalee_d_sinhala = 77.61;
-Q.trincomalee_d_sltamil = 10.04;
-Q.trincomalee_d_itamil = 1.17;
-Q.trincomalee_d_muslim = 8.22;
-Q.trincomalee_d_other = 2.96;
+Q.trincomalee_d_sinhala = 33.4;
+Q.trincomalee_d_sltamil = 34.3;
+Q.trincomalee_d_itamil = 2.1;
+Q.trincomalee_d_muslim = 29.3;
+Q.trincomalee_d_other = 0.9;
 
 Q.trincomalee_d_worker = 100;
 Q.trincomalee_d_middle = 100;
@@ -553,18 +544,17 @@ Q.trincomalee_d_upper = 100;
 Q.trincomalee_d_rural = 100;
 
 Q.trincomalee_d_control = 100;
-Q.trincomalee_d_education = 0.7;
 Q.trincomalee_d_infastructure = 0.9;
 Q.trincomalee_d_seats = 21;
 Q.trincomalee_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Central province
 //kandy
-Q.kandy_d_sinhala = 77.61;
-Q.kandy_d_sltamil = 10.04;
-Q.kandy_d_itamil = 1.17;
-Q.kandy_d_muslim = 8.22;
-Q.kandy_d_other = 2.96;
+Q.kandy_d_sinhala = 74.3;
+Q.kandy_d_sltamil = 5.0;
+Q.kandy_d_itamil = 9.4;
+Q.kandy_d_muslim = 10.5;
+Q.kandy_d_other = 0.8;
 
 Q.kandy_d_worker = 100;
 Q.kandy_d_middle = 100;
@@ -572,17 +562,16 @@ Q.kandy_d_upper = 100;
 Q.kandy_d_rural = 100;
 
 Q.kandy_d_control = 100;
-Q.kandy_d_education = 0.7;
 Q.kandy_d_infastructure = 0.9;
 Q.kandy_d_seats = 21;
 Q.kandy_d_industries = ['tourism', 'textile', 'fishing'];
 
 //matale
-Q.matale_d_sinhala = 77.61;
-Q.matale_d_sltamil = 10.04;
-Q.matale_d_itamil = 1.17;
-Q.matale_d_muslim = 8.22;
-Q.matale_d_other = 2.96;
+Q.matale_d_sinhala = 80.0;
+Q.matale_d_sltamil = 5.8;
+Q.matale_d_itamil = 7.0;
+Q.matale_d_muslim = 7.0;
+Q.matale_d_other = 0.5;
 
 Q.matale_d_worker = 100;
 Q.matale_d_middle = 100;
@@ -590,17 +579,16 @@ Q.matale_d_upper = 100;
 Q.matale_d_rural = 100;
 
 Q.matale_d_control = 100;
-Q.matale_d_education = 0.7;
 Q.matale_d_infastructure = 0.9;
 Q.matale_d_seats = 21;
 Q.matale_d_industries = ['tourism', 'textile', 'fishing'];
 
 //nuwara eliya
-Q.nuwaraeliya_d_sinhala = 77.61;
-Q.nuwaraeliya_d_sltamil = 10.04;
-Q.nuwaraeliya_d_itamil = 1.17;
-Q.nuwaraeliya_d_muslim = 8.22;
-Q.nuwaraeliya_d_other = 2.96;
+Q.nuwaraeliya_d_sinhala = 42.1;
+Q.nuwaraeliya_d_sltamil = 12.7;
+Q.nuwaraeliya_d_itamil = 42.7;
+Q.nuwaraeliya_d_muslim = 2.0;
+Q.nuwaraeliya_d_other = 0.5;
 
 Q.nuwaraeliya_d_worker = 100;
 Q.nuwaraeliya_d_middle = 100;
@@ -608,18 +596,17 @@ Q.nuwaraeliya_d_upper = 100;
 Q.nuwaraeliya_d_rural = 100;
 
 Q.nuwaraeliya_d_control = 100;
-Q.nuwaraeliya_d_education = 0.7;
 Q.nuwaraeliya_d_infastructure = 0.9;
 Q.nuwaraeliya_d_seats = 21;
 Q.nuwaraeliya_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Southern province
 //galle
-Q.galle_d_sinhala = 77.61;
-Q.galle_d_sltamil = 10.04;
-Q.galle_d_itamil = 1.17;
-Q.galle_d_muslim = 8.22;
-Q.galle_d_other = 2.96;
+Q.galle_d_sinhala = 94.5;
+Q.galle_d_sltamil = 0.9;
+Q.galle_d_itamil = 1.4;
+Q.galle_d_muslim = 3.2;
+Q.galle_d_other = 0.2;
 
 Q.galle_d_worker = 100;
 Q.galle_d_middle = 100;
@@ -627,17 +614,16 @@ Q.galle_d_upper = 100;
 Q.galle_d_rural = 100;
 
 Q.galle_d_control = 100;
-Q.galle_d_education = 0.7;
 Q.galle_d_infastructure = 0.9;
 Q.galle_d_seats = 21;
 Q.galle_d_industries = ['tourism', 'textile', 'fishing'];
 
 //matara
-Q.matara_d_sinhala = 77.61;
-Q.matara_d_sltamil = 10.04;
-Q.matara_d_itamil = 1.17;
-Q.matara_d_muslim = 8.22;
-Q.matara_d_other = 2.96;
+Q.matara_d_sinhala = 94.5;
+Q.matara_d_sltamil = 0.7;
+Q.matara_d_itamil = 2.2;
+Q.matara_d_muslim = 2.5;
+Q.matara_d_other = 0.0;
 
 Q.matara_d_worker = 100;
 Q.matara_d_middle = 100;
@@ -645,17 +631,16 @@ Q.matara_d_upper = 100;
 Q.matara_d_rural = 100;
 
 Q.matara_d_control = 100;
-Q.matara_d_education = 0.7;
 Q.matara_d_infastructure = 0.9;
 Q.matara_d_seats = 21;
 Q.matara_d_industries = ['tourism', 'textile', 'fishing'];
 
 //hambantota
-Q.hambantota_d_sinhala = 77.61;
-Q.hambantota_d_sltamil = 10.04;
-Q.hambantota_d_itamil = 1.17;
-Q.hambantota_d_muslim = 8.22;
-Q.hambantota_d_other = 2.96;
+Q.hambantota_d_sinhala = 97.1;
+Q.hambantota_d_sltamil = 0.6;
+Q.hambantota_d_itamil = 0.1;
+Q.hambantota_d_muslim = 1.2;
+Q.hambantota_d_other = 1.0;
 
 Q.hambantota_d_worker = 100;
 Q.hambantota_d_middle = 100;
@@ -663,18 +648,17 @@ Q.hambantota_d_upper = 100;
 Q.hambantota_d_rural = 100;
 
 Q.hambantota_d_control = 100;
-Q.hambantota_d_education = 0.7;
 Q.hambantota_d_infastructure = 0.9;
 Q.hambantota_d_seats = 21;
 Q.hambantota_d_industries = ['tourism', 'textile', 'fishing'];
 
 //North Western province
 //kurunegala
-Q.kurunegala_d_sinhala = 77.61;
-Q.kurunegala_d_sltamil = 10.04;
-Q.kurunegala_d_itamil = 1.17;
-Q.kurunegala_d_muslim = 8.22;
-Q.kurunegala_d_other = 2.96;
+Q.kurunegala_d_sinhala = 92.9;
+Q.kurunegala_d_sltamil = 1.2;
+Q.kurunegala_d_itamil = 0.6;
+Q.kurunegala_d_muslim = 5.0;
+Q.kurunegala_d_other = 0.3;
 
 Q.kurunegala_d_worker = 100;
 Q.kurunegala_d_middle = 100;
@@ -682,17 +666,16 @@ Q.kurunegala_d_upper = 100;
 Q.kurunegala_d_rural = 100;
 
 Q.kurunegala_d_control = 100;
-Q.kurunegala_d_education = 0.7;
 Q.kurunegala_d_infastructure = 0.9;
 Q.kurunegala_d_seats = 21;
 Q.kurunegala_d_industries = ['tourism', 'textile', 'fishing'];
 
 //puttalam
-Q.puttalam_d_sinhala = 77.61;
-Q.puttalam_d_sltamil = 10.04;
-Q.puttalam_d_itamil = 1.17;
-Q.puttalam_d_muslim = 8.22;
-Q.puttalam_d_other = 2.96;
+Q.puttalam_d_sinhala = 82.6;
+Q.puttalam_d_sltamil = 6.6;
+Q.puttalam_d_itamil = 0.5;
+Q.puttalam_d_muslim = 9.9;
+Q.puttalam_d_other = 0.4;
 
 Q.puttalam_d_worker = 100;
 Q.puttalam_d_middle = 100;
@@ -700,18 +683,17 @@ Q.puttalam_d_upper = 100;
 Q.puttalam_d_rural = 100;
 
 Q.puttalam_d_control = 100;
-Q.puttalam_d_education = 0.7;
 Q.puttalam_d_infastructure = 0.9;
 Q.puttalam_d_seats = 21;
 Q.puttalam_d_industries = ['tourism', 'textile', 'fishing'];
 
 //North Central province
 //anuradhapura
-Q.anuradhapura_d_sinhala = 77.61;
-Q.anuradhapura_d_sltamil = 10.04;
-Q.anuradhapura_d_itamil = 1.17;
-Q.anuradhapura_d_muslim = 8.22;
-Q.anuradhapura_d_other = 2.96;
+Q.anuradhapura_d_sinhala = 91.1;
+Q.anuradhapura_d_sltamil = 1.4;
+Q.anuradhapura_d_itamil = 0.1;
+Q.anuradhapura_d_muslim = 7.1;
+Q.anuradhapura_d_other = 0.3;
 
 Q.anuradhapura_d_worker = 100;
 Q.anuradhapura_d_middle = 100;
@@ -719,17 +701,16 @@ Q.anuradhapura_d_upper = 100;
 Q.anuradhapura_d_rural = 100;
 
 Q.anuradhapura_d_control = 100;
-Q.anuradhapura_d_education = 0.7;
 Q.anuradhapura_d_infastructure = 0.9;
 Q.anuradhapura_d_seats = 21;
 Q.anuradhapura_d_industries = ['tourism', 'textile', 'fishing'];
 
 //polonnaruwa
-Q.polonnaruwa_d_sinhala = 77.61;
-Q.polonnaruwa_d_sltamil = 10.04;
-Q.polonnaruwa_d_itamil = 1.17;
-Q.polonnaruwa_d_muslim = 8.22;
-Q.polonnaruwa_d_other = 2.96;
+Q.polonnaruwa_d_sinhala = 91.4;
+Q.polonnaruwa_d_sltamil = 2.0;
+Q.polonnaruwa_d_itamil = 0.1;
+Q.polonnaruwa_d_muslim = 6.4;
+Q.polonnaruwa_d_other = 0.3;
 
 Q.polonnaruwa_d_worker = 100;
 Q.polonnaruwa_d_middle = 100;
@@ -737,18 +718,17 @@ Q.polonnaruwa_d_upper = 100;
 Q.polonnaruwa_d_rural = 100;
 
 Q.polonnaruwa_d_control = 100;
-Q.polonnaruwa_d_education = 0.7;
 Q.polonnaruwa_d_infastructure = 0.9;
 Q.polonnaruwa_d_seats = 21;
 Q.polonnaruwa_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Uva province
 //monaragala
-Q.monaragala_d_sinhala = 77.61;
-Q.monaragala_d_sltamil = 10.04;
-Q.monaragala_d_itamil = 1.17;
-Q.monaragala_d_muslim = 8.22;
-Q.monaragala_d_other = 2.96;
+Q.monaragala_d_sinhala = 92.7;
+Q.monaragala_d_sltamil = 2.0;
+Q.monaragala_d_itamil = 3.2;
+Q.monaragala_d_muslim = 1.9;
+Q.monaragala_d_other = 0.3;
 
 Q.monaragala_d_worker = 100;
 Q.monaragala_d_middle = 100;
@@ -756,17 +736,16 @@ Q.monaragala_d_upper = 100;
 Q.monaragala_d_rural = 100;
 
 Q.monaragala_d_control = 100;
-Q.monaragala_d_education = 0.7;
 Q.monaragala_d_infastructure = 0.9;
 Q.monaragala_d_seats = 21;
 Q.monaragala_d_industries = ['tourism', 'textile', 'fishing'];
 
 //badulla
-Q.badulla_d_sinhala = 77.61;
-Q.badulla_d_sltamil = 10.04;
-Q.badulla_d_itamil = 1.17;
-Q.badulla_d_muslim = 8.22;
-Q.badulla_d_other = 2.96;
+Q.badulla_d_sinhala = 69.1;
+Q.badulla_d_sltamil = 5.9;
+Q.badulla_d_itamil = 20.2;
+Q.badulla_d_muslim = 4.2;
+Q.badulla_d_other = 0.6;
 
 Q.badulla_d_worker = 100;
 Q.badulla_d_middle = 100;
@@ -774,18 +753,17 @@ Q.badulla_d_upper = 100;
 Q.badulla_d_rural = 100;
 
 Q.badulla_d_control = 100;
-Q.badulla_d_education = 0.7;
 Q.badulla_d_infastructure = 0.9;
 Q.badulla_d_seats = 21;
 Q.badulla_d_industries = ['tourism', 'textile', 'fishing'];
 
 //Sabaragamuwa province
 //ratnapura
-Q.ratnapura_d_sinhala = 77.61;
-Q.ratnapura_d_sltamil = 10.04;
-Q.ratnapura_d_itamil = 1.17;
-Q.ratnapura_d_muslim = 8.22;
-Q.ratnapura_d_other = 2.96;
+Q.ratnapura_d_sinhala = 85.0;
+Q.ratnapura_d_sltamil = 2.4;
+Q.ratnapura_d_itamil = 10.6;
+Q.ratnapura_d_muslim = 1.7;
+Q.ratnapura_d_other = 0.4;
 
 Q.ratnapura_d_worker = 100;
 Q.ratnapura_d_middle = 100;
@@ -793,17 +771,16 @@ Q.ratnapura_d_upper = 100;
 Q.ratnapura_d_rural = 100;
 
 Q.ratnapura_d_control = 100;
-Q.ratnapura_d_education = 0.7;
 Q.ratnapura_d_infastructure = 0.9;
 Q.ratnapura_d_seats = 21;
 Q.ratnapura_d_industries = ['tourism', 'textile', 'fishing'];
 
 //kegalle
-Q.kegalle_d_sinhala = 77.61;
-Q.kegalle_d_sltamil = 10.04;
-Q.kegalle_d_itamil = 1.17;
-Q.kegalle_d_muslim = 8.22;
-Q.kegalle_d_other = 2.96;
+Q.kegalle_d_sinhala = 85.9;
+Q.kegalle_d_sltamil = 2.2;
+Q.kegalle_d_itamil = 6.7;
+Q.kegalle_d_muslim = 5.0;
+Q.kegalle_d_other = 0.2;
 
 Q.kegalle_d_worker = 100;
 Q.kegalle_d_middle = 100;
@@ -811,7 +788,6 @@ Q.kegalle_d_upper = 100;
 Q.kegalle_d_rural = 100;
 
 Q.kegalle_d_control = 100;
-Q.kegalle_d_education = 0.7;
 Q.kegalle_d_infastructure = 0.9;
 Q.kegalle_d_seats = 21;
 Q.kegalle_d_industries = ['tourism', 'textile', 'fishing'];
