@@ -393,7 +393,7 @@ Q.gampaha_d_rural = 100;
 Q.gampaha_d_control = 100;
 Q.gampaha_d_infastructure = 0.70;
 Q.gampaha_d_seats = 17;
-Q.gampaha_d_industries = ['Textile', 'Fishing', 'Agriculture', 'Rubber'];
+Q.gampaha_d_industries = ['Agriculture', 'Textile', 'Fishing', 'Rubber'];
 
 //kalutara
 Q.kalutara_d_sinhala = 87.2;
