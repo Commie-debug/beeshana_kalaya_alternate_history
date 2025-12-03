@@ -110,6 +110,18 @@ JVP: [+ jvp_ideology : ideology +]
 
 UNP: [+ unp_ideology : ideology +]
 
+TULF: [+ tulf_ideology : ideology +]
+
+ACTC: [+ actc_ideology : ideology +]
+
+CPSL: [+ cpsl_ideology : ideology +]
+
+LSSP: [+ lssp_ideology : ideology +]
+
+NSSP: [+ nssp_ideology : ideology +]
+
+CWC: [+ cwc_ideology : ideology +]
+
 @paramilitaries
 on-arrival: {!
 if (Q.slfpt_strength) {
