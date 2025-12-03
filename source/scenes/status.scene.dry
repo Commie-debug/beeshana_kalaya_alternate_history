@@ -467,6 +467,10 @@ Textile & apparel: [+ textile : sectordev +]
 
 Textile & apparel Nationalisation: [+ textile_national : nationalisation +]
 
+Rubber: [+ rubber : sectordev +]
+
+Rubber Nationalisation: [+ rubber_national : nationalisation +]
+
 = Tax Rates (Based on 1981 baseline)
 
 Lower income tax: [+ lower_tax_rates +]
