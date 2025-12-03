@@ -377,10 +377,10 @@ Q.colombo_d_seats = 21;
 Q.colombo_d_industries = ['tourism', 'textile', 'fishing'];
 
 //gampaha
-Q.gampaha_d_sinhala = 77.61;
+Q.gampaha_d_sinhala = 92;
 Q.gampaha_d_sltamil = 10.04;
 Q.gampaha_d_itamil = 1.17;
-Q.gampaha_d_muslim = 8.22;
+Q.gampaha_d_muslim = 2.7;
 Q.gampaha_d_other = 2.96;
 
 Q.gampaha_d_worker = 100;
