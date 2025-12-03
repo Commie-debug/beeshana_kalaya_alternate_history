@@ -87,7 +87,7 @@ Q.actc_relation = 10;
 
 //party ideologies
 //based on the ideology qdisplay
-Q.jvp_ideology = 1;
+Q.jvp_ideology = 0;
 Q.unp_ideology = 14;
 Q.tulf_ideology = 7;
 Q.actc_ideology = 6;
