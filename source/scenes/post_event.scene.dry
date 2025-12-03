@@ -84,6 +84,10 @@ Q.nationalist_strength = 100*Q.nationalist_strength/total_strength;
 
 var total_dissent = Q.left_strength*Q.left_dissent + Q.nationalist_strength*Q.nnationalist_dissent;
 
+//militant control
+var total_ne_control = Q.jaffna_d_control + Q.kilinochchi_d_control + Q.mannar_d_control + Q.mullaitivu_d_control + Q.vavuniya_d_control + Q.batticaloa_d_control + Q.ampara_d_control + Q.trincomalee_d_control;  
+
+Q.militant_control = total_ne_control*1/800
 
 Q.dissent = 0.01*total_dissent/total_strength;
 Q.dissent_percent = Q.dissent*100;
