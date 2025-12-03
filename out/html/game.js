@@ -498,159 +498,484 @@
 function Colombo_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Colombo";
+  Q.district_sinhala = Q.colombo_d_sinhala;
+  Q.district_sltamil = Q.colombo_d_sltamil;
+  Q.district_itamil = Q.colombo_d_itamil;
+  Q.district_muslim = Q.colombo_d_muslim;
+  Q.district_others = Q.colombo_d_other;
+  Q.district_worker = Q.colombo_d_worker;
+  Q.district_middle = Q.colombo_d_middle;
+  Q.district_upper = Q.colombo_d_upper;
+  Q.district_rural = Q.colombo_d_rural;
+  Q.district_control = Q.colombo_d_control;
+  Q.district_infastructure = Q.colombo_d_infastructure;
+  Q.district_seats = Q.colombo_d_seats;
+  Q.district_industries = Q.colombo_d_industries;  
   window.updateSidebarRight(); 
 }
 
 function Gampaha_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Gampaha";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.gampaha_d_sinhala;
+  Q.district_sltamil = Q.gampaha_d_sltamil;
+  Q.district_itamil = Q.gampaha_d_itamil;
+  Q.district_muslim = Q.gampaha_d_muslim;
+  Q.district_others = Q.gampaha_d_other;
+  Q.district_worker = Q.gampaha_d_worker;
+  Q.district_middle = Q.gampaha_d_middle;
+  Q.district_upper = Q.gampaha_d_upper;
+  Q.district_rural = Q.gampaha_d_rural;
+  Q.district_control = Q.gampaha_d_control;
+  Q.district_infastructure = Q.gampaha_d_infastructure;
+  Q.district_seats = Q.gampaha_d_seats;
+  Q.district_industries = Q.gampaha_d_industries;
+  window.updateSidebarRight();
 }
 
 function Kalutara_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Kalutara";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.kalutara_d_sinhala;
+  Q.district_sltamil = Q.kalutara_d_sltamil;
+  Q.district_itamil = Q.kalutara_d_itamil;
+  Q.district_muslim = Q.kalutara_d_muslim;
+  Q.district_others = Q.kalutara_d_other;
+  Q.district_worker = Q.kalutara_d_worker;
+  Q.district_middle = Q.kalutara_d_middle;
+  Q.district_upper = Q.kalutara_d_upper;
+  Q.district_rural = Q.kalutara_d_rural;
+  Q.district_control = Q.kalutara_d_control;
+  Q.district_infastructure = Q.kalutara_d_infastructure;
+  Q.district_seats = Q.kalutara_d_seats;
+  Q.district_industries = Q.kalutara_d_industries;
+  window.updateSidebarRight();
 }
 
 // Central Province
 function Kandy_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Kandy";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.kandy_d_sinhala;
+  Q.district_sltamil = Q.kandy_d_sltamil;
+  Q.district_itamil = Q.kandy_d_itamil;
+  Q.district_muslim = Q.kandy_d_muslim;
+  Q.district_others = Q.kandy_d_other;
+  Q.district_worker = Q.kandy_d_worker;
+  Q.district_middle = Q.kandy_d_middle;
+  Q.district_upper = Q.kandy_d_upper;
+  Q.district_rural = Q.kandy_d_rural;
+  Q.district_control = Q.kandy_d_control;
+  Q.district_infastructure = Q.kandy_d_infastructure;
+  Q.district_seats = Q.kandy_d_seats;
+  Q.district_industries = Q.kandy_d_industries;
+  window.updateSidebarRight();
 }
 
 function Matale_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Matale";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.matale_d_sinhala;
+  Q.district_sltamil = Q.matale_d_sltamil;
+  Q.district_itamil = Q.matale_d_itamil;
+  Q.district_muslim = Q.matale_d_muslim;
+  Q.district_others = Q.matale_d_other;
+  Q.district_worker = Q.matale_d_worker;
+  Q.district_middle = Q.matale_d_middle;
+  Q.district_upper = Q.matale_d_upper;
+  Q.district_rural = Q.matale_d_rural;
+  Q.district_control = Q.matale_d_control;
+  Q.district_infastructure = Q.matale_d_infastructure;
+  Q.district_seats = Q.matale_d_seats;
+  Q.district_industries = Q.matale_d_industries;
+  window.updateSidebarRight();
 }
 
 function NuwaraEliya_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Nuwara Eliya";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.nuwaraeliya_d_sinhala;
+  Q.district_sltamil = Q.nuwaraeliya_d_sltamil;
+  Q.district_itamil = Q.nuwaraeliya_d_itamil;
+  Q.district_muslim = Q.nuwaraeliya_d_muslim;
+  Q.district_others = Q.nuwaraeliya_d_other;
+  Q.district_worker = Q.nuwaraeliya_d_worker;
+  Q.district_middle = Q.nuwaraeliya_d_middle;
+  Q.district_upper = Q.nuwaraeliya_d_upper;
+  Q.district_rural = Q.nuwaraeliya_d_rural;
+  Q.district_control = Q.nuwaraeliya_d_control;
+  Q.district_infastructure = Q.nuwaraeliya_d_infastructure;
+  Q.district_seats = Q.nuwaraeliya_d_seats;
+  Q.district_industries = Q.nuwaraeliya_d_industries;
+  window.updateSidebarRight();
 }
 
 // Southern Province
 function Galle_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Galle";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.galle_d_sinhala;
+  Q.district_sltamil = Q.galle_d_sltamil;
+  Q.district_itamil = Q.galle_d_itamil;
+  Q.district_muslim = Q.galle_d_muslim;
+  Q.district_others = Q.galle_d_other;
+  Q.district_worker = Q.galle_d_worker;
+  Q.district_middle = Q.galle_d_middle;
+  Q.district_upper = Q.galle_d_upper;
+  Q.district_rural = Q.galle_d_rural;
+  Q.district_control = Q.galle_d_control;
+  Q.district_infastructure = Q.galle_d_infastructure;
+  Q.district_seats = Q.galle_d_seats;
+  Q.district_industries = Q.galle_d_industries;
+  window.updateSidebarRight();
 }
 
 function Matara_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Matara";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.matara_d_sinhala;
+  Q.district_sltamil = Q.matara_d_sltamil;
+  Q.district_itamil = Q.matara_d_itamil;
+  Q.district_muslim = Q.matara_d_muslim;
+  Q.district_others = Q.matara_d_other;
+  Q.district_worker = Q.matara_d_worker;
+  Q.district_middle = Q.matara_d_middle;
+  Q.district_upper = Q.matara_d_upper;
+  Q.district_rural = Q.matara_d_rural;
+  Q.district_control = Q.matara_d_control;
+  Q.district_infastructure = Q.matara_d_infastructure;
+  Q.district_seats = Q.matara_d_seats;
+  Q.district_industries = Q.matara_d_industries;
+  window.updateSidebarRight();
 }
 
 function Hambantota_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Hambantota";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.hambantota_d_sinhala;
+  Q.district_sltamil = Q.hambantota_d_sltamil;
+  Q.district_itamil = Q.hambantota_d_itamil;
+  Q.district_muslim = Q.hambantota_d_muslim;
+  Q.district_others = Q.hambantota_d_other;
+  Q.district_worker = Q.hambantota_d_worker;
+  Q.district_middle = Q.hambantota_d_middle;
+  Q.district_upper = Q.hambantota_d_upper;
+  Q.district_rural = Q.hambantota_d_rural;
+  Q.district_control = Q.hambantota_d_control;
+  Q.district_infastructure = Q.hambantota_d_infastructure;
+  Q.district_seats = Q.hambantota_d_seats;
+  Q.district_industries = Q.hambantota_d_industries;
+  window.updateSidebarRight();
 }
 
 // Northern Province
 function Jaffna_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Jaffna";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.jaffna_d_sinhala;
+  Q.district_sltamil = Q.jaffna_d_sltamil;
+  Q.district_itamil = Q.jaffna_d_itamil;
+  Q.district_muslim = Q.jaffna_d_muslim;
+  Q.district_others = Q.jaffna_d_other;
+  Q.district_worker = Q.jaffna_d_worker;
+  Q.district_middle = Q.jaffna_d_middle;
+  Q.district_upper = Q.jaffna_d_upper;
+  Q.district_rural = Q.jaffna_d_rural;
+  Q.district_control = Q.jaffna_d_control;
+  Q.district_infastructure = Q.jaffna_d_infastructure;
+  Q.district_seats = Q.jaffna_d_seats;
+  Q.district_industries = Q.jaffna_d_industries;
+  window.updateSidebarRight();
 }
 
 function Kilinochchi_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Kilinochchi";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.kilinochchi_d_sinhala;
+  Q.district_sltamil = Q.kilinochchi_d_sltamil;
+  Q.district_itamil = Q.kilinochchi_d_itamil;
+  Q.district_muslim = Q.kilinochchi_d_muslim;
+  Q.district_others = Q.kilinochchi_d_other;
+  Q.district_worker = Q.kilinochchi_d_worker;
+  Q.district_middle = Q.kilinochchi_d_middle;
+  Q.district_upper = Q.kilinochchi_d_upper;
+  Q.district_rural = Q.kilinochchi_d_rural;
+  Q.district_control = Q.kilinochchi_d_control;
+  Q.district_infastructure = Q.kilinochchi_d_infastructure;
+  Q.district_seats = Q.kilinochchi_d_seats;
+  Q.district_industries = Q.kilinochchi_d_industries;
+  window.updateSidebarRight();
 }
 
 function Mannar_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Mannar";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.mannar_d_sinhala;
+  Q.district_sltamil = Q.mannar_d_sltamil;
+  Q.district_itamil = Q.mannar_d_itamil;
+  Q.district_muslim = Q.mannar_d_muslim;
+  Q.district_others = Q.mannar_d_other;
+  Q.district_worker = Q.mannar_d_worker;
+  Q.district_middle = Q.mannar_d_middle;
+  Q.district_upper = Q.mannar_d_upper;
+  Q.district_rural = Q.mannar_d_rural;
+  Q.district_control = Q.mannar_d_control;
+  Q.district_infastructure = Q.mannar_d_infastructure;
+  Q.district_seats = Q.mannar_d_seats;
+  Q.district_industries = Q.mannar_d_industries;
+  window.updateSidebarRight();
 }
 
 function Mullaitivu_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Mullaitivu";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.mullaitivu_d_sinhala;
+  Q.district_sltamil = Q.mullaitivu_d_sltamil;
+  Q.district_itamil = Q.mullaitivu_d_itamil;
+  Q.district_muslim = Q.mullaitivu_d_muslim;
+  Q.district_others = Q.mullaitivu_d_other;
+  Q.district_worker = Q.mullaitivu_d_worker;
+  Q.district_middle = Q.mullaitivu_d_middle;
+  Q.district_upper = Q.mullaitivu_d_upper;
+  Q.district_rural = Q.mullaitivu_d_rural;
+  Q.district_control = Q.mullaitivu_d_control;
+  Q.district_infastructure = Q.mullaitivu_d_infastructure;
+  Q.district_seats = Q.mullaitivu_d_seats;
+  Q.district_industries = Q.mullaitivu_d_industries;
+  window.updateSidebarRight();
 }
 
 function Vavuniya_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Vavuniya";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.vavuniya_d_sinhala;
+  Q.district_sltamil = Q.vavuniya_d_sltamil;
+  Q.district_itamil = Q.vavuniya_d_itamil;
+  Q.district_muslim = Q.vavuniya_d_muslim;
+  Q.district_others = Q.vavuniya_d_other;
+  Q.district_worker = Q.vavuniya_d_worker;
+  Q.district_middle = Q.vavuniya_d_middle;
+  Q.district_upper = Q.vavuniya_d_upper;
+  Q.district_rural = Q.vavuniya_d_rural;
+  Q.district_control = Q.vavuniya_d_control;
+  Q.district_infastructure = Q.vavuniya_d_infastructure;
+  Q.district_seats = Q.vavuniya_d_seats;
+  Q.district_industries = Q.vavuniya_d_industries;
+  window.updateSidebarRight();
 }
 
 // Eastern Province
 function Batticaloa_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Batticaloa";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.batticaloa_d_sinhala;
+  Q.district_sltamil = Q.batticaloa_d_sltamil;
+  Q.district_itamil = Q.batticaloa_d_itamil;
+  Q.district_muslim = Q.batticaloa_d_muslim;
+  Q.district_others = Q.batticaloa_d_other;
+  Q.district_worker = Q.batticaloa_d_worker;
+  Q.district_middle = Q.batticaloa_d_middle;
+  Q.district_upper = Q.batticaloa_d_upper;
+  Q.district_rural = Q.batticaloa_d_rural;
+  Q.district_control = Q.batticaloa_d_control;
+  Q.district_infastructure = Q.batticaloa_d_infastructure;
+  Q.district_seats = Q.batticaloa_d_seats;
+  Q.district_industries = Q.batticaloa_d_industries;
+  window.updateSidebarRight();
 }
 
 function Ampara_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Ampara";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.ampara_d_sinhala;
+  Q.district_sltamil = Q.ampara_d_sltamil;
+  Q.district_itamil = Q.ampara_d_itamil;
+  Q.district_muslim = Q.ampara_d_muslim;
+  Q.district_others = Q.ampara_d_other;
+  Q.district_worker = Q.ampara_d_worker;
+  Q.district_middle = Q.ampara_d_middle;
+  Q.district_upper = Q.ampara_d_upper;
+  Q.district_rural = Q.ampara_d_rural;
+  Q.district_control = Q.ampara_d_control;
+  Q.district_infastructure = Q.ampara_d_infastructure;
+  Q.district_seats = Q.ampara_d_seats;
+  Q.district_industries = Q.ampara_d_industries;
+  window.updateSidebarRight();
 }
 
 function Trincomalee_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Trincomalee";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.trincomalee_d_sinhala;
+  Q.district_sltamil = Q.trincomalee_d_sltamil;
+  Q.district_itamil = Q.trincomalee_d_itamil;
+  Q.district_muslim = Q.trincomalee_d_muslim;
+  Q.district_others = Q.trincomalee_d_other;
+  Q.district_worker = Q.trincomalee_d_worker;
+  Q.district_middle = Q.trincomalee_d_middle;
+  Q.district_upper = Q.trincomalee_d_upper;
+  Q.district_rural = Q.trincomalee_d_rural;
+  Q.district_control = Q.trincomalee_d_control;
+  Q.district_infastructure = Q.trincomalee_d_infastructure;
+  Q.district_seats = Q.trincomalee_d_seats;
+  Q.district_industries = Q.trincomalee_d_industries;
+  window.updateSidebarRight();
 }
 
 // North Western Province
 function Kurunegala_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Kurunegala";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.kurunegala_d_sinhala;
+  Q.district_sltamil = Q.kurunegala_d_sltamil;
+  Q.district_itamil = Q.kurunegala_d_itamil;
+  Q.district_muslim = Q.kurunegala_d_muslim;
+  Q.district_others = Q.kurunegala_d_other;
+  Q.district_worker = Q.kurunegala_d_worker;
+  Q.district_middle = Q.kurunegala_d_middle;
+  Q.district_upper = Q.kurunegala_d_upper;
+  Q.district_rural = Q.kurunegala_d_rural;
+  Q.district_control = Q.kurunegala_d_control;
+  Q.district_infastructure = Q.kurunegala_d_infastructure;
+  Q.district_seats = Q.kurunegala_d_seats;
+  Q.district_industries = Q.kurunegala_d_industries;
+  window.updateSidebarRight();
 }
 
 function Puttalam_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Puttalam";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.puttalam_d_sinhala;
+  Q.district_sltamil = Q.puttalam_d_sltamil;
+  Q.district_itamil = Q.puttalam_d_itamil;
+  Q.district_muslim = Q.puttalam_d_muslim;
+  Q.district_others = Q.puttalam_d_other;
+  Q.district_worker = Q.puttalam_d_worker;
+  Q.district_middle = Q.puttalam_d_middle;
+  Q.district_upper = Q.puttalam_d_upper;
+  Q.district_rural = Q.puttalam_d_rural;
+  Q.district_control = Q.puttalam_d_control;
+  Q.district_infastructure = Q.puttalam_d_infastructure;
+  Q.district_seats = Q.puttalam_d_seats;
+  Q.district_industries = Q.puttalam_d_industries;
+  window.updateSidebarRight();
 }
 
 // North Central Province
 function Anuradhapura_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Anuradhapura";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.anuradhapura_d_sinhala;
+  Q.district_sltamil = Q.anuradhapura_d_sltamil;
+  Q.district_itamil = Q.anuradhapura_d_itamil;
+  Q.district_muslim = Q.anuradhapura_d_muslim;
+  Q.district_others = Q.anuradhapura_d_other;
+  Q.district_worker = Q.anuradhapura_d_worker;
+  Q.district_middle = Q.anuradhapura_d_middle;
+  Q.district_upper = Q.anuradhapura_d_upper;
+  Q.district_rural = Q.anuradhapura_d_rural;
+  Q.district_control = Q.anuradhapura_d_control;
+  Q.district_infastructure = Q.anuradhapura_d_infastructure;
+  Q.district_seats = Q.anuradhapura_d_seats;
+  Q.district_industries = Q.anuradhapura_d_industries;
+  window.updateSidebarRight();
 }
 
 function Polonnaruwa_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Polonnaruwa";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.polonnaruwa_d_sinhala;
+  Q.district_sltamil = Q.polonnaruwa_d_sltamil;
+  Q.district_itamil = Q.polonnaruwa_d_itamil;
+  Q.district_muslim = Q.polonnaruwa_d_muslim;
+  Q.district_others = Q.polonnaruwa_d_other;
+  Q.district_worker = Q.polonnaruwa_d_worker;
+  Q.district_middle = Q.polonnaruwa_d_middle;
+  Q.district_upper = Q.polonnaruwa_d_upper;
+  Q.district_rural = Q.polonnaruwa_d_rural;
+  Q.district_control = Q.polonnaruwa_d_control;
+  Q.district_infastructure = Q.polonnaruwa_d_infastructure;
+  Q.district_seats = Q.polonnaruwa_d_seats;
+  Q.district_industries = Q.polonnaruwa_d_industries;
+  window.updateSidebarRight();
 }
 
 // Uva Province
 function Badulla_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Badulla";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.badulla_d_sinhala;
+  Q.district_sltamil = Q.badulla_d_sltamil;
+  Q.district_itamil = Q.badulla_d_itamil;
+  Q.district_muslim = Q.badulla_d_muslim;
+  Q.district_others = Q.badulla_d_other;
+  Q.district_worker = Q.badulla_d_worker;
+  Q.district_middle = Q.badulla_d_middle;
+  Q.district_upper = Q.badulla_d_upper;
+  Q.district_rural = Q.badulla_d_rural;
+  Q.district_control = Q.badulla_d_control;
+  Q.district_infastructure = Q.badulla_d_infastructure;
+  Q.district_seats = Q.badulla_d_seats;
+  Q.district_industries = Q.badulla_d_industries;
+  window.updateSidebarRight();
 }
 
 function Monaragala_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Monaragala";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.monaragala_d_sinhala;
+  Q.district_sltamil = Q.monaragala_d_sltamil;
+  Q.district_itamil = Q.monaragala_d_itamil;
+  Q.district_muslim = Q.monaragala_d_muslim;
+  Q.district_others = Q.monaragala_d_other;
+  Q.district_worker = Q.monaragala_d_worker;
+  Q.district_middle = Q.monaragala_d_middle;
+  Q.district_upper = Q.monaragala_d_upper;
+  Q.district_rural = Q.monaragala_d_rural;
+  Q.district_control = Q.monaragala_d_control;
+  Q.district_infastructure = Q.monaragala_d_infastructure;
+  Q.district_seats = Q.monaragala_d_seats;
+  Q.district_industries = Q.monaragala_d_industries;
+  window.updateSidebarRight();
 }
 
 // Sabaragamuwa Province
 function Ratnapura_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Ratnapura";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.ratnapura_d_sinhala;
+  Q.district_sltamil = Q.ratnapura_d_sltamil;
+  Q.district_itamil = Q.ratnapura_d_itamil;
+  Q.district_muslim = Q.ratnapura_d_muslim;
+  Q.district_others = Q.ratnapura_d_other;
+  Q.district_worker = Q.ratnapura_d_worker;
+  Q.district_middle = Q.ratnapura_d_middle;
+  Q.district_upper = Q.ratnapura_d_upper;
+  Q.district_rural = Q.ratnapura_d_rural;
+  Q.district_control = Q.ratnapura_d_control;
+  Q.district_infastructure = Q.ratnapura_d_infastructure;
+  Q.district_seats = Q.ratnapura_d_seats;
+  Q.district_industries = Q.ratnapura_d_industries;
+  window.updateSidebarRight();
 }
 
 function Kegalle_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
   Q.district_name = "Kegalle";
-  window.updateSidebarRight(); 
+  Q.district_sinhala = Q.kegalle_d_sinhala;
+  Q.district_sltamil = Q.kegalle_d_sltamil;
+  Q.district_itamil = Q.kegalle_d_itamil;
+  Q.district_muslim = Q.kegalle_d_muslim;
+  Q.district_others = Q.kegalle_d_other;
+  Q.district_worker = Q.kegalle_d_worker;
+  Q.district_middle = Q.kegalle_d_middle;
+  Q.district_upper = Q.kegalle_d_upper;
+  Q.district_rural = Q.kegalle_d_rural;
+  Q.district_control = Q.kegalle_d_control;
+  Q.district_infastructure = Q.kegalle_d_infastructure;
+  Q.district_seats = Q.kegalle_d_seats;
+  Q.district_industries = Q.kegalle_d_industries;
+  window.updateSidebarRight();
 }
 
 document.addEventListener('mousemove', e => {
