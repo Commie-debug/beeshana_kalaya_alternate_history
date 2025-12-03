@@ -815,14 +815,14 @@ Q.classes = ['upper', 'middle', 'worker', 'rural'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
 
 // formable parties
-Q.slpp_formed = 0;
-Q.slmp_formed = 0;
-Q.slmc_formed = 0;
-Q.npp_formed = 0;
-Q.mep_formed = 0;
-Q.eros_formed = 0;
-Q.dplf_formed = 0;
-Q.pflt_formed = 0;
+Q.slpp_formed = 1;
+Q.slmp_formed = 1;
+Q.slmc_formed = 1;
+Q.npp_formed = 1;
+Q.mep_formed = 1;
+Q.eros_formed = 1;
+Q.dplf_formed = 1;
+Q.pflt_formed = 1;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
