@@ -106,7 +106,9 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 
 = Party Ideologies
 
-JVP: [? if jvp_ideology >= 3 : Revolutionary socialism ?][? if jvp_ideology < 3 and jvp_ideology >= 6 : Left-wing nationalism?][? if jvp_ideology > 6 : Sinhalese nationalism ?]
+JVP: [+ jvp_ideology : ideology +]
+
+UNP: [+ unp_ideology : ideology +]
 
 @paramilitaries
 on-arrival: {!
