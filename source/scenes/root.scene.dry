@@ -87,9 +87,12 @@ Q.cwc_relation = 10;
 Q.actc_relation = 10;
 
 //party ideologies
-//JVP is defined between revolutionary socialism at 1 to sinhalese budhist nationalism and anti-tamil racism at 10
+//JVP is defined between revolutionary socialism to sinhalese budhist nationalism
 Q.jvp_ideology = 4;
 //jvp_ideology >= 3 : Revolutionary socialism, if jvp_ideology < 3 and jvp_ideology >= 6 : Left-wing nationalism, if jvp_ideology > 6 : Sinhalese nationalism 
+Q.unp_ideology = 5;
+
+
 
 //inter party dynamics
 //jvp
