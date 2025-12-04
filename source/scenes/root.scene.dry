@@ -807,10 +807,10 @@ Q.muslim_proportion = 7.05;
 Q.other_proportion = 0.78;
 
 // Proportion of different social groups
-Q.worker = 25; 
-Q.middle = 20;
+Q.worker = 15; 
+Q.middle = 14;
 Q.upper = 1; 
-Q.rural = 54;
+Q.rural = 70;
 
 Q.ethnic =['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
 Q.classes = ['upper', 'middle', 'worker', 'rural'];
