@@ -25,30 +25,27 @@ Western Province
 <button class="status_button" onclick="Colombo_info()">Colombo District</button>
 <button class="status_button" onclick="Kalutara_info()">Kalutara District</button>
 
-{!NE_province_formed:
-Northern Province
-<button class="status_button" onclick="Jaffna_info()">Jaffna District</button>
-<button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button>
-<button class="status_button" onclick="Mannar_info()">Mannar District</button>
-<button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button>
-<button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button>
-Eastern Province
-<button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button>
-<button class="status_button" onclick="Ampara_info()">Ampara District</button>
-<button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button>
-}
+[? if NE_province_formed = 0 : Northern Province ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Jaffna_info()">Jaffna District</button> ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button> ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Mannar_info()">Mannar District</button> ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button> ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button> ?]
 
-{?NE_province_formed:
-North Eastern Province
-<button class="status_button" onclick="Jaffna_info()">Jaffna District</button>
-<button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button>
-<button class="status_button" onclick="Mannar_info()">Mannar District</button>
-<button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button>
-<button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button>
-<button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button>
-<button class="status_button" onclick="Ampara_info()">Ampara District</button>
-<button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button>
-}
+[? if NE_province_formed = 0 : Eastern Province ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button> ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Ampara_info()">Ampara District</button> ?]
+[? if NE_province_formed = 0 : <button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button> ?]
+
+[? if NE_province_formed = 1 : North Eastern Province ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Jaffna_info()">Jaffna District</button> ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button> ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Mannar_info()">Mannar District</button> ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button> ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button> ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button> ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Ampara_info()">Ampara District</button> ?]
+[? if NE_province_formed = 1 : <button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button> ?]
 
 Central Province
 <button class="status_button" onclick="Kandy_info()">Kandy District</button>
