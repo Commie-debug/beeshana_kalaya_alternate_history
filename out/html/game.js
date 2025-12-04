@@ -202,26 +202,25 @@
   
     function getIdeologyText(value) {
         if (value === undefined || value === null) return 'Unknown';
-        if (value == 0) return 'Revolutionary Socialism';
-        if (value == 1) return 'Marxism-Leninism';
-        if (value == 2) return 'Democratic Socialism';
-        if (value == 3) return 'Left-wing Nationalism';
-        if (value == 4) return 'Trotskyism';
-        if (value == 5) return 'Sinhalese Buddhist Nationalism';
-        if (value == 6) return 'Federalism';
-        if (value == 7) return 'Tamil Eelam Separatism';
-        if (value == 8) return 'Indian Tamil Rights';
-        if (value == 9) return 'Muslim Minority Politics';
-        if (value == 10) return 'Social Democracy';
-        if (value == 11) return 'Tamil Nationalism';
-        if (value == 12) return 'Left Wing Populism';
-        if (value == 13) return 'Conservatism';
-        if (value == 14) return 'Neo Liberalism';
-        if (value == 15) return 'Anti-Imperialism';
-        if (value == 16) return 'Unitary Stateism';
+        if (value == 0) return '<span style="color: #8B0000;">Revolutionary Socialism</span>';
+        if (value == 1) return '<span style="color: #FF0000;">Marxism-Leninism</span>';
+        if (value == 2) return '<span style="color: #E34234;">Democratic Socialism</span>';
+        if (value == 3) return '<span style="color: #CD5C5C;">Left-wing Nationalism</span>';
+        if (value == 4) return '<span style="color: #B22222;">Trotskyism</span>';
+        if (value == 5) return '<span style="color: #FF8C00;">Sinhalese Buddhist Nationalism</span>';
+        if (value == 6) return '<span style="color: #9932CC;">Federalism</span>';
+        if (value == 7) return '<span style="color: #DAA520;">Tamil Eelam Separatism</span>';
+        if (value == 8) return '<span style="color: #D2691E;">Indian Tamil Rights</span>';
+        if (value == 9) return '<span style="color: #20B2AA;">Muslim Minority Politics</span>';
+        if (value == 10) return '<span style="color: #FF69B4;">Social Democracy</span>';
+        if (value == 11) return '<span style="color: #FFA500;">Tamil Nationalism</span>';
+        if (value == 12) return '<span style="color: #FF6347;">Left Wing Populism</span>';
+        if (value == 13) return '<span style="color: #228B22;">Conservatism</span>';
+        if (value == 14) return '<span style="color: #32CD32;">Neo Liberalism</span>';
+        if (value == 15) return '<span style="color: #800080;">Anti-Imperialism</span>';
+        if (value == 16) return '<span style="color: #2E0854;">Unitary Stateism</span>';
         return 'Unknown';
     }
-
     //To check if extra dynamic or not
     function getDynamicTooltipContent(searchString, baseTooltip) {
         var Q = window.dendryUI && window.dendryUI.dendryEngine && window.dendryUI.dendryEngine.state ? 
