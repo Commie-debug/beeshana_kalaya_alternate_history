@@ -25,7 +25,7 @@ Western Province
 <button class="status_button" onclick="Colombo_info()">Colombo District</button>
 <button class="status_button" onclick="Kalutara_info()">Kalutara District</button>
 
-@if NE_province_formed = 0
+{!NE_province_formed:
 Northern Province
 <button class="status_button" onclick="Jaffna_info()">Jaffna District</button>
 <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button>
@@ -36,9 +36,9 @@ Eastern Province
 <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button>
 <button class="status_button" onclick="Ampara_info()">Ampara District</button>
 <button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button>
-@endif
+}
 
-@if NE_province_formed = 1
+{?NE_province_formed:
 North Eastern Province
 <button class="status_button" onclick="Jaffna_info()">Jaffna District</button>
 <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button>
@@ -48,7 +48,7 @@ North Eastern Province
 <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button>
 <button class="status_button" onclick="Ampara_info()">Ampara District</button>
 <button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button>
-@endif
+}
 
 Central Province
 <button class="status_button" onclick="Kandy_info()">Kandy District</button>
