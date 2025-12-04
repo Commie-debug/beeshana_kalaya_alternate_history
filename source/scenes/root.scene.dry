@@ -214,7 +214,7 @@ Q.tamil_radicalisation = 4;
 //who controls jaffna, greatly boosts militant support if held but will make inter violence more common
 Q.jaffna_control = "Sri Lanka";
 //wheter the NE province has been formed
-Q.NE_province_formed = 0;
+Q.NE_province_formed = 1;
 
 //economics
 Q.budget = 4;
