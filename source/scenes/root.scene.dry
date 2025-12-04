@@ -224,7 +224,6 @@ Q.inequality = 0.5;
 Q.foreign_debt = 5;
 Q.inflation = 2.9;
 Q.economic_growth = 4.4;
-Q.exchange_rate = 1;
 
 // economic expansion timer
 Q.economic_expansion = 0;
