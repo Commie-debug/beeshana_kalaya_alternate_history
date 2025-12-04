@@ -24,7 +24,18 @@ Herein contains relevant information about the government and politics of Sri La
 
 @map
 go-to: menu
-face-image: WIP.jpg
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "WIP.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 
 A map of Sri Lanka
 
