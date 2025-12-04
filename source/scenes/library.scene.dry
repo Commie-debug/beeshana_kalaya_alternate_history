@@ -9,6 +9,7 @@ Herein contains relevant information about the government and politics of Sri La
 
 @menu
 
+- @map: Map of Sri Lanka
 - @government: Sri Lanka's system of government
 - @timeline: Timeline of Sri Lanka before 1981
 - @curr_gov: Current government details
@@ -20,6 +21,13 @@ Herein contains relevant information about the government and politics of Sri La
 - @factions: Internal factions
 - @figures: Figures and charts
 - @backSpecialScene: Exit library.
+
+@map
+go-to: menu
+face-image: WIP.jpg
+
+A map of Sri Lanka
+
 
 @government
 go-to: menu
