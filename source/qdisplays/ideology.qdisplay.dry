@@ -1,18 +1,18 @@
 
-(..0) Revolutionary Socialism
-(1..1) Marxism-Leninism
-(2..2) Democratic Socialism
-(3..3) Left-wing Nationalism
-(4..4) Trotskyism
-(5..5) Sinhalese Buddhist Nationalism
-(6..6) Federalism
-(7..7) Tamil Eelam Seperatism
-(8..8) Indian Tamil Rights
-(9..9) Muslim Minority Politics
-(10..10) Social Democracy
-(11..11) Tamil Nationalism
-(12..12) Left Wing Populism
-(13..13) Conservatism
-(14..14) Neo Liberalism
-(15..15) Anti-Imperialism
-(16..16) Unitary Stateism
+(..0) <span style="color: #8B0000;">Revolutionary Socialism</span>
+(1..1) <span style="color: #FF0000;">Marxism-Leninism</span>
+(2..2) <span style="color: #E34234;">Democratic Socialism</span>
+(3..3) <span style="color: #CD5C5C;">Left-wing Nationalism</span>
+(4..4) <span style="color: #B22222;">Trotskyism</span>
+(5..5) <span style="color: #FF8C00;">Sinhalese Buddhist Nationalism</span>
+(6..6) <span style="color: #9932CC;">Federalism</span>
+(7..7) <span style="color: #DAA520;">Tamil Eelam Separatism</span>
+(8..8) <span style="color: #D2691E;">Indian Tamil Rights</span>
+(9..9) <span style="color: #20B2AA;">Muslim Minority Politics</span>
+(10..10) <span style="color: #FF69B4;">Social Democracy</span>
+(11..11) <span style="color: #FFA500;">Tamil Nationalism</span>
+(12..12) <span style="color: #FF6347;">Left Wing Populism</span>
+(13..13) <span style="color: #228B22;">Conservatism</span>
+(14..14) <span style="color: #32CD32;">Neo Liberalism</span>
+(15..15) <span style="color: #800080;">Anti-Imperialism</span>
+(16..16) <span style="color: #2E0854;">Unitary Stateism</span>
