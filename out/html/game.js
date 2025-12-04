@@ -201,6 +201,28 @@
         return '<span style="color: #008000;">Completely loyal</span>';
     }
 
+    function getIdeologyText(value) {
+        if (value === undefined || value === null) return '';
+        if (value == 0) return 'Revolutionary Socialism';
+        if (value == 1) return 'Marxism-Leninism';
+        if (value == 2) return 'Democratic Socialism';
+        if (value == 3) return 'Left-wing Nationalism';
+        if (value == 4) return 'Trotskyism';
+        if (value == 5) return 'Sinhalese Buddhist Nationalism';
+        if (value == 6) return 'Federalism';
+        if (value == 7) return 'Tamil Eelam Separatism';
+        if (value == 8) return 'Indian Tamil Rights';
+        if (value == 9) return 'Muslim Minority Politics';
+        if (value == 10) return 'Social Democracy';
+        if (value == 11) return 'Tamil Nationalism';
+        if (value == 12) return 'Left Wing Populism';
+        if (value == 13) return 'Conservatism';
+        if (value == 14) return 'Neo Liberalism';
+        if (value == 15) return 'Anti-Imperialism';
+        if (value == 16) return 'Unitary Stateism';
+        return 'Unknown';
+    }
+
     //To check if extra dynamic or not
     function getDynamicTooltipContent(searchString, baseTooltip) {
         var Q = window.dendryUI && window.dendryUI.dendryEngine && window.dendryUI.dendryEngine.state ? 
@@ -210,82 +232,82 @@
         
         if (searchString === 'SLPP' && Q.slpp_relation !== undefined) {
             var relationText = getRelationshipText(Q.slpp_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'SLMP' && Q.slmp_relation !== undefined) {
             var relationText = getRelationshipText(Q.slmp_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
       
         if (searchString === 'UNP' && Q.unp_relation !== undefined) {
             var relationText = getRelationshipText(Q.unp_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'TULF' && Q.tulf_relation !== undefined) {
             var relationText = getRelationshipText(Q.tulf_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'PFLT' && Q.pflt_relation !== undefined) {
             var relationText = getRelationshipText(Q.pflt_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'ACTC' && Q.actc_relation !== undefined) {
             var relationText = getRelationshipText(Q.actc_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'EROS' && Q.eros_relation !== undefined) {
             var relationText = getRelationshipText(Q.eros_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'DPLF' && Q.dplf_relation !== undefined) {
             var relationText = getRelationshipText(Q.dplf_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'JVP' && Q.jvp_relation !== undefined) {
             var relationText = getRelationshipText(Q.jvp_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'NPP' && Q.npp_relation !== undefined) {
             var relationText = getRelationshipText(Q.npp_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'CPSL' && Q.cpsl_relation !== undefined) {
             var relationText = getRelationshipText(Q.cpsl_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'LSSP' && Q.lssp_relation !== undefined) {
             var relationText = getRelationshipText(Q.lssp_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'NSSP' && Q.nssp_relation !== undefined) {
             var relationText = getRelationshipText(Q.nssp_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'MEP' && Q.mep_relation !== undefined) {
             var relationText = getRelationshipText(Q.mep_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'CWC' && Q.cwc_relation !== undefined) {
             var relationText = getRelationshipText(Q.cwc_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'SLMC' && Q.slmc_relation !== undefined) {
             var relationText = getRelationshipText(Q.slmc_relation);
-            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
 
         if (searchString === 'JSS' && Q.jss_strength !== undefined) {
