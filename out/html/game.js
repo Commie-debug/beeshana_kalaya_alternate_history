@@ -188,7 +188,6 @@
         return '<span style="color: #FF0000;">Very high</span>';
     }
     
-    // Helper function to convert loyalty/morale number to text
     function getLoyaltyText(value) {
         if (value === undefined || value === null) return 'Unknown';
         if (value <= 0.06) return '<span style="color: #FF0000;">Completely disloyal</span>';
@@ -200,9 +199,9 @@
         if (value <= 0.95) return '<span style="color: #32CD32;">Generally loyal**</span>';
         return '<span style="color: #008000;">Completely loyal</span>';
     }
-
+  
     function getIdeologyText(value) {
-        if (value === undefined || value === null) return '';
+        if (value === undefined || value === null) return 'Unknown';
         if (value == 0) return 'Revolutionary Socialism';
         if (value == 1) return 'Marxism-Leninism';
         if (value == 2) return 'Democratic Socialism';
@@ -232,81 +231,97 @@
         
         if (searchString === 'SLPP' && Q.slpp_relation !== undefined) {
             var relationText = getRelationshipText(Q.slpp_relation);
+            var ideology = getIdeologyText(Q.slpp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'SLMP' && Q.slmp_relation !== undefined) {
             var relationText = getRelationshipText(Q.slmp_relation);
+            var ideology = getIdeologyText(Q.slmp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
       
         if (searchString === 'UNP' && Q.unp_relation !== undefined) {
             var relationText = getRelationshipText(Q.unp_relation);
+            var ideology = getIdeologyText(Q.unp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'TULF' && Q.tulf_relation !== undefined) {
             var relationText = getRelationshipText(Q.tulf_relation);
+            var ideology = getIdeologyText(Q.tulf_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'PFLT' && Q.pflt_relation !== undefined) {
             var relationText = getRelationshipText(Q.pflt_relation);
+            var ideology = getIdeologyText(Q.pflt_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'ACTC' && Q.actc_relation !== undefined) {
             var relationText = getRelationshipText(Q.actc_relation);
+            var ideology = getIdeologyText(Q.actc_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'EROS' && Q.eros_relation !== undefined) {
             var relationText = getRelationshipText(Q.eros_relation);
+            var ideology = getIdeologyText(Q.eros_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'DPLF' && Q.dplf_relation !== undefined) {
             var relationText = getRelationshipText(Q.dplf_relation);
+            var ideology = getIdeologyText(Q.dplf_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'JVP' && Q.jvp_relation !== undefined) {
             var relationText = getRelationshipText(Q.jvp_relation);
+            var ideology = getIdeologyText(Q.jvp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'NPP' && Q.npp_relation !== undefined) {
             var relationText = getRelationshipText(Q.npp_relation);
+            var ideology = getIdeologyText(Q.npp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'CPSL' && Q.cpsl_relation !== undefined) {
             var relationText = getRelationshipText(Q.cpsl_relation);
+            var ideology = getIdeologyText(Q.cpsl_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'LSSP' && Q.lssp_relation !== undefined) {
             var relationText = getRelationshipText(Q.lssp_relation);
+            var ideology = getIdeologyText(Q.lssp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'NSSP' && Q.nssp_relation !== undefined) {
             var relationText = getRelationshipText(Q.nssp_relation);
+            var ideology = getIdeologyText(Q.nssp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'MEP' && Q.mep_relation !== undefined) {
             var relationText = getRelationshipText(Q.mep_relation);
+            var ideology = getIdeologyText(Q.mep_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'CWC' && Q.cwc_relation !== undefined) {
             var relationText = getRelationshipText(Q.cwc_relation);
+            var ideology = getIdeologyText(Q.cwc_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
         
         if (searchString === 'SLMC' && Q.slmc_relation !== undefined) {
             var relationText = getRelationshipText(Q.slmc_relation);
+            var ideology = getIdeologyText(Q.slmc_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideology + '<br>Relation: ' + relationText;
         }
 
