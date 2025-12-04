@@ -373,10 +373,10 @@ Q.colombo_d_itamil = 1.2;
 Q.colombo_d_muslim = 8.2;
 Q.colombo_d_other = 3.0;
 
-Q.colombo_d_worker = 100;
-Q.colombo_d_middle = 100;
-Q.colombo_d_upper = 100;
-Q.colombo_d_rural = 100;
+Q.colombo_d_upper = 3;
+Q.colombo_d_middle = 38;
+Q.colombo_d_worker = 47;
+Q.colombo_d_rural = 12;
 
 Q.colombo_d_control = 100;
 Q.colombo_d_infastructure = 0.85;
@@ -390,10 +390,10 @@ Q.gampaha_d_itamil = 0.4;
 Q.gampaha_d_muslim = 2.7;
 Q.gampaha_d_other = 1.4;
 
-Q.gampaha_d_worker = 100;
-Q.gampaha_d_middle = 100;
-Q.gampaha_d_upper = 100;
-Q.gampaha_d_rural = 100;
+Q.gampaha_d_upper = 2;
+Q.gampaha_d_middle = 23;
+Q.gampaha_d_worker = 28;
+Q.gampaha_d_rural = 47;
 
 Q.gampaha_d_control = 100;
 Q.gampaha_d_infastructure = 0.70;
@@ -407,10 +407,10 @@ Q.kalutara_d_itamil = 4.1;
 Q.kalutara_d_muslim = 7.4;
 Q.kalutara_d_other = 0.3;
 
-Q.kalutara_d_worker = 100;
-Q.kalutara_d_middle = 100;
-Q.kalutara_d_upper = 100;
-Q.kalutara_d_rural = 100;
+Q.kalutara_d_upper = 1;
+Q.kalutara_d_middle = 14;
+Q.kalutara_d_worker = 18;
+Q.kalutara_d_rural = 67;
 
 Q.kalutara_d_control = 100;
 Q.kalutara_d_infastructure = 0.60;
@@ -425,10 +425,10 @@ Q.jaffna_d_itamil = 2.4;
 Q.jaffna_d_muslim = 1.6;
 Q.jaffna_d_other = 0.0;
 
-Q.jaffna_d_worker = 100;
-Q.jaffna_d_middle = 100;
-Q.jaffna_d_upper = 100;
-Q.jaffna_d_rural = 100;
+Q.jaffna_d_upper = 2;
+Q.jaffna_d_middle = 23;
+Q.jaffna_d_worker = 12;
+Q.jaffna_d_rural = 63;
 
 Q.jaffna_d_control = 100;
 Q.jaffna_d_infastructure = 0.50;
@@ -442,10 +442,10 @@ Q.kilinochchi_d_itamil = 2.4;
 Q.kilinochchi_d_muslim = 1.7;
 Q.kilinochchi_d_other = 0.2;
 
-Q.kilinochchi_d_worker = 100;
-Q.kilinochchi_d_middle = 100;
-Q.kilinochchi_d_upper = 100;
-Q.kilinochchi_d_rural = 100;
+Q.kilinochchi_d_upper = 1;
+Q.kilinochchi_d_middle = 8;
+Q.kilinochchi_d_worker = 9;
+Q.kilinochchi_d_rural = 82;
 
 Q.kilinochchi_d_control = 100;
 Q.kilinochchi_d_infastructure = 0.30;
@@ -459,10 +459,10 @@ Q.mannar_d_itamil = 13.0;
 Q.mannar_d_muslim = 26.1;
 Q.mannar_d_other = 1.4;
 
-Q.mannar_d_worker = 100;
-Q.mannar_d_middle = 100;
-Q.mannar_d_upper = 100;
-Q.mannar_d_rural = 100;
+Q.mannar_d_upper = 1;
+Q.mannar_d_middle = 9;
+Q.mannar_d_worker = 11;
+Q.mannar_d_rural = 79;
 
 Q.mannar_d_control = 100;
 Q.mannar_d_infastructure = 0.30;
@@ -476,10 +476,10 @@ Q.mullaitivu_d_itamil = 14.5;
 Q.mullaitivu_d_muslim = 4.7;
 Q.mullaitivu_d_other = 0.1;
 
-Q.mullaitivu_d_worker = 100;
-Q.mullaitivu_d_middle = 100;
-Q.mullaitivu_d_upper = 100;
-Q.mullaitivu_d_rural = 100;
+Q.mullaitivu_d_upper = 1;
+Q.mullaitivu_d_middle = 7;
+Q.mullaitivu_d_worker = 8;
+Q.mullaitivu_d_rural = 84;
 
 Q.mullaitivu_d_control = 100;
 Q.mullaitivu_d_infastructure = 0.25;
@@ -493,10 +493,10 @@ Q.vavuniya_d_itamil = 19.6;
 Q.vavuniya_d_muslim = 6.8;
 Q.vavuniya_d_other = 0.2;
 
-Q.vavuniya_d_worker = 100;
-Q.vavuniya_d_middle = 100;
-Q.vavuniya_d_upper = 100;
-Q.vavuniya_d_rural = 100;
+Q.vavuniya_d_upper = 1;
+Q.vavuniya_d_middle = 11;
+Q.vavuniya_d_worker = 10;
+Q.vavuniya_d_rural = 78;
 
 Q.vavuniya_d_control = 100;
 Q.vavuniya_d_infastructure = 0.30;
@@ -511,10 +511,10 @@ Q.batticaloa_d_itamil = 1.2;
 Q.batticaloa_d_muslim = 23.9;
 Q.batticaloa_d_other = 0.7;
 
-Q.batticaloa_d_worker = 100;
-Q.batticaloa_d_middle = 100;
-Q.batticaloa_d_upper = 100;
-Q.batticaloa_d_rural = 100;
+Q.batticaloa_d_upper = 1;
+Q.batticaloa_d_middle = 13;
+Q.batticaloa_d_worker = 11;
+Q.batticaloa_d_rural = 75;
 
 Q.batticaloa_d_control = 100;
 Q.batticaloa_d_infastructure = 0.35;
@@ -528,10 +528,10 @@ Q.ampara_d_itamil = 0.4;
 Q.ampara_d_muslim = 41.5;
 Q.ampara_d_other = 0.4;
 
-Q.ampara_d_worker = 100;
-Q.ampara_d_middle = 100;
-Q.ampara_d_upper = 100;
-Q.ampara_d_rural = 100;
+Q.ampara_d_upper = 1;
+Q.ampara_d_middle = 11;
+Q.ampara_d_worker = 10;
+Q.ampara_d_rural = 78;
 
 Q.ampara_d_control = 100;
 Q.ampara_d_infastructure = 0.35;
@@ -545,10 +545,10 @@ Q.trincomalee_d_itamil = 2.1;
 Q.trincomalee_d_muslim = 29.3;
 Q.trincomalee_d_other = 0.9;
 
-Q.trincomalee_d_worker = 100;
-Q.trincomalee_d_middle = 100;
-Q.trincomalee_d_upper = 100;
-Q.trincomalee_d_rural = 100;
+Q.trincomalee_d_upper = 1;
+Q.trincomalee_d_middle = 13;
+Q.trincomalee_d_worker = 13;
+Q.trincomalee_d_rural = 73;
 
 Q.trincomalee_d_control = 100;
 Q.trincomalee_d_infastructure = 0.40;
@@ -563,10 +563,10 @@ Q.kandy_d_itamil = 9.4;
 Q.kandy_d_muslim = 10.5;
 Q.kandy_d_other = 0.8;
 
-Q.kandy_d_worker = 100;
-Q.kandy_d_middle = 100;
-Q.kandy_d_upper = 100;
-Q.kandy_d_rural = 100;
+Q.kandy_d_upper = 2;
+Q.kandy_d_middle = 20;
+Q.kandy_d_worker = 17;
+Q.kandy_d_rural = 61;
 
 Q.kandy_d_control = 100;
 Q.kandy_d_infastructure = 0.55;
@@ -580,10 +580,10 @@ Q.matale_d_itamil = 7.0;
 Q.matale_d_muslim = 7.0;
 Q.matale_d_other = 0.5;
 
-Q.matale_d_worker = 100;
-Q.matale_d_middle = 100;
-Q.matale_d_upper = 100;
-Q.matale_d_rural = 100;
+Q.matale_d_upper = 1;
+Q.matale_d_middle = 12;
+Q.matale_d_worker = 13;
+Q.matale_d_rural = 74;
 
 Q.matale_d_control = 100;
 Q.matale_d_infastructure = 0.40;
@@ -597,10 +597,10 @@ Q.nuwaraeliya_d_itamil = 42.7;
 Q.nuwaraeliya_d_muslim = 2.0;
 Q.nuwaraeliya_d_other = 0.5;
 
-Q.nuwaraeliya_d_worker = 100;
-Q.nuwaraeliya_d_middle = 100;
-Q.nuwaraeliya_d_upper = 100;
-Q.nuwaraeliya_d_rural = 100;
+Q.nuwaraeliya_d_upper = 1;
+Q.nuwaraeliya_d_middle = 10;
+Q.nuwaraeliya_d_worker = 18;
+Q.nuwaraeliya_d_rural = 71;
 
 Q.nuwaraeliya_d_control = 100;
 Q.nuwaraeliya_d_infastructure = 0.45;
@@ -615,10 +615,10 @@ Q.galle_d_itamil = 1.4;
 Q.galle_d_muslim = 3.2;
 Q.galle_d_other = 0.2;
 
-Q.galle_d_worker = 100;
-Q.galle_d_middle = 100;
-Q.galle_d_upper = 100;
-Q.galle_d_rural = 100;
+Q.galle_d_upper = 1;
+Q.galle_d_middle = 15;
+Q.galle_d_worker = 14;
+Q.galle_d_rural = 70;
 
 Q.galle_d_control = 100;
 Q.galle_d_infastructure = 0.55;
@@ -632,10 +632,10 @@ Q.matara_d_itamil = 2.2;
 Q.matara_d_muslim = 2.5;
 Q.matara_d_other = 0.0;
 
-Q.matara_d_worker = 100;
-Q.matara_d_middle = 100;
-Q.matara_d_upper = 100;
-Q.matara_d_rural = 100;
+Q.matara_d_upper = 1;
+Q.matara_d_middle = 13;
+Q.matara_d_worker = 12;
+Q.matara_d_rural = 74;
 
 Q.matara_d_control = 100;
 Q.matara_d_infastructure = 0.45;
@@ -649,10 +649,10 @@ Q.hambantota_d_itamil = 0.1;
 Q.hambantota_d_muslim = 1.2;
 Q.hambantota_d_other = 1.0;
 
-Q.hambantota_d_worker = 100;
-Q.hambantota_d_middle = 100;
-Q.hambantota_d_upper = 100;
-Q.hambantota_d_rural = 100;
+Q.hambantota_d_upper = 1;
+Q.hambantota_d_middle = 10;
+Q.hambantota_d_worker = 9;
+Q.hambantota_d_rural = 80;
 
 Q.hambantota_d_control = 100;
 Q.hambantota_d_infastructure = 0.35;
@@ -667,10 +667,10 @@ Q.kurunegala_d_itamil = 0.6;
 Q.kurunegala_d_muslim = 5.0;
 Q.kurunegala_d_other = 0.3;
 
-Q.kurunegala_d_worker = 100;
-Q.kurunegala_d_middle = 100;
-Q.kurunegala_d_upper = 100;
-Q.kurunegala_d_rural = 100;
+Q.kurunegala_d_upper = 1;
+Q.kurunegala_d_middle = 13;
+Q.kurunegala_d_worker = 12;
+Q.kurunegala_d_rural = 74;
 
 Q.kurunegala_d_control = 100;
 Q.kurunegala_d_infastructure = 0.45;
@@ -684,10 +684,10 @@ Q.puttalam_d_itamil = 0.5;
 Q.puttalam_d_muslim = 9.9;
 Q.puttalam_d_other = 0.4;
 
-Q.puttalam_d_worker = 100;
-Q.puttalam_d_middle = 100;
-Q.puttalam_d_upper = 100;
-Q.puttalam_d_rural = 100;
+Q.puttalam_d_upper = 1;
+Q.puttalam_d_middle = 11;
+Q.puttalam_d_worker = 12;
+Q.puttalam_d_rural = 76;
 
 Q.puttalam_d_control = 100;
 Q.puttalam_d_infastructure = 0.40;
@@ -702,10 +702,10 @@ Q.anuradhapura_d_itamil = 0.1;
 Q.anuradhapura_d_muslim = 7.1;
 Q.anuradhapura_d_other = 0.3;
 
-Q.anuradhapura_d_worker = 100;
-Q.anuradhapura_d_middle = 100;
-Q.anuradhapura_d_upper = 100;
-Q.anuradhapura_d_rural = 100;
+Q.anuradhapura_d_upper = 1;
+Q.anuradhapura_d_middle = 11;
+Q.anuradhapura_d_worker = 10;
+Q.anuradhapura_d_rural = 78;
 
 Q.anuradhapura_d_control = 100;
 Q.anuradhapura_d_infastructure = 0.40;
@@ -719,10 +719,10 @@ Q.polonnaruwa_d_itamil = 0.1;
 Q.polonnaruwa_d_muslim = 6.4;
 Q.polonnaruwa_d_other = 0.3;
 
-Q.polonnaruwa_d_worker = 100;
-Q.polonnaruwa_d_middle = 100;
-Q.polonnaruwa_d_upper = 100;
-Q.polonnaruwa_d_rural = 100;
+Q.polonnaruwa_d_upper = 1;
+Q.polonnaruwa_d_middle = 9;
+Q.polonnaruwa_d_worker = 9;
+Q.polonnaruwa_d_rural = 81;
 
 Q.polonnaruwa_d_control = 100;
 Q.polonnaruwa_d_infastructure = 0.40;
@@ -737,10 +737,10 @@ Q.monaragala_d_itamil = 3.2;
 Q.monaragala_d_muslim = 1.9;
 Q.monaragala_d_other = 0.3;
 
-Q.monaragala_d_worker = 100;
-Q.monaragala_d_middle = 100;
-Q.monaragala_d_upper = 100;
-Q.monaragala_d_rural = 100;
+Q.monaragala_d_upper = 1;
+Q.monaragala_d_middle = 8;
+Q.monaragala_d_worker = 8;
+Q.monaragala_d_rural = 83;
 
 Q.monaragala_d_control = 100;
 Q.monaragala_d_infastructure = 0.30;
@@ -754,10 +754,10 @@ Q.badulla_d_itamil = 20.2;
 Q.badulla_d_muslim = 4.2;
 Q.badulla_d_other = 0.6;
 
-Q.badulla_d_worker = 100;
-Q.badulla_d_middle = 100;
-Q.badulla_d_upper = 100;
-Q.badulla_d_rural = 100;
+Q.badulla_d_upper = 1;
+Q.badulla_d_middle = 12;
+Q.badulla_d_worker = 14;
+Q.badulla_d_rural = 73;
 
 Q.badulla_d_control = 100;
 Q.badulla_d_infastructure = 0.40;
@@ -772,10 +772,10 @@ Q.ratnapura_d_itamil = 10.6;
 Q.ratnapura_d_muslim = 1.7;
 Q.ratnapura_d_other = 0.4;
 
-Q.ratnapura_d_worker = 100;
-Q.ratnapura_d_middle = 100;
-Q.ratnapura_d_upper = 100;
-Q.ratnapura_d_rural = 100;
+Q.ratnapura_d_upper = 1;
+Q.ratnapura_d_middle = 12;
+Q.ratnapura_d_worker = 15;
+Q.ratnapura_d_rural = 72;
 
 Q.ratnapura_d_control = 100;
 Q.ratnapura_d_infastructure = 0.40;
@@ -789,10 +789,10 @@ Q.kegalle_d_itamil = 6.7;
 Q.kegalle_d_muslim = 5.0;
 Q.kegalle_d_other = 0.2;
 
-Q.kegalle_d_worker = 100;
-Q.kegalle_d_middle = 100;
-Q.kegalle_d_upper = 100;
-Q.kegalle_d_rural = 100;
+Q.kegalle_d_upper = 1;
+Q.kegalle_d_middle = 12;
+Q.kegalle_d_worker = 14;
+Q.kegalle_d_rural = 73;
 
 Q.kegalle_d_control = 100;
 Q.kegalle_d_infastructure = 0.45;
