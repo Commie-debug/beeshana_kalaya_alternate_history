@@ -30,7 +30,7 @@ on-display: {!
 
     var image = new Image();  
     image.className = "face-img";  
-    image.src = "WIP.jpg";  
+    image.src = "img/WIP.jpg";  
 
     cardEl.appendChild(image);  
     var contentDiv = document.querySelector("#page #mid_panel #content");
