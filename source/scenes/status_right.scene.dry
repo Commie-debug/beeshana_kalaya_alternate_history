@@ -25,20 +25,21 @@ Western Province
 <button class="status_button" onclick="Colombo_info()">Colombo District</button>
 <button class="status_button" onclick="Kalutara_info()">Kalutara District</button>
 
-
-[? if NE_province_formed = 0 : Northern Province 
+@if NE_province_formed = 0
+Northern Province
 <button class="status_button" onclick="Jaffna_info()">Jaffna District</button>
 <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button>
 <button class="status_button" onclick="Mannar_info()">Mannar District</button>
 <button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button>
 <button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button>
-
 Eastern Province
 <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button>
 <button class="status_button" onclick="Ampara_info()">Ampara District</button>
-<button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button> ?]
+<button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button>
+@endif
 
-[? if NE_province_formed = 1 : North Eastern Province
+@if NE_province_formed = 1
+North Eastern Province
 <button class="status_button" onclick="Jaffna_info()">Jaffna District</button>
 <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button>
 <button class="status_button" onclick="Mannar_info()">Mannar District</button>
@@ -46,7 +47,8 @@ Eastern Province
 <button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button>
 <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button>
 <button class="status_button" onclick="Ampara_info()">Ampara District</button>
-<button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button> ?]
+<button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button>
+@endif
 
 Central Province
 <button class="status_button" onclick="Kandy_info()">Kandy District</button>
