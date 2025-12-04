@@ -316,7 +316,7 @@ Q.labour_union_jvp_control = 8;
 Q.labour_union_independent_control = 10;
 
 //addition of nationalisation level of each sector
-Q.total_nationalisation = Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national;
+Q.total_nationalisation = Q.rubber_national + Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national;
 
 //students
 //uses strenght qdisplay
