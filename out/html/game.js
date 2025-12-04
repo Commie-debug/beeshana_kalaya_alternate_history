@@ -195,8 +195,8 @@
         if (value <= 0.31) return '<span style="color: #FF8C00;">Generally disloyal</span>';
         if (value <= 0.41) return '<span style="color: #FFA500;">Mostly disloyal</span>';
         if (value <= 0.54) return '<span style="color: #FFD700;">Divided</span>';
-        if (value <= 0.71) return '<span style="color: #9ACD32;">Mostly loyal**</span>';
-        if (value <= 0.95) return '<span style="color: #32CD32;">Generally loyal**</span>';
+        if (value <= 0.71) return '<span style="color: #9ACD32;">Mostly loyal</span>';
+        if (value <= 0.95) return '<span style="color: #32CD32;">Generally loyal</span>';
         return '<span style="color: #008000;">Completely loyal</span>';
     }
   
