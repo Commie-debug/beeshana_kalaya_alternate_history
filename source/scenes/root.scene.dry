@@ -127,12 +127,12 @@ Q.unpt_militancy = 0.24;
 Q.jvpt_strength = 2000;
 Q.jvpt_militancy = 0.24;
 
-Q.epdp_formed = 0;
-Q.blackcats_formed = 0;
-Q.eagles_formed = 0;
+Q.epdp_formed = 1;
+Q.blackcats_formed = 1;
+Q.eagles_formed = 1;
 
-Q.prra_formed = 0;
-Q.djv_formed = 0;
+Q.prra_formed = 1;
+Q.djv_formed = 1;
 
 //tamil rebel groups
 
@@ -151,8 +151,8 @@ Q.telo_militancy = 0.24;
 Q.plote_strength = 200;
 Q.plote_militancy = 0.24;
 
-Q.endlf_formed = 0;//(amalgam of splinter groups from the EPRLF, PLOTE and TELO. Will form if Tamil unity is too low as a pro india faction and party)
-Q.tna_formed = 0;//tamil national army as a pro-india armed group to fight the LTTE
+Q.endlf_formed = 1;//(amalgam of splinter groups from the EPRLF, PLOTE and TELO. Will form if Tamil unity is too low as a pro india faction and party)
+Q.tna_formed = 1;//tamil national army as a pro-india armed group to fight the LTTE
 Q.enlf_formed = 0;//Eelam national liberation front(every Tamil group united into one umbrella organisation between 84 and 86)
 
 // army and official paramilitaries
@@ -160,8 +160,8 @@ Q.enlf_formed = 0;//Eelam national liberation front(every Tamil group united int
 Q.homeg_civilsec_strength = 100;
 Q.homeg_civilsec_morale = 0.7;
 
-Q.civilsec_formed = 0;
-Q.stf_formed = 0;
+Q.civilsec_formed = 1;
+Q.stf_formed = 1;
 
 Q.slp_strength = 10;
 Q.slp_morale = 0.7;
