@@ -150,6 +150,10 @@ const colourList = [{
         word: "DJV",
         style: "color: #FF3131; font-weight: bold;"
     },
+    {
+        word: "EPDP",
+        style: "color: #F0BC02; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -307,6 +311,10 @@ const tooltipList = [{
     {
     searchString: "Special Task Force",
     explanationText: "<img src=img/logos/STF_Logo.png> Special Task Force"
+    },
+    {
+    searchString: "EPDP",
+    explanationText: "<img src=img/logos/EPDP_Logo.png> Eelam Peoples Democratic Party"
     },
     {
     searchString: "DJV",
