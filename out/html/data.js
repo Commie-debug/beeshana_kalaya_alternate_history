@@ -15,6 +15,10 @@ const colourList = [{
         style: "color: #954535; font-weight: bold;"
     },
     {
+        word: "Special Task Force",
+        style: "color: #33A343; font-weight: bold;"
+    },
+    {
         word: "Home Guard",
         style: "color: #954535; font-weight: bold;"
     },
@@ -295,6 +299,10 @@ const tooltipList = [{
     {
     searchString: "Eastern Province",
     explanationText: "<img src=img/logos/provinces/Eastern_Map.png> Eastern Province"
+    },
+    {
+    searchString: "Special Task Force",
+    explanationText: "<img src=img/logos/STF_Logo.png> Special Task Force"
     },
 ];
 
