@@ -154,6 +154,26 @@ const colourList = [{
         word: "EPDP",
         style: "color: #F0BC02; font-weight: bold;"
     },
+    {
+        word: "PRRA",
+        style: "color: #B22222; font-weight: bold;"
+    },
+    {
+        word: "Black Cats",
+        style: "color: #808080; font-weight: bold;"
+    },
+    {
+        word: "Eagles Of The Central Highlands",
+        style: "color: #808080; font-weight: bold;"
+    },
+    {
+        word: "TNA",
+        style: "color: #FF7B00; font-weight: bold;"
+    },
+    {
+        word: "ENDLF",
+        style: "color: #FF5E5E; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -319,6 +339,26 @@ const tooltipList = [{
     {
     searchString: "DJV",
     explanationText: "<img src=img/logos/DJV_Logo.png> Deshapremi Janatha Vyaparaya <br> (Patriotic People's Movement)"
+    },
+    {
+    searchString: "PRRA",
+    explanationText: "<img src=img/WIP.jpg> Peoples Revolutionary <br> Red Army"
+    },
+    {
+    searchString: "Eagles",
+    explanationText: "<img src=img/WIP.jpg> Eagles Of The Central Highlands"
+    },
+    {
+    searchString: "Black Cats",
+    explanationText: "<img src=img/WIP.jpg> Black Cats"
+    },
+    {
+    searchString: "TNA",
+    explanationText: "<img src=img/logos/TNA_Logo.png> Tamil National Army"
+    },
+    {
+    searchString: "ENDLF",
+    explanationText: "<img src=img/logos/ENDLF_Logo.png> Eelam National Democratic <br> Liberation Front"
     },
 ];
 
