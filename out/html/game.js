@@ -359,6 +359,12 @@
             var militancy = getMilitancyText(Q.djv_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
+      
+        if (searchString === 'EPDP' && Q.epdp_strength !== undefined) {
+            var strength = Q.epdp_strength ? Q.epdp_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.epdp_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
         
         if (searchString === 'Sri Lanka Armed Forces' && Q.slaf_strength !== undefined) {
             var strength = Q.slaf_strength ? Q.slaf_strength : '0';
