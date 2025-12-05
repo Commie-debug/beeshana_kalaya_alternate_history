@@ -330,7 +330,7 @@ const tooltipList = [{
     },
     {
     searchString: "Special Task Force",
-    explanationText: "<img src=img/logos/STF_Logo.png> Special Task Force"
+    explanationText: "<img src=img/WIP.jpg> Special Task Force"
     },
     {
     searchString: "EPDP",
