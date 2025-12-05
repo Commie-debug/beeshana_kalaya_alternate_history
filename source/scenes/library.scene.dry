@@ -379,9 +379,11 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 <span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-The Left consists of the parties socialist and social democratic traditions. Advocates for a 
+The Left consists of the parties socialist and social democratic traditions. Trade unionists, socialists and all manner of proggressive exist here (Though many are also nationalist).
 
 <span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
+
+The Nationalsist consist of the right wing of the SLFP. Sinhalese Buddhist Nationalism and at the very least, and opposition to tamils is prevalent.
 
 @figures
 title: Figures and Charts
