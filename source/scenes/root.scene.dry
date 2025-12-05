@@ -168,6 +168,9 @@ Q.slp_morale = 0.7;
 Q.slaf_strength = 100;
 Q.slaf_morale = 0.7;
 
+// for how stong the security forces (offical army, police and paramilitaries) are in terms of arms, tactics, experience etc. Uses strenght qdisplay
+Q.security_forces_strenght = 9;
+
 // The state of the country
 
 //southern/sinhalese/jvp situatiion
