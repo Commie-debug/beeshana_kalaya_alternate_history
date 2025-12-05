@@ -170,6 +170,8 @@ Q.homeg_civilsec_morale = 0.7;
 
 Q.civilsec_formed = 1;
 Q.stf_formed = 1;
+Q.stf_strength = 0;
+Q.stf_morale = 0;
 
 Q.slp_strength = 10;
 Q.slp_morale = 0.7;
