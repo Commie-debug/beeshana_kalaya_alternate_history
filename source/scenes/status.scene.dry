@@ -165,6 +165,27 @@ if (Q.plote_strength) {
 if (Q.eprlf_strength) {
     Q.eprlf_strength_2 = Q.eprlf_strength.toFixed(1);
 }
+if (Q.prra_strength) {
+    Q.prra_strength_2 = Q.prra_strength.toFixed(1);
+}
+if (Q.djv_strength) {
+    Q.djv_strength_2 = Q.djv_strength.toFixed(1);
+}
+if (Q.eagles_strength) {
+    Q.eagles_strength_2 = Q.eagles_strength.toFixed(1);
+}
+if (Q.epdp_strength) {
+    Q.epdp_strength_2 = Q.epdp_strength.toFixed(1);
+}
+if (Q.tna_strength) {
+    Q.tna_strength_2 = Q.tna_strength.toFixed(1);
+}
+if (Q.endlf_strength) {
+    Q.endlf_strength_2 = Q.endlf_strength.toFixed(1);
+}
+if (Q.blackcats_strength) {
+    Q.blackcats_strength_2 = Q.blackcats_strength.toFixed(1);
+}
 if (Q.ipkf_morale) {
     Q.ipkf_morale_2 = Q.ipkf_morale.toFixed(1);
 }
