@@ -359,7 +359,13 @@
             var morale = getLoyaltyText(Q.slaf_morale);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
         }
-        
+
+        if (searchString === 'Special Task Force' && Q.stf_strength !== undefined) {
+            var strength = Q.stf_strength ? Q.stf_strength : '0';
+            var morale = getLoyaltyText(Q.stf_morale);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+        }
+      
         if (searchString === 'Sri Lanka Police' && Q.slp_strength !== undefined) {
             var strength = Q.slp_strength ? Q.slp_strength : '0';
             var morale = getLoyaltyText(Q.slp_morale);
