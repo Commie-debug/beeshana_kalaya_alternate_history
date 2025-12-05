@@ -180,6 +180,8 @@ if (Q.ipkf_morale) {
 
 = Military & State Paramilitaries
 
+Security Forces Strenght: [+ security_forces_strenght : strenght +]
+
 Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops. Morale: [+ slaf_morale : loyalty +]
 
 Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : loyalty +]
