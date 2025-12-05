@@ -163,7 +163,7 @@ const colourList = [{
         style: "color: #808080; font-weight: bold;"
     },
     {
-        word: "Eagles Of The Central Highlands",
+        word: "Eagles",
         style: "color: #808080; font-weight: bold;"
     },
     {
