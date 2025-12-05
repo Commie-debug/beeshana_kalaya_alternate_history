@@ -161,7 +161,7 @@ Q.homeg_civilsec_strength = 100;
 Q.homeg_civilsec_morale = 0.7;
 
 Q.civilsec_formed = 0;
-Q.special_task_force_formed = 0;
+Q.stf_formed = 0;
 
 Q.slp_strength = 10;
 Q.slp_morale = 0.7;
