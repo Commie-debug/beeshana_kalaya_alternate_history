@@ -9,7 +9,7 @@ on-display: {!
 
     var image = new Image();  
     image.className = "face-img";  
-    image.src = "img/Election_Time.jpg";  
+    image.src = "img/Election_Time.png";  
 
     cardEl.appendChild(image);  
     var contentDiv = document.querySelector("#page #mid_panel #content");
