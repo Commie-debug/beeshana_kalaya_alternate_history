@@ -145,7 +145,11 @@ const colourList = [{
     {
         word: "NF",
         style: "color: #FF4500; font-weight: bold;"
-    }
+    },
+    {
+        word: "DJV",
+        style: "color: #FF3131; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -303,6 +307,10 @@ const tooltipList = [{
     {
     searchString: "Special Task Force",
     explanationText: "<img src=img/logos/STF_Logo.png> Special Task Force"
+    },
+    {
+    searchString: "DJV",
+    explanationText: "<img src=img/logos/DJV_Logo.png> Deshapremi Janatha Vyaparaya <br> (Patriotic People's Movement)"
     },
 ];
 
