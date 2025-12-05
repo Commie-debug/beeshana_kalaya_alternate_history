@@ -365,6 +365,36 @@
             var militancy = getMilitancyText(Q.epdp_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
+
+        if (searchString === 'PRRA' && Q.prra_strength !== undefined) {
+            var strength = Q.prra_strength ? Q.prra_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.prra_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+
+        if (searchString === 'Eagles Of The Central Highlands' && Q.eagles_strength !== undefined) {
+            var strength = Q.eagles_strength ? Q.eagles_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.eagles_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+
+        if (searchString === 'Black Cats' && Q.blackcats_strength !== undefined) {
+            var strength = Q.blackcats_strength ? Q.blackcats_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.blackcats_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+
+       if (searchString === 'ENDLF' && Q.endlf_strength !== undefined) {
+            var strength = Q.endlf_strength ? Q.endlf_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.endlf_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
+
+        if (searchString === 'TNA' && Q.tna_strength !== undefined) {
+            var strength = Q.tna_strength ? Q.tna_strength.toFixed(1) : '0';
+            var militancy = getMilitancyText(Q.tna_militancy);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+        }
         
         if (searchString === 'Sri Lanka Armed Forces' && Q.slaf_strength !== undefined) {
             var strength = Q.slaf_strength ? Q.slaf_strength : '0';
