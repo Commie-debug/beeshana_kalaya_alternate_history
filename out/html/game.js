@@ -372,7 +372,7 @@
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
 
-        if (searchString === 'Eagles Of The Central Highlands' && Q.eagles_strength !== undefined) {
+        if (searchString === 'Eagles' && Q.eagles_strength !== undefined) {
             var strength = Q.eagles_strength ? Q.eagles_strength.toFixed(1) : '0';
             var militancy = getMilitancyText(Q.eagles_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
