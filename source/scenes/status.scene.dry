@@ -160,11 +160,19 @@ if (Q.ipkf_morale) {
 
 <span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span> Strength: [+ slfpt_strength_2 +] thousand, Militarization: [+ slfpt_militancy : militancy +]
 
+[? if prra_formed = 1 : PRRA: Strength: [+ prra_strength_2 +] thousand, Militarization: [+ prra_militancy : militancy +] ?]
+
 <span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span> Strength: [+ jss_strength_2 +] thousand, Militarization: [+ jss_militancy : militancy +]
 
 <span class="tooltip-text" title="Thugs affiliated with the UNP" style="color: #006400;">**UNP Thugs**</span> Strength: [+ unpt_strength_2 +] thousand, Militarization: [+ unpt_militancy : militancy +]
 
 <span class="tooltip-text" title="Thugs affiliated with the JVP" style="color: #FF2226;">**JVP Thugs**</span> Strength: [+ jvpt_strength_2 +] thousand, Militarization: [+ jvpt_militancy : militancy +]
+
+[? if djv_formed = 1 : DJV: Strength: [+ djv_strength_2 +] thousand, Militarization: [+ djv_militancy : militancy +] ?]
+
+[? if blackcats_formed = 1 : Black Cats: Strength: [+ blackcats_strength_2 +] thousand, Militarization: [+ blackcats_militancy : militancy +] ?]
+
+[? if eagles_formed = 1 : Eagles: Strength: [+ eagles_strength_2 +] thousand, Militarization: [+ eagles_militancy : militancy +] ?]
 
 = Tamil Militant Groups
 
@@ -190,11 +198,17 @@ Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : l
 
 [? if civilsec_formed = 0 : Home Guard ?][? if civilsec_formed = 1 : Civil Security ?]:[+ homeg_civilsec_strength +] thousand members. Morale: [+ homeg_civilsec_morale : loyalty +]
 
+[? if epdp_formed = 1 : EPDP: Strength: [+ epdp_strength_2 +] thousand, Militarization: [+ epdp_militancy : militancy +] ?]
+
 [? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +] ?]
 
 [? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
 
 [? if ipkf_formed = 1 : IPKF Morale: [+ ipkf_morale_2 : loyalty +] ?]
+
+[? if tna_formed = 1 : TNA: Strength: [+ tna_strength_2 +] thousand, Militarization: [+ tna_militancy : militancy +] ?]
+
+[? if endlf_formed = 1 : ENDLF: Strength: [+ endlf_strength_2 +] thousand, Militarization: [+ endlf_militancy : militancy +] ?]
 
 @polls
 on-arrival: {!
