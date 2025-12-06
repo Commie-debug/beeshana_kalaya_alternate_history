@@ -552,11 +552,7 @@ USSR/Eastern Bloc: [+ ussr_relation : relationships +]
 
 Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
-[? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +] ?]
-
-[? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
-
-[? if ipkf_formed = 1 : IPKF morale: [+ ipkf_morale_2 : loyalty +] ?]
+[? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +], Strenght: [+ ipkf_size +] thousand troops, Morale: [+ ipkf_morale_2 : loyalty +] ?]
 
 Indian ruling party: [+ india_government +]
 
