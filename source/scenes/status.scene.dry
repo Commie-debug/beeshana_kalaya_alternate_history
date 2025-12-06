@@ -221,11 +221,7 @@ Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : l
 
 [? if epdp_formed = 1 : EPDP: Strength: [+ epdp_strength_2 +] thousand, Militarization: [+ epdp_militancy : militancy +] ?]
 
-[? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +] ?]
-
-[? if ipkf_formed = 1 : IPKF size: [+ ipkf_size +] ?]
-
-[? if ipkf_formed = 1 : IPKF Morale: [+ ipkf_morale_2 : loyalty +] ?]
+[? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +], Strenght: [+ ipkf_size +] thousand troops, Morale: [+ ipkf_morale_2 : loyalty +] ?]
 
 [? if tna_formed = 1 : TNA: Strength: [+ tna_strength_2 +] thousand, Militarization: [+ tna_militancy : militancy +] ?]
 
