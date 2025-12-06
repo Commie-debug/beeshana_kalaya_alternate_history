@@ -114,7 +114,7 @@ Q.tulf_leader = "A. Amirthalingam";
 // hmm... maybe we can play nice with Hindenburg???
 Q.jr_relation = 10;
 
-// The array of forces - paramilitary groups & rebels(sinhalese)
+// The array of forces - paramilitary groups 
 Q.jss_strength = 2000;
 Q.jss_militancy = 0.69;
 
