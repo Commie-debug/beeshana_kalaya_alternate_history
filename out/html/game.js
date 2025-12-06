@@ -425,6 +425,12 @@
             var morale = getLoyaltyText(Q.homeg_civilsec_morale);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
         }
+
+        if (searchString === 'IPKF' && Q.ipkf_size !== undefined) {
+            var strength = Q.ipkf_size ? Q.ipkf_morale : '0';
+            var morale = getLoyaltyText(Q.ipkf_morale);
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+        }
         
         return baseTooltip.explanationText;
     }
