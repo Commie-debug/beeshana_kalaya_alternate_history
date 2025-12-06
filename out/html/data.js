@@ -7,6 +7,10 @@ const colourList = [{
         style: "color: #454BF7; font-weight: bold;"
     },
     {
+        word: "IPKF",
+        style: "color: #FF4545; font-weight: bold;"
+    },
+    {
         word: "JSS",
         style: "color: #006400; font-weight: bold;"
     },
@@ -359,6 +363,10 @@ const tooltipList = [{
     {
     searchString: "ENDLF",
     explanationText: "<img src=img/logos/ENDLF_Logo.png> Eelam National Democratic <br> Liberation Front"
+    },
+    {
+    searchString: "IPKF",
+    explanationText: "<img src=img/logos/IPKF_Logo.png> Indian Peace <br> Keeping Force"
     },
 ];
 
