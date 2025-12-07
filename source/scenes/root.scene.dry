@@ -423,7 +423,7 @@ Q.gampaha_d_rural = 47;
 
 Q.gampaha_d_control = 100;
 Q.gampaha_d_infastructure = 0.70;
-Q.gampaha_d_seats = 18;
+Q.gampaha_d_seats = 17;
 Q.gampaha_d_industries = ['Agriculture', 'Textile', 'Fishing', 'Rubber'];
 
 //kalutara
@@ -735,7 +735,7 @@ Q.anuradhapura_d_rural = 78;
 
 Q.anuradhapura_d_control = 100;
 Q.anuradhapura_d_infastructure = 0.40;
-Q.anuradhapura_d_seats = 8;
+Q.anuradhapura_d_seats = ;
 Q.anuradhapura_d_industries = ['Tourism', 'Agriculture'];
 
 //polonnaruwa
@@ -1045,7 +1045,7 @@ Q.natsecurity_minister_party = 'UNP';
 Q.electoral_threshold = 0;
 
 //ammendments
-Q.national_list_added = 0;
+Q.national_list_added = 1;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
