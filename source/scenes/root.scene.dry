@@ -1103,8 +1103,8 @@ Q.no_majority_elections = 0;
 Q.in_election = 0;
 Q.next_pres_election_year = 1984;
 Q.next_pres_election_month = 2;
-Q.next_parl_election_year = 1983;
-Q.next_parl_election_month = 11;
+Q.next_parl_election_year = 1981;
+Q.next_parl_election_month = 3;
 Q.next_election_time = 5;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
