@@ -1045,7 +1045,7 @@ Q.natsecurity_minister_party = 'UNP';
 Q.electoral_threshold = 0;
 
 //ammendments
-Q.national_list_added = 0;
+Q.national_list_added = 1;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
