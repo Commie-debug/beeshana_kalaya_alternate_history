@@ -96,6 +96,16 @@ Q.lssp_ideology = 4;
 Q.nssp_ideology = 4;
 Q.cwc_ideology = 8;
 
+//not formed parties
+Q.slpp_ideology = 5;
+Q.slmp_ideology = 12;
+Q.slmc_ideology = 9;
+Q.npp_ideology = 2;
+Q.mep_ideology = 3;
+Q.eros_ideology = 11;
+Q.dplf_ideology = 11;
+Q.pflt_ideology = 11;
+
 //inter party dynamics
 //jvp
 //0-no reconciliation for 1971, 1-reconciled for 1971
