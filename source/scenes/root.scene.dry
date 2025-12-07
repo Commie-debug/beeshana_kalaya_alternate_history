@@ -389,6 +389,8 @@ Q.district_industries = ['Major industries'];
 
 
 //ethnic stats sourced from 1981 cencus, killinochchi counted by lower divisions of the jaffna district per the 1981 cencus in wikipedia's killinochchi district page
+//class stats are based on a rough estimate based on the economic fields covered in the 1981 cencus
+//seats based on the 1984 seat distribution in https://web.archive.org/web/20111015205520/http://www.slelections.gov.lk/pdf/PDsummery.pdf
 //Western province
 //colombo
 Q.colombo_d_sinhala = 77.6;
@@ -421,7 +423,7 @@ Q.gampaha_d_rural = 47;
 
 Q.gampaha_d_control = 100;
 Q.gampaha_d_infastructure = 0.70;
-Q.gampaha_d_seats = 17;
+Q.gampaha_d_seats = 18;
 Q.gampaha_d_industries = ['Agriculture', 'Textile', 'Fishing', 'Rubber'];
 
 //kalutara
@@ -490,7 +492,7 @@ Q.mannar_d_rural = 79;
 
 Q.mannar_d_control = 100;
 Q.mannar_d_infastructure = 0.30;
-Q.mannar_d_seats = 7;
+Q.mannar_d_seats = 5;
 Q.mannar_d_industries = ['Fishing', 'Agriculture'];
 
 //mullaitivu
@@ -507,7 +509,7 @@ Q.mullaitivu_d_rural = 84;
 
 Q.mullaitivu_d_control = 100;
 Q.mullaitivu_d_infastructure = 0.25;
-Q.mullaitivu_d_seats = 7;
+Q.mullaitivu_d_seats = 5;
 Q.colombo_d_industries = ['Fishing', 'Agriculture'];
 
 //vavuniya
@@ -524,7 +526,7 @@ Q.vavuniya_d_rural = 78;
 
 Q.vavuniya_d_control = 100;
 Q.vavuniya_d_infastructure = 0.30;
-Q.vavuniya_d_seats = 7;
+Q.vavuniya_d_seats = 5;
 Q.vavuniya_d_industries = ['Agriculture'];
 
 //Eastern province
@@ -542,7 +544,7 @@ Q.batticaloa_d_rural = 75;
 
 Q.batticaloa_d_control = 100;
 Q.batticaloa_d_infastructure = 0.35;
-Q.batticaloa_d_seats = 5;
+Q.batticaloa_d_seats = 4;
 Q.batticaloa_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
 
 //ampara
@@ -559,7 +561,7 @@ Q.ampara_d_rural = 78;
 
 Q.ampara_d_control = 100;
 Q.ampara_d_infastructure = 0.35;
-Q.ampara_d_seats = 5;
+Q.ampara_d_seats = 6;
 Q.ampara_d_industries = ['Fishing', 'Agriculture'];
 
 //trincomalee
@@ -576,7 +578,7 @@ Q.trincomalee_d_rural = 73;
 
 Q.trincomalee_d_control = 100;
 Q.trincomalee_d_infastructure = 0.40;
-Q.trincomalee_d_seats = 5;
+Q.trincomalee_d_seats = 4;
 Q.trincomalee_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
 
 //Central province
@@ -628,7 +630,7 @@ Q.nuwaraeliya_d_rural = 71;
 
 Q.nuwaraeliya_d_control = 100;
 Q.nuwaraeliya_d_infastructure = 0.45;
-Q.nuwaraeliya_d_seats = 15;
+Q.nuwaraeliya_d_seats = 6;
 Q.nuwaraeliya_d_industries = ['Tourism', 'Agriculture', 'Tea'];
 
 //Southern province
@@ -663,7 +665,7 @@ Q.matara_d_rural = 74;
 
 Q.matara_d_control = 100;
 Q.matara_d_infastructure = 0.45;
-Q.matara_d_seats = 10;
+Q.matara_d_seats = 9;
 Q.matara_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Tea', 'Rubber'];
 
 //hambantota
@@ -698,7 +700,7 @@ Q.kurunegala_d_rural = 74;
 
 Q.kurunegala_d_control = 100;
 Q.kurunegala_d_infastructure = 0.45;
-Q.kurunegala_d_seats = 10;
+Q.kurunegala_d_seats = 15;
 Q.kurunegala_d_industries = ['Agriculture', 'Mining', 'Rubber'];
 
 //puttalam
@@ -715,7 +717,7 @@ Q.puttalam_d_rural = 76;
 
 Q.puttalam_d_control = 100;
 Q.puttalam_d_infastructure = 0.40;
-Q.puttalam_d_seats = 15;
+Q.puttalam_d_seats = 7;
 Q.puttalam_d_industries = ['Fishing', 'Agriculture'];
 
 //North Central province
@@ -733,7 +735,7 @@ Q.anuradhapura_d_rural = 78;
 
 Q.anuradhapura_d_control = 100;
 Q.anuradhapura_d_infastructure = 0.40;
-Q.anuradhapura_d_seats = 10;
+Q.anuradhapura_d_seats = 8;
 Q.anuradhapura_d_industries = ['Tourism', 'Agriculture'];
 
 //polonnaruwa
@@ -750,7 +752,7 @@ Q.polonnaruwa_d_rural = 81;
 
 Q.polonnaruwa_d_control = 100;
 Q.polonnaruwa_d_infastructure = 0.40;
-Q.polonnaruwa_d_seats = 12;
+Q.polonnaruwa_d_seats = 5;
 Q.polonnaruwa_d_industries = ['Agriculture'];
 
 //Uva province
@@ -768,7 +770,7 @@ Q.monaragala_d_rural = 83;
 
 Q.monaragala_d_control = 100;
 Q.monaragala_d_infastructure = 0.30;
-Q.monaragala_d_seats = 9;
+Q.monaragala_d_seats = 5;
 Q.monaragala_d_industries = ['Agriculture', 'Mining'];
 
 //badulla
@@ -785,7 +787,7 @@ Q.badulla_d_rural = 73;
 
 Q.badulla_d_control = 100;
 Q.badulla_d_infastructure = 0.40;
-Q.badulla_d_seats = 9;
+Q.badulla_d_seats = 7;
 Q.badulla_d_industries = ['Agriculture', 'Tea'];
 
 //Sabaragamuwa province
@@ -803,7 +805,7 @@ Q.ratnapura_d_rural = 72;
 
 Q.ratnapura_d_control = 100;
 Q.ratnapura_d_infastructure = 0.40;
-Q.ratnapura_d_seats = 5;
+Q.ratnapura_d_seats = 10;
 Q.ratnapura_d_industries = ['Agriculture', 'Mining', 'Tea', 'Rubber'];
 
 //kegalle
@@ -820,7 +822,7 @@ Q.kegalle_d_rural = 73;
 
 Q.kegalle_d_control = 100;
 Q.kegalle_d_infastructure = 0.45;
-Q.kegalle_d_seats = 8;
+Q.kegalle_d_seats = 10;
 Q.kegalle_d_industries = ['Agriculture', 'Mining', 'Rubber'];
 
 //proportion of races in 1981
