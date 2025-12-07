@@ -368,9 +368,9 @@ Q.election_records.push(election_result);
 
 Q.jaffna_d_seats = 11;
 Q.kilinochchi_d_seats = 11;
-Q.mullaitivu_d_seats = 7;
-Q.mannar_d_seats = 7;
-Q.vavuniya_d_seats = 7;
+Q.mullaitivu_d_seats = 5;
+Q.mannar_d_seats = 5;
+Q.vavuniya_d_seats = 5;
 
 //goVernment and coalition rest 
 Q.coalition_dissent = 0;
