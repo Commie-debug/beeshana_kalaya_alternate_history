@@ -1,19 +1,19 @@
-title: Reichstag Elections
+title: Parliament Elections
 new-page: true
 tags: event
 priority: -1
 view-if: (year = next_election_year and month >= next_election_month) or (year > next_election_year)
 on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_chancellor_timer = 4;
 set-jump: post_election_1928
-face-image: img/Rothe_Wahlen_1903.jpg
+face-image: img/Election_Time.png
 
 # TODO: should there be an image?
 
 # the low priority means that this event is only seen after all other events are resolved for the month.
 
-= Elections, [+ month : month +] [+ year +]
+= Elections, [+ week +] [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+Elections to Parliament are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
