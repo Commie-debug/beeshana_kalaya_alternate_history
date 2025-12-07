@@ -838,7 +838,7 @@ Q.rural = 70;
 
 Q.ethnic =['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
 Q.classes = ['upper', 'middle', 'worker', 'rural'];
-Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc', 'other'];
+Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc'];
 
 // formable parties
 Q.slpp_formed = 0;
