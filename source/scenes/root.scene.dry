@@ -1045,7 +1045,7 @@ Q.natsecurity_minister_party = 'UNP';
 Q.electoral_threshold = 0;
 
 //ammendments
-Q.national_list_added = 1;
+Q.national_list_added = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
@@ -1177,6 +1177,7 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
+
 !}
 
 set-bg: img/map_2.jpg
