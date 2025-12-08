@@ -19,6 +19,8 @@ title: We cannot hold the elections now. Cancel the elections.
 subtitle: This is an anti-democratic move that may backfire.
 view-if: state_of_emergency == 1 and slfp_in_government == 1
 
+//cancel elections is only here just incase as im not sure if you can legally do this.
+
 Since we are currently ruling under emergency powers, we may attempt to significantly delay these elections. This is likely to be extremely unpopular.
 
 - @cancel_elections_2: Yes, do it.
@@ -27,7 +29,7 @@ Since we are currently ruling under emergency powers, we may attempt to signific
 @cancel_elections_2
 on-departure: next_parl_election_year = next_parl_election_year + 1; next_election_time = time + 12; gov_support -= 15; unp_relation -= 10; tulf_relation -= 15; jvp_relation -= 10;
 
-Fine. The elections have been postponed. New elections are scheduled for [+ next_parl_election_month : month +] [+ next_parl_election_year +].
+The elections have been postponed to the anger of our opponents and allies. New elections are scheduled for [+ next_parl_election_month : month +] [+ next_parl_election_year +].
 
 Let us hope this does not backfire.
 
@@ -41,8 +43,8 @@ Q.total_parliament_seats = 196;
 //mullaitivu+mannar+vavuniya=one electoral district (Wanni)
 Q.district_names = [
     'colombo_d', 'gampaha_d', 'kalutara_d',           //Western Province
-    'jaffna_electoral_d',                              //Northern Province (Jaffna + Kilinochchi)
-    'wanni_electoral_d',                               //Northern Province (Mullaitivu + Mannar + Vavuniya)
+    'jaffna_electoral_d',                              //Northern Province (Jaffna+Kilinochchi)
+    'wanni_electoral_d',                               //Northern Province (Mullaitivu+Mannar+Vavuniya)
     'trincomalee_d', 'batticaloa_d', 'ampara_d',      //Eastern Province
     'kandy_d', 'matale_d', 'nuwaraeliya_d',           //Central Province
     'galle_d', 'matara_d', 'hambantota_d',            //Southern Province
@@ -53,7 +55,7 @@ Q.district_names = [
 ];
 
 
-Q.jaffna_electoral_d_seats = 10;  //hardcoded: jaffna + kilinochchi combined
+Q.jaffna_electoral_d_seats = 10;  //jaffna+kilinochchi combined
 
 var jaffna_weight = 0.85;
 var kili_weight = 0.15;
@@ -69,7 +71,7 @@ Q.jaffna_electoral_d_rural = (Q.jaffna_d_rural * jaffna_weight) + (Q.kilinochchi
 Q.jaffna_electoral_d_control = Math.min(Q.jaffna_d_control || 100, Q.kilinochchi_d_control || 100);
 
 
-Q.wanni_electoral_d_seats = 6;  //hardcoded: mullaitivu + mannar + vavuniya combined
+Q.wanni_electoral_d_seats = 6;  //mullaitivu+mannar+vavuniya combined
 
 var mull_weight = 0.25;
 var mann_weight = 0.30;
@@ -97,7 +99,7 @@ var ethnic_groups = ['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
 var class_groups = ['upper', 'middle', 'worker', 'rural'];
 
 //The weight factors
-//These can be tweaked to balance the influence of ethnic identity vs class interests
+//Can be tweaked to balance the influence of ethnic identity vs class interests
 var ethnic_weight = 0.6;  //60% weight to ethnic composition
 var class_weight = 0.4;   //40% weight to class composition
 
@@ -257,7 +259,7 @@ for (var i = 0; i < Q.district_names.length; i++) {
     
     total_seats_allocated += district_seats;
     
-    // Store district-level results for display
+    //storing of district level results
     Q[district_name + '_district_seats'] = district_seats;
     Q[district_name + '_slfp_seats'] = party_seats_district['slfp'] || 0;
     Q[district_name + '_unp_seats'] = party_seats_district['unp'] || 0;
@@ -279,13 +281,6 @@ for (var i = 0; i < Q.district_names.length; i++) {
     Q[district_name + '_pflt_seats'] = party_seats_district['pflt'] || 0;
     // Calculate "other" seats (remaining minor parties)
     var main_parties = ['slfp', 'unp', 'tulf', 'actc', 'jvp', 'cwc', 'cpsl', 'lssp', 'nssp', 'slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt'];
-    var other_seats = 0;
-    for (var p in party_seats_district) {
-        if (!main_parties.includes(p)) {
-            other_seats += party_seats_district[p];
-        }
-    }
-    Q[district_name + '_other_seats'] = other_seats;
     
     Q.district_results.push({
         name: district_name,
@@ -679,7 +674,6 @@ go-to: coalition_menu
             {!<th><span style="color: #FDCC01;">ACTC</span></th>!}
             {!<th><span style="color: #FF2226;">JVP</span></th>!}
             {!<th><span style="color: #E52B50;">CWC</span></th>!}
-            {!<th>Other</th>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Colombo**{!</td>!}
@@ -690,7 +684,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ colombo_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ colombo_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ colombo_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ colombo_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Gampaha**{!</td>!}
@@ -701,7 +694,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ gampaha_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ gampaha_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ gampaha_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ gampaha_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kalutara**{!</td>!}
@@ -712,7 +704,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ kalutara_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ kalutara_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ kalutara_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ kalutara_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Jaffna** (incl. Kilinochchi){!</td>!}
@@ -723,10 +714,9 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ jaffna_electoral_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ jaffna_electoral_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ jaffna_electoral_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
-            {!<td>!}**Wanni** (Mannar, Mullaitivu, Vavuniya){!</td>!}
+            {!<td>!}**Vanni** (Mannar, Mullaitivu, Vavuniya){!</td>!}
             {!<td>!}[+ wanni_electoral_d_district_seats +]{!</td>!}
             {!<td style="background-color: rgba(0, 0, 139, 0.1);">!}[+ wanni_electoral_d_slfp_seats +]{!</td>!}
             {!<td style="background-color: rgba(0, 100, 0, 0.1);">!}[+ wanni_electoral_d_unp_seats +]{!</td>!}
@@ -734,7 +724,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ wanni_electoral_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ wanni_electoral_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ wanni_electoral_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Trincomalee**{!</td>!}
@@ -745,7 +734,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ trincomalee_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ trincomalee_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ trincomalee_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ trincomalee_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Batticaloa**{!</td>!}
@@ -756,7 +744,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ batticaloa_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ batticaloa_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ batticaloa_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ batticaloa_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ampara**{!</td>!}
@@ -767,7 +754,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ ampara_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ ampara_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ ampara_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ ampara_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kandy**{!</td>!}
@@ -778,7 +764,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ kandy_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ kandy_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ kandy_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ kandy_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matale**{!</td>!}
@@ -789,7 +774,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ matale_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ matale_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ matale_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ matale_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Nuwara Eliya**{!</td>!}
@@ -800,7 +784,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ nuwaraeliya_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ nuwaraeliya_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ nuwaraeliya_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Galle**{!</td>!}
@@ -811,7 +794,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ galle_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ galle_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ galle_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ galle_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matara**{!</td>!}
@@ -822,7 +804,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ matara_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ matara_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ matara_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ matara_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Hambantota**{!</td>!}
@@ -833,7 +814,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ hambantota_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ hambantota_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ hambantota_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ hambantota_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kurunegala**{!</td>!}
@@ -844,7 +824,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ kurunegala_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ kurunegala_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ kurunegala_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ kurunegala_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Puttalam**{!</td>!}
@@ -855,7 +834,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ puttalam_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ puttalam_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ puttalam_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ puttalam_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Anuradhapura**{!</td>!}
@@ -866,7 +844,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ anuradhapura_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ anuradhapura_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ anuradhapura_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ anuradhapura_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Polonnaruwa**{!</td>!}
@@ -877,7 +854,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ polonnaruwa_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ polonnaruwa_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ polonnaruwa_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Badulla**{!</td>!}
@@ -888,7 +864,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ badulla_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ badulla_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ badulla_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ badulla_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Monaragala**{!</td>!}
@@ -899,7 +874,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ monaragala_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ monaragala_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ monaragala_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ monaragala_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ratnapura**{!</td>!}
@@ -910,7 +884,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ ratnapura_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ ratnapura_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ ratnapura_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ ratnapura_d_other_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kegalle**{!</td>!}
@@ -921,7 +894,6 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(253, 204, 1, 0.1);">!}[+ kegalle_d_actc_seats +]{!</td>!}
             {!<td style="background-color: rgba(255, 34, 38, 0.1);">!}[+ kegalle_d_jvp_seats +]{!</td>!}
             {!<td style="background-color: rgba(229, 43, 80, 0.1);">!}[+ kegalle_d_cwc_seats +]{!</td>!}
-            {!<td>!}[+ kegalle_d_other_seats +]{!</td>!}
         {!</tr>!}
     {!</table>!}
     {!</div>!}
@@ -987,8 +959,7 @@ What should we do now?
 
 - @slfp_majority: Form an SLFP majority government.
 - @left_coalition_form: Form a left wing coalition government.
-- @unp_continues: The UNP continues to govern.
-- @stay_opposition: Remain in opposition.
+- @unp_continues: The UNP continues to govern. We will remain in the opposition.
 
 @slfp_majority
 title: Form an SLFP majority government.
@@ -1017,13 +988,6 @@ view-if: unp_coalition_seats >= majority_needed and slfp_r < unp_r
 on-arrival: slfp_in_government = 0; unp_in_government = 1; cwc_in_government = 1; prime_minister_party = "UNP"; current_gov = "UNP & CWC";
 
 The UNP, with support from the CWC, has formed the government. We will continue our work in the opposition.
-
-@stay_opposition
-title: Remain in opposition.
-subtitle: Accept that we cannot form a government.
-on-arrival: slfp_in_government = 0;
-
-We do not have the numbers or alliances to form a government. We will continue to oppose from outside, building our strength for the next election. The UNP will almost certainly head the new government.
 
 @form_cabinet
 
