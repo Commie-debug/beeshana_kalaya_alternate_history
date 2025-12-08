@@ -844,13 +844,21 @@ Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc'
 
 // formable parties
 Q.slpp_formed = 0;
+Q.slpp_in_government = 0;
 Q.slmp_formed = 0;
+Q.slmp_in_government = 0;
 Q.slmc_formed = 0;
+Q.slmc_in_government = 0;
 Q.npp_formed = 0;
+Q.npp_in_government = 0;
 Q.mep_formed = 0;
+Q.mep_in_government = 0;
 Q.eros_formed = 0;
+Q.eros_in_government = 0;
 Q.dplf_formed = 0;
+Q.dplf_in_government = 0;
 Q.pflt_formed = 0;
+Q.pflt_in_government = 0;
 
 // Support for party by ethnic group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
