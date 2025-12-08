@@ -205,16 +205,6 @@ for (var i = 0; i < Q.district_names.length; i++) {
         //combine ethnic and class support with weights
         var combined_support = (ethnic_weight * ethnic_support) + (class_weight * class_support);
         
-        //Apply district control modifier
-        //in areas under militant control, mainstream parties get reduced support
-        if (district_control < 100) {
-            var control_factor = district_control / 100;
-            // Tamil parties (TULF, ACTC) less affected in low-control areas
-            if (party !== 'tulf' && party !== 'actc') {
-                combined_support *= control_factor;
-            }
-        }
-        
         district_party_support[party] = combined_support;
         district_total_support += combined_support;
     }
