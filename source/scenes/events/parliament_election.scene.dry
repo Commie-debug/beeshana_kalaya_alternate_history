@@ -629,7 +629,8 @@ UNP + CWC: [+ unp_coalition_seats +] seats
 
 - @view_district_results: View detailed district results
 
-//ai made this part cause im tired :
+//ai made this part cause im tired
+
 @view_district_results
 on-display: {!
 
