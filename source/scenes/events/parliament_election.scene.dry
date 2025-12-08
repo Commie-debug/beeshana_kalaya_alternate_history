@@ -346,18 +346,10 @@ Q.left_coalition_seats = Q.slfp_r + Q.jvp_r + Q.cpsl_r + Q.lssp_r + Q.nssp_r;
 // Add splinter parties if they exist
 if (Q.slmp_formed) Q.left_coalition_seats += (Q.slmp_r || 0);
 
-//Broad left coalition (all left + Tamil parties)
-Q.broad_left_coalition_seats = Q.slfp_r + Q.jvp_r + Q.cpsl_r + Q.lssp_r + Q.nssp_r + Q.tulf_r + Q.cwc_r + Q.actc_r;
-if (Q.slmp_formed) Q.broad_left_coalition_seats += (Q.slmp_r || 0);
-
 //UNP + allies(CWC,SLPP?)
 Q.unp_coalition_seats = Q.unp_r + Q.cwc_r;
 // Add SLPP if formed (right-wing SLFP splinter)
 if (Q.slpp_formed) Q.unp_coalition_seats += (Q.slpp_r || 0);
-
-//Nationalist coalition (for potential future use)
-Q.nationalist_coalition_seats = Q.slfp_r + Q.unp_r;
-if (Q.slpp_formed) Q.nationalist_coalition_seats += (Q.slpp_r || 0);
 
 // Store election record for historical tracking
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
