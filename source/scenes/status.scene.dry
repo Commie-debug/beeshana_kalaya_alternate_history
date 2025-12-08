@@ -34,6 +34,8 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 President: [+ president +] ([+ president_party +])
 
+[? if slfp_in_government = 1 and (president = "JR Jayawardene" or president = "Ranasinghe Premadasa" ): [+ president +] tensions: [+ president_tension : dissent +] ?]
+
 Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +])
@@ -61,8 +63,6 @@ Parliament composition:
 [? if slmc_formed = 1 and slmc_r >= 1: <span class="tooltip-text" title="Sri Lanka Muslim Congress">**SLMC**</span>: [+ slmc_r +] ?]
 
 [? if slfp_in_government = 1 : Budget: [+ budget +] ?]
-
-[? if slfp_in_government = 1 and (president = "JR Jayawardene" or president = "Ranasinghe Premadasa" ): [+ president +] tensions: [+ president_tension : dissent +] ?]
 
 Next presidential election: [+ next_pres_election_month : month +] [+ next_pres_election_year +]
 
