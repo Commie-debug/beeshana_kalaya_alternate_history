@@ -611,10 +611,6 @@ go-to: coalition_menu
 
 Left Coalition (SLFP + JVP + CPSL + LSSP + NSSP): [+ left_coalition_seats +] seats
 
-Center-Left Coalition (SLFP + TULF + ACTC + CWC): [+ center_left_coalition_seats +] seats
-
-Broad Left Coalition (Left + Tamil parties): [+ broad_left_coalition_seats +] seats
-
 UNP + CWC: [+ unp_coalition_seats +] seats
 
 [? if largest_party == "UNP" and unp_r >= majority_needed : The UNP has won an outright majority and will continue to govern. ?]
@@ -627,124 +623,12 @@ UNP + CWC: [+ unp_coalition_seats +] seats
 
 [? if largest_party == "SLFP" and slfp_r < majority_needed : The SLFP has emerged as the largest party! However, we will need coalition partners to govern. ?]
 
-//ai made this details part cause im tired
-
-- @view_district_results: View detailed district results
-
-@view_district_results
-on-display: {!
-
-var displayNames = {
-    'colombo_d': 'Colombo',
-    'gampaha_d': 'Gampaha',
-    'kalutara_d': 'Kalutara',
-    'jaffna_electoral_d': 'Jaffna (incl. Kilinochchi)',
-    'wanni_electoral_d': 'Wanni (Mannar, Mullaitivu, Vavuniya)',
-    'trincomalee_d': 'Trincomalee',
-    'batticaloa_d': 'Batticaloa',
-    'ampara_d': 'Ampara',
-    'kandy_d': 'Kandy',
-    'matale_d': 'Matale',
-    'nuwaraeliya_d': 'Nuwara Eliya',
-    'galle_d': 'Galle',
-    'matara_d': 'Matara',
-    'hambantota_d': 'Hambantota',
-    'kurunegala_d': 'Kurunegala',
-    'puttalam_d': 'Puttalam',
-    'anuradhapura_d': 'Anuradhapura',
-    'polonnaruwa_d': 'Polonnaruwa',
-    'badulla_d': 'Badulla',
-    'monaragala_d': 'Monaragala',
-    'ratnapura_d': 'Ratnapura',
-    'kegalle_d': 'Kegalle'
-};
-
-var html = '<div style="max-height: 400px; overflow-y: auto;">';
-
-for (var i = 0; i < Q.district_results.length; i++) {
-    var d = Q.district_results[i];
-    var name = displayNames[d.name] || d.name;
-    
-    html += '<details style="margin-bottom: 10px; border: 1px solid #ccc; padding: 5px;">';
-    html += '<summary style="cursor: pointer; font-weight: bold;">' + name + ' (' + d.seats + ' seats)</summary>';
-    html += '<div style="padding: 10px;">';
-    
-    // Seat results
-    html += '<p><strong>Seats Won:</strong></p>';
-    html += '<table style="width: 100%; margin-bottom: 10px;">';
-    for (var party in d.results) {
-        if (d.results[party] > 0) {
-            html += '<tr><td>' + party.toUpperCase() + '</td><td>' + d.results[party] + '</td></tr>';
-        }
-    }
-    html += '</table>';
-    
-    // Ethnic composition
-    html += '<p><strong>Ethnic Composition:</strong></p>';
-    html += '<table style="width: 100%; margin-bottom: 10px;">';
-    html += '<tr><td>Sinhala</td><td>' + d.ethnic.sinhala + '%</td></tr>';
-    html += '<tr><td>Sri Lankan Tamil</td><td>' + d.ethnic.sltamil + '%</td></tr>';
-    html += '<tr><td>Indian Tamil</td><td>' + d.ethnic.itamil + '%</td></tr>';
-    html += '<tr><td>Muslim</td><td>' + d.ethnic.muslim + '%</td></tr>';
-    html += '<tr><td>Other</td><td>' + d.ethnic.other + '%</td></tr>';
-    html += '</table>';
-    
-    // Class composition
-    html += '<p><strong>Class Composition:</strong></p>';
-    html += '<table style="width: 100%; margin-bottom: 10px;">';
-    html += '<tr><td>Upper Class</td><td>' + d.class_comp.upper + '%</td></tr>';
-    html += '<tr><td>Middle Class</td><td>' + d.class_comp.middle + '%</td></tr>';
-    html += '<tr><td>Workers</td><td>' + d.class_comp.worker + '%</td></tr>';
-    html += '<tr><td>Rural</td><td>' + d.class_comp.rural + '%</td></tr>';
-    html += '</table>';
-    
-    html += '</div></details>';
-}
-
-// National list section if enabled
-if (Q.national_list_added == 1) {
-    html += '<details style="margin-bottom: 10px; border: 2px solid #333; padding: 5px; background-color: #f5f5f5;">';
-    html += '<summary style="cursor: pointer; font-weight: bold;">National List (29 bonus seats)</summary>';
-    html += '<div style="padding: 10px;">';
-    html += '<p><em>National list seats are allocated proportionally based on national vote share using the D\'Hondt method.</em></p>';
-    html += '<p><strong>Seats from National List:</strong></p>';
-    html += '<table style="width: 100%;">';
-    
-    var parties = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc'];
-    if (Q.slpp_formed) parties.push('slpp');
-    if (Q.slmp_formed) parties.push('slmp');
-    if (Q.slmc_formed) parties.push('slmc');
-    
-    for (var j = 0; j < parties.length; j++) {
-        var p = parties[j];
-        var nationalSeats = Q[p + '_national_list_seats'] || 0;
-        if (nationalSeats > 0) {
-            html += '<tr><td>' + p.toUpperCase() + '</td><td>' + nationalSeats + '</td></tr>';
-        }
-    }
-    html += '</table>';
-    html += '</div></details>';
-}
-
-html += '</div>';
-
-document.getElementById('district_details').innerHTML = html;
-!}
-
-= District-by-District Results
-
-{!<div id="district_details"></div>!}
-
-- @coalition_menu: Back to coalition options
-
 @coalition_menu
 
 What should we do now?
 
 - @slfp_majority: Form an SLFP majority government.
-- @left_coalition_form: Form a left coalition government.
-- @center_left_coalition_form: Form a center-left coalition with Tamil parties.
-- @broad_left_coalition_form: Form a broad left coalition.
+- @left_coalition_form: Form a left wing coalition government.
 - @unp_continues: The UNP continues to govern.
 - @stay_opposition: Remain in opposition.
 
@@ -769,30 +653,6 @@ We have formed a left coalition government, reminiscent of the United Front era.
 
 - @form_cabinet: Form our cabinet.
 
-@center_left_coalition_form
-title: Form a center-left coalition (SLFP + Tamil parties).
-subtitle: [+ center_left_coalition_seats +] seats [? if center_left_coalition_seats < majority_needed : - Not enough for majority ?]
-view-if: center_left_coalition_seats >= majority_needed
-choose-if: tulf_relation >= 35 and cwc_relation >= 20
-unavailable-subtitle: Relations with Tamil parties are too poor (need 35+ with TULF, 20+ with CWC).
-on-arrival: slfp_in_government = 1; tulf_in_government = 1; actc_in_government = 1; cwc_in_government = 1; prime_minister_party = "SLFP"; current_gov = "SLFP-Tamil Coalition"; opposition_leader_party = "UNP"; nationalist_dissent += 25; left_dissent += 5;
-
-We have formed a coalition with the Tamil parties. This is a bold and controversial move. The nationalists are furious, but perhaps this is the path to peace.
-
-- @form_cabinet: Form our cabinet.
-
-@broad_left_coalition_form
-title: Form a broad left coalition.
-subtitle: [+ broad_left_coalition_seats +] seats [? if broad_left_coalition_seats < majority_needed : - Not enough for majority ?]
-view-if: broad_left_coalition_seats >= majority_needed
-choose-if: jvp_relation >= 25 and tulf_relation >= 30 and cpsl_relation >= 25
-unavailable-subtitle: Relations with coalition partners are too poor.
-on-arrival: slfp_in_government = 1; jvp_in_government = 1; cpsl_in_government = 1; lssp_in_government = 1; nssp_in_government = 1; tulf_in_government = 1; cwc_in_government = 1; actc_in_government = 1; prime_minister_party = "SLFP"; current_gov = "Broad Left Coalition"; opposition_leader_party = "UNP"; nationalist_dissent += 30;
-
-We have formed a grand coalition of left-wing and Tamil parties. Managing such a diverse coalition will be challenging, but if successful, it could transform Sri Lanka.
-
-- @form_cabinet: Form our cabinet.
-
 @unp_continues
 title: The UNP forms the government.
 view-if: unp_coalition_seats >= majority_needed and slfp_r < unp_r
@@ -805,7 +665,7 @@ title: Remain in opposition.
 subtitle: Accept that we cannot form a government.
 on-arrival: slfp_in_government = 0;
 
-We do not have the numbers or alliances to form a government. We will continue to oppose from outside, building our strength for the next election.
+We do not have the numbers or alliances to form a government. We will continue to oppose from outside, building our strength for the next election. The UNP will almost certainly head the new government.
 
 @form_cabinet
 
@@ -815,4 +675,4 @@ Now we must decide on the composition of our cabinet...
 
 @end_election
 
-The new government has been formed. Let us see what the future holds.
+The new government has been formed.
