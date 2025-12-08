@@ -627,9 +627,9 @@ UNP + CWC: [+ unp_coalition_seats +] seats
 
 [? if largest_party == "SLFP" and slfp_r < majority_needed : The SLFP has emerged as the largest party! However, we will need coalition partners to govern. ?]
 
-- @view_district_results: View detailed district results
-
 //ai made this part cause im tired
+
+- @view_district_results: View detailed district results
 
 @view_district_results
 on-display: {!
