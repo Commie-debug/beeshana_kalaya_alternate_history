@@ -697,38 +697,63 @@ table {
 }
 
 /* Styles for parties */
-.seat.kpd {
-    fill: #8B0000;
+.seat.unp {
+    fill: #006400;
 }
-.seat.spd {
-    fill: #E3000F;
+.seat.slfp {
+    fill: #00008B;
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }
-.seat.ddp {
-    fill: #DCCA4A;
+.seat.tulf {
+    fill: #F7D917;
 }
-.seat.z {
-    fill: #000;
+.seat.cwc {
+    fill: #E52B50;
 }
-.seat.bvp {
-    fill: #69A2BE;
+.seat.actc {
+    fill: #FDCC01;
 }
-.seat.dvp {
-    fill: #D5AC27;
+.seat.cpsl {
+    fill: #65000B;
 }
-.seat.other {
-    fill: #909090;
+.seat.jvp {
+    fill: #FF2226;
 }
-.seat.dnvp {
-    fill: #3F7BC1;
+.seat.slpp {
+    fill: #E52B50;
 }
-.seat.nsdap {
-    fill: #954B00;
+.seat.slmp {
+    fill: #663399;
 }
-.seat.sapd {
-    fill: #C40000;
+.seat.eros {
+    fill: #FF2400;
 }
+.seat.lssp {
+    fill: #A91101;
+}
+.seat.nssp {
+    fill: #FF8080;
+}
+.seat.dplf {
+    fill: #CE2029;
+}
+.seat.mep {
+    fill: #FF3915;
+}
+.seat.pflt {
+    fill: #DC143C;
+}
+.seat.slmc {
+    fill: #2DCF3E;
+}
+.seat.npp {
+    fill: #9F005D;
+}
+.seat.vacant {
+    fill: #808080;
+}
+
 
 .tooltip-text {
     text-decoration: underline;
