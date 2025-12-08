@@ -373,6 +373,7 @@ Q.vavuniya_d_seats = 5;
 
 //goVernment and coalition rest 
 Q.coalition_dissent = 0;
+q.unp_in_government = 0;
 Q.slfp_in_government = 0;
 Q.jvp_in_government = 0;
 Q.cpsl_in_government = 0;
@@ -380,6 +381,15 @@ Q.lssp_in_government = 0;
 Q.nssp_in_government = 0;
 Q.tulf_in_government = 0;
 Q.actc_in_government = 0;
+
+Q.slpp_in_government = 0;
+Q.slmp_in_government = 0;
+Q.slmc_in_government = 0;
+Q.npp_in_government = 0;
+Q.mep_in_government = 0;
+Q.eros_in_government = 0;
+Q.dplf_in_government = 0;
+Q.pflt_in_government = 0;
 
 !}
 go-to: post_election
@@ -389,6 +399,46 @@ on-display: {!
 data = [];
 
 //parliament display thingy
+if (Q.npp_formed && Q.npp_r > 0) {
+    data.push({
+        "id": "npp",
+        "legend": "NPP",
+        "name": "NPP",
+        "seats": Q.npp_r,
+    });
+}
+if (Q.mep_formed && Q.mep_r > 0) {
+    data.push({
+        "id": "mep",
+        "legend": "MEP",
+        "name": "MEP",
+        "seats": Q.mep_r,
+    });
+}
+if (Q.eros_formed && Q.eros_r > 0) {
+    data.push({
+        "id": "eros",
+        "legend": "EROS",
+        "name": "EROS",
+        "seats": Q.eros_r,
+    });
+}
+if (Q.dplf_formed && Q.dplf_r > 0) {
+    data.push({
+        "id": "dplf",
+        "legend": "DPLF",
+        "name": "DPLF",
+        "seats": Q.dplf_r,
+    });
+}
+if (Q.pflt_formed && Q.pflt_r > 0) {
+    data.push({
+        "id": "pflt",
+        "legend": "PFLT",
+        "name": "PFLT",
+        "seats": Q.pflt_r,
+    });
+}
 if (Q.jvp_r > 0) {
     data.push({
         "id": "jvp",
@@ -405,6 +455,7 @@ if (Q.cpsl_r > 0) {
         "seats": Q.cpsl_r,
     });
 }
+
 if (Q.lssp_r > 0) {
     data.push({
         "id": "lssp",
