@@ -862,97 +862,103 @@ Q.pflt_in_government = 0;
 
 // Support for party by ethnic group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.sinhala_slfp = 60;
-Q.sinhala_jvp = 20;
-Q.sinhala_cpsl = 5;
-Q.sinhala_lssp = 0;
-Q.sinhala_nssp = 0;
-Q.sinhala_tulf = 5;
-Q.sinhala_cwc = 0;
-Q.sinhala_unp = 10;
-Q.sinhala_actc = 10;
+Q.sinhala_slfp = 32;    
+Q.sinhala_jvp = 8;     
+Q.sinhala_cpsl = 2;     
+Q.sinhala_lssp = 3;    
+Q.sinhala_nssp = 1;     
+Q.sinhala_tulf = 0;     
+Q.sinhala_cwc = 0;     
+Q.sinhala_unp = 54;  
+Q.sinhala_actc = 0;     
 
-Q.sltamil_slfp = 60;
-Q.sltamil_jvp = 20;
-Q.sltamil_cpsl = 5;
-Q.sltamil_lssp = 0;
+
+Q.sltamil_slfp = 2;     
+Q.sltamil_jvp = 0;      
+Q.sltamil_cpsl = 1;     
+Q.sltamil_lssp = 1;     
 Q.sltamil_nssp = 0;
-Q.sltamil_tulf = 5;
-Q.sltamil_cwc = 0;
-Q.sltamil_unp = 10;
-Q.sltamil_actc = 10;
+Q.sltamil_tulf = 75;    
+Q.sltamil_cwc = 0;      
+Q.sltamil_unp = 8;      
+Q.sltamil_actc = 13;    
 
-Q.itamil_slfp = 60;
-Q.itamil_jvp = 20;
-Q.itamil_cpsl = 5;
-Q.itamil_lssp = 0;
+
+Q.itamil_slfp = 2;      
+Q.itamil_jvp = 0;
+Q.itamil_cpsl = 3;      
+Q.itamil_lssp = 2;      
 Q.itamil_nssp = 0;
-Q.itamil_tulf = 5;
-Q.itamil_cwc = 0;
-Q.itamil_unp = 10;
-Q.itamil_actc = 10;
+Q.itamil_tulf = 5;      
+Q.itamil_cwc = 78;      
+Q.itamil_unp = 10;      
+Q.itamil_actc = 0;
 
-Q.muslim_slfp = 60;
-Q.muslim_jvp = 20;
-Q.muslim_cpsl = 5;
-Q.muslim_lssp = 0;
+
+Q.muslim_slfp = 25;     
+Q.muslim_jvp = 0;      
+Q.muslim_cpsl = 1;
+Q.muslim_lssp = 1;
 Q.muslim_nssp = 0;
-Q.muslim_tulf = 5;
+Q.muslim_tulf = 3;      
 Q.muslim_cwc = 0;
-Q.muslim_unp = 10;
-Q.muslim_actc = 10;
+Q.muslim_unp = 65;     
+Q.muslim_actc = 5;
 
-Q.other_slfp = 60;
-Q.other_jvp = 20;
-Q.other_cpsl = 5;
-Q.other_lssp = 0;
+
+Q.other_slfp = 15;
+Q.other_jvp = 0;
+Q.other_cpsl = 2;
+Q.other_lssp = 3;
 Q.other_nssp = 0;
-Q.other_tulf = 5;
+Q.other_tulf = 0;
 Q.other_cwc = 0;
-Q.other_unp = 10;
-Q.other_actc = 10;
+Q.other_unp = 80;       
+Q.other_actc = 0;
 
-// Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_slfp = 60;
-Q.workers_jvp = 20;
-Q.workers_cpsl = 5;
-Q.workers_lssp = 0;
-Q.workers_nssp = 0;
-Q.workers_tulf = 5;
-Q.workers_cwc = 0;
-Q.workers_unp = 10;
-Q.workers_actc = 10;
+// Support for party by economic class group
+Q.workers_slfp = 35;    
+Q.workers_jvp = 15;     
+Q.workers_cpsl = 5;    
+Q.workers_lssp = 8;     
+Q.workers_nssp = 2;     
+Q.workers_tulf = 5;    
+Q.workers_cwc = 15;     
+Q.workers_unp = 15;     
+Q.workers_actc = 0;
 
-Q.middle_slfp = 60;
-Q.middle_jvp = 20;
-Q.middle_cpsl = 5;
-Q.middle_lssp = 0;
-Q.middle_nssp = 0;
-Q.middle_tulf = 5;
-Q.middle_cwc = 0;
-Q.middle_unp = 10;
-Q.middle_actc = 10;
 
-Q.upper_slfp = 60;
-Q.upper_jvp = 20;
-Q.upper_cpsl = 5;
-Q.upper_lssp = 0;
+Q.middle_slfp = 30;     
+Q.middle_jvp = 12;      
+Q.middle_cpsl = 2;
+Q.middle_lssp = 3;
+Q.middle_nssp = 1;
+Q.middle_tulf = 8;      
+Q.middle_cwc = 2;
+Q.middle_unp = 40;      
+Q.middle_actc = 2;
+
+
+Q.upper_slfp = 15;      
+Q.upper_jvp = 2;     
+Q.upper_cpsl = 1;
+Q.upper_lssp = 1;
 Q.upper_nssp = 0;
-Q.upper_tulf = 5;
+Q.upper_tulf = 5;       
 Q.upper_cwc = 0;
-Q.upper_unp = 10;
-Q.upper_actc = 10;
+Q.upper_unp = 75;       
+Q.upper_actc = 1;
 
-Q.rural_slfp = 60;
-Q.rural_jvp = 20;
-Q.rural_cpsl = 5;
-Q.rural_lssp = 0;
-Q.rural_nssp = 0;
-Q.rural_tulf = 5;
-Q.rural_cwc = 0;
-Q.rural_unp = 10;
-Q.rural_actc = 10;
+
+Q.rural_slfp = 40;      
+Q.rural_jvp = 12;       
+Q.rural_cpsl = 2;
+Q.rural_lssp = 2;
+Q.rural_nssp = 1;
+Q.rural_tulf = 8;       
+Q.rural_cwc = 5;      
+Q.rural_unp = 28;       
+Q.rural_actc = 2;
 
 // Current Parliment composition
 // Number of seats in Parliment in Jan 1981
