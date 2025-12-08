@@ -1231,6 +1231,8 @@ on-arrival: slfp_in_government = 1; prime_minister_party = "SLFP"; current_gov =
 
 The SLFP has won enough seats to govern alone! A historic victory. We now have the mandate to implement our agenda.
 
+[? if president_party = "UNP" : Our victory is a blow to UNP president [+ president +]. This however leaves the government split between two parties, we must be careful. ?]
+
 - @form_cabinet: Form our cabinet.
 
 @left_coalition_form
@@ -1242,6 +1244,8 @@ unavailable-subtitle: Relations with coalition partners are too poor (need 25+ w
 on-arrival: slfp_in_government = 1; jvp_in_government = 1; cpsl_in_government = 1; lssp_in_government = 1; nssp_in_government = 1; prime_minister_party = "SLFP"; current_gov = "Left Coalition"; opposition_leader_party = "UNP"; nationalist_dissent += 15;
 
 We have formed a left coalition government, reminiscent of the United Front era. The nationalists in our party are unhappy about working so closely with Marxist parties.
+
+[? if president_party = "UNP" : Our victory is a blow to UNP president [+ president +]. This however leaves the government split between two parties, we must be careful. ?]
 
 - @form_cabinet: Form our cabinet.
 
