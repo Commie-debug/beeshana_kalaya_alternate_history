@@ -9,7 +9,7 @@ face-image: img/Election_Time.png
 
 = Parliamentary Elections, [+ month : month +] [+ year +]
 
-Elections to the Parliament of Sri Lanka are to be held now. 196 seats will be distributed across the electoral districts using proportional representation.
+Elections to the Parliament of Sri Lanka are to be held now. 196 seats will be distributed across the electoral districts using proportional representation. [? if  ?]
 
 - @election_algorithm_sl: May we do our best...
 - @cancel_elections
@@ -290,8 +290,7 @@ for (var party of Q.parties) {
 
 Q.total_seats_distributed = total_seats_allocated;
 
-// Add national list seats (29 bonus seats) if enabled
-// These are allocated proportionally based on national vote share
+//national listitisation adding 29 more seats
 if (Q.national_list_added == 1) {
     var national_list_seats = 29;
     var national_list_remaining = national_list_seats;
