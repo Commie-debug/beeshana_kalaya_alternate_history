@@ -1255,7 +1255,7 @@ The UNP, with support from the CWC, has formed the government. We will continue 
 - @opposition_leadership: As the second largest party in parliament, we can head the opposition, but we need to appoint an offical head.
 
 @opposition_leadership
-on-arrival: opposition_leader = "Anura Bandaranaike";
+on-arrival: opposition_leader = "Anura Bandaranaike";, opposition_leader_party = "SLFP";
 
 The obvious choice for now is Anura.....
 
