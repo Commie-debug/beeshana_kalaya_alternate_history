@@ -342,13 +342,30 @@ if (Q.national_list_added == 1) {
 
 //coalitions
 Q.largest_party = '';
-var max_seats = 0;
+Q.second_largest_party = '';
+
+var max1 = -1;   // largest
+var max2 = -1;   // second largest
+
 for (var party of Q.parties) {
-    if (Q[party + '_r'] > max_seats) {
-        max_seats = Q[party + '_r'];
+    var seats = Q[party + '_r'];
+
+    if (seats > max1) {
+        // shift current largest to second largest
+        max2 = max1;
+        Q.second_largest_party = Q.largest_party;
+
+        // update largest
+        max1 = seats;
         Q.largest_party = party.toUpperCase();
+
+    } else if (seats > max2) {
+        // update second largest only
+        max2 = seats;
+        Q.second_largest_party = party.toUpperCase();
     }
 }
+
 
 
 Q.majority_needed = Math.floor(Q.total_seats_distributed / 2) + 1;
@@ -1194,6 +1211,11 @@ UNP + CWC: [+ unp_coalition_seats +] seats
 
 [? if largest_party == "SLFP" and slfp_r < majority_needed : The SLFP has emerged as the largest party! However, we will need coalition partners to govern. ?]
 
+[? if second_largest_party == "SLFP" : We are atleast the second largest party in parliament meaning we will be the offical opposition ?]
+
+[? if second_largest_party == "UNP" : The UNP has been pushed back to the opposition, this is a major victory for the SLFP ?]
+
+
 @coalition_menu
 
 What should we do now?
@@ -1229,6 +1251,14 @@ view-if: unp_coalition_seats >= majority_needed and slfp_r < unp_r
 on-arrival: slfp_in_government = 0; unp_in_government = 1; cwc_in_government = 1; prime_minister_party = "UNP"; current_gov = "UNP & CWC";
 
 The UNP, with support from the CWC, has formed the government. We will continue our work in the opposition.
+
+- @opposition_leadership: As the second largest party in parliament, we can head the opposition, but we need to appoint an offical head.
+
+@opposition_leadership
+on-arrival: opposition_leader = "Anura Bandaranaike";
+
+The obvious choice for now is Anura.....
+
 
 @form_cabinet
 
