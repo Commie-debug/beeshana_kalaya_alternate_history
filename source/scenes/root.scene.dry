@@ -112,6 +112,7 @@ Q.pflt_ideology = 11;
 Q.jvp_reconciliation = 0;
 //0-no pact of support during the jvp insurgency, 1-pact has been betrayed by slfp
 Q.jvp_slfp_pact = 0;
+Q.jvp_banned = 0;
 
 //WILL ADD OTHER BRANCHES FOR THE OTHER PARTIES
 
