@@ -1252,14 +1252,14 @@ We have formed a left coalition government, reminiscent of the United Front era.
 @unp_continues
 title: The UNP forms the government.
 view-if: unp_coalition_seats >= majority_needed and slfp_r < unp_r
-on-arrival: slfp_in_government = 0; unp_in_government = 1; cwc_in_government = 1;, prime_minister = "Ranasinghe Premadasa";, prime_minister_party = 'UNP';, current_gov = "UNP & CWC";
+on-arrival: slfp_in_government = 0; unp_in_government = 1; cwc_in_government = 1; prime_minister = "Ranasinghe Premadasa"; prime_minister_party = 'UNP'; current_gov = "UNP & CWC";
 
 The UNP, with support from the CWC, has formed the government. We will continue our work in the opposition.
 
 - @opposition_leadership: As the second largest party in parliament, we can head the opposition, but we need to appoint an offical head.
 
 @opposition_leadership
-on-arrival: opposition_leader = "Anura Bandaranaike";, opposition_leader_party = "SLFP";
+on-arrival: opposition_leader = "Anura Bandaranaike"; opposition_leader_party = "SLFP";
 
 The obvious choice for now is Anura.....
 
