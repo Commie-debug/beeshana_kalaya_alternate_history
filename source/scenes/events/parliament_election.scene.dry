@@ -1271,6 +1271,8 @@ The SLFP has won enough seats to govern alone! A historic victory. We now have t
 
 [? if president_party = "UNP" : Our victory is a blow to UNP president [+ president +]. This however leaves the government split between two parties, we must be careful. ?]
 
+[? if president_party = "SLFP" : We now also hold both the presidency and parliament, we have the initiative to push through our agenda without interference ?]
+
 - @form_cabinet: Form our cabinet.
 
 @left_coalition_form
@@ -1284,6 +1286,8 @@ on-arrival: slfp_in_government = 1; jvp_in_government = 1; cpsl_in_government = 
 We have formed a left coalition government, reminiscent of the United Front era. The nationalists in our party are unhappy about working so closely with Marxist parties.
 
 [? if president_party = "UNP" : Our victory is a blow to UNP president [+ president +]. This however leaves the government split between two parties, we must be careful. ?]
+
+[? if president_party = "SLFP" : We now also hold both the presidency and parliament, we have the initiative to push through our agenda without interference ?]
 
 - @form_cabinet: Form our cabinet.
 
