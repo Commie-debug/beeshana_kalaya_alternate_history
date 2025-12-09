@@ -870,8 +870,8 @@ Q.classes = ['upper', 'middle', 'worker', 'rural'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc'];
 
 //voting weightage between class and ethnic
-Q.ethnic_weight = 0.1
-Q.class_weight = 0.9
+Q.ethnic_weight = 0.6
+Q.class_weight = 0.4
 
 // formable parties
 Q.slpp_formed = 0;
