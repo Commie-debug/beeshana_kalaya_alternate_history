@@ -430,7 +430,7 @@ Q.vavuniya_d_pop_weight = Q.wanni_electoral_d_pop_weight;
 
 //goVernment and coalition rest 
 Q.coalition_dissent = 0;
-q.unp_in_government = 0;
+Q.unp_in_government = 0;
 Q.slfp_in_government = 0;
 Q.jvp_in_government = 0;
 Q.cpsl_in_government = 0;
