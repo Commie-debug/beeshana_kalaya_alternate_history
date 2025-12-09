@@ -1276,7 +1276,11 @@ Q.march_on_berlin_timer = 0;
 
 // initial advisors
 Q.sirimavo_advisor = 1; // Sirimavo Bandaranaike
+Q.sirimavo_rights_restored = 0; //if her rights are back so she can run in elections
+
 Q.chandrika_advisor = 1; // Chandrika Bandaranaike Kumaratunge 
+
+
 Q.maithripala_advisor = 1; // Maitripala Senanayake
 
 // nationalist advisors
@@ -1288,7 +1292,6 @@ Q.maithripala_advisor = 1; // Maitripala Senanayake
 
 
 //Ignore these ones plss
-
 // left advisors
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
@@ -1326,9 +1329,9 @@ This is a game of alternate history. While historical accuracy is a major concer
 For more information on the politics and government of Sri Lanka, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
 - @1981_easy: Begin (easy difficulty)
-- @1981_main: Begin (Not Done) (normal difficulty)
-- @1981_hard: Begin (Not Done) (hard difficulty)
-- @1981_historical: Begin (Not Done) (historical mode)
+- @1981_main: Begin (normal difficulty)
+- @1981_hard: Begin (hard difficulty)
+- @1981_historical: Begin (historical mode)
 
 @1981_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; budget = 5;
