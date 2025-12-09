@@ -108,25 +108,25 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 
 = Party Ideologies
 
-SLPP: [+ slpp_ideology : ideology +]
+[? if slpp_formed = 1 : SLPP: [+ slpp_ideology : ideology +] ?]
 
-SLMP: [+ slmp_ideology : ideology +]
+[? if slmp_formed = 1 : SLMP: [+ slmp_ideology : ideology +] ?]
 
 JVP: [+ jvp_ideology : ideology +]
 
-NPP: [+ npp_ideology : ideology +]
+[? if npp_formed = 1 : NPP: [+ npp_ideology : ideology +] ?]
 
 UNP: [+ unp_ideology : ideology +]
 
 TULF: [+ tulf_ideology : ideology +]
 
-PFLT: [+ pflt_ideology : ideology +]
+[? if pflt_formed = 1 : PFLT: [+ pflt_ideology : ideology +] ?]
 
 ACTC: [+ actc_ideology : ideology +]
 
-EROS: [+ eros_ideology : ideology +]
+[? if eros_formed = 1 : EROS: [+ eros_ideology : ideology +] ?]
 
-DPLF: [+ dplf_ideology : ideology +]
+[? if dplf_formed = 1 : DPLF: [+ dplf_ideology : ideology +] ?]
 
 CPSL: [+ cpsl_ideology : ideology +]
 
@@ -134,11 +134,11 @@ LSSP: [+ lssp_ideology : ideology +]
 
 NSSP: [+ nssp_ideology : ideology +]
 
-MEP: [+ mep_ideology : ideology +]
+[? if mep_formed = 1 : MEP: [+ mep_ideology : ideology +] ?]
 
 CWC: [+ cwc_ideology : ideology +]
 
-SLMC: [+ slmc_ideology : ideology +]
+[? if slmc_formed = 1 : SLMC: [+ slmc_ideology : ideology +] ?]
 
 @paramilitaries
 on-arrival: {!
