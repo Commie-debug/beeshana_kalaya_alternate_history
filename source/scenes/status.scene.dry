@@ -253,46 +253,6 @@ Q.socialism_disp = Math.round(Q.socialism);
 Q.gov_support_disp = Math.round(Q.gov_support);
 !}
 
-= Projected election results
-
-(if the election were to be held now):
-
-SLFP: [+ slfp_votes +]%
-
-[? if slpp_formed: SLPP: [+ slpp_votes +]% ?]
-
-[? if slmp_formed: SLMP: [+ slmp_votes +]% ?]
-
-UNP: [+ unp_votes +]%
-
-TULF: [+ tulf_votes +]%
-
-[? if pflt_formed: PFLT: [+ pflt_votes +]% ?]
-
-ACTC: [+ actc_votes +]%
-
-[? if eros_formed: EROS: [+ eros_votes +]% ?]
-
-[? if dplf_formed: DPLF: [+ dplf_votes +]% ?]
-
-JVP: [+ jvp_votes +]%
-
-[? if npp_formed: NPP: [+ npp_votes +]% ?]
-
-CPSL: [+ cpsl_votes +]%
-
-LSSP: [+ lssp_votes +]%
-
-NSSP: [+ nssp_votes +]%
-
-[? if mep_formed: MEP: [+ mep_votes +]% ?]
-
-CWC: [+ cwc_votes +]%
-
-[? if slmc_formed: SLMC: [+ slmc_votes +]% ?]
-
-**Detailed results for each demographic**
-
 = Ethnicity:
 
 Sinhalese: SLFP: [+ sinhala_slfp +]%, JVP: [+ sinhala_jvp +]%, CPSL: [+ sinhala_cpsl +]%, LSSP: [+ sinhala_lssp +]%, NSSP: [+ sinhala_nssp +]%, TULF: [+ sinhala_tulf +]%, CWC: [+ sinhala_cwc +]%, UNP: [+ sinhala_unp +]%, ACTC: [+ sinhala_actc +]%, [? if slpp_formed: SLPP: [+ sinhala_slpp +] % ?][? if slmp_formed: SLMP: [+ sinhala_slmp +]% ?][? if slmc_formed: SLMC: [+ sinhala_slmc +]% ?][? if npp_formed: NPP: [+ sinhala_npp +]% ?][? if mep_formed: MEP: [+ sinhala_mep +]% ?][? if eros_formed: EROS: [+ sinhala_eros +]% ?][? if dplf_formed: DPLF: [+ sinhala_dplf +]% ?][? if pflt_formed: PFLT: [+ sinhala_pflt +]% ?]
