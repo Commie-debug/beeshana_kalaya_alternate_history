@@ -336,73 +336,73 @@
         if (searchString === 'JSS' && Q.jss_strength !== undefined) {
             var strength = getSizeText(Q.jss_strength);
             var militancy = getMilitancyText(Q.jss_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
      
         if (searchString === 'LTTE' && Q.ltte_strength !== undefined) {
             var strength = getSizeText(Q.ltte_strength);
             var militancy = getMilitancyText(Q.ltte_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'TELO' && Q.telo_strength !== undefined) {
             var strength = getSizeText(Q.telo_strength);
             var militancy = getMilitancyText(Q.telo_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'PLOTE' && Q.plote_strength !== undefined) {
             var strength = getSizeText(Q.plote_strength);
             var militancy = getMilitancyText(Q.plote_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'EPRLF' && Q.eprlf_strength !== undefined) {
             var strength = getSizeText(Q.eprlf_strength);
             var militancy = getMilitancyText(Q.eprlf_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
       
         if (searchString === 'DJV' && Q.djv_strength !== undefined) {
             var strength = getSizeText(Q.djv_strength);
             var militancy = getMilitancyText(Q.djv_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
       
         if (searchString === 'EPDP' && Q.epdp_strength !== undefined) {
             var strength = getSizeText(Q.epdp_strength);
             var militancy = getMilitancyText(Q.epdp_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'PRRA' && Q.prra_strength !== undefined) {
             var strength = getSizeText(Q.prra_strength);
             var militancy = getMilitancyText(Q.prra_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'Eagles' && Q.eagles_strength !== undefined) {
             var strength = getSizeText(Q.eagles_strength);
             var militancy = getMilitancyText(Q.eagles_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'Black Cats' && Q.blackcats_strength !== undefined) {
             var strength = getSizeText(Q.blackcats_strength);
             var militancy = getMilitancyText(Q.blackcats_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
        if (searchString === 'ENDLF' && Q.endlf_strength !== undefined) {
             var strength = getSizeText(Q.endlf_strength);
             var militancy = getMilitancyText(Q.endlf_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'TNA' && Q.tna_strength !== undefined) {
             var strength = getSizeText(Q.tna_strength);
             var militancy = getMilitancyText(Q.tna_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'Sri Lanka Armed Forces' && Q.slaf_strength !== undefined) {
