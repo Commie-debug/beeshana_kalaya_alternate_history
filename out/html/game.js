@@ -176,6 +176,15 @@
         if (value <= 74.9) return '<span style="color: #32CD32;">Friendly</span>';
         return '<span style="color: #008000;">Very friendly</span>';
     }
+ 
+    function getSizeText(value) {
+        if (value === undefined || value === null) return '';
+        if (value <= 20) return '<span style="color: #ADD8E6;">Minimal</span>';
+        if (value <= 40) return '<span style="color: #6495ED;">Weak</span>';
+        if (value <= 60) return '<span style="color: #4169E1;">Moderate</span>';
+        if (value <= 80) return '<span style="color: #0000CD;">Strong</span>';
+        return '<span style="color: #00008B;">Very Strong</span>';
+    }
   
     function getMilitancyText(value) {
         if (value === undefined || value === null) return 'Unknown';
@@ -325,73 +334,73 @@
         }
 
         if (searchString === 'JSS' && Q.jss_strength !== undefined) {
-            var strength = Q.jss_strength ? Q.jss_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.jss_strength);
             var militancy = getMilitancyText(Q.jss_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
      
         if (searchString === 'LTTE' && Q.ltte_strength !== undefined) {
-            var strength = Q.ltte_strength ? Q.ltte_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.ltte_strength);
             var militancy = getMilitancyText(Q.ltte_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'TELO' && Q.telo_strength !== undefined) {
-            var strength = Q.telo_strength ? Q.telo_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.telo_strength);
             var militancy = getMilitancyText(Q.telo_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'PLOTE' && Q.plote_strength !== undefined) {
-            var strength = Q.plote_strength ? Q.plote_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.plote_strength);
             var militancy = getMilitancyText(Q.plote_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'EPRLF' && Q.eprlf_strength !== undefined) {
-            var strength = Q.eprlf_strength ? Q.eprlf_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.eprlf_strength);
             var militancy = getMilitancyText(Q.eprlf_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
       
         if (searchString === 'DJV' && Q.djv_strength !== undefined) {
-            var strength = Q.djv_strength ? Q.djv_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.djv_strength);
             var militancy = getMilitancyText(Q.djv_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
       
         if (searchString === 'EPDP' && Q.epdp_strength !== undefined) {
-            var strength = Q.epdp_strength ? Q.epdp_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.epdp_strength);
             var militancy = getMilitancyText(Q.epdp_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'PRRA' && Q.prra_strength !== undefined) {
-            var strength = Q.prra_strength ? Q.prra_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.prra_strength);
             var militancy = getMilitancyText(Q.prra_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'Eagles' && Q.eagles_strength !== undefined) {
-            var strength = Q.eagles_strength ? Q.eagles_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.eagles_strength);
             var militancy = getMilitancyText(Q.eagles_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'Black Cats' && Q.blackcats_strength !== undefined) {
-            var strength = Q.blackcats_strength ? Q.blackcats_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.blackcats_strength);
             var militancy = getMilitancyText(Q.blackcats_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
 
        if (searchString === 'ENDLF' && Q.endlf_strength !== undefined) {
-            var strength = Q.endlf_strength ? Q.endlf_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.endlf_strength);
             var militancy = getMilitancyText(Q.endlf_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'TNA' && Q.tna_strength !== undefined) {
-            var strength = Q.tna_strength ? Q.tna_strength.toFixed(1) : '0';
+            var strength = getSizeText(Q.tna_strength);
             var militancy = getMilitancyText(Q.tna_militancy);
             return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Militarization: ' + militancy;
         }
