@@ -211,8 +211,84 @@ Highways & transport: [+ highway_minister_party +]
 
 @economics
 go-to: menu
+on-arrival: {!
+if (Q.unemployed) {
+    Q.unemployed_2 = Q.unemployed.toFixed(1);
+}
+if (Q.inflation) {
+    Q.inflation_2 = Q.inflation.toFixed(1);
+}
+Q.economic_growth_2 = '0';
+if (Q.economic_growth) {
+    Q.economic_growth_2 = Q.economic_growth.toFixed(1);
+}
+if (Q.inequality) {
+    Q.inequality_2 = Q.inequality.toFixed(1);
+}
+if (Q.total_nationalisation) {
+    Q.total_nationalisation_2 = ((Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national)/18)*100;
+}
+if (Q.total_nationalisation_2) {
+    Q.total_nationalisation_3 = Q.total_nationalisation_2.toFixed(1);
+}
+!}
 
-Time to learn economics
+= Economy
+
+Inflation: [+ inflation_2 +]%
+
+Unemployment: [+ unemployed_2 +]% 
+
+Economic growth: [+ economic_growth_2 +]%
+
+Government budget: [+ budget +]
+
+Terms of trade: [+ trade +]
+
+Foreign debt: [+ foreign_debt +]
+
+Inequality: [+ inequality_2 : equality +]
+
+= Economic Sectors
+
+Tourism: [+ tourism : sectordev +]
+
+Tourism Nationalisation: [+ tourism_national : nationalisation +]
+
+Mining: [+ mining : sectordev +]
+
+Mining Nationalisation: [+ mining_national : nationalisation +]
+
+Tea: [+ tea : sectordev +]
+
+Tea Nationalisation: [+ tea_national : nationalisation +]
+
+Agriculture: [+ agriculture : sectordev +]
+
+Agriculture Nationalisation: [+ agriculture_national : nationalisation +]
+
+Fishing: [+ fishing : sectordev +]
+
+Fishing Nationalisation: [+ fishing_national : nationalisation +]
+
+Textile & apparel: [+ textile : sectordev +]
+
+Textile & apparel Nationalisation: [+ textile_national : nationalisation +]
+
+Rubber: [+ rubber : sectordev +]
+
+Rubber Nationalisation: [+ rubber_national : nationalisation +]
+
+= Tax Rates (Based on 1981 baseline)
+
+Lower income tax: [+ lower_tax_rates +]
+
+Upper income tax: [+ Upper_tax_rates +]
+
+Tarrifs: [+ tariffs +]
+
+FTZ tax holidays: [? if ftz_holidays = 1 : Yes ?][? if ftz_holidays = 0 : No ?]
+
 
 
 @demographics
