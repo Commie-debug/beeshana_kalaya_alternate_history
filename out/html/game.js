@@ -179,22 +179,21 @@
 
     function getStatusText(value) {
         if (value === undefined || value === null) return '';
-        if (value === 0) return '<span style="color:#9E9E9E;">Not Formed</span>';
-        if (value === 1) return '<span style="color:#8B0000;">Active</span>';
-        if (value === 2) return '<span style="color:#4F6F8F;">Disbanded</span>';
-        if (value === 3) return '<span style="color:#556B2F;">Disarmed</span>';
-        if (value === 4) return '<span style="color:#6A0DAD;">Amalgamated into the ENLF</span>';
+        if (value === 0) return '<span style="color: #9E9E9E;">Not Formed</span>';
+        if (value === 1) return '<span style="color: #8B0000;">Active</span>';
+        if (value === 2) return '<span style="color: #4F6F8F;">Disbanded</span>';
+        if (value === 3) return '<span style="color: #556B2F;">Disarmed</span>';
+        if (value === 4) return '<span style="color: #6A0DAD;">Amalgamated into the ENLF</span>';
         return 'Unknown';
     }
-
   
     function getSizeText(value) {
         if (value === undefined || value === null) return '';
-        if (value <= 20) return '<span style="color: #ADD8E6;">Minimal</span>';
-        if (value <= 40) return '<span style="color: #6495ED;">Weak</span>';
-        if (value <= 60) return '<span style="color: #4169E1;">Moderate</span>';
-        if (value <= 80) return '<span style="color: #0000CD;">Strong</span>';
-        return '<span style="color: #00008B;">Very Strong</span>';
+        if (value <= 20) return '<span style="color: #6B7280;">Minimal</span>';
+        if (value <= 40) return '<span style="color: #8B6F47;">Weak</span>';
+        if (value <= 60) return '<span style="color: #556B2F;">Moderate</span>';
+        if (value <= 80) return '<span style="color: #7A0000;">Strong</span>';
+        return '<span style="color: #2B0000;">Very Strong</span>';
     }
   
     function getMilitancyText(value) {
