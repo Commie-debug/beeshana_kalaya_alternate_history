@@ -176,7 +176,18 @@
         if (value <= 74.9) return '<span style="color: #32CD32;">Friendly</span>';
         return '<span style="color: #008000;">Very friendly</span>';
     }
- 
+
+    function getStatusText(value) {
+        if (value === undefined || value === null) return '';
+        if (value === 0) return '<span style="color:#9E9E9E;">Not Formed</span>';
+        if (value === 1) return '<span style="color:#8B0000;">Active</span>';
+        if (value === 2) return '<span style="color:#4F6F8F;">Disbanded</span>';
+        if (value === 3) return '<span style="color:#556B2F;">Disarmed</span>';
+        if (value === 4) return '<span style="color:#6A0DAD;">Amalgamated into the ENLF</span>';
+        return 'Unknown';
+    }
+
+  
     function getSizeText(value) {
         if (value === undefined || value === null) return '';
         if (value <= 20) return '<span style="color: #ADD8E6;">Minimal</span>';
@@ -335,74 +346,86 @@
 
         if (searchString === 'JSS' && Q.jss_strength !== undefined) {
             var strength = getSizeText(Q.jss_strength);
+            var status = getStatusText(Q.jss_gstatus);
             var militancy = getMilitancyText(Q.jss_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
      
         if (searchString === 'LTTE' && Q.ltte_strength !== undefined) {
             var strength = getSizeText(Q.ltte_strength);
             var militancy = getMilitancyText(Q.ltte_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.ltte_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'TELO' && Q.telo_strength !== undefined) {
             var strength = getSizeText(Q.telo_strength);
             var militancy = getMilitancyText(Q.telo_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.telo_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'PLOTE' && Q.plote_strength !== undefined) {
             var strength = getSizeText(Q.plote_strength);
             var militancy = getMilitancyText(Q.plote_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.plote_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'EPRLF' && Q.eprlf_strength !== undefined) {
             var strength = getSizeText(Q.eprlf_strength);
             var militancy = getMilitancyText(Q.eprlf_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.eprlf_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
       
         if (searchString === 'DJV' && Q.djv_strength !== undefined) {
             var strength = getSizeText(Q.djv_strength);
             var militancy = getMilitancyText(Q.djv_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.djv_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
       
         if (searchString === 'EPDP' && Q.epdp_strength !== undefined) {
             var strength = getSizeText(Q.epdp_strength);
             var militancy = getMilitancyText(Q.epdp_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.epdp_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'PRRA' && Q.prra_strength !== undefined) {
             var strength = getSizeText(Q.prra_strength);
             var militancy = getMilitancyText(Q.prra_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.prra_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'Eagles' && Q.eagles_strength !== undefined) {
             var strength = getSizeText(Q.eagles_strength);
             var militancy = getMilitancyText(Q.eagles_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.eagles_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'Black Cats' && Q.blackcats_strength !== undefined) {
             var strength = getSizeText(Q.blackcats_strength);
             var militancy = getMilitancyText(Q.blackcats_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.blackcats_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
        if (searchString === 'ENDLF' && Q.endlf_strength !== undefined) {
             var strength = getSizeText(Q.endlf_strength);
             var militancy = getMilitancyText(Q.endlf_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.endlf_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
 
         if (searchString === 'TNA' && Q.tna_strength !== undefined) {
             var strength = getSizeText(Q.tna_strength);
             var militancy = getMilitancyText(Q.tna_militancy);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var status = getStatusText(Q.tna_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
         if (searchString === 'Sri Lanka Armed Forces' && Q.slaf_strength !== undefined) {
@@ -414,7 +437,8 @@
         if (searchString === 'Special Task Force' && Q.stf_strength !== undefined) {
             var strength = Q.stf_strength ? Q.stf_strength : '0';
             var morale = getLoyaltyText(Q.stf_morale);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+            var status = getStatusText(Q.stf_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
         }
       
         if (searchString === 'Sri Lanka Police' && Q.slp_strength !== undefined) {
@@ -438,7 +462,8 @@
         if (searchString === 'IPKF' && Q.ipkf_size !== undefined) {
             var strength = Q.ipkf_size ? Q.ipkf_morale : '0';
             var morale = getLoyaltyText(Q.ipkf_morale);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+            var status = getStatusText(Q.ipkf_gstatus);
+            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
         }
         
         return baseTooltip.explanationText;
