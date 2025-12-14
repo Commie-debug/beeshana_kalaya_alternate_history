@@ -348,7 +348,7 @@
             var strength = getSizeText(Q.jss_strength);
             var status = getStatusText(Q.jss_gstatus);
             var militancy = getMilitancyText(Q.jss_militancy);
-            return baseTooltip.explanationText + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
      
         if (searchString === 'LTTE' && Q.ltte_strength !== undefined) {
