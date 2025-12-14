@@ -128,69 +128,69 @@ Q.jr_relation = 10;
 // The array of forces - paramilitary groups 
 Q.jss_strength = 50;
 Q.jss_militancy = 0.69;
-Q.jss.gstatus = 1;
+Q.jss_gstatus = 1;
 
 Q.slfpt_strength = 10;
 Q.slfpt_militancy = 0.24;
-Q.slfpt.gstatus = 1;
+Q.slfpt_gstatus = 1;
 
 Q.unpt_strength = 30;
 Q.unpt_militancy = 0.24;
-Q.unpt.gstatus = 1;
+Q.unpt_gstatus = 1;
 
 Q.jvpt_strength = 20;
 Q.jvpt_militancy = 0.24;
-Q.jvpt.gstatus = 1;
+Q.jvpt_gstatus = 1;
 
 Q.blackcats_formed = 0;
 Q.blackcats_strength = 0;
-Q.blackcats.gstatus = 0;
+Q.blackcats_gstatus = 0;
 Q.eagles_formed = 0;
 Q.eagles_strength = 0;
-Q.eagles.gstatus = 0;
+Q.eagles_gstatus = 0;
 
 Q.prra_formed = 0;
 Q.prra_strength = 0;
-Q.prra.gstatus = 0;
+Q.prra_gstatus = 0;
 Q.djv_formed = 0;
 Q.djv_strength = 0;
-Q.djv.gstatus = 0;
+Q.djv_gstatus = 0;
 
 //tamil rebel groups
 
 Q.ltte_strength = 35;
 Q.ltte_militancy = 0.24;
-Q.ltte.gstatus = 1;
+Q.ltte_gstatus = 1;
 
 Q.eros_strength = 10;
 Q.eros_militancy = 0.24;
-Q.eros.gstatus = 1;
+Q.eros_gstatus = 1;
 
 Q.eprlf_strength = 5;
 Q.eprlf_militancy = 0.24;
-Q.eprlf.gstatus = 1;
+Q.eprlf_gstatus = 1;
 
 Q.telo_strength = 40;
 Q.telo_militancy = 0.24;
-Q.telo.gstatus = 1;
+Q.telo_gstatus = 1;
 
 Q.plote_strength = 30;
 Q.plote_militancy = 0.24;
-Q.plote.gstatus = 1;
+Q.plote_gstatus = 1;
 
 Q.epdp_formed = 0;//pro government paramilitary
 Q.epdp_strength = 0;
-Q.epdp.gstatus = 0;
+Q.epdp_gstatus = 0;
 Q.endlf_formed = 0;//(amalgam of splinter groups from the EPRLF, PLOTE and TELO. Will form if Tamil unity is too low as a pro india faction and party)
 Q.endlf_strength = 0;
-Q.endlf.gstatus = 0;
+Q.endlf_gstatus = 0;
 Q.tna_formed = 0;//tamil national army as a pro-india armed group to fight the LTTE
 Q.tna_strength = 0;
-Q.tna.gstatus = 0;
+Q.tna_gstatus = 0;
 
 Q.enlf_formed = 0;//Eelam national liberation front(every Tamil group united into one umbrella organisation between 84 and 86)
 Q.enlf_strength = 0;
-Q.enlf.gstatus = 0;
+Q.enlf_gstatus = 0;
 
 // army and official paramilitaries
 
@@ -201,7 +201,7 @@ Q.civilsec_formed = 0;
 Q.stf_formed = 0;
 Q.stf_strength = 0;
 Q.stf_morale = 0;
-Q.stf.gstatus = 0;
+Q.stf_gstatus = 0;
 
 Q.slp_strength = 10;
 Q.slp_morale = 0.7;
@@ -383,7 +383,7 @@ Q.india_tamil_support = 0.2;
 Q.ipkf_formed = 0;
 Q.ipkf_size = 0;
 Q.ipkf_morale = 0.8;
-Q.ipkf.gstatus = 0;
+Q.ipkf_gstatus = 0;
 Q.india_government = "INC";
 //Other option for government is the NF
 Q.india_pm = "Indira Gandhi";
