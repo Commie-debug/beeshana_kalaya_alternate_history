@@ -114,7 +114,58 @@ Q.jvp_reconciliation = 0;
 Q.jvp_slfp_pact = 0;
 Q.jvp_banned = 0;
 
+//nssp
+//wheter NSSP rejoined the LSSP?
+Q.nssp_lssp_reunited = 0;
+
 //WILL ADD OTHER BRANCHES FOR THE OTHER PARTIES
+
+
+//coalition and& alliance shyte
+Q.active_coalitions = [];
+
+//if in no coalition: -1, when in coaltion their ID's will match based on their index
+Q.slfp_coalition_id = -1;
+Q.unp_coalition_id = 0;
+Q.jvp_coalition_id = -1;
+Q.cpsl_coalition_id = -1;
+Q.lssp_coalition_id = -1;
+Q.nssp_coalition_id = -1;
+Q.tulf_coalition_id = -1;
+Q.actc_coalition_id = -1;
+Q.cwc_coalition_id = 0;
+Q.slmc_coalition_id = -1;
+Q.slmp_coalition_id = -1;
+Q.slpp_coalition_id = -1;
+Q.mep_coalition_id = -1;
+Q.npp_coalition_id = -1;
+Q.eros_coalition_id = -1;
+Q.dplf_coalition_id = -1;
+Q.pflt_coalition_id = -1;
+
+// C&S tracking - which parties are providing confidence & supply to current government
+Q.jvp_providing_cs = 0;
+Q.cpsl_providing_cs = 0;
+Q.lssp_providing_cs = 0;
+Q.nssp_providing_cs = 0;
+Q.tulf_providing_cs = 0;
+Q.actc_providing_cs = 0;
+Q.cwc_providing_cs = 0;
+Q.slmc_providing_cs = 0;
+Q.slmp_providing_cs = 0;
+Q.slpp_providing_cs = 0;
+Q.mep_providing_cs = 0;
+Q.npp_providing_cs = 0;
+Q.pflt_providing_cs = 0;
+Q.eros_providing_cs = 0;
+Q.dplf_providing_cs = 0;
+
+//UNP and CWC coalition
+Q.active_coalitions.push({
+    lead: 'unp',
+    members: ['cwc'],
+    name: 'UNP & CWC',
+});
 
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
