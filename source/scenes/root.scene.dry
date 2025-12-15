@@ -143,6 +143,9 @@ Q.eros_coalition_id = -1;
 Q.dplf_coalition_id = -1;
 Q.pflt_coalition_id = -1;
 
+//to keep track of whaere the next coalition should be placed
+Q.next_coalition_id = 1;
+
 // C&S tracking - which parties are providing confidence & supply to current government
 Q.jvp_providing_cs = 0;
 Q.cpsl_providing_cs = 0;
