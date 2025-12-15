@@ -759,7 +759,7 @@ Q.puttalam_d_rural = 76;
 Q.puttalam_d_control = 100;
 Q.puttalam_d_infastructure = 0.40;
 Q.puttalam_d_seats = 7;
-Q.puttalam_d_industries = ['Fishing', 'Agriculture'];
+Q.puttalam_d_industries = ['Fishing', 'Agriculture', 'Mining'];
 Q.puttalam_d_pop_weight = 3.32;
 
 //North Central province
