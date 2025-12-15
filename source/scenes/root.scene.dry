@@ -165,8 +165,8 @@ Q.dplf_providing_cs = 0;
 
 //UNP and CWC coalition
 Q.active_coalitions.push({
-    lead: 'unp',
-    members: ['unp', 'cwc'],
+    lead: 'UNP',
+    members: ['UNP', 'CWC'],
     name: 'UNP & CWC',
 });
 
