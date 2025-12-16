@@ -257,9 +257,9 @@ Q.stf_strength = 0;
 Q.stf_morale = 0;
 Q.stf_gstatus = 0;
 
-Q.slp_strength = 10;
+Q.slp_strength = 17;
 Q.slp_morale = 0.7;
-Q.slaf_strength = 100;
+Q.slaf_strength = 14.9;
 Q.slaf_morale = 0.7;
 
 // for how stong the security forces (offical army, police and paramilitaries) are in terms of arms, tactics, experience etc. Uses strenght qdisplay
