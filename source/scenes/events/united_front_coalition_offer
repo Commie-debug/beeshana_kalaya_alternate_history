@@ -1,0 +1,46 @@
+title: An offer from the LSSP and CPSL
+new-page: true
+is-card: true
+view-if: slfp_coalition_id = -1 and lssp_relation >=60; and lssp_relation >=60;
+tags: event
+
+= Coalition Proposal from the LSSP and CPSL
+
+The CPSL and LSSP have approached us with an offer. Owing to the positive relations between our parties, the two have offered to reform the United Front alliance. The alliance was first formed in 1968 and came to power in 1970. Accepting this offer will combine our votes in future elections, and all parties involved will gain a boost during rallies and campaigns.
+
+- @accept_coalition: Accept the coalition offer
+- @reject_coalition: Reject the offer
+
+@accept_coalition
+on-arrival: {!
+//new coalition
+Q.active_coalitions.push({
+    lead: 'SLFP',
+    members: ['SLFP', LSSP, CPSL],
+    name: 'United Front',
+});
+
+//update coalition IDs
+Q.slfp_coalition_id = Q.next_coalition_id;
+Q.lssp_coalition_id = Q.next_coalition_id; 
+Q.cpsl_party_coalition_id = Q.next_coalition_id; 
+
+
+//increment for next coalition
+Q.next_coalition_id += 1;
+
+//relation boost
+Q.cpsl_relation += 10; 
+Q.lssp_relation += 10;
+!}
+
+We have gone ahead with forming a coalition with the LSSP and CPSL. The United Front has been reborn from the ashes to challenge the UNP and all others who threaten Sri Lanka and its path to socialism.
+
+@reject_coalition
+on-arrival: {!
+Q.lssp_relation -= 5;
+Q.cpsl_relation -= 5;
+!}
+
+We have rejected the coalition offer from the LSSP and CPSL, given we are not in an alliance, the two parties are rather confused and annoyed at our refusal.
+
