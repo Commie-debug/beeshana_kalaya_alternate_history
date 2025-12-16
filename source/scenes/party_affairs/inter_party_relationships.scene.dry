@@ -58,7 +58,7 @@ on-arrival: resources -= 1;
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; 
+on-arrival: resources -= 1; lssp_relations +=5; cpsl_relation += 5;
 
 //FUTURE, ADD PATHS FOR a remaking of the UF. Or make future support for SLFP dependent on if they have/will pass worker/union friendly laws and start re-nationalising
 
