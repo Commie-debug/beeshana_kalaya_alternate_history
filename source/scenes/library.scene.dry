@@ -253,31 +253,31 @@ Inequality: [+ inequality_2 : equality +]
 
 Tourism: [+ tourism : sectordev +], Tourism Nationalisation: [+ tourism_national : nationalisation +]
 
--Tourism is a growing but fragile sector, benefiting from liberalisation after 1977 but increasingly affected by tensions both globally and locally. It is nationally important for both foreign exchange and urban employment, though still secondary to agriculture and tea. Tourism is most prevalent along the western and southern coasts (Colombo, Galle), in hill-country resorts, areas of the north-east, and at major cultural/religous sites such as Kandy, Jaffna and Anuradhapura.
+Tourism is a growing but fragile sector, benefiting from liberalisation after 1977 but increasingly affected by tensions both globally and locally. It is nationally important for both foreign exchange and urban employment, though still secondary to agriculture and tea. Tourism is most prevalent along the western and southern coasts (Colombo, Galle), in hill-country resorts, areas of the north-east, and at major cultural/religous sites such as Kandy, Jaffna and Anuradhapura.
 
 Mining: [+ mining : sectordev +], Mining Nationalisation: [+ mining_national : nationalisation +]
 
--Mining is small in scale and largely limited to non-metallic minerals, with minimal industrialisation. While nationally minor in economic weight, it is locally significant in specific districts. Mining activity is most prevalent in Ratnapura, Kegalle and Moneragala districts (gem mining), as well as in districts extracting graphite, limestone, and mineral sands such as Kurunegala and Putallam.
+Mining is small in scale and largely limited to non-metallic minerals, with minimal industrialisation. While nationally minor in economic weight, it is locally significant in specific districts. Mining activity is most prevalent in Ratnapura, Kegalle and Moneragala districts (gem mining), as well as in districts extracting graphite, limestone, and mineral sands such as Kurunegala and Putallam.
 
 Tea: [+ tea : sectordev +], Tea Nationalisation: [+ tea_national : nationalisation +]
 
--Tea is Sri Lanka’s most important export earner having been introduced by the British during imperial rule, though productivity and global prices have begun to fluctuate. The industry is largely plantation-based and state-influenced following earlier nationalisations with some limited attempts at privatisation under the UNP. Tea is nationally vital for foreign exchange and employment, especially for Indian Tamils who makeup the majority of the industries labour. It is most prevalent in the Central Highland districts off Nuwara Eliya, Kandy, Badulla, and Ratnapura.
+Tea is Sri Lanka’s most important export earner having been introduced by the British during imperial rule, though productivity and global prices have begun to fluctuate. The industry is largely plantation-based and state-influenced following earlier nationalisations with some limited attempts at privatisation under the UNP. Tea is nationally vital for foreign exchange and employment, especially for Indian Tamils who makeup the majority of the industries labour. It is most prevalent in the Central Highland districts off Nuwara Eliya, Kandy, Badulla, and Ratnapura.
 
 Agriculture: [+ agriculture : sectordev +], Agriculture Nationalisation: [+ agriculture_national : nationalisation +]
 
--Agriculture remains the backbone of rural life, dominated by paddy cultivation and smallholder farming. While its share of GDP is slowly declining, it is nationally essential for employment and food supply. Agriculture is prevalent across the Dry Zone (Anuradhapura, Polonnaruwa, Hambantota) and Wet Zone lowlands, supported by irrigation schemes such as the Mahaweli project. Nowhere in Sri Lanka will you not find it prescence.
+Agriculture remains the backbone of rural life, dominated by paddy cultivation and smallholder farming. While its share of GDP is slowly declining, it is nationally essential for employment and food supply. Agriculture is prevalent across the Dry Zone (Anuradhapura, Polonnaruwa, Hambantota) and Wet Zone lowlands, supported by irrigation schemes such as the Mahaweli project. Nowhere in Sri Lanka will you not find it prescence.
 
 Fishing: [+ fishing : sectordev +], Fishing Nationalisation: [+ fishing_national : nationalisation +]
 
--Fishing is largely small-scale and traditional, with limited mechanisation despite continued state efforts to modernise. It is locally crucial for food security and coastal livelihoods, though less significant in export terms. Fishing is most prevalent along the coastal belt, especially in Negombo, Putallam, Jaffna, Mannar, Trincomalee, and the southern coastal districts.
+Fishing is largely small-scale and traditional, with limited mechanisation despite continued state efforts to modernise. It is locally crucial for food security and coastal livelihoods, though less significant in export terms. Fishing is most prevalent along the coastal belt, especially in Negombo, Putallam, Jaffna, Mannar, Trincomalee, and the southern coastal districts.
 
 Textile & apparel: [+ textile : sectordev +], Textile & apparel Nationalisation: [+ textile_national : nationalisation +]
 
--The textile and garment sector is currently in an early stage of expansion, driven by state factories and emerging private investment following economic liberalisation. Nationally, it is increasingly important for import substitution and urban employment, especially for women. Production is concentrated around Colombo, Gampaha and Kalutara with early activity in export processing zones.
+The textile and garment sector is currently in an early stage of expansion, driven by state factories and emerging private investment following economic liberalisation. Nationally, it is increasingly important for import substitution and urban employment, especially for women. Production is concentrated around Colombo, Gampaha and Kalutara with early activity in export processing zones.
 
 Rubber: [+ rubber : sectordev +], Rubber Nationalisation: [+ rubber_national : nationalisation +]
 
--Rubber is a declining but still important plantation crop, its currently faces competition from synthetic alternatives and price volatility, a stark contrast from its importance 40 years earlier. It remains nationally relevant as an export and source of rural employment. Rubber cultivation is concentrated in the Wet Zone, particularly in Kalutara, Kegalle, Ratnapura, and parts of Gampaha district.
+Rubber is a declining but still important plantation crop, its currently faces competition from synthetic alternatives and price volatility, a stark contrast from its importance 40 years earlier. It remains nationally relevant as an export and source of rural employment. Rubber cultivation is concentrated in the Wet Zone, particularly in Kalutara, Kegalle, Ratnapura, and parts of Gampaha district.
 
 = Tax Rates (Based on 1981 baseline)
 
