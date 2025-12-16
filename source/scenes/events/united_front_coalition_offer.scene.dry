@@ -16,7 +16,7 @@ on-arrival: {!
 //new coalition
 Q.active_coalitions.push({
     lead: 'SLFP',
-    members: ['SLFP', LSSP, CPSL],
+    members: ['SLFP', 'LSSP', 'CPSL'],
     name: 'United Front',
 });
 
