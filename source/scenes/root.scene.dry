@@ -120,7 +120,6 @@ Q.nssp_lssp_reunited = 0;
 
 //WILL ADD OTHER BRANCHES FOR THE OTHER PARTIES
 
-
 //coalition and& alliance shyte
 Q.active_coalitions = [];
 
@@ -169,6 +168,34 @@ Q.active_coalitions.push({
     members: ['UNP', 'CWC'],
     name: 'UNP & CWC',
 });
+
+//resetin for display
+Q.coalition_0_name = '';
+Q.coalition_0_lead = '';
+Q.coalition_0_members = '';
+Q.coalition_1_name = '';
+Q.coalition_1_lead = '';
+Q.coalition_1_members = '';
+Q.coalition_2_name = '';
+Q.coalition_2_lead = '';
+Q.coalition_2_members = '';
+Q.coalition_3_name = '';
+Q.coalition_3_lead = '';
+Q.coalition_3_members = '';
+Q.coalition_4_name = '';
+Q.coalition_4_lead = '';
+Q.coalition_4_members = '';
+Q.coalition_5_name = '';
+Q.coalition_5_lead = '';
+Q.coalition_5_members = '';
+Q.coalition_6_name = '';
+Q.coalition_6_lead = '';
+Q.coalition_6_members = '';
+Q.coalition_7_name = '';
+Q.coalition_7_lead = '';
+Q.coalition_7_members = '';
+
+Q.coalition_count = 1;
 
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
