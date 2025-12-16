@@ -248,7 +248,7 @@ Q.enlf_gstatus = 0;
 
 // army and official paramilitaries
 
-Q.homeg_civilsec_strength = 100;
+Q.homeg_civilsec_strength = 1;
 Q.homeg_civilsec_morale = 0.7;
 
 Q.civilsec_formed = 0;
