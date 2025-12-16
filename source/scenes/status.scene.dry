@@ -104,7 +104,7 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 
 [? if slmc_formed = 1 : <span class="tooltip-text" title="Sri Lanka Muslim Congress" style="color: #2DCF3E;">**SLMC**</span>: [+ slmc_relation : relationships +] ?]
 
-= Active Coalitions
+Active Coalitions
 
 [+ active_coalitions[0].name +], [+ active_coalitions[0].lead +], [+ active_coalitions[0].members +]
 
