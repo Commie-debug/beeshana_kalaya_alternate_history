@@ -69,6 +69,81 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 # = Public Opinion
 
 @politics
+on-arrival: {!
+
+//reset
+Q.coalition_0_name = '';
+Q.coalition_0_lead = '';
+Q.coalition_0_members = '';
+Q.coalition_1_name = '';
+Q.coalition_1_lead = '';
+Q.coalition_1_members = '';
+Q.coalition_2_name = '';
+Q.coalition_2_lead = '';
+Q.coalition_2_members = '';
+Q.coalition_3_name = '';
+Q.coalition_3_lead = '';
+Q.coalition_3_members = '';
+Q.coalition_4_name = '';
+Q.coalition_4_lead = '';
+Q.coalition_4_members = '';
+Q.coalition_5_name = '';
+Q.coalition_5_lead = '';
+Q.coalition_5_members = '';
+Q.coalition_6_name = '';
+Q.coalition_6_lead = '';
+Q.coalition_6_members = '';
+Q.coalition_7_name = '';
+Q.coalition_7_lead = '';
+Q.coalition_7_members = '';
+
+Q.coalition_count = 0;
+
+if (Q.active_coalitions) {
+    Q.coalition_count = Q.active_coalitions.length;
+    
+    if (Q.active_coalitions[0]) {
+        Q.coalition_0_name = Q.active_coalitions[0].name || '';
+        Q.coalition_0_lead = Q.active_coalitions[0].lead || '';
+        Q.coalition_0_members = Q.active_coalitions[0].members ? Q.active_coalitions[0].members.join(', ') : '';
+    }
+    if (Q.active_coalitions[1]) {
+        Q.coalition_1_name = Q.active_coalitions[1].name || '';
+        Q.coalition_1_lead = Q.active_coalitions[1].lead || '';
+        Q.coalition_1_members = Q.active_coalitions[1].members ? Q.active_coalitions[1].members.join(', ') : '';
+    }
+    if (Q.active_coalitions[2]) {
+        Q.coalition_2_name = Q.active_coalitions[2].name || '';
+        Q.coalition_2_lead = Q.active_coalitions[2].lead || '';
+        Q.coalition_2_members = Q.active_coalitions[2].members ? Q.active_coalitions[2].members.join(', ') : '';
+    }
+    if (Q.active_coalitions[3]) {
+        Q.coalition_3_name = Q.active_coalitions[3].name || '';
+        Q.coalition_3_lead = Q.active_coalitions[3].lead || '';
+        Q.coalition_3_members = Q.active_coalitions[3].members ? Q.active_coalitions[3].members.join(', ') : '';
+    }
+    if (Q.active_coalitions[4]) {
+        Q.coalition_4_name = Q.active_coalitions[4].name || '';
+        Q.coalition_4_lead = Q.active_coalitions[4].lead || '';
+        Q.coalition_4_members = Q.active_coalitions[4].members ? Q.active_coalitions[4].members.join(', ') : '';
+    }
+    if (Q.active_coalitions[5]) {
+        Q.coalition_5_name = Q.active_coalitions[5].name || '';
+        Q.coalition_5_lead = Q.active_coalitions[5].lead || '';
+        Q.coalition_5_members = Q.active_coalitions[5].members ? Q.active_coalitions[5].members.join(', ') : '';
+    }
+    if (Q.active_coalitions[6]) {
+        Q.coalition_6_name = Q.active_coalitions[6].name || '';
+        Q.coalition_6_lead = Q.active_coalitions[6].lead || '';
+        Q.coalition_6_members = Q.active_coalitions[6].members ? Q.active_coalitions[6].members.join(', ') : '';
+    }
+    if (Q.active_coalitions[7]) {
+        Q.coalition_7_name = Q.active_coalitions[7].name || '';
+        Q.coalition_7_lead = Q.active_coalitions[7].lead || '';
+        Q.coalition_7_members = Q.active_coalitions[7].members ? Q.active_coalitions[7].members.join(', ') : '';
+    }
+}
+!}
 
 = Inter-party Relations
 
@@ -106,7 +181,23 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 
 = Active Coalitions
 
-WIP
+[? if coalition_count >= 1 : **[+ coalition_0_name +]** — Led by: [+ coalition_0_lead +] — Members: [+ coalition_0_members +] ?]
+
+[? if coalition_count >= 2 : **[+ coalition_1_name +]** — Led by: [+ coalition_1_lead +] — Members: [+ coalition_1_members +] ?]
+
+[? if coalition_count >= 3 : **[+ coalition_2_name +]** — Led by: [+ coalition_2_lead +] — Members: [+ coalition_2_members +] ?]
+
+[? if coalition_count >= 4 : **[+ coalition_3_name +]** — Led by: [+ coalition_3_lead +] — Members: [+ coalition_3_members +] ?]
+
+[? if coalition_count >= 5 : **[+ coalition_4_name +]** — Led by: [+ coalition_4_lead +] — Members: [+ coalition_4_members +] ?]
+
+[? if coalition_count >= 6 : **[+ coalition_5_name +]** — Led by: [+ coalition_5_lead +] — Members: [+ coalition_5_members +] ?]
+
+[? if coalition_count >= 7 : **[+ coalition_6_name +]** — Led by: [+ coalition_6_lead +] — Members: [+ coalition_6_members +] ?]
+
+[? if coalition_count >= 8 : **[+ coalition_7_name +]** — Led by: [+ coalition_7_lead +] — Members: [+ coalition_7_members +] ?]
+
+[? if coalition_count = 0 : No active coalitions. ?]
 
 = Party Ideologies
 
