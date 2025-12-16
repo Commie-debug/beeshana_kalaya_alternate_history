@@ -16,8 +16,6 @@ if (Q.economic_growth) {
 
 = Status
 
-Pls Work
-
 Week [+ week +] [+ month : month +] [+ year +] 
 
 Resources available: [+ resources +]
@@ -105,6 +103,10 @@ Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl
 <span class="tooltip-text" title="Ceylon Workers Congress" style="color: #E52B50;">**CWC**</span>: [+ cwc_relation : relationships +]
 
 [? if slmc_formed = 1 : <span class="tooltip-text" title="Sri Lanka Muslim Congress" style="color: #2DCF3E;">**SLMC**</span>: [+ slmc_relation : relationships +] ?]
+
+= Active Coalitions
+
+[+ active_coalitions[0].name +], [+ active_coalitions[0].lead +], [+ active_coalitions[0].members +]
 
 = Party Ideologies
 
