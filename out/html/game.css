@@ -387,7 +387,7 @@ img.inline-img.icon {
 .clead{font-size:0.85em;color:rgba(255,255,255,0.8);margin-bottom:6px}
 .clead b{color:#fff}
 .cmem{display:flex;flex-wrap:wrap;gap:5px}
-.cbadge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:0.85em;font-weight:500;color:#000}
+.cbadge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:0.85em;font-weight:500;color:#fff}
 .cno{text-align:center;padding:20px;color:#888;font-style:italic;background:rgba(0,0,0,0.04);border-radius:8px;border:1px dashed #ccc}
 
 .overlay {
