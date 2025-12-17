@@ -79,8 +79,23 @@ for (var i = 0; i < 8; i++) {
         Q['c' + i + '_name'] = c.name || '';
         Q['c' + i + '_lead'] = c.lead || '';
         Q['c' + i + '_color'] = Q.partyColors[c.lead] || '#666';
-        Q['c' + i + '_status'] = (Q.current_gov && Q.current_gov.indexOf(c.lead) !== -1) ? '● Gov' : '○ Opp';
-        Q['c' + i + '_statcol'] = (Q.current_gov && Q.current_gov.indexOf(c.lead) !== -1) ? '#4CAF50' : '#9E9E9E';
+        
+        // Determine status: Government, C&S, or Opposition
+        var isGov = (Q.current_gov && Q.current_gov.indexOf(c.lead) !== -1);
+        var csVar = c.lead.toLowerCase() + '_providing_cs';
+        var isCS = Q[csVar] === 1;
+        
+        if (isGov) {
+            Q['c' + i + '_status'] = '● Gov';
+            Q['c' + i + '_statcol'] = '#4CAF50';
+        } else if (isCS) {
+            Q['c' + i + '_status'] = '◐ C&S';
+            Q['c' + i + '_statcol'] = '#FF9800';
+        } else {
+            Q['c' + i + '_status'] = '○ Opp';
+            Q['c' + i + '_statcol'] = '#9E9E9E';
+        }
+        
         var bHtml = '';
         if (c.members) {
             for (var j = 0; j < c.members.length; j++) {
