@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-New York
+Comrade
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
@@ -80,7 +80,6 @@ for (var i = 0; i < 8; i++) {
         Q['c' + i + '_lead'] = c.lead || '';
         Q['c' + i + '_color'] = Q.partyColors[c.lead] || '#666';
         
-        // Determine status: Government, C&S, or Opposition
         var isGov = (Q.current_gov && Q.current_gov.indexOf(c.lead) !== -1);
         var csVar = c.lead.toLowerCase() + '_providing_cs';
         var isCS = Q[csVar] === 1;
@@ -96,16 +95,9 @@ for (var i = 0; i < 8; i++) {
             Q['c' + i + '_statcol'] = '#9E9E9E';
         }
         
-        var bHtml = '';
-        if (c.members) {
-            for (var j = 0; j < c.members.length; j++) {
-                var m = c.members[j], col = Q.partyColors[m] || '#666';
-                bHtml += '<span class="cbadge" style="background:' + col + '">' + m + '</span>';
-            }
-        }
-        Q['c' + i + '_html'] = bHtml;
+        Q['c' + i + '_members'] = c.members ? c.members.join(', ') : '';
     } else {
-        Q['c' + i + '_name'] = ''; Q['c' + i + '_html'] = '';
+        Q['c' + i + '_name'] = ''; Q['c' + i + '_members'] = '';
     }
 }
 !}
@@ -146,21 +138,21 @@ for (var i = 0; i < 8; i++) {
 
 = Active Coalitions
 
-[? if coalition_count >= 1 : {!<div class="ccard" style="border:3px solid !}[+ c0_color +]{!"><div class="chdr"><b class="cname">!}[+ c0_name +]{!</b><span style="color:!}[+ c0_statcol +]{!">!}[+ c0_status +]{!</span></div><div class="clead">Led by <b>!}[+ c0_lead +]{!</b></div><div class="cmem">!}[+ c0_html +]{!</div></div>!} ?]
+[? if coalition_count >= 1 : {!<div class="ccard" style="border:3px solid !}[+ c0_color +]{!"><div class="chdr"><b class="cname">!}[+ c0_name +]{!</b><span style="color:!}[+ c0_statcol +]{!">!}[+ c0_status +]{!</span></div><div class="clead">Led by <b>!}[+ c0_lead +]{!</b></div><div class="cmem">!}[+ c0_members +]{!</div></div>!} ?]
 
-[? if coalition_count >= 2 : {!<div class="ccard" style="border:3px solid !}[+ c1_color +]{!"><div class="chdr"><b class="cname">!}[+ c1_name +]{!</b><span style="color:!}[+ c1_statcol +]{!">!}[+ c1_status +]{!</span></div><div class="clead">Led by <b>!}[+ c1_lead +]{!</b></div><div class="cmem">!}[+ c1_html +]{!</div></div>!} ?]
+[? if coalition_count >= 2 : {!<div class="ccard" style="border:3px solid !}[+ c1_color +]{!"><div class="chdr"><b class="cname">!}[+ c1_name +]{!</b><span style="color:!}[+ c1_statcol +]{!">!}[+ c1_status +]{!</span></div><div class="clead">Led by <b>!}[+ c1_lead +]{!</b></div><div class="cmem">!}[+ c1_members +]{!</div></div>!} ?]
 
-[? if coalition_count >= 3 : {!<div class="ccard" style="border:3px solid !}[+ c2_color +]{!"><div class="chdr"><b class="cname">!}[+ c2_name +]{!</b><span style="color:!}[+ c2_statcol +]{!">!}[+ c2_status +]{!</span></div><div class="clead">Led by <b>!}[+ c2_lead +]{!</b></div><div class="cmem">!}[+ c2_html +]{!</div></div>!} ?]
+[? if coalition_count >= 3 : {!<div class="ccard" style="border:3px solid !}[+ c2_color +]{!"><div class="chdr"><b class="cname">!}[+ c2_name +]{!</b><span style="color:!}[+ c2_statcol +]{!">!}[+ c2_status +]{!</span></div><div class="clead">Led by <b>!}[+ c2_lead +]{!</b></div><div class="cmem">!}[+ c2_members +]{!</div></div>!} ?]
 
-[? if coalition_count >= 4 : {!<div class="ccard" style="border:3px solid !}[+ c3_color +]{!"><div class="chdr"><b class="cname">!}[+ c3_name +]{!</b><span style="color:!}[+ c3_statcol +]{!">!}[+ c3_status +]{!</span></div><div class="clead">Led by <b>!}[+ c3_lead +]{!</b></div><div class="cmem">!}[+ c3_html +]{!</div></div>!} ?]
+[? if coalition_count >= 4 : {!<div class="ccard" style="border:3px solid !}[+ c3_color +]{!"><div class="chdr"><b class="cname">!}[+ c3_name +]{!</b><span style="color:!}[+ c3_statcol +]{!">!}[+ c3_status +]{!</span></div><div class="clead">Led by <b>!}[+ c3_lead +]{!</b></div><div class="cmem">!}[+ c3_members +]{!</div></div>!} ?]
 
-[? if coalition_count >= 5 : {!<div class="ccard" style="border:3px solid !}[+ c4_color +]{!"><div class="chdr"><b class="cname">!}[+ c4_name +]{!</b><span style="color:!}[+ c4_statcol +]{!">!}[+ c4_status +]{!</span></div><div class="clead">Led by <b>!}[+ c4_lead +]{!</b></div><div class="cmem">!}[+ c4_html +]{!</div></div>!} ?]
+[? if coalition_count >= 5 : {!<div class="ccard" style="border:3px solid !}[+ c4_color +]{!"><div class="chdr"><b class="cname">!}[+ c4_name +]{!</b><span style="color:!}[+ c4_statcol +]{!">!}[+ c4_status +]{!</span></div><div class="clead">Led by <b>!}[+ c4_lead +]{!</b></div><div class="cmem">!}[+ c4_members +]{!</div></div>!} ?]
 
-[? if coalition_count >= 6 : {!<div class="ccard" style="border:3px solid !}[+ c5_color +]{!"><div class="chdr"><b class="cname">!}[+ c5_name +]{!</b><span style="color:!}[+ c5_statcol +]{!">!}[+ c5_status +]{!</span></div><div class="clead">Led by <b>!}[+ c5_lead +]{!</b></div><div class="cmem">!}[+ c5_html +]{!</div></div>!} ?]
+[? if coalition_count >= 6 : {!<div class="ccard" style="border:3px solid !}[+ c5_color +]{!"><div class="chdr"><b class="cname">!}[+ c5_name +]{!</b><span style="color:!}[+ c5_statcol +]{!">!}[+ c5_status +]{!</span></div><div class="clead">Led by <b>!}[+ c5_lead +]{!</b></div><div class="cmem">!}[+ c5_members +]{!</div></div>!} ?]
 
-[? if coalition_count >= 7 : {!<div class="ccard" style="border:3px solid !}[+ c6_color +]{!"><div class="chdr"><b class="cname">!}[+ c6_name +]{!</b><span style="color:!}[+ c6_statcol +]{!">!}[+ c6_status +]{!</span></div><div class="clead">Led by <b>!}[+ c6_lead +]{!</b></div><div class="cmem">!}[+ c6_html +]{!</div></div>!} ?]
+[? if coalition_count >= 7 : {!<div class="ccard" style="border:3px solid !}[+ c6_color +]{!"><div class="chdr"><b class="cname">!}[+ c6_name +]{!</b><span style="color:!}[+ c6_statcol +]{!">!}[+ c6_status +]{!</span></div><div class="clead">Led by <b>!}[+ c6_lead +]{!</b></div><div class="cmem">!}[+ c6_members +]{!</div></div>!} ?]
 
-[? if coalition_count >= 8 : {!<div class="ccard" style="border:3px solid !}[+ c7_color +]{!"><div class="chdr"><b class="cname">!}[+ c7_name +]{!</b><span style="color:!}[+ c7_statcol +]{!">!}[+ c7_status +]{!</span></div><div class="clead">Led by <b>!}[+ c7_lead +]{!</b></div><div class="cmem">!}[+ c7_html +]{!</div></div>!} ?]
+[? if coalition_count >= 8 : {!<div class="ccard" style="border:3px solid !}[+ c7_color +]{!"><div class="chdr"><b class="cname">!}[+ c7_name +]{!</b><span style="color:!}[+ c7_statcol +]{!">!}[+ c7_status +]{!</span></div><div class="clead">Led by <b>!}[+ c7_lead +]{!</b></div><div class="cmem">!}[+ c7_members +]{!</div></div>!} ?]
 
 [? if coalition_count = 0 : {!<div class="cno">No active coalitions</div>!} ?]
 
