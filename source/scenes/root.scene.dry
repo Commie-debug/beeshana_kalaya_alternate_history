@@ -1358,7 +1358,7 @@ Q.next_pres_election_year = 1984;
 Q.next_pres_election_month = 1;
 //for real, parliament elections for august 1983
 //72 months or 6 years
-Q.parliament_term = 72
+Q.parliament_term = 72;
 Q.next_parl_election_year = 1981;
 Q.next_parl_election_month = 2;
 Q.next_election_time = 5;
