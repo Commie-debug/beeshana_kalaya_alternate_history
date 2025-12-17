@@ -106,6 +106,14 @@ Q.eros_ideology = 11;
 Q.dplf_ideology = 11;
 Q.pflt_ideology = 11;
 
+//party colours as a list incase
+Q.partyColors = {
+    'UNP': '#006400', 'SLFP': '#00008B', 'TULF': '#F7D917', 'CWC': '#E52B50',
+    'ACTC': '#FDCC01', 'CPSL': '#65000B', 'JVP': '#FF2226', 'LSSP': '#A91101',
+    'NSSP': '#FF8080', 'SLPP': '#800020', 'SLMP': '#663399', 'SLMC': '#2DCF3E',
+    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#DC143C'
+};
+
 //inter party dynamics
 //jvp
 //0-no reconciliation for 1971, 1-reconciled for 1971
