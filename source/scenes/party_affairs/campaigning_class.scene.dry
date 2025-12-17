@@ -15,8 +15,6 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 - @middle: Educated professionals and civil servants of the middle class.
 - @worker: Urban and industrial laborers (factory workers, plantation workers).
 - @rural: Farmers and villagers dependent on agriculture and mining.
-- @unemployed: The unemployed.
-- @clergy: Buddhist monks, Hindu priests, Muslim mullahs and the devout.
 - @ethnic: It serve us well to campaign more broadly among the nations ethnic groups.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
@@ -52,22 +50,6 @@ unavailable-subtitle: Not enough resources.
 on-arrival: rural_slfp += 6*(1-dissent);
 
 We have increased our campaigning among rural class.
-
-@unemployed
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_slfp += 6*(1-dissent);
-
-We have increased our campaigning among the unemployed.
-
-@clergy
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: clergy_slfp += 6*(1-dissent);
-
-We have increased our campaigning among the clergy.
 
 @ethnic
 go-to: campaigning_ethnic
