@@ -4,7 +4,7 @@ on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
 card-image: img/campaign_1.jpg
-frequency: 100
+frequency: 50
 tags: party_affairs
 
 = Ethnic Campaigning
