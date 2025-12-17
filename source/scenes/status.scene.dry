@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-Brr
+Foood
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
@@ -68,81 +68,29 @@ Next presidential election: [+ next_pres_election_month : month +] [+ next_pres_
 
 Next parliamentary election: [+ next_parl_election_month : month +] [+ next_parl_election_year +]
 
-# = Public Opinion
 
 @politics
 on-arrival: {!
+Q.coalition_count = Q.active_coalitions ? Q.active_coalitions.length : 0;
 
-//reset
-Q.coalition_0_name = '';
-Q.coalition_0_lead = '';
-Q.coalition_0_members = '';
-Q.coalition_1_name = '';
-Q.coalition_1_lead = '';
-Q.coalition_1_members = '';
-Q.coalition_2_name = '';
-Q.coalition_2_lead = '';
-Q.coalition_2_members = '';
-Q.coalition_3_name = '';
-Q.coalition_3_lead = '';
-Q.coalition_3_members = '';
-Q.coalition_4_name = '';
-Q.coalition_4_lead = '';
-Q.coalition_4_members = '';
-Q.coalition_5_name = '';
-Q.coalition_5_lead = '';
-Q.coalition_5_members = '';
-Q.coalition_6_name = '';
-Q.coalition_6_lead = '';
-Q.coalition_6_members = '';
-Q.coalition_7_name = '';
-Q.coalition_7_lead = '';
-Q.coalition_7_members = '';
-
-Q.coalition_count = 0;
-
-if (Q.active_coalitions) {
-    Q.coalition_count = Q.active_coalitions.length;
-    
-    if (Q.active_coalitions[0]) {
-        Q.coalition_0_name = Q.active_coalitions[0].name || '';
-        Q.coalition_0_lead = Q.active_coalitions[0].lead || '';
-        Q.coalition_0_members = Q.active_coalitions[0].members ? Q.active_coalitions[0].members.join(', ') : '';
-    }
-    if (Q.active_coalitions[1]) {
-        Q.coalition_1_name = Q.active_coalitions[1].name || '';
-        Q.coalition_1_lead = Q.active_coalitions[1].lead || '';
-        Q.coalition_1_members = Q.active_coalitions[1].members ? Q.active_coalitions[1].members.join(', ') : '';
-    }
-    if (Q.active_coalitions[2]) {
-        Q.coalition_2_name = Q.active_coalitions[2].name || '';
-        Q.coalition_2_lead = Q.active_coalitions[2].lead || '';
-        Q.coalition_2_members = Q.active_coalitions[2].members ? Q.active_coalitions[2].members.join(', ') : '';
-    }
-    if (Q.active_coalitions[3]) {
-        Q.coalition_3_name = Q.active_coalitions[3].name || '';
-        Q.coalition_3_lead = Q.active_coalitions[3].lead || '';
-        Q.coalition_3_members = Q.active_coalitions[3].members ? Q.active_coalitions[3].members.join(', ') : '';
-    }
-    if (Q.active_coalitions[4]) {
-        Q.coalition_4_name = Q.active_coalitions[4].name || '';
-        Q.coalition_4_lead = Q.active_coalitions[4].lead || '';
-        Q.coalition_4_members = Q.active_coalitions[4].members ? Q.active_coalitions[4].members.join(', ') : '';
-    }
-    if (Q.active_coalitions[5]) {
-        Q.coalition_5_name = Q.active_coalitions[5].name || '';
-        Q.coalition_5_lead = Q.active_coalitions[5].lead || '';
-        Q.coalition_5_members = Q.active_coalitions[5].members ? Q.active_coalitions[5].members.join(', ') : '';
-    }
-    if (Q.active_coalitions[6]) {
-        Q.coalition_6_name = Q.active_coalitions[6].name || '';
-        Q.coalition_6_lead = Q.active_coalitions[6].lead || '';
-        Q.coalition_6_members = Q.active_coalitions[6].members ? Q.active_coalitions[6].members.join(', ') : '';
-    }
-    if (Q.active_coalitions[7]) {
-        Q.coalition_7_name = Q.active_coalitions[7].name || '';
-        Q.coalition_7_lead = Q.active_coalitions[7].lead || '';
-        Q.coalition_7_members = Q.active_coalitions[7].members ? Q.active_coalitions[7].members.join(', ') : '';
+for (var i = 0; i < 8; i++) {
+    var c = Q.active_coalitions && Q.active_coalitions[i];
+    if (c) {
+        Q['c' + i + '_name'] = c.name || '';
+        Q['c' + i + '_lead'] = c.lead || '';
+        Q['c' + i + '_color'] = Q.partyColors[c.lead] || '#666';
+        Q['c' + i + '_status'] = (Q.current_gov && Q.current_gov.indexOf(c.lead) !== -1) ? '● Gov' : '○ Opp';
+        Q['c' + i + '_statcol'] = (Q.current_gov && Q.current_gov.indexOf(c.lead) !== -1) ? '#4CAF50' : '#9E9E9E';
+        var bHtml = '';
+        if (c.members) {
+            for (var j = 0; j < c.members.length; j++) {
+                var m = c.members[j], col = Q.partyColors[m] || '#666';
+                bHtml += '<span class="cbadge" style="background:' + col + '">' + m + '</span>';
+            }
+        }
+        Q['c' + i + '_html'] = bHtml;
+    } else {
+        Q['c' + i + '_name'] = ''; Q['c' + i + '_html'] = '';
     }
 }
 !}
@@ -183,23 +131,15 @@ if (Q.active_coalitions) {
 
 = Active Coalitions
 
-[? if coalition_count >= 1 : **[+ coalition_0_name +]** — Led by: [+ coalition_0_lead +] — Members: [+ coalition_0_members +] ?]
+[? if coalition_count >= 1 : {!<div class="ccard" style="background:linear-gradient(135deg,!}[+ c0_color +]{!,#333)"><div class="chdr"><b class="cname">!}[+ c0_name +]{!</b><span style="color:!}[+ c0_statcol +]{!">!}[+ c0_status +]{!</span></div><div class="clead">Led by <b>!}[+ c0_lead +]{!</b></div><div class="cmem">!}[+ c0_html +]{!</div></div>!} ?]
 
-[? if coalition_count >= 2 : **[+ coalition_1_name +]** — Led by: [+ coalition_1_lead +] — Members: [+ coalition_1_members +] ?]
+[? if coalition_count >= 2 : {!<div class="ccard" style="background:linear-gradient(135deg,!}[+ c1_color +]{!,#333)"><div class="chdr"><b class="cname">!}[+ c1_name +]{!</b><span style="color:!}[+ c1_statcol +]{!">!}[+ c1_status +]{!</span></div><div class="clead">Led by <b>!}[+ c1_lead +]{!</b></div><div class="cmem">!}[+ c1_html +]{!</div></div>!} ?]
 
-[? if coalition_count >= 3 : **[+ coalition_2_name +]** — Led by: [+ coalition_2_lead +] — Members: [+ coalition_2_members +] ?]
+[? if coalition_count >= 3 : {!<div class="ccard" style="background:linear-gradient(135deg,!}[+ c2_color +]{!,#333)"><div class="chdr"><b class="cname">!}[+ c2_name +]{!</b><span style="color:!}[+ c2_statcol +]{!">!}[+ c2_status +]{!</span></div><div class="clead">Led by <b>!}[+ c2_lead +]{!</b></div><div class="cmem">!}[+ c2_html +]{!</div></div>!} ?]
 
-[? if coalition_count >= 4 : **[+ coalition_3_name +]** — Led by: [+ coalition_3_lead +] — Members: [+ coalition_3_members +] ?]
+[? if coalition_count >= 4 : {!<div class="ccard" style="background:linear-gradient(135deg,!}[+ c3_color +]{!,#333)"><div class="chdr"><b class="cname">!}[+ c3_name +]{!</b><span style="color:!}[+ c3_statcol +]{!">!}[+ c3_status +]{!</span></div><div class="clead">Led by <b>!}[+ c3_lead +]{!</b></div><div class="cmem">!}[+ c3_html +]{!</div></div>!} ?]
 
-[? if coalition_count >= 5 : **[+ coalition_4_name +]** — Led by: [+ coalition_4_lead +] — Members: [+ coalition_4_members +] ?]
-
-[? if coalition_count >= 6 : **[+ coalition_5_name +]** — Led by: [+ coalition_5_lead +] — Members: [+ coalition_5_members +] ?]
-
-[? if coalition_count >= 7 : **[+ coalition_6_name +]** — Led by: [+ coalition_6_lead +] — Members: [+ coalition_6_members +] ?]
-
-[? if coalition_count >= 8 : **[+ coalition_7_name +]** — Led by: [+ coalition_7_lead +] — Members: [+ coalition_7_members +] ?]
-
-[? if coalition_count = 0 : No active coalitions. ?]
+[? if coalition_count = 0 : {!<div class="cno">No active coalitions</div>!} ?]
 
 = Party Ideologies
 
