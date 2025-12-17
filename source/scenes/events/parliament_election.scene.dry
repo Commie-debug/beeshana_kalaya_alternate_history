@@ -1267,6 +1267,8 @@ title: Form an SLFP majority government.
 view-if: slfp_r >= majority_needed
 on-arrival: slfp_in_government = 1; prime_minister_party = "SLFP"; current_gov = "SLFP"; opposition_leader_party = "UNP";
 
+//There should be two version of each slfp victory based on if the UNP has the presidency creating the cohabiation and the president_tension
+
 The SLFP has won enough seats to govern alone! A historic victory. We now have the mandate to implement our agenda.
 
 [? if president_party = "UNP" : Our victory is a blow to UNP president [+ president +]. This however leaves the government split between two parties, we must be careful. ?]
