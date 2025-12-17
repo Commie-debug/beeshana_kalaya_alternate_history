@@ -383,9 +383,9 @@ img.inline-img.icon {
 /* coalition cards system */
 .ccard{padding:10px 14px;border-radius:8px;margin-bottom:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.2);background:#FDFFDB}
 .chdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.cname{color:#fff;font-size:0.95em;font-weight:600}
-.clead{font-size:0.85em;color:rgba(255,255,255,0.8);margin-bottom:6px}
-.clead b{color:#fff}
+.cname{color:#000;font-size:0.95em;font-weight:600}
+.clead{font-size:0.85em;color:#000;margin-bottom:6px}
+.clead b{color:#000}
 .cmem{display:flex;flex-wrap:wrap;gap:5px}
 .cno{text-align:center;padding:20px;color:#888;font-style:italic;background:rgba(0,0,0,0.04);border-radius:8px;border:1px dashed #ccc}
 
