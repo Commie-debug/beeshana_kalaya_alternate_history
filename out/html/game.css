@@ -381,7 +381,7 @@ img.inline-img.icon {
 }
 
 /* coalition cards system */
-.ccard{padding:10px 14px;border-radius:8px;margin-bottom:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.2);background:#333}
+.ccard{padding:10px 14px;border-radius:8px;margin-bottom:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.2);background:#FDFFDB}
 .chdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .cname{color:#fff;font-size:0.95em;font-weight:600}
 .clead{font-size:0.85em;color:rgba(255,255,255,0.8);margin-bottom:6px}
