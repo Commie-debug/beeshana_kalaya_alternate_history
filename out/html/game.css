@@ -380,6 +380,16 @@ img.inline-img.icon {
   transform: translate(-50%, -100%);
 }
 
+/* coalition cards system */
+.ccard{padding:10px 14px;border-radius:8px;margin-bottom:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.2)}
+.chdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.cname{color:#fff;font-size:1.1em;text-shadow:1px 1px 2px rgba(0,0,0,0.5)}
+.clead{font-size:0.9em;color:rgba(255,255,255,0.8);margin-bottom:6px}
+.clead b{color:#fff}
+.cmem{display:flex;flex-wrap:wrap;gap:5px}
+.cbadge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:0.85em;font-weight:500;color:#000}
+.cno{text-align:center;padding:20px;color:#888;font-style:italic;background:rgba(0,0,0,0.04);border-radius:8px;border:1px dashed #ccc}
+
 .overlay {
     background: rgba(0,0,0,0.7);
     display: none;
