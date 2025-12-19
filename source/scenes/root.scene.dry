@@ -150,9 +150,6 @@ Q.eros_coalition_id = -1;
 Q.dplf_coalition_id = -1;
 Q.pflt_coalition_id = -1;
 
-//to keep track of whaere the next coalition should be placed
-Q.next_coalition_id = 1;
-
 // C&S tracking - which parties are providing confidence & supply to current government
 Q.jvp_providing_cs = 0;
 Q.cpsl_providing_cs = 0;
@@ -204,6 +201,29 @@ Q.coalition_7_lead = '';
 Q.coalition_7_members = '';
 
 Q.coalition_count = 1;
+
+//to keep track of whaere the next coalition should be placed
+Q.next_coalition_id = 1;
+
+//empty mean they run independently or is in coalition
+//party name in lower case means they are being endorsed for president
+Q.slfp_pres_endorsement = '';
+Q.unp_pres_endorsement = '';
+Q.jvp_pres_endorsement = '';
+Q.cpsl_pres_endorsement = '';
+Q.lssp_pres_endorsement = '';
+Q.nssp_pres_endorsement = '';
+Q.tulf_pres_endorsement = '';
+Q.cwc_pres_endorsement = '';
+Q.actc_pres_endorsement = '';
+Q.slpp_pres_endorsement = '';
+Q.slmp_pres_endorsement = '';
+Q.slmc_pres_endorsement = '';
+Q.npp_pres_endorsement = '';
+Q.mep_pres_endorsement = '';
+Q.eros_pres_endorsement = '';
+Q.dplf_pres_endorsement = '';
+Q.pflt_pres_endorsement = '';
 
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
@@ -501,7 +521,7 @@ Q.district_industries = ['Major industries'];
 //ethnic stats sourced from 1981 cencus, killinochchi counted by lower divisions of the jaffna district per the 1981 cencus in wikipedia's killinochchi district page
 //class stats are based on a rough estimate based on the economic fields covered in the 1981 cencus
 //seats based on the 1984 seat distribution in https://web.archive.org/web/20111015205520/http://www.slelections.gov.lk/pdf/PDsummery.pdf
-//pop weight based on the following: https://web.archive.org/web/20150402122634/http://www.statistics.gov.lk/Abstract%202013/CHAP2/2.1.pdf & https://www.citypopulation.de/en/srilanka/prov/admin/?utm_source=chatgpt.com
+//pop weight based on the following: https://web.archive.org/web/20150402122634/http://www.statistics.gov.lk/Abstract%202013/CHAP2/2.1.pdf & https://www.citypopulation.de/en/srilanka/prov/admin
 //pop weight for the northern province districts is combined just like with seats
 //Western province
 //colombo
