@@ -65,7 +65,7 @@ var stored_jaffna_d_pop_weight = Q.jaffna_d_pop_weight || 0;
 var stored_kilinochchi_d_pop_weight = Q.kilinochchi_d_pop_weight || 0;
 
 //Set electoral district pop_weight (individual districts hold the same combined value)
-Q.jaffna_electoral_d_pop_weight = Q.jaffna_d_pop_weight;
+Q.jaffna_electoral_d_pop_weight = stored_jaffna_d_pop_weight + stored_kilinochchi_d_pop_weight;
 
 Q.jaffna_electoral_d_sinhala = (Q.jaffna_d_sinhala * jaffna_weight) + (Q.kilinochchi_d_sinhala * kili_weight);
 Q.jaffna_electoral_d_sltamil = (Q.jaffna_d_sltamil * jaffna_weight) + (Q.kilinochchi_d_sltamil * kili_weight);
@@ -91,7 +91,7 @@ var stored_mannar_d_pop_weight = Q.mannar_d_pop_weight || 0;
 var stored_vavuniya_d_pop_weight = Q.vavuniya_d_pop_weight || 0;
 
 //Set electoral district pop_weight (individual districts hold the same combined value)
-Q.wanni_electoral_d_pop_weight = Q.mullaitivu_d_pop_weight;
+Q.wanni_electoral_d_pop_weight = stored_mullaitivu_d_pop_weight + stored_mannar_d_pop_weight + stored_vavuniya_d_pop_weight;
 
 Q.wanni_electoral_d_sinhala = (Q.mullaitivu_d_sinhala * mull_weight) + (Q.mannar_d_sinhala * mann_weight) + (Q.vavuniya_d_sinhala * vavu_weight);
 Q.wanni_electoral_d_sltamil = (Q.mullaitivu_d_sltamil * mull_weight) + (Q.mannar_d_sltamil * mann_weight) + (Q.vavuniya_d_sltamil * vavu_weight);
@@ -425,12 +425,11 @@ Q.mullaitivu_d_seats = 5;
 Q.mannar_d_seats = 5;
 Q.vavuniya_d_seats = 5;
 
-//Restore individual pop_weights (each gets the combined electoral district value)
-Q.jaffna_d_pop_weight = Q.jaffna_electoral_d_pop_weight;
-Q.kilinochchi_d_pop_weight = Q.jaffna_electoral_d_pop_weight;
-Q.mullaitivu_d_pop_weight = Q.wanni_electoral_d_pop_weight;
-Q.mannar_d_pop_weight = Q.wanni_electoral_d_pop_weight;
-Q.vavuniya_d_pop_weight = Q.wanni_electoral_d_pop_weight;
+Q.jaffna_d_pop_weight = stored_jaffna_d_pop_weight;
+Q.kilinochchi_d_pop_weight = stored_kilinochchi_d_pop_weight;
+Q.mullaitivu_d_pop_weight = stored_mullaitivu_d_pop_weight;
+Q.mannar_d_pop_weight = stored_mannar_d_pop_weight;
+Q.vavuniya_d_pop_weight = stored_vavuniya_d_pop_weight;
 
 //goVernment and coalition rest 
 Q.coalition_dissent = 0;
@@ -654,6 +653,7 @@ if (window && d3) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#parliament").datum(data).call(parliament);
 }
+
 !}
 go-to: coalition_menu
 
