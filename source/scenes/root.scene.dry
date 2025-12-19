@@ -595,7 +595,7 @@ Q.jaffna_d_control = 100;
 Q.jaffna_d_infastructure = 0.50;
 Q.jaffna_d_seats = 11;
 Q.jaffna_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
-Q.jaffna_d_pop_weight = 5.59;
+Q.jaffna_d_pop_weight = 4.98;
 
 //kilinochchi
 Q.kilinochchi_d_sinhala = 0.8;
@@ -613,7 +613,7 @@ Q.kilinochchi_d_control = 100;
 Q.kilinochchi_d_infastructure = 0.30;
 Q.kilinochchi_d_seats = 11;
 Q.kilinochchi_d_industries = ['Fishing', 'Agriculture'];
-Q.kilinochchi_d_pop_weight = 5.59;
+Q.kilinochchi_d_pop_weight = 0.62;
 
 //mannar
 Q.mannar_d_sinhala = 8.2;
@@ -631,7 +631,7 @@ Q.mannar_d_control = 100;
 Q.mannar_d_infastructure = 0.30;
 Q.mannar_d_seats = 5;
 Q.mannar_d_industries = ['Fishing', 'Agriculture'];
-Q.mannar_d_pop_weight = 1.88;
+Q.mannar_d_pop_weight = 0.72;
 
 //mullaitivu
 Q.mullaitivu_d_sinhala = 5.2;
@@ -649,7 +649,7 @@ Q.mullaitivu_d_control = 100;
 Q.mullaitivu_d_infastructure = 0.25;
 Q.mullaitivu_d_seats = 5;
 Q.mullaitivu_d_industries = ['Fishing', 'Agriculture'];
-Q.mullaitivu_d_pop_weight = 1.88;
+Q.mullaitivu_d_pop_weight = 0.52;
 
 //vavuniya
 Q.vavuniya_d_sinhala = 16.6;
@@ -667,7 +667,7 @@ Q.vavuniya_d_control = 100;
 Q.vavuniya_d_infastructure = 0.30;
 Q.vavuniya_d_seats = 5;
 Q.vavuniya_d_industries = ['Agriculture'];
-Q.vavuniya_d_pop_weight = 1.88;
+Q.vavuniya_d_pop_weight = 0.64;
 
 //Eastern province
 //batticaloa
