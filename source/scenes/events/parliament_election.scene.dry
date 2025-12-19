@@ -57,15 +57,14 @@ Q.district_names = [
 
 Q.jaffna_electoral_d_seats = 10;  //jaffna+kilinochchi combined
 
-var jaffna_weight = 0.85;
-var kili_weight = 0.15;
-
-//Store individual pop_weights before zeroing
 var stored_jaffna_d_pop_weight = Q.jaffna_d_pop_weight || 0;
 var stored_kilinochchi_d_pop_weight = Q.kilinochchi_d_pop_weight || 0;
 
-//Set electoral district pop_weight (individual districts hold the same combined value)
-Q.jaffna_electoral_d_pop_weight = stored_jaffna_d_pop_weight + stored_kilinochchi_d_pop_weight;
+var total_jaffna_electoral = stored_jaffna_d_pop_weight + stored_kilinochchi_d_pop_weight;
+var jaffna_weight = (total_jaffna_electoral > 0) ? stored_jaffna_d_pop_weight / total_jaffna_electoral : 0.85;
+var kili_weight = (total_jaffna_electoral > 0) ? stored_kilinochchi_d_pop_weight / total_jaffna_electoral : 0.15;
+
+Q.jaffna_electoral_d_pop_weight = total_jaffna_electoral;
 
 Q.jaffna_electoral_d_sinhala = (Q.jaffna_d_sinhala * jaffna_weight) + (Q.kilinochchi_d_sinhala * kili_weight);
 Q.jaffna_electoral_d_sltamil = (Q.jaffna_d_sltamil * jaffna_weight) + (Q.kilinochchi_d_sltamil * kili_weight);
@@ -81,17 +80,16 @@ Q.jaffna_electoral_d_control = Math.min(Q.jaffna_d_control || 100, Q.kilinochchi
 
 Q.wanni_electoral_d_seats = 6;  //mullaitivu+mannar+vavuniya combined
 
-var mull_weight = 0.25;
-var mann_weight = 0.30;
-var vavu_weight = 0.45;
-
-//Store individual pop_weights before zeroing
 var stored_mullaitivu_d_pop_weight = Q.mullaitivu_d_pop_weight || 0;
 var stored_mannar_d_pop_weight = Q.mannar_d_pop_weight || 0;
 var stored_vavuniya_d_pop_weight = Q.vavuniya_d_pop_weight || 0;
 
-//Set electoral district pop_weight (individual districts hold the same combined value)
-Q.wanni_electoral_d_pop_weight = stored_mullaitivu_d_pop_weight + stored_mannar_d_pop_weight + stored_vavuniya_d_pop_weight;
+var total_wanni_electoral = stored_mullaitivu_d_pop_weight + stored_mannar_d_pop_weight + stored_vavuniya_d_pop_weight;
+var mull_weight = (total_wanni_electoral > 0) ? stored_mullaitivu_d_pop_weight / total_wanni_electoral : 0.25;
+var mann_weight = (total_wanni_electoral > 0) ? stored_mannar_d_pop_weight / total_wanni_electoral : 0.30;
+var vavu_weight = (total_wanni_electoral > 0) ? stored_vavuniya_d_pop_weight / total_wanni_electoral : 0.45;
+
+Q.wanni_electoral_d_pop_weight = total_wanni_electoral;
 
 Q.wanni_electoral_d_sinhala = (Q.mullaitivu_d_sinhala * mull_weight) + (Q.mannar_d_sinhala * mann_weight) + (Q.vavuniya_d_sinhala * vavu_weight);
 Q.wanni_electoral_d_sltamil = (Q.mullaitivu_d_sltamil * mull_weight) + (Q.mannar_d_sltamil * mann_weight) + (Q.vavuniya_d_sltamil * vavu_weight);
