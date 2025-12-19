@@ -12,26 +12,7 @@ face-image: img/Election_Time.png
 Elections to the Parliament of Sri Lanka are to be held now. 196 seats will be distributed across the electoral districts using proportional representation. [? if national_list_added = 1 : A recent ammendment has also added a 29 member national list (Further info in library) ?]
 
 - @election_algorithm_sl: May we do our best...
-- @cancel_elections
 
-@cancel_elections
-title: We cannot hold the elections now. Cancel the elections.
-subtitle: This is an anti-democratic move that may backfire.
-view-if: state_of_emergency == 1 and slfp_in_government == 1
-
-//cancel elections is only here just incase as im not sure if you can legally do this.
-
-Since we are currently ruling under emergency powers, we may attempt to significantly delay these elections. This is likely to be extremely unpopular.
-
-- @cancel_elections_2: Yes, do it.
-- @election_algorithm_sl: No, let's hold the elections.
-
-@cancel_elections_2
-on-departure: next_parl_election_year = next_parl_election_year + 1; next_election_time = time + 12; gov_support -= 15; unp_relation -= 10; tulf_relation -= 15; jvp_relation -= 10;
-
-The elections have been postponed to the anger of our opponents and allies. New elections are scheduled for [+ next_parl_election_month : month +] [+ next_parl_election_year +].
-
-Let us hope this does not backfire.
 
 @election_algorithm_sl
 on-arrival: {!
