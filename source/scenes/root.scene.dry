@@ -1374,8 +1374,8 @@ Q.in_election = 0;
 //for real, presidential elections for january 1984, but JR wil always push it forward to 1982
 //72 months or 6 years
 Q.president_term = 72;
-Q.next_pres_election_year = 1984;
-Q.next_pres_election_month = 1;
+Q.next_pres_election_year = 1981;
+Q.next_pres_election_month = 9;
 //for real, parliament elections for august 1983
 //72 months or 6 years
 Q.parliament_term = 72;
