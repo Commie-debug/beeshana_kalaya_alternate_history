@@ -306,6 +306,12 @@
             var ideologyText = getIdeologyText(Q.npp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
         }
+
+        if (searchString === 'UCPF' && Q.ucpf_relation !== undefined) {
+            var relationText = getRelationshipText(Q.ucpf_relation);
+            var ideologyText = getIdeologyText(Q.ucpf_ideology);
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+        }
         
         if (searchString === 'CPSL' && Q.cpsl_relation !== undefined) {
             var relationText = getRelationshipText(Q.cpsl_relation);
