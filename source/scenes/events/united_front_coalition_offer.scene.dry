@@ -23,8 +23,7 @@ Q.active_coalitions.push({
 //update coalition IDs
 Q.slfp_coalition_id = Q.next_coalition_id;
 Q.lssp_coalition_id = Q.next_coalition_id; 
-Q.cpsl_party_coalition_id = Q.next_coalition_id; 
-
+Q.cpsl_coalition_id = Q.next_coalition_id; 
 
 //increment for next coalition
 Q.next_coalition_id += 1;
