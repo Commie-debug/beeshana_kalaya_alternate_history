@@ -187,7 +187,7 @@ if (Q.active_coalitions && Q.active_coalitions.length > 0) {
 
 //backup check in case
 var all_party_names = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc', 
-                       'slmc', 'slmp', 'slpp', 'mep', 'npp', 'eros', 'dplf', 'pflt'];
+                       'slmc', 'slmp', 'slpp', 'mep', 'npp', 'eros', 'dplf', 'pflt', 'ucpf'];
 for (var pname of all_party_names) {
     var cid = Q[pname + '_coalition_id'];
     if (cid !== undefined && cid >= 0) {
@@ -409,6 +409,7 @@ for (var i = 0; i < Q.district_names.length; i++) {
     Q[district_name + '_eros_seats'] = party_seats_district['eros'] || 0;
     Q[district_name + '_dplf_seats'] = party_seats_district['dplf'] || 0;
     Q[district_name + '_pflt_seats'] = party_seats_district['pflt'] || 0;
+    Q[district_name + '_ucpf_seats'] = party_seats_district['ucpf'] || 0;
     
     Q.district_results.push({
         name: district_name,
@@ -594,7 +595,7 @@ var partyColors = {
     'UNP': '#006400', 'SLFP': '#00008B', 'TULF': '#F7D917', 'CWC': '#E52B50',
     'ACTC': '#FDCC01', 'CPSL': '#65000B', 'JVP': '#FF2226', 'LSSP': '#A91101',
     'NSSP': '#FF8080', 'SLPP': '#800020', 'SLMP': '#663399', 'SLMC': '#2DCF3E',
-    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#DC143C'
+    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#DC143C', 'UCPF': '#9C1600'
 };
 
 //seats calc for any and all active coalitions
@@ -709,6 +710,7 @@ Q.mep_in_government = 0;
 Q.eros_in_government = 0;
 Q.dplf_in_government = 0;
 Q.pflt_in_government = 0;
+Q.ucpf_in_government = 0;
 
 !}
 go-to: post_election
@@ -765,6 +767,9 @@ if (Q.dplf_formed && Q.dplf_r > 0) {
 }
 if (Q.pflt_formed && Q.pflt_r > 0) {
     data.push({"id": "pflt", "legend": "PFLT", "name": "PFLT", "seats": Q.pflt_r});
+}
+if (Q.ucpf_formed && Q.ucpf_r > 0) {
+    data.push({"id": "ucpf", "legend": "UCPF", "name": "UCPF", "seats": Q.UCPF_r});
 }
 if (Q.unp_r > 0) {
     data.push({"id": "unp", "legend": "UNP", "name": "UNP", "seats": Q.unp_r});
@@ -832,6 +837,8 @@ go-to: coalition_menu
 
 [? if pflt_formed : {!<tr><td><div class="box" style='background-color:#DC143C'> </div> !} PFLT: {!</td><td>!} [+ pflt_r +] {!</td><td>!} [+ pflt_votes +]% {!</td><td>!} [+ str_change_pflt +] {!</td></tr>!} ?]
 
+[? if ucpf_formed : {!<tr><td><div class="box" style='background-color:#DC143C'> </div> !} UCPF: {!</td><td>!} [+ ucpf_r +] {!</td><td>!} [+ ucpf_votes +]% {!</td><td>!} [+ str_change_ucpf +] {!</td></tr>!} ?]
+
 {!</table>!}
 
 {!<button class="tab_button" id="district_tab" onclick="window.toggleDistrict();">District Results</button>!}
@@ -860,6 +867,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<th><span style="color: #FF2400;">EROS</span></th>!} ?]
             [? if dplf_formed : {!<th><span style="color: #CE2029;">DPLF</span></th>!} ?]
             [? if pflt_formed : {!<th><span style="color: #DC143C;">PFLT</span></th>!} ?]
+            [? if ucpf_formed : {!<th><span style="color: #9C1600;">UCPF</span></th>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Colombo**{!</td>!}
@@ -881,6 +889,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ colombo_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ colombo_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ colombo_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ colombo_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Gampaha**{!</td>!}
@@ -902,6 +911,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ gampaha_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ gampaha_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ gampaha_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ gampaha_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kalutara**{!</td>!}
@@ -923,6 +933,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ kalutara_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ kalutara_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ kalutara_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ kalutara_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Jaffna** (incl. Kilinochchi){!</td>!}
@@ -944,6 +955,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ jaffna_electoral_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ jaffna_electoral_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ jaffna_electoral_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ jaffna_electoral_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Vanni** (Mannar, Mullaitivu, Vavuniya){!</td>!}
@@ -965,6 +977,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ wanni_electoral_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ wanni_electoral_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ wanni_electoral_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ wanni_electoral_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Trincomalee**{!</td>!}
@@ -986,6 +999,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ trincomalee_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ trincomalee_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ trincomalee_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ trincomalee_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Batticaloa**{!</td>!}
@@ -1007,6 +1021,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ batticaloa_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ batticaloa_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ batticaloa_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ batticaloa_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ampara**{!</td>!}
@@ -1028,6 +1043,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ ampara_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ ampara_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ ampara_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ ampara_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kandy**{!</td>!}
@@ -1049,6 +1065,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ kandy_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ kandy_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ kandy_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ kandy_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matale**{!</td>!}
@@ -1070,6 +1087,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ matale_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ matale_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ matale_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ matale_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Nuwara Eliya**{!</td>!}
@@ -1091,6 +1109,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ nuwaraeliya_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ nuwaraeliya_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ nuwaraeliya_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ nuwaraeliya_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Galle**{!</td>!}
@@ -1112,6 +1131,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ galle_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ galle_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ galle_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ galle_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matara**{!</td>!}
@@ -1133,6 +1153,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ matara_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ matara_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ matara_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ matara_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Hambantota**{!</td>!}
@@ -1154,6 +1175,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ hambantota_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ hambantota_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ hambantota_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ hambantota_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kurunegala**{!</td>!}
@@ -1175,6 +1197,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ kurunegala_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ kurunegala_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ kurunegala_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ kurunegala_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Puttalam**{!</td>!}
@@ -1196,6 +1219,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ puttalam_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ puttalam_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ puttalam_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ puttalam_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Anuradhapura**{!</td>!}
@@ -1217,6 +1241,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ anuradhapura_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ anuradhapura_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ anuradhapura_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ anuradhapura_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Polonnaruwa**{!</td>!}
@@ -1238,6 +1263,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ polonnaruwa_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ polonnaruwa_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ polonnaruwa_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ polonnaruwa_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Badulla**{!</td>!}
@@ -1259,6 +1285,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ badulla_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ badulla_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ badulla_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ badulla_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Monaragala**{!</td>!}
@@ -1280,6 +1307,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ monaragala_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ monaragala_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ monaragala_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ monaragala_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ratnapura**{!</td>!}
@@ -1301,6 +1329,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ ratnapura_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ ratnapura_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ ratnapura_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ ratnapura_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kegalle**{!</td>!}
@@ -1322,6 +1351,7 @@ go-to: coalition_menu
             [? if eros_formed : {!<td>!}[+ kegalle_d_eros_seats +]{!</td>!} ?]
             [? if dplf_formed : {!<td>!}[+ kegalle_d_dplf_seats +]{!</td>!} ?]
             [? if pflt_formed : {!<td>!}[+ kegalle_d_pflt_seats +]{!</td>!} ?]
+            [? if ucpf_formed : {!<td>!}[+ kegalle_d_ucpf_seats +]{!</td>!} ?]
         {!</tr>!}
     {!</table>!}
     {!</div>!}
@@ -1351,6 +1381,7 @@ go-to: coalition_menu
         [? if eros_formed and eros_national_list_seats >= 1 : {!<tr><td><span style="color: #FF2400;">!}**EROS**{!</span></td><td>!}[+ eros_national_list_seats +]{!</td></tr>!} ?]
         [? if dplf_formed and dplf_national_list_seats >= 1 : {!<tr><td><span style="color: #CE2029;">!}**DPLF**{!</span></td><td>!}[+ dplf_national_list_seats +]{!</td></tr>!} ?]
         [? if pflt_formed and pflt_national_list_seats >= 1 : {!<tr><td><span style="color: #DC143C;">!}**PFLT**{!</span></td><td>!}[+ pflt_national_list_seats +]{!</td></tr>!} ?]
+        [? if ucpf_formed and ucpf_national_list_seats >= 1 : {!<tr><td><span style="color: #9C1600;">!}**UCPF**{!</span></td><td>!}[+ ucpf_national_list_seats +]{!</td></tr>!} ?]
     {!</table>!}
 {!</div>!}
 
