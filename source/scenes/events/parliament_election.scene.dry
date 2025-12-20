@@ -1404,10 +1404,6 @@ window.toggleNationalList = function() {
 
 [? if coalition_2_seats > 0 : [+ coalition_2_name +]: **[+ coalition_2_seats +] seats** ([+ coalition_2_members +]) ?]
 
-*Potential Left Coalition* (SLFP + JVP + CPSL + LSSP + NSSP): [+ left_coalition_seats +] seats
-
-*UNP + CWC*: [+ unp_coalition_seats +] seats
-
 [? if largest_party == "UNP" and unp_r >= majority_needed : The UNP has won an outright majority and will continue to govern. ?]
 
 [? if largest_party == "UNP" and unp_r < majority_needed and unp_coalition_seats >= majority_needed : The UNP remains the largest party. With CWC support, they can form a government. ?]
