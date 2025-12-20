@@ -60,6 +60,7 @@ Parliament composition:
 [? if nssp_r >=1 : <span class="tooltip-text" title="Nava Sama Samaja Party">**NSSP**</span>: [+ nssp_r +] ?]
 [? if mep_formed = 1 and mep_r >= 1: <span class="tooltip-text" title="Mahajana Eksath Peramuna">**MEP**</span>: [+ mep_r +] ?]
 [? if cwc_r >= 1 : <span class="tooltip-text" title="Ceylon Workers Congress" style="color: #E52B50;">**CWC**</span>: [+ cwc_r +] ?]
+[? if ucpf_formed = 1 and ucpf_r >= 1: <span class="tooltip-text" title="Up Country Peoples Front">**UCPF**</span>: [+ ucpf_r +] ?]
 [? if slmc_formed = 1 and slmc_r >= 1: <span class="tooltip-text" title="Sri Lanka Muslim Congress">**SLMC**</span>: [+ slmc_r +] ?]
 
 [? if slfp_in_government = 1 : Budget: [+ budget +] ?]
@@ -134,6 +135,8 @@ for (var i = 0; i < 8; i++) {
 
 <span class="tooltip-text" title="Ceylon Workers Congress" style="color: #E52B50;">**CWC**</span>: [+ cwc_relation : relationships +]
 
+[? if ucpf_formed = 1 : <span class="tooltip-text" title="Up Country Peoples Front" style="color: #2DCF3E;">**UCPF**</span>: [+ ucpf_relation : relationships +] ?]
+
 [? if slmc_formed = 1 : <span class="tooltip-text" title="Sri Lanka Muslim Congress" style="color: #2DCF3E;">**SLMC**</span>: [+ slmc_relation : relationships +] ?]
 
 = Active Coalitions
@@ -187,6 +190,8 @@ NSSP: [+ nssp_ideology : ideology +]
 [? if mep_formed = 1 : MEP: [+ mep_ideology : ideology +] ?]
 
 CWC: [+ cwc_ideology : ideology +]
+
+[? if ucpf_formed = 1 : UCPF: [+ ucpf_ideology : ideology +] ?]
 
 [? if slmc_formed = 1 : SLMC: [+ slmc_ideology : ideology +] ?]
 
@@ -304,6 +309,8 @@ Q.gov_support_disp = Math.round(Q.gov_support);
 !}
 
 = Ethnicity:
+
+This whole thing needs to be revamped at some point
 
 Sinhalese: SLFP: [+ sinhala_slfp +]%, JVP: [+ sinhala_jvp +]%, CPSL: [+ sinhala_cpsl +]%, LSSP: [+ sinhala_lssp +]%, NSSP: [+ sinhala_nssp +]%, TULF: [+ sinhala_tulf +]%, CWC: [+ sinhala_cwc +]%, UNP: [+ sinhala_unp +]%, ACTC: [+ sinhala_actc +]%, [? if slpp_formed: SLPP: [+ sinhala_slpp +] % ?][? if slmp_formed: SLMP: [+ sinhala_slmp +]% ?][? if slmc_formed: SLMC: [+ sinhala_slmc +]% ?][? if npp_formed: NPP: [+ sinhala_npp +]% ?][? if mep_formed: MEP: [+ sinhala_mep +]% ?][? if eros_formed: EROS: [+ sinhala_eros +]% ?][? if dplf_formed: DPLF: [+ sinhala_dplf +]% ?][? if pflt_formed: PFLT: [+ sinhala_pflt +]% ?]
 
