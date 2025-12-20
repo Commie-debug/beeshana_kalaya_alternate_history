@@ -127,6 +127,10 @@ const colourList = [{
         style: "color: #663399; font-weight: bold;"
     },
     {
+        word: "UCPF",
+        style: "color: #9C1600; font-weight: bold;"
+    },
+    {
         word: "PLOTE",
         style: "color: #CE2029; font-weight: bold;"
     },
@@ -367,6 +371,10 @@ const tooltipList = [{
     {
     searchString: "IPKF",
     explanationText: "<img src=img/logos/IPKF_Logo.png> Indian Peace <br> Keeping Force"
+    },
+    {
+    searchString: "UCPF",
+    explanationText: "<img src=img/logos/UCPF_Logo.png> Up Country <br> Peoples Front"
     },
 ];
 
