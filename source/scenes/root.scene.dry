@@ -112,7 +112,7 @@ Q.partyColors = {
     'UNP': '#006400', 'SLFP': '#00008B', 'TULF': '#F7D917', 'CWC': '#E52B50',
     'ACTC': '#FDCC01', 'CPSL': '#65000B', 'JVP': '#FF2226', 'LSSP': '#A91101',
     'NSSP': '#FF8080', 'SLPP': '#800020', 'SLMP': '#663399', 'SLMC': '#2DCF3E',
-    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#9C1600' , 'UCPF': ''
+    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#9C1600' , 'UCPF': '#9C1600'
 };
 
 //inter party dynamics
