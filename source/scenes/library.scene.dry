@@ -177,6 +177,8 @@ Parliament composition:
 
 [? if cwc_r >= 1 : <span class="tooltip-text" title="Ceylon Workers Congress" style="color: #E52B50;">**CWC**</span>: [+ cwc_r +] ?]
 
+[? if ucpf_formed = 1 and ucpf_r >= 1: <span class="tooltip-text" title="Up Country Peoples Front">**UCPF**</span>: [+ ucpf_r +] ?]
+
 [? if slmc_formed = 1 and slmc_r >= 1: <span class="tooltip-text" title="Sri Lanka Muslim Congress">**SLMC**</span>: [+ slmc_r +] ?]
 
 = Current cabinet
@@ -399,6 +401,8 @@ go-to: menu
 [? if mep_formed: <span style="color: #FF3915;">**MEP**</span> - *Mahajana Eksath Peramuna* - Originally formed in 1956, it has recently been reactivated, emphasizing Sinhalese nationalism and socialism. It is a minor political party ?]
 
 <span style="color: #E52B50;">**CWC**</span> - *Ceylon Workers Congress* -Representing Indian Tamil plantation workers, they focus on labor rights, social welfare, and political representation for their marginalised base. It has recently grown closer to the <span style="color: #006400;">**UNP**</span> under JR.
+
+[? if ucpf_formed: <span style="color: #E52B50;">**UCPF**</span> - *Up Country Peoples Front* - A newly founded party for Indian Tamils. It represents the part of their community upset with the CWC and its ineffectivness in addressing their needs. ?]
 
 [? if slmc_formed: <span style="color: #2DCF3E;">**SLMC**</span>  - *Sri Lanka Muslim Congress* - Founded recently, the SLMC has emerged to represent the interests of the Muslim minority, particularly in the Eastern Province. The party aims to address grievances of the Muslim community and prevent their youth from joining militant groups. ?]
 
