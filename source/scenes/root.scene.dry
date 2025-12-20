@@ -85,6 +85,26 @@ Q.unp_relation = 4;
 Q.cwc_relation = 10;
 Q.actc_relation = 10;
 
+// formable parties
+Q.slpp_formed = 0;
+Q.slpp_in_government = 0;
+Q.slmp_formed = 0;
+Q.slmp_in_government = 0;
+Q.slmc_formed = 0;
+Q.slmc_in_government = 0;
+Q.npp_formed = 0;
+Q.npp_in_government = 0;
+Q.mep_formed = 0;
+Q.mep_in_government = 0;
+Q.eros_formed = 0;
+Q.eros_in_government = 0;
+Q.dplf_formed = 0;
+Q.dplf_in_government = 0;
+Q.pflt_formed = 0;
+Q.pflt_in_government = 0;
+Q.ucpf_formed = 0;
+Q.ucpf_in_government = 0;
+
 //party ideologies
 //based on the ideology qdisplay
 Q.jvp_ideology = 0;
@@ -1033,26 +1053,6 @@ Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc'
 //voting weightage between class and ethnic
 Q.ethnic_weight = 0.6
 Q.class_weight = 0.4
-
-// formable parties
-Q.slpp_formed = 0;
-Q.slpp_in_government = 0;
-Q.slmp_formed = 0;
-Q.slmp_in_government = 0;
-Q.slmc_formed = 0;
-Q.slmc_in_government = 0;
-Q.npp_formed = 0;
-Q.npp_in_government = 0;
-Q.mep_formed = 0;
-Q.mep_in_government = 0;
-Q.eros_formed = 0;
-Q.eros_in_government = 0;
-Q.dplf_formed = 0;
-Q.dplf_in_government = 0;
-Q.pflt_formed = 0;
-Q.pflt_in_government = 0;
-Q.ucpf_formed = 1;
-Q.ucpf_in_government = 0;
 
 // Support for party by ethnic group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
