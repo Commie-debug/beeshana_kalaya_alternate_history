@@ -568,6 +568,7 @@ Q.district_infastructure = 0;
 Q.district_seats = 0;
 Q.district_industries = ['Major industries'];
 
+//credit to https://github.com/pavan168/srilankan-map-svg/blob/ for the svg code for the map
 
 //ethnic stats sourced from 1981 cencus, killinochchi counted by lower divisions of the jaffna district per the 1981 cencus in wikipedia's killinochchi district page
 //class stats are based on a rough estimate based on the economic fields covered in the 1981 cencus
