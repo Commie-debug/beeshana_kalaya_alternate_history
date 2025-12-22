@@ -389,6 +389,12 @@ img.inline-img.icon {
 .cmem{display:flex;flex-wrap:wrap;gap:5px}
 .cno{text-align:center;padding:20px;color:#888;font-style:italic;background:rgba(0,0,0,0.04);border-radius:8px;border:1px dashed #ccc}
 
+/* sri lanka map hover effect */
+#sri-lanka-map path:hover {
+  fill: #FFD700;
+  opacity: 0.8;
+}
+
 .overlay {
     background: rgba(0,0,0,0.7);
     display: none;
