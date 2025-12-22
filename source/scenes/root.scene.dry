@@ -550,8 +550,8 @@ Q.india_pm = "Indira Gandhi";
 
 //District data
 //All seat numbers for each district are based of the 1984
-//Displayed one, default is colombo district
-Q.district_name = "District Name";
+//Displayed one
+Q.district_name = "Name Of";
 Q.district_sinhala = 0;
 Q.district_sltamil = 0;
 Q.district_itamil = 0;
