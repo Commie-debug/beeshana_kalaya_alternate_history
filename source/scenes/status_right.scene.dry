@@ -20,7 +20,7 @@ Infastructure: [+ district_infastructure : eduinfa +]
 Seats in parliament: [+ district_seats +] [? if district_name = "Jaffna" or district_name = "Kilinochchi" : (Shared between Jaffna and Kilinochchi) ?] [? if district_name = "Mullaitivu" or district_name = "Mannar" or district_name = "Vavuniya" : (Shared between Mannar, Mullaitivu and Vavuniya) ?] 
 Industries: [+ district_industries +]
 
-{!<svg id="sri-lanka-map" viewBox="0 0 450 793" width="280" height="495" style="display:block; margin:auto;">
+{!<svg id="sri-lanka-map" viewBox="0 0 450 793" width="270" height="477" style="display:block; margin:auto;">
   <style>
     .district { fill: #E1B300; stroke: #f7f7f7; stroke-width: 1px; }
     .district:hover { fill: #FFD700; opacity: 0.8; cursor: pointer; }
@@ -53,59 +53,6 @@ Industries: [+ district_industries +]
   <path class="district" onclick="Kegalle_info()" d="m 109.79713,522.44075 1.78,0.03 2.25,-3.33 10.57,-7.45 1.97999,-0.84 2.09,0.4 5.88,-1.23 0.77,-1.34 1.26,-0.36 3,1.24 1.75,-3.77 -0.93,-1.99 2.16,-2.22 -0.73,-2.72 -1.39,-1.91 0.43,-0.65 1.5,0.38 7.64,-2.34 1.47,1.76 1.52,0.11 0.91,0.87 -0.08,1.11 1.46,1.75 -0.3,1.95 1.06,0.35 0,0 0.89,5.03 0.96,1.21 1.75,1.52 3.03,1.18 0.52,1.37 4.8,4.32 -0.13,2.47 -0.96,0.59 0.72,1.23 4.92,1.12 1.31,2.58 1.67,0.87 0.75,1.28 -0.02,2.88 -1.97,1.48 0.13,0.98 6.41,5.94 0.62,1.88 -0.31,0.53 -2.66,0.14 -0.83,0.88 1.08,2.27 -1.03,-0.24 -0.75,1.02 -0.73,-1.06 -2.39,0.57 -0.81,3.1 -0.76,-0.17 -0.4,1.31 -3.71,0.66 -0.75,-0.56 -1.63,1.04 -2.93,0.05 -2.02,1.68 1.7,2.52 2.12,7.23 1.29,0.04 -1.48,1.55 -0.57,2.07 0.5,3.81 0,0 0.18,0.81 0.76,0.02 -0.15,1.44 -3.45,3.6 -2.55,0.24 -0.91,1.11 -0.14,1.39 2.35,2.23 0.31,1.86 -1.6,1.95 -0.02,6.69 -0.63,0.13 -0.28,1.68 4.38,1.51 1.07,1.2 4.03,0.34 3.62,2.33 -0.62,3.06 1.05,1.26 0.05,1.65 1.81,0.91 0.42,1.07 -1.54,2.39 -1.58,0.79 0,0 -3.74,0.17 -3.85,-1.19 -1.35,0.75 -1.92,-0.59 -0.24,-1.17 -1.79,-1.26 -0.4,1.21 -1.21,0.45 -0.56,-1.13 -4.27,-2.88 -2.26,1.96 -1.17,0.07 -0.7,-0.95 -4.47,0.94 -1.9,1.6 0.14,1.45 -1.64,0.9 -2.38,-1.25 -1.98,-3.82 -1.63,-1.43 -2.74,0.6 -0.48,0.85 -2,-0.06 -0.55999,-2.95 -2.69,-0.85 -3.63,-5.49 -1.96,-1.2 -1.58001,0.89 -0.53,-4.25 -0.81999,-0.06 -0.51,-1.34 -0.97,1.95 -1.82,0.76 0,0 -0.42,-4.01 2.37,0.32 0.75,-1.2 -0.05,-1.6 -1.05,-1.45 0.08,-3.21 -2.17,-1.17 -1.52,0.61 -2.06,-0.45 -1.07,0.74 -1.03,-0.72 0,0 0.6,-3.41 -1.68,-3.05 -2,-9.84 1.9,-2.45 2.35,-6.07 1.72,0.08 1.07,-2.92 1.74,-1.25 0.13,-1.68 -1.26,-0.98 -5.69,0.16 -2.41,2.04 -1.7,-4.92 0.07,-5.42 -1.73,-2.55 2.34,0.95 1.08,-1.92 4.37,-0.22 0.45,-5.48 -0.54,-2.71 3.02,-2.19 z"/>
 
 </svg>!}
-
-Western Province
-<button class="status_button" onclick="Gampaha_info()">Gampaha District</button>
-<button class="status_button" onclick="Colombo_info()">Colombo District</button>
-<button class="status_button" onclick="Kalutara_info()">Kalutara District</button>
-
-[? if NE_province_formed = 0 : Northern Province ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Jaffna_info()">Jaffna District</button> ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button> ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Mannar_info()">Mannar District</button> ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button> ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button> ?]
-
-[? if NE_province_formed = 0 : Eastern Province ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button> ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Ampara_info()">Ampara District</button> ?]
-[? if NE_province_formed = 0 : <button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button> ?]
-
-[? if NE_province_formed = 1 : North Eastern Province ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Jaffna_info()">Jaffna District</button> ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Kilinochchi_info()">Kilinochchi District</button> ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Mannar_info()">Mannar District</button> ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Mullaitivu_info()">Mullaitivu District</button> ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Vavuniya_info()">Vavuniya District</button> ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Batticaloa_info()">Batticaloa District</button> ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Ampara_info()">Ampara District</button> ?]
-[? if NE_province_formed = 1 : <button class="status_button" onclick="Trincomalee_info()">Trincomalee District</button> ?]
-
-Central Province
-<button class="status_button" onclick="Kandy_info()">Kandy District</button>
-<button class="status_button" onclick="Matale_info()">Matale District</button>
-<button class="status_button" onclick="NuwaraEliya_info()">Nuwara Eliya District</button>
-
-Southern Province
-<button class="status_button" onclick="Galle_info()">Galle District</button>
-<button class="status_button" onclick="Matara_info()">Matara District</button>
-<button class="status_button" onclick="Hambantota_info()">Hambantota District</button>
-
-North Western Province
-<button class="status_button" onclick="Kurunegala_info()">Kurunegala District</button>
-<button class="status_button" onclick="Puttalam_info()">Puttalam District</button>
-
-North Central Province
-<button class="status_button" onclick="Anuradhapura_info()">Anuradhapura District</button>
-<button class="status_button" onclick="Polonnaruwa_info()">Polonnaruwa District</button>
-
-Uva Province
-<button class="status_button" onclick="Monaragala_info()">Monaragala District</button>
-<button class="status_button" onclick="Badulla_info()">Badulla District</button>
-
-Sabaragamuwa Province
-<button class="status_button" onclick="Ratnapura_info()">Ratnapura District</button>
-<button class="status_button" onclick="Kegalle_info()">Kegalle District</button>
 
 @party
 
