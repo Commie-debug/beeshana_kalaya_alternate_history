@@ -20,6 +20,40 @@ Infastructure: [+ district_infastructure : eduinfa +]
 Seats in parliament: [+ district_seats +] [? if district_name = "Jaffna" or district_name = "Kilinochchi" : (Shared between Jaffna and Kilinochchi) ?] [? if district_name = "Mullaitivu" or district_name = "Mannar" or district_name = "Vavuniya" : (Shared between Mannar, Mullaitivu and Vavuniya) ?] 
 Industries: [+ district_industries +]
 
+{!<svg id="sri-lanka-map" viewBox="0 0 450 793" width="280" height="495" style="display:block; margin:auto;">
+  <style>
+    .district { fill: #E1B300; stroke: #f7f7f7; stroke-width: 1px; }
+    .district:hover { fill: #FFD700; opacity: 0.8; cursor: pointer; }
+  </style>
+
+  <path class="district" onclick="Colombo_info()" d="m 86.317125,597.35075 1.33,0.1 0.84,-0.79 1.46,1.4 2.88,-2.66 2.55,1.86 1.67,-0.21 0.4,-1.14 1.09,1.05 0.95,-0.95 -0.51,2.67 1.56,-0.46 -0.05,-1.46 1.99,-0.3 0.31,-0.95 3.14,1.67 z"/>
+  <path class="district" onclick="Gampaha_info()" d="m 51.097125,631.73075 0.24,-1.76 -2.07,-7.84 -1.44,-1.81 0.5,-0.79 4.12,1.46 -0.39 0.22 -2.85 -3.19 -1.96 -2.07 0.28 -1.96 3.35 -6.61 -1.96 z"/>
+  <path class="district" onclick="Kalutara_info()" d="m 51.097125,631.73075 0.24,-1.76 -2.07,-7.84 -1.44,-1.81 0.5,-0.79 4.12,1.46 -0.39 0.22 -2.85 -3.19 -1.96 -2.07 0.28 -1.96 3.35 -6.61 -1.96 z"/>
+  <path class="district" onclick="Kandy_info()" d="m 184.76712,481.98075 1.27,0.79 0.25,2.67 1.15,0.35 1.79,2.11 1.15,0.02 1.30001,1.52 2.94999,1.27 2.05001,2.52 3.3,1.07 2.61,2.42 3.47,0.11 5.47,-0.59 3.47,-0.11 2.61,-2.42 3.3,-1.07 2.05,-2.52 2.95,-1.27 1.3,-1.52 1.15,-0.02 1.79,-2.11 1.15,-0.35 0.25,-2.67 1.27,-0.79 z"/>
+  <path class="district" onclick="Matale_info()" d="m 184.76712,481.98075 -0.31,-2.33 1.12,-1.62 1.1,0.07 -0.86,-1.75 0.43,-4.47 -0.9,-0.73 0.1,-0.81 -1.3,0.19 0.46,-1.69 -1.57,-2.77 -1.08,-0.37 0.48,-1.11 -0.49,-1.36 2.24,-4.46 2.22,-0.62 -1.06,-3.96 1.47,-2.46 z"/>
+  <path class="district" onclick="NuwaraEliya_info()" d="m 164.17712,568.61075 2.01,-1.8 3.16,2.27 1.69,0 -0.08,1.26 3.22,4.67 0.57,2.92 4.88,4.08 2.63,4.33 2.2,0.3 0.63,-1.27 2.17,0.19 -0.05,-3.03 2.38,-1.11 0.92,-4.21 1.75,-1.76 -2.53,-2.75 -0.99,-2.28 -2.08,-1.19 -2.66,-3.02 z"/>
+  <path class="district" onclick="Galle_info()" d="m 136.59712,677.86075 1.76,4.06 3.48,3.65 -0.79,1.26 1.21,1.58 -1.16,0.78 0.9,2.14 -2.67,2.38 -8.73,-1.37 2.91,3.2 1.06,2.96 -3.07,0.85 1.67,2.93 z"/>
+  <path class="district" onclick="Matara_info()" d="m 170.59712,701.82075 7.75,-1.36 0.02,-2.79 2.19,-0.19 0.11,-1.39 0.35,-1.23 -1.74,-3.1 z"/>
+  <path class="district" onclick="Hambantota_info()" d="m 394.87713,659.25075 1.02,1.28 1.16,0.25 0.39,1.5 1.94,1.63 1.52,2.73 2.61,0.92 0.27,2.8 -2.09,1.77 -3.59,0.45 -2.86,5.42 -4.86,-0.94 z"/>
+  <path class="district" onclick="Jaffna_info()" d="m 190.72712,72.870747 4.93,4.06 -5.31999,-1.13 0.38999,-2.93 z m -187.949995,-15.45 1.9,0.11 1.51,2.76 2.41,1.13 0.22,0.73 5.71,0.45 0.95,0.68 1.12,7.11 -1.34,2.82 -3.36,0.17 -2.46,-0.85 -8.34,-5.07 -0.84,-8.06 z"/>
+  <path class="district" onclick="Kilinochchi_info()" d="m 67.727125,107.37075 1.23,2.08 0.17,1.92 0.73,0.51 0.45,-1.01 1.51,0.96 0.06,2.03 -1.29,1.18 -0.78,-2.25 z"/>
+  <path class="district" onclick="Mannar_info()" d="m 98.317125,124.45075 3.23,0.79 8.6,-5.07 1.82,-3.77 9.98,2.59 2.36,0.21 1.13,-2.61 1.64,0.19 3.3,-0.61 z"/>
+  <path class="district" onclick="Vavuniya_info()" d="m 139.31712,178.23075 10.23,-6.5 8.65,-7.88 -1.52,-12.34 -4.42,0.02 -0.07,-4.94 17.59,-0.5 z"/>
+  <path class="district" onclick="Mullaitivu_info()" d="m 196.48712,77.050747 8.96,7.44 -0.11,1.07 -0.78,0 -0.17,1.8 3.53,2.76 0.61,1.64 z"/>
+  <path class="district" onclick="Batticaloa_info()" d="m 413.20713,432.26075 0.44999,0.79 1.12,0 0.5,2.53 -1.85,2.81 -1.12,0.45 -1.01,-3.7 z"/>
+  <path class="district" onclick="Ampara_info()" d="m 320.93713,425.11075 2.04,0.62 0.62,1.05 1.77,-1 12.32,0.25 0.85,0.94 0.03,2.11 z"/>
+  <path class="district" onclick="Trincomalee_info()" d="m 257.67712,171.78075 -2.41,2.35 1.79,1.75 1.23,-0.17 -0.78,1.58 -3.13,-1.35 z"/>
+  <path class="district" onclick="Kurunegala_info()" d="m 259.24712,359.14075 -0.41,-0.72 1.6,-1.31 0.06,-2.39 1.03,-0.78 1.51,0.48 0.84,-0.83 z"/>
+  <path class="district" onclick="Puttalam_info()" d="m 98.317125,124.45075 0.95,-1 0.13,-3.75 2.63,-4.33 2.41,-2.25 z"/>
+  <path class="district" onclick="Anuradhapura_info()" d="m 196.44712,201.34075 0.99,-23.3 -2.19,-7.34 7.19,3.97 1.31,-0.53 5.49,1.38 z"/>
+  <path class="district" onclick="Polonnaruwa_info()" d="m 257.04712,304.24075 1.38,-1.68 1.97,0.54 2.26,3.98 2.07,-0.17 3.59,2.27 z"/>
+  <path class="district" onclick="Badulla_info()" d="m 267.01712,554.15075 -0.75,1.82 -1.43,0.5 -0.96,2.75 -0.12,5.37 z"/>
+  <path class="district" onclick="Monaragala_info()" d="m 314.17712,588.47075 -0.69,0.62 -1.99,-1.06 -0.97,1.17 -6.04,-3.27 z"/>
+  <path class="district" onclick="Ratnapura_info()" d="m 206.48712,612.85075 -1.46,-0.99 0.61,-4.42 10.21,0.33 4.34,-0.68 z"/>
+  <path class="district" onclick="Kegalle_info()" d="m 206.48712,612.85075 -1.46,-0.99 0.61,-4.42 10.21,0.33 4.34,-0.68 z"/>
+
+</svg>!}
+
 Western Province
 <button class="status_button" onclick="Gampaha_info()">Gampaha District</button>
 <button class="status_button" onclick="Colombo_info()">Colombo District</button>
