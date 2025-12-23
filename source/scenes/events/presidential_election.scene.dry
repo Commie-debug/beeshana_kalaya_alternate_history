@@ -428,29 +428,20 @@ Q.pres_election_records.push({
 });
 
 !}
+go-to: pres_results
+
+
+@pres_results
 
 = Presidential Election Results
 
 **[+ month : month +] [+ year +] Presidential Election**
 
-{!<button onclick="window.togglePresDistrict()" style="margin: 10px 0; padding: 8px 16px; cursor: pointer; background: #333; color: white; border: none; border-radius: 4px;">Show/Hide District Results</button>!}
-
-{!<div id="pres_district_results" style="display: none; max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin: 10px 0;">!}
-    {!<p><em>District-by-district breakdown computed from ethnic and class demographics.</em></p>!}
-{!</div>!}
-
-{!<script>
-window.togglePresDistrict = function() {
-    var div = document.getElementById('pres_district_results');
-    div.style.display = div.style.display === 'none' ? 'block' : 'none';
-};
-</script>!}
-
 **National Results:**
 
-[? if pres_first_place_votes >= 0 : **1st:** [+ pres_first_place_party +] - **[+ pres_first_place_votes +]%** [? if pres_first_place_coalition : ([+ pres_first_place_coalition +]) ?] ?]
+**1st:** [+ pres_first_place_party +] - **[+ pres_first_place_votes +]%** [? if pres_first_place_coalition : ([+ pres_first_place_coalition +]) ?]
 
-[? if pres_second_place_votes >= 0 : **2nd:** [+ pres_second_place_party +] - **[+ pres_second_place_votes +]%** [? if pres_second_place_coalition : ([+ pres_second_place_coalition +]) ?] ?]
+**2nd:** [+ pres_second_place_party +] - **[+ pres_second_place_votes +]%** [? if pres_second_place_coalition : ([+ pres_second_place_coalition +]) ?]
 
 [? if pres_had_endorsements = 1 : **Endorsements:** [+ pres_endorsements_display +] ?]
 
@@ -466,10 +457,10 @@ window.togglePresDistrict = function() {
 
 [? if president_party = "UNP" and slfp_pres_victory = 0 : The UNP victory is a setback for the SLFP. ?]
 
-- @post_pres_election: Continue...
+- @post_pres_election_continue: Continue...
 
 
-@post_pres_election
+@post_pres_election_continue
 go-to: pres_slfp_victory if slfp_pres_victory = 1; pres_unp_victory if president_party = "UNP"; pres_other_victory if president_party != "SLFP" and president_party != "UNP"
 
 
@@ -505,7 +496,6 @@ For the SLFP, this is a disappointing result, but we must continue our work in b
 
 
 @pres_other_victory
-
 
 //this is just for the goofs and gaffs
 = A New Force Takes the Presidency
