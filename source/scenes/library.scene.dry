@@ -17,7 +17,7 @@ Herein contains relevant information about the government and politics of Sri La
 - @economics: Economics
 - @parties: Parties
 - @public_opinion: Public opinion (and projected election results)
-- @paramilitaries: Paramilitary and military groups
+- @paramilitaries: Paramilitaries, militants and the military
 - @factions: Internal factions
 - @figures: Figures and charts
 - @backSpecialScene: Exit library.
@@ -409,48 +409,119 @@ go-to: menu
 
 @paramilitaries
 on-arrival: {!
-Q.rb_strength = Math.round(Q.rb_strength);
-Q.sh_strength = Math.round(Q.sh_strength);
-Q.sa_strength = Math.round(Q.sa_strength); 
+if (Q.slfpt_strength) {
+    Q.slfpt_strength_2 = Q.slfpt_strength.toFixed(1);
+}
+if (Q.jss_strength) {
+    Q.jss_strength_2 = Q.jss_strength.toFixed(1);
+}
+if (Q.unpt_strength) {
+    Q.unpt_strength_2 = Q.unpt_strength.toFixed(1);
+}
+if (Q.jvpt_strength) {
+    Q.jvpt_strength_2 = Q.jvpt_strength.toFixed(1);
+}
+if (Q.ltte_strength) {
+    Q.ltte_strength_2 = Q.ltte_strength.toFixed(1);
+}
+if (Q.telo_strength) {
+    Q.telo_strength_2 = Q.telo_strength.toFixed(1);
+}
+if (Q.eros_strength) {
+    Q.eros_strength_2 = Q.eros_strength.toFixed(1);
+}
+if (Q.plote_strength) {
+    Q.plote_strength_2 = Q.plote_strength.toFixed(1);
+}
+if (Q.eprlf_strength) {
+    Q.eprlf_strength_2 = Q.eprlf_strength.toFixed(1);
+}
+if (Q.prra_strength) {
+    Q.prra_strength_2 = Q.prra_strength.toFixed(1);
+}
+if (Q.djv_strength) {
+    Q.djv_strength_2 = Q.djv_strength.toFixed(1);
+}
+if (Q.eagles_strength) {
+    Q.eagles_strength_2 = Q.eagles_strength.toFixed(1);
+}
+if (Q.epdp_strength) {
+    Q.epdp_strength_2 = Q.epdp_strength.toFixed(1);
+}
+if (Q.tna_strength) {
+    Q.tna_strength_2 = Q.tna_strength.toFixed(1);
+}
+if (Q.endlf_strength) {
+    Q.endlf_strength_2 = Q.endlf_strength.toFixed(1);
+}
+if (Q.blackcats_strength) {
+    Q.blackcats_strength_2 = Q.blackcats_strength.toFixed(1);
+}
+if (Q.ipkf_morale) {
+    Q.ipkf_morale_2 = Q.ipkf_morale.toFixed(1);
+}
 !}
-go-to: menu
 
-**Paramilitary groups:**
+= Thugs
 
-**Reichsbanner Schwarz-Rot-Gold**: The Reichsbanner is an organization affiliated with all of the democratic parties - the SPD, Z, and DDP, but primarily with the SPD. Historically, this has been an unarmed organization.
+Local criminals, unemployed youth or simply party members with limited weaponry, these "thugs" are widely used by political parties to protect rallies, support protests or attack their opponents.
 
-Strength: [+ rb_strength +] thousand
+<span class="tooltip-text" style="color: #00008B;">**SLFP Thugs**</span> 
+Strength: [+ slfpt_strength_2 : group_strength +]
+Militarization: [+ slfpt_militancy : militancy +]
 
-Militarization: [+ rb_militancy : militancy +]
+<span class="tooltip-text" style="color: #006400;">**UNP Thugs**</span>
+Strength: [+ unpt_strength_2 : group_strength +]
+Militarization: [+ unpt_militancy : militancy +]
 
-**Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the KPD.
+<span class="tooltip-text" style="color: #FF2226;">**JVP Thugs**</span> 
+Strength: [+ jvpt_strength_2 : group_strength +]
+Militarization: [+ jvpt_militancy : militancy +]
 
-Strength: [+ rfb_strength +] thousand
 
-Militarization: [+ rfb_militancy : militancy +]
+= Political Paramilitaries
 
-**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the DNVP.
+[? if prra_formed = 1 : *PRRA*: Strength: [+ prra_strength_2 : group_strength +], Militarization: [+ prra_militancy : militancy +] ?]
 
-Strength: [+ sh_strength +] thousand
+<span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span> Strength: [+ jss_strength_2 : group_strength +], Militarization: [+ jss_militancy : militancy +]
 
-Militarization: [+ sh_militancy : militancy +]
+[? if djv_formed = 1 : DJV: Strength: [+ djv_strength_2 : group_strength +], Militarization: [+ djv_militancy : militancy +] ?]
 
-**Sturmabteilung (SA)**: This is the nazi paramilitary group.
+[? if blackcats_formed = 1 : Black Cats: Strength: [+ blackcats_strength_2 : group_strength +], Militarization: [+ blackcats_militancy : militancy +] ?]
 
-Strength: [+ sa_strength +] thousand
+[? if eagles_formed = 1 : Eagles: Strength: [+ eagles_strength_2 : group_strength +], Militarization: [+ eagles_militancy : militancy +] ?]
 
-Militarization: [+ sa_militancy : militancy +]
+= Tamil Militant Groups
 
-**Official military/paramilitary groups:**
+<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span> Strength: [+ ltte_strength_2 : group_strength +], Militarization: [+ ltte_militancy : militancy +]
 
-**Reichswehr**: [+ reichswehr_strength +] thousand troops. This is Germany's military.
+<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span> Strength: [+ eros_strength_2 : group_strength +], Militarization: [+ eros_militancy : militancy +]
 
-Loyalty: [+ reichswehr_loyalty : loyalty +]
+<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;">**EPRLF**</span> Strength: [+ eprlf_strength_2 : group_strength +], Militarization: [+ eprlf_militancy : militancy +]
 
-**Prussian police**: [+ prussian_police_strength +] thousand members.
+<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;">**TELO**</span> Strength: [+ telo_strength_2 : group_strength +], Militarization: [+ telo_militancy : militancy +]
 
-Loyalty: [+ prussian_police_loyalty : loyalty +]
+<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span> Strength: [+ plote_strength_2 : group_strength +], Militarization: [+ plote_militancy : militancy +]
 
+= Military & State Paramilitaries
+
+Security Forces Strength: [+ security_forces_strenght : strength +]
+
+Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops. Morale: [+ slaf_morale : loyalty +]
+
+Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : loyalty +]
+
+[? if stf_formed = 1 : Special Task Force: [+ stf_strength +] thousand members. Morale: [+ stf_morale : loyalty +] ?]
+
+[? if civilsec_formed = 0 : Home Guard ?][? if civilsec_formed = 1 : Civil Security ?]:[+ homeg_civilsec_strength +] thousand members. Morale: [+ homeg_civilsec_morale : loyalty +]
+
+[? if epdp_formed = 1 : EPDP: Strength: [+ epdp_strength_2 : group_strength +], Militarization: [+ epdp_militancy : militancy +] ?]
+
+[? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +], Strenght: [+ ipkf_size +] thousand troops, Morale: [+ ipkf_morale_2 : loyalty +] ?]
+
+[? if tna_formed = 1 : TNA: Strength: [+ tna_strength_2 : group_strength +], Militarization: [+ tna_militancy : militancy +] ?]
+
+[? if endlf_formed = 1 : ENDLF: Strength: [+ endlf_strength_2 : group_strength +], Militarization: [+ endlf_militancy : militancy +] ?]
 
 
 @factions
