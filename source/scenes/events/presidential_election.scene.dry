@@ -457,10 +457,10 @@ go-to: pres_results
 
 [? if president_party = "UNP" and slfp_pres_victory = 0 : The UNP victory is a setback for the SLFP. ?]
 
-- @post_pres_election_continue: Continue...
+- @post_pres_election: Continue...
 
 
-@post_pres_election_continue
+@post_pres_election
 go-to: pres_slfp_victory if slfp_pres_victory = 1; pres_unp_victory if president_party = "UNP"; pres_other_victory if president_party != "SLFP" and president_party != "UNP"
 
 
