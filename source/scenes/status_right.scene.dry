@@ -20,7 +20,7 @@ Infastructure: [+ district_infastructure : eduinfa +]
 Seats in parliament: [+ district_seats +] [? if district_name = "Jaffna" or district_name = "Kilinochchi" : (Shared between Jaffna and Kilinochchi) ?] [? if district_name = "Mullaitivu" or district_name = "Mannar" or district_name = "Vavuniya" : (Shared between Mannar, Mullaitivu and Vavuniya) ?] 
 Industries: [+ district_industries +]
 
-{!<svg id="sri-lanka-map" viewBox="0 -30 450 793" width="220" height="390" style="display:block; margin:auto; border: 3px solid #3B3B3B;">
+{!<svg id="sri-lanka-map" viewBox="0 30 450 793" width="220" height="390" style="display:block; margin:auto; border: 3px solid #3B3B3B;">
   <style>
     .district { fill: #E1B300; stroke: #000000; stroke-width: 2px; }
     .district:hover { fill: #FFD700; opacity: 0.8; cursor: pointer; }
