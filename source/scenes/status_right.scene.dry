@@ -5,19 +5,29 @@ is-special: true
 = [+ district_name +] District
 
 Sinhalese: [+ district_sinhala +]
+
 Sri Lankan Tamil: [+ district_sltamil +]
+
 Indian Tamil: [+ district_itamil +]
+
 Muslim: [+ district_muslim +]
+
 Others: [+ district_others +]
 
 Working class: [+ district_worker +]
+
 Middle class: [+ district_middle +]
+
 Upper class: [+ district_upper +]
+
 Rural: [+ district_rural +]
 
 Control: [+ district_control +]
+
 Infastructure: [+ district_infastructure : eduinfa +]
+
 Seats in parliament: [+ district_seats +] [? if district_name = "Jaffna" or district_name = "Kilinochchi" : (Shared between Jaffna and Kilinochchi) ?] [? if district_name = "Mullaitivu" or district_name = "Mannar" or district_name = "Vavuniya" : (Shared between Mannar, Mullaitivu and Vavuniya) ?] 
+
 Industries: [+ district_industries +]
 
 {!<svg id="sri-lanka-map" viewBox="0 0 450 850" width="200" height="380" style="display:block; margin:auto; border: 3px solid #3B3B3B;">
