@@ -252,33 +252,33 @@ if (Q.ipkf_morale) {
 
 = Political Paramilitaries
 
-<span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span> Strength: [+ slfpt_strength_2 : group_strength +] hundred, Militarization: [+ slfpt_militancy : militancy +]
+<span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span> Strength: [+ slfpt_strength_2 : group_strength +], Militarization: [+ slfpt_militancy : militancy +]
 
-[? if prra_formed = 1 : PRRA: Strength: [+ prra_strength_2 : group_strength +] hundred, Militarization: [+ prra_militancy : militancy +] ?]
+[? if prra_formed = 1 : PRRA: Strength: [+ prra_strength_2 : group_strength +], Militarization: [+ prra_militancy : militancy +] ?]
 
-<span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span> Strength: [+ jss_strength_2 : group_strength +] hundred, Militarization: [+ jss_militancy : militancy +]
+<span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span> Strength: [+ jss_strength_2 : group_strength +], Militarization: [+ jss_militancy : militancy +]
 
-<span class="tooltip-text" title="Thugs affiliated with the UNP" style="color: #006400;">**UNP Thugs**</span> Strength: [+ unpt_strength_2 : group_strength +] hundred, Militarization: [+ unpt_militancy : militancy +]
+<span class="tooltip-text" title="Thugs affiliated with the UNP" style="color: #006400;">**UNP Thugs**</span> Strength: [+ unpt_strength_2 : group_strength +], Militarization: [+ unpt_militancy : militancy +]
 
-<span class="tooltip-text" title="Thugs affiliated with the JVP" style="color: #FF2226;">**JVP Thugs**</span> Strength: [+ jvpt_strength_2 : group_strength +] hundred, Militarization: [+ jvpt_militancy : militancy +]
+<span class="tooltip-text" title="Thugs affiliated with the JVP" style="color: #FF2226;">**JVP Thugs**</span> Strength: [+ jvpt_strength_2 : group_strength +], Militarization: [+ jvpt_militancy : militancy +]
 
-[? if djv_formed = 1 : DJV: Strength: [+ djv_strength_2 : group_strength +] hundred, Militarization: [+ djv_militancy : militancy +] ?]
+[? if djv_formed = 1 : DJV: Strength: [+ djv_strength_2 : group_strength +], Militarization: [+ djv_militancy : militancy +] ?]
 
-[? if blackcats_formed = 1 : Black Cats: Strength: [+ blackcats_strength_2 : group_strength +] hundred, Militarization: [+ blackcats_militancy : militancy +] ?]
+[? if blackcats_formed = 1 : Black Cats: Strength: [+ blackcats_strength_2 : group_strength +], Militarization: [+ blackcats_militancy : militancy +] ?]
 
-[? if eagles_formed = 1 : Eagles: Strength: [+ eagles_strength_2 : group_strength +] hundred, Militarization: [+ eagles_militancy : militancy +] ?]
+[? if eagles_formed = 1 : Eagles: Strength: [+ eagles_strength_2 : group_strength +], Militarization: [+ eagles_militancy : militancy +] ?]
 
 = Tamil Militant Groups
 
-<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span> Strength: [+ ltte_strength_2 : group_strength +] hundred, Militarization: [+ ltte_militancy : militancy +]
+<span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span> Strength: [+ ltte_strength_2 : group_strength +], Militarization: [+ ltte_militancy : militancy +]
 
-<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span> Strength: [+ eros_strength_2 : group_strength +] hundred, Militarization: [+ eros_militancy : militancy +]
+<span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span> Strength: [+ eros_strength_2 : group_strength +], Militarization: [+ eros_militancy : militancy +]
 
-<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;">**EPRLF**</span> Strength: [+ eprlf_strength_2 : group_strength +] hundred, Militarization: [+ eprlf_militancy : militancy +]
+<span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;">**EPRLF**</span> Strength: [+ eprlf_strength_2 : group_strength +], Militarization: [+ eprlf_militancy : militancy +]
 
-<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;">**TELO**</span> Strength: [+ telo_strength_2 : group_strength +] hundred, Militarization: [+ telo_militancy : militancy +]
+<span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;">**TELO**</span> Strength: [+ telo_strength_2 : group_strength +], Militarization: [+ telo_militancy : militancy +]
 
-<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span> Strength: [+ plote_strength_2 : group_strength +] hundred, Militarization: [+ plote_militancy : militancy +]
+<span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span> Strength: [+ plote_strength_2 : group_strength +], Militarization: [+ plote_militancy : militancy +]
 
 = Military & State Paramilitaries
 
@@ -292,13 +292,13 @@ Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : l
 
 [? if civilsec_formed = 0 : Home Guard ?][? if civilsec_formed = 1 : Civil Security ?]:[+ homeg_civilsec_strength +] thousand members. Morale: [+ homeg_civilsec_morale : loyalty +]
 
-[? if epdp_formed = 1 : EPDP: Strength: [+ epdp_strength_2 : group_strength +] hundred, Militarization: [+ epdp_militancy : militancy +] ?]
+[? if epdp_formed = 1 : EPDP: Strength: [+ epdp_strength_2 : group_strength +], Militarization: [+ epdp_militancy : militancy +] ?]
 
 [? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +], Strenght: [+ ipkf_size +] thousand troops, Morale: [+ ipkf_morale_2 : loyalty +] ?]
 
-[? if tna_formed = 1 : TNA: Strength: [+ tna_strength_2 : group_strength +] hundred, Militarization: [+ tna_militancy : militancy +] ?]
+[? if tna_formed = 1 : TNA: Strength: [+ tna_strength_2 : group_strength +], Militarization: [+ tna_militancy : militancy +] ?]
 
-[? if endlf_formed = 1 : ENDLF: Strength: [+ endlf_strength_2 : group_strength +] hundred, Militarization: [+ endlf_militancy : militancy +] ?]
+[? if endlf_formed = 1 : ENDLF: Strength: [+ endlf_strength_2 : group_strength +], Militarization: [+ endlf_militancy : militancy +] ?]
 
 @polls
 on-arrival: {!
