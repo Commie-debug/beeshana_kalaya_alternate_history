@@ -270,6 +270,8 @@ Q.dplf_pres_candidate = 'DPLF CANDIDATE';
 Q.pflt_pres_candidate = 'PFLT CANDIDATE';
 Q.ucpf_pres_candidate = 'UCPF CANDIDATE';
 
+Q.n_pres_elections = 0;
+
 
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
