@@ -72,7 +72,7 @@ Q.lsspbacking = 0;
 Q.cpslbacking = 0;
 Q.nsspbacking = 0;
 
-// organizations
+// organizations in the slfp
 Q.slfp_union = 5;
 
 // inter-party relations
@@ -250,6 +250,25 @@ Q.pflt_pres_endorsement = '';
 Q.ucpf_pres_endorsement = '';
 
 //presidential election variables
+//default candidates
+Q.slfp_pres_candidate = 'Hector Kobbekaduwa';
+Q.unp_pres_candidate = 'JR Jayawardene';
+Q.jvp_pres_candidate = 'Rohana Wijeweera';
+Q.cpsl_pres_candidate = 'Pieter Keuneman';
+Q.lssp_pres_candidate = 'Colvin R. de Silva';
+Q.nssp_pres_candidate = 'Vasudeva Nanayakkara';
+Q.tulf_pres_candidate = 'TULF CANDIDATE';
+Q.actc_pres_candidate = 'Kumar Ponnambalam';
+Q.cwc_pres_candidate = 'CWC CANDIDATE';
+Q.slpp_pres_candidate = 'SLPP CANDIDATE';
+Q.slmp_pres_candidate = 'SLMP CANDIDATE';
+Q.slmc_pres_candidate = 'SLMC CANDIDATE';
+Q.npp_pres_candidate = 'NPP CANDIDATE';
+Q.mep_pres_candidate = 'MEP CANDIDATE';
+Q.eros_pres_candidate = 'EROS CANDIDATE';
+Q.dplf_pres_candidate = 'DPLF CANDIDATE';
+Q.pflt_pres_candidate = 'PFLT CANDIDATE';
+Q.ucpf_pres_candidate = 'UCPF CANDIDATE';
 
 
 Q.unp_leader = "JR Jayawardene";
@@ -1394,7 +1413,7 @@ Q.in_election = 0;
 //72 months or 6 years
 Q.president_term = 72;
 Q.next_pres_election_year = 1981;
-Q.next_pres_election_month = 9;
+Q.next_pres_election_month = 10;
 //for real, parliament elections for august 1983
 //72 months or 6 years
 Q.parliament_term = 72;
