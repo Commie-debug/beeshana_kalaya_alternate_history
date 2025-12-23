@@ -250,31 +250,7 @@ Q.pflt_pres_endorsement = '';
 Q.ucpf_pres_endorsement = '';
 
 //presidential election variables
-Q.incumbent_lost
-Q.n_pres_elections
-Q.old_president
-Q.old_president_party
-Q.pres_coalition_victory
-Q.pres_election_records
-Q.pres_endorsements_display
-Q.pres_first_place_members
-Q.pres_first_place_name
-Q.pres_first_place_party
-Q.pres_first_place_votes
-Q.pres_first_round_majority
-Q.pres_first_round_results
-Q.pres_had_endorsements
-Q.pres_majority_winner
-Q.pres_num_candidates
-Q.pres_second_place_members
-Q.pres_second_place_name
-Q.pres_second_place_party
-Q.pres_second_place_votes
-Q.pres_winner_name
-Q.pres_winner_party
-Q.pres_winner_votes
-Q.president_elect
-Q.slfp_pres_victory
+
 
 Q.unp_leader = "JR Jayawardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
