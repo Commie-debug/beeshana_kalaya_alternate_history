@@ -483,7 +483,9 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 [? if prra_formed = 1 : *PRRA*: Strength: [+ prra_strength_2 : group_strength +], Militarization: [+ prra_militancy : militancy +] ?]
 
-<span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span> Strength: [+ jss_strength_2 : group_strength +], Militarization: [+ jss_militancy : militancy +]
+**JSS** - *Jathika Sevaka Sangamaya* - A prominent UNP affiliated trade union. It also acts as a def-facto paramilitary for the UNP. Their members are linked to numerous attacks on opposition and dissenters.
+Strength: [+ jss_strength_2 : group_strength +]
+Militarization: [+ jss_militancy : militancy +]
 
 [? if djv_formed = 1 : DJV: Strength: [+ djv_strength_2 : group_strength +], Militarization: [+ djv_militancy : militancy +] ?]
 
