@@ -411,14 +411,10 @@ go-to: post_pres_election
 
 
 @post_pres_election
-go-to: pres_results_display
 
 = Presidential Election Results
 
 The votes have been counted and the results are in.
-
-
-@pres_results_display
 
 **Presidential Election Results**
 
