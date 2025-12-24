@@ -2,14 +2,14 @@ title: Presidential Elections
 new-page: true
 tags: event
 priority: -1
-view-if: (year = next_pres_election_year and month >= next_pres_election_month) or (year > next_pres_election_year)
+view-if: (year = next_pres_election_year and month >= next_pres_election_month) or (year > next_pres_election_year) and disable_event_problem == 0
 on-departure: month_actions += 1; in_election = 0; next_pres_election_year = next_pres_election_year + 6; n_pres_elections += 1;
 set-jump: post_pres_election
 face-image: img/Election_Time.png
 
 = Presidential Election, [+ month : month +] [+ year +]
 
-The Presidential Election of Sri Lanka is to be held now. The President is elected directly by the people through a preferential voting system. Unlike parliamentary elections, presidential elections are a direct contest between candidates representing parties or coalitions.
+The Presidential Election of Sri Lanka is to be held now. The President is elected directly by the people through a preferential voting system. 
 
 - @pres_election_algorithm: May the best candidate win...
 
