@@ -32,7 +32,7 @@ Q.india_landfall = 0;
 Q.state_of_emergency = 0;
 
 //experimental variable to just disable problematic events
-Q.disable = 1;
+Q.disable_event_problem = 1;
 
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
