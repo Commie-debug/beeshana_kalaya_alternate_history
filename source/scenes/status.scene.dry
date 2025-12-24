@@ -16,8 +16,6 @@ if (Q.economic_growth) {
 
 = Status
 
-Gooped
-
 Week [+ week +] [+ month : month +] [+ year +] 
 
 Resources available: [+ resources +]
