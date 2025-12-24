@@ -266,7 +266,7 @@ if (Q.ipkf_morale) {
 
 [? if blackcats_formed = 1 : Black Cats: Strength: [+ blackcats_strength_2 : group_strength +], Militarization: [+ blackcats_militancy : militancy +] ?]
 
-[? if eagles_formed = 1 : Eagles: Strength: [+ eagles_strength_2 : group_strength +], Militarization: [+ eagles_militancy : militancy +] ?]
+[? if eagles_formed = 1 : Eagles Of The Central Hills: Strength: [+ eagles_strength_2 : group_strength +], Militarization: [+ eagles_militancy : militancy +] ?]
 
 = Tamil Militant Groups
 
