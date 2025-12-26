@@ -420,7 +420,6 @@ if (Q.prime_minister_party && Q.prime_minister_party !== Q.president_party) {
 !}
 go-to: post_pres_election
 
-
 @post_pres_election
 
 = Presidential Election Results
