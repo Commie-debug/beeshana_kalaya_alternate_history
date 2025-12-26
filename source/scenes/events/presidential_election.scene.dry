@@ -16,8 +16,7 @@ The Presidential Election of Sri Lanka is to be held now. The President is elect
 
 @pres_election_algorithm
 on-arrival: {!
-// Electoral districts (same as parliament - merged districts)
-var district_names = [
+Q.district_names = [
     'colombo_d', 'gampaha_d', 'kalutara_d',
     'jaffna_electoral_d',
     'wanni_electoral_d',
@@ -30,19 +29,15 @@ var district_names = [
     'ratnapura_d', 'kegalle_d'
 ];
 
-// Store original pop_weights before zeroing (same as parliament)
 var stored_jaffna_d_pop_weight = Q.jaffna_d_pop_weight || 0;
 var stored_kilinochchi_d_pop_weight = Q.kilinochchi_d_pop_weight || 0;
-var stored_mullaitivu_d_pop_weight = Q.mullaitivu_d_pop_weight || 0;
-var stored_mannar_d_pop_weight = Q.mannar_d_pop_weight || 0;
-var stored_vavuniya_d_pop_weight = Q.vavuniya_d_pop_weight || 0;
 
-// Create Jaffna electoral district (Jaffna + Kilinochchi)
 var total_jaffna_electoral = stored_jaffna_d_pop_weight + stored_kilinochchi_d_pop_weight;
 var jaffna_weight = (total_jaffna_electoral > 0) ? stored_jaffna_d_pop_weight / total_jaffna_electoral : 0.85;
 var kili_weight = (total_jaffna_electoral > 0) ? stored_kilinochchi_d_pop_weight / total_jaffna_electoral : 0.15;
 
 Q.jaffna_electoral_d_pop_weight = total_jaffna_electoral;
+
 Q.jaffna_electoral_d_sinhala = (Q.jaffna_d_sinhala * jaffna_weight) + (Q.kilinochchi_d_sinhala * kili_weight);
 Q.jaffna_electoral_d_sltamil = (Q.jaffna_d_sltamil * jaffna_weight) + (Q.kilinochchi_d_sltamil * kili_weight);
 Q.jaffna_electoral_d_itamil = (Q.jaffna_d_itamil * jaffna_weight) + (Q.kilinochchi_d_itamil * kili_weight);
@@ -54,13 +49,17 @@ Q.jaffna_electoral_d_worker = (Q.jaffna_d_worker * jaffna_weight) + (Q.kilinochc
 Q.jaffna_electoral_d_rural = (Q.jaffna_d_rural * jaffna_weight) + (Q.kilinochchi_d_rural * kili_weight);
 Q.jaffna_electoral_d_control = Math.min(Q.jaffna_d_control || 100, Q.kilinochchi_d_control || 100);
 
-// Create Wanni electoral district (Mullaitivu + Mannar + Vavuniya)
+var stored_mullaitivu_d_pop_weight = Q.mullaitivu_d_pop_weight || 0;
+var stored_mannar_d_pop_weight = Q.mannar_d_pop_weight || 0;
+var stored_vavuniya_d_pop_weight = Q.vavuniya_d_pop_weight || 0;
+
 var total_wanni_electoral = stored_mullaitivu_d_pop_weight + stored_mannar_d_pop_weight + stored_vavuniya_d_pop_weight;
 var mull_weight = (total_wanni_electoral > 0) ? stored_mullaitivu_d_pop_weight / total_wanni_electoral : 0.25;
 var mann_weight = (total_wanni_electoral > 0) ? stored_mannar_d_pop_weight / total_wanni_electoral : 0.30;
 var vavu_weight = (total_wanni_electoral > 0) ? stored_vavuniya_d_pop_weight / total_wanni_electoral : 0.45;
 
 Q.wanni_electoral_d_pop_weight = total_wanni_electoral;
+
 Q.wanni_electoral_d_sinhala = (Q.mullaitivu_d_sinhala * mull_weight) + (Q.mannar_d_sinhala * mann_weight) + (Q.vavuniya_d_sinhala * vavu_weight);
 Q.wanni_electoral_d_sltamil = (Q.mullaitivu_d_sltamil * mull_weight) + (Q.mannar_d_sltamil * mann_weight) + (Q.vavuniya_d_sltamil * vavu_weight);
 Q.wanni_electoral_d_itamil = (Q.mullaitivu_d_itamil * mull_weight) + (Q.mannar_d_itamil * mann_weight) + (Q.vavuniya_d_itamil * vavu_weight);
@@ -72,28 +71,22 @@ Q.wanni_electoral_d_worker = (Q.mullaitivu_d_worker * mull_weight) + (Q.mannar_d
 Q.wanni_electoral_d_rural = (Q.mullaitivu_d_rural * mull_weight) + (Q.mannar_d_rural * mann_weight) + (Q.vavuniya_d_rural * vavu_weight);
 Q.wanni_electoral_d_control = Math.min(Q.mullaitivu_d_control || 100, Q.mannar_d_control || 100, Q.vavuniya_d_control || 100);
 
-// Zero out individual district pop_weights (same as parliament)
 Q.jaffna_d_pop_weight = 0;
 Q.kilinochchi_d_pop_weight = 0;
 Q.mullaitivu_d_pop_weight = 0;
 Q.mannar_d_pop_weight = 0;
 Q.vavuniya_d_pop_weight = 0;
 
-// Ethnic groups and classes
 var ethnic_groups = ['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
 var class_groups = ['upper', 'middle', 'worker', 'rural'];
 
 var ethnic_weight = Q.ethnic_weight;
 var class_weight = Q.class_weight;
 
-var class_var_map = {
-    'upper': 'upper',
-    'middle': 'middle', 
-    'worker': 'workers',
-    'rural': 'rural'
-};
+for (var party of Q.parties) {
+    Q[party + '_pres_votes_total'] = 0;
+}
 
-// Normalize ethnic support
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
     for (var party of Q.parties) {
@@ -108,7 +101,13 @@ for (var ethnic of ethnic_groups) {
     }
 }
 
-// Normalize class support
+var class_var_map = {
+    'upper': 'upper',
+    'middle': 'middle',
+    'worker': 'workers',
+    'rural': 'rural'
+};
+
 for (var cls of class_groups) {
     var class_total = 0;
     var cls_var = class_var_map[cls];
@@ -124,15 +123,9 @@ for (var cls of class_groups) {
     }
 }
 
-// Initialize vote totals for all parties
-for (var party of Q.parties) {
-    Q[party + '_pres_votes_total'] = 0;
-}
+for (var i = 0; i < Q.district_names.length; i++) {
+    var district_name = Q.district_names[i];
 
-// Calculate votes per district
-for (var i = 0; i < district_names.length; i++) {
-    var district_name = district_names[i];
-    
     var district_ethnic = {
         'sinhala': Q[district_name + '_sinhala'] || 0,
         'sltamil': Q[district_name + '_sltamil'] || 0,
@@ -140,63 +133,56 @@ for (var i = 0; i < district_names.length; i++) {
         'muslim': Q[district_name + '_muslim'] || 0,
         'other': Q[district_name + '_other'] || 0
     };
-    
+
     var district_class = {
         'upper': Q[district_name + '_upper'] || 0,
         'middle': Q[district_name + '_middle'] || 0,
         'worker': Q[district_name + '_worker'] || 0,
         'rural': Q[district_name + '_rural'] || 0
     };
-    
+
     var district_control = Q[district_name + '_control'];
     if (district_control === undefined) district_control = 100;
-    
+
     var district_pop_weight = Q[district_name + '_pop_weight'] || 0;
-    
+
     var district_party_support = {};
     var district_total_support = 0;
-    
+
     for (var party of Q.parties) {
         var ethnic_support = 0;
         for (var ethnic of ethnic_groups) {
-            ethnic_support += (district_ethnic[ethnic] / 100) * (Q[ethnic + '_' + party + '_norm'] || 0);
+            ethnic_support += (district_ethnic[ethnic] / 100) * Q[ethnic + '_' + party + '_norm'];
         }
-        
+
         var class_support = 0;
         for (var cls of class_groups) {
-            class_support += (district_class[cls] / 100) * (Q[cls + '_' + party + '_norm'] || 0);
+            class_support += (district_class[cls] / 100) * Q[cls + '_' + party + '_norm'];
         }
-        
+
         var combined_support = (ethnic_weight * ethnic_support) + (class_weight * class_support);
-        combined_support *= (district_control / 100);
-        
+
         district_party_support[party] = combined_support;
         district_total_support += combined_support;
     }
-    
-    // Add to national totals with population weight
+
     for (var party of Q.parties) {
-        var district_vote_share = (district_total_support > 0) ? 
+        var vote_share = (district_total_support > 0) ?
             (district_party_support[party] / district_total_support) : 0;
-        Q[party + '_pres_votes_total'] += district_vote_share * district_pop_weight;
-        
-        // Store district-level results
-        Q[district_name + '_pres_' + party] = Math.round(district_vote_share * 1000) / 10;
+        Q[party + '_pres_votes_total'] += vote_share * district_pop_weight;
     }
 }
 
-// Calculate final percentages
 var total_votes = 0;
 for (var party of Q.parties) {
     total_votes += Q[party + '_pres_votes_total'];
 }
 
 for (var party of Q.parties) {
-    Q[party + '_pres_votes'] = (total_votes > 0) ? 
+    Q[party + '_pres_votes'] = (total_votes > 0) ?
         Math.round((Q[party + '_pres_votes_total'] / total_votes) * 1000) / 10 : 0;
 }
 
-// Determine winner
 var max_votes = 0;
 var winner_party = '';
 
@@ -207,21 +193,17 @@ for (var party of Q.parties) {
     }
 }
 
-// Store winner info
 Q.pres_winner_party = winner_party.toUpperCase();
-Q.pres_winner_candidate = Q[winner_party + '_pres_candidate'] || (winner_party.toUpperCase() + ' Candidate');
+Q.pres_winner_candidate = Q[winner_party + '_pres_candidate'];
 Q.pres_winner_votes = max_votes;
 
-// Update president
 Q.old_president = Q.president;
 Q.old_president_party = Q.president_party;
 Q.president = Q.pres_winner_candidate;
 Q.president_party = Q.pres_winner_party;
 
-// Check for SLFP victory
 Q.slfp_pres_victory = (winner_party === 'slfp') ? 1 : 0;
 
-//restore original pop_weights (same as parliament)
 Q.jaffna_d_pop_weight = stored_jaffna_d_pop_weight;
 Q.kilinochchi_d_pop_weight = stored_kilinochchi_d_pop_weight;
 Q.mullaitivu_d_pop_weight = stored_mullaitivu_d_pop_weight;
