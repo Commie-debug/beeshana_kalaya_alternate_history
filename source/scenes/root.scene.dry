@@ -273,6 +273,20 @@ Q.dplf_pres_candidate = 'DPLF CANDIDATE';
 Q.pflt_pres_candidate = 'PFLT CANDIDATE';
 Q.ucpf_pres_candidate = 'UCPF CANDIDATE';
 
+Q.pres_candidates = [];
+Q.pres_results = [];
+Q.pres_winner_party = "";
+Q.pres_winner_candidate = "";
+Q.pres_winner_votes = 0;
+Q.pres_winner_color = "";
+Q.pres_second_party = "";
+Q.pres_second_candidate = "";
+Q.pres_second_votes = 0;
+Q.old_president = "";
+Q.old_president_party = "";
+Q.cohabitation = 0;
+Q.slfp_pres_victory = 0;
+
 Q.n_pres_elections = 0;
 
 
