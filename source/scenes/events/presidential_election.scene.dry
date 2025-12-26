@@ -221,7 +221,7 @@ Q.president_party = Q.pres_winner_party;
 // Check for SLFP victory
 Q.slfp_pres_victory = (winner_party === 'slfp') ? 1 : 0;
 
-// Restore original pop_weights (same as parliament)
+//restore original pop_weights (same as parliament)
 Q.jaffna_d_pop_weight = stored_jaffna_d_pop_weight;
 Q.kilinochchi_d_pop_weight = stored_kilinochchi_d_pop_weight;
 Q.mullaitivu_d_pop_weight = stored_mullaitivu_d_pop_weight;
