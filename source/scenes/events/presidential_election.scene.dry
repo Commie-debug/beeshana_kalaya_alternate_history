@@ -223,6 +223,36 @@ for (var cid in coalitionMembers) {
     }
 }
 
+//determinwhichpartiesarerunningindependently
+//apartyisindependentifithasitsowncandidateandisnotincoalitionandnotendorsing
+var all_parties_check = base_parties.concat(formable_parties);
+for (var p of all_parties_check) {
+    var hasOwnCandidate = false;
+    var isInCoalition = (partyToCoalition[p] !== undefined && partyToCoalition[p] >= 0);
+    var isCoalitionLeader = false;
+    var isEndorsing = (Q[p + '_pres_endorsement'] && Q[p + '_pres_endorsement'] !== '');
+    
+    //checkifthispartyhasitsowncandidate
+    for (var candidate of Q.pres_candidates) {
+        if (Q.pres_candidate_parties[candidate] === p) {
+            hasOwnCandidate = true;
+            break;
+        }
+    }
+    
+    //checkifthispartyisacoalitionleader
+    for (var cid in coalitionLeader) {
+        if (coalitionLeader[cid] === p) {
+            isCoalitionLeader = true;
+            break;
+        }
+    }
+    
+    //partyshowsinresultsifithasowncandidateandisnotendorsingandeitherisnotincoalitionoristheleader
+    var showInResults = hasOwnCandidate && !isEndorsing && (!isInCoalition || isCoalitionLeader);
+    Q[p + '_pres_independent'] = showInResults ? 1 : 0;
+}
+
 //normalizeethnicsupport
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
@@ -502,463 +532,464 @@ go-to: pres_result_display
     {!<table style="text-align:center; border-spacing: 0.2em; font-size: 0.8em;">!}
         {!<tr>!}
             {!<th>District</th>!}
-            {!<th><span style="color: #00008B;">SLFP</span></th>!}
-            {!<th><span style="color: #006400;">UNP</span></th>!}
-            {!<th><span style="color: #F7D917;">TULF</span></th>!}
-            {!<th><span style="color: #FDCC01;">ACTC</span></th>!}
-            {!<th><span style="color: #FF2226;">JVP</span></th>!}
-            {!<th><span style="color: #E52B50;">CWC</span></th>!}
-            {!<th><span style="color: #65000B;">CPSL</span></th>!}
-            {!<th><span style="color: #A91101;">LSSP</span></th>!}
-            {!<th><span style="color: #FF8080;">NSSP</span></th>!}
-            [? if slpp_formed : {!<th><span style="color: #E52B50;">SLPP</span></th>!} ?]
-            [? if slmp_formed : {!<th><span style="color: #663399;">SLMP</span></th>!} ?]
-            [? if slmc_formed : {!<th><span style="color: #2DCF3E;">SLMC</span></th>!} ?]
-            [? if npp_formed : {!<th><span style="color: #9F005D;">NPP</span></th>!} ?]
-            [? if mep_formed : {!<th><span style="color: #FF3915;">MEP</span></th>!} ?]
-            [? if eros_formed : {!<th><span style="color: #FF2400;">EROS</span></th>!} ?]
-            [? if dplf_formed : {!<th><span style="color: #CE2029;">DPLF</span></th>!} ?]
-            [? if pflt_formed : {!<th><span style="color: #DC143C;">PFLT</span></th>!} ?]
+            [? if slfp_pres_independent = 1 : {!<th><span style="color: #00008B;">SLFP</span></th>!} ?]
+            [? if unp_pres_independent = 1 : {!<th><span style="color: #006400;">UNP</span></th>!} ?]
+            [? if tulf_pres_independent = 1 : {!<th><span style="color: #F7D917;">TULF</span></th>!} ?]
+            [? if actc_pres_independent = 1 : {!<th><span style="color: #FDCC01;">ACTC</span></th>!} ?]
+            [? if jvp_pres_independent = 1 : {!<th><span style="color: #FF2226;">JVP</span></th>!} ?]
+            [? if cwc_pres_independent = 1 : {!<th><span style="color: #E52B50;">CWC</span></th>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<th><span style="color: #65000B;">CPSL</span></th>!} ?]
+            [? if lssp_pres_independent = 1 : {!<th><span style="color: #A91101;">LSSP</span></th>!} ?]
+            [? if nssp_pres_independent = 1 : {!<th><span style="color: #FF8080;">NSSP</span></th>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<th><span style="color: #E52B50;">SLPP</span></th>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<th><span style="color: #663399;">SLMP</span></th>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<th><span style="color: #2DCF3E;">SLMC</span></th>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<th><span style="color: #9F005D;">NPP</span></th>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<th><span style="color: #FF3915;">MEP</span></th>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<th><span style="color: #FF2400;">EROS</span></th>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<th><span style="color: #CE2029;">DPLF</span></th>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<th><span style="color: #DC143C;">PFLT</span></th>!} ?]
+            [? if ucpf_formed and ucpf_pres_independent = 1 : {!<th><span style="color: #DC143C;">UCPF</span></th>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Colombo**{!</td>!}
-            {!<td>!}[+ colombo_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ colombo_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ colombo_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ colombo_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ colombo_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ colombo_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ colombo_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ colombo_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ colombo_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ colombo_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Gampaha**{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ gampaha_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ gampaha_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ gampaha_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ gampaha_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ gampaha_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ gampaha_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ gampaha_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ gampaha_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ gampaha_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kalutara**{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ kalutara_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ kalutara_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ kalutara_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ kalutara_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ kalutara_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ kalutara_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ kalutara_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ kalutara_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ kalutara_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Jaffna**{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ jaffna_electoral_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ jaffna_electoral_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ jaffna_electoral_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ jaffna_electoral_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ jaffna_electoral_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ jaffna_electoral_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ jaffna_electoral_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ jaffna_electoral_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ jaffna_electoral_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Vanni**{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ wanni_electoral_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ wanni_electoral_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ wanni_electoral_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ wanni_electoral_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ wanni_electoral_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ wanni_electoral_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ wanni_electoral_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ wanni_electoral_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ wanni_electoral_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Trincomalee**{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ trincomalee_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ trincomalee_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ trincomalee_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ trincomalee_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ trincomalee_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ trincomalee_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ trincomalee_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ trincomalee_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ trincomalee_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Batticaloa**{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ batticaloa_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ batticaloa_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ batticaloa_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ batticaloa_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ batticaloa_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ batticaloa_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ batticaloa_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ batticaloa_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ batticaloa_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ampara**{!</td>!}
-            {!<td>!}[+ ampara_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ ampara_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ ampara_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ ampara_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ ampara_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ ampara_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ ampara_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ ampara_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ ampara_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ ampara_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kandy**{!</td>!}
-            {!<td>!}[+ kandy_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ kandy_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ kandy_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ kandy_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ kandy_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ kandy_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ kandy_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ kandy_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ kandy_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ kandy_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matale**{!</td>!}
-            {!<td>!}[+ matale_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ matale_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ matale_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ matale_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ matale_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ matale_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ matale_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ matale_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ matale_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ matale_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ matale_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ matale_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ matale_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ matale_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ matale_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ matale_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ matale_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ matale_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ matale_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Nuwara Eliya**{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ nuwaraeliya_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ nuwaraeliya_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ nuwaraeliya_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ nuwaraeliya_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ nuwaraeliya_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ nuwaraeliya_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ nuwaraeliya_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ nuwaraeliya_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ nuwaraeliya_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Galle**{!</td>!}
-            {!<td>!}[+ galle_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ galle_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ galle_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ galle_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ galle_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ galle_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ galle_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ galle_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ galle_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ galle_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ galle_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ galle_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ galle_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ galle_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ galle_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ galle_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ galle_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ galle_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ galle_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matara**{!</td>!}
-            {!<td>!}[+ matara_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ matara_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ matara_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ matara_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ matara_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ matara_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ matara_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ matara_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ matara_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ matara_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ matara_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ matara_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ matara_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ matara_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ matara_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ matara_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ matara_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ matara_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ matara_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Hambantota**{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ hambantota_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ hambantota_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ hambantota_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ hambantota_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ hambantota_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ hambantota_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ hambantota_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ hambantota_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ hambantota_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kurunegala**{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ kurunegala_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ kurunegala_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ kurunegala_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ kurunegala_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ kurunegala_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ kurunegala_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ kurunegala_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ kurunegala_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ kurunegala_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Puttalam**{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ puttalam_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ puttalam_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ puttalam_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ puttalam_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ puttalam_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ puttalam_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ puttalam_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ puttalam_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ puttalam_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Anuradhapura**{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ anuradhapura_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ anuradhapura_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ anuradhapura_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ anuradhapura_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ anuradhapura_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ anuradhapura_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ anuradhapura_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ anuradhapura_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ anuradhapura_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Polonnaruwa**{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ polonnaruwa_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ polonnaruwa_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ polonnaruwa_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ polonnaruwa_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ polonnaruwa_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ polonnaruwa_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ polonnaruwa_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ polonnaruwa_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ polonnaruwa_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Badulla**{!</td>!}
-            {!<td>!}[+ badulla_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ badulla_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ badulla_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ badulla_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ badulla_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ badulla_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ badulla_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ badulla_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ badulla_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ badulla_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Monaragala**{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ monaragala_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ monaragala_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ monaragala_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ monaragala_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ monaragala_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ monaragala_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ monaragala_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ monaragala_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ monaragala_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ratnapura**{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ ratnapura_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ ratnapura_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ ratnapura_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ ratnapura_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ ratnapura_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ ratnapura_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ ratnapura_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ ratnapura_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ ratnapura_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kegalle**{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_slfp_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_unp_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_tulf_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_actc_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_jvp_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_cwc_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_cpsl_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_lssp_votes +]%{!</td>!}
-            {!<td>!}[+ kegalle_d_pres_nssp_votes +]%{!</td>!}
-            [? if slpp_formed : {!<td>!}[+ kegalle_d_pres_slpp_votes +]%{!</td>!} ?]
-            [? if slmp_formed : {!<td>!}[+ kegalle_d_pres_slmp_votes +]%{!</td>!} ?]
-            [? if slmc_formed : {!<td>!}[+ kegalle_d_pres_slmc_votes +]%{!</td>!} ?]
-            [? if npp_formed : {!<td>!}[+ kegalle_d_pres_npp_votes +]%{!</td>!} ?]
-            [? if mep_formed : {!<td>!}[+ kegalle_d_pres_mep_votes +]%{!</td>!} ?]
-            [? if eros_formed : {!<td>!}[+ kegalle_d_pres_eros_votes +]%{!</td>!} ?]
-            [? if dplf_formed : {!<td>!}[+ kegalle_d_pres_dplf_votes +]%{!</td>!} ?]
-            [? if pflt_formed : {!<td>!}[+ kegalle_d_pres_pflt_votes +]%{!</td>!} ?]
+            [? if slfp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_slfp_votes +]%{!</td>!} ?]
+            [? if unp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_unp_votes +]%{!</td>!} ?]
+            [? if tulf_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_tulf_votes +]%{!</td>!} ?]
+            [? if actc_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_actc_votes +]%{!</td>!} ?]
+            [? if jvp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_jvp_votes +]%{!</td>!} ?]
+            [? if cwc_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_cwc_votes +]%{!</td>!} ?]
+            [? if cpsl_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_cpsl_votes +]%{!</td>!} ?]
+            [? if lssp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_lssp_votes +]%{!</td>!} ?]
+            [? if nssp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_nssp_votes +]%{!</td>!} ?]
+            [? if slpp_formed and slpp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed and slmp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed and slmc_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed and npp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed and mep_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed and eros_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed and dplf_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed and pflt_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_pflt_votes +]%{!</td>!} ?]
         {!</tr>!}
     {!</table>!}
     {!</div>!}
