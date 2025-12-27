@@ -16,32 +16,26 @@ Elections for the President of Sri Lanka are to be held now. The President is el
 
 @pres_election_algorithm
 on-arrival: {!
-// Presidential Election Algorithm
-// Uses Sri Lanka's preferential voting system
+//presidentialelectionalgorithm
 
-//Ethnic groups and classes arrays
+//ethnicgroupsandclassesarrays
 var ethnic_groups = ['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
 var class_groups = ['upper', 'middle', 'worker', 'rural'];
 
-//The weight factors (same as parliament election)
+//theweightfactors
 var ethnic_weight = Q.ethnic_weight;  
 var class_weight = Q.class_weight;   
 
-// Handle combined electoral districts (same as parliament election)
-// jaffna+kilinochchi = one electoral district
-// mullaitivu+mannar+vavuniya = one electoral district (Wanni)
-
-// Store original pop_weights before combining
+//handlecombinedelectoraldistricts
 var stored_jaffna_d_pop_weight = Q.jaffna_d_pop_weight || 0;
 var stored_kilinochchi_d_pop_weight = Q.kilinochchi_d_pop_weight || 0;
 
-// Calculate Jaffna Electoral District (Jaffna + Kilinochchi)
+//calculatejaffnaelectoraldistrict
 var total_jaffna_electoral = stored_jaffna_d_pop_weight + stored_kilinochchi_d_pop_weight;
 var jaffna_weight = (total_jaffna_electoral > 0) ? stored_jaffna_d_pop_weight / total_jaffna_electoral : 0.85;
 var kili_weight = (total_jaffna_electoral > 0) ? stored_kilinochchi_d_pop_weight / total_jaffna_electoral : 0.15;
 
 Q.jaffna_electoral_d_pop_weight = total_jaffna_electoral;
-
 Q.jaffna_electoral_d_sinhala = (Q.jaffna_d_sinhala * jaffna_weight) + (Q.kilinochchi_d_sinhala * kili_weight);
 Q.jaffna_electoral_d_sltamil = (Q.jaffna_d_sltamil * jaffna_weight) + (Q.kilinochchi_d_sltamil * kili_weight);
 Q.jaffna_electoral_d_itamil = (Q.jaffna_d_itamil * jaffna_weight) + (Q.kilinochchi_d_itamil * kili_weight);
@@ -53,19 +47,18 @@ Q.jaffna_electoral_d_worker = (Q.jaffna_d_worker * jaffna_weight) + (Q.kilinochc
 Q.jaffna_electoral_d_rural = (Q.jaffna_d_rural * jaffna_weight) + (Q.kilinochchi_d_rural * kili_weight);
 Q.jaffna_electoral_d_control = Math.min(Q.jaffna_d_control || 100, Q.kilinochchi_d_control || 100);
 
-// Store original pop_weights for Wanni districts
+//storeoriginalpopweightsforwannidistricts
 var stored_mullaitivu_d_pop_weight = Q.mullaitivu_d_pop_weight || 0;
 var stored_mannar_d_pop_weight = Q.mannar_d_pop_weight || 0;
 var stored_vavuniya_d_pop_weight = Q.vavuniya_d_pop_weight || 0;
 
-// Calculate Wanni Electoral District (Mullaitivu + Mannar + Vavuniya)
+//calculatewannielectoraldistrict
 var total_wanni_electoral = stored_mullaitivu_d_pop_weight + stored_mannar_d_pop_weight + stored_vavuniya_d_pop_weight;
 var mull_weight = (total_wanni_electoral > 0) ? stored_mullaitivu_d_pop_weight / total_wanni_electoral : 0.25;
 var mann_weight = (total_wanni_electoral > 0) ? stored_mannar_d_pop_weight / total_wanni_electoral : 0.30;
 var vavu_weight = (total_wanni_electoral > 0) ? stored_vavuniya_d_pop_weight / total_wanni_electoral : 0.45;
 
 Q.wanni_electoral_d_pop_weight = total_wanni_electoral;
-
 Q.wanni_electoral_d_sinhala = (Q.mullaitivu_d_sinhala * mull_weight) + (Q.mannar_d_sinhala * mann_weight) + (Q.vavuniya_d_sinhala * vavu_weight);
 Q.wanni_electoral_d_sltamil = (Q.mullaitivu_d_sltamil * mull_weight) + (Q.mannar_d_sltamil * mann_weight) + (Q.vavuniya_d_sltamil * vavu_weight);
 Q.wanni_electoral_d_itamil = (Q.mullaitivu_d_itamil * mull_weight) + (Q.mannar_d_itamil * mann_weight) + (Q.vavuniya_d_itamil * vavu_weight);
@@ -77,55 +70,53 @@ Q.wanni_electoral_d_worker = (Q.mullaitivu_d_worker * mull_weight) + (Q.mannar_d
 Q.wanni_electoral_d_rural = (Q.mullaitivu_d_rural * mull_weight) + (Q.mannar_d_rural * mann_weight) + (Q.vavuniya_d_rural * vavu_weight);
 Q.wanni_electoral_d_control = Math.min(Q.mullaitivu_d_control || 100, Q.mannar_d_control || 100, Q.vavuniya_d_control || 100);
 
-// Temporarily zero out individual district pop_weights to avoid double-counting
+//temporarilyzerooutindividualdistrictpopweights
 Q.jaffna_d_pop_weight = 0;
 Q.kilinochchi_d_pop_weight = 0;
 Q.mullaitivu_d_pop_weight = 0;
 Q.mannar_d_pop_weight = 0;
 Q.vavuniya_d_pop_weight = 0;
 
-// District names for weighted national calculation (using combined electoral districts)
+//districtnamesforweightednationalcalculation
 var district_names_pres = [
-    'colombo_d', 'gampaha_d', 'kalutara_d',           //Western Province
-    'jaffna_electoral_d',                              //Northern Province (Jaffna+Kilinochchi)
-    'wanni_electoral_d',                               //Northern Province (Mullaitivu+Mannar+Vavuniya)
-    'trincomalee_d', 'batticaloa_d', 'ampara_d',      //Eastern Province
-    'kandy_d', 'matale_d', 'nuwaraeliya_d',           //Central Province
-    'galle_d', 'matara_d', 'hambantota_d',            //Southern Province
-    'kurunegala_d', 'puttalam_d',                      //North Western Province
-    'anuradhapura_d', 'polonnaruwa_d',                 //North Central Province
-    'badulla_d', 'monaragala_d',                       //Uva Province
-    'ratnapura_d', 'kegalle_d'                         //Sabaragamuwa Province
+    'colombo_d', 'gampaha_d', 'kalutara_d',
+    'jaffna_electoral_d', 'wanni_electoral_d',
+    'trincomalee_d', 'batticaloa_d', 'ampara_d',
+    'kandy_d', 'matale_d', 'nuwaraeliya_d',
+    'galle_d', 'matara_d', 'hambantota_d',
+    'kurunegala_d', 'puttalam_d',
+    'anuradhapura_d', 'polonnaruwa_d',
+    'badulla_d', 'monaragala_d',
+    'ratnapura_d', 'kegalle_d'
 ];
 
-// Store old president info
+//storeoldpresidentinfo
 Q.old_president = Q.president;
 Q.old_president_party = Q.president_party;
 
-// Build list of presidential candidates
-// Each party can either run their own candidate or endorse another party's candidate
+//buildlistofpresidentialcandidates
 Q.pres_candidates = [];
-Q.pres_candidate_parties = {}; // Maps candidate to their party
-Q.pres_endorsing_parties = {}; // Maps candidate to array of endorsing parties
+Q.pres_candidate_parties = {};
+Q.pres_endorsing_parties = {};
 
-// Define which parties are running candidates vs endorsing
-var all_party_names = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc'];
+//defineparties
+var base_parties = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc'];
 var formable_parties = ['slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf'];
+var all_party_names = base_parties.slice();
 
-// Add formable parties if formed
+//addformablepartiesifformed
 for (var fp of formable_parties) {
     if (Q[fp + '_formed']) {
         all_party_names.push(fp);
     }
 }
 
-// Build candidate list - parties either run their own candidate or endorse another
+//buildcandidatelist
 for (var party of all_party_names) {
     var endorsement = Q[party + '_pres_endorsement'];
     var candidate = Q[party + '_pres_candidate'];
     
     if (!endorsement || endorsement === '') {
-        // This party is running their own candidate
         if (candidate && candidate !== '') {
             if (Q.pres_candidates.indexOf(candidate) === -1) {
                 Q.pres_candidates.push(candidate);
@@ -134,7 +125,6 @@ for (var party of all_party_names) {
             }
         }
     } else {
-        // This party is endorsing another party's candidate
         var endorsed_party = endorsement.toLowerCase();
         var endorsed_candidate = Q[endorsed_party + '_pres_candidate'];
         
@@ -149,7 +139,7 @@ for (var party of all_party_names) {
     }
 }
 
-// Normalize ethnic support for each party (same as parliament election)
+//normalizeethnicsupport
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
     for (var party of Q.parties) {
@@ -157,7 +147,6 @@ for (var ethnic of ethnic_groups) {
         if (support < 0) support = 0;
         ethnic_total += support;
     }
-    // Add formable parties to normalization
     for (var fp of formable_parties) {
         if (Q[fp + '_formed']) {
             var support = Q[ethnic + '_' + fp] || 0;
@@ -165,7 +154,6 @@ for (var ethnic of ethnic_groups) {
             ethnic_total += support;
         }
     }
-    // Normalize to proportions (0 to 1)
     for (var party of Q.parties) {
         var support = Q[ethnic + '_' + party] || 0;
         if (support < 0) support = 0;
@@ -180,13 +168,8 @@ for (var ethnic of ethnic_groups) {
     }
 }
 
-// Normalize class support for each party
-var class_var_map = {
-    'upper': 'upper',
-    'middle': 'middle', 
-    'worker': 'workers',
-    'rural': 'rural'
-};
+//normalizeclasssupport
+var class_var_map = { 'upper': 'upper', 'middle': 'middle', 'worker': 'workers', 'rural': 'rural' };
 
 for (var cls of class_groups) {
     var class_total = 0;
@@ -196,7 +179,6 @@ for (var cls of class_groups) {
         if (support < 0) support = 0;
         class_total += support;
     }
-    // Add formable parties
     for (var fp of formable_parties) {
         if (Q[fp + '_formed']) {
             var support = Q[cls_var + '_' + fp] || 0;
@@ -204,7 +186,6 @@ for (var cls of class_groups) {
             class_total += support;
         }
     }
-    // Normalize to proportions (0 to 1)
     for (var party of Q.parties) {
         var support = Q[cls_var + '_' + party] || 0;
         if (support < 0) support = 0;
@@ -219,9 +200,7 @@ for (var cls of class_groups) {
     }
 }
 
-// Calculate national vote totals for each candidate
-// Based on sum of supporting parties' vote shares, weighted by district population
-
+//calculatenationalvotetotals
 var candidate_votes = {};
 var total_pop_weight = 0;
 
@@ -229,19 +208,17 @@ for (var candidate of Q.pres_candidates) {
     candidate_votes[candidate] = 0;
 }
 
-// Calculate district-by-district and aggregate nationally using pop_weight
+var all_parties_for_storage = base_parties.concat(formable_parties);
+
+//calculatedistrictbydistrictandaggregate
 for (var i = 0; i < district_names_pres.length; i++) {
     var district_name = district_names_pres[i];
-    
-    // Get district population weight
     var district_pop_weight = Q[district_name + '_pop_weight'] || 0;
     
-    // Skip districts with no population weight
     if (district_pop_weight <= 0) continue;
     
     total_pop_weight += district_pop_weight;
     
-    // Get ethnic composition
     var district_ethnic = {
         'sinhala': Q[district_name + '_sinhala'] || 0,
         'sltamil': Q[district_name + '_sltamil'] || 0,
@@ -250,7 +227,6 @@ for (var i = 0; i < district_names_pres.length; i++) {
         'other': Q[district_name + '_other'] || 0
     };
     
-    // Get class composition
     var district_class = {
         'upper': Q[district_name + '_upper'] || 0,
         'middle': Q[district_name + '_middle'] || 0,
@@ -258,60 +234,51 @@ for (var i = 0; i < district_names_pres.length; i++) {
         'rural': Q[district_name + '_rural'] || 0
     };
     
-    // Get district control (for areas under militant influence - reduces turnout)
     var district_control = Q[district_name + '_control'];
     if (district_control === undefined) district_control = 100;
     var control_factor = district_control / 100;
     
-    // Calculate party support in this district
     var district_party_support = {};
     var district_total_support = 0;
     
-    // Calculate for base parties
     for (var party of Q.parties) {
         var ethnic_support = 0;
         for (var ethnic of ethnic_groups) {
             ethnic_support += (district_ethnic[ethnic] / 100) * (Q[ethnic + '_' + party + '_norm'] || 0);
         }
-        
         var class_support = 0;
         for (var cls of class_groups) {
             class_support += (district_class[cls] / 100) * (Q[cls + '_' + party + '_norm'] || 0);
         }
-        
         var combined_support = (ethnic_weight * ethnic_support) + (class_weight * class_support);
         district_party_support[party] = combined_support;
         district_total_support += combined_support;
     }
     
-    // Calculate for formable parties
     for (var fp of formable_parties) {
         if (Q[fp + '_formed']) {
             var ethnic_support = 0;
             for (var ethnic of ethnic_groups) {
                 ethnic_support += (district_ethnic[ethnic] / 100) * (Q[ethnic + '_' + fp + '_norm'] || 0);
             }
-            
             var class_support = 0;
             for (var cls of class_groups) {
                 class_support += (district_class[cls] / 100) * (Q[cls + '_' + fp + '_norm'] || 0);
             }
-            
             var combined_support = (ethnic_weight * ethnic_support) + (class_weight * class_support);
             district_party_support[fp] = combined_support;
             district_total_support += combined_support;
         }
     }
     
-    // Normalize party votes in this district
     var district_party_votes = {};
     for (var party in district_party_support) {
-        district_party_votes[party] = (district_total_support > 0) ? 
-            (district_party_support[party] / district_total_support) : 0;
+        district_party_votes[party] = (district_total_support > 0) ? (district_party_support[party] / district_total_support) : 0;
     }
     
-    // Aggregate votes for each presidential candidate based on endorsing parties
-    // Weighted by district population weight and control factor
+    var district_candidate_votes = {};
+    var district_total_candidate_votes = 0;
+    
     for (var candidate of Q.pres_candidates) {
         var candidate_district_votes = 0;
         var endorsers = Q.pres_endorsing_parties[candidate] || [];
@@ -320,19 +287,32 @@ for (var i = 0; i < district_names_pres.length; i++) {
             candidate_district_votes += district_party_votes[endorser] || 0;
         }
         
-        // Apply district population weight and control factor
+        district_candidate_votes[candidate] = candidate_district_votes;
+        district_total_candidate_votes += candidate_district_votes;
         candidate_votes[candidate] += candidate_district_votes * district_pop_weight * control_factor;
+    }
+    
+    for (var candidate of Q.pres_candidates) {
+        var party = Q.pres_candidate_parties[candidate];
+        var vote_pct = (district_total_candidate_votes > 0) ? Math.round((district_candidate_votes[candidate] / district_total_candidate_votes) * 1000) / 10 : 0;
+        Q[district_name + '_pres_' + party + '_votes'] = vote_pct;
+    }
+    
+    for (var p of all_parties_for_storage) {
+        if (Q[district_name + '_pres_' + p + '_votes'] === undefined) {
+            Q[district_name + '_pres_' + p + '_votes'] = 0;
+        }
     }
 }
 
-// Restore original pop_weights for the individual districts
+//restoreoriginalpopweights
 Q.jaffna_d_pop_weight = stored_jaffna_d_pop_weight;
 Q.kilinochchi_d_pop_weight = stored_kilinochchi_d_pop_weight;
 Q.mullaitivu_d_pop_weight = stored_mullaitivu_d_pop_weight;
 Q.mannar_d_pop_weight = stored_mannar_d_pop_weight;
 Q.vavuniya_d_pop_weight = stored_vavuniya_d_pop_weight;
 
-// Convert to percentages based on total pop weight
+//converttopercentages
 Q.pres_results = [];
 var total_candidate_votes = 0;
 for (var candidate of Q.pres_candidates) {
@@ -340,9 +320,7 @@ for (var candidate of Q.pres_candidates) {
 }
 
 for (var candidate of Q.pres_candidates) {
-    var vote_percent = (total_candidate_votes > 0) ? 
-        Math.round((candidate_votes[candidate] / total_candidate_votes) * 1000) / 10 : 0;
-    
+    var vote_percent = (total_candidate_votes > 0) ? Math.round((candidate_votes[candidate] / total_candidate_votes) * 1000) / 10 : 0;
     var party = Q.pres_candidate_parties[candidate];
     var color = Q.partyColors[party.toUpperCase()] || '#888888';
     
@@ -356,12 +334,8 @@ for (var candidate of Q.pres_candidates) {
     });
 }
 
-// Sort by votes (descending)
-Q.pres_results.sort(function(a, b) {
-    return b.votes - a.votes;
-});
+Q.pres_results.sort(function(a, b) { return b.votes - a.votes; });
 
-// Check if first round winner (>50%) or runoff needed
 Q.pres_first_candidate = '';
 Q.pres_first_party = '';
 Q.pres_first_votes = 0;
@@ -385,11 +359,9 @@ if (Q.pres_results.length > 0) {
         Q.pres_second_color = Q.pres_results[1].color;
     }
     
-    // Check if winner has majority
     if (Q.pres_first_votes <= 50) {
         Q.runoff_needed = 1;
     } else {
-        // First round winner - set president immediately
         Q.pres_winner_candidate = Q.pres_first_candidate;
         Q.pres_winner_party = Q.pres_first_party;
         Q.pres_winner_votes = Q.pres_first_votes;
@@ -397,11 +369,11 @@ if (Q.pres_results.length > 0) {
     }
 }
 
-// Store results for display
 for (var i = 0; i < Q.pres_results.length; i++) {
     var result = Q.pres_results[i];
     Q['pres_result_' + i + '_candidate'] = result.candidate;
     Q['pres_result_' + i + '_party'] = result.partyUpper;
+    Q['pres_result_' + i + '_partylow'] = result.party;
     Q['pres_result_' + i + '_votes'] = result.votes;
     Q['pres_result_' + i + '_color'] = result.color;
     Q['pres_result_' + i + '_endorsers'] = result.endorsers.map(function(e) { return e.toUpperCase(); }).join(', ');
@@ -413,34 +385,16 @@ go-to: post_pres_election
 
 @post_pres_election
 on-display: {!
-// Create a simple bar chart for presidential results
-var resultsDiv = document.getElementById('pres_results_chart');
-if (resultsDiv && Q.pres_results) {
-    var html = '<div style="width: 100%; max-width: 500px;">';
-    for (var i = 0; i < Q.pres_results.length; i++) {
-        var result = Q.pres_results[i];
-        var barWidth = Math.max(result.votes * 2, 1); // Scale for visibility
-        html += '<div style="margin: 8px 0;">';
-        html += '<div style="display: flex; align-items: center; margin-bottom: 2px;">';
-        html += '<span style="min-width: 150px; font-weight: bold;">' + result.candidate + '</span>';
-        html += '<span style="color: ' + result.color + '; margin-left: 10px;">' + result.partyUpper + '</span>';
-        html += '</div>';
-        html += '<div style="display: flex; align-items: center;">';
-        html += '<div style="background-color: ' + result.color + '; height: 20px; width: ' + barWidth + '%; min-width: 5px; border-radius: 3px;"></div>';
-        html += '<span style="margin-left: 10px; font-weight: bold;">' + result.votes + '%</span>';
-        html += '</div></div>';
-    }
-    html += '</div>';
-    resultsDiv.innerHTML = html;
-}
+window.togglePresDistrict = function() {
+    var div = document.getElementById('pres_district_results');
+    div.style.display = div.style.display === 'none' ? 'block' : 'none';
+};
 !}
 go-to: pres_result_display
 
 = Presidential Election Results
 
-{!<div id="pres_results_chart"></div>!}
-
-**First Round Results:**
+**National Results:**
 
 {!<table style="text-align:left; border-spacing: 0.5em;">!}
 {!<tr><th>Candidate</th><th>Party</th><th>Vote %</th><th>Supporting Parties</th></tr>!}
@@ -457,16 +411,352 @@ go-to: pres_result_display
 
 {!</table>!}
 
-@pres_result_display
-go-to: pres_first_round_victory if runoff_needed = 0; pres_runoff_needed if runoff_needed = 1
+{!<button class="tab_button" id="pres_district_tab" onclick="window.togglePresDistrict();">District Results</button>!}
 
-@pres_first_round_victory
-
-**First Round Victory!**
-
-[+ pres_first_candidate +] has won with a majority of [+ pres_first_votes +]% in the first round!
-
-- @pres_victory_announcement: Continue
+{!<div id="pres_district_results" style="display: none;">!}
+    {!<div style="overflow-x:auto;">!}
+    {!<table style="text-align:center; border-spacing: 0.2em; font-size: 0.8em;">!}
+        {!<tr>!}
+            {!<th>District</th>!}
+            {!<th><span style="color: #00008B;">SLFP</span></th>!}
+            {!<th><span style="color: #006400;">UNP</span></th>!}
+            {!<th><span style="color: #F7D917;">TULF</span></th>!}
+            {!<th><span style="color: #FDCC01;">ACTC</span></th>!}
+            {!<th><span style="color: #FF2226;">JVP</span></th>!}
+            {!<th><span style="color: #E52B50;">CWC</span></th>!}
+            {!<th><span style="color: #65000B;">CPSL</span></th>!}
+            {!<th><span style="color: #A91101;">LSSP</span></th>!}
+            {!<th><span style="color: #FF8080;">NSSP</span></th>!}
+            [? if slpp_formed : {!<th><span style="color: #E52B50;">SLPP</span></th>!} ?]
+            [? if slmp_formed : {!<th><span style="color: #663399;">SLMP</span></th>!} ?]
+            [? if slmc_formed : {!<th><span style="color: #2DCF3E;">SLMC</span></th>!} ?]
+            [? if npp_formed : {!<th><span style="color: #9F005D;">NPP</span></th>!} ?]
+            [? if mep_formed : {!<th><span style="color: #FF3915;">MEP</span></th>!} ?]
+            [? if eros_formed : {!<th><span style="color: #FF2400;">EROS</span></th>!} ?]
+            [? if dplf_formed : {!<th><span style="color: #CE2029;">DPLF</span></th>!} ?]
+            [? if pflt_formed : {!<th><span style="color: #DC143C;">PFLT</span></th>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Colombo**{!</td>!}
+            {!<td>!}[+ colombo_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ colombo_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ colombo_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ colombo_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ colombo_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ colombo_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ colombo_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ colombo_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ colombo_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ colombo_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Gampaha**{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ gampaha_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ gampaha_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ gampaha_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ gampaha_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ gampaha_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ gampaha_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ gampaha_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ gampaha_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ gampaha_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Kalutara**{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ kalutara_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ kalutara_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ kalutara_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ kalutara_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ kalutara_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ kalutara_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ kalutara_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ kalutara_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ kalutara_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Jaffna**{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ jaffna_electoral_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ jaffna_electoral_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ jaffna_electoral_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ jaffna_electoral_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ jaffna_electoral_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ jaffna_electoral_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ jaffna_electoral_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ jaffna_electoral_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ jaffna_electoral_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Vanni**{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ wanni_electoral_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ wanni_electoral_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ wanni_electoral_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ wanni_electoral_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ wanni_electoral_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ wanni_electoral_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ wanni_electoral_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ wanni_electoral_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ wanni_electoral_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Trincomalee**{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ trincomalee_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ trincomalee_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ trincomalee_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ trincomalee_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ trincomalee_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ trincomalee_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ trincomalee_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ trincomalee_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ trincomalee_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Batticaloa**{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ batticaloa_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ batticaloa_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ batticaloa_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ batticaloa_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ batticaloa_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ batticaloa_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ batticaloa_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ batticaloa_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ batticaloa_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Ampara**{!</td>!}
+            {!<td>!}[+ ampara_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ ampara_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ ampara_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ ampara_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ ampara_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ ampara_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ ampara_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ ampara_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ ampara_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ ampara_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Kandy**{!</td>!}
+            {!<td>!}[+ kandy_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ kandy_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ kandy_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ kandy_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ kandy_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ kandy_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ kandy_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ kandy_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ kandy_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ kandy_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Matale**{!</td>!}
+            {!<td>!}[+ matale_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ matale_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ matale_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ matale_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ matale_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ matale_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ matale_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ matale_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ matale_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ matale_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Nuwara Eliya**{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ nuwaraeliya_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ nuwaraeliya_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ nuwaraeliya_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ nuwaraeliya_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ nuwaraeliya_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ nuwaraeliya_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ nuwaraeliya_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ nuwaraeliya_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ nuwaraeliya_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Galle**{!</td>!}
+            {!<td>!}[+ galle_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ galle_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ galle_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ galle_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ galle_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ galle_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ galle_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ galle_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ galle_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ galle_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Matara**{!</td>!}
+            {!<td>!}[+ matara_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ matara_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ matara_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ matara_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ matara_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ matara_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ matara_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ matara_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ matara_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ matara_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Hambantota**{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ hambantota_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ hambantota_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ hambantota_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ hambantota_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ hambantota_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ hambantota_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ hambantota_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ hambantota_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ hambantota_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Kurunegala**{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ kurunegala_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ kurunegala_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ kurunegala_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ kurunegala_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ kurunegala_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ kurunegala_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ kurunegala_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ kurunegala_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ kurunegala_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+        {!<tr>!}
+            {!<td>!}**Puttalam**{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_slfp_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_unp_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_tulf_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_actc_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_jvp_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_cwc_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_cpsl_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_lssp_votes +]%{!</td>!}
+            {!<td>!}[+ puttalam_d_pres_nssp_votes +]%{!</td>!}
+            [? if slpp_formed : {!<td>!}[+ puttalam_d_pres_slpp_votes +]%{!</td>!} ?]
+            [? if slmp_formed : {!<td>!}[+ puttalam_d_pres_slmp_votes +]%{!</td>!} ?]
+            [? if slmc_formed : {!<td>!}[+ puttalam_d_pres_slmc_votes +]%{!</td>!} ?]
+            [? if npp_formed : {!<td>!}[+ puttalam_d_pres_npp_votes +]%{!</td>!} ?]
+            [? if mep_formed : {!<td>!}[+ puttalam_d_pres_mep_votes +]%{!</td>!} ?]
+            [? if eros_formed : {!<td>!}[+ puttalam_d_pres_eros_votes +]%{!</td>!} ?]
+            [? if dplf_formed : {!<td>!}[+ puttalam_d_pres_dplf_votes +]%{!</td>!} ?]
+            [? if pflt_formed : {!<td>!}[+ puttalam_d_pres_pflt_votes +]%{!</td>!} ?]
+        {!</tr>!}
+ Continue
 
 @pres_runoff_needed
 
@@ -482,11 +772,11 @@ No candidate has won more than 50% of the vote. The top two candidates advance t
 
 The preferences of eliminated candidates are being redistributed between the top two:
 
-**[+ pres_first_candidate +]** (<span style="color:[+ pres_first_color +];">[+ pres_first_party +]</span>) - [+ pres_first_votes +]%
+**[+ pres_first_candidate +]** ({!<span style="color:!}[+ pres_first_color +]{!;">!}[+ pres_first_party +]{!</span>!}) - [+ pres_first_votes +]%
 
 vs
 
-**[+ pres_second_candidate +]** (<span style="color:[+ pres_second_color +];">[+ pres_second_party +]</span>) - [+ pres_second_votes +]%
+**[+ pres_second_candidate +]** ({!<span style="color:!}[+ pres_second_color +]{!;">!}[+ pres_second_party +]{!</span>!}) - [+ pres_second_votes +]%
 
 The redistribution of preferences is a complex process. Who emerges victorious?
 
@@ -503,14 +793,14 @@ go-to: pres_victory_announcement
 
 @pres_victory_announcement
 on-arrival: {!
-// Update game state with new president
+//updategamestate
 Q.president = Q.pres_winner_candidate;
 Q.president_party = Q.pres_winner_party.toUpperCase();
 
-// Check for SLFP victory
+//checkforslfpvictory
 Q.slfp_pres_victory = (Q.pres_winner_party.toLowerCase() === 'slfp') ? 1 : 0;
 
-// Check for cohabitation (president from different party than parliamentary majority)
+//checkforcohabitation
 Q.cohabitation = 0;
 if (Q.slfp_in_government === 1 && Q.president_party !== 'SLFP') {
     Q.cohabitation = 1;
@@ -523,7 +813,7 @@ if (Q.slfp_in_government === 1 && Q.president_party !== 'SLFP') {
 
 = Presidential Election Winner
 
-**[+ pres_winner_candidate +]** of the <span style="color:[+ pres_winner_color +];">**[+ pres_winner_party +]**</span> has been elected as President of Sri Lanka!
+**[+ pres_winner_candidate +]** of the {!<span style="color:!}[+ pres_winner_color +]{!;">!}**[+ pres_winner_party +]**{!</span>!} has been elected as President of Sri Lanka!
 
 [? if old_president != "" : [+ old_president +] ([+ old_president_party +]) leaves office after serving as President. ?]
 
