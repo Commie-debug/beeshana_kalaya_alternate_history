@@ -402,14 +402,22 @@ for (var i = 0; i < district_names_pres.length; i++) {
         }
         
         district_candidate_votes[candidate] = candidate_district_votes;
-        district_total_candidate_votes += candidate_district_votes;
         candidate_votes[candidate] += candidate_district_votes * district_pop_weight * control_factor;
+        
+        //onlycountindependentcandidatesfortotalpercentage
+        var cand_party = Q.pres_candidate_parties[candidate];
+        if (Q[cand_party + '_pres_independent'] === 1) {
+            district_total_candidate_votes += candidate_district_votes;
+        }
     }
     
+    //storedistrictvotepercentagesonlyforindependentcandidates
     for (var candidate of Q.pres_candidates) {
         var party = Q.pres_candidate_parties[candidate];
-        var vote_pct = (district_total_candidate_votes > 0) ? Math.round((district_candidate_votes[candidate] / district_total_candidate_votes) * 1000) / 10 : 0;
-        Q[district_name + '_pres_' + party + '_votes'] = vote_pct;
+        if (Q[party + '_pres_independent'] === 1) {
+            var vote_pct = (district_total_candidate_votes > 0) ? Math.round((district_candidate_votes[candidate] / district_total_candidate_votes) * 1000) / 10 : 0;
+            Q[district_name + '_pres_' + party + '_votes'] = vote_pct;
+        }
     }
     
     for (var p of all_parties_for_storage) {
@@ -428,9 +436,14 @@ Q.vavuniya_d_pop_weight = stored_vavuniya_d_pop_weight;
 
 //converttopercentages
 Q.pres_results = [];
-var total_candidate_votes = 0;
+
+//onlysumvotesfromindependentcandidates
+var total_independent_votes = 0;
 for (var candidate of Q.pres_candidates) {
-    total_candidate_votes += candidate_votes[candidate];
+    var party = Q.pres_candidate_parties[candidate];
+    if (Q[party + '_pres_independent'] === 1) {
+        total_independent_votes += candidate_votes[candidate];
+    }
 }
 
 for (var candidate of Q.pres_candidates) {
@@ -441,7 +454,7 @@ for (var candidate of Q.pres_candidates) {
         continue;
     }
     
-    var vote_percent = (total_candidate_votes > 0) ? Math.round((candidate_votes[candidate] / total_candidate_votes) * 1000) / 10 : 0;
+    var vote_percent = (total_independent_votes > 0) ? Math.round((candidate_votes[candidate] / total_independent_votes) * 1000) / 10 : 0;
     var color = Q.partyColors[party.toUpperCase()] || '#888888';
     
     Q.pres_results.push({
