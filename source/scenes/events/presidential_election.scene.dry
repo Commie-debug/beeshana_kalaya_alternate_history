@@ -16,20 +16,26 @@ Elections for the President of Sri Lanka are to be held now. The President is el
 
 @pres_election_algorithm
 on-arrival: {!
-//allgorithm
+// Presidential Election Algorithm
+// Uses Sri Lanka's preferential voting system
 
-//ethnic groups and classes arrays
+//Ethnic groups and classes arrays
 var ethnic_groups = ['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
 var class_groups = ['upper', 'middle', 'worker', 'rural'];
 
+//The weight factors (same as parliament election)
 var ethnic_weight = Q.ethnic_weight;  
 var class_weight = Q.class_weight;   
 
+// Handle combined electoral districts (same as parliament election)
+// jaffna+kilinochchi = one electoral district
+// mullaitivu+mannar+vavuniya = one electoral district (Wanni)
 
+// Store original pop_weights before combining
 var stored_jaffna_d_pop_weight = Q.jaffna_d_pop_weight || 0;
 var stored_kilinochchi_d_pop_weight = Q.kilinochchi_d_pop_weight || 0;
 
-//jaffna electoral d
+// Calculate Jaffna Electoral District (Jaffna + Kilinochchi)
 var total_jaffna_electoral = stored_jaffna_d_pop_weight + stored_kilinochchi_d_pop_weight;
 var jaffna_weight = (total_jaffna_electoral > 0) ? stored_jaffna_d_pop_weight / total_jaffna_electoral : 0.85;
 var kili_weight = (total_jaffna_electoral > 0) ? stored_kilinochchi_d_pop_weight / total_jaffna_electoral : 0.15;
@@ -47,13 +53,12 @@ Q.jaffna_electoral_d_worker = (Q.jaffna_d_worker * jaffna_weight) + (Q.kilinochc
 Q.jaffna_electoral_d_rural = (Q.jaffna_d_rural * jaffna_weight) + (Q.kilinochchi_d_rural * kili_weight);
 Q.jaffna_electoral_d_control = Math.min(Q.jaffna_d_control || 100, Q.kilinochchi_d_control || 100);
 
-
+// Store original pop_weights for Wanni districts
 var stored_mullaitivu_d_pop_weight = Q.mullaitivu_d_pop_weight || 0;
 var stored_mannar_d_pop_weight = Q.mannar_d_pop_weight || 0;
 var stored_vavuniya_d_pop_weight = Q.vavuniya_d_pop_weight || 0;
 
-
-//vanni electoral d
+// Calculate Wanni Electoral District (Mullaitivu + Mannar + Vavuniya)
 var total_wanni_electoral = stored_mullaitivu_d_pop_weight + stored_mannar_d_pop_weight + stored_vavuniya_d_pop_weight;
 var mull_weight = (total_wanni_electoral > 0) ? stored_mullaitivu_d_pop_weight / total_wanni_electoral : 0.25;
 var mann_weight = (total_wanni_electoral > 0) ? stored_mannar_d_pop_weight / total_wanni_electoral : 0.30;
@@ -72,14 +77,14 @@ Q.wanni_electoral_d_worker = (Q.mullaitivu_d_worker * mull_weight) + (Q.mannar_d
 Q.wanni_electoral_d_rural = (Q.mullaitivu_d_rural * mull_weight) + (Q.mannar_d_rural * mann_weight) + (Q.vavuniya_d_rural * vavu_weight);
 Q.wanni_electoral_d_control = Math.min(Q.mullaitivu_d_control || 100, Q.mannar_d_control || 100, Q.vavuniya_d_control || 100);
 
-
+// Temporarily zero out individual district pop_weights to avoid double-counting
 Q.jaffna_d_pop_weight = 0;
 Q.kilinochchi_d_pop_weight = 0;
 Q.mullaitivu_d_pop_weight = 0;
 Q.mannar_d_pop_weight = 0;
 Q.vavuniya_d_pop_weight = 0;
 
-//district names
+// District names for weighted national calculation (using combined electoral districts)
 var district_names_pres = [
     'colombo_d', 'gampaha_d', 'kalutara_d',           //Western Province
     'jaffna_electoral_d',                              //Northern Province (Jaffna+Kilinochchi)
@@ -93,32 +98,34 @@ var district_names_pres = [
     'ratnapura_d', 'kegalle_d'                         //Sabaragamuwa Province
 ];
 
-//old president info
+// Store old president info
 Q.old_president = Q.president;
 Q.old_president_party = Q.president_party;
 
-//build list of presidential candidates
+// Build list of presidential candidates
+// Each party can either run their own candidate or endorse another party's candidate
 Q.pres_candidates = [];
 Q.pres_candidate_parties = {}; // Maps candidate to their party
 Q.pres_endorsing_parties = {}; // Maps candidate to array of endorsing parties
 
+// Define which parties are running candidates vs endorsing
 var all_party_names = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc'];
 var formable_parties = ['slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf'];
 
-//add formable parties if formed
+// Add formable parties if formed
 for (var fp of formable_parties) {
     if (Q[fp + '_formed']) {
         all_party_names.push(fp);
     }
 }
 
-//build candidate list - parties either run their own candidate or endorse another
+// Build candidate list - parties either run their own candidate or endorse another
 for (var party of all_party_names) {
     var endorsement = Q[party + '_pres_endorsement'];
     var candidate = Q[party + '_pres_candidate'];
     
     if (!endorsement || endorsement === '') {
-        //ehis party is running their own candidate
+        // This party is running their own candidate
         if (candidate && candidate !== '') {
             if (Q.pres_candidates.indexOf(candidate) === -1) {
                 Q.pres_candidates.push(candidate);
@@ -127,7 +134,7 @@ for (var party of all_party_names) {
             }
         }
     } else {
-        //ehis party is endorsing another party's candidate
+        // This party is endorsing another party's candidate
         var endorsed_party = endorsement.toLowerCase();
         var endorsed_candidate = Q[endorsed_party + '_pres_candidate'];
         
@@ -142,7 +149,7 @@ for (var party of all_party_names) {
     }
 }
 
-//normalize ethnic support
+// Normalize ethnic support for each party (same as parliament election)
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
     for (var party of Q.parties) {
@@ -150,7 +157,7 @@ for (var ethnic of ethnic_groups) {
         if (support < 0) support = 0;
         ethnic_total += support;
     }
-    //add formable parties to normalization
+    // Add formable parties to normalization
     for (var fp of formable_parties) {
         if (Q[fp + '_formed']) {
             var support = Q[ethnic + '_' + fp] || 0;
@@ -158,6 +165,7 @@ for (var ethnic of ethnic_groups) {
             ethnic_total += support;
         }
     }
+    // Normalize to proportions (0 to 1)
     for (var party of Q.parties) {
         var support = Q[ethnic + '_' + party] || 0;
         if (support < 0) support = 0;
@@ -172,7 +180,7 @@ for (var ethnic of ethnic_groups) {
     }
 }
 
-//normalize class support
+// Normalize class support for each party
 var class_var_map = {
     'upper': 'upper',
     'middle': 'middle', 
@@ -188,7 +196,7 @@ for (var cls of class_groups) {
         if (support < 0) support = 0;
         class_total += support;
     }
-    //add formable parties
+    // Add formable parties
     for (var fp of formable_parties) {
         if (Q[fp + '_formed']) {
             var support = Q[cls_var + '_' + fp] || 0;
@@ -196,6 +204,7 @@ for (var cls of class_groups) {
             class_total += support;
         }
     }
+    // Normalize to proportions (0 to 1)
     for (var party of Q.parties) {
         var support = Q[cls_var + '_' + party] || 0;
         if (support < 0) support = 0;
@@ -210,6 +219,8 @@ for (var cls of class_groups) {
     }
 }
 
+// Calculate national vote totals for each candidate
+// Based on sum of supporting parties' vote shares, weighted by district population
 
 var candidate_votes = {};
 var total_pop_weight = 0;
@@ -218,18 +229,19 @@ for (var candidate of Q.pres_candidates) {
     candidate_votes[candidate] = 0;
 }
 
+// Calculate district-by-district and aggregate nationally using pop_weight
 for (var i = 0; i < district_names_pres.length; i++) {
     var district_name = district_names_pres[i];
     
-    //district population weight
+    // Get district population weight
     var district_pop_weight = Q[district_name + '_pop_weight'] || 0;
     
-    //skip districts with no population weight
+    // Skip districts with no population weight
     if (district_pop_weight <= 0) continue;
     
     total_pop_weight += district_pop_weight;
     
-    //ethnic composition
+    // Get ethnic composition
     var district_ethnic = {
         'sinhala': Q[district_name + '_sinhala'] || 0,
         'sltamil': Q[district_name + '_sltamil'] || 0,
@@ -238,7 +250,7 @@ for (var i = 0; i < district_names_pres.length; i++) {
         'other': Q[district_name + '_other'] || 0
     };
     
-    //get class composition
+    // Get class composition
     var district_class = {
         'upper': Q[district_name + '_upper'] || 0,
         'middle': Q[district_name + '_middle'] || 0,
@@ -246,14 +258,16 @@ for (var i = 0; i < district_names_pres.length; i++) {
         'rural': Q[district_name + '_rural'] || 0
     };
     
-    //reduced turnout if control is lower
+    // Get district control (for areas under militant influence - reduces turnout)
     var district_control = Q[district_name + '_control'];
     if (district_control === undefined) district_control = 100;
     var control_factor = district_control / 100;
     
+    // Calculate party support in this district
     var district_party_support = {};
     var district_total_support = 0;
     
+    // Calculate for base parties
     for (var party of Q.parties) {
         var ethnic_support = 0;
         for (var ethnic of ethnic_groups) {
@@ -269,7 +283,8 @@ for (var i = 0; i < district_names_pres.length; i++) {
         district_party_support[party] = combined_support;
         district_total_support += combined_support;
     }
-
+    
+    // Calculate for formable parties
     for (var fp of formable_parties) {
         if (Q[fp + '_formed']) {
             var ethnic_support = 0;
@@ -288,12 +303,15 @@ for (var i = 0; i < district_names_pres.length; i++) {
         }
     }
     
+    // Normalize party votes in this district
     var district_party_votes = {};
     for (var party in district_party_support) {
         district_party_votes[party] = (district_total_support > 0) ? 
             (district_party_support[party] / district_total_support) : 0;
     }
-
+    
+    // Aggregate votes for each presidential candidate based on endorsing parties
+    // Weighted by district population weight and control factor
     for (var candidate of Q.pres_candidates) {
         var candidate_district_votes = 0;
         var endorsers = Q.pres_endorsing_parties[candidate] || [];
@@ -302,17 +320,19 @@ for (var i = 0; i < district_names_pres.length; i++) {
             candidate_district_votes += district_party_votes[endorser] || 0;
         }
         
+        // Apply district population weight and control factor
         candidate_votes[candidate] += candidate_district_votes * district_pop_weight * control_factor;
     }
 }
 
-//eestore original pop_weights for the individual districts
+// Restore original pop_weights for the individual districts
 Q.jaffna_d_pop_weight = stored_jaffna_d_pop_weight;
 Q.kilinochchi_d_pop_weight = stored_kilinochchi_d_pop_weight;
 Q.mullaitivu_d_pop_weight = stored_mullaitivu_d_pop_weight;
 Q.mannar_d_pop_weight = stored_mannar_d_pop_weight;
 Q.vavuniya_d_pop_weight = stored_vavuniya_d_pop_weight;
 
+// Convert to percentages based on total pop weight
 Q.pres_results = [];
 var total_candidate_votes = 0;
 for (var candidate of Q.pres_candidates) {
@@ -336,12 +356,12 @@ for (var candidate of Q.pres_candidates) {
     });
 }
 
-//sort by votes (descending)
+// Sort by votes (descending)
 Q.pres_results.sort(function(a, b) {
     return b.votes - a.votes;
 });
 
-//check if first round winner (>50%) or runoff needed
+// Check if first round winner (>50%) or runoff needed
 Q.pres_first_candidate = '';
 Q.pres_first_party = '';
 Q.pres_first_votes = 0;
@@ -365,7 +385,7 @@ if (Q.pres_results.length > 0) {
         Q.pres_second_color = Q.pres_results[1].color;
     }
     
-    //check if winner has majority
+    // Check if winner has majority
     if (Q.pres_first_votes <= 50) {
         Q.runoff_needed = 1;
     } else {
@@ -377,7 +397,7 @@ if (Q.pres_results.length > 0) {
     }
 }
 
-//store results for display
+// Store results for display
 for (var i = 0; i < Q.pres_results.length; i++) {
     var result = Q.pres_results[i];
     Q['pres_result_' + i + '_candidate'] = result.candidate;
@@ -393,12 +413,13 @@ go-to: post_pres_election
 
 @post_pres_election
 on-display: {!
+// Create a simple bar chart for presidential results
 var resultsDiv = document.getElementById('pres_results_chart');
 if (resultsDiv && Q.pres_results) {
     var html = '<div style="width: 100%; max-width: 500px;">';
     for (var i = 0; i < Q.pres_results.length; i++) {
         var result = Q.pres_results[i];
-        var barWidth = Math.max(result.votes * 2, 1); 
+        var barWidth = Math.max(result.votes * 2, 1); // Scale for visibility
         html += '<div style="margin: 8px 0;">';
         html += '<div style="display: flex; align-items: center; margin-bottom: 2px;">';
         html += '<span style="min-width: 150px; font-weight: bold;">' + result.candidate + '</span>';
@@ -437,25 +458,23 @@ go-to: pres_result_display
 {!</table>!}
 
 @pres_result_display
+go-to: pres_first_round_victory if runoff_needed = 0; pres_runoff_needed if runoff_needed = 1
 
-[? if runoff_needed = 0 : **First Round Victory!**
+@pres_first_round_victory
 
-[+ pres_first_candidate +] has won with a majority of **[+ pres_first_votes +]%** in the first round! ?]
+**First Round Victory!**
 
-[? if runoff_needed = 1 : **No Majority - Runoff Required**
+[+ pres_first_candidate +] has won with a majority of [+ pres_first_votes +]% in the first round!
 
-No candidate has won more than 50% of the vote. The top two candidates advance to the second round where preferences from eliminated candidates will be redistributed. ?]
+- @pres_victory_announcement: Continue
 
-- @first_round_victory: Continue
-- @runoff_choice: Proceed to second round
+@pres_runoff_needed
 
-@first_round_victory
-view-if: runoff_needed = 0
-go-to: pres_victory_announcement
+**No Majority - Runoff Required**
 
-@runoff_choice
-view-if: runoff_needed = 1
-go-to: runoff_menu
+No candidate has won more than 50% of the vote. The top two candidates advance to the second round where preferences from eliminated candidates will be redistributed.
+
+- @runoff_menu: Proceed to second round
 
 @runoff_menu
 
@@ -484,12 +503,14 @@ go-to: pres_victory_announcement
 
 @pres_victory_announcement
 on-arrival: {!
+// Update game state with new president
 Q.president = Q.pres_winner_candidate;
 Q.president_party = Q.pres_winner_party.toUpperCase();
 
-
+// Check for SLFP victory
 Q.slfp_pres_victory = (Q.pres_winner_party.toLowerCase() === 'slfp') ? 1 : 0;
 
+// Check for cohabitation (president from different party than parliamentary majority)
 Q.cohabitation = 0;
 if (Q.slfp_in_government === 1 && Q.president_party !== 'SLFP') {
     Q.cohabitation = 1;
