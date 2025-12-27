@@ -434,8 +434,14 @@ for (var candidate of Q.pres_candidates) {
 }
 
 for (var candidate of Q.pres_candidates) {
-    var vote_percent = (total_candidate_votes > 0) ? Math.round((candidate_votes[candidate] / total_candidate_votes) * 1000) / 10 : 0;
     var party = Q.pres_candidate_parties[candidate];
+    
+    //onlyaddtoresultsifthepartyisindependent
+    if (Q[party + '_pres_independent'] !== 1) {
+        continue;
+    }
+    
+    var vote_percent = (total_candidate_votes > 0) ? Math.round((candidate_votes[candidate] / total_candidate_votes) * 1000) / 10 : 0;
     var color = Q.partyColors[party.toUpperCase()] || '#888888';
     
     Q.pres_results.push({
@@ -522,6 +528,15 @@ go-to: pres_result_display
 [? if pres_results_count >= 7 : {!<tr><td>!}[+ pres_result_6_candidate +]{!</td><td><span style="color:!}[+ pres_result_6_color +]{!;">!}[+ pres_result_6_party +]{!</span></td><td>!}[+ pres_result_6_votes +]%{!</td><td>!}[+ pres_result_6_endorsers +]{!</td></tr>!} ?]
 [? if pres_results_count >= 8 : {!<tr><td>!}[+ pres_result_7_candidate +]{!</td><td><span style="color:!}[+ pres_result_7_color +]{!;">!}[+ pres_result_7_party +]{!</span></td><td>!}[+ pres_result_7_votes +]%{!</td><td>!}[+ pres_result_7_endorsers +]{!</td></tr>!} ?]
 [? if pres_results_count >= 9 : {!<tr><td>!}[+ pres_result_8_candidate +]{!</td><td><span style="color:!}[+ pres_result_8_color +]{!;">!}[+ pres_result_8_party +]{!</span></td><td>!}[+ pres_result_8_votes +]%{!</td><td>!}[+ pres_result_8_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 10 : {!<tr><td>!}[+ pres_result_9_candidate +]{!</td><td><span style="color:!}[+ pres_result_9_color +]{!;">!}[+ pres_result_9_party +]{!</span></td><td>!}[+ pres_result_9_votes +]%{!</td><td>!}[+ pres_result_9_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 11 : {!<tr><td>!}[+ pres_result_10_candidate +]{!</td><td><span style="color:!}[+ pres_result_10_color +]{!;">!}[+ pres_result_10_party +]{!</span></td><td>!}[+ pres_result_10_votes +]%{!</td><td>!}[+ pres_result_10_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 12 : {!<tr><td>!}[+ pres_result_11_candidate +]{!</td><td><span style="color:!}[+ pres_result_11_color +]{!;">!}[+ pres_result_11_party +]{!</span></td><td>!}[+ pres_result_11_votes +]%{!</td><td>!}[+ pres_result_11_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 13 : {!<tr><td>!}[+ pres_result_12_candidate +]{!</td><td><span style="color:!}[+ pres_result_12_color +]{!;">!}[+ pres_result_12_party +]{!</span></td><td>!}[+ pres_result_12_votes +]%{!</td><td>!}[+ pres_result_12_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 14 : {!<tr><td>!}[+ pres_result_13_candidate +]{!</td><td><span style="color:!}[+ pres_result_13_color +]{!;">!}[+ pres_result_13_party +]{!</span></td><td>!}[+ pres_result_13_votes +]%{!</td><td>!}[+ pres_result_13_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 15 : {!<tr><td>!}[+ pres_result_14_candidate +]{!</td><td><span style="color:!}[+ pres_result_14_color +]{!;">!}[+ pres_result_14_party +]{!</span></td><td>!}[+ pres_result_14_votes +]%{!</td><td>!}[+ pres_result_14_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 16 : {!<tr><td>!}[+ pres_result_15_candidate +]{!</td><td><span style="color:!}[+ pres_result_15_color +]{!;">!}[+ pres_result_15_party +]{!</span></td><td>!}[+ pres_result_15_votes +]%{!</td><td>!}[+ pres_result_15_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 17 : {!<tr><td>!}[+ pres_result_16_candidate +]{!</td><td><span style="color:!}[+ pres_result_16_color +]{!;">!}[+ pres_result_16_party +]{!</span></td><td>!}[+ pres_result_16_votes +]%{!</td><td>!}[+ pres_result_16_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 18 : {!<tr><td>!}[+ pres_result_17_candidate +]{!</td><td><span style="color:!}[+ pres_result_17_color +]{!;">!}[+ pres_result_17_party +]{!</span></td><td>!}[+ pres_result_17_votes +]%{!</td><td>!}[+ pres_result_17_endorsers +]{!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -549,7 +564,6 @@ go-to: pres_result_display
             [? if eros_formed and eros_pres_independent = 1 : {!<th><span style="color: #FF2400;">EROS</span></th>!} ?]
             [? if dplf_formed and dplf_pres_independent = 1 : {!<th><span style="color: #CE2029;">DPLF</span></th>!} ?]
             [? if pflt_formed and pflt_pres_independent = 1 : {!<th><span style="color: #DC143C;">PFLT</span></th>!} ?]
-            [? if ucpf_formed and ucpf_pres_independent = 1 : {!<th><span style="color: #DC143C;">UCPF</span></th>!} ?]
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Colombo**{!</td>!}
