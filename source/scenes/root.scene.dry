@@ -175,6 +175,26 @@ Q.dplf_coalition_id = -1;
 Q.pflt_coalition_id = -1;
 Q.ucpf_coalition_id = -1;
 
+//party taking part in parliament elections
+Q.slfp_parl_yes = 1;
+Q.unp_parl_yes = 1;
+Q.jvp_parl_yes = 1;
+Q.cpsl_parl_yes = 1;
+Q.lssp_parl_yes = 1;
+Q.nssp_parl_yes = 1;
+Q.tulf_parl_yes = 1;
+Q.actc_parl_yes = 1;
+Q.cwc_parl_yes = 1;
+Q.slmc_parl_yes = 1;
+Q.slmp_parl_yes = 1;
+Q.slpp_parl_yes = 1;
+Q.mep_parl_yes = 1;
+Q.npp_parl_yes = 1;
+Q.eros_parl_yes = 1;
+Q.dplf_parl_yes = 1;
+Q.pflt_parl_yes = 1;
+Q.ucpf_parl_yes = 1;
+
 // C&S tracking - which parties are providing confidence & supply to current government
 Q.jvp_providing_cs = 0;
 Q.cpsl_providing_cs = 0;
@@ -272,6 +292,26 @@ Q.eros_pres_candidate = 'EROS CANDIDATE';
 Q.dplf_pres_candidate = 'DPLF CANDIDATE';
 Q.pflt_pres_candidate = 'PFLT CANDIDATE';
 Q.ucpf_pres_candidate = 'UCPF CANDIDATE';
+
+//party taking part in president elections
+Q.slfp_pres_yes = 1;
+Q.unp_pres_yes = 1;
+Q.jvp_pres_yes = 1;
+Q.cpsl_pres_yes = 1;
+Q.lssp_pres_yes = 1;
+Q.nssp_pres_yes = 1;
+Q.tulf_pres_yes = 1;
+Q.actc_pres_yes = 1;
+Q.cwc_pres_yes = 1;
+Q.slmc_pres_yes = 1;
+Q.slmp_pres_yes = 1;
+Q.slpp_pres_yes = 1;
+Q.mep_pres_yes = 1;
+Q.npp_pres_yes = 1;
+Q.eros_pres_yes = 1;
+Q.dplf_pres_yes = 1;
+Q.pflt_pres_yes = 1;
+Q.ucpf_pres_yes = 1;
 
 Q.pres_candidates = [];
 Q.pres_results = [];
