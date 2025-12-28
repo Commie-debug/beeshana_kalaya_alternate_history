@@ -162,6 +162,9 @@ for (var pname of all_party_names) {
 
 //buildcandidatelist
 for (var party of all_party_names) {
+    //skippartiesnotparticipating
+    if (Q[party + '_pres_yes'] === 0) continue;
+    
     var endorsement = Q[party + '_pres_endorsement'];
     var candidate = Q[party + '_pres_candidate'];
     
@@ -201,6 +204,9 @@ for (var cid in coalitionMembers) {
     var leader = coalitionLeader[cid];
     if (!leader) continue;
     
+    //skipiflleaderisnotparticipating
+    if (Q[leader + '_pres_yes'] === 0) continue;
+    
     var leaderCandidate = Q[leader + '_pres_candidate'];
     if (!leaderCandidate || leaderCandidate === '') continue;
     
@@ -214,9 +220,10 @@ for (var cid in coalitionMembers) {
         Q.pres_endorsing_parties[leaderCandidate] = [];
     }
     
-    //addallcoalitionmembersasendorsers
+    //addallcoalitionmembersasendorsersonlyiftheyareparticipating
     var members = coalitionMembers[cid];
     for (var mem of members) {
+        if (Q[mem + '_pres_yes'] === 0) continue;
         if (Q.pres_endorsing_parties[leaderCandidate].indexOf(mem) === -1) {
             Q.pres_endorsing_parties[leaderCandidate].push(mem);
         }
@@ -224,9 +231,12 @@ for (var cid in coalitionMembers) {
 }
 
 //determinwhichpartiesarerunningindependently
-//apartyisindependentifithasitsowncandidateandisnotincoalitionandnotendorsing
+//apartyisindependentifithasitsowncandidateandisnotincoalitionandnotendorsingandistakingpart
 var all_parties_check = base_parties.concat(formable_parties);
 for (var p of all_parties_check) {
+    //firstcheckifpartytakingpart
+    var isTakingPart = (Q[p + '_pres_yes'] !== 0);
+    
     var hasOwnCandidate = false;
     var isInCoalition = (partyToCoalition[p] !== undefined && partyToCoalition[p] >= 0);
     var isCoalitionLeader = false;
@@ -248,36 +258,44 @@ for (var p of all_parties_check) {
         }
     }
     
-    //partyshowsinresultsifithasowncandidateandisnotendorsingandeitherisnotincoalitionoristheleader
-    var showInResults = hasOwnCandidate && !isEndorsing && (!isInCoalition || isCoalitionLeader);
+    //partyshowsinresultsifistakingpartandhasowncandidateandisnotendorsingandeitherisnotincoalitionoristheleader
+    var showInResults = isTakingPart && hasOwnCandidate && !isEndorsing && (!isInCoalition || isCoalitionLeader);
     Q[p + '_pres_independent'] = showInResults ? 1 : 0;
 }
 
 //normalizeethnicsupport
+//onlyincludepartieswithpres_yes=1orundefined(defaulttoyes)
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
     for (var party of Q.parties) {
+        if (Q[party + '_pres_yes'] === 0) continue;
         var support = Q[ethnic + '_' + party] || 0;
         if (support < 0) support = 0;
         ethnic_total += support;
     }
     for (var fp of formable_parties) {
-        if (Q[fp + '_formed']) {
+        if (Q[fp + '_formed'] && Q[fp + '_pres_yes'] !== 0) {
             var support = Q[ethnic + '_' + fp] || 0;
             if (support < 0) support = 0;
             ethnic_total += support;
         }
     }
     for (var party of Q.parties) {
+        if (Q[party + '_pres_yes'] === 0) {
+            Q[ethnic + '_' + party + '_norm'] = 0;
+            continue;
+        }
         var support = Q[ethnic + '_' + party] || 0;
         if (support < 0) support = 0;
         Q[ethnic + '_' + party + '_norm'] = (ethnic_total > 0) ? (support / ethnic_total) : 0;
     }
     for (var fp of formable_parties) {
-        if (Q[fp + '_formed']) {
+        if (Q[fp + '_formed'] && Q[fp + '_pres_yes'] !== 0) {
             var support = Q[ethnic + '_' + fp] || 0;
             if (support < 0) support = 0;
             Q[ethnic + '_' + fp + '_norm'] = (ethnic_total > 0) ? (support / ethnic_total) : 0;
+        } else if (Q[fp + '_formed']) {
+            Q[ethnic + '_' + fp + '_norm'] = 0;
         }
     }
 }
@@ -289,27 +307,34 @@ for (var cls of class_groups) {
     var class_total = 0;
     var cls_var = class_var_map[cls];
     for (var party of Q.parties) {
+        if (Q[party + '_pres_yes'] === 0) continue;
         var support = Q[cls_var + '_' + party] || 0;
         if (support < 0) support = 0;
         class_total += support;
     }
     for (var fp of formable_parties) {
-        if (Q[fp + '_formed']) {
+        if (Q[fp + '_formed'] && Q[fp + '_pres_yes'] !== 0) {
             var support = Q[cls_var + '_' + fp] || 0;
             if (support < 0) support = 0;
             class_total += support;
         }
     }
     for (var party of Q.parties) {
+        if (Q[party + '_pres_yes'] === 0) {
+            Q[cls + '_' + party + '_norm'] = 0;
+            continue;
+        }
         var support = Q[cls_var + '_' + party] || 0;
         if (support < 0) support = 0;
         Q[cls + '_' + party + '_norm'] = (class_total > 0) ? (support / class_total) : 0;
     }
     for (var fp of formable_parties) {
-        if (Q[fp + '_formed']) {
+        if (Q[fp + '_formed'] && Q[fp + '_pres_yes'] !== 0) {
             var support = Q[cls_var + '_' + fp] || 0;
             if (support < 0) support = 0;
             Q[cls + '_' + fp + '_norm'] = (class_total > 0) ? (support / class_total) : 0;
+        } else if (Q[fp + '_formed']) {
+            Q[cls + '_' + fp + '_norm'] = 0;
         }
     }
 }
