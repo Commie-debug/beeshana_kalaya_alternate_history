@@ -11,6 +11,8 @@ face-image: img/Election_Time.png
 
 Elections for the President of Sri Lanka are to be held now. The President is elected by preferential voting, meaning if no candidate wins more than 50% of the vote in the first count, the second preferences of eliminated candidates are redistributed until a winner emerges.
 
+Results are shown as a percentage of votes casted nationally and district wise. The results take into account parties not taking part and government control.
+
 - @pres_election_algorithm: May our candidate prevail...
 
 
