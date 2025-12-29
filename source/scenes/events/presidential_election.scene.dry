@@ -508,13 +508,13 @@ Q.runoff_needed = 0;
 
 if (Q.pres_results.length > 0) {
     Q.pres_first_candidate = Q.pres_results[0].candidate;
-    Q.pres_first_party = Q.pres_results[0].party;
+    Q.pres_first_party = Q.pres_results[0].party.toUpperCase();
     Q.pres_first_votes = Q.pres_results[0].votes;
     Q.pres_first_color = Q.pres_results[0].color;
     
     if (Q.pres_results.length > 1) {
         Q.pres_second_candidate = Q.pres_results[1].candidate;
-        Q.pres_second_party = Q.pres_results[1].party;
+        Q.pres_second_party = Q.pres_results[1].party.toUpperCase();
         Q.pres_second_votes = Q.pres_results[1].votes;
         Q.pres_second_color = Q.pres_results[1].color;
     }
@@ -1119,7 +1119,7 @@ if (Q.slfp_in_government === 1 && Q.president_party !== 'SLFP') {
 
 [? if slfp_pres_victory = 1 : This is a historic victory for the SLFP! Our candidate now holds the highest office in the land. ?]
 
-[? if slfp_pres_victory = 0 and pres_winner_party = "unp" : The UNP has retained the presidency. We must continue our struggle in opposition. ?]
+[? if slfp_pres_victory = 0 and pres_winner_party = "UNP" : The UNP has retained the presidency. We must continue our struggle in opposition. ?]
 
 [? if cohabitation = 1 : **Cohabitation:** The President is from a different party than the parliamentary majority. This will create significant tension in governance. ?]
 
@@ -1143,9 +1143,9 @@ The SLFP has won the presidency! Our supporters celebrate across the nation. Thi
 title: Accept the result and continue our work.
 view-if: slfp_pres_victory = 0
 
-[? if pres_second_party = "slfp" : We came close, finishing in second place. The struggle continues. ?]
+[? if pres_second_party = "SLFP" : We came close, finishing in second place. The struggle continues. ?]
 
-[? if pres_second_party != "slfp" : This is a disappointing result for our party. We must rebuild and prepare for the next election. ?]
+[? if pres_second_party != "SLFP" : This is a disappointing result for our party. We must rebuild and prepare for the next election. ?]
 
 - @post_pres_end: Continue
 
