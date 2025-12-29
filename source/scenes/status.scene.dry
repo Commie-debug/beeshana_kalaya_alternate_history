@@ -284,6 +284,8 @@ if (Q.ipkf_morale) {
 
 Security Forces Strength: [+ security_forces_strenght : strength +]
 
+War Exhaustion: [+ war_exhaustion : coalition_dissent +]
+
 Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops. Morale: [+ slaf_morale : loyalty +]
 
 Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : loyalty +]
