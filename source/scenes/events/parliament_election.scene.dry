@@ -115,15 +115,21 @@ for (var party of Q.parties) {
 Q.district_results = [];
 
 //normalisation ethnic
+//only include parties with parl_yes=1
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
     for (var party of Q.parties) {
+        if (Q[party + '_parl_yes'] === 0) continue;
         var support = Q[ethnic + '_' + party] || 0;
         if (support < 0) support = 0;
         ethnic_total += support;
     }
-    // Normalize to proportions (0 to 1)
+    //normalize to proportions (0 to 1)
     for (var party of Q.parties) {
+        if (Q[party + '_parl_yes'] === 0) {
+            Q[ethnic + '_' + party + '_norm'] = 0;
+            continue;
+        }
         var support = Q[ethnic + '_' + party] || 0;
         if (support < 0) support = 0;
         Q[ethnic + '_' + party + '_norm'] = (ethnic_total > 0) ? (support / ethnic_total) : 0;
@@ -143,12 +149,17 @@ for (var cls of class_groups) {
     var class_total = 0;
     var cls_var = class_var_map[cls];
     for (var party of Q.parties) {
+        if (Q[party + '_parl_yes'] === 0) continue;
         var support = Q[cls_var + '_' + party] || 0;
         if (support < 0) support = 0;
         class_total += support;
     }
-    // Normalize to proportions (0 to 1)
+    //normalize to proportions (0 to 1)
     for (var party of Q.parties) {
+        if (Q[party + '_parl_yes'] === 0) {
+            Q[cls + '_' + party + '_norm'] = 0;
+            continue;
+        }
         var support = Q[cls_var + '_' + party] || 0;
         if (support < 0) support = 0;
         Q[cls + '_' + party + '_norm'] = (class_total > 0) ? (support / class_total) : 0;
@@ -176,8 +187,8 @@ if (Q.active_coalitions && Q.active_coalitions.length > 0) {
         
         for (var m = 0; m < coalition.members.length; m++) {
             var memberParty = coalition.members[m].toLowerCase();
-            // Only add if party exists in Q.parties
-            if (Q.parties.indexOf(memberParty) !== -1) {
+            //only add if party exists in Q.parties and is participating
+            if (Q.parties.indexOf(memberParty) !== -1 && Q[memberParty + '_parl_yes'] !== 0) {
                 partyToCoalition[memberParty] = c;
                 coalitionMembers[c].push(memberParty);
             }
@@ -189,6 +200,8 @@ if (Q.active_coalitions && Q.active_coalitions.length > 0) {
 var all_party_names = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc', 
                        'slmc', 'slmp', 'slpp', 'mep', 'npp', 'eros', 'dplf', 'pflt'];
 for (var pname of all_party_names) {
+    //skip if no participating
+    if (Q[pname + '_parl_yes'] === 0) continue;
     var cid = Q[pname + '_coalition_id'];
     if (cid !== undefined && cid >= 0) {
         partyToCoalition[pname] = cid;
@@ -202,19 +215,22 @@ for (var pname of all_party_names) {
 }
 
 //final list of unique competing entities (coalitions and independent parties)
-var competingEntities = []; // Array of {type: 'coalition'|'party', id: coalition_id or party_name}
+var competingEntities = []; //array of {type: 'coalition'|'party', id: coalition_id or party_name}
 var processedCoalitions = {};
 
 for (var party of Q.parties) {
+    //skip if not participating
+    if (Q[party + '_parl_yes'] === 0) continue;
+    
     var cid = partyToCoalition[party];
     if (cid >= 0) {
-        // Party is in a coalition
+        //party is in a coalition
         if (!processedCoalitions[cid]) {
             competingEntities.push({type: 'coalition', id: cid});
             processedCoalitions[cid] = true;
         }
     } else {
-        // Independent party
+        //independent party
         competingEntities.push({type: 'party', id: party});
     }
 }
@@ -223,7 +239,7 @@ for (var party of Q.parties) {
 for (var i = 0; i < Q.district_names.length; i++) {
     var district_name = Q.district_names[i];
     
-    //Get district seats from Q variables (e.g., Q.colombo_d_seats)
+    //get district seats from Q variables (e.g., Q.colombo_d_seats)
     var district_seats = Q[district_name + '_seats'] || 0;
     
     //get ethnic composition from Q variables (e.g., Q.colombo_d_sinhala)
@@ -252,6 +268,12 @@ for (var i = 0; i < Q.district_names.length; i++) {
     var district_total_support = 0;
     
     for (var party of Q.parties) {
+        //skipifnotparticipating
+        if (Q[party + '_parl_yes'] === 0) {
+            district_party_support[party] = 0;
+            continue;
+        }
+        
         //ethnic support
         //Sum of (ethnic % in district)*(party support among that ethnic group)
         var ethnic_support = 0;
@@ -260,7 +282,7 @@ for (var i = 0; i < Q.district_names.length; i++) {
         }
         
         //class support
-        //Sum of (class % in district) * (party support among that class)
+        //sum of (class % in district) * (party support among that class)
         var class_support = 0;
         for (var cls of class_groups) {
             class_support += (district_class[cls] / 100) * Q[cls + '_' + party + '_norm'];
@@ -280,6 +302,11 @@ for (var i = 0; i < Q.district_names.length; i++) {
     var district_pop_weight = Q[district_name + '_pop_weight'] || 0;
     
     for (var party of Q.parties) {
+        //skip if not participating
+        if (Q[party + '_parl_yes'] === 0) {
+            district_votes[party] = 0;
+            continue;
+        }
         district_votes[party] = (district_total_support > 0) ? 
             (district_party_support[party] / district_total_support) : 0;
         //population weightage for national totals
@@ -430,6 +457,12 @@ for (var party of Q.parties) {
 
 
 for (var party of Q.parties) {
+    //skipifnotparticipating
+    if (Q[party + '_parl_yes'] === 0) {
+        Q[party + '_r'] = 0;
+        Q[party + '_votes'] = 0;
+        continue;
+    }
     Q[party + '_r'] = Q[party + '_seats'];
     Q[party + '_votes'] = (total_votes > 0) ? 
         Math.round((Q[party + '_votes_total'] / total_votes) * 1000) / 10 : 0;
@@ -445,6 +478,11 @@ if (Q.national_list_added == 1) {
     var entity_national_seats = {}; // Track seats won by each entity for D'Hondt
     
     for (var party of Q.parties) {
+        //skipifnotparticipating
+        if (Q[party + '_parl_yes'] === 0) {
+            party_national_seats[party] = 0;
+            continue;
+        }
         party_national_seats[party] = 0;
     }
     
@@ -546,6 +584,11 @@ if (Q.national_list_added == 1) {
     
     //Storage point
     for (var party of Q.parties) {
+        //skipifnotparticipating
+        if (Q[party + '_parl_yes'] === 0) {
+            Q[party + '_national_list_seats'] = 0;
+            continue;
+        }
         Q[party + '_national_list_seats'] = party_national_seats[party];
     }
     
@@ -554,6 +597,11 @@ if (Q.national_list_added == 1) {
 
 //Calculation of the  change AFTER national list seats are added
 for (var party of Q.parties) {
+    if (Q[party + '_parl_yes'] === 0) {
+        Q['change_' + party + '_r'] = 0;
+        Q['str_change_' + party] = '0';
+        continue;
+    }
     Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
     var sign = Q['change_' + party + '_r'] > 0 ? '+' : '';
     Q['str_change_' + party] = sign + Q['change_' + party + '_r'];
@@ -567,6 +615,8 @@ var max1 = -1;   // largest
 var max2 = -1;   // second largest
 
 for (var party of Q.parties) {
+    if (Q[party + '_parl_yes'] === 0) continue;
+    
     var seats = Q[party + '_r'];
 
     if (seats > max1) {
