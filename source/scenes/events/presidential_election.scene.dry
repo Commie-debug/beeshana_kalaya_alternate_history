@@ -1115,9 +1115,7 @@ if (Q.slfp_in_government === 1 && Q.president_party !== 'SLFP') {
 
 = Presidential Election Winner
 
-**[+ pres_winner_candidate +]** of the {!<span style="color:!}[+ pres_winner_color +]{!;">!}**[+ pres_winner_party +]**{!</span>!} has been elected as President of Sri Lanka!
-
-[? if old_president != "" : [+ old_president +] ([+ old_president_party +]) leaves office after serving as President. ?]
+**[+ pres_winner_candidate +]** of the {!<span style="color:!}[+ pres_winner_color +]{!;">!}**[+ pres_winner_party +]**{!</span>!} has been elected as President of Sri Lanka.
 
 [? if slfp_pres_victory = 1 : This is a historic victory for the SLFP! Our candidate now holds the highest office in the land. ?]
 
