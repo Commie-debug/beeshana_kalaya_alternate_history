@@ -178,7 +178,7 @@ Q.ucpf_coalition_id = -1;
 //party taking part in parliament elections
 Q.slfp_parl_yes = 1;
 Q.unp_parl_yes = 1;
-Q.jvp_parl_yes = 1;
+Q.jvp_parl_yes = 0;
 Q.cpsl_parl_yes = 1;
 Q.lssp_parl_yes = 1;
 Q.nssp_parl_yes = 1;
