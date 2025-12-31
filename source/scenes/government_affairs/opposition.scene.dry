@@ -1,6 +1,7 @@
 title: Opposition in Parliament
 new-page: true
 is-card: true
+max-visits: 100
 view-if: opposition_timer <= 0 and slfp_in_government = 0
 on-arrival: opposition_timer += 6; month_actions += 1
 tags: govt_affairs
