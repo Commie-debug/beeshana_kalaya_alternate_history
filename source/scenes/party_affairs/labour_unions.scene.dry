@@ -4,7 +4,7 @@ view-if: labour_unions_timer <= 0
 tags: party_affairs
 is-card: true
 on-arrival: month_actions += 1; labour_unions_timer = 6;
-max-visits: 12
+max-visits: 100
 card-image: img/labour_union.jpg
 
 = Labour Unions
