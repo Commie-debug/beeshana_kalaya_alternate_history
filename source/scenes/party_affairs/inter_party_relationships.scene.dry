@@ -5,7 +5,7 @@ tags: party_affairs
 is-card: true
 on-arrival: month_actions += 1; inter_party_relationships_timer = 6;
 card-image: img/sirimavo_&_perera.jpg
-max-visits: 12
+max-visits: 100
 #subtitle: Building relations with the other political parties of Sri Lanka.
 
 = Inter-Party Relationships
