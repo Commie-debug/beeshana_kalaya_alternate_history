@@ -3,6 +3,7 @@ new-page: true
 is-card: true
 tags: party_affairs
 view-if: media_timer <= 0
+max-visits: 100
 on-arrival: month_actions += 1; media_timer += 6;
 card-image: img/slbc.jpg
 #subtitle: Setting the direction for our newspapers and radio.
