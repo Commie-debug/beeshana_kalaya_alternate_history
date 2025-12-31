@@ -591,6 +591,7 @@ Q.student_union_lssp_control = 5;
 Q.student_union_independent_control = 3;
 
 //foreign relations and india
+Q.nam_relation = 60;
 Q.india_relation = 20;
 Q.china_relation = 55;
 Q.usa_relation = 65;
