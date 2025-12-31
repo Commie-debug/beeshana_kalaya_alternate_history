@@ -9,7 +9,7 @@ card-image: img/slbc.jpg
 
 = Media
 
-The SPD runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
+The SLFP can take advantage of growing TV and radio ownership across the island. But that comes with many choices in how we want to use this angle in politics. The UNP already has the upper hand with their support among existing channels, and their control over the largely nationalised TV sector.
 
 - @commercial
 - @campaign
@@ -30,7 +30,7 @@ on-arrival: resources += 1; commercialized_media += 1; new_middle_spd += 4*(1 - 
 Our commercialized newspapers are able to bring in more funds. However, the left and labor factions express their displeasure.
 
 @campaign
-title: The purpose of our media is to elect more Social Democrats.
+title: The purpose of our media is to rally support for the SLFP.
 subtitle: Our newspapers will focus on the electoral campaign.
 on-arrival: campaign_media += 1; workers_spd += 4*(1 - dissent); unemployed_spd += 2*(1-dissent);
 
