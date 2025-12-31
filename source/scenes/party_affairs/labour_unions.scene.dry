@@ -14,14 +14,43 @@ While the <span style="color: #00008B;">**SLFP**</span> is not renown for links 
 That is in the past. Since the <span style="color: #006400;">**UNP's**</span> crushing of the 1980 strike, labour movements are at their lowest in history. Unions are fractured, companies are being given greater control away from trade unions, and the <span style="color: #006400;">**JSS**</span> makes sure that labour will not cause problems for the government. It is worse for the <span style="color: #00008B;">**SLFP**</span> owing to our internal disarray.
 
 - @resources: We can send resources to our allied unions to help them expand and better support their fellow labourers.
+- @cpsllssp: In the past, the CPSL and LSSP has worked with us, and their union connections were formidable. Maybe we should cooperate and learn from them.
+- @cwc: The tea-planting indian tamils are almost entirely unionised under the CWC, intruding onto their base may strain relations, but increase our own control.
+- @rally: We should organise a rally, campaiging for better working conditions and greater welfare. The UNP and local buisness intrests will be pieved, but it may be necessary.
 - @nothing: Do not increase funding and support.
 - @easy_discard
+
+@rally
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; workers_slfp += 5*(1-dissent); upper_slfp -= 5*(1-dissent); 
+
+The rally was met with condemnation by buisneses, they have been driven into the arms of the UNP. Working class folk however, were very supportive.
 
 @resources
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; media_timer = 0;
+on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent);
+
+The money we have sent hasnt been a waste, slowly we are rebuilding the organised labour.... to be alligned with us.
+
+@cwc
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent); cwc_relation -= 5*(1-dissent); itamil_slfp += 5*(1-dissent);
+
+As expected, the CWC is incredibly angry over our "intrusion", relations have taken a down hill trajectory but at least we have gained support among Indian Tamils.
+
+@cpsllssp
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent); cpsl_relation += 6*(1-dissent); lssp_relation += 5*(1-dissent);
+
+The increased cooperation has generally raised relations with the CPSL and LSSP. We have also learned better tactics to engage the un-unionsed workers, persuading many to join.
 
 //Sending resources will increase overall union power
 
