@@ -24,7 +24,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: sinhala_slfp += 6*(1-dissent);
+on-arrival: sinhala_slfp += 6*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the Sinhalese people. 
 
@@ -32,7 +32,7 @@ We have increased our campaigning among the Sinhalese people.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: sltamil_slfp += 6*(1-dissent);
+on-arrival: sltamil_slfp += 6*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the Sri Lankan Tamils. 
 
@@ -40,7 +40,7 @@ We have increased our campaigning among the Sri Lankan Tamils.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: itamil_slfp += 6*(1-dissent);
+on-arrival: itamil_slfp += 6*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the Indian Tamils. 
 
@@ -48,7 +48,7 @@ We have increased our campaigning among the Indian Tamils.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: muslim_slfp += 6*(1-dissent);
+on-arrival: muslim_slfp += 6*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the Muslims. 
 
@@ -56,7 +56,7 @@ We have increased our campaigning among the Muslims.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: other_slfp += 6*(1-dissent);
+on-arrival: other_slfp += 6*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the smaller ethnic groups of Sri Lanka. 
 
