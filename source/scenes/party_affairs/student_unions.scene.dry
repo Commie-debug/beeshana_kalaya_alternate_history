@@ -61,15 +61,6 @@ on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent); jvp_r
 
 Some the unions agreed to align themselves around our orbit, but others are rightfully suspicious including the JVP and its unions.
 
-@independents
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
-subtitle: -1 resources 
-on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent); jvp_relation -= 5*(1 - dissent);
-
-Some the unions agreed to align themselves around our orbit, but others are rightfully suspicious including the JVP and its unions.
-
-
 #Sending resources will increase overall union power
 
 #Add more options for expanding SLFP control via reaching to independents, converting unions to us (with a bit of cash).
