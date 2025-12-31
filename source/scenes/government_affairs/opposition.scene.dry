@@ -1,15 +1,377 @@
-title: Opposition in parliament
+title: Opposition in Parliament
 new-page: true
 is-card: true
 view-if: opposition_timer <= 0 and slfp_in_government = 0
 on-arrival: opposition_timer += 6; month_actions += 1
 tags: govt_affairs
 card-image: img/opposition.jpg
-#subtitle: As a member of the opposition to the UNP we can mount some resistance to them....
 
-= Opposition in parliament
+= Opposition in Parliament
 
-While we may not be in control of parliament, we are still granted some powers under the 1978 constitution.
+While we may not control parliament, we still have tools to resist the <span style="color: #006400;">**UNP**</span> government. With [+ slfp_r +] seats, our options are limited, but not non-existent.
 
-#ADD some things such as introduce bills, votes of no confidence, impeachment of the president, crutinize the budget or ministries
-#take part in votes where SLFP can use relations with parties to gather support or otherwise from other opposition parties or dissident UNP members
+[? if slfp_parliament_leader : Our parliamentary leader, [+ slfp_parliament_leader +], coordinates our efforts in the chamber. ?]
+
+- @scrutinize_budget: Scrutinize the government budget.
+- @question_ministers: Question ministers on their conduct.
+- @oppose_pta: Oppose the Prevention of Terrorism Act.
+- @propose_bill: Introduce a private member's bill.
+- @build_opposition: Build a united opposition bloc.
+- @no_confidence: Move a vote of no confidence.
+- @impeachment: Move to impeach the President.
+- @walkout: Stage a parliamentary walkout.
+- @nothing: Do nothing for now.
+- @easy_discard
+
+@scrutinize_budget
+subtitle: Challenge UNP economic policies publicly.
+
+We use our parliamentary time to expose wasteful spending, corruption, and misplaced priorities in the government's budget.
+
+- @budget_corruption: Focus on corruption and cronyism.
+- @budget_welfare: Focus on cuts to social welfare.
+- @budget_military: Focus on excessive military spending.
+- @budget_return: Return to main options.
+
+@budget_corruption
+on-arrival: gov_support -= 2*(1-dissent); corruption_strenght += 2; unp_relation -= 2
+
+Our MPs highlight suspicious contracts awarded to UNP cronies, inflated costs, and missing funds. The government benches squirm as we read out the figures.
+
+[? if corruption_strenght >= 50 : There is so much material to work with that even the pro-government press cannot ignore our revelations. ?]
+
+- @return: Continue...
+
+@budget_welfare
+on-arrival: gov_support -= 2*(1-dissent); workers_slfp += 2*(1-dissent); rural_slfp += 2*(1-dissent); left_dissent -= 3
+
+We attack the <span style="color: #006400;">**UNP's**</span> cuts to rice subsidies, education, and healthcare. "The poor are being made to pay for the rich!" our MPs declare.
+
+[? if south_poverty >= 0.6 : In the impoverished south, our message resonates strongly. ?]
+
+- @return: Continue...
+
+@budget_military
+on-arrival: gov_support -= 1*(1-dissent); nationalist_dissent += 5; tulf_relation += 3; left_dissent -= 3
+
+We question the ballooning military budget while schools lack teachers and hospitals lack medicine. 
+
+The <span style="color: #0F52BA;">**Nationalists**</span> in our own party are uncomfortable with this line of attack.
+
+[? if tamil_war >= 0.5 : Given the intensifying conflict, this is a controversial stance. ?]
+
+- @return: Continue...
+
+@budget_return
+
+- @scrutinize_budget: Back to budget scrutiny.
+- @root: Return to main menu.
+
+@question_ministers
+subtitle: Hold the government accountable.
+
+Parliamentary questions are a key tool of opposition. Which ministry should we target?
+
+- @question_defence: Question the Defence Ministry on the security situation.
+- @question_finance: Question the Finance Ministry on the economy.
+- @question_justice: Question the Justice Ministry on political prisoners.
+- @question_return: Return to main options.
+
+@question_defence
+on-arrival: gov_support -= 1*(1-dissent)
+go-to: question_defence_war if tamil_war >= 0.3; question_defence_peace if tamil_war < 0.3
+
+@question_defence_war
+on-arrival: nationalist_dissent += 3 if tamil_war >= 0.5
+
+We demand answers about civilian casualties, military failures, and the government's strategy. The Defence Minister gives evasive answers.
+
+[? if tamil_war >= 0.5 : As the war intensifies, these questions become more pointed - and more politically risky for us. ?]
+
+- @return: Continue...
+
+@question_defence_peace
+
+We question military spending and the government's handling of the security situation. The minister deflects with vague assurances.
+
+- @return: Continue...
+
+@question_finance
+on-arrival: gov_support -= 1*(1-dissent); middle_slfp += 1*(1-dissent)
+
+We grill the Finance Minister on inflation, unemployment, and the growing wealth gap. "Where are the jobs you promised?" our MPs demand.
+
+[? if inflation >= 5 : Rising prices give our questions extra bite. ?]
+
+- @return: Continue...
+
+@question_justice
+on-arrival: gov_support -= 1*(1-dissent); left_dissent -= 2; jvp_relation += 2
+
+We raise the cases of political prisoners, detained trade unionists, and those held without trial under emergency regulations.
+
+[? if state_of_emergency = 1 : Under the state of emergency, many are detained without charge. Our questions shine a light on their plight. ?]
+
+- @return: Continue...
+
+@question_return
+
+- @question_ministers: Back to questioning ministers.
+- @root: Return to main menu.
+
+@oppose_pta
+subtitle: Challenge the Prevention of Terrorism Act.
+view-if: pta_strenght >= 2
+
+The Prevention of Terrorism Act gives the government sweeping powers to detain suspects without trial. We can challenge its use.
+
+- @pta_repeal: Call for full repeal of the PTA.
+- @pta_reform: Call for reforms to limit its abuse.
+- @pta_cases: Highlight specific cases of PTA abuse.
+- @pta_return: Return to main options.
+
+@pta_repeal
+on-arrival: tulf_relation += 8; actc_relation += 5; nationalist_dissent += 15; left_dissent -= 5; gov_support -= 1*(1-dissent)
+
+Our MPs move to repeal the PTA entirely. The motion has no chance of passing, but it puts us on record.
+
+The <span style="color: #0F52BA;">**Nationalists**</span> are furious. "We cannot disarm ourselves against terrorists!" they protest. But Tamil MPs nod in approval.
+
+- @return: Continue...
+
+@pta_reform
+on-arrival: tulf_relation += 3; actc_relation += 2; nationalist_dissent += 5; gov_support -= 1*(1-dissent)
+
+We propose amendments to add judicial oversight and time limits on detention. A more moderate approach that even some <span style="color: #006400;">**UNP**</span> MPs might support.
+
+- @return: Continue...
+
+@pta_cases
+on-arrival: tulf_relation += 5; gov_support -= 2*(1-dissent); left_dissent -= 3
+
+We read out case after case of innocent people detained, tortured, and held for years without trial. The chamber falls silent as we describe their suffering.
+
+- @return: Continue...
+
+@pta_return
+
+- @oppose_pta: Back to PTA options.
+- @root: Return to main menu.
+
+@propose_bill
+subtitle: Introduce legislation. Unlikely to pass, but makes a statement.
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources to draft legislation.
+on-arrival: resources -= 1
+
+Private member's bills rarely pass when we're in opposition, but they can signal our priorities and force debate. What should we propose?
+
+- @bill_labour: A bill to restore trade union rights.
+- @bill_language: A bill on language equality.
+- @bill_devolution: A bill on regional devolution.
+- @bill_elections: A bill for electoral reform.
+- @bill_return: Return to main options.
+
+@bill_labour
+on-arrival: labour_union_slfp_control += 3; lssp_relation += 5; cpsl_relation += 5; left_dissent -= 8; workers_slfp += 3*(1-dissent)
+
+We introduce a bill to reverse the <span style="color: #006400;">**UNP's**</span> anti-union legislation and restore the rights crushed after the 1980 strike.
+
+The bill is voted down, but trade unionists take note. The <span style="color: #A91101;">**LSSP**</span> and <span style="color: #65000B;">**CPSL**</span> praise our initiative.
+
+- @return: Continue...
+
+@bill_language
+on-arrival: tulf_relation += 8; actc_relation += 5; cwc_relation += 3; nationalist_dissent += 12; sinhala_nationalism -= 1
+
+We introduce a bill to make Tamil an official language with equal status to Sinhala.
+
+The <span style="color: #0F52BA;">**Nationalists**</span> erupt in fury. The bill is defeated overwhelmingly, but Tamil parties note our stance.
+
+- @return: Continue...
+
+@bill_devolution
+on-arrival: tulf_relation += 10; actc_relation += 8; nationalist_dissent += 18; tamil_radicalisation -= 1
+
+We introduce a bill to create provincial councils with genuine autonomy. A political solution to the ethnic conflict.
+
+Our <span style="color: #0F52BA;">**Nationalists**</span> vote against their own party's bill. The <span style="color: #F7D917;">**TULF**</span> is impressed by our courage.
+
+[? if nationalist_strength > left_strength : This may cost us in Sinhalese areas, but it positions us as a party of reconciliation. ?]
+
+- @return: Continue...
+
+@bill_elections
+on-arrival: gov_support -= 1*(1-dissent); left_dissent -= 3; nationalist_dissent -= 3
+
+We introduce a bill to reform the electoral system and reduce presidential powers. Both factions can agree on opposing <span style="color: #006400;">**UNP**</span> authoritarianism.
+
+The bill fails, but it unites our party and highlights <span style="color: #006400;">**UNP**</span> resistance to democratic reform.
+
+- @return: Continue...
+
+@bill_return
+
+- @propose_bill: Back to bill options.
+- @root: Return to main menu.
+
+@build_opposition
+subtitle: Coordinate with other opposition parties.
+
+A united opposition is stronger than scattered critics. Who should we approach?
+
+- @opposition_tulf: Coordinate with the <span style="color: #F7D917;">**TULF**</span>.
+- @opposition_left: Coordinate with <span style="color: #A91101;">**LSSP**</span> and <span style="color: #65000B;">**CPSL**</span>.
+- @opposition_jvp: Reach out to the <span style="color: #FF2226;">**JVP**</span>.
+- @opposition_unp_dissidents: Approach dissident <span style="color: #006400;">**UNP**</span> MPs.
+- @opposition_return: Return to main options.
+
+@opposition_tulf
+view-if: tulf_r > 0
+on-arrival: tulf_relation += 5; nationalist_dissent += 8
+
+The <span style="color: #F7D917;">**TULF**</span> has [+ tulf_r +] seats. We approach them about coordinating parliamentary tactics.
+
+[? if tulf_relation >= 30 : Given our improving relations, they are receptive. We agree to support each other's motions where possible. ?]
+[? if tulf_relation < 30 : They are wary given our party's history on Tamil issues, but agree to limited cooperation. ?]
+
+Our <span style="color: #0F52BA;">**Nationalists**</span> grumble about consorting with "separatists."
+
+- @return: Continue...
+
+@opposition_left
+on-arrival: lssp_relation += 5; cpsl_relation += 5; left_dissent -= 5; nationalist_dissent += 3
+
+We approach our former United Front partners about reviving opposition cooperation.
+
+[? if lssp_relation >= 40 and cpsl_relation >= 40 : They welcome the initiative warmly. "Like old times," says an <span style="color: #A91101;">**LSSP**</span> MP. ?]
+[? if lssp_relation < 40 or cpsl_relation < 40 : Relations are still strained from the past, but they agree to tactical cooperation. ?]
+
+- @return: Continue...
+
+@opposition_jvp
+view-if: jvp_banned = 0 and jvp_r > 0
+on-arrival: jvp_relation += 5; left_dissent -= 5; nationalist_dissent += 5
+
+The <span style="color: #FF2226;">**JVP**</span> operates on the fringes of parliament. We cautiously approach them.
+
+[? if jvp_relation >= 30 : They agree to support some of our motions, though they maintain their revolutionary rhetoric. ?]
+[? if jvp_relation < 30 : They are suspicious, calling us "bourgeois parliamentarians," but don't reject cooperation outright. ?]
+
+- @return: Continue...
+
+@opposition_unp_dissidents
+subtitle: Risky - may backfire.
+on-arrival: {! Q.dissident_roll = Math.random(); !}
+go-to: dissidents_success if dissident_roll < 0.3; dissidents_failure if dissident_roll >= 0.3
+
+@dissidents_success
+on-arrival: unp_relation += 3; gov_support -= 2
+
+Some <span style="color: #006400;">**UNP**</span> backbenchers are unhappy with the leadership. We quietly approach them.
+
+A few agree to abstain on key votes or leak information about government plans. A small victory.
+
+- @return: Continue...
+
+@dissidents_failure
+on-arrival: unp_relation -= 5
+
+Our approach is rebuffed and reported to the <span style="color: #006400;">**UNP**</span> leadership. They accuse us of trying to destabilise the government through "backroom deals."
+
+- @return: Continue...
+
+@opposition_return
+
+- @build_opposition: Back to building opposition.
+- @root: Return to main menu.
+
+@no_confidence
+subtitle: Move a vote of no confidence in the government.
+view-if: unp_r < 120 or gov_support < 40
+
+A vote of no confidence is a dramatic step. With the <span style="color: #006400;">**UNP's**</span> massive majority, it cannot succeed - unless their support has collapsed.
+
+- @vonc_proceed: Proceed with the motion.
+- @vonc_return: This is not the right time.
+
+@vonc_proceed
+on-arrival: {! 
+Q.opposition_votes = Q.slfp_r + Q.tulf_r + Q.lssp_r + Q.cpsl_r + Q.nssp_r + Q.jvp_r + Q.actc_r;
+Q.government_votes = Q.unp_r + Q.cwc_r;
+Q.vonc_margin = Q.opposition_votes - Q.government_votes;
+!}
+go-to: vonc_success if vonc_margin > 0; vonc_failure if vonc_margin <= 0
+
+@vonc_success
+on-arrival: slfp_no_confidence = 1; unp_in_government = 0
+
+Against all odds, the vote succeeds! Enough <span style="color: #006400;">**UNP**</span> MPs crossed the floor or abstained.
+
+The government has fallen. New elections must be called.
+
+- @return: Continue...
+
+@vonc_failure
+on-arrival: gov_support -= 1*(1-dissent)
+
+The motion fails [+ opposition_votes +] to [+ government_votes +]. We knew it would, but it forces every MP to go on record supporting this government.
+
+- @return: Continue...
+
+@vonc_return
+
+- @root: Return to main menu.
+
+@impeachment
+subtitle: Move to impeach President [+ president +].
+view-if: president_party = "UNP"
+choose-if: gov_support < 30 or corruption_strenght >= 60
+unavailable-subtitle: There is no realistic prospect of success.
+
+Impeachment requires a two-thirds majority - 112 votes. An almost impossible threshold, but in extreme circumstances...
+
+- @impeach_proceed: Proceed with impeachment.
+- @impeach_return: This is premature.
+
+@impeach_proceed
+on-arrival: {!
+Q.impeach_votes = Q.slfp_r + Q.tulf_r + Q.lssp_r + Q.cpsl_r + Q.nssp_r + Q.jvp_r + Q.actc_r;
+!}
+go-to: impeach_success if impeach_votes >= 112; impeach_failure if impeach_votes < 112
+
+@impeach_success
+on-arrival: last_prez_impeached = 1; president = ""; president_party = ""
+
+History is made. The President is removed from office.
+
+- @return: Continue...
+
+@impeach_failure
+on-arrival: jr_relation -= 10; gov_support -= 1
+
+The motion fails with only [+ impeach_votes +] votes. We needed 112. 
+
+President [+ president +] denounces the "political circus" and our relations with him worsen further.
+
+- @return: Continue...
+
+@impeach_return
+
+- @root: Return to main menu.
+
+@walkout
+subtitle: Stage a dramatic protest by leaving parliament.
+on-arrival: gov_support -= 2*(1-dissent); left_dissent -= 3; nationalist_dissent -= 3
+
+Our MPs walk out of parliament in protest, drawing media attention to government abuses. The empty opposition benches make a powerful visual statement.
+
+[? if tulf_relation >= 30 : The <span style="color: #F7D917;">**TULF**</span> joins our walkout, making it a truly united opposition protest. ?]
+
+- @return: Continue...
+
+@nothing
+
+We conserve our energy for another day. Sometimes quiet observation is the wisest course.
+
+- @return: Continue...
