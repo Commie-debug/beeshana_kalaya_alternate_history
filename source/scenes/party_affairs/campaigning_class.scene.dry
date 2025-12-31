@@ -51,5 +51,10 @@ on-arrival: rural_slfp += 6*(1-dissent);
 
 We have increased our campaigning among rural class.
 
+@root
+
+- @return: Continue...
+
 @ethnic
+subtitle: Switches to ethnic campaigning
 go-to: campaigning_ethnic
