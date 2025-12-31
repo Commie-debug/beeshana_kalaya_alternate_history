@@ -13,9 +13,12 @@ max-visits: 5
 In addition to being a political party, the SLFP used to be a social world onto itself, with a vast array of associated organizations which serve the social needs of their members from cradle to grave.
 
 - @newspapers: Fund more newspapers and journalists.
-- @welfare: Fund more mutual aid and welfare programs.
+- @welfare: Create a welfare program for party members affected by the 1980 strike and the hard times in general.
 - @culture: Fund sports leagues, educational, and cultural programs.
-- @thug: Fund the street thugs.
+- @youth: Recruit among the younger generation and expand our youth wing.
+- @thug: Send more ruppees at the thugs. Whats the worste that can happen?
+- @rural: Rebuild our support in the rural south west.
+- @tamil: Reach out the tamils and rebuild the support we had among them.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
 
@@ -28,6 +31,30 @@ go-to: media
 
 # TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
 
+@tamil
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; slfp_sltamil += 5*(1 - dissent); nationalist_dissent += 4; slfp_itamil -= 5*(1 - dissent);
+
+Tamil dissatisfaction with the TULF and ACTC has driven some towards the SLFP. Though there is still much work to be done to gain more of their support.
+
+@rural
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; slfp_rural += 5*(1 - dissent); nationalist_dissent -= 6; jvp_rural -= 5*(1 - dissent);
+
+Slowly but surely we are rebuilding the trust thr rural folk had in the SLFP to address their needs, this has also reduced their support for more revolutionary forces...
+
+@youth
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; left_dissent -= 6; left_strenght += 6; student_union_slfp_control += 5*(1 - dissent);
+
+We have recruited among the diseffected youth, this has also made us more popular among the nassent student unions thus pushing many awy from the JVP. 
+
 
 @welfare
 choose-if: resources > 0
@@ -35,7 +62,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent);
 
-We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
+We have increased funding to Workers' Welfare. 
 
 @culture
 choose-if: resources > 0
@@ -43,9 +70,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
 
-It is not enough for the SPD to solely be a political party. The Worker Singer's League, Worker's Sports, and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
-
-[? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
+Our party members are rather happy with our frivulrous spending, so long as it keeps dissent down its worth it.
 
 @thug
 choose-if: resources > 0
@@ -53,7 +78,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
 
-We have increased recruiting local thugs to support us.
+We have increased in recruiting local thugs to protect us and our members. Though many in the left feel they are untrustworthy.
 
 @nothing
 
