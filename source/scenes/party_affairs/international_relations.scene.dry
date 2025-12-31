@@ -8,36 +8,65 @@ card-image: img/nonalligned_summit.jpg
 max-visits: 4
 #subtitle: Building ties with our fraternal socialist parties.
 
-At the Labor and Socialist International, we can forge contacts with our fraternal socialist parties in Europe and across the world.
+The SLFP has the potential to cooperate with both parties and nations around the world.
 
-- @inc: Build a morepositive relationship with the INC of India.
-- @austria: Learn organization and street fighting from the Austrian SDAPÖ.
-- @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
-- @comintern: Forget the second international - embed a spy in the Comintern's conference.
-- @america: Contact the Socialist party of America.
+- @inc: Build a more positive relationship with the INC of India. 
+- @nam: As a founding member of the Non Alligned Movement, we are rather important in the organisation and its member nations which span across several continents.
+- @usa: The United States is greatly interested in Sri Lanka and the UNP's direction for it, reducing any kinks between us may offer us greater support from the IMF as well for the military.
+- @ussr: The USSR has historically seen the SLFP as more ideologically favourable ally than the UNP, though recent troubles in the bloc are worrying.
+- @china: The Chinese are rather keen on expanding economic cooperation under their new leader, regardless of who is in charge. This may be profitable.
+- @internation: The Socialist Internationale allows us to connect with other likeminded socialist and social democratic parties, esspecially in the west such as Labour in the UK and the socialists of France.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
 
-@fr_uk
+@internation
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifism += 1; moderate_plan_support += 1
+on-arrival: resources -= 1; 
 
-The socialists of France and Britain can influence their governments to be friendlier towards Germany. Hopefully they will reduce our reparations burden.
+The Socialist Internationale parties offer us their support in the diplomatic and material fields, we can begin to rely on them when in need.
 
-@austria
-subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
+@china
+subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-audio: shuffle music/communist/workers_of_vienna_normalized.mp3
-on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
+on-arrival: resources -= 1; china_relation += 3
 
-Our Reichsbanner can learn much in paramilitary organization and training from the Austrian Republikanischer Schutzbund (Republican Protection Units), the paramilitary branch of the Austrian social democrats.
+The Chinese are have been persuaded to look at closer cooperation opportunities with Sri Lanka, the SLFP is to be thanked for this.
 
-[? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
+@ussr
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; ussr_relation += 3
 
+The Soviets are more willing to lend us support as well as a party, and materially as a nation.
+
+@usa
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; usa_relation += 3
+
+The US still views the UNP more favourably but how far they are willing to support them and JR seems to be waining.
+
+@inc
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; india_relation += 3
+
+Developing an at least neutral realtionship with the INC makes us seem a far more reliable partner than the troublesome UNP.
+
+@nam
+subtitle: -1 resources 
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: nam_relation += 3; resources -= 1;
+
+With the help of the movements many members, we have the ability to call on a wide range of support in the future if we were to govern.
 
 @scandi
 subtitle: -1 resources
