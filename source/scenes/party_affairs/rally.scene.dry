@@ -5,117 +5,226 @@ tags: party_affairs
 view-if: rally_timer <= 0
 on-arrival: month_actions += 1; rally_timer = 6
 card-image: img/rally.jpg
-go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not return_to_normalcy
+go-to: main_rally; jss_disrupt if jss_strength > 40 and slfp_in_government = 0 and unp_in_government = 1; jvp_counter if jvp_relation < 20 and jvp_banned = 0
 
-@sa_disrupt
+@jss_disrupt
 
-The Nazi SA has disrupted our rally! Their street troops are preventing us from meeting.
+The <span style="color: #006400;">**UNP's**</span> thugs, the Jaya Seva Sevaka (JSS), have arrived to disrupt our rally! Their goons are intimidating our supporters and blocking access to the venue.
 
-- @police_protect: Call the police to protect our rally.
-- @rb_protect: Use the Reichsbanner to protect our rally.
-- @both_protect: The police and Reichsbanner should work together to protect our rally.
+- @slfpt_protect: Use our own thugs to protect the rally.
 - @cancel: Cancel the rally.
+- @easy_discard
 
-@police_protect
-view-if: spd_prussia == 1
-on-arrival: police_protect_success = prussian_police_loyalty * prussian_police_militancy * prussian_police_strength*2 - sa_militancy*sa_strength;
-go-to: police_protect_win if police_protect_success >= 0; police_protect_lose if police_protect_success < 0
+@slfpt_protect
+on-arrival: {! Q.slfpt_success = Q.slfpt_strength * Q.slfpt_militancy - Q.jss_strength * Q.jss_militancy; !}
+go-to: slfpt_protect_win if slfpt_success >= 0; slfpt_protect_lose if slfpt_success < 0
 
-@police_protect_win
+@slfpt_protect_win
+on-arrival: slfpt_militancy += 0.02; nationalist_dissent -= 3
 go-to: main_rally
 
-The police successfully protected our rally, so it can go ahead as usual.
+Our thugs have successfully driven off the JSS! The rally can proceed, and our supporters are emboldened.
 
-@police_protect_lose
-on-arrival: strife += 1; workers_nsdap += 3
+@slfpt_protect_lose
+on-arrival: slfpt_strength -= 5
 
-Unfortunately, the police were unable or unwilling to hold back the SA mob. The Nazis have won this show of strength.
+Our thugs were outnumbered. The JSS have won this confrontation.
 
-@rb_protect
-on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy; strife += 1
-go-to: rb_protect_win if rb_success >= 0; rb_protect_lose if rb_success < 0
-
-@rb_protect_win
-go-to: main_rally
-
-The Reichsbanner has successfully protected our rally against the SA! Our meeting can go ahead as usual.
-
-@rb_protect_lose
-on-arrival: workers_nsdap += 3; rb_strength -= 50
-
-Unfortunately, the Reichsbanner was not able to hold back the SA mob. The Nazis have won this show of strength.
-
-@both_protect
-view-if: spd_prussia
-choose-if: prussian_police_training > 0
-unavailable-subtitle: The loyal sections of the police have never coordinated with the Reichsbanner before.
-on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy + prussian_police_loyalty*prussian_police_militancy*prussian_police_strength*2; strife += 1
-go-to: both_protect_win if rb_success >= 0; both_protect_lose if rb_success < 0
-
-@both_protect_win
-go-to: main_rally
-
-The police and Reichsbanner have successfully protected our rally against the SA! Our meeting can go ahead as usual.
-
-@both_protect_lose
-on-arrival: workers_nsdap += 3; rb_strength -= 50
-
-Unfortunately, the police and Reichsbanner were not able to hold back the SA mob. The Nazis have won this show of strength.
-
+- @return: Continue...
 
 @cancel
-on-arrival: workers_nsdap += 3;
+on-arrival: left_dissent += 5; nationalist_dissent += 5
 
-The SA have won this show of strength.
+We are forced to cancel the rally. The <span style="color: #006400;">**UNP**</span> has won this battle.
+
+- @return: Continue...
+
+@jvp_counter
+on-arrival: {! Q.jvp_disruption_roll = Math.random(); !}
+go-to: jvp_counter_major if jvp_disruption_roll < 0.4; main_rally if jvp_disruption_roll >= 0.4
+
+@jvp_counter_major
+
+The <span style="color: #FF2226;">**JVP**</span> has organised a counter-rally nearby! Their activists are heckling our speakers.
+
+- @ignore_jvp: Ignore them and continue with our rally.
+- @confront_jvp: Send speakers to debate them publicly.
+- @invite_jvp: Invite their leaders to speak at our rally.
+- @easy_discard
+
+@ignore_jvp
+on-arrival: jvp_relation -= 3
+go-to: main_rally
+
+We proceed with our rally, drowning out the <span style="color: #FF2226;">**JVP**</span> hecklers.
+
+@confront_jvp
+on-arrival: {! Q.debate_roll = Math.random(); !}
+go-to: debate_win if debate_roll < 0.5; debate_lose if debate_roll >= 0.5
+
+@debate_win
+on-arrival: jvp_relation += 5; left_dissent -= 5; student_union_slfp_control += 2
+go-to: main_rally
+
+Our speakers acquit themselves well! The confrontation ends with mutual respect.
+
+@debate_lose
+on-arrival: jvp_relation -= 5; left_dissent += 5; student_union_jvp_control += 2
+
+The <span style="color: #FF2226;">**JVP**</span> speakers outmanoeuvre ours with fiery rhetoric.
+
+- @return: Continue...
+
+@invite_jvp
+choose-if: jvp_relation >= 10
+unavailable-subtitle: Relations with the JVP are too hostile.
+on-arrival: {! Q.invite_roll = Math.random(); !}
+go-to: invite_accept if invite_roll < 0.6; invite_reject if invite_roll >= 0.6
+
+@invite_accept
+on-arrival: jvp_relation += 10; left_strength += 3; left_dissent -= 8; nationalist_dissent += 10
+go-to: main_rally
+
+The <span style="color: #FF2226;">**JVP**</span> leaders accept! They speak alongside our candidates. The <span style="color: #0F52BA;">**Nationalists**</span> are furious, but the left is energised.
+
+@invite_reject
+on-arrival: jvp_relation -= 2
+go-to: main_rally
+
+The <span style="color: #FF2226;">**JVP**</span> reject our olive branch. The rally proceeds without them.
 
 @main_rally
 
-Mass rallies are a common feature of social democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
+= Political Rally
 
-- @class_struggle: The class struggle of the proletariat against the bourgeoisie.
-- @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
-- @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
-- @pacifism: Opposing war, nationalism, and militarism at all costs.
-- @wtb: Support the WTB plan!
-- @local: A mixture of various local and national concerns that resonate most with the audience.
+Mass rallies are a cornerstone of Sri Lankan politics. Thousands gather to hear speeches and show their support. What message should our speakers emphasise?
+
+- @socialism_theme: The socialist path - nationalisation and workers' rights.
+- @nationalism_theme: Sinhalese Buddhist heritage and national pride.
+- @democracy_theme: Restore democracy and end UNP authoritarianism.
+- @anti_corruption: Clean government and end UNP corruption.
+- @peace_theme: Peace and reconciliation - end the cycle of violence.
+- @tamil_rights: Justice and equality for all communities.
+- @welfare_theme: Restore social programs and help the poor.
+- @united_front: Recreate the spirit of the United Front!
+- @sirimavo_rally: Let Sirimavo address the crowd personally.
+- @local: Address local concerns.
 - @easy_discard
 
-@class_struggle
-on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2;
+@socialism_theme
+subtitle: Appeals to workers and the left. May alienate middle class.
+on-arrival: workers_slfp += 4*(1-dissent); left_strength += 5; left_dissent -= 8; middle_slfp -= 2; upper_slfp -= 2; labour_union_slfp_control += 1; socialism += 2*(1-dissent)
 
-Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
+Our speakers thunder against capitalism and the <span style="color: #006400;">**UNP's**</span> free-market policies. They call for nationalisation and power to the workers!
 
-@welfare
-on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
+[? if total_nationalisation >= 10 : Our record of nationalisation gives these words weight. ?]
 
-The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+The <span style="color: #C41E3A;">**Left**</span> faction is energised.
 
-@democracy
-on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
+- @return: Continue...
 
-Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
+@nationalism_theme
+subtitle: Appeals to Sinhalese rural base. Angers left, damages minority relations.
+on-arrival: rural_slfp += 5*(1-dissent); sinhala_slfp += 3*(1-dissent); nationalist_strength += 5; nationalist_dissent -= 8; left_dissent += 10; sinhala_nationalism += 3; tulf_relation -= 5; actc_relation -= 5; cwc_relation -= 3
 
-[? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
-[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
+Our speakers invoke the legacy of S.W.R.D. Bandaranaike and the Sinhala Buddhist revival. They speak of protecting our culture and our land.
 
-@pacifism
-on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
+The crowds in the rural south roar with approval. But our <span style="color: #C41E3A;">**Left**</span> faction shifts uncomfortably.
 
-Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
+- @return: Continue...
 
-[? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
-[? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
+@democracy_theme
+subtitle: Attack UNP authoritarianism. Broad appeal.
+on-arrival: workers_slfp += 3*(1-dissent); middle_slfp += 3*(1-dissent); left_dissent -= 3; nationalist_dissent -= 3; gov_support -= 2*(1-dissent)
 
-@wtb
-view-if: wtb_adopted = 1
-choose-if: return_to_normalcy = 0
-unavailable-subtitle: The economic crisis is largely over now, and the public is no longer interested in hearing about it.
-on-arrival: wtb_support += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); rural_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent);
+Our speakers denounce the <span style="color: #006400;">**UNP's**</span> authoritarian rule - the 1978 constitution, the stripping of Sirimavo's civic rights, and the suppression of the 1980 strike.
 
-The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises.
+[? if sirimavo_rights_restored = 0 : "They have silenced our leader, but they cannot silence the people!" ?]
 
+This message resonates across factional lines.
+
+- @return: Continue...
+
+@anti_corruption
+subtitle: Safe message with broad appeal.
+on-arrival: workers_slfp += 3*(1-dissent); middle_slfp += 3*(1-dissent); rural_slfp += 3*(1-dissent); gov_support -= 2*(1-dissent)
+
+Our speakers attack the rampant corruption of the <span style="color: #006400;">**UNP**</span> government - the cronyism and misuse of public funds.
+
+[? if corruption_strenght >= 50 : The evidence of UNP corruption is everywhere, and the crowd responds enthusiastically. ?]
+
+- @return: Continue...
+
+@peace_theme
+subtitle: End the violence. May anger nationalists.
+view-if: tamil_war >= 0.3 or jvp_war >= 0.1
+on-arrival: middle_slfp += 3*(1-dissent); tulf_relation += 5; nationalist_dissent += 12; left_dissent -= 3
+
+Our speakers call for an end to the bloodshed. They speak of political solutions and dialogue.
+
+[? if war_exhaustion >= 20 : As the body count rises, more people are receptive to this message. ?]
+
+The <span style="color: #0F52BA;">**Nationalist**</span> faction is outraged.
+
+- @return: Continue...
+
+@tamil_rights
+subtitle: Justice for minorities. High risk.
+on-arrival: tulf_relation += 10; actc_relation += 8; cwc_relation += 5; nationalist_dissent += 20; left_dissent -= 5; tamil_radicalisation -= 2; sinhala_nationalism -= 2*(1-dissent); sinhala_slfp -= 3; rural_slfp -= 3
+
+Our speakers acknowledge past injustices against Tamil people and call for genuine equality.
+
+The <span style="color: #0F52BA;">**Nationalist**</span> faction is furious. Some walk out. But Tamil leaders take note of our courage.
+
+[? if nationalist_strength > left_strength : This may cost us dearly in Sinhalese areas. ?]
+
+- @return: Continue...
+
+@welfare_theme
+subtitle: Restore social programs. Appeals to poor and workers.
+on-arrival: workers_slfp += 4*(1-dissent); rural_slfp += 4*(1-dissent); left_dissent -= 3; labour_union_slfp_control += 1
+
+Our speakers remind the crowd of what the <span style="color: #00008B;">**SLFP**</span> has done - the rice subsidy, free education, free healthcare. They contrast this with the <span style="color: #006400;">**UNP's**</span> cuts.
+
+"Under us, the poor were protected. Under them, only the rich prosper!"
+
+[? if south_poverty >= 0.6 : In the impoverished south, this message hits home. ?]
+
+- @return: Continue...
+
+@united_front
+subtitle: Invoke coalition with LSSP and CPSL.
+view-if: lssp_relation >= 30 or cpsl_relation >= 30
+choose-if: lssp_relation >= 25 and cpsl_relation >= 25
+unavailable-subtitle: Relations with LSSP and CPSL are too strained.
+on-arrival: workers_slfp += 5*(1-dissent); lssp_relation += 5; cpsl_relation += 5; left_strength += 3; left_dissent -= 10; nationalist_dissent += 8; labour_union_slfp_control += 2
+
+Our speakers invoke the glory days of the United Front - when <span style="color: #00008B;">**SLFP**</span>, <span style="color: #A91101;">**LSSP**</span>, and <span style="color: #65000B;">**CPSL**</span> united to defeat the <span style="color: #006400;">**UNP**</span>.
+
+[? if lssp_relation >= 40 and cpsl_relation >= 40 : Representatives from our former coalition partners wave to the cheering crowd! ?]
+
+- @return: Continue...
+
+@sirimavo_rally
+title: Have Sirimavo address the crowd personally.
+subtitle: Powerful impact, uses advisor action.
+view-if: sirimavo_advisor = 1
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: We have recently used an advisor action.
+on-arrival: advisor_action_timer = 6; workers_slfp += 5*(1-dissent); rural_slfp += 5*(1-dissent); middle_slfp += 3*(1-dissent); left_dissent -= 5; nationalist_dissent -= 5; resources += 1
+
+Sirimavo Bandaranaike addresses the massive crowd. Her presence electrifies the rally.
+
+[? if sirimavo_rights_restored = 0 : "They have tried to silence me," she declares, "but the voice of the people cannot be silenced!" ?]
+
+Her speech unites the factions, and donations pour in.
+
+- @return: Continue...
 
 @local
-on-arrival: workers_spd += 3*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent);
+subtitle: Safe and modest gains.
+on-arrival: workers_slfp += 2*(1-dissent); rural_slfp += 2*(1-dissent); middle_slfp += 2*(1-dissent)
 
-Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
+Our speakers address local issues - infrastructure, jobs, the cost of living. It's not inspiring, but it's effective.
+
+- @return: Continue...
