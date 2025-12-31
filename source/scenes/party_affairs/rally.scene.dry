@@ -3,6 +3,7 @@ new-page: true
 is-card: true
 tags: party_affairs
 view-if: rally_timer <= 0
+max-visits: 100
 on-arrival: month_actions += 1; rally_timer = 6
 card-image: img/rally.jpg
 go-to: main_rally; jss_disrupt if jss_strength > 40 and slfp_in_government = 0 and unp_in_government = 1; jvp_counter if jvp_relation < 20 and jvp_banned = 0
