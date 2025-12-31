@@ -60,5 +60,10 @@ on-arrival: worker_slfp += 6*(1-dissent);
 
 We have increased our campaigning among the smaller ethnic groups of Sri Lanka. 
 
+@root
+
+- @return: Continue...
+
 @class
+subtitle: Switches to class campaigning
 go-to: campaigning_class
