@@ -123,7 +123,7 @@ if (Q.month_actions >= 1) {
 
     // decrement timers (only when month actually changes for monthly timers)
     if (Q.week == 1) {
-        for (timer of Q.timers) {
+        for (var timer of Q.timers) {
             if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
                 Q[timer+'_timer'] -= 1;
             }
