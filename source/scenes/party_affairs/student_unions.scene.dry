@@ -14,16 +14,63 @@ Among the higher educational facilities throughout the island, the youth and eve
 In fact the <span style="color: #FF2226;">**JVP**</span>'s support base has been via the student unions during their revolt and still now. Other parties like the <span style="color: #65000B;">**CPSL**</span>, <span style="color: #A91101;">**LSSP**</span> and the <span style="color: #00008B;">**SLFP**</span> have a compartivly smaller support base in these unions. If we can gain the support of the student unions, it can put a dent in the <span style="color: #FF2226;">**JVP**</span> and be a powerfull force for us to implement. 
   
 - @resources: We can send resources to our allied unions to help them expand and better support their constituents.
+- @independents: Reach out to independent unions to allign them with the SLFP.
+- @jvp: Perhaps we can cooperate with the JVP affiliated unions?
+- @rally: We should organise a rally to voice the student anger at the UNP and its administration.
+- @thugs: The street thugs could be used to intimidate our rivals and neutrals, the JVP will likely retaliate.
 - @nothing: Do not increase funding and support.
 - @easy_discard
+
+@thugs
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; 
+
+Some that we threatened have albeit under the threat of violence, join us. Others have been driven into the arms of the JVP, this has substantially deteriorates relations with them.
+
+@rally
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; 
+
+The rally was a relative success. Many students have decided to even join our unions. The government is rather pissed however...
+
+@jvp
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; jvp_relation += 5*(1 - dissent);
+
+The JVP alligned unions have agreed to albeit, limited cooperation. The mood between us and the JVP has grown.
 
 @resources
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; media_timer = 0;
+on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent);
 
-//Sending resources will increase overall union power
+We have managed to expand the reach of SLFP alligned student unions.
+
+@independents
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent); jvp_relation -= 5*(1 - dissent);
+
+Some the unions agreed to align themselves around our orbit, but others are rightfully suspicious including the JVP and its unions.
+
+@independents
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources 
+on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent); jvp_relation -= 5*(1 - dissent);
+
+Some the unions agreed to align themselves around our orbit, but others are rightfully suspicious including the JVP and its unions.
+
+
+#Sending resources will increase overall union power
 
 #Add more options for expanding SLFP control via reaching to independents, converting unions to us (with a bit of cash).
 
