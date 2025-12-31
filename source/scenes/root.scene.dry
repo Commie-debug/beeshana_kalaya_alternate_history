@@ -1476,12 +1476,12 @@ Q.in_election = 0;
 //72 months or 6 years
 Q.president_term = 72;
 Q.next_pres_election_year = 1981;
-Q.next_pres_election_month = 9;
+Q.next_pres_election_month = 3;
 //for real, parliament elections for august 1983
 //72 months or 6 years
 Q.parliament_term = 72;
 Q.next_parl_election_year = 1981;
-Q.next_parl_election_month = 10;
+Q.next_parl_election_month = 3;
 Q.next_election_time = 5;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
