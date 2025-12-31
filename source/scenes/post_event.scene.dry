@@ -82,7 +82,7 @@ var total_strength = Q.left_strength + Q.nationalist_strength;
 Q.left_strength = 100*Q.left_strength/total_strength;
 Q.nationalist_strength = 100*Q.nationalist_strength/total_strength;
 
-var total_dissent = Q.left_strength*Q.left_dissent + Q.nationalist_strength*Q.nnationalist_dissent;
+var total_dissent = Q.left_strength*Q.left_dissent + Q.nationalist_strength*Q.nationalist_dissent;
 
 //militant control
 var total_ne_control = Q.jaffna_d_control + Q.kilinochchi_d_control + Q.mannar_d_control + Q.mullaitivu_d_control + Q.vavuniya_d_control + Q.batticaloa_d_control + Q.ampara_d_control + Q.trincomalee_d_control;  
