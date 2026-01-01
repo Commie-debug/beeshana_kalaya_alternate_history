@@ -348,10 +348,6 @@ Q.slfpt_strength = 10;
 Q.slfpt_militancy = 0.24;
 Q.slfpt_gstatus = 1;
 
-Q.unpt_strength = 30;
-Q.unpt_militancy = 0.24;
-Q.unpt_gstatus = 1;
-
 Q.jvpt_strength = 20;
 Q.jvpt_militancy = 0.24;
 Q.jvpt_gstatus = 1;
