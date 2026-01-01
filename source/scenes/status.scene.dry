@@ -203,9 +203,6 @@ if (Q.slfpt_strength) {
 if (Q.jss_strength) {
     Q.jss_strength_2 = Q.jss_strength.toFixed(1);
 }
-if (Q.unpt_strength) {
-    Q.unpt_strength_2 = Q.unpt_strength.toFixed(1);
-}
 if (Q.jvpt_strength) {
     Q.jvpt_strength_2 = Q.jvpt_strength.toFixed(1);
 }
@@ -257,8 +254,6 @@ if (Q.ipkf_morale) {
 [? if prra_formed = 1 : PRRA: Strength: [+ prra_strength_2 : group_strength +], Militarization: [+ prra_militancy : militancy +] ?]
 
 <span class="tooltip-text" style="color: #006400;" title="Jathika Sevaka Sangremaya">**JSS**</span> Strength: [+ jss_strength_2 : group_strength +], Militarization: [+ jss_militancy : militancy +]
-
-<span class="tooltip-text" title="Thugs affiliated with the UNP" style="color: #006400;">**UNP Thugs**</span> Strength: [+ unpt_strength_2 : group_strength +], Militarization: [+ unpt_militancy : militancy +]
 
 <span class="tooltip-text" title="Thugs affiliated with the JVP" style="color: #FF2226;">**JVP Thugs**</span> Strength: [+ jvpt_strength_2 : group_strength +], Militarization: [+ jvpt_militancy : militancy +]
 
