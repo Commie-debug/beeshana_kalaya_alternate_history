@@ -60,7 +60,7 @@ We have recruited among the diseffected youth, this has also made us more popula
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent);
+on-arrival: resources -= 1; workers_slfp += 5*(1 - dissent); rural_slfp += 5*(1 - dissent);
 
 We have increased funding to Workers' Welfare. 
 
@@ -68,7 +68,7 @@ We have increased funding to Workers' Welfare.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
+on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; nationalist_dissent -= 6
 
 Our party members are rather happy with our frivulrous spending, so long as it keeps dissent down its worth it.
 
