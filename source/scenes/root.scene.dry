@@ -1103,7 +1103,7 @@ Q.upper = 1;
 Q.rural = 70;
 
 Q.ethnic =['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
-Q.classes = ['upper', 'middle', 'worker', 'rural'];
+Q.classes = ['upper', 'middle', 'workers', 'rural'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc'];
 
 //voting weightage between class and ethnic
