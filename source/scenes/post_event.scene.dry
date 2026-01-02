@@ -89,6 +89,90 @@ var total_ne_control = Q.jaffna_d_control + Q.kilinochchi_d_control + Q.mannar_d
 
 Q.militant_control = total_ne_control*1/800
 
+//normalize labour union control
+var total_labour_control = Q.labour_union_slfp_control + Q.labour_union_unp_control + Q.labour_union_cpsl_control + Q.labour_union_lssp_control + Q.labour_union_cwc_control + Q.labour_union_jvp_control + Q.labour_union_independent_control;
+if (total_labour_control > 0) {
+    Q.labour_union_slfp_control = Math.round(100 * Q.labour_union_slfp_control / total_labour_control * 10) / 10;
+    Q.labour_union_unp_control = Math.round(100 * Q.labour_union_unp_control / total_labour_control * 10) / 10;
+    Q.labour_union_cpsl_control = Math.round(100 * Q.labour_union_cpsl_control / total_labour_control * 10) / 10;
+    Q.labour_union_lssp_control = Math.round(100 * Q.labour_union_lssp_control / total_labour_control * 10) / 10;
+    Q.labour_union_cwc_control = Math.round(100 * Q.labour_union_cwc_control / total_labour_control * 10) / 10;
+    Q.labour_union_jvp_control = Math.round(100 * Q.labour_union_jvp_control / total_labour_control * 10) / 10;
+    //independent getremainder 
+    Q.labour_union_independent_control = Math.round((100 - Q.labour_union_slfp_control - Q.labour_union_unp_control - Q.labour_union_cpsl_control - Q.labour_union_lssp_control - Q.labour_union_cwc_control - Q.labour_union_jvp_control) * 10) / 10;
+}
+
+//normalize student union control
+var total_student_control = Q.student_union_jvp_control + Q.student_union_cpsl_control + Q.student_union_slfp_control + Q.student_union_lssp_control + Q.student_union_independent_control;
+if (total_student_control > 0) {
+    Q.student_union_jvp_control = Math.round(100 * Q.student_union_jvp_control / total_student_control * 10) / 10;
+    Q.student_union_cpsl_control = Math.round(100 * Q.student_union_cpsl_control / total_student_control * 10) / 10;
+    Q.student_union_slfp_control = Math.round(100 * Q.student_union_slfp_control / total_student_control * 10) / 10;
+    Q.student_union_lssp_control = Math.round(100 * Q.student_union_lssp_control / total_student_control * 10) / 10;
+    //independent getremainder 
+    Q.student_union_independent_control = Math.round((100 - Q.student_union_jvp_control - Q.student_union_cpsl_control - Q.student_union_slfp_control - Q.student_union_lssp_control) * 10) / 10;
+}
+
+//normalize party support (class)
+for (var cls of Q.classes) {
+    var total_class_support = 0;
+    for (var party of Q.parties) {
+        if (Q[cls + '_' + party] < 0) {
+            Q[cls + '_' + party] = 0;
+        }
+        total_class_support += Q[cls + '_' + party];
+    }
+    
+    if (total_class_support > 0) {
+        for (var party of Q.parties) {
+            Q[cls + '_' + party] = Math.round(100 * Q[cls + '_' + party] / total_class_support * 10) / 10;
+        }
+        
+        //give remainder to largest party
+        var new_total = 0;
+        var largest_party = Q.parties[0];
+        var largest_value = 0;
+        for (var party of Q.parties) {
+            new_total += Q[cls + '_' + party];
+            if (Q[cls + '_' + party] > largest_value) {
+                largest_value = Q[cls + '_' + party];
+                largest_party = party;
+            }
+        }
+        Q[cls + '_' + largest_party] = Math.round((Q[cls + '_' + largest_party] + (100 - new_total)) * 10) / 10;
+    }
+}
+
+//normalize party support (class)
+for (var ethnic of Q.ethnic) {
+    var total_ethnic_support = 0;
+    for (var party of Q.parties) {
+        if (Q[ethnic + '_' + party] < 0) {
+            Q[ethnic + '_' + party] = 0;
+        }
+        total_ethnic_support += Q[ethnic + '_' + party];
+    }
+    
+    if (total_ethnic_support > 0) {
+        for (var party of Q.parties) {
+            Q[ethnic + '_' + party] = Math.round(100 * Q[ethnic + '_' + party] / total_ethnic_support * 10) / 10;
+        }
+        
+        //give remainder to largest party
+        var new_total = 0;
+        var largest_party = Q.parties[0];
+        var largest_value = 0;
+        for (var party of Q.parties) {
+            new_total += Q[ethnic + '_' + party];
+            if (Q[ethnic + '_' + party] > largest_value) {
+                largest_value = Q[ethnic + '_' + party];
+                largest_party = party;
+            }
+        }
+        Q[ethnic + '_' + largest_party] = Math.round((Q[ethnic + '_' + largest_party] + (100 - new_total)) * 10) / 10;
+    }
+}
+
 Q.dissent = 0.01*total_dissent/total_strength;
 Q.dissent_percent = Q.dissent*100;
 console.log('new dissent: ' + Q.dissent);
