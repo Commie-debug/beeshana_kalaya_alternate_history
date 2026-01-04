@@ -1412,6 +1412,9 @@ Q.natsecurity_minister_party = 'UNP';
 
 Q.electoral_threshold = 0;
 
+//local government, 
+Q.slfp_local_gov = 0;
+
 //ammendments
 Q.national_list_added = 1;
 
