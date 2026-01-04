@@ -1,6 +1,6 @@
 title: Anti tamil violence across the island
 subtitle: This cant be good...
-view-if: year = 1981 and month = 6
+view-if: year = 1981 and month = 6 and disable_event_problem = 1
 max-visits: 1
 tags: event
 new-page: true
