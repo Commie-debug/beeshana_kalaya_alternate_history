@@ -11,6 +11,7 @@ The ballots have been counted and the results are now in for the District Develo
 - @results: Lets see the results
 
 @results
+max-visits: 1
 go-to: slfp_results if ddc_elections_boycott == 0; cannon_results if ddc_elections_boycott == 1;
 
 The results are as follows:
