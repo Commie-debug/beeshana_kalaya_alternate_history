@@ -1,0 +1,29 @@
+title: District Development Council elections announced
+view-if: year = 1981 and month = 6 and week = 1
+max-visits: 1
+tags: event
+new-page: true
+
+= District Development Council election results
+
+The ballots have been counted and the results are now in for the District Development Council's. [? if ddc_elections_boycott = 0 : Lets hope our campaiging has paid off ?] [? if ddc_elections_boycott = 1 : Without our participation, the UNP is likely to sweep the Sinhalese south west  ?]
+
+- @results: Lets see the results
+
+@results:
+go-to: slfp_results if ddc_elections_boycott = 0; cannon_results if ddc_elections_boycott = 1;
+
+The results are as follows:
+
+@slfp_results
+on-arrival: slfp_local_gov = 1;
+
+The North-East is mostly a win for the TULF even with the violence, the TULF secured the majority of seats in Jaffna despite a delay in counting and voting. The SLFP also managed to secure albeit a handfull of seats throughout the north east as whole. In the Vanni, TULF and UNP candidates won while the eastern districts were closer between the two, the ACTC also managed to win a few seats along with the SLFP. In the rest of the country the UNP sweeped winning several districts outright. The SLFP contrary to predications was able to secure several seats as well, the same was also true for the JVP who won seats in the southern districts.
+
+It seems we have managed to at least partially rebuild the party from the events of 77. Our representation in the DDC's allows to take part in an albiet limited fashion in local governance. Voter turnout was also notably low, wheter its an indication of discontent with the UNP is too be seen.
+
+@cannon_results
+
+The North-East is mostly a win for the TULF even with the violence, the TULF secured all seats in Jaffna despite a delay in counting and voting. In the Vanni, TULF and UNP candidates won while the eastern districts were closer between the two, the ACTC also managed to win a few seats. In the rest of the country the UNP sweeped the results winning several districts outright. The JVP also managed to secure a few seats esspecially in south. 
+
+It was unlikely we would have won much if we took part, at the very least the legitamcy of the elections has been called into question. Voter turnout was low and there are alleged reports of inconsistencies, an estimate put it at 10% of casted ballots being spoiled. Wheter its an indication of discontent with the UNP is too be seen.
