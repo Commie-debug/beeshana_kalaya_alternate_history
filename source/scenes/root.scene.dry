@@ -69,12 +69,6 @@ Q.center_dissent = 0;
 Q.left_split = 0;
 Q.nationalist_split = 0;
 
-// ddc events
-Q.ddc_elections_boycott = 0;
-Q.lsspbacking = 0;
-Q.cpslbacking = 0;
-Q.nsspbacking = 0;
-
 // organizations in the slfp
 Q.slfp_union = 5;
 
@@ -429,9 +423,14 @@ Q.war_exhaustion = 0;
 
 //important events, 0-hasnt happened, 1-has happened
 Q.blackjuly = 0;
-
 //indian operation poomalai
 Q.india_landfall = 0;
+// ddc events
+Q.ddc_elections_boycott = 0;
+Q.lsspbacking = 0;
+Q.cpslbacking = 0;
+Q.nsspbacking = 0;
+
 
 //southern/sinhalese/jvp situatiion
 Q.jvp_war=0.00;
