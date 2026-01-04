@@ -26,8 +26,8 @@ Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 Q.day_actions = 0;
-//If 0, India hasnt intervened, time is month by month. If 1, India has intervened, time slows to week by week.
-Q.india_landfall = 0;
+//If 0, India hasnt intervened, time is month by 2 weeks. If 1, India has intervened, time slows to week by week.
+
 
 Q.state_of_emergency = 0;
 
@@ -426,6 +426,12 @@ Q.security_forces_strenght = 9;
 Q.war_exhaustion = 0;
 
 // The state of the country
+
+//important events, 0-hasnt happened, 1-has happened
+Q.blackjuly = 0;
+
+//indian operation poomalai
+Q.india_landfall = 0;
 
 //southern/sinhalese/jvp situatiion
 Q.jvp_war=0.00;
