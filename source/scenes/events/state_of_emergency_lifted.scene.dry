@@ -1,5 +1,5 @@
 title: State of emergency lifted
-view-if: state_of_emergency_timer = 0 and state_of_emergency = 1
+view-if: state_of_emergency_timer = 12 and state_of_emergency = 1
 on-arrival: state_of_emergency = 0
 tags: event
 new-page: true
