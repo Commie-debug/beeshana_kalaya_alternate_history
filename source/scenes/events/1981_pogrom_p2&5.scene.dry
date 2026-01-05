@@ -1,0 +1,41 @@
+title: A vote of no confidence
+view-if: year = 1981 and month = 7 and week = 2
+max-visits: 1
+tags: event
+
+= Vote of no confidence called against leader of the opposition
+
+In response to the TULF's attempt at a vote of no confidence against the government, the UNP put forward a counter vote of no condidence, this time against leader of the opposition A. Amirthalingam. This was unprecedented, and while normal custom dictates that oppoistion motions be given priority, the government overuled the TULF's motion and face tracked their own VONC. 
+
+The motion was supported by 36 UNP MP's and supported by the president himself though very few in the UNP dare to defy the party line.
+
+On the day, as Amirthalingam stood to make his defense, the building went into chaos as UNP MP's began hurling a flood of choice epithets like “tiger supporter”, “liar”, and “traitor”. The MP from Panadura objected to Amirthalingam making a statment, speaker of parliament Bakeer Markar (UNP) agreed and refused to let Amirthalingam speak further. In response, the TULF MP's stormed out of parliament.
+
+- @against: SLFP MP Maitripala Senanayake raised a point of order, he points out that this sort of procedure is unprecedented not just in Sri Lanka, but the world, the motion was outside of parliaments power, the leader of opposition already enjoyed the confidence of the opposition and need not have the support of the government, and lastly even if the motion passed, there exists no procedures to replace Amirthalingam, he would still be leader of the opposition.
+- @passive: SLFP MP's were unable to come up with anything subtstantive to say, this will be incredibly unpopular for both the Left and Nationalists.
+
+@passive
+on-arrival: tulf_relation -= 5; cpsl -= 5; sltamil_unp -= 7; itamil_unp -= 7; gov_support -= 4; tamil_nationalism += 3; sinhala_nationalism += 5; sltamil_slfp -= 3; itamil_slfp -= 2;
+
+Our passivity is met with confusion among the other opposition parties. Sarath Muttetuwegama (CPSL) followed the arguing with a thorough condemnation of the motion and its lack of legality and precedent. He would leave the building like the TULF MP's
+
+What followed was nothing short of comical. UNP MP's essentially ran unopposed in their proceedings most of them didnot speak, backbenchers were able to speak their mind freely. They began advocating ideas for how to "punish" Amirthalingam and other "traitorous" TULF MP's. Wippings, mutilations, drowning in the Beira and execution on Galle Face green were some of the methods discussed. 3 methods were so ghastly that they were immedietly expunged by the speaker.
+
+CWC MP Saumiyamoorthy Thondaman gave a few words heavily critcising the motion. He went as far to claim that if the motion is passed, it would drive Tamils towards the militants.
+
+Voting finally came, Thondaman abstained, members of the SLFP voted against. We were joined by one lone UNP'er' who voted against. He was Shelton Ranaraja from Senkadagala, a former SLFP member and notably also voted against deprivng Mrs Bandaranaike's civil rights last year.
+
+The motion passed but as expected, nothing happened and A. Amirthalingam is still leader of the opposition. The motion has led to condemnations of the UNP from nearlly every other political outfit in the nation, their support has fallen among tamils and peoples confidence in the government is lowered. While we still voted against the motion, our lack of any coherent opposition in the debate and our unwillingness to join the CPSL and TULF walkout has lowered relations with the two.
+
+@against
+on-arrival: sltamil_unp -= 7; itamil_unp -= 7; gov_support -= 4; tamil_nationalism += 3; sinhala_nationalism += 5;
+
+Speaker Bakeer Markar avoids any of the questions and points raised by the SLFP MP and instead says that the point was raised too late. Sarath Muttetuwegama (CPSL) rebutels that the speaker is letting government MP's run parliament without opposition input. Soon after, he and the SLFP MP's walkout of parliament in protest.
+
+What followed was nothing short of comical. UNP MP's essentially ran unopposed in their proceedings most of them didnot speak, backbenchers were able to speak their mind freely. They began advocating ideas for how to "punish" Amirthalingam and other "traitorous" TULF MP's. Wippings, mutilations, drowning in the Beira and execution on Galle Face green were some of the methods discussed. 3 methods were so ghastly that they were immedietly expunged by the speaker.
+
+CWC MP Saumiyamoorthy Thondaman gave a few words heavily critcising the motion. He went as far to claim that if the motion is passed, it would drive Tamils towards the militants.
+
+Voting finally came, Thondaman abstained and one lone UNP'er' voted against. He was Shelton Ranaraja from Senkadagala. He was a former SLFP member and notably also voted against deprivng Mrs Bandaranaike's civil rights last year.
+
+The motion passed but as expected, nothing happened and A. Amirthalingam is still leader of the opposition. The motion has led to condemnations of the UNP from nearlly every other political outfit in the nation, their support has fallen among tamils and peoples confidence in the government is lowered. Our opposition to the motion has brought the entire opposition closer, perhaps there is a possibility of a unified oppositionn in the future.
