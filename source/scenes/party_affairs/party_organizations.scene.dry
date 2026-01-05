@@ -35,7 +35,7 @@ go-to: media
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; slfp_sltamil += 5*(1 - dissent); nationalist_dissent += 4; slfp_itamil -= 5*(1 - dissent);
+on-arrival: resources -= 1; slfp_sltamil += 5*(1-dissent); nationalist_dissent += 4; slfp_itamil -= 5*(1-dissent);
 
 Tamil dissatisfaction with the TULF and ACTC has driven some towards the SLFP. Though there is still much work to be done to gain more of their support.
 
@@ -43,7 +43,7 @@ Tamil dissatisfaction with the TULF and ACTC has driven some towards the SLFP. T
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; slfp_rural += 5*(1 - dissent); nationalist_dissent -= 6; jvp_rural -= 5*(1 - dissent);
+on-arrival: resources -= 1; slfp_rural += 5*(1-dissent); nationalist_dissent -= 6; jvp_rural -= 5*(1-dissent);
 
 Slowly but surely we are rebuilding the trust thr rural folk had in the SLFP to address their needs, this has also reduced their support for more revolutionary forces...
 
@@ -51,7 +51,7 @@ Slowly but surely we are rebuilding the trust thr rural folk had in the SLFP to 
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; left_dissent -= 6; left_strenght += 6; student_union_slfp_control += 5*(1 - dissent);
+on-arrival: resources -= 1; left_dissent -= 6; left_strenght += 6; student_union_slfp_control += 5*(1-dissent);
 
 We have recruited among the diseffected youth, this has also made us more popular among the nassent student unions thus pushing many awy from the JVP. 
 
@@ -60,7 +60,7 @@ We have recruited among the diseffected youth, this has also made us more popula
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; workers_slfp += 5*(1 - dissent); rural_slfp += 5*(1 - dissent);
+on-arrival: resources -= 1; workers_slfp += 5*(1-dissent); rural_slfp += 5*(1-dissent);
 
 We have increased funding to Workers' Welfare. 
 
