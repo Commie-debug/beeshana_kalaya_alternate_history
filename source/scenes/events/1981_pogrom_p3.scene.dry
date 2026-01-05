@@ -6,6 +6,25 @@ tags: event
 
 = A heated debate in parliament
 
-During a session of parliament a heated debate began between MP's esspecially within the UNP.
+During a session of parliament a heated debate began between MP's esspecially within the UNP. The instigators came for UNP backbenchers angry at the percieved lack of response to the killing of a policeman by militants in Jaffna last month and the UNP's negotiations with the TULF which led to the DDC's. They percieve both to be a capitulation to the demands of a seperate state. A state of emergency had already been declared by JR following the rampage that occured in Jaffna city and the sporadic clashes across the island.
 
-  
+During the racket, several of the UNP backbenchers began hurling racist and racial charged rhetoric against Tamils and those they saw as collaborating with the Tamils. 
+
+- @support: Members of the SLFP in parliament took part in the argument, while some members rightly pointed out the lack of a security response, others began taking part in the rhetoric.
+- @oppose: Members of the SLFP in parliament urged calm between members of the assembly, while more left wing members explicity condemned the racial rhetoric.
+- @passive: Members of the SLFP did not take part in the argument outside of urging calm within the assembly.
+
+@support
+on-arrival: nationalist_strength += 5; left_dissent += 3; sinhala_nationalism += 3*(1-dissent); sltamil_slfp -= 2*(1-dissent); itamil_slfp -= 2*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent);
+
+Outside parliament a small crowd had been agitating. Many repeating the same raciallly charged rhetoric against Tamils, even the unrelated Indian Tamils werent safe from the messaging. 
+
+@oppose
+on-arrival: left_strength += 5; nationalist_dissent += 3; sinhala_nationalism -= 2*(1-dissent); sltamil_slfp += 2*(1-dissent); itamil_slfp += 2*(1-dissent); tulf_relation += 2*(1-dissent); actc_relation += 2*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent);
+
+Outside parliament a small crowd had been agitating. Many repeating the same raciallly charged rhetoric against Tamils, even the unrelated Indian Tamils werent safe from the messaging.
+
+@passive
+on-arrival: nationalist_dissent -= 3; left_dissent -= 3; sinhala_nationalism += 3*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent);
+
+Outside parliament a small crowd had been agitating. Many repeating the same raciallly charged rhetoric against Tamils, even the unrelated Indian Tamils werent safe from the messaging.
