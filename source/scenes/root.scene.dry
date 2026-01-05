@@ -1470,6 +1470,7 @@ Q.labour_unions_timer = 0;
 Q.student_unions_timer = 0;
 Q.shuffle_leadership_timer = 0;
 Q.streetfighting_timer = 0;
+Q.state_of_emergency_timer = 0;
 Q.peoples_party_timer = 0;
 // n_elections is the number of elections that have happened since the start of the game.
 Q.n_elections = 0;
