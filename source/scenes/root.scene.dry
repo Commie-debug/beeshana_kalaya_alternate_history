@@ -1416,7 +1416,7 @@ Q.electoral_threshold = 0;
 Q.slfp_local_gov = 0;
 
 //ammendments
-Q.national_list_added = 1;
+Q.national_list_added = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
