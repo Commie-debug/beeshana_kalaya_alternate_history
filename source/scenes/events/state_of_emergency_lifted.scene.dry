@@ -1,0 +1,9 @@
+title: State of emergency lifted
+view-if: state_of_emergency_timer = 2
+on-arrival: state_of_emergency = 0
+tags: event
+new-page: true
+
+= Island wide State of emergency lifted
+
+The state of emergency has been lifted, curfews are lifted and restrictions on civil society have been laxed for now.
