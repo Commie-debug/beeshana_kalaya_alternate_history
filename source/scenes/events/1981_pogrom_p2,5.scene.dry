@@ -1,0 +1,26 @@
+title: A vote of no confidence
+view-if: year = 1981 and month = 7 and week = 1
+max-visits: 1
+tags: event
+
+= Vote of no confidence called against leader of the opposition
+
+
+- @condemn: The SLFP condemns the violence and urges all sides to de-escalate promptly.
+- @support: The SLFP will not explicity support the violence, but perhaps it can be exploited to our benefit.
+- @ignore: The SLFP should not make a hard descion now, the party is too unstable to make an accuarte response.
+
+@condemn
+on-arrival: left_strength += 3; nationalist_dissent += 5; tulf_relation += 2*(1-dissent); actc_relation += 2*(1-dissent); sltamil_slfp += 3*(1-dissent);
+
+Our condemnation of the violence was met well by the Tamil parties, Nationalists within the parties are in an uproar over what they see as an acceptance of the militants. Regardless, time will tell if the violence has truly ended.
+
+@support
+on-arrival: left_dissent += 5; nationalist_strength += 3; tulf_relation -= 2*(1-dissent); actc_relation -= 2*(1-dissent); sltamil_slfp -= 4*(1-dissent); sinhala_nationalism += 4*(1-dissent); tamil_nationalism += 4*(1-dissent);
+
+Our reponse was seen as an almost endorsment of the violence, immedietly Left members have been incensed at this. The TULF and ACTC are just as enraged as Sinhalese nationalism seems to have gained further support in the south. Regardless, time will tell if the violence has truly ended.
+
+@ignore
+on-arrival: left_dissent -= 5; nationalist_dissent -= 5;
+
+Our lack of anything substantive was met with confusion on both sides of the party, we have avoided taking a side and it seems to have prevented further tensions within the party for now. Regardless, time will tell if the violence has truly ended.
