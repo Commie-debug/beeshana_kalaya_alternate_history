@@ -1,0 +1,13 @@
+title: Robbery in Jaffna
+subtitle: This cant be good...
+view-if: year = 1981 and month = 4 and week = 1
+max-visits: 1
+on-arrival: tamil_nationalism += 2; ltte_militancy += 0.2; telo_militancy += 0.2; eros_militancy += 0.05; plote_militancy += 0.1; eprlf_militancy += 0.1;
+tags: event
+new-page: true
+
+= 8 million rupees stolen in Jaffna
+
+On the 31st of March, a Peoples Bank van on route to Jaffna city carrying a nearlly 8 million LKR was robbed in what is reported to be a joint TELO and LTTE operation. Already police were able to arrest around 5 members of the PLOTE involved but others have fled, mostly to Tamil Nadu, India.
+
+The money stolen will greatly benefit the militants, esspecially the TELO and LTTE. The police and military are stepping up their patrols and security, the robbery is just one of many such incidents between the militants and local security forces.
