@@ -1,5 +1,4 @@
 title: Robbery in Jaffna
-subtitle: This cant be good...
 view-if: year = 1981 and month = 4 and week = 1
 max-visits: 1
 on-arrival: tamil_nationalism += 2; ltte_militancy += 0.2; telo_militancy += 0.2; eros_militancy += 0.05; plote_militancy += 0.1; eprlf_militancy += 0.1;
