@@ -1,5 +1,4 @@
 title: Bickering in parliament
-subtitle: This cant be good...
 view-if: year = 1981 and month = 8 and week = 1
 max-visits: 1
 tags: event
