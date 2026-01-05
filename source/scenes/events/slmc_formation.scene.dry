@@ -1,0 +1,27 @@
+title: New political outfit formed
+new-page: true
+view-if: year = 1981 and month = 10 and week = 1
+on-arrival: slmc_formed = 1; Q.parties.push('slmc'); sinhala_slmc = 0; sltamil_slmc = 3; itamil_slmc = 0; muslim_slmc = 70; other_slmc = 0; workers_slmc = 8; middle_slmc = 10; upper_slmc = 5; rural_slmc = 12; slmc_relation = 50; slmc_r = 0; old_unp_r = 0;
+max-visits: 1
+tags: event
+
+= Sri Lanka Muslim Congress formed
+
+At a meeting in Katankudy Baticaloa district, several muslim politicans led by local lawyer M. H. M. Ashraff declared the formation of a Sri Lanka Muslim Congress. Historically M. H. M. Ashraff was a supporter of the TULF and contested in a joint ticket with them in the 1977 election. His party performed badly however and since, relations with the TULF have deteriorated. This spat reached a climax when the TULF refused to ran any Muslim candidates in the DDC elections earlier this year.
+
+The organisation aims to promote Sri Lankan Muslim intrests esspecially in the face of continuing clashes and operations between the police and Tamil militants, esspecially the LTTE. For now the SLMC does not intend to take an active role in politics, but that is yet to be seen. 
+
+Ideologically, they are opposed to "Tamil Eelam" and in particular the militants, economically they are closer to the UNP than the SLFP and it seems likely that the two will cooperate in the future.
+  
+- @happy: The SLFP sends a delegation to congratulate the new group and to establish a positive relationship.
+- @bad: The SLMC does not represent working class and rural Muslims, we should try and attract proggressive muslims rather than work with the conservative SLMC.
+
+@happy
+on-arrival: slmc_relation += 10; muslim_slfp += 2*(1-dissent); nationalist_strength += 2
+  
+Our positive attitude to the election has brought the SLFP and CPSL togheter and shifted internal party opinions.
+
+@bad
+on-arrival: muslim_slfp += 2*(1-dissent); slmc_relation -= 10; left_strength += 2
+
+Our passivity has brought further attention to the Nationalists who simply do not care about a random constituency falling to the reds.
