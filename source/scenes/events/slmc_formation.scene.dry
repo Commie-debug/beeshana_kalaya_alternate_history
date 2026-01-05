@@ -1,9 +1,26 @@
 title: New political outfit formed
 new-page: true
 view-if: year = 1981 and month = 10 and week = 1
-on-arrival: slmc_formed = 1; Q.parties.push('slmc'); sinhala_slmc = 0; sltamil_slmc = 3; itamil_slmc = 0; muslim_slmc = 70; other_slmc = 0; workers_slmc = 8; middle_slmc = 10; upper_slmc = 5; rural_slmc = 12; slmc_relation = 50; slmc_r = 0; old_unp_r = 0;
 max-visits: 1
 tags: event
+on-arrival: {!
+
+Q.slmc_formed = 1; 
+Q.parties.push('slmc'); 
+Q.sinhala_slmc = 0; 
+Q.sltamil_slmc = 3; 
+Q.itamil_slmc = 0; 
+Q.muslim_slmc = 70; 
+Q.other_slmc = 0; 
+Q.workers_slmc = 8; 
+Q.middle_slmc = 10; 
+Q.upper_slmc = 5; 
+Q.rural_slmc = 12; 
+Q.slmc_relation = 50; 
+Q.slmc_r = 0; 
+Q.old_unp_r = 0;
+
+!}
 
 = Sri Lanka Muslim Congress formed
 
