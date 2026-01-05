@@ -1,14 +1,20 @@
 title: Anti tamil violence across the island
 view-if: year = 1981 and month = 8 and week = 2
 max-visits: 1
+on-arrival: ltte_strength += 6; plote_strength += 6; eros_strength += 4; telo_strength += 5; eprlf_strength += 4; tamil_nationalism += 7; sltamil_unp -= 10; itamil_unp -= 10; sinhala_nationalism += 8; gov_support -= 6; tamil_morale += 0.1; tamil_radicalisation += 1;
 tags: event
 new-page: true
 
 = Renewed violence across the island
 
-Reports of ethnic violence have been reported in the Colombo city, Ratnapura district and in eastern border villages. The attacks involved multiple cases of arson against Tamil buisnesses, homes and entire villages. Unlike previous incidents, the victims have also been from the Indian Tamil community. Many were forced to flee into the jungles, temples and government schools to avoid the violence. Police were reported in multiple cases to have either stood by as rioter rampaged, or directly took part/encouraged the violence. Early estimates put the death toll between 7 and 25 and displaced at least 35000, mostly Indian Tamils.
+Reports of ethnic violence have been reported in the Colombo city, Ratnapura district and in eastern border villages. The attacks involved multiple cases of arson against Tamil buisnesses, homes and entire villages. Unlike previous incidents, the victims have also been from the Indian Tamil community. Many were forced to flee into the jungles, temples and government schools to avoid the violence. Police were reported in multiple cases to have either stood by as rioter rampaged, or directly took part/encouraged the violence. Early estimates put the death toll between 7 and 25 and displaced at least 35000, mostly Indian Tamils. A brief state of emergency was declared, but ended quickly after.
 
-The CWC has immedietly called for some kind of response from its ally in the UNP.
+The CWC immedietly called for some kind of response from its ally in the UNP over these incidents. President JR Jayawardene seemingly agreed with the CWC saying "What is the example we as leaders of the governing party are setting to our followers and the rest of our countrymen? ... I must have reason to be proud of the party of which I am leader. If I cannot it is better for me to retire ... and let those who believe that the harming of innocent peopleand property that has happened recently is the way to solve the problemthat faces this multi-racial, multi-religious and multi-caste society takeover the leadership of the party".
 
-  
-Tensions are esscalating rapdly and government has renewed its declaration of a state of emergency on the 2nd. How should the SLFP respond.
+Many including in the CWC, TULF and ACTC blame the recent attacks on the statments made last week by members of the UNP in parliament. The member from Ratnapura was expelled and replaced and a cabinet member went abroad for their roles in instigating the violence. The MP's involved with the racial rhetoric in Early August were quick to expunge their statements from the record.
+
+A high-level meeting was held between the TULF, UNP and CWC to cool down tensions. The TULF reiterated and confirmed their non-violent stance to greater autonomy/seperatism. The UNP also made moves to include more Tamils in local police.
+
+The militants, chiefly the PLOTE and LTTE gained further support for their violent cause. The TULF's passivity to the riots and their participation in the DDC election's are the main reasons.
+
+At least for now the violence has seemingly come to an end. But the UNP's support among Tamils has reduced, the militants have gained strenght and nationalist fervour is rising. The SLFP needs to watch out.
