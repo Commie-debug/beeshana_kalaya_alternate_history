@@ -65,9 +65,11 @@ Q.nationalist_dissent = 25;
 Q.center_strenght = 0;
 Q.center_dissent = 0;
 
-// secret events...
+//not so secret events...
 Q.left_split = 0;
 Q.nationalist_split = 0;
+
+Q.the_split = 0;
 
 // organizations in the slfp
 Q.slfp_union = 5;
