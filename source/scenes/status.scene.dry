@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-[+ state_of_emergency_timer +]
+[+ state_of_emergency_timer +] Hmmm
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
