@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-vreum
+[+ state_of_emergency_timer +]
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
