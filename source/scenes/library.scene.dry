@@ -398,7 +398,7 @@ go-to: menu
 
 <span style="color: #FF8080;">**NSSP**</span> - *Nava Sama Samaja Party (New Equal Society Party)* - Formed in 1977 following a split from the <span style="color: #A91101;">**LSSP**</span>, the <span style="color: #FF8080;">**NSSP**</span> embraces Trotskyist ideology with a focus on self-determination and anti-authoritarianism. It has established itself as a vocal advocate for Tamil rights and democratic socialism.
 
-[? if mep_formed: <span style="color: #FF3915;">**MEP**</span> - *Mahajana Eksath Peramuna* - Originally formed in 1956, it has recently been reactivated, emphasizing Sinhalese nationalism and socialism. It is a minor political party. ?]
+[? if mep_formed: <span style="color: #FF3915;">**MEP**</span> - *Mahajana Eksath Peramuna* - Originally formed in 1956, it has recently been reactivated, emphasizing Sinhalese nationalism and ethnic chauvism. It is a minor political party. ?]
 
 <span style="color: #E52B50;">**CWC**</span> - *Ceylon Workers Congress* -Representing Indian Tamil plantation workers, they focus on labor rights, social welfare, and political representation for their marginalised base. It has recently grown closer to the <span style="color: #006400;">**UNP**</span> under JR.
 
