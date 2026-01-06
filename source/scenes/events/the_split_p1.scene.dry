@@ -1,0 +1,23 @@
+title: Maitripala challenges Sirimavo
+subtitle: Oh fuck
+view-if: (year = 1981 and month >= 8 and dissent_percent >= 30) or (year = 1981 and month = 10 and the_split = 0)
+max-visits: 1
+tags: event
+new-page: true
+on-arrival: the_split = 1; sinhala_slfp -= 10; sltamil_slfp -= 10; itamil_slfp -= 10; muslim_slfp -= 10; rural_slfp -= 10; workers_slfp -= 10; upper_slfp -= 10; middle_slfp -= 10; 
+
+= Maitripala challenges Sirimavo
+
+The underlying tensions between SLFP members, MP's and leaders has finally boiled over. Since Mrs Bandaranaike's revocation of her civil rights in 1981, she has been unable to officially lead the SLFP. Regardless she has been able to from the background, continue as de-facto leader. From the beggining this angered her colleagues, in particular Maitripala Senanayke her deputy leader. Now he has publically challenged her role in the SLFP claiming that she cannot be leader as someone without civil rights, he is backed by the Nationalists who he has ideological leanings towards despite being a moderate among them. This also includes Sirimavo's son Anura.
+
+Opposing him is Mrs Sirimavo Bandaranaike, she is backed by the Left including her daughter Chandrika Bandaranaike Kumaratunge and her husband, actor and cultural icon Vijaya Kumaratunge. As of now none have made any offical moves outside of condeming each other and claiming themselves to be the rightful leaders of the SLFP. Nonetheless support for the SLFP has dropped universally, the chaos also means that until a solution can be implemented to solve the crisis, we are unable to campaign to our full effectivness.
+
+- @hope: The party crumbles.
+
+@hope
+subtitle: Vijaya Kumaratunge and Anura Bandaranaike become available advisors
+  
+May god help us
+
+
+
