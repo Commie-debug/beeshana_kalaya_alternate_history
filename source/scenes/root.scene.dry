@@ -29,7 +29,7 @@ Q.day_actions = 0;
 //If 0, India hasnt intervened, time is month by 2 weeks. If 1, India has intervened, time slows to week by week.
 
 
-Q.state_of_emergency = 0;
+Q.state_of_emergency = 1;
 
 //experimental variable to just disable problematic events
 Q.disable_event_problem = 1;
