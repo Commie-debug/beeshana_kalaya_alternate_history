@@ -470,10 +470,6 @@ Local criminals, unemployed youth or simply party members with limited weaponry,
 Strength: [+ slfpt_strength_2 : group_strength +]
 Militarization: [+ slfpt_militancy : militancy +]
 
-<span class="tooltip-text" style="color: #006400;">**UNP Thugs**</span>
-Strength: [+ unpt_strength_2 : group_strength +]
-Militarization: [+ unpt_militancy : militancy +]
-
 <span class="tooltip-text" style="color: #FF2226;">**JVP Thugs**</span> 
 Strength: [+ jvpt_strength_2 : group_strength +]
 Militarization: [+ jvpt_militancy : militancy +]
