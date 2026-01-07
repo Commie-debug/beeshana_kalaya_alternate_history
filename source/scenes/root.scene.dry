@@ -70,6 +70,7 @@ Q.left_split = 0;
 Q.nationalist_split = 0;
 
 Q.the_split = 0;
+Q.split_month = 0;
 
 // organizations in the slfp
 Q.slfp_union = 5;
