@@ -16,8 +16,6 @@ if (Q.economic_growth) {
 
 = Status
 
-[+ state_of_emergency_timer +] cars
-
 Week [+ week +] [+ month : month +] [+ year +] 
 
 Resources available: [+ resources +]
