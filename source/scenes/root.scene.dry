@@ -76,6 +76,9 @@ Q.split_month = 0;
 Q.split_sirimavo_victory = 0;
 Q.split_maitripala_victory = 0;
 
+//injunction appeal
+Q.appealed_injunction = 0;
+
 // organizations in the slfp
 Q.slfp_union = 5;
 
