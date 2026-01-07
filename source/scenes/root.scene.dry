@@ -69,8 +69,12 @@ Q.center_dissent = 0;
 Q.left_split = 0;
 Q.nationalist_split = 0;
 
+//1981-82 split events
 Q.the_split = 0;
 Q.split_month = 0;
+//3 seperate events happen, the court injection over party headquarters, commitee on the 4 MP's and lastly who gets the "hand" symbol. Whomever wins the each gets a point, the final winner decides the path taken for the party
+Q.split_sirimavo_victory = 0;
+Q.split_maitripala_victory = 0;
 
 // organizations in the slfp
 Q.slfp_union = 5;
