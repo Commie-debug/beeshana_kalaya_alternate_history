@@ -1,7 +1,7 @@
 title: Anti tamil violence across the island
 view-if: year = 1981 and month = 8 and week = 2
 max-visits: 1
-on-arrival: ltte_strength += 6; plote_strength += 6; eros_strength += 4; telo_strength += 5; eprlf_strength += 4; tamil_nationalism += 7; sltamil_unp -= 10; itamil_unp -= 10; sinhala_nationalism += 8; gov_support -= 6; tamil_morale += 0.1; tamil_radicalisation += 1;
+on-arrival: ltte_strength += 6; plote_strength += 6; eros_strength += 4; telo_strength += 5; eprlf_strength += 4; tamil_nationalism += 7; sltamil_unp -= 10; itamil_unp -= 10; sinhala_nationalism += 8; gov_support -= 6; tamil_morale += 0.1; tamil_radicalisation += 1; state_of_emergency = 1; state_of_emergency_timer = 2;
 tags: event
 new-page: true
 
@@ -17,4 +17,4 @@ A high-level meeting was held between the TULF, UNP and CWC to cool down tension
 
 The militants, chiefly the PLOTE and LTTE gained further support for their violent cause. The TULF's passivity to the riots and their participation in the DDC election's are the main reasons.
 
-At least for now the violence has seemingly come to an end. But the UNP's support among Tamils has reduced, the militants have gained strenght and nationalist fervour is rising. The SLFP needs to watch out.
+At least for now the violence has seemingly come to an end. But the UNP's support among Tamils has reduced, the militants have gained strenght and nationalist fervour is rising. In response a state of emergency has been declared briefly incase violence flares up again, the SLFP needs to watch out.
