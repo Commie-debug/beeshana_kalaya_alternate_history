@@ -4,7 +4,21 @@ view-if: (year = 1981 and month >= 8 and dissent_percent >= 30) or (year = 1981 
 max-visits: 1
 tags: event
 new-page: true
-on-arrival: the_split = 1; sinhala_slfp -= 10; sltamil_slfp -= 10; itamil_slfp -= 10; muslim_slfp -= 10; rural_slfp -= 10; workers_slfp -= 10; upper_slfp -= 10; middle_slfp -= 10; 
+on-arrival: {!
+
+the_split = 1;
+sinhala_slfp -= 10; 
+sltamil_slfp -= 5; 
+itamil_slfp -= 3; 
+muslim_slfp -= 4; 
+rural_slfp -= 2; 
+workers_slfp -= 4; 
+upper_slfp -= 10; 
+middle_slfp -= 6; 
+
+var split_month = month
+
+!}
 
 = Maitripala challenges Sirimavo
 
