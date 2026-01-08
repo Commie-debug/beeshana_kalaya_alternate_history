@@ -1,7 +1,8 @@
 title: Party headquarters barred for Maitripala and his faction
-view-if: year = 1981 and month = split_month and week = 2
+view-if: year = 1981 and (month = split_month) and week = 2
 tags: event
 new-page: true
+max-visits: 1
 
 = Maitripala and Anura barred from Darley Road headquarters
 
