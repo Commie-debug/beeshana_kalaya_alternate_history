@@ -1,0 +1,33 @@
+title: The Election Commissioner weighs in on who inherits the "hand"
+view-if: year = 1982 and month = 9 and week = 2
+tags: event
+new-page: true
+max-visits: 1
+  
+= Election Commissioner reveals who can use the "hand".
+
+With the passage of the third ammendment, JR's announcment of early presidential elections and next weeks nomination deadline, everyone is eyeing on Election Commissioner Chandrananda De Silva's final decision. 
+
+Importantly, as soon as the elections were announced Maitripala already announced his candidacy even as half the SLFP still doesnt support him. Sirimavo and her supporters are waiting until the Commissioner's desicion.
+  
+Whoever he sides with can field there own candidate in the presidential elections under the "hand".
+
+- @comminsioner: And after months of deliberation he chooses....
+
+@comminsioner
+
+go-to: siri_win if left_strength > nationalist_strength; maitri_win if nationalist_strength > left_strength; siri_win
+
+@siri_win
+on-arrival: split_sirimavo_victory += 1; left_strength += 5; nationalist_strength -= 7; sinhala_slfp += 8; sltamil_slfp += 3; itamil_slfp += 3; muslim_slfp += 4; rural_slfp += 5; workers_slfp += 7; upper_slfp -= 2; middle_slfp += 6; socialism += 5;
+
+Sirimavo Bandaranaike and her "SLFP" as the true and legal SLFP. With the new developments Maitripala widthdrew from the race and called for all his supporters in and out of the party to vote for the official SLFP candidate. He may have lost but he realised rather late that a split SLFP cannot possibly compete with the UNP.
+
+In hopes to reconcile and reunite the two wings, Sirimavo accepted his support and agreed to restore Maitripala, Anura and their supporters SLFP membership. This still means we need to select a candidate for the elections. Current bets are on Hector
+
+@maitri_win
+on-arrival: split_maitripala_victory += 1; nationalist_strength += 5; left_strength -= 7; sinhala_slfp += 10; sltamil_slfp -= 4; itamil_slfp -= 2; muslim_slfp += 2; rural_slfp += 6; workers_slfp += 3; upper_slfp += 5; middle_slfp += 5; sinhala_nationalism += 7;
+
+Maitripala Senanayake and his "SLFP" as the true and legal SLFP. The developments come as a shock to Sirimavo's "SLFP". The dogmatic Sirimavo threatens to launch her own party but her supporters have already realised that by spliting the SLFP vote, neither Maitripala or Sirimavo can hope to compete with the far more united UNP. For the sake of the parties future, Sirimavo agreed to support Maitripala in the race.
+
+Maitripala also realised the problem with splitting the SLFP vote and thus accepted Sirimavo's support. But just getting her support is not enough, the SLFP must be reunited to compete. He thus reinstated Sirimavo's membership and in hopes to placate the Left, restored Sirimavo's leadership over the SLFP though now she will be more carefull in critisising him and his Nationalists.
