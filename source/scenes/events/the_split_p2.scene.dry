@@ -1,6 +1,6 @@
 title: The feud deepens
 subtitle: and the party suffers for it
-view-if: the_split = 1 and year = 1981 and month = (split_month + 1)
+view-if: the_split = 1 and year = 1981 and month = split_month 
 tags: event
 new-page: true
 
