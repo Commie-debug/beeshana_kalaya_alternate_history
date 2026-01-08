@@ -1,8 +1,33 @@
-title: New dispute between Sirimavo and Maitripala
-view-if: year = 1982 and month = 5 and week = 1
+title: Parliament select comittee weighs in on the SLFP MP dispute
+view-if: year = 1982 and month = 5 and week = 2
 tags: event
 new-page: true
 max-visits: 1
   
-= Dispute between Sirimavo and Maitripala over of the "Hand" symbol
+= Last year following Sirimavo's attempt to expel to 4 SLFP MP's who sided with Maitripala (Including Maitripala and Anura) was met with immediate backlash causing an ad-hoc select comittee to be formed to investigate the issue. Finally they have come back with their report and verdict.
 
+- @results: The comittee report goes as follows:
+
+@results
+go-to: siri_win if socialism > sinhala_nationalism; maitri_win if sinhala_nationalism > socialism; siri_win
+
+@siri_win
+on-arrival: split_sirimavo_victory += 1; left_strength += 5; nationalist_strength -= 7; socialism += 10;
+
+The committee highlights that even though Sirimavo's revocation meant that she alone could not get rid of Maitripala, a large amount of the SLFP had voted in favour of expelling the 4 MP's. In addition, the report also emphasises that the Maitripala faction acted in a manner that can justify their expulsion.
+
+To conclude, the report sides heavily in favour of Sirimavo and her faction. The 4 MP's are now de-facto no members of the SLFP thiugh they themselves still claim to be apart of the SLFP (Maitripala's SLFP). This most likely means further conflict in the future over who is the true SLFP though for the time being, Sirimavo has won this front.
+
+Confusingly this also means Anura will need to be replaced. The most likely candidate is Lakshman Jayakody, having joined back in the 50s, he was general secretery of the SLFP trade union and a supporter of Sirimavo. He entered parliament last year as the replacement for Sirimavo.
+
+- @laksham: And he becomes the SLFP's new leader in parliament to replace Anura
+
+@laksham
+on-arrival: slfp_parliament_leader = "Lakshman Jayakody"
+
+@maitri_win
+on-arrival: split_maitripala_victory += 1; nationalist_strength += 5; left_strength -= 7; sinhala_nationalism += 10;
+
+The committee report highlights that Sirimavo under the conditions of her revocation of civil rights from 1980, she was under no authority to hold a meeting and unilaterally expel sitting SLFP MP's, esspecially without the consent of the Maitripala faction which the report emphasises has the largest base of support among the two camps.
+
+To conclude, the report sides heavily in favour of Maitripala and his faction. Anura, Maitripala and the other two MP's remain members of the SLFP though Sirimavo and Maitripala refuse to cooperate. So the SLFP still remains split between two entities both claiming to be the "true" SLFP. This is definietly cause issues later but for now, Maitripala has been emboldened to see through his vision of the SLFP.
