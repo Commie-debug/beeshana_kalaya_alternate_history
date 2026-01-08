@@ -71,12 +71,12 @@ Industries: [+ district_industries +]
 = Leader of the <span style="color: #00008B;">**SLFP**</span>
 
 <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [? if slfp_leader = "Sirimavo Bandaranaike" : Sirimavo Bandaranaike(<span style="color: #8C8C8C;">**Center**</span>) ?] </p>
+<p style="text-align: center;margin-bottom: 0;"> [+ slfp_leader +] </p>
 
 = Parliamentary Party Leader 
 
 <div><img src="img/portraits/BandaranaikeAnura.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [? if slfp_parliament_leader = "Anura Bandaranaike" : Anura Bandaranaike(<span style="color: #0F52BA;">**Nationalist**</span>) ?] </p>
+<p style="text-align: center;margin-bottom: 0;"> [+ slfp_parliament_leader +] </p>
 
 = Internal Factions of the <span style="color: #00008B;">**SLFP**</span>
 
