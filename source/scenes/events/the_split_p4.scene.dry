@@ -1,5 +1,5 @@
 title: Courts have come to a desision over Darley Road
-view-if: the_split = 1 and year = 1981 and month = 12 and week = 1
+view-if: year = 1981 and month = 12 and week = 1
 tags: event
 new-page: true
   
