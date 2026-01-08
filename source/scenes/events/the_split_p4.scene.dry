@@ -1,0 +1,36 @@
+title: Courts have come to a desision over Darley Road
+view-if: the_split = 1 and year = 1981 and month = 12 and week = 1
+tags: event
+new-page: true
+  
+= Colombo District courts have to a desicion
+
+The request for an injuction by Maitripala against Sirimavo over her restricting access to the SLFP headquarters at Darley road has been met by a desicion from the Colombo district court after several weeks of delibertion
+
+- @court: Let us see their final verdict
+
+@court
+go-to: siri_win if left_strength > nationalist_strength; maitri_win if nationalist_strength > left_strength; siri_win
+
+@siri_win
+on-arrival: split_sirimavo_victory += 1; left_strength += 5; nationalist_strength -= 7;
+
+The courts have sided with Sirimavo citing her support among members of the SLFP. Sirimavo is now more emboldened to stake her claim to SLFP leadership. Maitripala may decide to appeal the courts decision but that is unlikely. Hopefully we are on a path to total reconcilliation?
+
+@matri_win
+on-arrival: split_maitripala_victory += 1; nationalist_strength += 5; left_strength -= 7;
+
+The courts have sided with Maitripala and have ordered Sirimavo to reopen Darley road for her rival promptly. But Sirimavo is a doughty political figure and she plans to appeal the verdict.
+
+- @yes: She goes through and appeals the verdict.
+- @no: She is however comvinced by Chandrika to not follow through with an appeal, her attention is better served somewhere else.
+
+@yes
+on-arrival: appealed_injunction = 1;
+
+As expected, Sirimavo immedietly appeals the verdict, she will not give up easily. Let's see if the courts will change their mind or keep with the curent verdict.
+
+@no
+on-arrival: appealed_injunction = 0;
+
+She has unexpectedly decided to not follow through with an appeal and has accepted the verdict. Darley road has been reopened to Maitripala.
