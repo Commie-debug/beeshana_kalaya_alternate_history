@@ -1,5 +1,5 @@
 title: Party headquarters barred for Maitripala and his faction
-view-if: year = 1981 and month = (split_month + 1) and week = 2
+view-if: the_split =1 and year = 1981 and month = (split_month + 1) and week = 2
 tags: event
 new-page: true
 
