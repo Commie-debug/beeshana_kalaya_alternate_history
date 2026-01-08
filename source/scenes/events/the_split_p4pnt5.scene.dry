@@ -1,5 +1,5 @@
 title: Court of appeal have come to a decision
-view-if: the_split = 1 and year = 1982 and month = 4 and week = 1 and appealed_injunction = 1
+view-if: year = 1982 and month = 4 and week = 1 and appealed_injunction = 1
 tags: event
 new-page: true
   
