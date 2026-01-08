@@ -1,6 +1,6 @@
 title: Maitripala challenges Sirimavo
 subtitle: Oh fuck
-view-if: (year = 1981 and month >= 8 and dissent_percent >= 30) or (year = 1981 and month = 10 and the_split = 0)
+view-if: year = 1981 and month = 8 and dissent_percent >= 30
 max-visits: 1
 tags: event
 new-page: true
