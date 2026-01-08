@@ -17,7 +17,7 @@ on-arrival: split_sirimavo_victory += 1; left_strength += 5; nationalist_strengt
 
 The courts have sided with Sirimavo citing her support among members of the SLFP. Sirimavo is now more emboldened to stake her claim to SLFP leadership. Maitripala may decide to appeal the courts decision but that is unlikely. Hopefully we are on a path to total reconcilliation?
 
-@matri_win
+@maitri_win
 on-arrival: split_maitripala_victory += 1; nationalist_strength += 5; left_strength -= 7;
 
 The courts have sided with Maitripala and have ordered Sirimavo to reopen Darley road for her rival promptly. But Sirimavo is a doughty political figure and she plans to appeal the verdict.
