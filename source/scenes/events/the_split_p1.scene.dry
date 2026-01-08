@@ -16,7 +16,7 @@ workers_slfp -= 4;
 upper_slfp -= 10; 
 middle_slfp -= 6; 
 
-split_month = month
+split_month = month + 1
 
 !}
 
