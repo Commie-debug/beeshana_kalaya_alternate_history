@@ -1,6 +1,6 @@
 title: The feud deepens
 subtitle: and the party suffers for it
-view-if: year = 1981 and (month = split_month) and week = 1
+view-if: year = 1981 and week = 1 and (month = split_month)
 tags: event
 new-page: true
 max-visits: 1
@@ -18,6 +18,7 @@ Now the SLFP is for all intents and purposes, two seperate parties each claiming
 - @parliament: A parliamentary select committee has been called to settle the dispute regarding the MP's.
 
 @parliament
+max-visits: 1
 
 The commitee will take time to come to a final decision, we have to wait. Until then party activities will be severly hammpered in pretty much every aspect from campaigning, finances, unions, etc. 
   
