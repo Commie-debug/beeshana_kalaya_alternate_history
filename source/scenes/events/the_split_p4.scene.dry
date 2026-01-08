@@ -26,9 +26,9 @@ The courts have sided with Maitripala and have ordered Sirimavo to reopen Darley
 - @no: She is however comvinced by Chandrika to not follow through with an appeal, her attention is better served somewhere else.
 
 @yes
-on-arrival: appealed_injunction = 1;
+on-arrival: appealed_injunction = 1; split_maitripala_victory -= 1;
 
-As expected, Sirimavo immedietly appeals the verdict, she will not give up easily. Let's see if the courts will change their mind or keep with the curent verdict.
+As expected, Sirimavo immedietly appeals the verdict, she will not give up easily. The case now goes to the Court of appeal, wheter they will side with Sirimavo or agree with the district courts verdict can only be seen in a few months time.
 
 @no
 on-arrival: appealed_injunction = 0;
