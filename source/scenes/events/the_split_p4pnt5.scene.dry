@@ -1,0 +1,23 @@
+title: Court of appeal have come to a decision
+view-if: the_split = 1 and year = 1982 and month = 4 and week = 1 and appealed_injunction = 1
+tags: event
+new-page: true
+  
+= Court of appeal have to a decision on Darley road
+
+As was expected 4 months ago, Sirimavo appealed the district courts verdict that forced her to reopen Darley road to Maitripala and his supporters. Now months later the Court of appeal have come back to deliver the final decision.
+
+- @court: What have they decided?
+
+@court
+go-to: siri_win if left_strength > nationalist_strength; maitri_win if nationalist_strength > left_strength; siri_win
+
+@siri_win
+on-arrival: split_sirimavo_victory += 1; left_strength += 3; nationalist_strength -= 5;
+
+The courts have sided with Sirimavo's appeal and thus reversed their previous verdict. This is a clear win for Sirimavo and her supporters. 
+
+@maitri_win
+on-arrival: split_maitripala_victory += 1; nationalist_strength += 3; left_strength -= 5;
+
+The Court of appeal have sided with Maitripala and the original district courts verdict. Maitripala has clearly won this fight and Sirimavo and her supporters are shaken by the 2 time defeat. 
