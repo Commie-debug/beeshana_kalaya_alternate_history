@@ -15,7 +15,6 @@ Whoever he sides with can field there own candidate in the presidential election
 - @comminsioner: And after months of deliberation he chooses....
 
 @comminsioner
-
 go-to: siri_win if left_strength > nationalist_strength; maitri_win if nationalist_strength > left_strength; siri_win
 
 @siri_win
