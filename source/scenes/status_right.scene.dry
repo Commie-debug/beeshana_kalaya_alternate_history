@@ -74,7 +74,7 @@ Industries: [+ district_industries +]
 
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;"> <img src="img/portraits/SenanayakeMaithripala.jpg" alt="Maitripala Senanayake" style="width: 50%;"> <img src="img/portraits/BandaranaikeSirimavo.jpg" alt="Sirimavo Bandaranaike" style="width: 50%;"> </div> 
 
-<p style="text-align: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;"> Maitripala Senanayake </p><p style="text-align: flex;gap: 5px;margin-bottom: 5px;margin-left: 3px;"> Maitripala Senanayake </p> 
+<p style="text-align: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;"> Maitripala Senanayake </p><p style="text-align: flex;gap: 5px;margin-bottom: 5px;margin-left: 3px;"> Sirimavo Bandaranaike </p> 
 
 
 = Parliamentary Party Leader 
