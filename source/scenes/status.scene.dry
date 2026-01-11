@@ -16,8 +16,6 @@ if (Q.economic_growth) {
 
 = Status
 
-update for godsake
-
 Week [+ week +] [+ month : month +] [+ year +] 
 
 Resources available: [+ resources +]
