@@ -116,6 +116,19 @@ if (total_student_control > 0) {
 //normalize party support (class)
 for (var cls of Q.classes) {
     var total_class_support = 0;
+    
+    var cls_var_name = cls;
+    if (cls === 'workers') {
+        cls_var_name = 'workers';
+    }
+    
+    // Include non-voters in the total
+    var nonvoter_support = Q[cls_var_name + '_nonvoter'] || 0;
+    if (nonvoter_support < 0) {
+        nonvoter_support = 0;
+    }
+    total_class_support += nonvoter_support;
+    
     for (var party of Q.parties) {
         if (Q[cls + '_' + party] < 0) {
             Q[cls + '_' + party] = 0;
@@ -124,12 +137,15 @@ for (var cls of Q.classes) {
     }
     
     if (total_class_support > 0) {
+        //normalize non-voters
+        Q[cls_var_name + '_nonvoter'] = Math.round(100 * nonvoter_support / total_class_support * 10) / 10;
+        
         for (var party of Q.parties) {
             Q[cls + '_' + party] = Math.round(100 * Q[cls + '_' + party] / total_class_support * 10) / 10;
         }
         
-        //give remainder to largest party
-        var new_total = 0;
+        //calculate new total (should be close to 100)
+        var new_total = Q[cls_var_name + '_nonvoter'];
         var largest_party = Q.parties[0];
         var largest_value = 0;
         for (var party of Q.parties) {
@@ -139,13 +155,23 @@ for (var cls of Q.classes) {
                 largest_party = party;
             }
         }
+        
+        //give remainder to largest party 
         Q[cls + '_' + largest_party] = Math.round((Q[cls + '_' + largest_party] + (100 - new_total)) * 10) / 10;
     }
 }
 
-//normalize party support (class)
+//normalize party support (ethnic)
 for (var ethnic of Q.ethnic) {
     var total_ethnic_support = 0;
+    
+    //include non-voters in the total
+    var nonvoter_support = Q[ethnic + '_nonvoter'] || 0;
+    if (nonvoter_support < 0) {
+        nonvoter_support = 0;
+    }
+    total_ethnic_support += nonvoter_support;
+    
     for (var party of Q.parties) {
         if (Q[ethnic + '_' + party] < 0) {
             Q[ethnic + '_' + party] = 0;
@@ -154,12 +180,16 @@ for (var ethnic of Q.ethnic) {
     }
     
     if (total_ethnic_support > 0) {
+        //normalize non-voters
+        Q[ethnic + '_nonvoter'] = Math.round(100 * nonvoter_support / total_ethnic_support * 10) / 10;
+        
+        /normalize parties
         for (var party of Q.parties) {
             Q[ethnic + '_' + party] = Math.round(100 * Q[ethnic + '_' + party] / total_ethnic_support * 10) / 10;
         }
         
-        //give remainder to largest party
-        var new_total = 0;
+        //calculate new total 
+        var new_total = Q[ethnic + '_nonvoter'];
         var largest_party = Q.parties[0];
         var largest_value = 0;
         for (var party of Q.parties) {
@@ -169,10 +199,11 @@ for (var ethnic of Q.ethnic) {
                 largest_party = party;
             }
         }
+        
+        //give remainder to largest party to ensure total = 100
         Q[ethnic + '_' + largest_party] = Math.round((Q[ethnic + '_' + largest_party] + (100 - new_total)) * 10) / 10;
     }
 }
-
 Q.dissent = 0.01*total_dissent/total_strength;
 Q.dissent_percent = Q.dissent*100;
 console.log('new dissent: ' + Q.dissent);
