@@ -183,7 +183,7 @@ for (var ethnic of Q.ethnic) {
         //normalize non-voters
         Q[ethnic + '_nonvoter'] = Math.round(100 * nonvoter_support / total_ethnic_support * 10) / 10;
         
-        /normalize parties
+        //normalize parties
         for (var party of Q.parties) {
             Q[ethnic + '_' + party] = Math.round(100 * Q[ethnic + '_' + party] / total_ethnic_support * 10) / 10;
         }
