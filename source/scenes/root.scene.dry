@@ -1137,6 +1137,8 @@ Q.sinhala_cwc = 0;
 Q.sinhala_unp = 54;  
 Q.sinhala_actc = 0;
 
+Q.sinhala_nonvoter = 5;
+
 //not formed parties;
 Q.sinhala_slpp = 0;
 Q.sinhala_slmp = 0;
@@ -1157,7 +1159,9 @@ Q.sltamil_nssp = 0;
 Q.sltamil_tulf = 75;    
 Q.sltamil_cwc = 0;      
 Q.sltamil_unp = 8;      
-Q.sltamil_actc = 13;   
+Q.sltamil_actc = 13;  
+
+Q.sltamil_nonvoter = 8;
 
 //not formed parties;
 Q.sltamil_slpp = 0;
@@ -1181,6 +1185,8 @@ Q.itamil_cwc = 78;
 Q.itamil_unp = 10;      
 Q.itamil_actc = 0;
 
+Q.itamil_nonvoter = 8;
+
 //not formed parties;
 Q.itamil_slpp = 0;
 Q.itamil_slmp = 0;
@@ -1202,6 +1208,8 @@ Q.muslim_tulf = 3;
 Q.muslim_cwc = 0;
 Q.muslim_unp = 65;     
 Q.muslim_actc = 5;
+
+Q.muslim_nonvoter = 5;
 
 //not formed parties;
 Q.muslim_slpp = 0;
@@ -1225,6 +1233,8 @@ Q.other_cwc = 0;
 Q.other_unp = 80;       
 Q.other_actc = 0;
 
+Q.other_nonvoter = 4;
+
 //not formed parties;
 Q.other_slpp = 0;
 Q.other_slmp = 0;
@@ -1246,6 +1256,8 @@ Q.workers_tulf = 5;
 Q.workers_cwc = 15;     
 Q.workers_unp = 15;     
 Q.workers_actc = 0;
+
+Q.workers_nonvoter = 8;
 
 //not formed parties;
 Q.workers_slpp = 0;
@@ -1269,6 +1281,8 @@ Q.middle_cwc = 2;
 Q.middle_unp = 40;      
 Q.middle_actc = 2;
 
+Q.middle_nonvoter = 5;
+
 //not formed parties;
 Q.middle_slpp = 0;
 Q.middle_slmp = 0;
@@ -1291,6 +1305,8 @@ Q.upper_cwc = 0;
 Q.upper_unp = 75;       
 Q.upper_actc = 1;
 
+Q.upper_nonvoter = 3;
+
 //not formed parties;
 Q.upper_slpp = 0;
 Q.upper_slmp = 0;
@@ -1312,6 +1328,8 @@ Q.rural_tulf = 8;
 Q.rural_cwc = 5;      
 Q.rural_unp = 38;       
 Q.rural_actc = 2;
+
+Q.rural_nonvoter = 7;
 
 //not formed parties;
 Q.rural_slpp = 0;
@@ -1492,7 +1510,7 @@ Q.in_election = 0;
 //72 months or 6 years
 Q.president_term = 72;
 Q.next_pres_election_year = 1981;
-Q.next_pres_election_month = 12;
+Q.next_pres_election_month = 2;
 //for real, parliament elections for august 1983
 //72 months or 6 years
 Q.parliament_term = 72;
