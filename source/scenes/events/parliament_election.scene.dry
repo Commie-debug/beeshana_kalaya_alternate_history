@@ -118,12 +118,20 @@ Q.district_results = [];
 //only include parties with parl_yes=1
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
+    
+    var nonvoter_support = Q[ethnic + '_nonvoter'] || 0;
+    if (nonvoter_support < 0) nonvoter_support = 0;
+    ethnic_total += nonvoter_support;
+    
     for (var party of Q.parties) {
         if (Q[party + '_parl_yes'] === 0) continue;
         var support = Q[ethnic + '_' + party] || 0;
         if (support < 0) support = 0;
         ethnic_total += support;
     }
+    
+    Q[ethnic + '_nonvoter_norm'] = (ethnic_total > 0) ? (nonvoter_support / ethnic_total) : 0;
+    
     //normalize to proportions (0 to 1)
     for (var party of Q.parties) {
         if (Q[party + '_parl_yes'] === 0) {
@@ -136,7 +144,6 @@ for (var ethnic of ethnic_groups) {
     }
 }
 
-
 //normalisation class
 var class_var_map = {
     'upper': 'upper',
@@ -148,12 +155,20 @@ var class_var_map = {
 for (var cls of class_groups) {
     var class_total = 0;
     var cls_var = class_var_map[cls];
+    
+    var nonvoter_support = Q[cls_var + '_nonvoter'] || 0;
+    if (nonvoter_support < 0) nonvoter_support = 0;
+    class_total += nonvoter_support;
+    
     for (var party of Q.parties) {
         if (Q[party + '_parl_yes'] === 0) continue;
         var support = Q[cls_var + '_' + party] || 0;
         if (support < 0) support = 0;
         class_total += support;
     }
+    
+    Q[cls + '_nonvoter_norm'] = (class_total > 0) ? (nonvoter_support / class_total) : 0;
+    
     //normalize to proportions (0 to 1)
     for (var party of Q.parties) {
         if (Q[party + '_parl_yes'] === 0) {
@@ -168,6 +183,8 @@ for (var cls of class_groups) {
 
 //district based calculations
 var total_seats_allocated = 0;
+var total_turnout_weighted = 0;  
+var total_pop_weight_parl = 0;  
 
 //coalition set-up
 //map each party to their coalition ID, or -1 if independent
@@ -262,6 +279,25 @@ for (var i = 0; i < Q.district_names.length; i++) {
     //gettin district control (for areas under militant influence)
     var district_control = Q[district_name + '_control'];
     if (district_control === undefined) district_control = 100;
+
+    //calculate district non-voter rate (for turnout)
+    var district_nonvoter_ethnic = 0;
+    for (var ethnic of ethnic_groups) {
+        district_nonvoter_ethnic += (district_ethnic[ethnic] / 100) * (Q[ethnic + '_nonvoter_norm'] || 0);
+    }
+    
+    var district_nonvoter_class = 0;
+    for (var cls of class_groups) {
+        district_nonvoter_class += (district_class[cls] / 100) * (Q[cls + '_nonvoter_norm'] || 0);
+    }
+    
+    var district_nonvoter_rate = (ethnic_weight * district_nonvoter_ethnic) + (class_weight * district_nonvoter_class);
+    var turnout_factor = 1 - district_nonvoter_rate;
+    
+    //accumulate for overall turnout calculation
+    var district_pop_weight = Q[district_name + '_pop_weight'] || 0;
+    total_turnout_weighted += district_nonvoter_rate * district_pop_weight;
+    total_pop_weight_parl += district_pop_weight;
     
     //calculate party support in this district
     var district_party_support = {};
@@ -298,9 +334,6 @@ for (var i = 0; i < Q.district_names.length; i++) {
     //normalize vote shares for this district (individual party votes)
     var district_votes = {};
     
-    //district population weight (should all sum to 100 across all districts)
-    var district_pop_weight = Q[district_name + '_pop_weight'] || 0;
-    
     for (var party of Q.parties) {
         //skip if not participating
         if (Q[party + '_parl_yes'] === 0) {
@@ -309,8 +342,8 @@ for (var i = 0; i < Q.district_names.length; i++) {
         }
         district_votes[party] = (district_total_support > 0) ? 
             (district_party_support[party] / district_total_support) : 0;
-        //population weightage for national totals
-        Q[party + '_votes_total'] += district_votes[party] * district_pop_weight;
+        //population weightage for national totals with turnout applied
+        Q[party + '_votes_total'] += district_votes[party] * district_pop_weight * turnout_factor;
     }
     
     //coalition and inter coaliton seats
@@ -443,6 +476,9 @@ for (var i = 0; i < Q.district_names.length; i++) {
         results: party_seats_district
     });
 }
+
+//calculate overall turnout
+Q.parl_turnout = (total_pop_weight_parl > 0) ? Math.round((1 - (total_turnout_weighted / total_pop_weight_parl)) * 1000) / 10 : 100;
 
 //final seat counts
 var total_votes = 0;
@@ -840,6 +876,12 @@ if (window && d3) {
 go-to: coalition_menu
 
 = Election Results
+
+**Voter Turnout:** [+ pres_turnout +]%
+
+[? if pres_turnout < 70 : Voter turnout is concerningly lower than normal. ?]
+[? if pres_turnout < 50 : Turnout is rather low. ?]
+[? if pres_turnout < 30 : Turnout is catastrophicly low. ?]
 
 {!<svg id="parliament" style="width: 500px; height: 250px;"> </svg>!}
 
