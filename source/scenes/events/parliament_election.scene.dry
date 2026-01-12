@@ -877,7 +877,7 @@ go-to: coalition_menu
 
 = Election Results
 
-**Voter Turnout:** [+ pres_turnout +]%
+**Voter Turnout:** [+ parl_turnout +]%
 
 [? if pres_turnout < 70 : Voter turnout is concerningly lower than normal. ?]
 [? if pres_turnout < 50 : Turnout is rather low. ?]
