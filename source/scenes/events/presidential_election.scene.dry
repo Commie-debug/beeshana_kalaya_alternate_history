@@ -269,6 +269,12 @@ for (var p of all_parties_check) {
 //onlyincludepartieswithpres_yes=1orundefined(defaulttoyes)
 for (var ethnic of ethnic_groups) {
     var ethnic_total = 0;
+    
+    //include non-voters in total
+    var nonvoter_support = Q[ethnic + '_nonvoter'] || 0;
+    if (nonvoter_support < 0) nonvoter_support = 0;
+    ethnic_total += nonvoter_support;
+    
     for (var party of Q.parties) {
         if (Q[party + '_pres_yes'] === 0) continue;
         var support = Q[ethnic + '_' + party] || 0;
@@ -282,6 +288,10 @@ for (var ethnic of ethnic_groups) {
             ethnic_total += support;
         }
     }
+    
+    //normalize non-voters
+    Q[ethnic + '_nonvoter_norm'] = (ethnic_total > 0) ? (nonvoter_support / ethnic_total) : 0;
+    
     for (var party of Q.parties) {
         if (Q[party + '_pres_yes'] === 0) {
             Q[ethnic + '_' + party + '_norm'] = 0;
@@ -308,6 +318,12 @@ var class_var_map = { 'upper': 'upper', 'middle': 'middle', 'worker': 'workers',
 for (var cls of class_groups) {
     var class_total = 0;
     var cls_var = class_var_map[cls];
+    
+    var nonvoter_support = Q[cls_var + '_nonvoter'] || 0;
+    if (nonvoter_support < 0) nonvoter_support = 0;
+    class_total += nonvoter_support;
+    
+    //original party support
     for (var party of Q.parties) {
         if (Q[party + '_pres_yes'] === 0) continue;
         var support = Q[cls_var + '_' + party] || 0;
@@ -321,6 +337,10 @@ for (var cls of class_groups) {
             class_total += support;
         }
     }
+    
+    //normalize non-voters
+    Q[cls + '_nonvoter_norm'] = (class_total > 0) ? (nonvoter_support / class_total) : 0;
+    
     for (var party of Q.parties) {
         if (Q[party + '_pres_yes'] === 0) {
             Q[cls + '_' + party + '_norm'] = 0;
@@ -344,6 +364,7 @@ for (var cls of class_groups) {
 //calculatenationalvotetotals
 var candidate_votes = {};
 var total_pop_weight = 0;
+var total_nonvoter_weighted = 0;
 
 for (var candidate of Q.pres_candidates) {
     candidate_votes[candidate] = 0;
@@ -378,6 +399,25 @@ for (var i = 0; i < district_names_pres.length; i++) {
     var district_control = Q[district_name + '_control'];
     if (district_control === undefined) district_control = 100;
     var control_factor = district_control / 100;
+
+    var district_control = Q[district_name + '_control'];
+    if (district_control === undefined) district_control = 100;
+    var control_factor = district_control / 100;
+    
+    var district_nonvoter_ethnic = 0;
+    for (var ethnic of ethnic_groups) {
+        district_nonvoter_ethnic += (district_ethnic[ethnic] / 100) * (Q[ethnic + '_nonvoter_norm'] || 0);
+    }
+    
+    var district_nonvoter_class = 0;
+    for (var cls of class_groups) {
+        district_nonvoter_class += (district_class[cls] / 100) * (Q[cls + '_nonvoter_norm'] || 0);
+    }
+    
+    var district_nonvoter_rate = (ethnic_weight * district_nonvoter_ethnic) + (class_weight * district_nonvoter_class);
+    var turnout_factor = 1 - district_nonvoter_rate;
+    
+    total_nonvoter_weighted += district_nonvoter_rate * district_pop_weight;
     
     var district_party_support = {};
     var district_total_support = 0;
@@ -429,7 +469,7 @@ for (var i = 0; i < district_names_pres.length; i++) {
         }
         
         district_candidate_votes[candidate] = candidate_district_votes;
-        candidate_votes[candidate] += candidate_district_votes * district_pop_weight * control_factor;
+        candidate_votes[candidate] += candidate_district_votes * district_pop_weight * control_factor * turnout_factor;
         
         //onlycountindependentcandidatesfortotalpercentage
         var cand_party = Q.pres_candidate_parties[candidate];
@@ -460,6 +500,8 @@ Q.kilinochchi_d_pop_weight = stored_kilinochchi_d_pop_weight;
 Q.mullaitivu_d_pop_weight = stored_mullaitivu_d_pop_weight;
 Q.mannar_d_pop_weight = stored_mannar_d_pop_weight;
 Q.vavuniya_d_pop_weight = stored_vavuniya_d_pop_weight;
+
+Q.pres_turnout = (total_pop_weight > 0) ? Math.round((1 - (total_nonvoter_weighted / total_pop_weight)) * 1000) / 10 : 100;
 
 //converttopercentages
 Q.pres_results = [];
@@ -629,6 +671,12 @@ window.togglePresDistrict = function() {
 go-to: pres_result_display
 
 = Presidential Election Results
+
+**Voter Turnout:** [+ pres_turnout +]%
+
+[? if pres_turnout < 70 : Voter turnout is concerningly lower than normal. ?]
+[? if pres_turnout < 50 : Turnout is rather low. ?]
+[? if pres_turnout < 30 : Turnout is catastrophicly low. ?]
 
 **Election Results Map:**
 
