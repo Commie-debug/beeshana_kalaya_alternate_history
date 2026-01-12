@@ -674,6 +674,7 @@ go-to: pres_result_display
 
 **Voter Turnout:** [+ pres_turnout +]%
 
+[? if pres_turnout > 70 : Voter turnout is at expected or even exceeded expectations. ?]
 [? if pres_turnout < 70 : Voter turnout is concerningly lower than normal. ?]
 [? if pres_turnout < 50 : Turnout is rather low. ?]
 [? if pres_turnout < 30 : Turnout is catastrophicly low. ?]
