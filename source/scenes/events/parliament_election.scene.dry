@@ -879,9 +879,10 @@ go-to: coalition_menu
 
 **Voter Turnout:** [+ parl_turnout +]%
 
-[? if pres_turnout < 70 : Voter turnout is concerningly lower than normal. ?]
-[? if pres_turnout < 50 : Turnout is rather low. ?]
-[? if pres_turnout < 30 : Turnout is catastrophicly low. ?]
+[? if parl_turnout > 70 : Voter turnout is at expected or even exceeded expectations. ?]
+[? if parl_turnout < 70 : Voter turnout is concerningly lower than normal. ?]
+[? if parl_turnout < 50 : Turnout is rather low. ?]
+[? if parl_turnout < 30 : Turnout is catastrophicly low. ?]
 
 {!<svg id="parliament" style="width: 500px; height: 250px;"> </svg>!}
 
