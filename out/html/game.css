@@ -12,7 +12,7 @@ body {
   --tab-hover-color: #ececec;
   --card-border-color: #ccc; 
   --card-bg-color: #ddd; 
-  font-family: "Roboto Slab", "Georgia", serif;
+  font-family: "Century Schoolbook", "Bookman Old Style", "Times New Roman", serif;
   background-color: var(--bg-color);
   padding: 0;
   line-height: 155%;
@@ -293,7 +293,7 @@ img.inline-img.icon {
     margin-right: -0.6em;
 }
 .tab_button {
-    font-family: "Roboto Slab", "Georgia", serif;
+    font-family: "Century Schoolbook", "Bookman Old Style", "Times New Roman", serif;
     background-color: var(--tab-color);
     color: var(--text-color);
     /*float: left;*/
@@ -312,7 +312,7 @@ img.inline-img.icon {
 .tab_button_wide {width: 100%;}
 
 .status_button {
-  font-family: "Roboto Slab", "Georgia", serif;
+  font-family: "Century Schoolbook", "Bookman Old Style", "Times New Roman", serif;
   color: var(--text-color);
   background-color: var(--button-bg-color);
   border: 2px solid var(--button-border-color);
@@ -326,7 +326,7 @@ img.inline-img.icon {
   border: 2px solid var(--htext-color);
 }
 .status_button_wide {
-  font-family: "Roboto Slab", "Georgia", serif;
+  font-family: "Century Schoolbook", "Bookman Old Style", "Times New Roman", serif;
   width: 220px;
   color: var(--htext-color);
   background-color: var(--button-bg-color);
