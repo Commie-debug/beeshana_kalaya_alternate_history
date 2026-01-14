@@ -16,7 +16,7 @@ if (Q.economic_growth) {
 
 = Status
 
-hmm
+Cricket
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
@@ -32,13 +32,13 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 [? if state_of_emergency = 1 : <span>**State Of Emergency In Effect**</span> ?]
 
-President: [+ president +] ([+ president_party +])
+President: [+ president +]([+ president_party +])
 
 [? if slfp_in_government = 1 and (president = "JR Jayawardene" or president = "Ranasinghe Premadasa" ): [+ president +] tensions: [+ president_tension : dissent +] ?]
 
-Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
+Prime Minister: [+ prime_minister +]([+ prime_minister_party +])
 
-Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +])
+Leader of the Opposition: [+ opposition_leader +]([+ opposition_leader_party +])
 
 Current Government: [+ current_gov +]
 
