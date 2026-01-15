@@ -346,7 +346,7 @@ img.inline-img.icon {
   position: relative;
   cursor: pointer;
   background-color: transparent;
-  padding: 2px 5px;
+  padding: 2px 1px;
 }
 .mytooltip:hover { background-color: rgb(100, 140, 220); }
 
