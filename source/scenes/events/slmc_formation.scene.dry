@@ -11,7 +11,7 @@ Q.sinhala_slmc = 0;
 Q.sltamil_slmc = 3; 
 Q.itamil_slmc = 0; 
 Q.muslim_slmc = 70; 
-Q.muslim_unp -= 50; 
+Q.muslim_unp -= 60; 
 Q.other_slmc = 0; 
 Q.workers_slmc = 8; 
 Q.middle_slmc = 10; 
@@ -19,7 +19,7 @@ Q.upper_slmc = 5;
 Q.rural_slmc = 12; 
 Q.slmc_relation = 50; 
 Q.slmc_r = 0; 
-Q.old_unp_r = 0;
+Q.old_slmc_r = 0;
 
 !}
 
