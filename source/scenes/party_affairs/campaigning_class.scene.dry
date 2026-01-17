@@ -23,7 +23,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: upper_slfp += 6*(1-dissent); resources -= 1;
+on-arrival: upper_slfp += 3*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the upper class. 
 
@@ -31,7 +31,7 @@ We have increased our campaigning among the upper class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: middle_slfp += 6*(1-dissent); resources -= 1;
+on-arrival: middle_slfp += 3*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the middle class. 
 
@@ -39,7 +39,7 @@ We have increased our campaigning among the middle class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_slfp += 6*(1-dissent); resources -= 1;
+on-arrival: workers_slfp += 3*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the working class.
 
@@ -47,7 +47,7 @@ We have increased our campaigning among the working class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_slfp += 6*(1-dissent); resources -= 1;
+on-arrival: rural_slfp += 3*(1-dissent); resources -= 1;
 
 We have increased our campaigning among rural class.
 
