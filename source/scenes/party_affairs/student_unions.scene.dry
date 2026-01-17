@@ -25,7 +25,7 @@ In fact the <span style="color: #FF2226;">**JVP**</span>'s support base has been
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; 
+on-arrival: resources -= 1; nationalist_dissent -= 5; left_dissent -= 5;
 
 Some that we threatened have albeit under the threat of violence, join us. Others have been driven into the arms of the JVP, this has substantially deteriorates relations with them.
 
@@ -38,10 +38,10 @@ on-arrival: resources -= 1;
 The rally was a relative success. Many students have decided to even join our unions. The government is rather pissed however...
 
 @jvp
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
+choose-if: resources > 0 and jvp_relation > 45
+unavailable-subtitle: Not enough resources, the JVP still hates us.
 subtitle: -1 resources 
-on-arrival: resources -= 1; jvp_relation += 5*(1 - dissent);
+on-arrival: resources -= 1; jvp_relation += 5*(1 - dissent); left_strength += 3; left_dissent -= 2;
 
 The JVP alligned unions have agreed to albeit, limited cooperation. The mood between us and the JVP has grown.
 
@@ -49,7 +49,7 @@ The JVP alligned unions have agreed to albeit, limited cooperation. The mood bet
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent);
+on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent); left_strength += 3; left_dissent -= 5;
 
 We have managed to expand the reach of SLFP alligned student unions.
 
@@ -57,7 +57,7 @@ We have managed to expand the reach of SLFP alligned student unions.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent); jvp_relation -= 5*(1 - dissent);
+on-arrival: resources -= 1; student_union_slfp_control += 5*(1 - dissent); jvp_relation -= 5*(1 - dissent); left_strength += 3; left_dissent -= 5;
 
 Some the unions agreed to align themselves around our orbit, but others are rightfully suspicious including the JVP and its unions.
 
