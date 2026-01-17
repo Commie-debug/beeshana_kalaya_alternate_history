@@ -24,7 +24,7 @@ That is in the past. Since the <span style="color: #006400;">**UNP's**</span> cr
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; workers_slfp += 4*(1-dissent); upper_slfp -= 5*(1-dissent); 
+on-arrival: resources -= 1; workers_slfp += 3*(1-dissent); upper_slfp -= 3*(1-dissent); left_strength += 4;
 
 The rally was met with condemnation by buisneses, they have been driven into the arms of the UNP. Working class folk however, were very supportive.
 
@@ -32,7 +32,7 @@ The rally was met with condemnation by buisneses, they have been driven into the
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent);
+on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent); left_strength += 2;
 
 The money we have sent hasnt been a waste, slowly we are rebuilding the organised labour.... to be alligned with us.
 
@@ -40,7 +40,7 @@ The money we have sent hasnt been a waste, slowly we are rebuilding the organise
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent); cwc_relation -= 5*(1-dissent); itamil_slfp += 5*(1-dissent);
+on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent); cwc_relation -= 3*(1-dissent); itamil_slfp += 5*(1-dissent);
 
 As expected, the CWC is incredibly angry over our "intrusion", relations have taken a down hill trajectory but at least we have gained support among Indian Tamils.
 
@@ -48,11 +48,11 @@ As expected, the CWC is incredibly angry over our "intrusion", relations have ta
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent); cpsl_relation += 6*(1-dissent); lssp_relation += 5*(1-dissent);
+on-arrival: resources -= 1; labour_union_slfp_control += 5*(1-dissent); cpsl_relation += 6*(1-dissent); lssp_relation += 5*(1-dissent); left_strength += 4; nationalist_dissent += 2;
 
 The increased cooperation has generally raised relations with the CPSL and LSSP. We have also learned better tactics to engage the un-unionsed workers, persuading many to join.
 
-//Sending resources will increase overall union power
+#Sending resources will increase overall union power
 
 #Add more options for expanding SLFP control via reaching to independents, converting unions to us (with a bit of cash)
 
