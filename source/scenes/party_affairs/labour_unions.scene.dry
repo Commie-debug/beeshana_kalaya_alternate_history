@@ -24,7 +24,7 @@ That is in the past. Since the <span style="color: #006400;">**UNP's**</span> cr
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources 
-on-arrival: resources -= 1; workers_slfp += 5*(1-dissent); upper_slfp -= 5*(1-dissent); 
+on-arrival: resources -= 1; workers_slfp += 4*(1-dissent); upper_slfp -= 5*(1-dissent); 
 
 The rally was met with condemnation by buisneses, they have been driven into the arms of the UNP. Working class folk however, were very supportive.
 
