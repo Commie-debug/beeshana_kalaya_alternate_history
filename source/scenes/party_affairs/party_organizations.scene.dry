@@ -35,7 +35,7 @@ go-to: media
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; slfp_sltamil += 3*(1-dissent); nationalist_dissent += 4; slfp_itamil += 3*(1-dissent); left_strength += 4;
+on-arrival: resources -= 1; slfp_sltamil += 3*(1-dissent); nationalist_dissent += 4; slfp_itamil += 3*(1-dissent); left_strength += 6;
 
 Tamil dissatisfaction with the TULF and ACTC has driven some towards the SLFP. Though there is still much work to be done to gain more of their support.
 
@@ -67,7 +67,7 @@ We have increased funding to Workers' Welfare.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; left_dissent -= 6; nationalist_dissent -= 6; 
+on-arrival: resources -= 1; left_dissent -= 6; nationalist_dissent -= 6; nationalist_strength += 4;
 
 Our party members are rather happy with our frivulrous spending, so long as it keeps dissent down its worth it.
 
@@ -75,7 +75,7 @@ Our party members are rather happy with our frivulrous spending, so long as it k
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
+on-arrival: resources -= 1; slfpt_strength += 100; slfpt_militancy += 0.01; 
 
 We have increased in recruiting local thugs to protect us and our members. Though many in the left feel they are untrustworthy.
 
