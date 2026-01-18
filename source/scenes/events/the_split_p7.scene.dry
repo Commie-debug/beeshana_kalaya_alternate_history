@@ -15,7 +15,7 @@ Whoever he sides with can field there own candidate in the presidential election
 - @comminsioner: And after months of deliberation he chooses....
 
 @comminsioner
-go-to: siri_win if left_strength > nationalist_strength; maitri_win if nationalist_strength > left_strength; siri_win
+go-to: siri_win if split_sirimavo_victory == 2; maitri_win if split_maitripala_victory == 2; siri_win if split_sirimavo_victory == 1 and (left_strength > nationalist_strength); maitri_win if split_maitripala_victory == 1 and (left_strength < nationalist_strength); siri_win
 
 @siri_win
 on-arrival: split_sirimavo_victory += 1; left_strength += 5; nationalist_strength -= 7; sinhala_slfp += 8; sltamil_slfp += 3; itamil_slfp += 3; muslim_slfp += 4; rural_slfp += 5; workers_slfp += 7; upper_slfp -= 2; middle_slfp += 6; socialism += 5;
