@@ -658,7 +658,7 @@ Q.colombo_d_middle = 38;
 Q.colombo_d_worker = 47;
 Q.colombo_d_rural = 12;
 
-Q.colombo_d_control = 100;
+Q.colombo_d_control = 1;
 Q.colombo_d_infastructure = 0.85;
 Q.colombo_d_seats = 21;
 Q.colombo_d_industries = ['Tourism', 'Textile', 'Fishing', 'Agriculture', 'Rubber'];
@@ -676,7 +676,7 @@ Q.gampaha_d_middle = 23;
 Q.gampaha_d_worker = 28;
 Q.gampaha_d_rural = 47;
 
-Q.gampaha_d_control = 100;
+Q.gampaha_d_control = 1;
 Q.gampaha_d_infastructure = 0.70;
 Q.gampaha_d_seats = 17;
 Q.gampaha_d_industries = ['Agriculture', 'Textile', 'Fishing', 'Rubber'];
@@ -694,7 +694,7 @@ Q.kalutara_d_middle = 14;
 Q.kalutara_d_worker = 18;
 Q.kalutara_d_rural = 67;
 
-Q.kalutara_d_control = 100;
+Q.kalutara_d_control = 1;
 Q.kalutara_d_infastructure = 0.60;
 Q.kalutara_d_seats = 11;
 Q.kalutara_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Rubber'];
@@ -713,7 +713,7 @@ Q.jaffna_d_middle = 23;
 Q.jaffna_d_worker = 12;
 Q.jaffna_d_rural = 63;
 
-Q.jaffna_d_control = 100;
+Q.jaffna_d_control = 1;
 Q.jaffna_d_infastructure = 0.50;
 Q.jaffna_d_seats = 11;
 Q.jaffna_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
@@ -731,7 +731,7 @@ Q.kilinochchi_d_middle = 8;
 Q.kilinochchi_d_worker = 9;
 Q.kilinochchi_d_rural = 82;
 
-Q.kilinochchi_d_control = 100;
+Q.kilinochchi_d_control = 1;
 Q.kilinochchi_d_infastructure = 0.30;
 Q.kilinochchi_d_seats = 11;
 Q.kilinochchi_d_industries = ['Fishing', 'Agriculture'];
@@ -749,7 +749,7 @@ Q.mannar_d_middle = 9;
 Q.mannar_d_worker = 11;
 Q.mannar_d_rural = 79;
 
-Q.mannar_d_control = 100;
+Q.mannar_d_control = 1;
 Q.mannar_d_infastructure = 0.30;
 Q.mannar_d_seats = 5;
 Q.mannar_d_industries = ['Fishing', 'Agriculture'];
@@ -767,7 +767,7 @@ Q.mullaitivu_d_middle = 7;
 Q.mullaitivu_d_worker = 8;
 Q.mullaitivu_d_rural = 84;
 
-Q.mullaitivu_d_control = 100;
+Q.mullaitivu_d_control = 1;
 Q.mullaitivu_d_infastructure = 0.25;
 Q.mullaitivu_d_seats = 5;
 Q.mullaitivu_d_industries = ['Fishing', 'Agriculture'];
@@ -785,7 +785,7 @@ Q.vavuniya_d_middle = 11;
 Q.vavuniya_d_worker = 10;
 Q.vavuniya_d_rural = 78;
 
-Q.vavuniya_d_control = 100;
+Q.vavuniya_d_control = 1;
 Q.vavuniya_d_infastructure = 0.30;
 Q.vavuniya_d_seats = 5;
 Q.vavuniya_d_industries = ['Agriculture'];
@@ -804,7 +804,7 @@ Q.batticaloa_d_middle = 13;
 Q.batticaloa_d_worker = 11;
 Q.batticaloa_d_rural = 75;
 
-Q.batticaloa_d_control = 100;
+Q.batticaloa_d_control = 1;
 Q.batticaloa_d_infastructure = 0.35;
 Q.batticaloa_d_seats = 4;
 Q.batticaloa_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
@@ -822,7 +822,7 @@ Q.ampara_d_middle = 11;
 Q.ampara_d_worker = 10;
 Q.ampara_d_rural = 78;
 
-Q.ampara_d_control = 100;
+Q.ampara_d_control = 1;
 Q.ampara_d_infastructure = 0.35;
 Q.ampara_d_seats = 6;
 Q.ampara_d_industries = ['Fishing', 'Agriculture'];
@@ -840,7 +840,7 @@ Q.trincomalee_d_middle = 13;
 Q.trincomalee_d_worker = 13;
 Q.trincomalee_d_rural = 73;
 
-Q.trincomalee_d_control = 100;
+Q.trincomalee_d_control = 1;
 Q.trincomalee_d_infastructure = 0.40;
 Q.trincomalee_d_seats = 4;
 Q.trincomalee_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
@@ -859,7 +859,7 @@ Q.kandy_d_middle = 20;
 Q.kandy_d_worker = 17;
 Q.kandy_d_rural = 61;
 
-Q.kandy_d_control = 100;
+Q.kandy_d_control = 1;
 Q.kandy_d_infastructure = 0.55;
 Q.kandy_d_seats = 12;
 Q.kandy_d_industries = ['Tourism', 'Agriculture', 'Tea', 'Rubber'];
@@ -877,7 +877,7 @@ Q.matale_d_middle = 12;
 Q.matale_d_worker = 13;
 Q.matale_d_rural = 74;
 
-Q.matale_d_control = 100;
+Q.matale_d_control = 1;
 Q.matale_d_infastructure = 0.40;
 Q.matale_d_seats = 5;
 Q.matale_d_industries = ['Agriculture', 'Tea', 'Rubber'];
@@ -895,7 +895,7 @@ Q.nuwaraeliya_d_middle = 10;
 Q.nuwaraeliya_d_worker = 18;
 Q.nuwaraeliya_d_rural = 71;
 
-Q.nuwaraeliya_d_control = 100;
+Q.nuwaraeliya_d_control = 1;
 Q.nuwaraeliya_d_infastructure = 0.45;
 Q.nuwaraeliya_d_seats = 6;
 Q.nuwaraeliya_d_industries = ['Tourism', 'Agriculture', 'Tea'];
@@ -914,7 +914,7 @@ Q.galle_d_middle = 15;
 Q.galle_d_worker = 14;
 Q.galle_d_rural = 70;
 
-Q.galle_d_control = 100;
+Q.galle_d_control = 1;
 Q.galle_d_infastructure = 0.55;
 Q.galle_d_seats = 11;
 Q.galle_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Rubber'];
@@ -932,7 +932,7 @@ Q.matara_d_middle = 13;
 Q.matara_d_worker = 12;
 Q.matara_d_rural = 74;
 
-Q.matara_d_control = 100;
+Q.matara_d_control = 1;
 Q.matara_d_infastructure = 0.45;
 Q.matara_d_seats = 9;
 Q.matara_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Tea', 'Rubber'];
@@ -950,7 +950,7 @@ Q.hambantota_d_middle = 10;
 Q.hambantota_d_worker = 9;
 Q.hambantota_d_rural = 80;
 
-Q.hambantota_d_control = 100;
+Q.hambantota_d_control = 1;
 Q.hambantota_d_infastructure = 0.35;
 Q.hambantota_d_seats = 7;
 Q.hambantota_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
@@ -969,7 +969,7 @@ Q.kurunegala_d_middle = 13;
 Q.kurunegala_d_worker = 12;
 Q.kurunegala_d_rural = 74;
 
-Q.kurunegala_d_control = 100;
+Q.kurunegala_d_control = 1;
 Q.kurunegala_d_infastructure = 0.45;
 Q.kurunegala_d_seats = 15;
 Q.kurunegala_d_industries = ['Agriculture', 'Mining', 'Rubber'];
@@ -987,7 +987,7 @@ Q.puttalam_d_middle = 11;
 Q.puttalam_d_worker = 12;
 Q.puttalam_d_rural = 76;
 
-Q.puttalam_d_control = 100;
+Q.puttalam_d_control = 1;
 Q.puttalam_d_infastructure = 0.40;
 Q.puttalam_d_seats = 7;
 Q.puttalam_d_industries = ['Fishing', 'Agriculture', 'Mining'];
@@ -1006,7 +1006,7 @@ Q.anuradhapura_d_middle = 11;
 Q.anuradhapura_d_worker = 10;
 Q.anuradhapura_d_rural = 78;
 
-Q.anuradhapura_d_control = 100;
+Q.anuradhapura_d_control = 1;
 Q.anuradhapura_d_infastructure = 0.40;
 Q.anuradhapura_d_seats = 8;
 Q.anuradhapura_d_industries = ['Tourism', 'Agriculture'];
@@ -1024,7 +1024,7 @@ Q.polonnaruwa_d_middle = 9;
 Q.polonnaruwa_d_worker = 9;
 Q.polonnaruwa_d_rural = 81;
 
-Q.polonnaruwa_d_control = 100;
+Q.polonnaruwa_d_control = 1;
 Q.polonnaruwa_d_infastructure = 0.40;
 Q.polonnaruwa_d_seats = 5;
 Q.polonnaruwa_d_industries = ['Agriculture'];
@@ -1043,7 +1043,7 @@ Q.monaragala_d_middle = 8;
 Q.monaragala_d_worker = 8;
 Q.monaragala_d_rural = 83;
 
-Q.monaragala_d_control = 100;
+Q.monaragala_d_control = 1;
 Q.monaragala_d_infastructure = 0.30;
 Q.monaragala_d_seats = 5;
 Q.monaragala_d_industries = ['Agriculture', 'Mining'];
@@ -1061,7 +1061,7 @@ Q.badulla_d_middle = 12;
 Q.badulla_d_worker = 14;
 Q.badulla_d_rural = 73;
 
-Q.badulla_d_control = 100;
+Q.badulla_d_control = 1;
 Q.badulla_d_infastructure = 0.40;
 Q.badulla_d_seats = 7;
 Q.badulla_d_industries = ['Agriculture', 'Tea'];
@@ -1080,7 +1080,7 @@ Q.ratnapura_d_middle = 12;
 Q.ratnapura_d_worker = 15;
 Q.ratnapura_d_rural = 72;
 
-Q.ratnapura_d_control = 100;
+Q.ratnapura_d_control = 1;
 Q.ratnapura_d_infastructure = 0.40;
 Q.ratnapura_d_seats = 10;
 Q.ratnapura_d_industries = ['Agriculture', 'Mining', 'Tea', 'Rubber'];
@@ -1098,7 +1098,7 @@ Q.kegalle_d_middle = 12;
 Q.kegalle_d_worker = 14;
 Q.kegalle_d_rural = 73;
 
-Q.kegalle_d_control = 100;
+Q.kegalle_d_control = 1;
 Q.kegalle_d_infastructure = 0.45;
 Q.kegalle_d_seats = 10;
 Q.kegalle_d_industries = ['Agriculture', 'Mining', 'Rubber'];
