@@ -22,7 +22,7 @@ Upper class: [+ district_upper +]
 
 Rural: [+ district_rural +]
 
-Control: [+ district_control +]
+Control: [+ district_control : radicalism +]
 
 Infastructure: [+ district_infastructure : eduinfa +]
 
