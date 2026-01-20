@@ -1,0 +1,29 @@
+title: Queen Elizabeth visits Sri Lanka
+view-if: year = 1981 and month = 9 and week = 2
+max-visits: 1
+tags: event
+face-image: img/queen_1981.jpg
+
+= Queen Elizabeth visits Sri Lanka
+
+Queen Elizabeth of the United Kingdom and the Commonwealth has visited our island. This will be her second visit to the island, the last time being 1954 when Sri Lanka was still the Dominion of Ceylon. Since then Sri Lanka has went through two republics but we are still a member of the Commonwealth of Nations.
+
+Offically her visit is to mark 50 years of universal adult suffarage on the island, unoffically her visit is an opportunity for JR to "flex" his infastructure projects to a world wide audience, esspecially the works attached to the Mahaweli program.
+  
+- @sirimavo: Sirimavo asks her followers and other members of the SLFP to boycott the celebrations. It was afterall under Sirimavo that we abandoned the Dominion.
+- @naitri: Maitripala and his "clique" urge fellow SLFP members to attend and take part in the festivities. Many in Sri Lanka still look fondly towards the monarchs.
+
+@sirmavo
+on-arrival: left_strength += 5; left_dissent -= 10; 
+
+On the 21st of October the Queen and her Prince were met by a large celebrating crowd at Katunayake airport and a force of nine thousand police officers. To mark her visit, thirty two prisoners in death row have had their sentences commuted to one of life imprisonment. 
+
+She went on to Galle Face green the next day where "the day belonged to the children of Lanka". On the 23rd they visited the site of the soon to be done Victoria Dam. The dam is partially funded by the British government and is named after the Queen's grandmother. The Queen was reportedly impressed by the work done and requested updates on its progress every six months. The dam is schedueled to be done by 1985.
+
+@naitri
+on-arrival: nationalist_strength += 5; nationalist_dissent -= 10;
+
+On the 21st of October the Queen and her Prince were met by a large celebrating crowd at Katunayake airport and a force of nine thousand police officers. To mark her visit, thirty two prisoners in death row have had their sentences commuted to one of life imprisonment. 
+
+She went on to Galle Face green the next day where "the day belonged to the children of Lanka". On the 23rd they visited the site of the soon to be done Victoria Dam. The dam is partially funded by the British government and is named after the Queen's grandmother. The Queen was reportedly impressed by the work done and requested updates on its progress every six months. The dam is schedueled to be done by 1985.
+
