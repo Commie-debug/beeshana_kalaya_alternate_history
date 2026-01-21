@@ -1122,8 +1122,8 @@ Q.classes = ['upper', 'middle', 'workers', 'rural'];
 Q.parties = ['slfp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'cwc', 'unp', 'actc'];
 
 //voting weightage between class and ethnic
-Q.ethnic_weight = 0.6
-Q.class_weight = 0.4
+Q.ethnic_weight = 0.7
+Q.class_weight = 0.3
 
 // Support for party by ethnic group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
