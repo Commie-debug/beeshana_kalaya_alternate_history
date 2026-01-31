@@ -197,6 +197,12 @@ Parliament composition:
 
 [? if dplf_formed = 1 and dplf_r >= 1: <span class="tooltip-text" title="Democratic Peoples Liberation Front">**DPFL**</span>: [+ dplf_r +] ?]
 
+[? if eprlf_formed = 1 and eprlf_r >= 1: <span class="tooltip-text" title=" Eelam Peoples Revolutionary Liberation Front">**EPRLF**</span>: [+ eprlf_r +] ?]
+
+[? if telo_formed = 1 and telo_r >= 1: <span class="tooltip-text" title=" Tamil Eelam Liberation Organisation">**TELO**</span>: [+ telo_r +] ?]
+
+[? if endlf_formed = 1 and endlf_r >= 1: <span class="tooltip-text" title=" Eelam National Democratic Liberation Front">**ENDLF**</span>: [+ eprlf_r +] ?]
+
 [? if jvp_r >= 1 : <span class="tooltip-text" title="Janatha Vimukthi Peramuna">**JVP**</span>: [+ jvp_r +] ?]
 
 [? if npp_formed = 1 and npp_r >= 1: <span class="tooltip-text" title="National Peoples Power">**NPP**</span>: [+ npp_r +] ?]
