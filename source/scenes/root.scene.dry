@@ -92,6 +92,20 @@ Q.unp_relation = 4;
 Q.cwc_relation = 10;
 Q.actc_relation = 10;
 
+//formable parties
+Q.slpp_relation = 0;
+Q.slmp_relation = 0;
+Q.slmc_relation = 0;
+Q.npp_relation = 0;
+Q.mep_relation = 0;
+Q.eros_relation = 0;
+Q.dplf_relation = 0;
+Q.pflt_relation = 0;
+Q.ucpf_relation = 0;
+Q.eprlf_relation = 0;
+Q.telo_relation = 0;
+Q.endlf_relation = 0;
+
 // formable parties
 Q.slpp_formed = 0;
 Q.slpp_in_government = 0;
@@ -111,6 +125,12 @@ Q.pflt_formed = 0;
 Q.pflt_in_government = 0;
 Q.ucpf_formed = 0;
 Q.ucpf_in_government = 0;
+Q.eprlf_formed = 0;
+Q.eprlf_in_government = 0;
+Q.telo_formed = 0;
+Q.telo_in_government = 0;
+Q.endlf_in_government = 0;
+//formation of endlf alredy handled elsewhere
 
 //party ideologies
 //based on the ideology qdisplay
@@ -133,13 +153,16 @@ Q.eros_ideology = 11;
 Q.dplf_ideology = 11;
 Q.pflt_ideology = 11;
 Q.ucpf_ideology = 8;
+Q.telo_ideology = 11;
+Q.eprlf_ideology = 11;
+Q.endlf_ideology = 11;
 
 //party colours as a list incase
 Q.partyColors = {
     'UNP': '#006400', 'SLFP': '#00008B', 'TULF': '#F7D917', 'CWC': '#E52B50',
     'ACTC': '#FDCC01', 'CPSL': '#65000B', 'JVP': '#FF2226', 'LSSP': '#A91101',
     'NSSP': '#FF8080', 'SLPP': '#800020', 'SLMP': '#663399', 'SLMC': '#2DCF3E',
-    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#9C1600' , 'UCPF': '#9C1600'
+    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#9C1600' , 'UCPF': '#9C1600', 'TELO': '#893F45', 'EPRLF': '#FF4500', 'ENDLF': '#FF5E5E'
 };
 
 //inter party dynamics
@@ -178,6 +201,9 @@ Q.eros_coalition_id = -1;
 Q.dplf_coalition_id = -1;
 Q.pflt_coalition_id = -1;
 Q.ucpf_coalition_id = -1;
+Q.endlf_coalition_id = -1;
+Q.eprlf_coalition_id = -1;
+Q.telo_coalition_id = -1;
 
 //party taking part in parliament elections
 Q.slfp_parl_yes = 1;
@@ -198,6 +224,9 @@ Q.eros_parl_yes = 1;
 Q.dplf_parl_yes = 1;
 Q.pflt_parl_yes = 1;
 Q.ucpf_parl_yes = 1;
+Q.telo_parl_yes = 1;
+Q.eprlf_parl_yes = 1;
+Q.endlf_parl_yes = 1;
 
 // C&S tracking - which parties are providing confidence & supply to current government
 Q.jvp_providing_cs = 0;
@@ -216,6 +245,9 @@ Q.pflt_providing_cs = 0;
 Q.eros_providing_cs = 0;
 Q.dplf_providing_cs = 0;
 Q.ucpf_providing_cs = 0;
+Q.endlf_providing_cs = 0;
+Q.eprlf_providing_cs = 0;
+Q.telo_providing_cs = 0;
 
 //UNP and CWC coalition
 Q.active_coalitions.push({
@@ -275,6 +307,9 @@ Q.eros_pres_endorsement = '';
 Q.dplf_pres_endorsement = '';
 Q.pflt_pres_endorsement = '';
 Q.ucpf_pres_endorsement = '';
+Q.telo_pres_endorsement = '';
+Q.endlf_pres_endorsement = '';
+Q.eprlf_pres_endorsement = '';
 
 //presidential election variables
 //default candidates
@@ -296,6 +331,9 @@ Q.eros_pres_candidate = 'EROS CANDIDATE';
 Q.dplf_pres_candidate = 'DPLF CANDIDATE';
 Q.pflt_pres_candidate = 'PFLT CANDIDATE';
 Q.ucpf_pres_candidate = 'UCPF CANDIDATE';
+Q.endlf_pres_candidate = 'ENDLF CANDIDATE';
+Q.telo_pres_candidate = 'TELO CANDIDATE';
+Q.eprlf_pres_candidate = 'EPRLF CANDIDATE';
 
 //party taking part in president elections
 Q.slfp_pres_yes = 1;
@@ -316,6 +354,9 @@ Q.eros_pres_yes = 1;
 Q.dplf_pres_yes = 1;
 Q.pflt_pres_yes = 1;
 Q.ucpf_pres_yes = 1;
+Q.eprlf_pres_yes = 1;
+Q.endlf_pres_yes = 1;
+Q.telo_pres_yes = 1;
 
 Q.pres_candidates = [];
 Q.pres_results = [];
@@ -398,7 +439,7 @@ Q.epdp_gstatus = 0;
 Q.endlf_formed = 0;//(amalgam of splinter groups from the EPRLF, PLOTE and TELO. Will form if Tamil unity is too low as a pro india faction and party)
 Q.endlf_strength = 0;
 Q.endlf_gstatus = 0;
-Q.tna_formed = 0;//tamil national army as a pro-india armed group to fight the LTTE
+Q.tna_formed = 0;//tamil national army as a pro-india armed group to fight the LTTE and support the EPRLF government in north east when the 1988 council election happens
 Q.tna_strength = 0;
 Q.tna_gstatus = 0;
 
@@ -1149,7 +1190,9 @@ Q.sinhala_eros = 0;
 Q.sinhala_dplf = 0;
 Q.sinhala_pflt = 0;
 Q.sinhala_ucpf = 0;
-
+Q.sinhala_eprlf = 0;
+Q.sinhala_endlf = 0;
+Q.sinhala_telo = 0;
 
 Q.sltamil_slfp = 2;     
 Q.sltamil_jvp = 0;      
@@ -1173,6 +1216,9 @@ Q.sltamil_eros = 0;
 Q.sltamil_dplf = 0;
 Q.sltamil_pflt = 0;
 Q.sltamil_ucpf = 0;
+Q.sltamil_eprlf = 0;
+Q.sltamil_endlf = 0;
+Q.sltamil_telo = 0;
 
 
 Q.itamil_slfp = 2;      
@@ -1197,6 +1243,9 @@ Q.itamil_eros = 0;
 Q.itamil_dplf = 0;
 Q.itamil_pflt = 0;
 Q.itamil_ucpf = 0;
+Q.itamil_eprlf = 0;
+Q.itamil_endlf = 0;
+Q.itamil_telo = 0;
 
 
 Q.muslim_slfp = 25;     
@@ -1221,6 +1270,9 @@ Q.muslim_eros = 0;
 Q.muslim_dplf = 0;
 Q.muslim_pflt = 0;
 Q.muslim_ucpf = 0;
+Q.muslim_eprlf = 0;
+Q.muslim_endlf = 0;
+Q.muslim_telo = 0;
 
 
 Q.other_slfp = 15;
@@ -1245,6 +1297,9 @@ Q.other_eros = 0;
 Q.other_dplf = 0;
 Q.other_pflt = 0;
 Q.other_ucpf = 0;
+Q.other_eprlf = 0;
+Q.other_endlf = 0;
+Q.other_telo = 0;
 
 // Support for party by economic class group
 Q.workers_slfp = 35;    
@@ -1269,6 +1324,9 @@ Q.workers_eros = 0;
 Q.workers_dplf = 0;
 Q.workers_pflt = 0;
 Q.workers_ucpf = 0;
+Q.workers_eprlf = 0;
+Q.workers_endlf = 0;
+Q.workers_telo = 0;
 
 
 Q.middle_slfp = 30;     
@@ -1293,6 +1351,9 @@ Q.middle_eros = 0;
 Q.middle_dplf = 0;
 Q.middle_pflt = 0;
 Q.middle_ucpf = 0;
+Q.middle_eprlf = 0;
+Q.middle_endlf = 0;
+Q.middle_telo = 0;
 
 
 Q.upper_slfp = 15;      
@@ -1317,6 +1378,9 @@ Q.upper_eros = 0;
 Q.upper_dplf = 0;
 Q.upper_pflt = 0;
 Q.upper_ucpf = 0;
+Q.upper_eprlf = 0;
+Q.upper_endlf = 0;
+Q.upper_telo = 0;
 
 
 Q.rural_slfp = 30;      
@@ -1341,6 +1405,9 @@ Q.rural_eros = 0;
 Q.rural_dplf = 0;
 Q.rural_pflt = 0;
 Q.rural_ucpf = 0;
+Q.rural_eprlf = 0;
+Q.rural_endlf = 0;
+Q.rural_telo = 0;
 
 // Current Parliment composition
 // Number of seats in Parliment in Jan 1981
