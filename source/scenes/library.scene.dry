@@ -416,6 +416,12 @@ go-to: menu
 
 [? if dplf_formed: <span style="color: #CE2029;">**DPLF**</span> - *Democratic Peoples Liberation Front* - Founded as the political front of the <span style="color: #CE2029;">**PLOTE**</span> and other smaller former militant groups. It advocates for Tamil autonomy and harsher measures against the rival <span style="color: #DC143C;">**LTTE**</span>. ?]
 
+[? if eprlf_formed: EPRLF - *Eelam Peoples Revolutionary Liberation Front* -  ?]
+
+[? if telo_formed: TELO - *Tamil Eelam Liberation Organisationt* -  ?]
+
+[? if endlf_formed: ENDLF - *Eelam National Democratic Liberation Front* -  ?]
+
 <span style="color: #FF2226;">**JVP**</span> - *Janatha Vimukthi Peramuna (Peoples Liberation Front)* - Established in 1965 by Rohana Wijeweera, its is a Marxist-Leninist party known for its failed insurrection in 1971 against the <span style="color: #00008B;">**SLFP**</span> government. It advocates for a rural based revolutionary socialism. In recent years it has started adopting sinhalese nationalist positions. 
 
 [? if npp_formed: <span style="color: #9F005D;">**NPP**</span> - *National Peoples Power* - Founded after a recent split within the <span style="color: #FF2226;">**JVP**</span>. It is a broad left wing coalition that advocates for democratic socialism. It also contains communist, feminist and minority factions. ?]
