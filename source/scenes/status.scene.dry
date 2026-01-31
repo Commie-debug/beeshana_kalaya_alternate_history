@@ -53,6 +53,9 @@ Parliament composition:
 [? if actc_r >= 1 : <span class="tooltip-text" title="All Ceylon Tamil Congress">**ACTC**</span>: [+ actc_r +] ?]
 [? if eros_formed = 1 and eros_r >= 1: <span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">**EROS**</span>: [+ eros_r +] ?]
 [? if dplf_formed = 1 and dplf_r >= 1: <span class="tooltip-text" title="Democratic Peoples Liberation Front">**DPFL**</span>: [+ dplf_r +] ?]
+[? if eprlf_formed = 1 and eprlf_r >= 1: <span class="tooltip-text" title=" Eelam Peoples Revolutionary Liberation Front">**EPRLF**</span>: [+ eprlf_r +] ?]
+[? if telo_formed = 1 and telo_r >= 1: <span class="tooltip-text" title=" Tamil Eelam Liberation Organisation">**TELO**</span>: [+ telo_r +] ?]
+[? if endlf_formed = 1 and endlf_r >= 1: <span class="tooltip-text" title=" Eelam National Democratic Liberation Front">**ENDLF**</span>: [+ eprlf_r +] ?]
 [? if jvp_r >= 1 : <span class="tooltip-text" title="Janatha Vimukthi Peramuna">**JVP**</span>: [+ jvp_r +] ?]
 [? if npp_formed = 1 and npp_r >= 1: <span class="tooltip-text" title="National Peoples Power">**NPP**</span>: [+ npp_r +] ?]
 [? if cpsl_r >=1 : <span class="tooltip-text" title="Communist Party of Sri Lanka">**CPSL**</span>: [+ cpsl_r +] ?]
@@ -121,6 +124,12 @@ for (var i = 0; i < 8; i++) {
 
 [? if dplf_formed = 1 : <span class="tooltip-text" title="Democratic Peoples Liberation Front" style="color: #CE2029;">**DPLF**</span>: [+ dplf_relation : relationships +] ?]
 
+[? if eprlf_formed = 1 : EPRLF: [+ eprlf_relation : relationships +] ?]
+
+[? if telo_formed = 1 : TELO: [+ telo_relation : relationships +] ?]
+
+[? if endlf_formed = 1 : ENDLF: [+ endlf_relation : relationships +] ?]
+
 <span class="tooltip-text" title="Janatha Vimukthi Peramuna" style="color: #FF2226;">**JVP**</span>: [+ jvp_relation : relationships +]
 
 [? if npp_formed = 1 : <span class="tooltip-text" title="National Peoples Power" style="color: #9F005D;">**NPP**</span>: [+ npp_relation : relationships +] ?]
@@ -180,6 +189,12 @@ ACTC: [+ actc_ideology : ideology +]
 [? if eros_formed = 1 : EROS: [+ eros_ideology : ideology +] ?]
 
 [? if dplf_formed = 1 : DPLF: [+ dplf_ideology : ideology +] ?]
+
+[? if eprlf_formed = 1 : UCPF: [+ eprlf_ideology : ideology +] ?]
+
+[? if telo_formed = 1 : UCPF: [+ telo_ideology : ideology +] ?]
+
+[? if endlf_formed = 1 : UCPF: [+ endlf_ideology : ideology +] ?]
 
 CPSL: [+ cpsl_ideology : ideology +]
 
