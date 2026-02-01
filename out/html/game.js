@@ -443,9 +443,14 @@
             var strength = getSizeText(Q.endlf_strength);
             var status = getStatusText(Q.endlf_gstatus);
             var militancy = getMilitancyText(Q.endlf_militancy);
-            var ideologyText = getIdeologyText(Q.endlf_ideology);
-            var relationText = getRelationshipText(Q.endlf_relation);
-            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+            var content = baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+
+            if (Q.endlf_gstatus == 3) {
+                var ideologyText = getIdeologyText(Q.endlf_ideology);
+                var relationText = getRelationshipText(Q.endlf_relation);
+                content += '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+            }
+            return content;
         }
 
         if (searchString === 'TNA' && Q.tna_strength !== undefined) {
