@@ -422,11 +422,11 @@ go-to: menu
 
 [? if dplf_formed: <span style="color: #CE2029;">**DPLF**</span> - *Democratic Peoples Liberation Front* - Founded as the political front of the <span style="color: #CE2029;">**PLOTE**</span> and other smaller former militant groups. It advocates for Tamil autonomy and harsher measures against the rival <span style="color: #DC143C;">**LTTE**</span>. ?]
 
-[? if eprlf_formed: EPRLF - *Eelam Peoples Revolutionary Liberation Front* -  ?]
+[? if eprlf_formed: EPRLF - *Eelam Peoples Revolutionary Liberation Front* - Formed in 1980 as a militant group, the EPRLF has recently agreed to lay down its arms and join electoral politics. It is Tamil nationalist but is noticibly backed by India. It is also vehemently anti-LTTE. ?]
 
-[? if telo_formed: TELO - *Tamil Eelam Liberation Organisationt* -  ?]
+[? if telo_formed: TELO - *Tamil Eelam Liberation Organisationt* - Founded as a militant group in the late 70s, TELO has recently disarmed and joined democratic politics. It advocates for further autonomy for Tamils while supporting the IPKF. It is also anti-LTTE, owing to the liquidation of its cadres in 1986 by the LTTE. ?]
 
-[? if endlf_formed: ENDLF - *Eelam National Democratic Liberation Front* -  ?]
+[? if endlf_formed: ENDLF - *Eelam National Democratic Liberation Front* - Initally formed in early 1987 as an amalgamation of various splinters in other militant groups, it has now become a pro-Indian paramilitary and political party. ?]
 
 <span style="color: #FF2226;">**JVP**</span> - *Janatha Vimukthi Peramuna (Peoples Liberation Front)* - Established in 1965 by Rohana Wijeweera, its is a Marxist-Leninist party known for its failed insurrection in 1971 against the <span style="color: #00008B;">**SLFP**</span> government. It advocates for a rural based revolutionary socialism. In recent years it has started adopting sinhalese nationalist positions. 
 
