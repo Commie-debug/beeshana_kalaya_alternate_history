@@ -4,7 +4,7 @@ is-card: true
 tags: party_affairs
 view-if: thugs_timer <= 0
 card-image: img/thugs.jpg
-on-arrival: month_actions += 1; thugs_timer += 6; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
+on-arrival: month_actions += 1; thugs_timer += 6; 
 max-visits: 100
 
 = Street Thugs
@@ -17,8 +17,6 @@ Like most parties in Sri Lanka, we have employed the use of street thugs to prot
 - @cut_rb: Cut funding for the thugs.
 - @easy_discard
 - @cancel_advisor_action
-
-#- Orient reichsbanner towards anti-fascism (only available if we have prioritized anti fascism)
 
 @militant
 choose-if: resources >= rb_militarization_cost
