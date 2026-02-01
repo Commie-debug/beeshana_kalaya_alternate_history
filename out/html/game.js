@@ -283,12 +283,6 @@
             return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
         }
         
-        if (searchString === 'EROS' && Q.eros_relation !== undefined) {
-            var relationText = getRelationshipText(Q.eros_relation);
-            var ideologyText = getIdeologyText(Q.eros_ideology);
-            return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
-        }
-        
         if (searchString === 'DPLF' && Q.dplf_relation !== undefined) {
             var relationText = getRelationshipText(Q.dplf_relation);
             var ideologyText = getIdeologyText(Q.dplf_ideology);
