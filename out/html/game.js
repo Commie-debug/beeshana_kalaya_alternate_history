@@ -365,9 +365,41 @@
         
         if (searchString === 'TELO' && Q.telo_strength !== undefined) {
             var strength = getSizeText(Q.telo_strength);
-            var militancy = getMilitancyText(Q.telo_militancy);
             var status = getStatusText(Q.telo_gstatus);
-            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var militancy = getMilitancyText(Q.telo_militancy);
+            var content = baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            if (Q.telo_gstatus === 3) {
+                var ideologyText = getIdeologyText(Q.telo_ideology);
+                var relationText = getRelationshipText(Q.telo_relation);
+                content += '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+            }
+            return content;
+        }
+        
+        if (searchString === 'EPRLF' && Q.eprlf_strength !== undefined) {
+            var strength = getSizeText(Q.eprlf_strength);
+            var status = getStatusText(Q.eprlf_gstatus);
+            var militancy = getMilitancyText(Q.eprlf_militancy);
+            var content = baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            if (Q.eprlf_gstatus === 3) {
+                var ideologyText = getIdeologyText(Q.eprlf_ideology);
+                var relationText = getRelationshipText(Q.eprlf_relation);
+                content += '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+            }
+            return content;
+        }
+
+        if (searchString === 'EROS' && Q.eros_relation !== undefined) {
+            var strength = getSizeText(Q.eros_strength);
+            var status = getStatusText(Q.eros_gstatus);
+            var militancy = getMilitancyText(Q.eros_militancy);
+            var content = baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            if (Q.eros_gstatus === 3) {
+                var ideologyText = getIdeologyText(Q.eros_ideology);
+                var relationText = getRelationshipText(Q.eros_relation);
+                content += '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+            }
+            return content;
         }
         
         if (searchString === 'PLOTE' && Q.plote_strength !== undefined) {
@@ -377,13 +409,7 @@
             return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
         }
         
-        if (searchString === 'EPRLF' && Q.eprlf_strength !== undefined) {
-            var strength = getSizeText(Q.eprlf_strength);
-            var militancy = getMilitancyText(Q.eprlf_militancy);
-            var status = getStatusText(Q.eprlf_gstatus);
-            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
-        }
-      
+       
         if (searchString === 'DJV' && Q.djv_strength !== undefined) {
             var strength = getSizeText(Q.djv_strength);
             var militancy = getMilitancyText(Q.djv_militancy);
@@ -421,9 +447,11 @@
 
        if (searchString === 'ENDLF' && Q.endlf_strength !== undefined) {
             var strength = getSizeText(Q.endlf_strength);
-            var militancy = getMilitancyText(Q.endlf_militancy);
             var status = getStatusText(Q.endlf_gstatus);
-            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy;
+            var militancy = getMilitancyText(Q.endlf_militancy);
+            var ideologyText = getIdeologyText(Q.endlf_ideology);
+            var relationText = getRelationshipText(Q.endlf_relation);
+            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + '<br>Militarization: ' + militancy + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
         }
 
         if (searchString === 'TNA' && Q.tna_strength !== undefined) {
