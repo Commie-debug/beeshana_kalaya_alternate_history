@@ -417,17 +417,18 @@ Q.ltte_strength = 35;
 Q.ltte_militancy = 0.24;
 Q.ltte_gstatus = 1;
 
+//eros,eprlf,telo party variables are handled elsewhere
 Q.eros_strength = 10;
 Q.eros_militancy = 0.24;
-Q.eros_gstatus = 3;
+Q.eros_gstatus = 1;
 
 Q.eprlf_strength = 5;
 Q.eprlf_militancy = 0.24;
-Q.eprlf_gstatus = 3;
+Q.eprlf_gstatus = 1;
 
 Q.telo_strength = 40;
 Q.telo_militancy = 0.24;
-Q.telo_gstatus = 3;
+Q.telo_gstatus = 1;
 
 Q.plote_strength = 30;
 Q.plote_militancy = 0.24;
