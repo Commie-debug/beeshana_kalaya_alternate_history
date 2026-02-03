@@ -30,7 +30,7 @@ on-arrival:
 We were able to work togheter with their unions, strenghtening our ties and further developing the strenght and efficiency of our affiliated unions.
 
 @united
-choose-if: lssp_relation >= 55; 
+choose-if: lssp_relation >= 55
 subtitle: Reform the United Front alliance with between the SLFP, CPSL & LSSP
 unavailable-subtitle: Relations with the LSSP are too poor.
 on-arrival: {!
