@@ -624,6 +624,7 @@ img {
       margin-right: 0.4em;
   }
 }
+
 /* mobile: move the stat box to the top if the screen is too small,
  * and reduce font size slightly. */
 @media screen and (max-width: 560px) {
