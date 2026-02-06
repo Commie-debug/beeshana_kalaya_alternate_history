@@ -50,6 +50,9 @@ Q.next_coalition_id += 1;
 //relation boost
 Q.cpsl_relation += 10; 
 Q.lssp_relation += 10;
+
+Q.united_front_formed = 1;
+
 !}
 
 Talks were successful, our parties have agreed to the reformation of the United Front, an alliance to confront the threat of the UNP and to represent the people of Sri Lanka on the fight towards socialism.
