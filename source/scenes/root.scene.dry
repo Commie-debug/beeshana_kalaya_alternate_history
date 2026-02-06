@@ -287,6 +287,11 @@ Q.coalition_count = 1;
 //to keep track of whaere the next coalition should be placed
 Q.next_coalition_id = 1;
 
+//coalition formed or not?
+//uses the direct names to see if a coalition was formed or not to prevent duplicate coalitions from forming
+Q.united_front_formed = 0;
+Q.unp_cwc_formed = 1;
+
 //empty mean they run independently or is in coalition
 //party name in lower case means they are being endorsed for president
 Q.slfp_pres_endorsement = '';
