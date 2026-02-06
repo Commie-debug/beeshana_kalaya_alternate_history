@@ -1,7 +1,7 @@
 title: An offer from the LSSP and CPSL
 new-page: true
 is-card: true
-view-if: slfp_coalition_id = -1 and cpsl_relation >= 55 and lssp_relation >= 55
+view-if: slfp_coalition_id = -1 and cpsl_relation >= 55 and lssp_relation >= 55 and united_front_formed = 0;
 tags: event
 
 = Coalition Proposal from the LSSP and CPSL
