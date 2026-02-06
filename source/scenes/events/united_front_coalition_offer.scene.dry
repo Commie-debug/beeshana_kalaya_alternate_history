@@ -31,6 +31,9 @@ Q.next_coalition_id += 1;
 //relation boost
 Q.cpsl_relation += 10; 
 Q.lssp_relation += 10;
+
+Q.united_front_formed = 1;
+
 !}
 
 We have gone ahead with forming a coalition with the LSSP and CPSL. The United Front has been reborn from the ashes to challenge the UNP and all others who threaten Sri Lanka and its path to socialism.
