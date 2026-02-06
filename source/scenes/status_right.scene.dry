@@ -70,13 +70,13 @@ Industries: [+ district_industries +]
 
 = Leader of the SLFP
 
-[? if the_split = 0 : <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Sirimavo Bandaranaike</p> ?]
+[? if the_split == 0 : <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Sirimavo Bandaranaike</p> ?]
 
-[? if the_split = 1 : <div style="display: flex;gap: 5px;margin-bottom: 5px;"> <img src="img/portraits/SenanayakeMaithripala.jpg" alt="Maitripala Senanayake" style="width: 50%;"> <img src="img/portraits/BandaranaikeSirimavo.jpg" alt="Sirimavo Bandaranaike" style="width: 50%;"> </div><p style="text-align: center;margin-bottom: 0;"><em>Disputed Leadership</em></p><div style="display: flex;gap: 5px;margin-bottom: 5px;justify-content: space-around;"><p style="margin: 0;">Maitripala Senanayake</p><p style="margin: 0;">Sirimavo Bandaranaike</p></div> ?]
+[? if the_split == 1 : <div style="display: flex;gap: 5px;margin-bottom: 5px;"> <img src="img/portraits/SenanayakeMaithripala.jpg" alt="Maitripala Senanayake" style="width: 50%;"> <img src="img/portraits/BandaranaikeSirimavo.jpg" alt="Sirimavo Bandaranaike" style="width: 50%;"> </div><p style="text-align: center;margin-bottom: 0;"><em>Disputed Leadership</em></p><div style="display: flex;gap: 5px;margin-bottom: 5px;justify-content: space-around;"><p style="margin: 0;">Maitripala Senanayake</p><p style="margin: 0;">Sirimavo Bandaranaike</p></div> ?]
 
-[? if the_split = 2 : <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Sirimavo Bandaranaike</p> ?]
+[? if the_split == 2 : <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Sirimavo Bandaranaike</p> ?]
 
-[? if the_split = 3 : <div><img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Maitripala Senanayake</p> ?]
+[? if the_split == 3 : <div><img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Maitripala Senanayake</p> ?]
 
 = Parliamentary Party Leader 
 
