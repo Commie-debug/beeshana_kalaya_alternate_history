@@ -11,7 +11,7 @@ Last year following Sirimavo's attempt to expel to 4 SLFP MP's who sided with Ma
 - @results: The comittee report goes as follows:
 
 @results
-go-to: siri_win if socialism > sinhala_nationalism; maitri_win if sinhala_nationalism > socialism; siri_win
+go-to: siri_win if left_strength > nationalist_strength; maitri_win if left_strength < nationalist_strength; siri_win
 
 @siri_win
 on-arrival: split_sirimavo_victory += 1; left_strength += 5; nationalist_strength -= 7; socialism += 10;
