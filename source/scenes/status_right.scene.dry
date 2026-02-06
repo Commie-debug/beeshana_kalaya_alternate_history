@@ -92,4 +92,3 @@ Dissent: [+ left_dissent : dissent +]
 <span class="tooltip-text" title="A faction of sinhalese buddhist nationalists, and economic conservatives." style="color: #0F52BA;">**Nationalists**</span> 
 Strength: [+ nationalist_strength : strength +] 
 Dissent: [+ nationalist_dissent : dissent +]
-
