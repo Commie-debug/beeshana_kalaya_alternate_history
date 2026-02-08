@@ -190,7 +190,7 @@ const tooltipList = [{
     },
     {
     searchString: "SLFP",
-    explanationText: "<img src=img/logos/SLFP_Logo.png> Sri Lanka Freedom Party"
+    explanationText: "<img src=img/gif/test.webp> Sri Lanka Freedom Party"
     },
     {
     searchString: "UNP",
