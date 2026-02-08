@@ -1,6 +1,7 @@
 title: Violence in Jaffna
 subtitle: This cant be good...
 view-if: year = 1981 and month = 6 and week = 1
+set-bg: img/gif/test.webp
 max-visits: 1
 tags: event
 on-arrival: state_of_emergency = 1; state_of_emergency_timer = 3
