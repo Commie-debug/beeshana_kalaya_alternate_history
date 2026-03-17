@@ -87,7 +87,7 @@ var total_dissent = Q.left_strength*Q.left_dissent + Q.nationalist_strength*Q.na
 //militant control
 var total_ne_control = Q.jaffna_d_control + Q.kilinochchi_d_control + Q.mannar_d_control + Q.mullaitivu_d_control + Q.vavuniya_d_control + Q.batticaloa_d_control + Q.ampara_d_control + Q.trincomalee_d_control;  
 
-Q.militant_control = total_ne_control*1/8
+Q.militant_control = total_ne_control * 1/8
 
 //normalize labour union control
 var total_labour_control = Q.labour_union_slfp_control + Q.labour_union_unp_control + Q.labour_union_cpsl_control + Q.labour_union_lssp_control + Q.labour_union_cwc_control + Q.labour_union_jvp_control + Q.labour_union_independent_control;
@@ -98,7 +98,7 @@ if (total_labour_control > 0) {
     Q.labour_union_lssp_control = Math.round(100 * Q.labour_union_lssp_control / total_labour_control * 10) / 10;
     Q.labour_union_cwc_control = Math.round(100 * Q.labour_union_cwc_control / total_labour_control * 10) / 10;
     Q.labour_union_jvp_control = Math.round(100 * Q.labour_union_jvp_control / total_labour_control * 10) / 10;
-    //independent getremainder 
+    //independent gets theremainder 
     Q.labour_union_independent_control = Math.round((100 - Q.labour_union_slfp_control - Q.labour_union_unp_control - Q.labour_union_cpsl_control - Q.labour_union_lssp_control - Q.labour_union_cwc_control - Q.labour_union_jvp_control) * 10) / 10;
 }
 
@@ -109,7 +109,7 @@ if (total_student_control > 0) {
     Q.student_union_cpsl_control = Math.round(100 * Q.student_union_cpsl_control / total_student_control * 10) / 10;
     Q.student_union_slfp_control = Math.round(100 * Q.student_union_slfp_control / total_student_control * 10) / 10;
     Q.student_union_lssp_control = Math.round(100 * Q.student_union_lssp_control / total_student_control * 10) / 10;
-    //independent getremainder 
+    //independent gets the remainder 
     Q.student_union_independent_control = Math.round((100 - Q.student_union_jvp_control - Q.student_union_cpsl_control - Q.student_union_slfp_control - Q.student_union_lssp_control) * 10) / 10;
 }
 
