@@ -319,7 +319,7 @@ The textile and garment sector is currently in an early stage of expansion, driv
 
 Rubber: [+ rubber : sectordev +], Rubber Nationalisation: [+ rubber_national : nationalisation +]
 
-Rubber is a declining but still important plantation crop, its currently faces competition from synthetic alternatives and price volatility, a stark contrast from its importance 40 years earlier. It remains nationally relevant as an export and source of rural employment. Rubber cultivation is concentrated in the Wet Zone, particularly in Kalutara, Kegalle, Ratnapura, and parts of Gampaha district.
+Rubber is a declining but still important plantation crop, it is currently facing competition from synthetic alternatives and price volatility, a stark contrast from its importance 40 years earlier. It remains nationally relevant as an export and source of rural employment. Rubber cultivation is concentrated in the Wet Zone, particularly in Kalutara, Kegalle, Ratnapura, and parts of Gampaha district.
 
 = Tax Rates (Based on 1981 baseline)
 
@@ -354,9 +354,9 @@ go-to: menu
 
 **Muslims**: The most genetically diverse group in Sri Lanka. From descendents of Yemenis, Malays, Tamils, Arabs, etc, They are united by their common religon of Islam. Speaking mostly Tamil, most can speak Sinhala as a second language. The Muslims are generally spread throughout the island with large pockets in major cities and the North-East. Despite maintaing a seperate cultural identity to other groups, they have generally supported Sinhalese parties like the SLFP and UNP. Recently there has been a shift towards Tamil parties or even a seperate political identity. They make up 7.05% of the population.
 
-**Indian Tamil**: The youngest and more destitute of Sri Lanka. Descendent from lower caste Indian Tamil's brought by the british in the 19th century to farm first coffee, and then tea. They live mostly in the centre of the island in large slums close to their main occupation, the tea estates. Since independence the majority of them have no citizenship, with some being repatriated to India or Pakistan. The lack of franchisments has led them to suffer and politically, the few who can vote support the union and party CWC in the hopes of improving their lot. They make up around 5.51% of the population.
+**Indian Tamil**: The newest and most destitute of Sri Lanka. Descendent from lower caste Tamil's brought by the british from India in the 19th century to farm tea. They live mostly in the centre of the island in large slums close to their main occupation, the tea estates. Smaller communities also exist in the north-east. Since independence the majority of them have no citizenship, with some being repatriated to India or Pakistan. The lack of franchisments has led them to suffer and politically, the few who can vote support the union and party CWC in the hopes of improving their lot. They make up around 5.51% of the population.
 
-**Others**: This grouping consists of many groups such as the Burghers(Desendents of Europeans and theb locals), Kafirs(Desendents of African slaves and soliders brought by the Portugese), the ethnic Chinese and the indigeoneus "Vedda" whose history predates all other groups. The majority of this grouping reside in their own communities inside the major cities. This group makes up around 0.78% of the population.
+**Others**: This grouping consists of many groups such as the Burghers(Descendents of Europeans and locals), Kafirs(Desendents of African slaves and soliders brought by the Portugese), the ethnic Chinese and the indigeoneus "Vedda" whose history predates all other groups. The majority of this grouping reside in their own communities inside the major cities. They make up around 0.78% of the population.
 
 @public_opinion
 on-arrival: {!
@@ -428,7 +428,7 @@ go-to: menu
 
 [? if endlf_formed: ENDLF - *Eelam National Democratic Liberation Front* - Initally formed in early 1987 as an amalgamation of various splinters in other militant groups, it has now become a pro-Indian paramilitary and political party. ?]
 
-<span style="color: #FF2226;">**JVP**</span> - *Janatha Vimukthi Peramuna (Peoples Liberation Front)* - Established in 1965 by Rohana Wijeweera, its is a Marxist-Leninist party known for its failed insurrection in 1971 against the <span style="color: #00008B;">**SLFP**</span> government. It advocates for a rural based revolutionary socialism. In recent years it has started adopting sinhalese nationalist positions. 
+<span style="color: #FF2226;">**JVP**</span> - *Janatha Vimukthi Peramuna (Peoples Liberation Front)* - Established in 1965 by Rohana Wijeweera, its is a revolutionary socialist party known for its failed insurrection in 1971 against the <span style="color: #00008B;">**SLFP**</span> government. It advocates for a rural based revolutionary socialism. In recent years it has started adopting sinhalese nationalist positions. 
 
 [? if npp_formed: <span style="color: #9F005D;">**NPP**</span> - *National Peoples Power* - Founded after a recent split within the <span style="color: #FF2226;">**JVP**</span>. It is a broad left wing coalition that advocates for democratic socialism. It also contains communist, feminist and minority factions. ?]
 
@@ -521,7 +521,7 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 **JSS** - *Jathika Sevaka Sangamaya (National Employees Union)* - A prominent UNP affiliated trade union. It also acts as a def-facto paramilitary for the UNP. Their members are linked to numerous attacks on opposition and dissenters.
 
-[? if djv_formed = 1 : **DJV** - *Deshapremi Janatha Vyaparaya (Patriotic People's Movement)* - The armed wing of the JVP, it engages in assasinations, arsons, murder and all manner of methods to destabalise the state. ?]
+[? if djv_formed = 1 : **DJV** - *Deshapremi Janatha Vyaparaya (Patriotic People's Movement)* - The armed wing of the JVP, it engages in assasinations, arsons, murder and all manner of other methods to destabalise the state. ?]
 
 [? if blackcats_formed = 1 : **Black Cats** - One of numerous shadowy armed groups combatting the JVP and other dissenting voices. ?]
 
@@ -529,13 +529,13 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 = Tamil Militant Groups
 
-**LTTE** - *Liberation Tigers Of Tamil Eelam* - Originally formed in 1972 as the "Tamil new tigers" by its leader Velupillai Prabhakaran, the LTTE is the most infamous of the militants for their uncompromising stance and dedication to their fight for Tamil Eelam through armed struggle. At present they are small by their organisation is unrivaled. The LTTE also draws most of its support from the Karaiyar "fishing" caste.
+**LTTE** - *Liberation Tigers Of Tamil Eelam* - Originally formed in 1972 as the "Tamil new tigers" by its leader Velupillai Prabhakaran, the LTTE is the most infamous of the militants. They are known for their uncompromising stance and dedication to their fight for Tamil Eelam through armed struggle. At present they are small but their organisation is unrivaled. The LTTE also draws most of its support from the Karaiyar "fishing" caste.
 
-**EROS** - *Eelam Revolutionary Organisation Of Students* - Established in 1975 by members of the diaspora in London as a marxist "thinktank". It is highly ideoligical with an emphasis on socialism and social justice, unlike the other militants they have made efforts to integrate muslims. EROS also maintains extensive links with the tamil diaspora and other liberation movements such as the PLO. Its armed wing recently split off, weakening them. EROS draws most of its support from educated middle class and urban tamils such as the Vellalar caste.
+**EROS** - *Eelam Revolutionary Organisation Of Students* - Established in 1975 by members of the tamil diaspora in London as a marxist "thinktank". It is highly ideological with an emphasis on socialism and social justice. Unlike the other militants they have made efforts to integrate north-eastern muslims into their ranks. EROS also maintains extensive links with the tamil diaspora and other liberation movements such as the PLO. Its armed wing recently split off, weakening them. EROS draws most of its support from the educated middle class and urban tamils such as the Vellalar caste.
 
 **EPRLF** - *Eelam Peoples Revolutionary Liberation Front* - Formed in 1980 by breaking away from EROS due to ideological and strategic differences, the EPRLF seeks to blend tamil nationalism with revolutionary socialism and anti-casteism. They are also one of the weaker militants owing to their recent foundation. EPRLF draws support from lower caste tamils disatisfied with the tradtional caste system. Uniquely the EPRLF supports closer connections with and greater rights for the indian tamils in the highlands.
 
-**TELO** - *Tamil Eelam Liberation Organisation* - Founded by Nadarajah Thangathurai in 1979, it was inspired by EROS and the LTTE. It has since become one of the more prominent groups. It draws suppprt from the Karaiyar "fishing" caste like the LTTE. Its loose organisational structure has made it the boon of the police and military. Like EROS it has links with movements like the PLO. Ideologically it is rather muddled outside of support for Tamil Eelam and social justice. 
+**TELO** - *Tamil Eelam Liberation Organisation* - Founded by Nadarajah Thangathurai in 1979, it was inspired by EROS and the LTTE. It has since become one of the more prominent groups. It also draws suppprt from the Karaiyar "fishing" caste like the LTTE. Its loose organisational structure has made it the boon of the local police and military. Like EROS it has links with movements like the PLO. Ideologically it is rather muddled outside of support for Tamil Eelam and social justice. 
 
 **PLOTE** - *Peoples Liberation Organisation Of Tamil Eelam* - PLOTE was founded around 1980 by Uma Maheswaran as a split from the LTTE over both personal and strategic conflict between their two leaders. PLOTE draws support from university educated and urban tamils but also from various other castes highlighting its anti-casts stance and socialist ideolgy mixed with tamil nationalism. It is however a small organisation with a small number of dedicated cadre's.
 
@@ -547,19 +547,19 @@ Security Forces Strength: [+ security_forces_strenght : strength +]
 
 **Sri Lanka Police**
 
-[? if stf_formed = 1 : **Special Task Force** ?]
+[? if stf_formed = 1 : **STF** - *Special Task Force* - The STF are the recently formed "special forces" of the Sri Lankan police. They specialise in anti-irregular military, apprehension of armed and dangerous criminals, clandestine and covert operations and other tasks requiring special training. ?]
 
-[? if civilsec_formed = 0 : **Home Guard** ?]
+[? if civilsec_formed = 0 : **Home Guard** - They are a loosely structured state-organized, armed paramilitary volunteer force. Formed by local sinhalese and muslim villagers in the north-east provinces. Their main objective is to defend their villages and towns from tamil militant attacks. ?]
 
-[? if civilsec_formed = 1 : **Civil Security** ?]
+[? if civilsec_formed = 1 : **Civil Security** - Reorganised from the former "Home Guard" units, they share the same goal in addition to supporting the military and keeping order.?]
 
-[? if epdp_formed = 1 : **EPDP** ?]
+[? if epdp_formed = 1 : **EPDP** - *Eelam Peoples Democratic Party* - A recently formed group in the north-east. Nominally an anti-LTTE tamil group, they function as a state paramilitary. Their members are former guerillas who share a hatred for the LTTE. ?]
 
-[? if ipkf_formed = 1 : **IPKF** ?]
+[? if ipkf_formed = 1 : **IPKF** - *Indian Peacekeeping Force* - The Indian Armed Forces detachment depolyed in the north-east of Sri Lanka to maintain peace and prevent conflict between the tamil militants and the Sri Lanka Armed forces. ?]
 
-[? if tna_formed = 1 : **TNA** ?]
+[? if tna_formed = 1 : **TNA** - *Tamil National Army* - The TNA is an Indian sponsored tamil militant group formed to assist the IPKF against the LTTE insurgency. They also exist to support the newly elected North-Eastern provincial government. ?]
 
-[? if endlf_formed = 1 : **ENDLF** ?]
+[? if endlf_formed = 1 : **ENDLF** - *Eelam National Democratic Liberation Front* - The ENDLF is an Indian sponsored tamil militant group formed from splinter groups of other tamil militant groups. They are very anti-LTTE, which garners them the support of the IPKF. The ENDLF also functions as a political party. ?]
 
 @factions
 
@@ -569,7 +569,7 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 <span class="tooltip-text" title="The Left" style="color: #A91101;">**Left**</span> strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-The Left consists of the parties socialist and social democratic traditions. Trade unionists, socialists and all manner of proggressive exist here (Though many are also nationalist).
+The Left consists of the parties left wing socialist and social democratic traditions. Trade unionists, socialists and all manner of proggressive exist here (Though many are also nationalist).
 
 <span class="tooltip-text" title="The Nationalists" style="color: #0F52BA;">**Nationalists**</span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
@@ -709,4 +709,4 @@ if (d3 && window) {
 = Economic history
 
 {!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
-# TODO: maybe add textual histories too? some accessibility stuff as well...
+
