@@ -1,5 +1,5 @@
 title: Anti tamil violence across the island
-view-if: year = 1981 and month = 8 and week = 2
+view-if: year = 1981 and month = 8 and week = 3
 max-visits: 1
 on-arrival: ltte_strength += 6; plote_strength += 6; eros_strength += 4; telo_strength += 5; eprlf_strength += 4; tamil_nationalism += 7; sltamil_unp -= 10; itamil_unp -= 10; sinhala_nationalism += 8; gov_support -= 6; tamil_morale += 0.1; tamil_radicalisation += 1; state_of_emergency = 1; state_of_emergency_timer = 2;
 tags: event
