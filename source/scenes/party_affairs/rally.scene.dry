@@ -209,15 +209,12 @@ Our speakers invoke the glory days of the United Front - when <span style="color
 
 @sirimavo_rally
 title: Have Mrs Sirimavo address the crowd personally.
-subtitle: Uses an advisor action.
-view-if: sirimavo_advisor = 1 
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: We have recently used an advisor action.
+subtitle: Sirimavo still garners respect even in areas not know for supporting her.
+choose-if: sirimavo_rights_restored = 0
+unavailable-subtitle: Sirimavo's civil rights have not been restored yet.
 on-arrival: advisor_action_timer = 6; workers_slfp += 5*(1-dissent); rural_slfp += 5*(1-dissent); middle_slfp += 3*(1-dissent); left_dissent -= 5; nationalist_dissent -= 5; resources += 3
 
 Sirimavo Bandaranaike addresses the massive crowd as they react ecstatically to her arrival.
-
-[? if sirimavo_rights_restored = 0 : "They have tried to silence me," she declares, "but the voice of the people cannot be silenced!" ?]
 
 Her speech unites the factions, and donations pour in from sympathetic crowds.
 
