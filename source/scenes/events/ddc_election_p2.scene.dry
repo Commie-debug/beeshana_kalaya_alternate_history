@@ -1,5 +1,5 @@
 title: Asassination in Jaffna
-view-if: year = 1981 and month = 5 and week = 2
+view-if: year = 1981 and month = 5 and week = 3
 max-visits: 1
 tags: event
 new-page: true
