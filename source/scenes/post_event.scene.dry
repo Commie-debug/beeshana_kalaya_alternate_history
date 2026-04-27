@@ -222,7 +222,7 @@ if (Q.month_actions >= 1) {
     // Advance by 2 weeks (bi-weekly system)
     if (Q.week == 1) {
         // Move from week 1 to week 3 of same month
-        Q.week = 2;
+        Q.week = 3;
     } else {
         // Move from week 3 to week 1 of next month
         Q.week = 1;
@@ -614,7 +614,7 @@ if (typeof window !== "undefined" && window.generateBar) {
 !}
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
-= [+ month : month +] [+ year +]
+= Week [+ week +][+ month : month +] [+ year +]
 
 @events_choice
 
