@@ -82,6 +82,15 @@ Q.appealed_injunction = 0;
 // organizations in the slfp
 Q.slfp_union = 5;
 
+//media
+Q.radio = 0;
+Q.tv_ad = 0;
+Q.poster = 0;
+Q.post_cards = 0;
+Q.theatre = 0;
+Q.grafitti = 0;
+Q.loud_speaker_cars = 0;
+
 // inter-party relations
 Q.cpsl_relation = 50;
 Q.tulf_relation = 10;
@@ -1518,6 +1527,10 @@ Q.slfp_local_gov = 0;
 
 //ammendments
 Q.national_list_added = 0;
+
+//broadcasting freedoms
+Q.private_radio = 0;
+Q.private_tv = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
