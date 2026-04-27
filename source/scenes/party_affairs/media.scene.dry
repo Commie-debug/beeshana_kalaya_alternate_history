@@ -29,7 +29,6 @@ The SLFP can take advantage of growing TV and radio ownership across the island.
 - @easy_discard
 - @cancel_advisor_action
 
-//very effective for middle and working class but is hated by upper class
 
 @loud_speaker_cars
 title: Why not be as loud as possible?. Strap some loudpeakers onto a jeep and let it drive through a neighbourhood while blasting our message. 
@@ -41,7 +40,7 @@ on-arrival: loud_speaker_cars += 1; resources -= 4;
 
 The jeeps certainly made our message well heard by bystanders and residents, though some more affluent residents have complained about the noise, can't blame them.
 
-//will be only minor effective on rural and working class, no levels
+//very effective for middle and working class but is hated by upper class
 
 @grafitti
 title: The sidewalks, bus stations and alleys are dotted by grafitti and other petty vandalism. Most are a-political and crude, while others are explicitly political.
@@ -50,7 +49,9 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources. 
 on-arrival: grafitti += 1; resources -= 1; 
 
-//will be effective on the rural class, will have levels
+The "vandalism" makes our symbol and message more prevalent esspecially in the slums and villages. 
+
+//will be only minor effective on rural and working class, no levels
 
 @theatre
 title: In rural areas of Sri Lanka, theatre, plays and musicals are an important part of community and a form of entertainment, perhaps we can organise our own events?
@@ -62,7 +63,7 @@ on-arrival: theatre += 1; resources -= 4;
 
 The songs, acting and general performance gather modest crowds, but they seem enthusiastic at the entertainment provided.
 
-//will be effective on middle class, will have levels
+//will be effective on the rural class, will have levels
 
 @post_cards
 title: A rather novel idea has been brought to our attention. Post cards, fantasy money, flags and other "collectables" presenting party leaders and symbols.
@@ -74,7 +75,7 @@ on-arrival: post_cards += 1; resources -= 2;
 
 While many question the efficacy of this strategy in spreading our message, loyal party followers are collecting in droves and our coming to rallies clad in blue, waving the party standard.
 
-//will be broadly effective, will have levels like radio
+//will be effective on middle class, will have levels
 
 @posters
 title: Our posters, leaflets and flyers are outdated and need refinment for a changing electorate and their demands.
@@ -86,7 +87,7 @@ on-arrival: poster += 1; resources -= 1;
 
 Our party members have unveiled a new "series" of posters with chatchy slogans and innovative art styles. This will surely make our party more presentable.
 
-//will be more effective for working class people and middle class people, and will have levels like in radio
+//will be broadly effective, will have levels like radio
 
 @television
 title: With greater TV ownership among Sri Lankans, moving into the medium can be benefical in spreading our message directly.
@@ -98,6 +99,7 @@ on-arrival: tv_ad += 1; resources -= 3;
 
 Our adoption of the TV for political messaging is unprecedented in Sri Lanka and already other parties are starting to adopt the medium as well, time will tell if it will be effective.
 
+//will be more effective for working class people and middle class people, and will have levels like in radio
 
 @commercial
 title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
