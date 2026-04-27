@@ -19,14 +19,84 @@ The SLFP can take advantage of growing TV and radio ownership across the island.
 - @radio_2
 - @radio_3
 - @radio_4
+- @television
+- @posters
+- @post_cards
+- @theatre
+- @grafitti
+- @loud_speaker_cars
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 - @cancel_advisor_action
 
+//very effective for middle and working class but is hated by upper class
+@loud_speaker_cars
+title: Why not be as loud as possible?. Strap some loudpeakers onto a jeep and let it drive through a neighbourhood while blasting our message. 
+subtitle: -4 resources
+choose-if: resources >= 4
+unavailable-subtitle: Not enough resources. 
+view-if: loud_speaker_cars = 0
+on-arrival: loud_speaker_cars += 1; resources -= 4; 
+
+The jeeps certainly made our message well heard by bystanders and residents, though some more affluent residents have complained about the noise, can't blame them.
+
+//will be only minor effective on rural and working class, no levels
+@grafitti
+title: The sidewalks, bus stations and alleys are dotted by grafitti and other petty vandalism. Most are a-political and crude, while others are explicitly political.
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources. 
+on-arrival: grafitti += 1; resources -= 1; 
+
+//will be effective on the rural class, will have levels
+@theatre
+title: In rural areas of Sri Lanka, theatre, plays and musicals are an important part of community and a form of entertainment, perhaps we can organise our own events?
+subtitle: -4 resources
+choose-if: resources >= 4
+unavailable-subtitle: Not enough resources. 
+view-if: theatre = 0
+on-arrival: theatre += 1; resources -= 4; 
+
+The songs, acting and general performance gather modest crowds, but they seem enthusiastic at the entertainment provided.
+
+//will be effective on middle class, will have levels
+@post_cards
+title: A rather novel idea has been brought to our attention. Post cards, fantasy money, flags and other "collectables" presenting party leaders and symbols.
+subtitle: -2 resources
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources. 
+view-if: post_cards = 0
+on-arrival: post_cards += 1; resources -= 2; 
+
+While many question the efficacy of this strategy in spreading our message, loyal party followers are collecting in droves and our coming to rallies clad in blue, waving the party standard.
+
+//will be broadly effective, will have levels like radio
+@posters
+title: Our posters, leaflets and flyers are outdated and need refinment for a changing electorate and their demands.
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources. 
+view-if: poster = 0
+on-arrival: poster += 1; resources -= 1; 
+
+Our party members have unveiled a new "series" of posters with chatchy slogans and innovative art styles. This will surely make our party more presentable.
+
+//will be more effective for working class people and middle class people, and will have levels like in radio
+@television
+title: With greater TV ownership among Sri Lankans, moving into the medium can be benefical in spreading our message directly.
+subtitle: -3 resources
+choose-if: resources >= 3 and private_tv = 1
+unavailable-subtitle: The government maintains a monopoly on television. Not enough resources. 
+view-if: tv_ad = 0
+on-arrival: tv_ad += 1; resources -= 3; 
+
+Our adoption of the TV for political messaging is unprecedented in Sri Lanka and already other parties are starting to adopt the medium as well, time will tell if it will be effective.
+
+
 @commercial
 title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
 subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to socialist views.
-on-arrival: resources += 1; commercialized_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1-dissent); left_dissent += 10; labor_dissent += 10
+on-arrival: resources += 1; left_dissent += 10; 
 
 Our commercialized newspapers are able to bring in more funds. However, the left and labor factions express their displeasure.
 
@@ -47,8 +117,8 @@ This has been our media course historically, and it has successfully paved over 
 @radio
 title: Why not fund a radio station?
 subtitle: -2 resources
-choose-if: resources >= 2
-unavailable-subtitle: Not enough resources.
+choose-if: resources >= 2 and private_radio = 1
+unavailable-subtitle: The government maintains a monopoly on radio. Not enough resources. 
 view-if: radio = 0
 on-arrival: radio += 1; resources -= 2; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1 - dissent); workers_spd += 2*(1 - dissent); labor_dissent += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
 
