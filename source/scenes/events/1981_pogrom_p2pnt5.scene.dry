@@ -1,5 +1,5 @@
 title: A vote of no confidence
-view-if: year = 1981 and month = 7 and week = 2
+view-if: year = 1981 and month = 7 and week = 3
 max-visits: 1
 tags: event
 
