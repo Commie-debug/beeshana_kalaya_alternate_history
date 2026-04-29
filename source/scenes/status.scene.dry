@@ -495,6 +495,14 @@ Patriarchy: [+ women_patriarchy : equality +]
 
 Muslim marraige and divorce act: [? if muslim_marraige_law = 1 : Enforced ?] [? if muslim_marraige_law = 0 : Reformed ?]
 
+= Free Press
+
+Private Radio: [? if private_radio = 0 : Government Monopoly ?] [? if private_radio = 0 : Allowed ?]
+
+Private Television: [? if private_tv = 0 : Government Monopoly ?] [? if private_tv = 0 : Allowed ?]
+
+Wartime Censor: [? if wartime_censor = 0 : In Effect ?] [? if wartime_censor = 0 : Abolished ?]
+
 @economy
 on-arrival: {!
 if (Q.unemployed) {
