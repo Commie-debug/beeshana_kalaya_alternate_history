@@ -1531,6 +1531,7 @@ Q.national_list_added = 0;
 //broadcasting freedoms
 Q.private_radio = 0;
 Q.private_tv = 0;
+Q.wartime_censor = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SLFP vote against the previous government in a vote of no confidence?
