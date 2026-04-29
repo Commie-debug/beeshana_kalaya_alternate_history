@@ -497,11 +497,11 @@ Muslim marraige and divorce act: [? if muslim_marraige_law = 1 : Enforced ?] [? 
 
 = Free Press
 
-Private Radio: [? if private_radio = 0 : Government Monopoly ?] [? if private_radio = 0 : Allowed ?]
+Private Radio: [? if private_radio = 0 : Government Monopoly ?] [? if private_radio = 1 : Allowed ?]
 
-Private Television: [? if private_tv = 0 : Government Monopoly ?] [? if private_tv = 0 : Allowed ?]
+Private Television: [? if private_tv = 0 : Government Monopoly ?] [? if private_tv = 1 : Allowed ?]
 
-Wartime Censor: [? if wartime_censor = 0 : In Effect ?] [? if wartime_censor = 0 : Abolished ?]
+Wartime Censor: [? if wartime_censor = 0 : In Effect ?] [? if wartime_censor = 1 : Abolished ?]
 
 @economy
 on-arrival: {!
