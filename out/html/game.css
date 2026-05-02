@@ -44,11 +44,16 @@ body {
   overflow-y: scroll;
   min-height: 100vh;
 }
-
+/* ============================================================
+   DARK MODE — same as default now (always dark)
+   ============================================================ */
 body.dark-mode {
-
+  /* already dark, no changes needed */
 }
 
+/* ============================================================
+   TOP BAR
+   ============================================================ */
 header {
   display: flex;
   align-items: center;
@@ -64,7 +69,7 @@ header {
   overflow: visible;
 }
 
-
+/* Left: Radio + Cassette icons */
 #header-links {
   display: flex;
   gap: 12px;
@@ -105,7 +110,7 @@ header {
   color: var(--text-dim);
 }
 
-
+/* Override old link styles */
 #header-links a:first-of-type,
 #header-links a:nth-of-type(2),
 #header-links a:nth-of-type(3) {
@@ -115,7 +120,7 @@ header {
   box-shadow: none;
 }
 
-
+/* Center: Game title */
 .header-title-block {
   text-align: center;
   flex: 1;
@@ -144,7 +149,7 @@ header h2:before {
   font-style: italic;
 }
 
-
+/* Right: Date/Week display */
 #date-display {
   border: 1px solid var(--border-color);
   padding: 4px 12px;
@@ -161,6 +166,9 @@ header h2:before {
   letter-spacing: 0.05em;
 }
 
+/* ============================================================
+   MAIN LAYOUT — 3-column blueprint
+   ============================================================ */
 #page {
   display: grid;
   grid-template-columns: var(--left-panel-w) 1fr var(--right-panel-w);
@@ -181,7 +189,9 @@ header h2:before {
   gap: 10px;
 }
 
-
+/* ============================================================
+   LEFT PANEL — Clipboard / Information
+   ============================================================ */
 #tools_wrapper {
   position: static;
   width: auto;
@@ -202,6 +212,7 @@ header h2:before {
   flex-direction: column;
 }
 
+/* Clipboard top decoration */
 #stats_sidebar::before {
   content: '';
   display: block;
@@ -218,7 +229,7 @@ header h2:before {
 }
 
 #stats_sidebar_right {
-  display: none; 
+  display: none; /* merged into left panel tabs */
 }
 
 .tools.left, .tools.right {
@@ -227,7 +238,7 @@ header h2:before {
   right: auto;
 }
 
-
+/* Left panel label */
 .left-panel-label {
   font-family: 'Trebuchet MS', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.8em;
@@ -240,7 +251,9 @@ header h2:before {
   border-bottom: 1px solid var(--border-dim);
 }
 
-
+/* ============================================================
+   TABS — vertical stack on left panel
+   ============================================================ */
 .tab_container {
   background-color: transparent;
   margin: 0;
@@ -319,6 +332,9 @@ header h2:before {
   text-shadow: none;
 }
 
+/* ============================================================
+   CENTER — Main content + card grid
+   ============================================================ */
 #content {
   position: relative;
   background-color: var(--panel-bg);
@@ -333,6 +349,9 @@ header h2:before {
   min-height: 200px;
 }
 
+/* ============================================================
+   CARD GRID — 3×3 below main content
+   ============================================================ */
 #card-grid-area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -367,7 +386,9 @@ header h2:before {
   min-height: 140px;
 }
 
-
+/* ============================================================
+   RIGHT PANEL — Library + Advisors
+   ============================================================ */
 #right-panel {
   display: flex;
   flex-direction: column;
@@ -573,11 +594,11 @@ img.inline-img.icon {
   height: 1em !important;
   margin: 0 0.1em !important;
 }
-
+/* inline images */
 img.inline-img {
 
 
-
+/* status buttons */
 .tab_button_wide {width: 100%;}
 
 .status_button {
@@ -616,6 +637,7 @@ img.inline-img {
   border-color: var(--border-color);
 }
 
+/* tooltips from originalname/Dynamic Dev */
 .mytooltip {
   position: relative;
   cursor: pointer;
@@ -654,12 +676,15 @@ img.inline-img {
   transform: translate(-50%, -100%);
 }
 
-.ccard{padding:10px 14px;border-radius:8px;margin-bottom:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.2);background:#FDFFDB}
+/* coalition cards system */
+.ccard{padding:10px 14px;border-radius:8px;margin-bottom:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.2);background:#FDFFDB;cursor:pointer;}
 .chdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .cname{color:#000;font-size:0.95em;font-weight:600}
-.clead{font-size:0.85em;color:#000;margin-bottom:6px}
+.clead{font-size:0.85em;color:#000;margin-bottom:6px;display:none;}
 .clead b{color:#000}
-.cmem{display:flex;flex-wrap:wrap;gap:5px}
+.cmem{display:none;flex-wrap:wrap;gap:5px}
+.ccard:hover .clead{display:block;}
+.ccard:hover .cmem{display:flex;}
 .cno{text-align:center;padding:20px;color:#888;font-style:italic;background:rgba(0,0,0,0.04);border-radius:8px;border:1px dashed #ccc}
 
 /* sri lanka map hover effect */
@@ -706,7 +731,10 @@ img.inline-img {
     background-size: cover;
     overflow: hidden;
 }
-
+/*
+ * This is used for overlaying transparencies
+ * only transition on fade-in
+ * */
 #bg2 {
     z-index: -100;
 }
@@ -719,6 +747,11 @@ img.inline-img {
 }
 .delete_button {
 }
+
+/*
+ * Card stuff for dendrynexus
+ * 
+ */
 
 ul.decks, ul.hand, ul.pinned-cards {
   list-style: none;
@@ -742,35 +775,36 @@ ul.decks, ul.hand, ul.pinned-cards {
 
 a.card {
   display: inline-block;
-  width: 120px;
-  height: 150px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid var(--card-border-color);
-  margin-bottom: 0.5em;
+  width: 72px;
+  height: 90px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  border: 6px solid var(--card-border-color);
+  margin-bottom: 0.4em;
   position: relative;
 }
 a.card:hover {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  left: -5px;
-  top: -5px;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.4);
+  left: -3px;
+  top: -3px;
 }
 div.blank-card {
   display: inline-block;
-  width: 120px;
-  height: 150px;
+  width: 72px;
+  height: 90px;
   background-color: var(--card-bg-color);
-  border: 10px solid var(--card-border-color);
-  margin-bottom: 0.5em;
+  border: 6px solid var(--card-border-color);
+  margin-bottom: 0.4em;
 }
 
 .card-in-hand, .pinned-card, .deck {
   display: inline-block;
   position: relative;
-  max-width: 150px;
-  margin-right: 1em;
+  max-width: 90px;
+  margin-right: 0.5em;
   vertical-align: top;
 }
 
+/* TODO: unavailable card */
 .unavailable-card {
   color: var(--unavailable-color);
   background-color: var(--unavailable-bg-color) !important;
@@ -779,8 +813,12 @@ div.blank-card {
 
 .card-caption {
   text-align: center;
+  display: none;
+  font-size: 0.75em;
+}
+a.card:hover .card-caption,
+a.card:focus .card-caption {
   display: block;
-  font-size: 1em;
 }
 
 .card-tooltip {
@@ -797,8 +835,8 @@ div.blank-card {
 }
 
 .card-img {
-  height: 150px;
-  width: 120px;
+  height: 90px;
+  width: 72px;
   object-fit: cover;
 }
 
@@ -807,41 +845,43 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   position: absolute;
 }
 
-
+/* Unlike cards, face images can have different sizes. */
 .face-figure {
-
+  /*vertical-align: top;*/
   display: inline-block;
   border: 5px solid var(--card-border-color);
   float: left;
   max-width: 35%;
-
+  /*max-height: 180px;*/
   margin-right: 1em;
   margin-bottom: 0.5em;
   overflow: hidden;
 }
 .face-figure2 {
-
+  /*vertical-align: top;*/
   display: inline-block;
   border: 5px solid #ccc;
   float: left;
-
+  /*max-height: 180px;*/
   margin-right: 1em;
   margin-bottom: 0.5em;
   overflow: hidden;
 }
 .face-img {
-
+  /*max-width: 150px;*/
   vertical-align: bottom;
   object-fit: cover;
 }
 
-
+/*
+ * sprite stuff- feel free to comment out/remove if not using
+ */
 img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 #contentSpriteContainer {
-  display: none; 
+  display: none; /* hidden in blueprint mode */
 }
 .sprite {
     position: absolute;
@@ -868,7 +908,7 @@ img {
     top: 50%;
 }
 
-
+/* smaller screens */
 @media screen and (max-width: 1100px) {
   :root {
     --left-panel-w: 200px;
@@ -939,27 +979,29 @@ img {
     width: 100%;
   }
   .card-img {
-    height: 125px;
-    width: 100px;
+    height: 72px;
+    width: 58px;
   }
   a.card {
-    width: 100px;
-    height: 125px;
-    border: 6px solid var(--card-border-color);
-    margin-bottom: 0.5em;
+    width: 58px;
+    height: 72px;
+    border: 5px solid var(--card-border-color);
+    margin-bottom: 0.4em;
   }
   div.blank-card {
-    width: 100px;
-    height: 125px;
-    border: 6px solid var(--card-border-color);
-    margin-bottom: 0.5em;
+    width: 58px;
+    height: 72px;
+    border: 5px solid var(--card-border-color);
+    margin-bottom: 0.4em;
   }
   .card-in-hand, .pinned-card, .deck {
-    max-width: 120px;
-    margin-right: 0.5em;
+    max-width: 72px;
+    margin-right: 0.4em;
   }
 }
+/* New stuff just for this game */
 
+/* colored box div */
 .box {
   display: inline-block;
   height: 1em;
@@ -970,7 +1012,7 @@ table {
     border-spacing: 0.5em;
 }
 
-
+/* Styles for parties */
 .seat.unp {
     fill: #006400;
 }
