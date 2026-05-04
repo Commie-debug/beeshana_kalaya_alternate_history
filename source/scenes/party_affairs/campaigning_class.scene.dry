@@ -23,6 +23,14 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+go-to: upper_normal if state_of_emergency = 0; upper_emergency if state_of_emergency = 1;
+
+@upper_emergency
+on-arrival: upper_slfp += 1.5*(1-dissent); resources -= 1;
+
+We have increased our campaigning among the upper class, though the state of emergency has hindered our campaign.
+
+@upper_normal
 on-arrival: upper_slfp += 3*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the upper class. 
@@ -31,6 +39,14 @@ We have increased our campaigning among the upper class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+go-to: middle_normal if state_of_emergency = 0; middle_emergency if state_of_emergency = 1;
+
+@middle_emergency
+on-arrival: middle_slfp += 1.5*(1-dissent); resources -= 1;
+
+We have increased our campaigning among the middle class, though the state of emergency has hindered our campaign.
+
+@middle_normal
 on-arrival: middle_slfp += 3*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the middle class. 
@@ -39,6 +55,14 @@ We have increased our campaigning among the middle class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+go-to: worker_normal if state_of_emergency = 0; worker_emergency if state_of_emergency = 1;
+
+@worker_emergency
+on-arrival: workers_slfp += 1.5*(1-dissent); resources -= 1;
+
+We have increased our campaigning among the working class, though the state of emergency has hindered our campaign.
+
+@worker_normal
 on-arrival: workers_slfp += 3*(1-dissent); resources -= 1;
 
 We have increased our campaigning among the working class.
@@ -47,9 +71,17 @@ We have increased our campaigning among the working class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+go-to: rural_normal if state_of_emergency = 0; rural_emergency if state_of_emergency = 1;
+
+@rural_emergency
+on-arrival: rural_slfp += 1.5*(1-dissent); resources -= 1;
+
+We have increased our campaigning among the rural class, though the state of emergency has hindered our campaign.
+
+@rural_normal
 on-arrival: rural_slfp += 3*(1-dissent); resources -= 1;
 
-We have increased our campaigning among rural class.
+We have increased our campaigning among the rural class.
 
 @root
 
