@@ -238,6 +238,7 @@ Q.eprlf_parl_yes = 1;
 Q.endlf_parl_yes = 1;
 
 // C&S tracking - which parties are providing confidence & supply to current government
+Q.slfp_providing_cs = 0;
 Q.jvp_providing_cs = 0;
 Q.cpsl_providing_cs = 0;
 Q.lssp_providing_cs = 0;
