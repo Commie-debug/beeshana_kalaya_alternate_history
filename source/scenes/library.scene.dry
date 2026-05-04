@@ -118,11 +118,11 @@ go-to: menu
 
 **1952**: DS Senanayake dies in a horse riding accident, he would be suceeded by his son Dudley Senanayake.
 
-**1952**: Dudley wins that years general election.
+**1952**: Dudley Senanayake and the UNP wins that years general election.
 
-**1953**: A hartal(civil disobediance campaign) is launched by the LSSP and other left wing parties in response to the UNP governments reversal of the rice subsidy and welfare programs. Prime minister Dudley Senanayake would resign and be suceeded by Sir John Kotelawala.
+**1953**: A hartal(civil disobediance campaign) is launched by the LSSP and other left wing parties in response to the UNP governments reversal of the rice subsidy and other welfare programs. Prime minister Dudley Senanayake would resign and be suceeded by Sir John Kotelawala from the UNP.
 
-**1956**: SLFP wins its first election on a socialist and sinhalese nationalist platform along with a coaltion consisting of smaller Marxist parties. The SLFP and UNP campaigns deliberatly stirred ethnic tensions between Tamils and Sinhalese.
+**1956**: The SLFP wins its first election on a socialist and sinhalese nationalist platform along with a coaltion consisting of smaller Marxist parties. The SLFP and UNP campaigns deliberatly stirred ethnic tensions between Tamils and Sinhalese.
 
 **1956**: Violence erupts in the Gal Oya valley between the formerly majority Tamils and Sinhalese who had been settled under a government scheme.
 
@@ -173,7 +173,7 @@ Prime minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Leader of the Opposition: [+ opposition_leader +] ([+ opposition_leader_party +])
 
-<span style="color: #00008B;">**SLFP**</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?]
+<span style="color: #00008B;">**SLFP**</span> position: [? if slfp_in_government = 0 : Opposition ?][? if slfp_in_government = 1 : In government ?][? if slfp_in_government = 0 and slfp_providing_cs = 1 : Confidence & Supply ?]
 
 Current Government: [? if current_gov = 'UNP & CWC' : <span style="color: #006400;">**UNP**</span> & <span style="color: #E52B50;">**CWC**</span> ?]
 
