@@ -24,7 +24,16 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: sinhala_slfp += 3*(1-dissent); resources -= 1;
+on-arrival:resources -= 1;
+go-to: sinhalese_normal if state_of_emergency == 0; sinhalese_emergency if state_of_emergency == 1;
+
+@sinhalese_emergency
+on-arrival: sinhala_slfp += 1.5*(1-dissent); 
+
+We have increased our campaigning among the Sinhalese people, though the state of emergency has hindered our campaign.
+
+@sinhalese_normal
+on-arrival: sinhala_slfp += 3*(1-dissent); 
 
 We have increased our campaigning among the Sinhalese people. 
 
