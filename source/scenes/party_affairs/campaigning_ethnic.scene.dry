@@ -66,7 +66,7 @@ on-arrival: itamil_slfp += 3*(1-dissent);
 
 We have increased our campaigning among the Indian Tamils. 
 
-itamil_emergency
+@itamil_emergency
 on-arrival: itamil_slfp += 1.5*(1-dissent);
 
 We have increased our campaigning among the Indian Tamils, though the state of emergency has hindered our campaign. 
