@@ -62,12 +62,12 @@ on-arrival: resources -= 1;
 go-to: itamil_normal if state_of_emergency == 0; itamil_emergency if state_of_emergency == 1
 
 @itamil_normal
-itamil_slfp += 3*(1-dissent);
+on-arrival: itamil_slfp += 3*(1-dissent);
 
 We have increased our campaigning among the Indian Tamils. 
 
 itamil_emergency
-itamil_slfp += 1.5*(1-dissent);
+on-arrival: itamil_slfp += 1.5*(1-dissent);
 
 We have increased our campaigning among the Indian Tamils, though the state of emergency has hindered our campaign. 
 
@@ -93,9 +93,17 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 go-to: other_normal if state_of_emergency == 0; other_emergency if state_of_emergency == 1
-on-arrival: other_slfp += 3*(1-dissent); resources -= 1;
+on-arrival: resources -= 1;
 
-We have increased our campaigning among the smaller ethnic groups of Sri Lanka. 
+@other_normal
+on-arrival: other_slfp += 3*(1-dissent); 
+
+We have increased our campaigning among the smaller ethnic groups of Sri Lanka.
+
+@other_emergency
+on-arrival: other_slfp += 1.5*(1-dissent); 
+
+We have increased our campaigning among the smaller ethnic groups of Sri Lanka, though the state of emergency has hindered our campaign. 
 
 @root
 
