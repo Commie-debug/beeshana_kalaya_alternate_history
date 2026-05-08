@@ -24,7 +24,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1;
-go-to: upper_normal if state_of_emergency = 0; upper_emergency if state_of_emergency = 1;
+go-to: upper_normal if state_of_emergency = 0; upper_emergency if state_of_emergency = 1
 
 @upper_emergency
 on-arrival: upper_slfp += 1.5*(1-dissent); 
@@ -41,7 +41,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1;
-go-to: middle_normal if state_of_emergency = 0; middle_emergency if state_of_emergency = 1;
+go-to: middle_normal if state_of_emergency = 0; middle_emergency if state_of_emergency = 1
 
 @middle_emergency
 on-arrival: middle_slfp += 1.5*(1-dissent); 
@@ -58,7 +58,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1;
-go-to: worker_normal if state_of_emergency = 0; worker_emergency if state_of_emergency = 1;
+go-to: worker_normal if state_of_emergency = 0; worker_emergency if state_of_emergency = 1
 
 @worker_emergency
 on-arrival: workers_slfp += 1.5*(1-dissent); 
@@ -75,7 +75,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1;
-go-to: rural_normal if state_of_emergency = 0; rural_emergency if state_of_emergency = 1;
+go-to: rural_normal if state_of_emergency = 0; rural_emergency if state_of_emergency = 1
 
 @rural_emergency
 on-arrival: rural_slfp += 1.5*(1-dissent); 
