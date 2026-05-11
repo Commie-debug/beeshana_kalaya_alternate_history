@@ -229,7 +229,7 @@
     }
 
     function getDissentText(value) {
-      if (value === undefined || value === null) return 'Unknown';
+        if (value === undefined || value === null) return 'Unknown';
         if (value <= 4.999) return '<span style="color: #008000;">**Very low**</span>';
         if (value <= 14.999) return '<span style="color: #9ACD32;">**Low**</span>';
         if (value <= 30.999) return '<span style="color: #FFD700;">**Medium**</span>';
