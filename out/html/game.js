@@ -691,7 +691,7 @@ function Gampaha_info() {
   Q.district_infastructure = Q.gampaha_d_infastructure;
   Q.district_seats = Q.gampaha_d_seats;
   Q.district_industries = Q.gampaha_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Kalutara_info() {
@@ -710,7 +710,7 @@ function Kalutara_info() {
   Q.district_infastructure = Q.kalutara_d_infastructure;
   Q.district_seats = Q.kalutara_d_seats;
   Q.district_industries = Q.kalutara_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // Central Province
@@ -730,7 +730,7 @@ function Kandy_info() {
   Q.district_infastructure = Q.kandy_d_infastructure;
   Q.district_seats = Q.kandy_d_seats;
   Q.district_industries = Q.kandy_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Matale_info() {
@@ -749,7 +749,7 @@ function Matale_info() {
   Q.district_infastructure = Q.matale_d_infastructure;
   Q.district_seats = Q.matale_d_seats;
   Q.district_industries = Q.matale_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function NuwaraEliya_info() {
@@ -768,7 +768,7 @@ function NuwaraEliya_info() {
   Q.district_infastructure = Q.nuwaraeliya_d_infastructure;
   Q.district_seats = Q.nuwaraeliya_d_seats;
   Q.district_industries = Q.nuwaraeliya_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // Southern Province
@@ -788,7 +788,7 @@ function Galle_info() {
   Q.district_infastructure = Q.galle_d_infastructure;
   Q.district_seats = Q.galle_d_seats;
   Q.district_industries = Q.galle_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Matara_info() {
@@ -807,7 +807,7 @@ function Matara_info() {
   Q.district_infastructure = Q.matara_d_infastructure;
   Q.district_seats = Q.matara_d_seats;
   Q.district_industries = Q.matara_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Hambantota_info() {
@@ -826,7 +826,7 @@ function Hambantota_info() {
   Q.district_infastructure = Q.hambantota_d_infastructure;
   Q.district_seats = Q.hambantota_d_seats;
   Q.district_industries = Q.hambantota_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // Northern Province
@@ -846,7 +846,7 @@ function Jaffna_info() {
   Q.district_infastructure = Q.jaffna_d_infastructure;
   Q.district_seats = Q.jaffna_d_seats;
   Q.district_industries = Q.jaffna_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Kilinochchi_info() {
@@ -865,7 +865,7 @@ function Kilinochchi_info() {
   Q.district_infastructure = Q.kilinochchi_d_infastructure;
   Q.district_seats = Q.kilinochchi_d_seats;
   Q.district_industries = Q.kilinochchi_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Mannar_info() {
@@ -884,7 +884,7 @@ function Mannar_info() {
   Q.district_infastructure = Q.mannar_d_infastructure;
   Q.district_seats = Q.mannar_d_seats;
   Q.district_industries = Q.mannar_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Mullaitivu_info() {
@@ -903,7 +903,7 @@ function Mullaitivu_info() {
   Q.district_infastructure = Q.mullaitivu_d_infastructure;
   Q.district_seats = Q.mullaitivu_d_seats;
   Q.district_industries = Q.mullaitivu_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Vavuniya_info() {
@@ -922,7 +922,7 @@ function Vavuniya_info() {
   Q.district_infastructure = Q.vavuniya_d_infastructure;
   Q.district_seats = Q.vavuniya_d_seats;
   Q.district_industries = Q.vavuniya_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // Eastern Province
@@ -942,7 +942,7 @@ function Batticaloa_info() {
   Q.district_infastructure = Q.batticaloa_d_infastructure;
   Q.district_seats = Q.batticaloa_d_seats;
   Q.district_industries = Q.batticaloa_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Ampara_info() {
@@ -961,7 +961,7 @@ function Ampara_info() {
   Q.district_infastructure = Q.ampara_d_infastructure;
   Q.district_seats = Q.ampara_d_seats;
   Q.district_industries = Q.ampara_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Trincomalee_info() {
@@ -980,7 +980,7 @@ function Trincomalee_info() {
   Q.district_infastructure = Q.trincomalee_d_infastructure;
   Q.district_seats = Q.trincomalee_d_seats;
   Q.district_industries = Q.trincomalee_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // North Western Province
@@ -1000,7 +1000,7 @@ function Kurunegala_info() {
   Q.district_infastructure = Q.kurunegala_d_infastructure;
   Q.district_seats = Q.kurunegala_d_seats;
   Q.district_industries = Q.kurunegala_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Puttalam_info() {
@@ -1019,7 +1019,7 @@ function Puttalam_info() {
   Q.district_infastructure = Q.puttalam_d_infastructure;
   Q.district_seats = Q.puttalam_d_seats;
   Q.district_industries = Q.puttalam_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // North Central Province
@@ -1039,7 +1039,7 @@ function Anuradhapura_info() {
   Q.district_infastructure = Q.anuradhapura_d_infastructure;
   Q.district_seats = Q.anuradhapura_d_seats;
   Q.district_industries = Q.anuradhapura_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Polonnaruwa_info() {
@@ -1058,7 +1058,7 @@ function Polonnaruwa_info() {
   Q.district_infastructure = Q.polonnaruwa_d_infastructure;
   Q.district_seats = Q.polonnaruwa_d_seats;
   Q.district_industries = Q.polonnaruwa_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // Uva Province
@@ -1078,7 +1078,7 @@ function Badulla_info() {
   Q.district_infastructure = Q.badulla_d_infastructure;
   Q.district_seats = Q.badulla_d_seats;
   Q.district_industries = Q.badulla_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Monaragala_info() {
@@ -1097,7 +1097,7 @@ function Monaragala_info() {
   Q.district_infastructure = Q.monaragala_d_infastructure;
   Q.district_seats = Q.monaragala_d_seats;
   Q.district_industries = Q.monaragala_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 // Sabaragamuwa Province
@@ -1117,7 +1117,7 @@ function Ratnapura_info() {
   Q.district_infastructure = Q.ratnapura_d_infastructure;
   Q.district_seats = Q.ratnapura_d_seats;
   Q.district_industries = Q.ratnapura_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 function Kegalle_info() {
@@ -1136,7 +1136,7 @@ function Kegalle_info() {
   Q.district_infastructure = Q.kegalle_d_infastructure;
   Q.district_seats = Q.kegalle_d_seats;
   Q.district_industries = Q.kegalle_d_industries;
-  window.updateSidebarRight();
+  window.updateSidebar();
 }
 
 document.addEventListener('mousemove', e => {
