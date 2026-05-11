@@ -221,19 +221,19 @@
 
     function getStrenghtText(value) {
         if (value === undefined || value === null) return 'Unknown';
-        if (value <= 10) return '<span style="color: #ADD8E6;">**Weak**</span>';
-        if (value <= 25) return '<span style="color: #6495ED;">**Moderate**</span>';
-        if (value <= 40) return '<span style="color: #4169E1;">**Strong**</span>';
-        if (value <= 60) return '<span style="color: #0000CD;">**Very strong**</span>';
+        if (value <= 0) return '<span style="color: #ADD8E6;">**Weak**</span>';
+        if (value <= 10) return '<span style="color: #6495ED;">**Moderate**</span>';
+        if (value <= 25) return '<span style="color: #4169E1;">**Strong**</span>';
+        if (value <= 40) return '<span style="color: #0000CD;">**Very strong**</span>';
         if (value > 60) return '<span style="color: #00008B;">**Dominant**</span>';
     }
 
     function getDissentText(value) {
         if (value === undefined || value === null) return 'Unknown';
-        if (value <= 4.999) return '<span style="color: #008000;">**Very low**</span>';
-        if (value <= 14.999) return '<span style="color: #9ACD32;">**Low**</span>';
-        if (value <= 30.999) return '<span style="color: #FFD700;">**Medium**</span>';
-        if (value <= 49.999) return '<span style="color: #FF4500;">**High**</span>';
+        if (value <= 0) return '<span style="color: #008000;">**Very low**</span>';
+        if (value <= 4.999) return '<span style="color: #9ACD32;">**Low**</span>';
+        if (value <= 14.999) return '<span style="color: #FFD700;">**Medium**</span>';
+        if (value <= 30.999) return '<span style="color: #FF4500;">**High**</span>';
         if (value > 49.999) return '<span style="color: #FF0000;">**Very high**</span>';
     }
   
