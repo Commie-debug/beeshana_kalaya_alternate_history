@@ -271,13 +271,13 @@
             return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
         }
       
-        if (searchString === 'Left' {
+        if (searchString === 'Left' ) {
             var strenghtText = getStrenghtText(Q.left_strength);
             var dissentText = getDissentText(Q.left_dissent);
             return baseTooltip.explanationText + '<br>Strength: ' + strenghtText + '<br>Dissent: ' + dissentText;
         }
 
-        if (searchString === 'Nationalists' {
+        if (searchString === 'Nationalists' ) {
             var strenghtText = getStrenghtText(Q.nationalist_strength);
             var dissentText = getDissentText(Q.nationalist_dissent);
             return baseTooltip.explanationText + '<br>Strength: ' + strenghtText + '<br>Dissent: ' + dissentText;
