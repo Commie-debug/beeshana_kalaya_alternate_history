@@ -11,8 +11,8 @@ tags: party_affairs
 
 The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies.
 
-[? if left_dissent > 30: Leftists are making noises about splittung. ?]
-[? if nationalist_dissent > 30: Nationalists are displeased with the direction of our party. ?]
+[? if left_dissent > 30: The Left are making noises about splittung. ?]
+[? if nationalist_dissent > 30: The Nationalists are displeased with the direction of our party. ?]
 
 Something must be done to reinforce party unity.
 
@@ -32,22 +32,22 @@ Enforcing party discipline reduces dissent, but it could lead to an exit of diss
 # each party has a concessions action and an expulsions action.
 
 @concessions_left
-title: Give concessions to the left.
+title: Give concessions to the Left.
 view-if: left_dissent > 30
 on-arrival: left_dissent -= 7; nationalist_dissent += 5
 
-We have promised that we will listen to the left wing of the party. Of course, this leads to increased dissent from the nationalists.
+We have promised that we will listen to the Left wing of the party. Of course, this leads to increased dissent from the Nationalists.
 
 @concessions_nationalist
-title: Give concessions to the nationalists.
+title: Give concessions to the Nationalists.
 view-if: labor_dissent > 30
 on-arrival: nationalist_dissent -= 7; left_dissent += 5
 
-We have promised to take up a more nationalist position of key issues, the left grows restless.
+We have promised to take up a more Nationalist position of key issues, the Left grows restless.
 
 @do_nothing
 title: Let the factions argue with themselves.
 on-arrival: left_dissent += 1; nationalist_dissent += 1
 
-Let the factions bicker; perhaps dissent is healthy for the party.
+Let the factions bicker; perhaps dissent is healthy for the party?
 
