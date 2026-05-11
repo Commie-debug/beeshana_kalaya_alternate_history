@@ -11,6 +11,14 @@ const colourList = [{
         style: "color: #FF4545; font-weight: bold;"
     },
     {
+        word: "Left",
+        style: "color: #A91101; font-weight: bold;"
+    },
+    {
+        word: "Nationalists",
+        style: "color: #0F52BA; font-weight: bold;"
+    },
+    {
         word: "JSS",
         style: "color: #006400; font-weight: bold;"
     },
@@ -191,6 +199,14 @@ const tooltipList = [{
     {
     searchString: "SLFP",
     explanationText: "<img src=img/logos/SLFP_Logo.png> Sri Lanka Freedom Party"
+    },
+    {
+    searchString: "Left",
+    explanationText: "<img src=img/logos/SLFP_Left_Logo.png> Left(SLFP)"
+    },
+    {
+    searchString: "Nationalists",
+    explanationText: "<img src=img/logos/SLFP_Nationalists_Logo.png> Nationalists(SLFP)"
     },
     {
     searchString: "UNP",
