@@ -641,7 +641,7 @@
 
   window.justLoaded = true;
   window.statusTab = "status";
-  window.statusTabRight = "status_right";
+  window.statusTabRight = "status_nation";
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
