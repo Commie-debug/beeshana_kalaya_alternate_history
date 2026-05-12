@@ -18,18 +18,10 @@
   </head>
   <body>
 
-  <button id="music_toggle_btn" onclick="
-    var isOff = window.dendryUI.disable_audio;
-    if (isOff) {
-      window.enableAudio();
-      this.textContent = '🎵';
-      this.title = 'Music: On (click to mute)';
-    } else {
-      window.disableAudio();
-      this.textContent = '🔇';
-      this.title = 'Music: Off (click to unmute)';
-    }
-  " title="Music: On (click to mute)">🎵</button>
+  <button id="music-toggle-btn" onclick="window.toggleMusicButton()" title="Toggle Music" aria-label="Toggle Music">
+      <img id="music-on-icon" src="img/music_on.png" width="48" height="40" alt="Music On"/>
+      <img id="music-off-icon" src="img/music_off.png" width="48" height="40" alt="Music Off" style="display:none"/>
+  </button>
     
     <div class="background" id="bg2">
     </div>
