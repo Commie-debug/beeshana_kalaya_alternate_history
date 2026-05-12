@@ -395,6 +395,31 @@ img.inline-img.icon {
   fill: #FFD700;
   opacity: 0.8;
 }
+/* Music button */
+#music_toggle_btn {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+
+  font-family: "Minion Pro", Georgia, serif;
+  font-size: 1em;
+  line-height: 1;
+
+  padding: 0.35em 0.9em;
+  border: none;
+  border-radius: 4px;
+
+  background-color: #DF7500;
+  color: #FF9A2E;
+
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#music_toggle_btn:hover {
+  filter: brightness(1.1);
+}
 
 .overlay {
     background: rgba(0,0,0,0.7);
