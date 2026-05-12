@@ -218,24 +218,6 @@
         if (value <= 0.95) return '<span style="color: #32CD32;">Generally loyal</span>';
         return '<span style="color: #008000;">Completely loyal</span>';
     }
-
-    function getStrenghtText(value) {
-        if (value === undefined || value === null) return 'Unknown';
-        if (value < 10) return '<span style="color: #ADD8E6;">Weak</span>';
-        if (value < 25) return '<span style="color: #6495ED;">Moderate</span>';
-        if (value < 40) return '<span style="color: #4169E1;">Strong</span>';
-        if (value < 60) return '<span style="color: #0000CD;">Very strong</span>';
-        return '<span style="color: #00008B;">Dominant</span>';
-    }
-
-    function getDissentText(value) {
-        if (value === undefined || value === null) return 'Unknown';
-        if (value < 4.999) return '<span style="color: #008000;">Very low</span>';
-        if (value < 14.999) return '<span style="color: #9ACD32;">Low</span>';
-        if (value < 30.999) return '<span style="color: #FFD700;">Medium</span>';
-        if (value < 49.999) return '<span style="color: #FF4500;">High</span>';
-        return '<span style="color: #FF0000;">Very high</span>';
-    }
   
     function getIdeologyText(value) {
         if (value === undefined || value === null) return 'Unknown';
@@ -269,18 +251,6 @@
             var relationText = getRelationshipText(Q.slpp_relation);
             var ideologyText = getIdeologyText(Q.slpp_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
-        }
-      
-        if (searchString === 'Left' ) {
-            var strenghtText = getStrenghtText(Q.left_strength);
-            var dissentText = getDissentText(Q.left_dissent);
-            return baseTooltip.explanationText + '<br>Strength: ' + strenghtText + '<br>Dissent: ' + dissentText;
-        }
-
-        if (searchString === 'Nationalists' ) {
-            var strenghtText = getStrenghtText(Q.nationalist_strength);
-            var dissentText = getDissentText(Q.nationalist_dissent);
-            return baseTooltip.explanationText + '<br>Strength: ' + strenghtText + '<br>Dissent: ' + dissentText;
         }
         
         if (searchString === 'SLMP' && Q.slmp_relation !== undefined) {
@@ -671,8 +641,16 @@
 
   window.justLoaded = true;
   window.statusTab = "status";
-  window.statusTabRight = "status_right";
+  window.statusTabRight = "status.right";
   window.dendryModifyUI = main;
+  // sync music button with saved setting on load
+  window.addEventListener('dendryload', function() {
+    var btn = document.getElementById('music_toggle_btn');
+    if (btn && window.dendryUI.disable_audio) {
+      btn.textContent = '🔇';
+      btn.title = 'Music: Off (click to unmute)';
+    }
+  });
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
   window.onload = function() {
@@ -1175,5 +1153,6 @@ document.addEventListener('mousemove', e => {
         el.style.setProperty('--mouse-y', e.clientY + 'px');
     });
 });
+
 
 
