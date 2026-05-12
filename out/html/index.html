@@ -17,6 +17,39 @@
     <script src="game.js"></script>
   </head>
   <body>
+
+<button id="music_toggle_btn" onclick="
+  var isOff = window.dendryUI.disable_audio;
+  if (isOff) {
+    window.enableAudio();
+    this.textContent = '🎵';
+    this.title = 'Music: On (click to mute)';
+  } else {
+    window.disableAudio();
+    this.textContent = '🔇';
+    this.title = 'Music: Off (click to unmute)';
+  }
+" title="Music: On (click to mute)">🎵</button>
+
+<style>
+#music_toggle_btn {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+}
+#music_toggle_btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+</style>
     <div class="background" id="bg2">
     </div>
 
@@ -322,7 +355,6 @@
                     </div>
                     <div id="qualities">
                     </div>
-                </div>
                 <div id='stats_sidebar_right' class='tools right'>
                     <div class="tab_container">
                         <button class="tab_button active" id="nation_tab" onclick="window.changeTabRight('status_right', 'nation_tab');">The Nation</button>
