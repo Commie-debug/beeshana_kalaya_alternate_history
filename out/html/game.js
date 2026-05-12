@@ -673,14 +673,6 @@
   window.statusTab = "status";
   window.statusTabRight = "status_right";
   window.dendryModifyUI = main;
-  // sync music button with saved setting on load
-  window.addEventListener('dendryload', function() {
-    var btn = document.getElementById('music_toggle_btn');
-    if (btn && window.dendryUI.disable_audio) {
-      btn.textContent = '🔇';
-      btn.title = 'Music: Off (click to unmute)';
-    }
-  });
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
   window.onload = function() {
