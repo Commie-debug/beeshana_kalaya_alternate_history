@@ -18,22 +18,9 @@
   </head>
   <body>
 
-    <button id="music_toggle_btn" onclick="
-      var icon = document.getElementById('music_toggle_icon');
-      var isOff = window.dendryUI.disable_audio;
-    
-      if (isOff) {
-        window.enableAudio();
-        icon.src = 'img/logos/Radio_On.png';
-        icon.alt = 'Music On';
-        this.title = 'Music: On';
-      } else {
-        window.disableAudio();
-        icon.src = 'img/logos/Radio_Off.png';
-        icon.alt = 'Music Off';
-        this.title = 'Music: Off';
-      }
-    " title="Music: On">
+    <button id="music-toggle-btn" onclick="window.toggleMusicButton()" title="Toggle Music" aria-label="Toggle Music">
+      <img id="music-on-icon" src="img/logos/Radio_On.png" width="48" height="40" alt="Music On"/>
+      <img id="music-off-icon" src="img/logos/Radio_Off.png" width="48" height="40" alt="Music Off" style="display:none"/>
     </button>
     
     <div class="background" id="bg2">
