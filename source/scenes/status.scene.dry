@@ -2,45 +2,31 @@ title: Status
 new-page: true
 is-special: true
 on-arrival: {!
-setTimeout(function() {
-    if (!d3 || !d3.parliament) return;
-    var Q = window.dendryUI.dendryEngine.state.qualities;
-    var data = [];
-    function addParty(id, legend, seats) {
-        if (seats && seats > 0) data.push({ id: id, legend: legend, name: legend, seats: seats });
-    }
-    addParty('slfp', 'SLFP', Q.slfp_r);
-    addParty('slpp', 'SLPP', Q.slpp_r);
-    addParty('slmp', 'SLMP', Q.slmp_r);
-    addParty('unp',  'UNP',  Q.unp_r);
-    addParty('tulf', 'TULF', Q.tulf_r);
-    addParty('pflt', 'PFLT', Q.pflt_r);
-    addParty('actc', 'ACTC', Q.actc_r);
-    addParty('eros', 'EROS', Q.eros_r);
-    addParty('dplf', 'DPLF', Q.dplf_r);
-    addParty('eprlf','EPRLF',Q.eprlf_r);
-    addParty('telo', 'TELO', Q.telo_r);
-    addParty('endlf','ENDLF',Q.endlf_r);
-    addParty('jvp',  'JVP',  Q.jvp_r);
-    addParty('npp',  'NPP',  Q.npp_r);
-    addParty('cpsl', 'CPSL', Q.cpsl_r);
-    addParty('lssp', 'LSSP', Q.lssp_r);
-    addParty('nssp', 'NSSP', Q.nssp_r);
-    addParty('mep',  'MEP',  Q.mep_r);
-    addParty('cwc',  'CWC',  Q.cwc_r);
-    addParty('ucpf', 'UCPF', Q.ucpf_r);
-    addParty('slmc', 'SLMC', Q.slmc_r);
-    var el = document.getElementById('status_parliament');
-    if (!el || data.length === 0) return;
-    var w = el.parentElement.offsetWidth || 220;
-    el.style.width = w + 'px';
-    el.style.height = Math.round(w * 0.55) + 'px';
-    var parliament = d3.parliament();
-    parliament.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
-    parliament.enter.fromCenter(true).smallToBig(true);
-    parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select('#status_parliament').datum(data).call(parliament);
-});
+window._parliData = [];
+function _addP(id, legend, seats) {
+    if (seats && seats > 0) window._parliData.push({ id: id, legend: legend, name: legend, seats: seats });
+}
+_addP('slfp', 'SLFP', Q.slfp_r);
+_addP('slpp', 'SLPP', Q.slpp_r);
+_addP('slmp', 'SLMP', Q.slmp_r);
+_addP('unp',  'UNP',  Q.unp_r);
+_addP('tulf', 'TULF', Q.tulf_r);
+_addP('pflt', 'PFLT', Q.pflt_r);
+_addP('actc', 'ACTC', Q.actc_r);
+_addP('eros', 'EROS', Q.eros_r);
+_addP('dplf', 'DPLF', Q.dplf_r);
+_addP('eprlf','EPRLF',Q.eprlf_r);
+_addP('telo', 'TELO', Q.telo_r);
+_addP('endlf','ENDLF',Q.endlf_r);
+_addP('jvp',  'JVP',  Q.jvp_r);
+_addP('npp',  'NPP',  Q.npp_r);
+_addP('cpsl', 'CPSL', Q.cpsl_r);
+_addP('lssp', 'LSSP', Q.lssp_r);
+_addP('nssp', 'NSSP', Q.nssp_r);
+_addP('mep',  'MEP',  Q.mep_r);
+_addP('cwc',  'CWC',  Q.cwc_r);
+_addP('ucpf', 'UCPF', Q.ucpf_r);
+_addP('slmc', 'SLMC', Q.slmc_r);
 !}
 
 
@@ -74,7 +60,22 @@ Current Government: [+ current_gov +]
 
 Parliament composition:
 
-{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block;"></svg>!}
+{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block;"></svg>
+<script>
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 220;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.55));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
+    parl.enter.fromCenter(false).smallToBig(false);
+    parl.exit.toCenter(false).bigToSmall(false);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+</script>!}
 
 [? if slfp_r >= 1 : <span class="tooltip-text" title="Sri Lanka Freedom Party" style="color: #00008B;">**SLFP**</span>: [+ slfp_r +] ?]
 [? if slpp_formed = 1 and slpp_r >= 1: <span class="tooltip-text" title="Sri Lanka Podujana Peramuna">**SLPP**</span>: [+ slpp_r +] ?]
