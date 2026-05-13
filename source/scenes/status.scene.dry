@@ -84,7 +84,7 @@ Current Government: [+ current_gov +]
 
 Parliament composition:
 
-{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block; margin: 4px 0;"></svg>!}
+{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block;"></svg>!}
 
 [? if slfp_r >= 1 : <span class="tooltip-text" title="Sri Lanka Freedom Party" style="color: #00008B;">**SLFP**</span>: [+ slfp_r +] ?]
 [? if slpp_formed = 1 and slpp_r >= 1: <span class="tooltip-text" title="Sri Lanka Podujana Peramuna">**SLPP**</span>: [+ slpp_r +] ?]
