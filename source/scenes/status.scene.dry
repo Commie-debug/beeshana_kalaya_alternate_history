@@ -2,16 +2,6 @@ title: Status
 new-page: true
 is-special: true
 on-arrival: {!
-if (Q.unemployed) {
-    Q.unemployed_2 = Q.unemployed.toFixed(1);
-}
-if (Q.inflation) {
-    Q.inflation_2 = Q.inflation.toFixed(1);
-}
-Q.economic_growth_2 = '0';
-if (Q.economic_growth) {
-    Q.economic_growth_2 = Q.economic_growth.toFixed(1);
-}
 setTimeout(function() {
     if (!d3 || !d3.parliament) return;
     var Q = window.dendryUI.dendryEngine.state.qualities;
