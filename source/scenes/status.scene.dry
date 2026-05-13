@@ -2,9 +2,9 @@ title: Status
 new-page: true
 is-special: true
 on-arrival: {!
-window._parliData = [];
+var _newData = [];
 function _addP(id, legend, seats) {
-    if (seats && seats > 0) window._parliData.push({ id: id, legend: legend, name: legend, seats: seats });
+    if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
 }
 _addP('slfp', 'SLFP', Q.slfp_r);
 _addP('slpp', 'SLPP', Q.slpp_r);
@@ -27,6 +27,16 @@ _addP('mep',  'MEP',  Q.mep_r);
 _addP('cwc',  'CWC',  Q.cwc_r);
 _addP('ucpf', 'UCPF', Q.ucpf_r);
 _addP('slmc', 'SLMC', Q.slmc_r);
+
+var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+var _changed = (_newSig !== window._parliSig);
+window._parliData = _newData;
+if (_changed) {
+    window._parliSig = _newSig;
+    window._parliAnimate = true;
+} else {
+    window._parliAnimate = false;
+}
 !}
 
 = Status
@@ -70,8 +80,9 @@ Parliament composition:
     el.setAttribute('height', Math.round(w * 0.55));
     var parl = d3.parliament();
     parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
-    parl.enter.fromCenter(false).smallToBig(false);
-    parl.exit.toCenter(false).bigToSmall(false);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
 })();
 </script>!}
