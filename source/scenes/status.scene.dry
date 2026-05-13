@@ -50,7 +50,7 @@ setTimeout(function() {
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select('#status_parliament').datum(data).call(parliament);
-};
+});
 !}
 
 
