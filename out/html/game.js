@@ -97,11 +97,31 @@
   window.disableAudio = function() {
       window.dendryUI.toggle_audio(false);
       window.dendryUI.saveSettings();
+      window.updateMusicBtn();
   };
 
   window.enableAudio = function() {
       window.dendryUI.toggle_audio(true);
       window.dendryUI.saveSettings();
+      window.updateMusicBtn();
+  };
+
+  window.updateMusicBtn = function() {
+      var disabled = window.dendryUI && window.dendryUI.disable_audio;
+      var onIcon = document.getElementById('music-on-icon');
+      var offIcon = document.getElementById('music-off-icon');
+      if (onIcon && offIcon) {
+          onIcon.style.display = disabled ? 'none' : 'inline';
+          offIcon.style.display = disabled ? 'inline' : 'none';
+      }
+  };
+
+  window.toggleMusicButton = function() {
+      if (window.dendryUI && window.dendryUI.disable_audio) {
+          window.enableAudio();
+      } else {
+          window.disableAudio();
+      }
   };
 
   window.enableImages = function() {
@@ -1174,6 +1194,10 @@ document.addEventListener('mousemove', e => {
         el.style.setProperty('--mouse-x', e.clientX + 'px');
         el.style.setProperty('--mouse-y', e.clientY + 'px');
     });
+});
+
+window.addEventListener('dendryload', function() {
+    window.updateMusicBtn();
 });
 
 
