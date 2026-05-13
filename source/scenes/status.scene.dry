@@ -44,7 +44,7 @@ Current Government: [+ current_gov +]
 
 Parliament composition:
 
-//Build parliament data for d3 rendering (Copied from anatolian dawn,thanks ecevit)
+// Build parliament data for d3 rendering (Copied from anatolian dawn,thanks ecevit)
 
 var pData = [];
 if (Q.slfp_r >= 1) {
