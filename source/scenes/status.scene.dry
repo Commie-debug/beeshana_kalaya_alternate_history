@@ -44,6 +44,15 @@ Current Government: [+ current_gov +]
 
 Parliament composition:
 
+//Build parliament data for d3 rendering (Copied from anatolian dawn,thanks ecevit)
+
+var pData = [];
+if (Q.slfp_r >= 1) {
+    pData.push({"id": "slfp", "legend": "SLFP", "name": "DPLF", "seats": Q.slfp_r, color: "#00008B"});
+}
+window.partyParliamentData = pData;
+
+
 [? if slfp_r >= 1 : <span class="tooltip-text" title="Sri Lanka Freedom Party" style="color: #00008B;">**SLFP**</span>: [+ slfp_r +] ?]
 [? if slpp_formed = 1 and slpp_r >= 1: <span class="tooltip-text" title="Sri Lanka Podujana Peramuna">**SLPP**</span>: [+ slpp_r +] ?]
 [? if slmp_formed = 1 and slmp_r >= 1: <span class="tooltip-text" title="Sri Lanka Mahajana Pakshaya">**SLMP**</span>: [+ slmp_r +] ?]
