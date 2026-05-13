@@ -108,7 +108,7 @@ Parliament composition:
 [? if ucpf_formed = 1 and ucpf_r >= 1: <span class="tooltip-text" title="Up Country Peoples Front">**UCPF**</span>: [+ ucpf_r +] ?]
 [? if slmc_formed = 1 and slmc_r >= 1: <span class="tooltip-text" title="Sri Lanka Muslim Congress">**SLMC**</span>: [+ slmc_r +] ?]
 
-{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block; margin: 4px 0;"></svg>!}
+{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block;"></svg>!}
 
 [? if slfp_in_government = 1 : Budget: [+ budget +] ?]
 
