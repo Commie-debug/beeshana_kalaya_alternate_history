@@ -278,6 +278,7 @@
         if (value < 49.999) return '<span style="color: #FF4500;">High</span>';
         return '<span style="color: #FF0000;">Very high</span>';
     }
+  
     //To check if extra dynamic or not
     function getDynamicTooltipContent(searchString, baseTooltip) {
         var Q = window.dendryUI && window.dendryUI.dendryEngine && window.dendryUI.dendryEngine.state ? 
