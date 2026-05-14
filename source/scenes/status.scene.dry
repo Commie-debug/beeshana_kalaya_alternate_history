@@ -639,13 +639,25 @@ if (Q.ipkf_morale) {
 
 India: [+ india_relation : relationships +]
 
+[? if saarc_formed = 1 : SAARC has been formed ?]
+
+[? if safta_formed = 1 : SAFTA has been signed ?]
+
 Non Alligned Movement nations: [+ nam_relation : relationships +]
 
 USA: [+ usa_relation : relationships +]
 
-China(PRC): [+ china_relation : relationships +]
+UK: [+ uk_relation : relationships +]
 
-USSR/Eastern Bloc: [+ ussr_relation : relationships +]
+Israel: [+ israel_relation : relationships +]
+
+Pakistan: [+ pakistan_relation : relationships +]
+
+Japan: [+ japan_relation : relationships +]
+
+China: [+ china_relation : relationships +]
+
+USSR/Warsaw Pact: [+ ussr_relation : relationships +]
 
 = Indian Involvement
 
