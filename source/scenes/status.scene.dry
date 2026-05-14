@@ -661,13 +661,37 @@ Indian Prime Minister: [+ india_pm +]
 
 = Leader of the SLFP
 
-[? if the_split == 0 : <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Sirimavo Bandaranaike</p> ?]
+[? if the_split == 0 : {!<div style="text-align: center; margin-bottom: 10px;">
+<img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
+<div style="font-size: 0.85em;">Sirimavo Bandaranaike</div>
+</div>!} ?]
 
-[? if the_split == 1 : <div style="display: flex;gap: 5px;margin-bottom: 5px;"> <img src="img/portraits/SenanayakeMaithripala.jpg" alt="Maitripala Senanayake" style="width: 50%;"> <img src="img/portraits/BandaranaikeSirimavo.jpg" alt="Sirimavo Bandaranaike" style="width: 50%;"> </div><p style="text-align: center;margin-bottom: 0;"><em>Disputed Leadership</em></p><div style="display: flex;gap: 5px;margin-bottom: 5px;justify-content: space-around;"><p style="margin: 0;">Maitripala Senanayake</p><p style="margin: 0;">Sirimavo Bandaranaike</p></div> ?]
+[? if the_split == 1 : {!<div style="text-align: center; font-size: 0.8em; font-style: italic; margin-bottom: 6px; color: #900;">⚠ Disputed Leadership</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+<div style="text-align: center; width: 45%;">
+<img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid #8B0000; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.85em; margin-top: 4px; color: #8B0000;">Maithripala Senanayake</div>
+<div style="font-size: 0.75em; margin-top: 2px; font-style: italic;">Nationalist Faction</div>
+</div>
+<div style="text-align: center; width: 45%;">
+<img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.85em; margin-top: 4px; color: #00008B;">Sirimavo Bandaranaike</div>
+<div style="font-size: 0.75em; margin-top: 2px; font-style: italic;">Left Faction</div>
+</div>
+</div>!} ?]
 
-[? if split_sirimavo_victory == 2 : <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Sirimavo Bandaranaike</p> ?]
+[? if the_split == 2 : {!<div style="text-align: center; margin-bottom: 10px;">
+<img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
+<div style="font-size: 0.85em;">Sirimavo Bandaranaike</div>
+</div>!} ?]
 
-[? if split_maitripala_victory == 2 : <div><img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Maitripala Senanayake</p> ?]
+[? if the_split == 3 : {!<div style="text-align: center; margin-bottom: 10px;">
+<img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8B0000; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
+<div style="font-size: 0.85em;">Maithripala Senanayake</div>
+</div>!} ?]
 
 = Parliamentary Party Leader 
 
