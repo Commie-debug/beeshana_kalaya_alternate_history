@@ -664,7 +664,17 @@ Q.nam_relation = 60;
 Q.india_relation = 20;
 Q.china_relation = 55;
 Q.usa_relation = 65;
+Q.uk_relation = 65;
+Q.israel_relation = 65;
+Q.pakistan_relation = 60;
+Q.japan_relation = 70;
 Q.ussr_relation = 30;
+
+//South Asian Association for Regional Cooperation, formed in 8th December 1985 
+Q.saarc_formed = 0;
+
+//SAFTA (SAARC free trade agreement
+Q.safta_signed = 0;
 
 //india
 Q.india_tamil_support = 0.2;
