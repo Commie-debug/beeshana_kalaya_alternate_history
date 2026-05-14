@@ -406,11 +406,11 @@ const tooltipList = [{
     },
     {
     searchString: "US",
-    explanationText: "<img src=img/logos/US_Logo.png> United States <br> of America"
+    explanationText: "<img src=img/logos/USA_Logo.png> United States <br> of America"
     },
     {
     searchString: "USA",
-    explanationText: "<img src=img/logos/US_Logo.png> United States <br> of America"
+    explanationText: "<img src=img/logos/USA_Logo.png> United States <br> of America"
     },
     {
     searchString: "UK",
