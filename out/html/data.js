@@ -414,7 +414,7 @@ const tooltipList = [{
     },
     {
     searchString: "UK",
-    explanationText: "<img src=img/logos/UK_Logo.png> United <br> Kingdom"
+    explanationText: "<img src=img/logos/UK_Logo.png> United Kingdom of <br> Great Britian & <br> Northern Ireland"
     },
     {
     searchString: "Israel",
