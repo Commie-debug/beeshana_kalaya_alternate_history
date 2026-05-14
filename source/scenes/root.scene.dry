@@ -73,6 +73,7 @@ Q.nationalist_split = 0;
 Q.the_split = 0;
 Q.split_month = 0;
 //3 seperate events happen, the court injection over party headquarters, commitee on the 4 MP's and lastly who gets the "hand" symbol. Whomever wins the each gets a point, the final winner decides the path taken for the party
+//whichever has 2 points is the winner
 Q.split_sirimavo_victory = 0;
 Q.split_maitripala_victory = 0;
 
