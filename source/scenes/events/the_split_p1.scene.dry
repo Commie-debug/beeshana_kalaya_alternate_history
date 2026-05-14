@@ -18,6 +18,12 @@ middle_slfp -= 6;
 
 split_month = month + 1;
 
+setTimeout(function() {
+    if (window.statusTab === 'status.party') {
+        window.updateSidebar();
+    }
+}, 50);
+
 !}
 
 = Maitripala challenges Sirimavo
