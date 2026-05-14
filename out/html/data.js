@@ -392,6 +392,54 @@ const tooltipList = [{
     searchString: "UCPF",
     explanationText: "<img src=img/logos/UCPF_Logo.png> Up Country <br> Peoples Front"
     },
+    {
+    searchString: "Non Alligned Movement",
+    explanationText: "<img src=img/logos/NAM_Logo.png> Non Alligned Movement"
+    },
+    {
+    searchString: "NAM",
+    explanationText: "<img src=img/logos/NAM_Logo.png> Non Alligned Movement"
+    },
+    {
+    searchString: "India",
+    explanationText: "<img src=img/logos/India_Logo.png> Republic of India"
+    },
+    {
+    searchString: "US",
+    explanationText: "<img src=img/logos/US_Logo.png> United States <br> of America"
+    },
+    {
+    searchString: "USA",
+    explanationText: "<img src=img/logos/US_Logo.png> United States <br> of America"
+    },
+    {
+    searchString: "UK",
+    explanationText: "<img src=img/logos/UK_Logo.png> United <br> Kingdom"
+    },
+    {
+    searchString: "Israel",
+    explanationText: "<img src=img/logos/Israel_Logo.png> State of <br> Israel"
+    },
+    {
+    searchString: "Japan",
+    explanationText: "<img src=img/logos/Japan_Logo.png> Japan"
+    },
+    {
+    searchString: "China",
+    explanationText: "<img src=img/logos/China_Logo.png> Peoples Republic <br> of China"
+    },
+    {
+    searchString: "Pakistan",
+    explanationText: "<img src=img/logos/Pakistan_Logo.png> Islamic Republic <br> of Pakistan"
+    },
+    {
+    searchString: "USSR",
+    explanationText: "<img src=img/logos/USSR_Logo.png> Union of Soviet <br> Socialist Republics"
+    },
+    {
+    searchString: "SAARC",
+    explanationText: "<img src=img/logos/SAARC_Logo.png> South Asian Association <br> for Regional Cooperation"
+    },
 ];
 
 
