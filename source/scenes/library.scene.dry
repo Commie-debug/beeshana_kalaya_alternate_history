@@ -1,6 +1,43 @@
 title: library
 new-page: true
 is-special: true
+on-arrival: {!
+var _newData = [];
+function _addP(id, legend, seats) {
+    if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+}
+_addP('slfp', 'SLFP', Q.slfp_r);
+_addP('slpp', 'SLPP', Q.slpp_r);
+_addP('slmp', 'SLMP', Q.slmp_r);
+_addP('unp',  'UNP',  Q.unp_r);
+_addP('tulf', 'TULF', Q.tulf_r);
+_addP('pflt', 'PFLT', Q.pflt_r);
+_addP('actc', 'ACTC', Q.actc_r);
+_addP('eros', 'EROS', Q.eros_r);
+_addP('dplf', 'DPLF', Q.dplf_r);
+_addP('eprlf','EPRLF',Q.eprlf_r);
+_addP('telo', 'TELO', Q.telo_r);
+_addP('endlf','ENDLF',Q.endlf_r);
+_addP('jvp',  'JVP',  Q.jvp_r);
+_addP('npp',  'NPP',  Q.npp_r);
+_addP('cpsl', 'CPSL', Q.cpsl_r);
+_addP('lssp', 'LSSP', Q.lssp_r);
+_addP('nssp', 'NSSP', Q.nssp_r);
+_addP('mep',  'MEP',  Q.mep_r);
+_addP('cwc',  'CWC',  Q.cwc_r);
+_addP('ucpf', 'UCPF', Q.ucpf_r);
+_addP('slmc', 'SLMC', Q.slmc_r);
+
+var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+var _changed = (_newSig !== window._parliSig);
+window._parliData = _newData;
+if (_changed) {
+    window._parliSig = _newSig;
+    window._parliAnimate = true;
+} else {
+    window._parliAnimate = false;
+}
+!}
 go-to: menu
 
 = The Library
@@ -167,7 +204,23 @@ go-to: menu
 
 President: [+ president +]
 
-{!<svg id="parliament" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block;"></svg>
+<script>
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 220;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.55));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+</script>!}
 
 Prime minister: [+ prime_minister +] ([+ prime_minister_party +])
 
