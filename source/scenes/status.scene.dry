@@ -671,37 +671,20 @@ Indian Prime Minister: [+ india_pm +]
 
 
 @party
-on-arrival: {!
-if (Q.slfp_leader == "Sirimavo Bandaranaike") {
-    Q.leader_portrait = "img/portraits/BandaranaikeSirimavo.jpg";
-    Q.leader_color = "#00008B";
-} else if (Q.slfp_leader == "Maitripala Senanayake") {
-    Q.leader_portrait = "img/portraits/SenanayakeMaithripala.jpg";
-    Q.leader_color = "#8B0000";
-} else {
-    Q.leader_portrait = "img/portraits/BandaranaikeSirimavo.jpg";
-    Q.leader_color = "#00008B";
-}
 
-if (Q.slfp_parliament_leader == "Anura Bandaranaike") {
-    Q.parliament_leader_portrait = "img/portraits/BandaranaikeAnura.jpg";
-    Q.parliament_leader_color = "#00008B";
-} else if (Q.slfp_parliament_leader == "Lakshman Jayakody") {
-    Q.parliament_leader_portrait = "img/portraits/BandaranaikeAnura.jpg";
-    Q.parliament_leader_color = "#00008B";
-} else {
-    Q.parliament_leader_portrait = "img/portraits/BandaranaikeAnura.jpg";
-    Q.parliament_leader_color = "#00008B";
-}
-!}
-
-[? if the_split != 1 : {!<div style="text-align: center; margin-bottom: 10px;">
-<img src="!}[+ leader_portrait +]{!" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid !}[+ leader_color +]{!; object-fit: cover;">
+[? if the_split = 0 or the_split = 2 and slfp_leader = "Sirimavo Bandaranaike" : {!<div style="text-align: center; margin-bottom: 10px;">
+<img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
 <div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
-<div style="font-size: 0.85em;">!}[+ slfp_leader +]{!</div>
+<div style="font-size: 0.85em;">Sirimavo Bandaranaike</div>
 </div>!} ?]
 
-[? if the_split == 1 : {!<div style="text-align: center; font-size: 0.8em; font-style: italic; margin-bottom: 6px; color: #900;">⚠ Disputed Leadership</div>
+[? if the_split = 3 or the_split = 2 and slfp_leader = "Maitripala Senanayake" : {!<div style="text-align: center; margin-bottom: 10px;">
+<img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8B0000; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
+<div style="font-size: 0.85em;">Maithripala Senanayake</div>
+</div>!} ?]
+
+[? if the_split = 1 : {!<div style="text-align: center; font-size: 0.8em; font-style: italic; margin-bottom: 6px; color: #900;">⚠ Disputed Leadership</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
 <div style="text-align: center; width: 45%;">
 <img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid #8B0000; object-fit: cover;">
@@ -716,7 +699,7 @@ if (Q.slfp_parliament_leader == "Anura Bandaranaike") {
 </div>!} ?]
 
 {!<div style="text-align: center; margin-bottom: 10px;">
-<img src="!}[+ parliament_leader_portrait +]{!" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid !}[+ parliament_leader_color +]{!; object-fit: cover;">
+<img src="img/portraits/BandaranaikeAnura.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
 <div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Parliamentary Leader</div>
 <div style="font-size: 0.85em;">!}[+ slfp_parliament_leader +]{!</div>
 </div>!}
