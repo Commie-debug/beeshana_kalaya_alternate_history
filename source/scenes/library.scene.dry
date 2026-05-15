@@ -35,7 +35,7 @@ if (_changed) {
     window._parliSig = _newSig;
     window._parliAnimate = true;
 } else {
-    window._parliAnimate = false;
+    window._parliAnimate = true;
 }
 !}
 go-to: menu
