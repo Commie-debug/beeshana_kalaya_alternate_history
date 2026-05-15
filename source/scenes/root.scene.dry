@@ -583,6 +583,7 @@ Q.encourage_foreign_chains = 0;
 Q.CHC_investments = 0;
 //Katunayake int airport (BIA)
 Q.improve_KIA = 0;
+Q.improve_national_parks = 0;
 
 Q.mining = 55;
 Q.mining_national = 2;
