@@ -197,6 +197,22 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/SLAF_Logo.png> Sri Lanka Armed Forces"
     },
     {
+    searchString: "Sinhalese",
+    explanationText: "<img src=img/logos/Sinhalese_Logo.png> Sinhalese"
+    },
+    {
+    searchString: "Indian Tamil",
+    explanationText: "<img src=img/logos/Indian_Tamil_Logo.png> Indian Tamil"
+    },
+    {
+    searchString: "Sri Lankan Tamil",
+    explanationText: "<img src=img/logos/Sri_Lankan_Tamil_Logo.png> Sri Lankan Tamil"
+    },
+    {
+    searchString: "Muslims",
+    explanationText: "<img src=img/logos/Muslim_Logo.png> Muslims"
+    },
+    {
     searchString: "SLFP",
     explanationText: "<img src=img/logos/SLFP_Logo.png> Sri Lanka Freedom Party"
     },
