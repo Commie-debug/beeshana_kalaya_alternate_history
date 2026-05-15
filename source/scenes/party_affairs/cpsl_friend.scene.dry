@@ -4,7 +4,7 @@ tags: party_affairs
 is-card: true
 view-if: cpsl_relation >= 65
 on-arrival: month_actions += 1;
-max-visits: 100
+frequency: 50
 card-image: img/logos/CPSL_Logo.png
 
 = Communist Party Of Sri Lanka
