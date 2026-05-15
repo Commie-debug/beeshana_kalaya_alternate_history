@@ -197,6 +197,34 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/SLAF_Logo.png> Sri Lanka Armed Forces"
     },
     {
+    searchString: "Tourism",
+    explanationText: "<img src=img/logos/Tourism_Logo.png> Galadari Meridien Hotel"
+    },
+    {
+    searchString: "Mining",
+    explanationText: "<img src=img/logos/Mining_Logo.png> Gem mining"
+    },
+    {
+    searchString: "Tea",
+    explanationText: "<img src=img/logos/Tea_Logo.png> Dilmah tea advertisment"
+    },
+    {
+    searchString: "Agriculture",
+    explanationText: "<img src=img/logos/Agriculture_Logo.png> Paddy(rice) farming"
+    },
+    {
+    searchString: "Fishing",
+    explanationText: "<img src=img/logos/Fishing_Logo.png> Fishermen departing"
+    },
+    {
+    searchString: "Textile & apparel",
+    explanationText: "<img src=img/logos/Textile_Logo.png> Apparel production workers"
+    },
+    {
+    searchString: "Rubber",
+    explanationText: "<img src=img/logos/Rubber_Logo.png> Rubber tapping plantation"
+    },
+    {
     searchString: "Sinhalese",
     explanationText: "<img src=img/logos/Sinhalese_Logo.png> Sinhalese"
     },
