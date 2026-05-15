@@ -2,8 +2,7 @@ title: Communist Party Of Sri Lanka
 new-page: true
 tags: party_affairs
 is-card: true
-view-if: cpsl_relation >= 65
-on-arrival: month_actions += 1;
+view-if: cpsl_relation >= 65 and slfp_coalition_id != cpsl_coalition_id
 frequency: 50
 card-image: img/logos/CPSL_Logo.png
 
