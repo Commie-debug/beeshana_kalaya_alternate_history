@@ -2,16 +2,6 @@ title: Status
 new-page: true
 is-special: true
 on-arrival: {!
-if (Q.slfp_leader == "Sirimavo Bandaranaike") {
-    Q.leader_portrait = "img/portraits/BandaranaikeSirimavo.jpg";
-    Q.leader_color = "#00008B";
-} else if (Q.slfp_leader == "Maitripala Senanayake") {
-    Q.leader_portrait = "img/portraits/SenanayakeMaithripala.jpg";
-    Q.leader_color = "#8B0000";
-} else {
-    Q.leader_portrait = "img/portraits/BandaranaikeSirimavo.jpg";
-    Q.leader_color = "#00008B";
-}
 var _newData = [];
 function _addP(id, legend, seats) {
     if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
