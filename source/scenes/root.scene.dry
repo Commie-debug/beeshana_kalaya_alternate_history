@@ -564,22 +564,78 @@ Q.upper_tax_rates = 0;
 Q.tariffs = 0;
 Q.ftz_holidays = 1;
 
-//sectors and industries
+//sectors, industries & factors to development
 //nationalisation level is based on the nationalisation qdisplay
+
 Q.tourism = 35;
 Q.tourism_national = 1;
+Q.tourism_investments = 0;
+Q.new_hotels = 0;
+Q.improved_attractions = 0;
+Q.better_facilities = 0;
+Q.improved_security = 0;
+Q.encourage_religous_tourism = 0;
+Q.encourage_wildlife_tourism = 0;
+//sri lanka tourism development authority
+Q.expand_SLTDA = 0;
+Q.encourage_foreign_chains = 0;
+//ceylon_hotels_corporation
+Q.CHC_investments = 0;
+//Katunayake int airport (BIA)
+Q.improve_KIA = 0;
+
 Q.mining = 55;
 Q.mining_national = 2;
+Q.mining_investments = 0;
+Q.mining_tool_improvements = 0;
+Q.mining_facilities_improved = 0;
+//Geological Survey and Mines Bureau
+Q.improve_GSMB = 0;
+
 Q.tea = 65;
 Q.tea_national = 3;
+Q.tea_international_investment = 0;
+Q.tea_plantation_improvements = 0;
+//Janatha Estates Development Board
+Q.JEDB_tea_investments = 0;
+//sri lanka tea board
+Q.improve_SLTB = 0;
+
 Q.agriculture = 55;
 Q.agriculture_national = 2;
+Q.expanded_reservoirs = 0;
+Q.expanded_dams = 0;
+Q.expanded_reservoirs = 0;
+Q.farmer_credit_provison = 0;
+Q.expanded_rice_farms = 0;
+Q.expanded_coconut_plantations = 0;
+Q.malaria_eradiction = 0;
+//Janatha Estates Development Board
+Q.JEDB_agri_investments = 0;
+Q.state_plantation_improvements = 0;
+
 Q.fishing = 25;
 Q.fishing_national = 0;
+Q.fishing_improvements = 0;
+Q.fishermen_loans = 0;
+Q.fishing_boat_advancements = 0;
+Q.increase_ministry_oversight = 0;
+
 Q.textile = 75;
 Q.textile_national = 1;
+Q.textile_investments = 0;
+Q.apparel_production_contracts = 0;
+//joint meaning between sri lankan(like MAS holdings) and a foreign company 
+Q.apparel_production_joint_ventures = 0;
+
 Q.rubber = 50;
 Q.rubber_national = 1;
+Q.rubber_plantation_improvements = 0;
+Q.rubber_plantation_loans = 0;
+//Janatha Estates Development Board
+Q.JEDB_rubber_investments = 0;
+//rubber development board
+Q.RDB_improved = 0;
 
 //interior policies
 //Indian Tamil policies
@@ -1447,7 +1503,7 @@ Q.lssp_r = 0;
 Q.nssp_r = 0;
 Q.tulf_r = 18;
 Q.cwc_r = 1;
-Q.unp_r = 141;
+Q.unp_r = 142;
 Q.actc_r = 0;
 Q.vacant_r = 0;
 
