@@ -312,7 +312,7 @@ img.inline-img.icon {
     flex-shrink: 0;
     /*shift tabs so they visually protrude beyond the sidebar edge */
     position: relative;
-    left: 0;
+    right: 0;
     position: absolute;
     transform: translateX(-100%);
     top: 0;

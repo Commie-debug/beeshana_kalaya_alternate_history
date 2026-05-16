@@ -69,7 +69,7 @@ Current Government: [+ current_gov +]
 
 Parliament composition:
 
-{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block;"></svg>
+{!<svg id="status_parliament" style="width: 100%; height: 150px; display: block;"></svg>
 <script>
 (function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
