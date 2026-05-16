@@ -263,13 +263,23 @@ img.inline-img.icon {
 }
 
 /* The actual content area inside .tools */
-.tools > div:not(.tab_container){
+
+.tools.left > div:not(.tab_container) {
+    height: 800px;
     padding: 0.6em;
     flex: 1;
     min-width: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 800px;
+}
+
+.tools.right > div:not(.tab_container) {
+    height: 1100px;
+    padding: 0.6em;
+    flex: 1;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #qualities {
@@ -383,7 +393,7 @@ img.inline-img.icon {
     outline: none;
     padding: 2px 4px;
     cursor: pointer;
-    font-size: 0.78em;
+    font-size: 0.6em;
     white-space: nowrap;
     letter-spacing: 0.03em;
     display: block;
