@@ -245,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: -8em;
+  left: -4em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
@@ -253,7 +253,7 @@ img.inline-img.icon {
 }
 .tools.right {
   float: right;
-  right: -8em;
+  right: -4em;
   position: relative;
   overflow: visible;
   max-height: 90vh;
