@@ -256,16 +256,15 @@ img.inline-img.icon {
   right: -2.5em;
   position: relative;
   overflow: visible;
-  max-height: 90vh;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
-  height: 800px;
-  overflow: visible;
+  height: 1100px;
+
 }
 
 /* The actual content area inside .tools */
 
 .tools.left > div:not(.tab_container) {
-    height: 800px;
+    height: 950px;
     padding: 0.6em;
     flex: 1;
     min-width: 0;
@@ -321,7 +320,7 @@ img.inline-img.icon {
   font-weight: normal;
 }
 #qualities_right_scroll {
-    height: 800px;
+    height: 1100px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -776,7 +775,7 @@ img {
       z-index: 10;
       max-height: 90vh;
       overflow-y: auto;
-      height: 800px;
+      height: 1100px;
       overflow: visible;
       position: relative;
   }
