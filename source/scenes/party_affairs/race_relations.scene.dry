@@ -5,7 +5,7 @@ tags: party_affairs
 view-if: racial_timer <= 0
 max-visits: 100
 on-arrival: month_actions += 1; racial_timer += 6;
-card-image: img/slbc.jpg
+card-image: img/racial_relations.jpg
 #subtitle: Setting the direction for our newspapers and radio.
 
 = Racial Relations
