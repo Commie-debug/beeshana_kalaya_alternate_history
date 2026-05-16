@@ -156,7 +156,7 @@ for (var i = 0; i < 8; i++) {
 }
 !}
 
-Politics
+= Politics
 
 {!<img src="img/politics.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
@@ -316,7 +316,7 @@ if (Q.ipkf_morale) {
 }
 !}
 
-Military
+= Military
 
 = Political Paramilitaries
 
