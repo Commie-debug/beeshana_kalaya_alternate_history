@@ -41,6 +41,13 @@ if (_changed) {
 
 = Status
 
+{!
+var bgSrc = dendryUI.dendryEngine.state.bg || '';
+if (bgSrc) {
+    document.write('<img src="' + bgSrc + '" style="width: 100%; height: auto; border: 4px solid #876;">');
+}
+!}
+
 **Update: ujk**
 
 Week [+ week +] [+ month : month +] [+ year +] 
@@ -148,6 +155,10 @@ for (var i = 0; i < 8; i++) {
     }
 }
 !}
+
+Politics
+
+{!<img src="img/politics.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 = Inter-party Relations
 
@@ -305,7 +316,11 @@ if (Q.ipkf_morale) {
 }
 !}
 
+Military
+
 = Political Paramilitaries
+
+{!<img src="img/paramilitaries.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 <span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span> Strength: [+ slfpt_strength_2 : group_strength +], Militarization: [+ slfpt_militancy : militancy +]
 
@@ -323,6 +338,8 @@ if (Q.ipkf_morale) {
 
 = Tamil Militant Groups
 
+{!<img src="img/tamil_militants.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+
 <span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span> Strength: [+ ltte_strength_2 : group_strength +], Militarization: [+ ltte_militancy : militancy +]
 
 <span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students" style="color: #FF2400;">**EROS**</span> Strength: [+ eros_strength_2 : group_strength +], Militarization: [+ eros_militancy : militancy +]
@@ -334,6 +351,8 @@ if (Q.ipkf_morale) {
 <span class="tooltip-text" title="Peoples Liberation Organisation Of Tamil Eelam" style="color: #CE2029;">**PLOTE**</span> Strength: [+ plote_strength_2 : group_strength +], Militarization: [+ plote_militancy : militancy +]
 
 = Military & State Paramilitaries
+
+{!<img src="img/military.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 Security Forces Strength: [+ security_forces_strenght : strength +]
 
@@ -416,7 +435,7 @@ if (Q.eprlf_strength) {
 
 = Tamil Situation
 
-{!<img src="img/tamil_situation.webp" style="width: 92%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+{!<img src="img/tamil_situation.webp" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 Current situation in the North-East: [+ tamil_war : war +]
 
@@ -445,6 +464,8 @@ Control of Jaffna: [+ jaffna_control +]
 @interior
 
 = Interior Policies
+
+{!<img src="img/interior.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 = Labour
 
@@ -575,6 +596,8 @@ if (Q.total_nationalisation_2) {
 
 = Economy
 
+{!<img src="img/economy.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+
 Inflation: [+ inflation_2 +]%
 
 Unemployment: [+ unemployed_2 +]% 
@@ -640,6 +663,8 @@ if (Q.ipkf_morale) {
 !}
 
 = Foreign Relations
+
+{!<img src="img/foreign.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 India: [+ india_relation : relationships +]
 
