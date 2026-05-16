@@ -232,7 +232,7 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  width: 14rem;
+  width: 10rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -334,12 +334,10 @@ img.inline-img.icon {
     color: var(--text-color);
     border: 1px solid rgba(0,0,0,0.15);
     outline: none;
-    padding: 6px 8px;
+    padding: 6px 10px;
     cursor: pointer;
     font-size: 0.78em;
     white-space: nowrap;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
     letter-spacing: 0.03em;
     transition: background-color 0.1s;
 }
