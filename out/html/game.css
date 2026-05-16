@@ -217,7 +217,7 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin: 0 auto;
+  margin: 0 20;
   max-width: 530px;
 }
 
