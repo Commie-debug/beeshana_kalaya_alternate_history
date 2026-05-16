@@ -217,14 +217,16 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin: 0 20;
+  margin: 0 auto;
   max-width: 530px;
 }
 
 #page {
   margin: 0 auto;
   position: relative;
+  padding: 0 22rem;
 }
+
 #tools_wrapper {
   position: absolute;
   width: 100%;
