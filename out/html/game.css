@@ -309,7 +309,7 @@ img.inline-img.icon {
   font-weight: normal;
 }
 #qualities_right_scroll {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
 }
 
 /* tabs */
