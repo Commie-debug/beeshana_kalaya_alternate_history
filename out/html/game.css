@@ -381,7 +381,7 @@ img.inline-img.icon {
     color: var(--text-color);
     border: 1px solid rgba(0,0,0,0.2);
     outline: none;
-    padding: 6px 10px;
+    padding: 2px 4px;
     cursor: pointer;
     font-size: 0.78em;
     white-space: nowrap;
