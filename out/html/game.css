@@ -215,7 +215,7 @@ img.inline-img.icon {
   height: 1em !important;
   margin: 0 0.1em !important;
 }
-/* This is mostly copied from undum.*/
+/* This is mostly copied from undum. */
 #mid_panel {
   margin: 0 16rem;
 }
@@ -232,11 +232,13 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  padding: 0.6em;
   width: 14rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 .tools.left {
   float: left;
@@ -245,6 +247,14 @@ img.inline-img.icon {
 .tools.right {
   float: right;
   right: 0.4em;
+}
+
+/* The actual content area inside .tools */
+.tools > div:not(.tab_container) {
+  padding: 0.6em;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 #qualities {
   text-indent: 0;
@@ -285,24 +295,57 @@ img.inline-img.icon {
   font-weight: normal;
 }
 
-/* tabs */
+/* vertical bookmarks jutting out to the RIGHT of both sidebars */
 .tab_container {
-    background-color: var(--tab-bg-color);
-    margin-top: -0.6em;
-    margin-left: -0.6em;
-    margin-right: -0.6em;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding: 6px 0;
+    width: auto;
+    flex-shrink: 0;
+    /*shift tabs so they visually protrude beyond the sidebar edge */
+    position: relative;
+    right: 0;
 }
+
+/* Both sidebars tabs jut out to the RIGHT */
+.tools.left .tab_container,
+.tools.right .tab_container {
+    align-items: flex-start;
+}
+
+.tools.left .tab_button,
+.tools.right .tab_button {
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+    box-shadow: 3px 2px 6px rgba(0,0,0,0.2);
+}
+
+.tools.left .tab_button.active,
+.tools.right .tab_button.active {
+    box-shadow: 4px 2px 8px rgba(0,0,0,0.25);
+}
+
 .tab_button {
     font-family: "Minion Pro", Georgia, serif;
     background-color: var(--tab-color);
     color: var(--text-color);
-    /*float: left;*/
-    border: none;
+    border: 1px solid rgba(0,0,0,0.15);
     outline: none;
-    padding: 10px;
+    padding: 6px 8px;
+    cursor: pointer;
+    font-size: 0.78em;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.03em;
+    transition: background-color 0.1s;
 }
 .tab_button.active {
     background-color: var(--content-bg-color);
+    font-weight: bold;
 }
 .tab_button:hover {
     background-color: var(--tab-hover-color);
