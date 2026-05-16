@@ -1,0 +1,175 @@
+title: Racial
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: racial_timer <= 0
+max-visits: 100
+on-arrival: month_actions += 1; racial_timer += 6;
+card-image: img/slbc.jpg
+#subtitle: Setting the direction for our newspapers and radio.
+
+= Racial Relations
+
+WIP CARD, A ETHNIC COUNTERPART TO Media
+
+
+- @commercial
+- @campaign
+- @ideological
+- @radio
+- @radio_2
+- @radio_3
+- @television
+- @television_2
+- @television_3
+- @posters
+- @post_cards
+- @theatre
+- @grafitti
+- @loud_speaker_cars
+- @return: We should not do anything with media at the moment.
+- @easy_discard
+- @cancel_advisor_action
+
+
+@loud_speaker_cars
+title: Why not be as loud as possible?. Strap some loudpeakers onto a jeep and let it drive through a neighbourhood while blasting our message. 
+subtitle: -4 resources
+choose-if: resources >= 4
+unavailable-subtitle: Not enough resources. 
+view-if: loud_speaker_cars = 0
+on-arrival: loud_speaker_cars += 1; resources -= 4; workers_slfp += 2; middle_slfp +=2; upper_slfp -= 0.5; 
+
+The jeeps certainly made our message well heard by bystanders and residents, though some more affluent residents have complained about the noise, can't blame them.
+
+//very effective for middle and working class but is hated by upper class
+
+@grafitti
+title: The sidewalks, bus stations and alleys are dotted by grafitti and other petty vandalism. Most are a-political and crude, while others are explicitly political.
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources. 
+on-arrival: grafitti += 1; resources -= 1; workers_slfp += 0.75; rural_slfp += 0.75;
+
+The "vandalism" makes our symbol and message more prevalent esspecially in the slums and villages. 
+
+//will be only minor effective on rural and working class
+
+@theatre
+title: In rural areas of Sri Lanka, theatre, plays and musicals are an important part of community and a form of entertainment, perhaps we can organise our own events?
+subtitle: -4 resources
+choose-if: resources >= 4
+unavailable-subtitle: Not enough resources. 
+view-if: theatre = 0
+on-arrival: theatre += 1; resources -= 4; rural_slfp += 3; workers_slfp += 1.5;
+
+The songs, acting and general performance gather modest crowds, but they seem enthusiastic at the entertainment provided.
+
+//will be effective on the rural class,
+
+@post_cards
+title: A rather novel idea has been brought to our attention. Post cards, fantasy money, flags and other "collectables" presenting party leaders and symbols.
+subtitle: -2 resources
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources. 
+view-if: post_cards = 0
+on-arrival: post_cards += 1; resources -= 2; middle_slfp += 2.5;
+
+While many question the efficacy of this strategy in spreading our message, loyal party followers are collecting in droves and our coming to rallies clad in blue, waving the party standard.
+
+//will be effective on middle class
+
+@posters
+title: Our posters, leaflets and flyers are outdated and need refinment for a changing electorate and their demands.
+subtitle: -2 resources
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources. 
+view-if: poster = 0
+on-arrival: poster += 2; resources -= 1; middle_slfp += 1.5; workers_slfp +=1.5; rural_slfp += 1.5; upper_slfp += 1.5;
+
+Our party members have unveiled a new "series" of posters with chatchy slogans and innovative art styles. This will surely make our party more presentable.
+
+//will be broadly effective
+
+@television
+title: With greater TV ownership among Sri Lankans, moving into the medium can be benefical in spreading our message directly in the form of ads or programs.
+subtitle: -3 resources
+choose-if: resources >= 3 and private_tv = 1
+unavailable-subtitle: The government maintains a monopoly on television. Not enough resources. 
+view-if: tv_ad = 0
+on-arrival: tv_ad += 1; resources -= 3; middle_slfp += 2; workers_slfp += 2.5; rural_slfp += 0.75; upper_slfp += 2.5;
+
+Our adoption of the TV for political messaging is rather unprecedented in Sri Lanka and already other parties are starting to adopt the medium as well, time will tell if it will be effective.
+
+//will be more effective for working class people and middle class people
+
+@television_2
+title: To keep up with the quality of private and public TV, we need to continue funding our operations.
+subtitle: -2 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: tv_ad > 0 and tv_ad <= 4
+on-arrival: radio += 1; resources -= 2; middle_slfp += 2.25; workers_slfp += 2.75; rural_slfp += 1.25; upper_slfp += 1.25; 
+
+Our ads, and programs are reaching nearlly everycorner of the country, our message is spreading far and wide.
+
+@television_3
+title: We should keep on supporting our TV operations.
+subtitle: Our operations are now running smoothly, if we regularily fund it we can continue to maintain and improve it. -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: tv_ad > 4 
+on-arrival: tv_ad += 1; resources -= 1; middle_slfp += 3; workers_slfp += 3.5; rural_slfp += 1.5; upper_slfp += 2; 
+
+We are continuing to invest in our TV operations.
+
+@commercial
+title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
+subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to socialist views.
+on-arrival: resources += 1; left_dissent += 10; nationalist_strength += 3;
+
+Our commercialized newspapers are able to bring in more funds. However, the Left express's their displeasure. The Nationalists are by contrast are mildly enthusiastic.
+
+@campaign
+title: The purpose of our media is to rally support for the SLFP.
+subtitle: Our newspapers will focus on the electoral campaign.
+on-arrival: campaign_media += 1; middle_slfp += 0.75; workers_slfp += 0.75; rural_slfp += 0.75; upper_slfp += 0.75;
+
+Our campaign media makes the rounds but with it being such a broad sweep, the campaign is not as effective esspecially with how saturated the landscape has become.
+
+@ideological
+title: We will have vibrant ideological debate within our newspapers.
+subtitle: There will be space for the two sides to air their views.
+on-arrival: left_dissent -= 4; nationalist_dissent -= 4; middle_slfp -= 0.5; workers_slfp -= 0.5; rural_slfp -= 0.5; upper_slfp -= 0.5;
+
+With our internal feuding bleeding into our publications, the mood internally is somewhat improved, the public however are concerned about the lack of direction and instability.
+
+@radio
+title: Why not fund a radio station?
+subtitle: -2 resources
+choose-if: resources >= 2 and private_radio = 1
+unavailable-subtitle: The government maintains a monopoly on radio. Not enough resources. 
+view-if: radio = 0
+on-arrival: radio += 1; resources -= 2; middle_slfp += 0.75; workers_slfp += 0.75; rural_slfp += 0.75; upper_slfp += 0.75;
+
+Our new radio station allows us to connect to people in a more intimate setting than before, spreading our message along with music and other popular content. 
+
+@radio_2
+title: We must keep on building up our radio network.
+subtitle: -2 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: radio > 0 and radio <= 4
+on-arrival: radio += 1; resources -= 2; middle_slfp += 1.25; workers_slfp += 1.30; rural_slfp += 2.25; upper_slfp += 1.25; 
+
+Our new radio network has a mix of popular and political programming, and is proving a success.
+
+@radio_3
+title: We should keep on supporting our radio network.
+subtitle: The station is now running smoothly, if we regularily fund it we can continue to maintain and improve it. -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: radio > 4 
+on-arrival: radio += 1; resources -= 1; middle_slfp += 2; workers_slfp += 2.25; rural_slfp += 3.5; upper_slfp += 2; 
+
+We are continuing to invest in our radio station. 
