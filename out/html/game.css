@@ -217,7 +217,7 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin: 0 auto;
+  margin: 0 20rem;;
   max-width: 530px;
 }
 
@@ -265,7 +265,7 @@ img.inline-img.icon {
     min-width: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 800px;
+    height: calc(100vh - 100px);
 }
 
 #qualities {
@@ -307,8 +307,7 @@ img.inline-img.icon {
   font-weight: normal;
 }
 #qualities_right_scroll {
-    max-height: 110vh;
-    overflow-y: auto;
+    height: calc(100vh - 100px);
 }
 
 /* tabs */
