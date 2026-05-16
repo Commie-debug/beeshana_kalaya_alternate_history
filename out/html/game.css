@@ -232,7 +232,7 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  width: 20rem;
+  width: 40rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -242,13 +242,13 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: 0.4em;
+  left: 1em;
   position: relative;
   overflow: visible;
 }
 .tools.right {
   float: right;
-  right: 0.4em;
+  right: 1em;
   position: relative;
   overflow: visible;
 }
