@@ -257,14 +257,14 @@ img.inline-img.icon {
   position: relative;
   overflow: visible;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
-  height: 990px;
+  height: 970px;
 
 }
 
 /* The actual content area inside .tools */
 
 .tools.left > div:not(.tab_container) {
-    height: 920px;
+    height: 910px;
     padding: 0.6em;
     flex: 1;
     min-width: 0;
@@ -273,7 +273,7 @@ img.inline-img.icon {
 }
 
 .tools.right > div:not(.tab_container) {
-    height: 990px;
+    height: 970px;
     padding: 0.6em;
     flex: 1;
     min-width: 0;
@@ -320,7 +320,7 @@ img.inline-img.icon {
   font-weight: normal;
 }
 #qualities_right_scroll {
-    height: 990px;
+    height: 970px;
     overflow-y: auto;
     overflow-x: hidden;
 }
