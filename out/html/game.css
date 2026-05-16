@@ -243,10 +243,14 @@ img.inline-img.icon {
 .tools.left {
   float: left;
   left: 0.4em;
+  position: relative;
+  overflow: visible;
 }
 .tools.right {
   float: right;
   right: 0.4em;
+  position: relative;
+  overflow: visible;
 }
 
 /* The actual content area inside .tools */
@@ -308,6 +312,10 @@ img.inline-img.icon {
     /*shift tabs so they visually protrude beyond the sidebar edge */
     position: relative;
     right: 0;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    top: 0;
 }
 
 /* Both sidebars tabs jut out to the RIGHT */
