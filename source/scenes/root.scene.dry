@@ -788,7 +788,7 @@ Q.colombo_d_rural = 12;
 Q.colombo_d_control = 10;
 Q.colombo_d_infastructure = 0.85;
 Q.colombo_d_seats = 21;
-Q.colombo_d_industries = ['Tourism', 'Textile', 'Fishing', 'Agriculture', 'Rubber'];
+Q.colombo_d_industries = ['Tourism', 'Textile & apparel', 'Fishing', 'Agriculture', 'Rubber'];
 Q.colombo_d_pop_weight = 11.44;
 
 //gampaha
@@ -806,7 +806,7 @@ Q.gampaha_d_rural = 47;
 Q.gampaha_d_control = 10;
 Q.gampaha_d_infastructure = 0.70;
 Q.gampaha_d_seats = 17;
-Q.gampaha_d_industries = ['Agriculture', 'Textile', 'Fishing', 'Rubber'];
+Q.gampaha_d_industries = ['Agriculture', 'Textile & apparel', 'Fishing', 'Rubber'];
 Q.gampaha_d_pop_weight = 9.36;
 
 //kalutara
