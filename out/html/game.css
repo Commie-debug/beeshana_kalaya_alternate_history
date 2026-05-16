@@ -237,7 +237,6 @@ img.inline-img.icon {
   width: 16rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   position: relative;
@@ -247,6 +246,8 @@ img.inline-img.icon {
   left: 2em;
   position: relative;
   overflow: visible;
+  box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.18);
 }
 .tools.right {
   float: right;
@@ -255,6 +256,7 @@ img.inline-img.icon {
   overflow: visible;
   max-height: 90vh;
   overflow-y: auto;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 }
 
 /* The actual content area inside .tools */
@@ -303,14 +305,14 @@ img.inline-img.icon {
   font-weight: normal;
 }
 
-/* vertical bookmarks jutting out from the sidebar edges */
+/* tabs */
 .tab_container {
     background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3px;
-    padding: 6px 0;
+    gap: 0;
+    padding: 0;
     width: auto;
     flex-shrink: 0;
     position: absolute;
@@ -318,52 +320,60 @@ img.inline-img.icon {
 }
 
 .tools.left .tab_container {
-    left: 0;
+    left: -1px;
     transform: translateX(-100%);
 }
 
 .tools.right .tab_container {
-    right: 0;
+    right: -1px;
     transform: translateX(100%);
 }
 
-/* Left sidebar tabs jut out to the LEFT */
+/* Left sidebar tabs */
 .tools.left .tab_button {
-    border-radius: 6px 0 0 6px;
+    border-radius: 4px 0 0 4px;
     border-right: none;
-    box-shadow: -3px 2px 6px rgba(0,0,0,0.2);
-    margin-right: 0;
+    margin-left: 4px;
+    box-shadow: -3px 2px 5px rgba(0,0,0,0.25);
+    transition: margin-left 0.1s, background-color 0.1s;
+}
+.tools.left .tab_button.active {
+    margin-left: 0;
+    background-color: var(--content-bg-color);
+    box-shadow: -4px 2px 8px rgba(0,0,0,0.3);
+    font-weight: bold;
     border-right: none;
 }
+.tools.left .tab_button:hover {
+    margin-left: 2px;
+}
 
-/* Right sidebar tabs jut out to the RIGHT */
+/* Right sidebar tabs */
 .tools.right .tab_button {
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 4px 4px 0;
     border-left: none;
-    box-shadow: 3px 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 3px 2px 5px rgba(0,0,0,0.25);
 }
-
-.tools.left .tab_button.active,
 .tools.right .tab_button.active {
-    box-shadow: 4px 2px 8px rgba(0,0,0,0.25);
+    background-color: var(--content-bg-color);
+    box-shadow: 4px 2px 8px rgba(0,0,0,0.3);
+    font-weight: bold;
 }
 
 .tab_button {
     font-family: "Minion Pro", Georgia, serif;
     background-color: var(--tab-color);
     color: var(--text-color);
-    border: 1px solid rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.2);
     outline: none;
     padding: 6px 10px;
     cursor: pointer;
     font-size: 0.78em;
     white-space: nowrap;
     letter-spacing: 0.03em;
-    transition: background-color 0.1s;
-}
-.tab_button.active {
-    background-color: var(--content-bg-color);
-    font-weight: bold;
+    display: block;
+    width: 100%;
+    transition: margin-left 0.1s, background-color 0.1s;
 }
 .tab_button:hover {
     background-color: var(--tab-hover-color);
