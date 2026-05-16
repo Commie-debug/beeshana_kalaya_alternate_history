@@ -218,7 +218,7 @@ img.inline-img.icon {
 /* This is mostly copied from undum. */
 #mid_panel {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 510px;
 }
 
 #page {
@@ -255,16 +255,17 @@ img.inline-img.icon {
   position: relative;
   overflow: visible;
   max-height: 90vh;
-  overflow-y: auto;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 }
 
 /* The actual content area inside .tools */
 .tools > div:not(.tab_container) {
-  padding: 0.6em;
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
+    padding: 0.6em;
+    flex: 1;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 #qualities {
   text-indent: 0;
@@ -303,6 +304,10 @@ img.inline-img.icon {
 }
 #qualities_right h1 + p:first-line {
   font-weight: normal;
+}
+#qualities_right_scroll {
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 /* tabs */

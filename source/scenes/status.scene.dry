@@ -672,6 +672,8 @@ Indian Prime Minister: [+ india_pm +]
 
 @party
 
+= The Party
+
 [? if the_split = 0 or the_split = 2 and slfp_leader = "Sirimavo Bandaranaike" : {!<div style="text-align: center; margin-bottom: 10px;">
 <img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
 <div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>

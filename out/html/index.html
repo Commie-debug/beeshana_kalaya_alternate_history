@@ -330,13 +330,15 @@
                     </div>
                 </div>
                 <div id='stats_sidebar_right' class='tools right'>
-                    <div id="qualities_right">
+                    <div id="qualities_right_scroll" style="overflow-y: auto; max-height: 90vh; flex: 1; min-width: 0; padding: 0.6em;">
+                        <div id="qualities_right">
+                        </div>
                     </div>
                     <div class="tab_container">
                         <button class="tab_button active" id="nation_tab" onclick="window.changeTabRight('status_right', 'nation_tab');">The Nation</button>
                         <button class="tab_button" id="library_tab" onclick="window.changeTabRight('status_right.library', 'library_tab');">Library</button>
                     </div>
-              </div>
+                </div>
             </div>
 
             <div id='content'>
