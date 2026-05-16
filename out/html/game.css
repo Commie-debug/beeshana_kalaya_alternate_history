@@ -265,7 +265,7 @@ img.inline-img.icon {
     min-width: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    max-height: 110vh;
+    max-height: 120vh;
 }
 #qualities {
   text-indent: 0;
