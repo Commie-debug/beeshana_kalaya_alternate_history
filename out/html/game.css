@@ -217,7 +217,7 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin: 0 31rem;
+  margin: 0 19rem;
 }
 #page {
   margin: 0 auto;
@@ -232,7 +232,7 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  width: 30rem;
+  width: 18rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
