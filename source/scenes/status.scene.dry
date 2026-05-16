@@ -42,13 +42,13 @@ if (_changed) {
 = Status
 
 {!
-var bgSrc = dendryUI.dendryEngine.state.bg || '';
+var bgSrc = window.dendryUI && window.dendryUI.dendryEngine.state.bg ? window.dendryUI.dendryEngine.state.bg : '';
 if (bgSrc) {
     document.write('<img src="' + bgSrc + '" style="width: 100%; height: auto; border: 4px solid #876;">');
 }
 !}
 
-**Update: ujk**
+**Update: Fudge**
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
