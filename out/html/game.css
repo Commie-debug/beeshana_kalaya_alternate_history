@@ -259,6 +259,7 @@ img.inline-img.icon {
   max-height: 90vh;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
   height: calc(100vh - 60px);
+  overflow: hidden;
 }
 
 /* The actual content area inside .tools */
@@ -310,7 +311,8 @@ img.inline-img.icon {
   font-weight: normal;
 }
 #qualities_right_scroll {
-    height: calc(100vh - 60px);
+    height: 100%;
+    overflow-y: auto;
 }
 
 /* tabs */
