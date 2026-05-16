@@ -329,6 +329,7 @@ img.inline-img.icon {
 .tools.left .tab_container {
     left: -1px;
     transform: translateX(-100%);
+    align-items: flex-end;
 }
 
 .tools.right .tab_container {
