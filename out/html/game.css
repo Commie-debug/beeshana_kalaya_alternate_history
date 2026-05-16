@@ -382,6 +382,7 @@ img.inline-img.icon {
     white-space: nowrap;
     letter-spacing: 0.03em;
     display: block;
+    width: auto;
     transition: margin-left 0.1s, background-color 0.1s;
 }
 .tab_button:hover {
