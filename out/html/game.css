@@ -253,6 +253,8 @@ img.inline-img.icon {
   right: 2em;
   position: relative;
   overflow: visible;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 /* The actual content area inside .tools */
