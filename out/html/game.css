@@ -766,6 +766,9 @@ img {
       z-index: 10;
       max-height: 90vh;
       overflow-y: auto;
+      height: 800px;
+      overflow: visible;
+      position: relative;
   }
   #mid_panel {
       margin: 0 auto;
