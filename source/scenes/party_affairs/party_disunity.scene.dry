@@ -40,14 +40,14 @@ We have promised that we will listen to the Left wing of the party. Of course, t
 
 @concessions_nationalist
 title: Give concessions to the Nationalists.
-view-if: labor_dissent > 30
+view-if: nationalist_dissent > 30
 on-arrival: nationalist_dissent -= 7; left_dissent += 5
 
 We have promised to take up a more Nationalist position of key issues, the Left grows restless.
 
 @do_nothing
 title: Let the factions argue with themselves.
-on-arrival: left_dissent += 1; nationalist_dissent += 1
+on-arrival: left_dissent += 3; nationalist_dissent += 3
 
 Let the factions bicker; perhaps dissent is healthy for the party?
 
