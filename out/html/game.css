@@ -258,6 +258,7 @@ img.inline-img.icon {
   overflow: visible;
   max-height: 90vh;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  height: calc(100vh - 60px);
 }
 
 /* The actual content area inside .tools */
