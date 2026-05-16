@@ -217,8 +217,8 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin: 0 41rem;
-  width: 400px;
+  margin: 0 20rem;
+  max-width: 540px;
 }
 #page {
   margin: 0 auto;
@@ -300,7 +300,7 @@ img.inline-img.icon {
   font-weight: normal;
 }
 
-/* vertical bookmarks jutting out to the RIGHT of both sidebars */
+/* vertical bookmarks jutting out from the sidebar edges */
 .tab_container {
     background-color: transparent;
     display: flex;
@@ -310,33 +310,28 @@ img.inline-img.icon {
     padding: 6px 0;
     width: auto;
     flex-shrink: 0;
-    /*shift tabs so they visually protrude beyond the sidebar edge */
-    position: relative;
-    right: 0;
     position: absolute;
-    transform: translateX(-100%);
     top: 0;
+}
+
+.tools.left .tab_container {
+    left: 0;
+    transform: translateX(-100%);
 }
 
 .tools.right .tab_container {
     right: 0;
-    right: auto;
     transform: translateX(100%);
 }
 
-/* Both sidebars tabs jut out to the RIGHT */
+/* Left sidebar tabs jut out to the LEFT */
 .tools.left .tab_button {
     border-radius: 6px 0 0 6px;
     border-right: none;
     box-shadow: -3px 2px 6px rgba(0,0,0,0.2);
 }
-.tools.right .tab_button {
-    border-radius: 0 6px 6px 0;
-    border-left: none;
-    box-shadow: 3px 2px 6px rgba(0,0,0,0.2);
-}
 
-.tools.left .tab_button,
+/* Right sidebar tabs jut out to the RIGHT */
 .tools.right .tab_button {
     border-radius: 0 6px 6px 0;
     border-left: none;
@@ -857,4 +852,3 @@ table {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
-    
