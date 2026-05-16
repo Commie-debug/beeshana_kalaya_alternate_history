@@ -242,13 +242,13 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: 1em;
+  left: 2em;
   position: relative;
   overflow: visible;
 }
 .tools.right {
   float: right;
-  right: 1em;
+  right: 2em;
   position: relative;
   overflow: visible;
 }
