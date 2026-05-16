@@ -234,7 +234,7 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  width: 18rem;
+  width: 16rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
