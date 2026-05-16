@@ -232,7 +232,7 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  width: 10rem;
+  width: 20rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -318,10 +318,22 @@ img.inline-img.icon {
     top: 0;
 }
 
-/* Both sidebars tabs jut out to the RIGHT */
-.tools.left .tab_container,
 .tools.right .tab_container {
-    align-items: flex-start;
+    left: 0;
+    right: auto;
+    transform: translateX(-100%);
+}
+
+/* Both sidebars tabs jut out to the RIGHT */
+.tools.left .tab_button {
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+    box-shadow: 3px 2px 6px rgba(0,0,0,0.2);
+}
+.tools.right .tab_button {
+    border-radius: 6px 0 0 6px;
+    border-right: none;
+    box-shadow: -3px 2px 6px rgba(0,0,0,0.2);
 }
 
 .tools.left .tab_button,
