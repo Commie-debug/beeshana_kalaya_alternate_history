@@ -714,6 +714,10 @@ img {
   #qualities {
       font-size: 1em;
   }
+  #qualities_right {
+    font-size: 0.7em;
+    line-height: 1.2em;
+}
   #tools_wrapper {
     position: static;
   }
@@ -731,6 +735,8 @@ img {
       right: 0.4em;
       position: relative;
       z-index: 10;
+      max-height: 90vh;
+      overflow-y: auto;
   }
   #mid_panel {
       margin: 0 auto;
