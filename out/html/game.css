@@ -262,7 +262,6 @@ img.inline-img.icon {
 }
 
 /* The actual content area inside .tools */
-
 .tools.left > div:not(.tab_container) {
     height: 855px;
     padding: 0.6em;

@@ -26,7 +26,6 @@ Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 Q.day_actions = 0;
-//If 0, India hasnt intervened, time is month by 2 weeks. If 1, India has intervened, time slows to week by week.
 
 
 Q.state_of_emergency = 0;
