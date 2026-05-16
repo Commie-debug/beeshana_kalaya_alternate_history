@@ -236,7 +236,7 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  width: 16rem;
+  width: 18rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   display: flex;
@@ -245,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: -3em;
+  left: -2.5em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
@@ -253,7 +253,7 @@ img.inline-img.icon {
 }
 .tools.right {
   float: right;
-  right: -3em;
+  right: -2.5em;
   position: relative;
   overflow: visible;
   max-height: 90vh;
@@ -261,13 +261,13 @@ img.inline-img.icon {
 }
 
 /* The actual content area inside .tools */
-.tools > div:not(.tab_container) {
+.tools > div:not(.tab_container){
     padding: 0.6em;
     flex: 1;
     min-width: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
 }
 
 #qualities {
@@ -309,7 +309,7 @@ img.inline-img.icon {
   font-weight: normal;
 }
 #qualities_right_scroll {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
 }
 
 /* tabs */
