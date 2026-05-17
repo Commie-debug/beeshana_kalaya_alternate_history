@@ -128,7 +128,7 @@ Industries: [+ district_industries +]
 
 [? if year = 1986 and month = 2 and week = 3 : Ferdinand Marcos flees the Philippines following a popular uprising against his long-term rule.]
 
-[? if year = 1986 and month = 4 and week = 3 : The United States bombs targets in Tripoli and Benghazi Libya.
+[? if year = 1986 and month = 4 and week = 3 : The United States bombs targets in Tripoli and Benghazi Libya.]
 
 [? if year = 1986 and month = 4 and week = 3 : Reactor Four at the Chernobyl Nuclear Power Plant explodes in Soviet Ukraine.]
 
