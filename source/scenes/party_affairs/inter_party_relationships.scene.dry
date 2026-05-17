@@ -27,13 +27,17 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; jvp_relation += 3*(1-dissent);
 
+The JVP are seemingly confused about our intentions. The JVP and their supporters have not forgotten our suppression of their revolt. However, connections are made at the grassroots and local levels.
+
 # FUTURE, ADD PATHS FOR RECONCILIATION AND TO MAKE A PACT. 
 
 @itamil
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; cwc_relation += 3*(1-dissent);
+on-arrival: resources -= 1; cwc_relation += 2*(1-dissent);
+
+The CWC is incredibly dismissive of the overtures, they simply do not trust us. Why they then trust the UNP is unknown to us. Maybe with time our two parties cab cooperate but for now, that seems off the table.
 
 # FUTURE, ADD PATHS FOR FUTURE SUPPORT BEING DEPENDENT ON A CHANGE IN SLFP POSITION OR A PROMISE TO IMPROVE THEIR CONDITIONS. HIGH SUPPORT CAN MEAN A CWC THAT ABANDONS THE UNP FOR THE SLFP.
 
@@ -44,6 +48,8 @@ view if: slmc_formed = 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; slmc_relation += 4*(1-dissent);
 
+The Muslim congress is still rather friendly with the UNP, but hopefully with further interactions we can push them apart. The SLMC itself is happy to have more friends.
+
 # This is more or less dependent on providing security for muslims in the north east and being at least not-anti buisness for the muslim middle class.
 
 @tamil
@@ -52,13 +58,17 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; tulf_relation += 3*(1-dissent); actc_relation += 3*(1-dissent);
 
+The Tamil parties accept our overtures but understandably, they are cautious of embrassing us. To them our policies on Tamils are near indistinguishable from the UNP and any further improvment in our relationship will need us to confront this.
+
 # FUTURE, ADD PATHS FOR IF SLFP is nationalist, if they are the tamil parties may not care or even be angry at you. Also changes if the SLFP passes/supports anti-tamil laws in parliament or for greater military pressure on the militants. Greater support can be gained if SLFP becomes more pro-tamil.
 
 @communist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; lssp_relation += 5; cpsl_relation += 8;
+on-arrival: resources -= 1; lssp_relation += 6; cpsl_relation += 8;
+
+The CPSL and LSSP welcome our overtures, our previous cooperation and somewhat shared goals convinces their leadership of the benefits of working togheter.
 
 # FUTURE, ADD PATHS FOR a remaking of the UF. Or make future support for SLFP dependent on if they have/will pass worker/union friendly laws and start re-nationalising
 
