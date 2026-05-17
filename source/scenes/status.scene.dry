@@ -695,6 +695,12 @@ Indian Prime Minister: [+ india_pm +]
 
 
 @party
+on-arrival: {!
+Q.left_strength_pct = Q.left_strength / 60 * 100;
+Q.nationalist_strength_pct = Q.nationalist_strength / 60 * 100;
+Q.left_dissent_pct = Q.left_dissent / 50 * 100;
+Q.nationalist_dissent_pct = Q.nationalist_dissent / 50 * 100;
+!}
 
 = The Party
 
@@ -742,12 +748,12 @@ Indian Prime Minister: [+ india_pm +]
 <div style="margin: 8px 0;">
   <div style="margin-top: 8px; font-size: 0.75em; color: #A91101; font-weight: bold;">Left Strength</div>
   <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_strength / 60 * 100 +]{!%; transition: width 0.4s;"></div>
+    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_strength_pct +]{!%; transition: width 0.4s;"></div>
   </div>
 
   <div style="margin-top: 5px; font-size: 0.75em; color: #0F52BA; font-weight: bold;">Nationalist Strength</div>
   <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_strength / 60 * 100 +]{!%; transition: width 0.4s;"></div>
+    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_strength_pct +]{!%; transition: width 0.4s;"></div>
   </div>
 </div>
 !}
@@ -756,12 +762,12 @@ Indian Prime Minister: [+ india_pm +]
 <div style="margin: 8px 0;">
   <div style="margin-top: 8px; font-size: 0.75em; color: #A91101; font-weight: bold;">Left Dissent</div>
   <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_dissent / 50 * 100 +]{!%; transition: width 0.4s;"></div>
+    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_dissent_pct +]{!%; transition: width 0.4s;"></div>
   </div>
 
   <div style="margin-top: 5px; font-size: 0.75em; color: #0F52BA; font-weight: bold;">Nationalist Dissent</div>
   <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_dissent / 50 * 100 +]{!%; transition: width 0.4s;"></div>
+    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_dissent_pct +]{!%; transition: width 0.4s;"></div>
   </div>
 </div>
 !}
