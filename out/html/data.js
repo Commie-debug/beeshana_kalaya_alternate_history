@@ -218,7 +218,7 @@ const tooltipList = [{
     },
     {
     searchString: "Islam",
-    explanationText: "<img src=img/Red_Mosque.jpg> Jami Ul-Alfar Mosque(Red Mosque), Pettah, Colombo"
+    explanationText: "<img src=img/Red_Mosque.png> Jami Ul-Alfar Mosque(Red Mosque), Pettah, Colombo"
     },
     {
     searchString: "Hinduism",
