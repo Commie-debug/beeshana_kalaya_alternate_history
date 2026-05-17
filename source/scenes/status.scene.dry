@@ -733,31 +733,30 @@ Indian Prime Minister: [+ india_pm +]
 = Internal Factions of the <span style="color: #00008B;">**SLFP**</span>
 
 {!
-<div style="margin: 8px 0;">
-  <!-- Strength tug-of-war bar -->
-  <div style="display: flex; justify-content: space-between; font-size: 0.75em; margin-bottom: 2px;">
-    <span style="color: #A91101; font-weight: bold;">Left</span>
-    <span style="color: #0F52BA; font-weight: bold;">Nationalist</span>
-  </div>
-  <div style="display: flex; height: 14px; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #A91101; width: !} [+ left_strength +] {!%; transition: width 0.4s;"></div>
-    <div style="background: #0F52BA; flex: 1;"></div>
-  </div>
-  <div style="display: flex; justify-content: space-between; font-size: 0.7em; margin-top: 2px; color: #666;">
-    <span>!}[+ left_strength : strength +]{!</span>
-    <span>!}[+ nationalist_strength : strength +]{!</span>
-  </div>
+var ls = Q.left_strength || 0;
+var ns = Q.nationalist_strength || 0;
+var ld = Q.left_dissent || 0;
+var nd = Q.nationalist_dissent || 0;
 
-  <!-- Dissent bars -->
-  <div style="margin-top: 8px; font-size: 0.75em; color: #A91101; font-weight: bold;">Left Dissent</div>
-  <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_dissent +]{!%; transition: width 0.4s;"></div>
-  </div>
-
-  <div style="margin-top: 5px; font-size: 0.75em; color: #0F52BA; font-weight: bold;">Nationalist Dissent</div>
-  <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_dissent +]{!%; transition: width 0.4s;"></div>
-  </div>
-</div>
+document.write('<div style="margin: 8px 0;">'
+  + '<div style="display: flex; justify-content: space-between; font-size: 0.75em; margin-bottom: 2px;">'
+  + '<span style="color: #A91101; font-weight: bold;">Left (' + Math.round(ls) + ')</span>'
+  + '<span style="color: #0F52BA; font-weight: bold;">Nationalist (' + Math.round(ns) + ')</span>'
+  + '</div>'
+  + '<div style="display: flex; height: 14px; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">'
+  + '<div style="background: #A91101; width: ' + ls + '%; transition: width 0.4s;"></div>'
+  + '<div style="background: #0F52BA; flex: 1;"></div>'
+  + '</div>'
+  + '<div style="margin-top: 8px; font-size: 0.75em; color: #A91101; font-weight: bold;">Left Dissent</div>'
+  + '<div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">'
+  + '<div style="background: #A91101; opacity: 0.7; height: 100%; width: ' + ld + '%; transition: width 0.4s;"></div>'
+  + '</div>'
+  + '<div style="margin-top: 5px; font-size: 0.75em; color: #0F52BA; font-weight: bold;">Nationalist Dissent</div>'
+  + '<div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">'
+  + '<div style="background: #0F52BA; opacity: 0.7; height: 100%; width: ' + nd + '%; transition: width 0.4s;"></div>'
+  + '</div>'
+  + '</div>');
 !}
+
+
 
