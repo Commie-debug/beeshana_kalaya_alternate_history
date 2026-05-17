@@ -1,6 +1,6 @@
 title: Choosing Our Enemies
 new-page: true
-view-if: year <= 1930 and enemies_timer <= 0
+view-if: enemies_timer <= 0
 on-arrival: month_actions += 1; enemies_timer = 18
 max-visits: 3
 is-card: true
@@ -9,13 +9,16 @@ tags: party_affairs
 
 = Choosing our enemies
 
-In our media and campaign materials, who should we consider as our main opponents?
+In our media and campaign materials, who should we consider as our main political opponents?
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
 - @unp: The right-wing UNP and its neo-liberal ideology.
 - @jvp: The extremist JVP and their destabalizing rehtoric.
-#add a tamil option for TULF/ACTC
+- @tamil: The separatist TULF and federalist ACTC who are dividing Sri Lanka.
+- @communists: The CPSL and LSSP are a remanent of communism that should be stopped.
+- @slpp_hate: The splinter SLPP and their racist rhetoric.
+- @slmp_hate: The splinter SLMP and their "tiger sympathies".
 - @easy_discard
 
 @unp
@@ -27,5 +30,27 @@ Attacking the UNP puts us at tension with the JR, none the less, the left suppor
 on-arrival: enemies = "jvp"; left_strength -= 3; nationalist_strength += 3; left_dissent += 3; jvp_relation -= 10
 
 Given our rather hostile history, this decision suprises no one.
+
+@tamil
+on-arrival: enemies = "tulf,actc"; left_strength -= 3; nationalist_strength += 5; left_dissent += 3; tulf_relation -= 10; actc_relation -= 10
+
+Maybe this is going too far in antagonising Tamils....
+
+@communists
+on-arrival: enemies = "cpsl,lssp,nssp"; left_strength -= 5; nationalist_strength += 2; left_dissent += 3; cpsl_relation -= 10; lssp_relation -= 10; nssp_relation -= 10
+
+This is rather suprising giving our previous cooperation, but maybe that is needed now.
+
+@slpp_hate
+on-arrival: enemies = "slpp"; left_strength += 5; nationalist_strength -= 6; left_dissent -= 5; slpp_relation -= 10
+view-if: slpp_formed = 1
+
+No one was suprised.
+
+@slmp_hate
+on-arrival: enemies = "slmp"; left_strength -= 3; nationalist_strength += 4; left_dissent += 3; slpp_relation -= 10
+view-if: slmp_formed = 1
+
+No one was suprised.
 
 
