@@ -273,6 +273,18 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/Muslim_Logo.png> Muslims <br> இலங்கைச் சோனகர்"
     },
     {
+    searchString: "Kafirs",
+    explanationText: "<img src=img/logos/kaffir.jpg> Sri Lankan Kaffirs"
+    },
+    {
+    searchString: "Burghers",
+    explanationText: "<img src=img/logos/burgher.jpg> Sri Lankan Burghers"
+    },
+    {
+    searchString: "Vedda",
+    explanationText: "<img src=img/logos/vedda.jpg> Vedda's"
+    },
+    {
     searchString: "SLFP",
     explanationText: "<img src=img/logos/SLFP_Logo.png> Sri Lanka Freedom Party"
     },
