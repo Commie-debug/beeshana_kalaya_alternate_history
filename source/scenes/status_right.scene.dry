@@ -74,6 +74,12 @@ Industries: [+ district_industries +]
 
 = International News
 
+[? if year = 1981 and month = 1 and week = 1 : The Republic of Palau is declared in Micronesia. ?]
+
+[? if year = 1981 and month = 1 and week = 1 : Iranian forces have begun a counterattack on Iraqi forces near Dezful and Sousangerd attempting to push them out of Iran. ?]
+
+[? if year = 1981 and month = 1 and week = 1 : FMLN forces seized radio stations in El Salvador's capital San Salvador in a large escalation in a nearly 2 year long insurgency. ?]
+
 [? if year = 1981 and month = 1 and week = 3 : The Iran Hostage Crisis ends after 444 days as American hostages are released from Tehran. ?]
 
 [? if year = 1981 and month = 1 and week = 3 : Ronald Reagan is inaugurated as President of the United States. ?]
