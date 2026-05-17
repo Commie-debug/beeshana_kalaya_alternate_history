@@ -258,19 +258,19 @@ const tooltipList = [{
     },
     {
     searchString: "Sinhalese",
-    explanationText: "<img src=img/logos/Sinhalese_Logo.png> Sinhalese"
+    explanationText: "<img src=img/logos/Sinhalese_Logo.png> Sinhalese <br> සිංහල"
     },
     {
     searchString: "Indian Tamil",
-    explanationText: "<img src=img/logos/Indian_Tamil_Logo.png> Indian Tamil"
+    explanationText: "<img src=img/logos/Indian_Tamil_Logo.png> Indian Tamil <br> மலையகத் தமிழர்"
     },
     {
     searchString: "Sri Lankan Tamil",
-    explanationText: "<img src=img/logos/Sri_Lankan_Tamil_Logo.png> Sri Lankan Tamil"
+    explanationText: "<img src=img/logos/Sri_Lankan_Tamil_Logo.png> Sri Lankan Tamil <br> ஈழத் தமிழர்"
     },
     {
     searchString: "Muslims",
-    explanationText: "<img src=img/logos/Muslim_Logo.png> Muslims"
+    explanationText: "<img src=img/logos/Muslim_Logo.png> Muslims <br> இலங்கைச் சோனகர்"
     },
     {
     searchString: "SLFP",
