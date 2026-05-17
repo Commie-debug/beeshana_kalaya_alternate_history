@@ -1744,6 +1744,7 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
+Q.bg_image = "img/map_2.jpg";
 set-bg: img/map_2.jpg
 new-page: true
 
