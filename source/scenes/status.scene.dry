@@ -732,9 +732,23 @@ Indian Prime Minister: [+ india_pm +]
 
 = Internal Factions of the <span style="color: #00008B;">**SLFP**</span>
 
-Left Strenght: [+ left_strength : strength +]
+{!
+var ls = Q.left_strength || 0;
+var ns = Q.nationalist_strength || 0;
+var total = ls + ns;
+var ls_pct = total > 0 ? (ls / total) * 100 : 50;
 
-Nationalists Strenght: [+ nationalist_strength : strength +]
+document.write('<div style="margin: 8px 0;">'
+  + '<div style="display: flex; justify-content: space-between; font-size: 0.75em; margin-bottom: 2px;">'
+  + '<span style="color: #A91101; font-weight: bold;">Left (' + Math.round(ls) + ')</span>'
+  + '<span style="color: #0F52BA; font-weight: bold;">Nationalist (' + Math.round(ns) + ')</span>'
+  + '</div>'
+  + '<div style="display: flex; height: 14px; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">'
+  + '<div style="background: #A91101; width: ' + ls_pct + '%; transition: width 0.4s;"></div>'
+  + '<div style="background: #0F52BA; flex: 1;"></div>'
+  + '</div>'
+  + '</div>');
+!}
 
 {!
 <div style="margin: 8px 0;">
@@ -749,6 +763,4 @@ Nationalists Strenght: [+ nationalist_strength : strength +]
   </div>
 </div>
 !}
-
-
 
