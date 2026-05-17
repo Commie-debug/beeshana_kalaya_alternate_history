@@ -3,6 +3,22 @@ const colourList = [{
         style: "color: #002FA7; font-weight: bold;"
     },
     {
+    word: "Buddhism",
+    style: "color: #F5D033; font-weight: bold;"
+    },
+    {
+    word: "Islam",
+    style: "color: #007914; font-weight: bold;"
+    },
+    {
+    word: "Hinduism",
+    style: "color: #FF7722; font-weight: bold;"
+    },
+    {
+    word: "Christianity",
+    style: "color: #5054cf; font-weight: bold;"
+    },
+    {
         word: "Sri Lanka Police",
         style: "color: #454BF7; font-weight: bold;"
     },
@@ -195,6 +211,22 @@ const colourList = [{
 const tooltipList = [{
     searchString: "Sri Lanka Armed Forces",
     explanationText: "<img src=img/logos/SLAF_Logo.png> Sri Lanka Armed Forces"
+    },
+    {
+    searchString: "Buddhism",
+    explanationText: "<img src=img/Temple_Of_The_Tooth.jpg> Sri Dalada Maligawa(Temple of the Tooth Relic), Kandy"
+    },
+    {
+    searchString: "Islam",
+    explanationText: "<img src=img/Red_Mosque.jpg> Jami Ul-Alfar Mosque(Red Mosque), Pettah, Colombo"
+    },
+    {
+    searchString: "Hinduism",
+    explanationText: "<img src=img/Nallur_Kandaswamy.jpg> Nallur Kandaswamy Temple, Nallur, Jaffna"
+    },
+    {
+    searchString: "Christianity",
+    explanationText: "<img src=img/St_Anthonys_Shrine.jpg> St. Anthony's Shrine, Kochchikade, Colombo"
     },
     {
     searchString: "Tourism",
