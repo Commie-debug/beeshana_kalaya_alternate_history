@@ -74,7 +74,7 @@ Industries: [+ district_industries +]
 
 = International News
 
-[? if year = 1981 and month = 1 and week = 3 : The Iran Hostage Crisis ends after 444 days as American hostages are released from Tehran.
+[? if year = 1981 and month = 1 and week = 3 : The Iran Hostage Crisis ends after 444 days as American hostages are released from Tehran.]
 
 [? if year = 1981 and month = 1 and week = 3 : Ronald Reagan is inaugurated as President of the United States.]
 
@@ -98,7 +98,7 @@ Industries: [+ district_industries +]
 
 [? if year = 1983 and month = 9 and week = 1 : Soviet fighter aircraft shoot down a Korean Air Lines Flight fter it enters Soviet airspace near Sakhalin Island.]
 
-[? if year = 1983 and month = 10 and week = 3 : Suicide bombers attack US and French military barracks in Beirut killing 241 American and 58 French peacekeepers.
+[? if year = 1983 and month = 10 and week = 3 : Suicide bombers attack US and French military barracks in Beirut killing 241 American and 58 French peacekeepers.]
 
 [? if year = 1983 and month = 10 and week = 3 : United States invades Grenada following an internal crisis in the Caribbean nation.]
 
