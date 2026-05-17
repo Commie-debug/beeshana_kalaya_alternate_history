@@ -698,16 +698,10 @@ Indian Prime Minister: [+ india_pm +]
 
 = The Party
 
-[? if the_split = 0 or the_split = 2 and slfp_leader = "Sirimavo Bandaranaike" : {!<div style="text-align: center; margin-bottom: 10px;">
+[? if the_split = 0 and split_sirimavo_victory != 2 and split_maitripala_victory != 2 : {!<div style="text-align: center; margin-bottom: 10px;">
 <img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
 <div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
 <div style="font-size: 0.85em;">Sirimavo Bandaranaike</div>
-</div>!} ?]
-
-[? if the_split = 3 or the_split = 2 and slfp_leader = "Maitripala Senanayake" : {!<div style="text-align: center; margin-bottom: 10px;">
-<img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8B0000; object-fit: cover;">
-<div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
-<div style="font-size: 0.85em;">Maithripala Senanayake</div>
 </div>!} ?]
 
 [? if the_split = 1 : {!<div style="text-align: center; font-size: 0.8em; font-style: italic; margin-bottom: 6px; color: #900;">⚠ Disputed Leadership</div>
@@ -722,6 +716,18 @@ Indian Prime Minister: [+ india_pm +]
 <div style="font-weight: bold; font-size: 0.85em; margin-top: 4px; color: #00008B;">Sirimavo Bandaranaike</div>
 <div style="font-size: 0.75em; margin-top: 2px; font-style: italic;">Left Faction</div>
 </div>
+</div>!} ?]
+
+[? if split_sirimavo_victory = 2 : {!<div style="text-align: center; margin-bottom: 10px;">
+<img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
+<div style="font-size: 0.85em;">Sirimavo Bandaranaike</div>
+</div>!} ?]
+
+[? if split_maitripala_victory = 2 : {!<div style="text-align: center; margin-bottom: 10px;">
+<img src="img/portraits/SenanayakeMaithripala.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8B0000; object-fit: cover;">
+<div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
+<div style="font-size: 0.85em;">Maithripala Senanayake</div>
 </div>!} ?]
 
 {!<div style="text-align: center; margin-bottom: 10px;">
