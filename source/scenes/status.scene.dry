@@ -43,7 +43,7 @@ if (_changed) {
 
 {!<img src="img/map_2.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
-**Update: cooker**
+**Update: rice**
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
@@ -739,43 +739,29 @@ Indian Prime Minister: [+ india_pm +]
 = Internal Factions of the <span style="color: #00008B;">**SLFP**</span>
 
 {!
-<div id="tug-war-container" style="margin: 8px 0;">
-  <div style="display: flex; justify-content: space-between; font-size: 0.75em; margin-bottom: 2px;">
-    <span style="color: #A91101; font-weight: bold;">Left (<span id="ls-val"></span>)</span>
-    <span style="color: #0F52BA; font-weight: bold;">Nationalist (<span id="ns-val"></span>)</span>
+<div style="margin: 8px 0;">
+  <div style="margin-top: 8px; font-size: 0.75em; color: #A91101; font-weight: bold;">Left Strength</div>
+  <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
+    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_strength / 60 * 100 +]{!%; transition: width 0.4s;"></div>
   </div>
-  <div style="display: flex; height: 14px; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div id="ls-bar" style="background: #A91101; width: 50%; transition: width 0.4s;"></div>
-    <div style="background: #0F52BA; flex: 1;"></div>
+
+  <div style="margin-top: 5px; font-size: 0.75em; color: #0F52BA; font-weight: bold;">Nationalist Strength</div>
+  <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
+    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_strength / 60 * 100 +]{!%; transition: width 0.4s;"></div>
   </div>
 </div>
 !}
 
 {!
-setTimeout(function() {
-    var ls = Q.left_strength || 0;
-    var ns = Q.nationalist_strength || 0;
-    var total = ls + ns;
-    var ls_pct = total > 0 ? (ls / total) * 100 : 50;
-    var lsVal = document.getElementById('ls-val');
-    var nsVal = document.getElementById('ns-val');
-    var lsBar = document.getElementById('ls-bar');
-    if (lsVal) lsVal.textContent = Math.round(ls);
-    if (nsVal) nsVal.textContent = Math.round(ns);
-    if (lsBar) lsBar.style.width = ls_pct + '%';
-}, 0);
-!}
-
 <div style="margin: 8px 0;">
   <div style="margin-top: 8px; font-size: 0.75em; color: #A91101; font-weight: bold;">Left Dissent</div>
   <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_dissent +]{!%; transition: width 0.4s;"></div>
+    <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_dissent / 50 * 100 +]{!%; transition: width 0.4s;"></div>
   </div>
 
   <div style="margin-top: 5px; font-size: 0.75em; color: #0F52BA; font-weight: bold;">Nationalist Dissent</div>
   <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_dissent +]{!%; transition: width 0.4s;"></div>
+    <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_dissent / 50 * 100 +]{!%; transition: width 0.4s;"></div>
   </div>
 </div>
 !}
-
