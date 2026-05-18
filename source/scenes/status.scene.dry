@@ -758,7 +758,7 @@ Left Strength
 Left Dissent
 {!
 <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-  <div style="background: #A91101; opacity: 0.7; height: 100%; width: !}[+ left_dissent_pct +]{!%; transition: width 0.4s;"></div>
+  <div style="background: #5e0a01; opacity: 0.7; height: 100%; width: !}[+ left_dissent_pct +]{!%; transition: width 0.4s;"></div>
 </div>
 !}
 
@@ -772,6 +772,6 @@ Nationalists Strength
 Nationalists Dissent
 {!
 <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #ccc;">
-  <div style="background: #0F52BA; opacity: 0.7; height: 100%; width: !}[+ nationalist_dissent_pct +]{!%; transition: width 0.4s;"></div>
+  <div style="background: #0c4394; opacity: 0.7; height: 100%; width: !}[+ nationalist_dissent_pct +]{!%; transition: width 0.4s;"></div>
 </div>
 !}
