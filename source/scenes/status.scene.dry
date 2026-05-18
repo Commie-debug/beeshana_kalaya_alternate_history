@@ -377,7 +377,16 @@ Q.gov_support_disp = Math.round(Q.gov_support);
 
 This whole thing needs to be revamped at some point
 
-{!<img src="img/gif/test.webp" style="width: 50%; height: auto; border: 4px solid #0011ff; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+{!<img src="img/gif/test.webp" style="width: 94%; height: auto; border: 4px solid #0011ff; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(31, 165, 255, 0.3);">!}
+
+Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
+
+Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
+
+Support for socialism: [+ socialism_disp +]%
+
+Support for the government: [+ gov_support_disp +]%
+
 
 = Ethnicity:
 
@@ -400,14 +409,6 @@ Middle Class: None: [+ middle_nonvoter +]%, SLFP: [+ middle_slfp +]%, JVP: [+ mi
 Rural: None: [+ rural_nonvoter +]%, SLFP: [+ rural_slfp +]%, JVP: [+ rural_jvp +]%, CPSL: [+ rural_cpsl +]%, LSSP: [+ rural_lssp +]%, NSSP: [+ rural_nssp +]%, TULF: [+ rural_tulf +]%, CWC: [+ rural_cwc +]%, UNP: [+ rural_unp +]%, ACTC: [+ rural_actc +]%, [? if slpp_formed: SLPP: [+ rural_slpp +]% ?][? if slmp_formed: SLMP: [+ rural_slmp +]% ?][? if slmc_formed: SLMC: [+ rural_slmc +]% ?][? if npp_formed: NPP: [+ rural_npp +]% ?][? if mep_formed: MEP: [+ rural_mep +]% ?][? if eros_formed: EROS: [+ rural_eros +]% ?][? if dplf_formed: DPLF: [+ rural_dplf +]% ?][? if pflt_formed: PFLT: [+ rural_pflt +]% ?][? if ucpf_formed: UCPF: [+ rural_ucpf +]% ?]
 
 Upper Class: None: [+ upper_nonvoter +]%, SLFP: [+ upper_slfp +]%, JVP: [+ upper_jvp +]%, CPSL: [+ upper_cpsl +]%, LSSP: [+ upper_lssp +]%, NSSP: [+ upper_nssp +]%, TULF: [+ upper_tulf +]%, CWC: [+ upper_cwc +]%, UNP: [+ upper_unp +]%, ACTC: [+ upper_actc +]%, [? if slpp_formed: SLPP: [+ upper_slpp +]% ?][? if slmp_formed: SLMP: [+ upper_slmp +]% ?][? if slmc_formed: SLMC: [+ upper_slmc +]% ?][? if npp_formed: NPP: [+ upper_npp +]% ?][? if mep_formed: MEP: [+ upper_mep +]% ?][? if eros_formed: EROS: [+ upper_eros +]% ?][? if dplf_formed: DPLF: [+ upper_dplf +]% ?][? if pflt_formed: PFLT: [+ upper_pflt +]% ?][? if ucpf_formed: UCPF: [+ upper_ucpf +]% ?]
-
-Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
-
-Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
-
-Support for socialism: [+ socialism_disp +]%
-
-Support for the government: [+ gov_support_disp +]%
 
 @tamil
 on-arrival: {!
