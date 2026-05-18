@@ -706,6 +706,8 @@ Q.nationalist_dissent_pct = Q.nationalist_dissent / 50 * 100;
 
 = The Party
 
+{!<img src="img/SLFP_Banner.png" style="width: 94%; height: auto; border: 4px solid #1919a9; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+
 [? if the_split = 0 and split_sirimavo_victory != 2 and split_maitripala_victory != 2 : {!<div style="text-align: center; margin-bottom: 10px;">
 <img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00008B; object-fit: cover;">
 <div style="font-weight: bold; font-size: 0.9em; margin-top: 4px;">Party Leader</div>
