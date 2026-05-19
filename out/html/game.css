@@ -856,8 +856,7 @@ img {
 }
 
 #right-panel-body {
-    display: none;
-    width: 320px;
+    width: 0px;
     height: 100%;
     z-index: 49;
     background-color: var(--content-bg-color);
@@ -867,7 +866,7 @@ img {
 }
 
 #page.right-panel-open #right-panel-body {
-    display: block;
+    width: 320px;
 }
 
 /* Backdrop that blocks center interaction */
@@ -903,6 +902,9 @@ img {
     padding: 6px 0;
     border-bottom: 1px solid var(--card-border-color);
     margin-bottom: 6px;
+}
+#right-panel-body {
+    transition: width 0.3s ease;
 }
 
 /* colored box div */
