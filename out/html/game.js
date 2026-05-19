@@ -695,10 +695,11 @@
       return bar;
   };
 
-
-  window.justLoaded = true;
   window.statusTab = "status";
   window.statusTabRight = "status_right";
+  window.updateSidebar();
+  window.updateSidebarRight();
+  window.justLoaded = true;
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
