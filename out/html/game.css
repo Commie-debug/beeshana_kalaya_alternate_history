@@ -217,12 +217,12 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin: 0 auto;
+  margin-left: 20rem;
   max-width: 560px;
 }
 
 #page {
-  margin: 0 auto 0 0.5em;
+  margin: 0 auto;
   position: relative;
   padding: 0 22rem;
 }
@@ -236,7 +236,7 @@ img.inline-img.icon {
   margin: 0 auto;
 }
 .tools {
-  width: 18rem;
+  width: 24rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   display: flex;
@@ -245,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: -0.5em;
+  left: -2.5em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
