@@ -695,6 +695,11 @@
       return bar;
   };
 
+  window.onDisplayContent = function() {
+    window.updateSidebar();
+    window.updateSidebarRight();
+  };
+
   window.statusTab = "status";
   window.statusTabRight = "status_right";
   window.updateSidebar();
