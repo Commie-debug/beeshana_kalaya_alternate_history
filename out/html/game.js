@@ -640,26 +640,28 @@
 
   window.currentRightTab = null;
 
-window.toggleRightPanel = function(scene, tabId) {
+  window.changeTabRight = function(newTab, tabId) {
+    window.statusTabRight = newTab;
+    window.updateSidebarRight();
+  };
+
+  window.toggleRightPanel = function() {
     var page = document.getElementById('page');
     if (page.classList.contains('right-panel-open')) {
         page.classList.remove('right-panel-open');
-        window.currentRightTab = null;
     } else {
-        window.changeTabRight(scene, tabId);
+        window.changeTabRight('status_right', 'nation_tab');
         page.classList.add('right-panel-open');
-        window.currentRightTab = tabId;
     }
-};
+  };
 
-window.switchRightPanel = function(scene, tabId) {
+  window.switchRightPanel = function(scene, tabId) {
     window.changeTabRight(scene, tabId);
-    window.currentRightTab = tabId;
     document.querySelectorAll('#right-panel-nav .tab_button').forEach(function(btn) {
-        btn.classList.remove('active');
+        btn.classList.remove('active');  
     });
     document.getElementById(tabId).classList.add('active');
-};
+  };
 
 
   /*
