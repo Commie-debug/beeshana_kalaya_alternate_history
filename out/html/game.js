@@ -705,6 +705,10 @@
 
   window.onload = function() {
     window.dendryUI.loadSettings({show_portraits: false});
+    window.statusTab = "status";
+    window.statusTabRight = "status_right";
+    window.updateSidebar();
+    window.updateSidebarRight();
     if (window.dendryUI.dark_mode) {
         document.body.classList.add('dark-mode');
     }
