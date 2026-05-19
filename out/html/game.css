@@ -395,7 +395,7 @@ img.inline-img.icon {
     outline: none;
     padding: 2px 4px;
     cursor: pointer;
-    font-size: 0.6em;
+    font-size: 1em;
     white-space: nowrap;
     letter-spacing: 0.03em;
     display: block;
