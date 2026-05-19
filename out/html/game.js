@@ -612,17 +612,17 @@
     var scene = dendryUI.game.scenes[window.statusTab];
     dendryUI.dendryEngine._runActions(scene.onArrival);
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
-    $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
-    $('#qualities').html(window.displayText($('#qualities').html()));
+    var html = dendryUI.contentToHTML.convert(displayContent);
+    $('#qualities').html(window.displayText(html));
   };
 
-  window.updateSidebarRight = function() {
+window.updateSidebarRight = function() {
     $('#qualities_right').empty();
     var scene = dendryUI.game.scenes[window.statusTabRight];
     dendryUI.dendryEngine._runActions(scene.onArrival);
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
-    $('#qualities_right').append(window.displayText(dendryUI.contentToHTML.convert(displayContent)));
-    $('#qualities_right').html(window.displayText($('#qualities_right').html()));
+    var html = dendryUI.contentToHTML.convert(displayContent);
+    $('#qualities_right').html(window.displayText(html));
   };
 
   window.changeTab = function(newTab, tabId) {
