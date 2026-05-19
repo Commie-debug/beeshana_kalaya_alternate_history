@@ -608,11 +608,12 @@
 
   // TODO: have some code for tabbed sidebar browsing.
   window.updateSidebar = function() {
-      $('#qualities').empty();
-      var scene = dendryUI.game.scenes[window.statusTab];
-      dendryUI.dendryEngine._runActions(scene.onArrival);
-      var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
-      $('#qualities').append(window.displayText(dendryUI.contentToHTML.convert(displayContent)));
+    $('#qualities').empty();
+    var scene = dendryUI.game.scenes[window.statusTab];
+    dendryUI.dendryEngine._runActions(scene.onArrival);
+    var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+    $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
+    $('#qualities').html(window.displayText($('#qualities').html()));
   };
 
   window.updateSidebarRight = function() {
@@ -621,6 +622,7 @@
     dendryUI.dendryEngine._runActions(scene.onArrival);
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
     $('#qualities_right').append(window.displayText(dendryUI.contentToHTML.convert(displayContent)));
+    $('#qualities_right').html(window.displayText($('#qualities_right').html()));
   };
 
   window.changeTab = function(newTab, tabId) {
