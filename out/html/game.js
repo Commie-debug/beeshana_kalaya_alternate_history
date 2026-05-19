@@ -638,18 +638,18 @@
       window.updateSidebar();
   };
 
-  window.changeTabRight = function(newTab, tabId) {
-    var tabButton = document.getElementById(tabId);
-    var tabButtons = document.getElementsByClassName('tab_button');
-    
-    var rightSidebar = document.getElementById('stats_sidebar_right');
-    var rightTabButtons = rightSidebar.getElementsByClassName('tab_button');
-    for (i = 0; i < rightTabButtons.length; i++) {
-        rightTabButtons[i].className = rightTabButtons[i].className.replace(' active', '');
-    }
-    tabButton.className += ' active';
-    window.statusTabRight = newTab;
-    window.updateSidebarRight();
+  window.currentRightTab = null;
+
+  window.toggleRightPanel = function(scene, tabId) {
+      var page = document.getElementById('page');
+      if (window.currentRightTab === tabId && page.classList.contains('right-panel-open')) {
+          page.classList.remove('right-panel-open');
+          window.currentRightTab = null;
+      } else {
+          window.changeTabRight(scene, tabId);
+          page.classList.add('right-panel-open');
+          window.currentRightTab = tabId;
+      }
   };
   
   window.onDisplayContent = function() {
