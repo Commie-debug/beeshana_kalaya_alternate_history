@@ -846,7 +846,7 @@ img {
     padding: 6px 0;
     background-color: var(--content-bg-color);
     box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-    z-index: 51;
+    z-index: 50;
 }
 
 #right-panel-tab-strip .tab_button {
@@ -859,11 +859,11 @@ img {
     display: none;
     width: 320px;
     height: 100%;
+    z-index: 49;
     background-color: var(--content-bg-color);
     overflow-y: auto;
     padding: 0.6em;
     box-shadow: -4px 0 16px rgba(0,0,0,0.4);
-    z-index: 50;
 }
 
 #page.right-panel-open #right-panel-body {
@@ -879,7 +879,30 @@ img {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.6);
-    z-index: 49;
+    z-index: 48;
+}
+
+#right-panel-tab-strip {
+    width: 18px;
+    cursor: pointer;
+    background-color: var(--tab-color);
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    z-index: 51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    font-size: 0.7em;
+    color: var(--text-color);
+    letter-spacing: 0.1em;
+}
+
+#right-panel-nav {
+    display: flex;
+    gap: 4px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--card-border-color);
+    margin-bottom: 6px;
 }
 
 /* colored box div */
