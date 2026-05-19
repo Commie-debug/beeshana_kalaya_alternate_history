@@ -702,10 +702,8 @@ window.updateSidebarRight = function() {
     window.updateSidebarRight();
   };
 
-  window.statusTab = "status";
-  window.statusTabRight = "status_right";
-  window.updateSidebar();
-  window.updateSidebarRight();
+ window.statusTab = "status";
+ window.statusTabRight = "status_right";
   window.justLoaded = true;
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
