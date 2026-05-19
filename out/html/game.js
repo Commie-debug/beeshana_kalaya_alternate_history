@@ -1215,6 +1215,17 @@ document.addEventListener('mousemove', e => {
     });
 });
 
+document.addEventListener('mouseover', e => {
+    const tooltip = e.target.closest('.mytooltip');
+    if (tooltip) {
+        const text = tooltip.querySelector('.mytooltiptext');
+        if (text) {
+            text.style.setProperty('--mouse-x', e.clientX + 'px');
+            text.style.setProperty('--mouse-y', e.clientY + 'px');
+        }
+    }
+});
+
 window.addEventListener('dendryload', function() {
     window.updateMusicBtn();
 });
