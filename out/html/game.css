@@ -406,6 +406,26 @@ img.inline-img.icon {
     background-color: var(--tab-hover-color);
 }
 
+.tools.left .tab_container.right-tabs {
+    left: auto;
+    right: -1px;
+    transform: translateX(100%);
+    align-items: flex-start;
+}
+
+.tools.left .tab_container.right-tabs .tab_button {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 3px 2px 5px rgba(0,0,0,0.25);
+    margin-left: 0;
+    text-align: left;
+}
+
+.tools.left .tab_container.right-tabs .tab_button.active {
+    margin-left: 0;
+    box-shadow: 4px 2px 8px rgba(0,0,0,0.3);
+}
 
 /* status buttons from scheimarnomics */
 .tab_button_wide {width: 100%;}
