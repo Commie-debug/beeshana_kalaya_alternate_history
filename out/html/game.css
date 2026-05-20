@@ -773,11 +773,11 @@ img {
       padding: 1em 1em 1.5em 1em;
   }
   #qualities {
-      font-size: 1em;
+      font-size: 0.8em;
   }
   #qualities_right {
-    font-size: 0.7em;
-    line-height: 1.2em;
+    font-size: 0.5em;
+    line-height: 0.8em;
 }
   #tools_wrapper {
     position: static;
