@@ -856,9 +856,10 @@ img {
 }
 
 #right-panel-body {
-    width: 320px;
+    width: -0.5px;
     height: 100%;
     z-index: 49;
+    overflow: hidden;
     background-color: var(--content-bg-color);
     overflow-y: auto;
     padding: 0.6em;
