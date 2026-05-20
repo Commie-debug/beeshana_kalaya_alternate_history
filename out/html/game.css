@@ -856,7 +856,9 @@ img {
 }
 
 #right-panel-body {
-    width: -0.5px;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
     height: 100%;
     z-index: 49;
     overflow: hidden;
