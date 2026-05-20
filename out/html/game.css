@@ -224,7 +224,7 @@ img.inline-img.icon {
 #page {
   margin: 0 auto;
   position: relative;
-  padding: 0 5rem;
+  padding: 0 2rem;
 }
 
 #tools_wrapper {
@@ -245,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: -3.25em;
+  left: -1em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
