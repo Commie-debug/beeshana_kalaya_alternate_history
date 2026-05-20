@@ -4,6 +4,14 @@ is-special: true
 
 = [+ district_name +] District
 
+Working class: [+ district_worker +]
+
+Middle class: [+ district_middle +]
+
+Upper class: [+ district_upper +]
+
+Rural: [+ district_rural +]
+
 Sinhalese: [+ district_sinhala +]
 
 Sri Lankan Tamil: [+ district_sltamil +]
@@ -13,14 +21,6 @@ Indian Tamil: [+ district_itamil +]
 Muslims: [+ district_muslim +]
 
 Others: [+ district_others +]
-
-Working class: [+ district_worker +]
-
-Middle class: [+ district_middle +]
-
-Upper class: [+ district_upper +]
-
-Rural: [+ district_rural +]
 
 Control: [+ district_control : control +]
 
