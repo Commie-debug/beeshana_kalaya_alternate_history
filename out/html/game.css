@@ -862,7 +862,7 @@ img {
     height: 100%;
     z-index: 49;
     overflow: hidden;
-    background-color: var(--content-bg-color);
+    background-color: #843b1c;
     overflow-y: auto;
     padding: 0em;
     box-shadow: -4px 0 16px rgba(0,0,0,0.4);
