@@ -218,25 +218,22 @@ img.inline-img.icon {
 /* This is mostly copied from undum. */
 #mid_panel {
   margin-left: 130px;
-  flex: 0 0 auto;
   width: 700px;
-  flex: 0 0 auto;
 }
 
 #page {
+  margin: 0 auto;
   position: relative;
-  display: flex;
-  justify-content: center;
+  padding: 0 5rem;
 }
 
 #tools_wrapper {
   position: absolute;
   width: 100%;
   max-width: 69em;
-  position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  margin: 0 auto;
 }
 .tools {
   width: 24rem;
@@ -248,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: 1em;
+  left: -3.25em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
@@ -768,10 +765,8 @@ img {
  * and reduce font size slightly. */
 @media screen and (max-width: 560px) {
   #page {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
+      position: static;
+  }
   #content {
       position: static;
       font-size: 1em;
