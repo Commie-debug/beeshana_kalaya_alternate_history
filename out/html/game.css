@@ -245,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: -0.25em;
+  left: 0.25em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
@@ -304,8 +304,8 @@ img.inline-img.icon {
 }
 #qualities_right {
   text-indent: 0;
-  font-size: 0.7;
-  line-height: 1em;
+  font-size: 0.5;
+  line-height: 0.7em;
 }
 #qualities_right p {
   text-indent: 0;
