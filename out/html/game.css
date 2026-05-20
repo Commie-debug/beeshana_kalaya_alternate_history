@@ -844,9 +844,17 @@ img {
     flex-direction: column;
     gap: 3px;
     padding: 6px 0;
-    background-color: #843b1c;
+    color: #bd6624;
+    background-color: var(--content-bg-color);
     box-shadow: -2px 0 8px rgba(0,0,0,0.2);
     z-index: 50;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #right-panel-tab-strip .tab_button {
