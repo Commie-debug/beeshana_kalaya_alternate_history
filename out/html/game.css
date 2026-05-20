@@ -304,7 +304,8 @@ img.inline-img.icon {
 }
 #qualities_right {
   text-indent: 0;
-  line-height: 1.3em;
+  font-size: 0.7;
+  line-height: 1em;
 }
 #qualities_right p {
   text-indent: 0;
