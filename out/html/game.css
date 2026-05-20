@@ -856,7 +856,7 @@ img {
 }
 
 #right-panel-body {
-    width: 0px;
+    width: 320px;
     height: 100%;
     z-index: 49;
     background-color: var(--content-bg-color);
