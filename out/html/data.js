@@ -214,7 +214,7 @@ const tooltipList = [{
     },
     {
     searchString: "Sri Lanka",
-    explanationText: "<img src=img/logos/Sri_Lanka.png> Democratic Socialist Republic of Sri Lanka"
+    explanationText: "<img src=img/logos/Sri_Lanka.png> Democratic Socialist Republic of Sri Lanka <br> **Our nation**"
     },
     {
     searchString: "Buddhism",
