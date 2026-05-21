@@ -213,6 +213,10 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/SLAF_Logo.png> Sri Lanka Armed Forces"
     },
     {
+    searchString: "Sri Lanka",
+    explanationText: "<img src=img/logos/Sri_Lanka.png> Democratic Socialist Republic of Sri Lanka"
+    },
+    {
     searchString: "Buddhism",
     explanationText: "<img src=img/Temple_Of_The_Tooth.jpg> Sri Dalada Maligawa(Temple of the Tooth Relic), Kandy"
     },
