@@ -703,22 +703,22 @@ window.updateSidebarRight = function() {
     window.updateSidebar();
     window.updateSidebarRight();
     
-    var currentScene = window.dendryUI.dendryEngine.state.sceneId;
-    var isCardScene = !deckScenes.some(function(s) { return currentScene.startsWith(s); });
-    var hasChoices = document.querySelector('#content ul.choices') !== null;
-    var page = document.getElementById('page');
-
-    if (isCardScene && hasChoices) {
-        // Move choices and event text into drawer
+    setTimeout(function() {
+        var currentScene = window.dendryUI.dendryEngine.state.sceneId;
+        var isCardScene = !deckScenes.some(function(s) { return currentScene.startsWith(s); });
+        var hasChoices = document.querySelector('#content ul.choices') !== null;
+        var drawer = document.getElementById('bottom-drawer');
         var drawerContent = document.getElementById('bottom-drawer-content');
-        drawerContent.innerHTML = document.getElementById('content').innerHTML;
-        page.classList.add('drawer-open');
-    } else {
-        // Back to deck view — close drawer
-        document.getElementById('bottom-drawer-content').innerHTML = '';
-        page.classList.remove('drawer-open');
-    }
-  };
+
+        if (isCardScene && hasChoices) {
+            drawerContent.innerHTML = document.getElementById('content').innerHTML;
+            drawer.classList.add('drawer-open');
+        } else {
+            drawerContent.innerHTML = '';
+            drawer.classList.remove('drawer-open');
+        }
+    }, 50);
+ };
 
  window.statusTab = "status";
  window.statusTabRight = "status_right";
