@@ -58,11 +58,18 @@ header, #content, footer {
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
 }
 #content.drawer-open {
-    transform: translateY(-200px);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    max-height: 50vh;
+    overflow-y: auto;
+    z-index: 40;
     box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+    background-color: var(--content-bg-color);
 }
 footer {
   margin-top: 1em;
