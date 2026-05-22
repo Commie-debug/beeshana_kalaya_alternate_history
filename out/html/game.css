@@ -940,6 +940,33 @@ img {
     transition: width 0.3s ease;
 }
 
+/* Bottom drawer */
+#bottom-drawer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: var(--content-bg-color);
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+    transition: height 0.3s ease;
+    z-index: 40;
+}
+
+#page.drawer-open #bottom-drawer {
+    height: 50vh;
+}
+
+#bottom-drawer-content {
+    padding: 1em 1.5em;
+    overflow-y: auto;
+    height: 100%;
+    font-family: "Minion Pro", Georgia, serif;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
 /* colored box div */
 .box {
   display: inline-block;

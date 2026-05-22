@@ -697,9 +697,27 @@ window.updateSidebarRight = function() {
       return bar;
   };
 
+  var deckScenes = ['main', 'root', 'start_menu', 'backSpecialScene', 'skip_intro', 'post_event', 'status', 'status_right', 'library'];
+
   window.onDisplayContent = function() {
     window.updateSidebar();
     window.updateSidebarRight();
+    
+    var currentScene = window.dendryUI.dendryEngine.state.sceneId;
+    var isCardScene = !deckScenes.some(function(s) { return currentScene.startsWith(s); });
+    var hasChoices = document.querySelector('#content ul.choices') !== null;
+    var page = document.getElementById('page');
+
+    if (isCardScene && hasChoices) {
+        // Move choices and event text into drawer
+        var drawerContent = document.getElementById('bottom-drawer-content');
+        drawerContent.innerHTML = document.getElementById('content').innerHTML;
+        page.classList.add('drawer-open');
+    } else {
+        // Back to deck view — close drawer
+        document.getElementById('bottom-drawer-content').innerHTML = '';
+        page.classList.remove('drawer-open');
+    }
   };
 
  window.statusTab = "status";
