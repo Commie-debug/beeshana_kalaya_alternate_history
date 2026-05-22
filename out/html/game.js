@@ -697,6 +697,8 @@ window.updateSidebarRight = function() {
       return bar;
   };
 
+  var deckScenes = ['main', 'root', 'start_menu', 'backSpecialScene', 'skip_intro', 'post_event', 'return', 'cancel_advisor_action'];
+
   window.onDisplayContent = function() {
     window.updateSidebar();
     window.updateSidebarRight();
