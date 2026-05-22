@@ -697,8 +697,6 @@ window.updateSidebarRight = function() {
       return bar;
   };
 
-  var deckScenes = ['main', 'root', 'start_menu', 'backSpecialScene', 'skip_intro', 'post_event', 'status', 'status_right', 'library'];
-
   window.onDisplayContent = function() {
     window.updateSidebar();
     window.updateSidebarRight();
@@ -707,18 +705,15 @@ window.updateSidebarRight = function() {
         var currentScene = window.dendryUI.dendryEngine.state.sceneId;
         var isCardScene = !deckScenes.some(function(s) { return currentScene.startsWith(s); });
         var hasChoices = document.querySelector('#content ul.choices') !== null;
-        var drawer = document.getElementById('bottom-drawer');
-        var drawerContent = document.getElementById('bottom-drawer-content');
+        var content = document.getElementById('content');
 
         if (isCardScene && hasChoices) {
-            drawerContent.innerHTML = document.getElementById('content').innerHTML;
-            drawer.classList.add('drawer-open');
+            content.classList.add('drawer-open');
         } else {
-            drawerContent.innerHTML = '';
-            drawer.classList.remove('drawer-open');
+            content.classList.remove('drawer-open');
         }
     }, 50);
- };
+};
 
  window.statusTab = "status";
  window.statusTabRight = "status_right";
