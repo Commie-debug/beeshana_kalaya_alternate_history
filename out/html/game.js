@@ -706,16 +706,23 @@ window.updateSidebarRight = function() {
     setTimeout(function() {
         var currentScene = window.dendryUI.dendryEngine.state.sceneId;
         var isCardScene = !deckScenes.some(function(s) { return currentScene.startsWith(s); });
-        var hasChoices = document.querySelector('#content ul.choices') !== null;
         var content = document.getElementById('content');
+        var drawer = document.getElementById('event-drawer');
+        var hasChoices = content.querySelector('ul.choices') !== null;
 
         if (isCardScene && hasChoices) {
-            content.classList.add('drawer-open');
+            // Move content into drawer using jQuery to keep event listeners
+            $(drawer).empty();
+            $(content).children().each(function() {
+                $(drawer).append($(this).clone(true));
+            });
+            drawer.classList.add('drawer-open');
         } else {
-            content.classList.remove('drawer-open');
+            drawer.classList.remove('drawer-open');
+            setTimeout(function() { $(drawer).empty(); }, 300);
         }
     }, 50);
-};
+  };
 
  window.statusTab = "status";
  window.statusTabRight = "status_right";
