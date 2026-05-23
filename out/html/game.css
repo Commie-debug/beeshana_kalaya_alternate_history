@@ -53,25 +53,11 @@ header, #content, footer {
   overflow: auto;
 }
 #content {
-  position: relative;
+  position: absolute;
   background-color: var(--content-bg-color);
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-}
-#event-drawer {
-    position: relative;
-    background-color: var(--content-bg-color);
-    font-size: 1.1em;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
-}
-#event-drawer.drawer-open {
-    max-height: 400px;
-    padding: 1em 1.5em 1.5em 1.5em;
-    overflow-y: auto;
 }
 footer {
   margin-top: 1em;

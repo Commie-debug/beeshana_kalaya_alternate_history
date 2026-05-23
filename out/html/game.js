@@ -697,28 +697,9 @@ window.updateSidebarRight = function() {
       return bar;
   };
 
-  var deckScenes = ['main', 'root', 'start_menu', 'backSpecialScene', 'skip_intro', 'post_event', 'return', 'cancel_advisor_action'];
-
   window.onDisplayContent = function() {
     window.updateSidebar();
     window.updateSidebarRight();
-    
-    setTimeout(function() {
-        var currentScene = window.dendryUI.dendryEngine.state.sceneId;
-        var isCardScene = !deckScenes.some(function(s) { return currentScene.startsWith(s); });
-        var content = document.getElementById('content');
-        var drawer = document.getElementById('event-drawer');
-        var hasChoices = content.querySelector('ul.choices') !== null;
-
-        if (isCardScene && hasChoices) {
-            drawer.innerHTML = content.innerHTML;
-            content.innerHTML = '';
-            drawer.classList.add('drawer-open');
-        } else {
-            drawer.classList.remove('drawer-open');
-            setTimeout(function() { drawer.innerHTML = ''; }, 300);
-        }
-    }, 50);
   };
 
  window.statusTab = "status";
