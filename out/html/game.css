@@ -60,22 +60,16 @@ header, #content, footer {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 #event-drawer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0;
-    overflow: hidden;
+    position: relative;
     background-color: var(--content-bg-color);
-    box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
-    transition: height 0.3s ease;
-    z-index: 40;
     font-size: 1.1em;
-    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
 }
-
 #event-drawer.drawer-open {
-    height: 55%;
+    max-height: 400px;
     padding: 1em 1.5em 1.5em 1.5em;
     overflow-y: auto;
 }

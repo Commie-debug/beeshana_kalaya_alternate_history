@@ -711,15 +711,12 @@ window.updateSidebarRight = function() {
         var hasChoices = content.querySelector('ul.choices') !== null;
 
         if (isCardScene && hasChoices) {
-            // Move content into drawer using jQuery to keep event listeners
-            $(drawer).empty();
-            $(content).children().each(function() {
-                $(drawer).append($(this).clone(true));
-            });
+            drawer.innerHTML = content.innerHTML;
+            content.innerHTML = '';
             drawer.classList.add('drawer-open');
         } else {
             drawer.classList.remove('drawer-open');
-            setTimeout(function() { $(drawer).empty(); }, 300);
+            setTimeout(function() { drawer.innerHTML = ''; }, 300);
         }
     }, 50);
   };
