@@ -217,7 +217,7 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin-left: 600px;
+  margin-left: 28rem;
   max-width: 700px;
 }
 
@@ -230,7 +230,7 @@ img.inline-img.icon {
 #tools_wrapper {
   position: absolute;
   width: 100%;
-  max-width: 69em;
+  max-width: 120em;
   left: 0;
   right: 0;
   margin: 0 auto;
