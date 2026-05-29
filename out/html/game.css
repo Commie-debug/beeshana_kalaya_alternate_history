@@ -245,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: -0.6em;
+  left: -0.2em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
