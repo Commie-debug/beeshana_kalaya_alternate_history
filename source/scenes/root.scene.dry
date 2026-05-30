@@ -730,10 +730,9 @@ Q.pakistan_relation = 60;
 Q.japan_relation = 70;
 Q.ussr_relation = 30;
 
-//South Asian Association for Regional Cooperation, formed in 8th December 1985 
+//South Asian Association for Regional Cooperation, formed in December 1985 
 Q.saarc_formed = 0;
-
-//SAFTA (SAARC free trade agreement
+//SAFTA (SAARC free trade agreement)
 Q.safta_signed = 0;
 
 //india
