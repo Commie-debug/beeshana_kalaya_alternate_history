@@ -17,18 +17,9 @@ The SLFP has the potential to cooperate with both parties and nations around the
 - @usa: The United States is greatly interested in Sri Lanka and the UNP's direction for it, reducing any kinks between us may offer us greater support from the IMF as well for the military.
 - @ussr: The USSR has historically seen the SLFP as more ideologically favourable ally than the UNP, though recent troubles in the bloc are worrying.
 - @china: The Chinese are rather keen on expanding economic cooperation under their new leader, regardless of who is in charge. This may be profitable.
-- @internation: The Socialist Internationale allows us to connect with other likeminded socialist and social democratic parties, esspecially in the west such as Labour in the UK and the socialists of France.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
-
-@internation
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; 
-
-The Socialist Internationale parties offer us their support in the diplomatic and material fields, we can begin to rely on them when in need.
 
 @china
 subtitle: -1 resources
