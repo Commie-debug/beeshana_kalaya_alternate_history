@@ -35,7 +35,7 @@ The SLFP can take advantage of growing TV and radio ownership across the island.
 
 @loud_speaker_cars
 title: Why not be as loud as possible?. Strap some loudpeakers onto a jeep and let it drive through a neighbourhood while blasting our message. 
-subtitle: -4 resources
+subtitle: -4 resources, effective on middle and working class. Richer folk ditest it however.
 choose-if: resources >= 4
 unavailable-subtitle: Not enough resources. 
 view-if: loud_speaker_cars = 0
@@ -43,22 +43,19 @@ on-arrival: loud_speaker_cars += 1; resources -= 4; workers_slfp += 2; middle_sl
 
 The jeeps certainly made our message well heard by bystanders and residents, though some more affluent residents have complained about the noise, can't blame them.
 
-//very effective for middle and working class but is hated by upper class
 
 @grafitti
 title: The sidewalks, bus stations and alleys are dotted by grafitti and other petty vandalism. Most are a-political and crude, while others are explicitly political.
-subtitle: -1 resources
+subtitle: -1 resources, effective on rural and working class.
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources. 
 on-arrival: grafitti += 1; resources -= 1; workers_slfp += 0.75; rural_slfp += 0.75;
 
 The "vandalism" makes our symbol and message more prevalent esspecially in the slums and villages. 
 
-//will be only minor effective on rural and working class
-
 @theatre
 title: In rural areas of Sri Lanka, theatre, plays and musicals are an important part of community and a form of entertainment, perhaps we can organise our own events?
-subtitle: -4 resources
+subtitle: -4 resources, very effective on rural class.
 choose-if: resources >= 4
 unavailable-subtitle: Not enough resources. 
 view-if: theatre = 0
@@ -66,11 +63,9 @@ on-arrival: theatre += 1; resources -= 4; rural_slfp += 3; workers_slfp += 1.5;
 
 The songs, acting and general performance gather modest crowds, but they seem enthusiastic at the entertainment provided.
 
-//will be effective on the rural class,
-
 @post_cards
 title: A rather novel idea has been brought to our attention. Post cards, fantasy money, flags and other "collectables" presenting party leaders and symbols.
-subtitle: -2 resources
+subtitle: -2 resources, very effective on middle class.
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources. 
 view-if: post_cards = 0
@@ -78,11 +73,9 @@ on-arrival: post_cards += 1; resources -= 2; middle_slfp += 2.5;
 
 While many question the efficacy of this strategy in spreading our message, loyal party followers are collecting in droves and our coming to rallies clad in blue, waving the party standard.
 
-//will be effective on middle class
-
 @posters
 title: Our posters, leaflets and flyers are outdated and need refinment for a changing electorate and their demands.
-subtitle: -2 resources
+subtitle: -2 resources, effective on all classes.
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources. 
 view-if: poster = 0
@@ -90,19 +83,15 @@ on-arrival: poster += 2; resources -= 1; middle_slfp += 1.5; workers_slfp +=1.5;
 
 Our party members have unveiled a new "series" of posters with chatchy slogans and innovative art styles. This will surely make our party more presentable.
 
-//will be broadly effective
-
 @television
 title: With greater TV ownership among Sri Lankans, moving into the medium can be benefical in spreading our message directly in the form of ads or programs.
-subtitle: -3 resources
+subtitle: -3 resources, effective on working, upper and middle class.
 choose-if: resources >= 3 and private_tv = 1
 unavailable-subtitle: The government maintains a monopoly on television. Not enough resources. 
 view-if: tv_ad = 0
 on-arrival: tv_ad += 1; resources -= 3; middle_slfp += 2; workers_slfp += 2.5; rural_slfp += 0.75; upper_slfp += 2.5;
 
 Our adoption of the TV for political messaging is rather unprecedented in Sri Lanka and already other parties are starting to adopt the medium as well, time will tell if it will be effective.
-
-//will be more effective for working class people and middle class people
 
 @television_2
 title: To keep up with the quality of private and public TV, we need to continue funding our operations.
