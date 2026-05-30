@@ -4,23 +4,23 @@ is-special: true
 
 = [+ district_name +] District
 
-Working class: [+ district_worker +]
+Working class: [+ district_worker +]%
 
-Middle class: [+ district_middle +]
+Middle class: [+ district_middle +]%
 
-Upper class: [+ district_upper +]
+Upper class: [+ district_upper +]%
 
-Rural: [+ district_rural +]
+Rural: [+ district_rural +]%
 
-Sinhalese: [+ district_sinhala +]
+Sinhalese: [+ district_sinhala +]%
 
-Sri Lankan Tamil: [+ district_sltamil +]
+Sri Lankan Tamil: [+ district_sltamil +]%
 
-Indian Tamil: [+ district_itamil +]
+Indian Tamil: [+ district_itamil +]%
 
-Muslims: [+ district_muslim +]
+Muslims: [+ district_muslim +]%
 
-Others: [+ district_others +]
+Others: [+ district_others +]%
 
 Control: [+ district_control : control +]
 
