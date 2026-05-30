@@ -46,9 +46,8 @@ Muslims appreciate our concern for their often ignored communities. [? if unp_in
 @sinhalanationalism
 title: The Tamil threat is a great risk for Sinhalese people, there should be no mercy for traitors to the motherland.
 subtitle: -3 resources
-choose-if: resources >= 3
+choose-if: resources >= 3 and nationalist_strength > 60
 unavailable-subtitle: Not enough resources. The Left will not allow this.
-view-if: nationalist_strength > 60
 on-arrival: resources -= 3; sinhala_slfp += 5; sinhala_nationalism += 4.25; tamil_nationalism += 6; nationalist_strength += 4; left_strength -= 3.8;
 
 This rhetoric harkens back to our old rhetoric decades ago, it still captures the populace but as expected, Tamils are repulsed. 
@@ -56,9 +55,8 @@ This rhetoric harkens back to our old rhetoric decades ago, it still captures th
 @mendties
 title: Perhaps we should attempt to mend the ties between Sinhalese and Sri Lankan Tamil. The violence between us has gone too far, **the buck stops here**.
 subtitle: -5 resources
-choose-if: resources >= 5
+choose-if: resources >= 5 nationalist_strength < 30 and split_maitripala_victory != 3
 unavailable-subtitle: Not enough resources. The Nationalists are too strong.
-view-if: nationalist_strength < 30 and split_maitripala_victory != 3
 on-arrival: resources -= 5; muslim_slfp += 3.5; sinhala_slfp += 3; sltamil_slfp += 5; left_strength += 4; nationalist_dissent += 4; nationalist_strength -= 4; sinhala_nationalism -= 6.5; tamil_nationalism -= 6.5;
 
 Even party stalwarts like Mrs Bandaranaike are not convinced this is needed, the Nationalists are in uproar but a greater number of Muslims and Sri Lankan Tamils are being swayed towards us. At the very least we are better than the UNP for them.
