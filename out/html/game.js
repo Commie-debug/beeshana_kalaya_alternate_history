@@ -288,22 +288,22 @@
 
         if (searchString === 'Sinhalese' && Q.sinhala_proportion !== undefined) {
             var proptext = Q.sinhala_proportion;
-            return baseTooltip.explanationText + '<br>' + proptext + 'of the population';
+            return baseTooltip.explanationText + '<br>' + proptext + '% of the population';
         }
 
         if (searchString === 'Sri Lankan Tamil' && Q.sltamil_proportion !== undefined) {
             var proptext = Q.sltamil_proportion;
-            return baseTooltip.explanationText + '<br>' + proptext + 'of the population';
+            return baseTooltip.explanationText + '<br>' + proptext + '% of the population';
         }
 
         if (searchString === 'Indian Tamil' && Q.itamil_proportion !== undefined) {
             var proptext = Q.itamil_proportion;
-            return baseTooltip.explanationText + '<br>' + proptext + 'of the population';
+            return baseTooltip.explanationText + '<br>' + proptext + '% of the population';
         }
 
         if (searchString === 'Muslims' && Q.muslim_proportion !== undefined) {
             var proptext = Q.muslim_proportion;
-            return baseTooltip.explanationText + '<br>' + proptext + 'of the population';
+            return baseTooltip.explanationText + '<br>' + proptext + '% of the population';
         }
         
         if (searchString === 'SLPP' && Q.slpp_relation !== undefined) {
