@@ -47,7 +47,7 @@ subtitle: -3 resources
 choose-if: resources >= 3
 unavailable-subtitle: Not enough resources. 
 on-arrival:{! resources -= 3; muslim_slfp += 3.7; 
-if (Q.unp_in_government = 1){Q.current_gov == 'SLFP'};
+if (Q.unp_in_government == 1){Q.current_gov = 'SLFP'};
 !}
 
 Muslims appreciate our concern for their often ignored communities. [? if unp_in_government = 1 : This has also siphoned a few of them away from the incumbent UNP who they see as neglecting their concerns. ?]
