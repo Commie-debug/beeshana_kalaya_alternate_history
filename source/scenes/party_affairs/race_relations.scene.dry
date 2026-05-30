@@ -11,8 +11,10 @@ card-image: img/racial_relations.jpg
 
 WIP CARD, A ETHNIC COUNTERPART TO Media
 
-Sri Lanka is a racially diverse nation. Any campaigning will have to 
+Sri Lanka is a racially diverse nation, and arguably since even our formation in the 50s, ethnic identity and intrests have played a large role in politics. That still hasnt changed.
 
+- @toughertamilline
+- @muslimsecurity
 - @commercial
 - @campaign
 - @ideological
@@ -25,35 +27,31 @@ Sri Lanka is a racially diverse nation. Any campaigning will have to
 - @posters
 - @post_cards
 - @theatre
-- @grafitti
-- @loud_speaker_cars
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 - @cancel_advisor_action
 
 
-@loud_speaker_cars
-title: Why not be as loud as possible?. Strap some loudpeakers onto a jeep and let it drive through a neighbourhood while blasting our message. 
-subtitle: -4 resources
-choose-if: resources >= 4
+@toughertamilline
+title: The militant and terrorist elements among Tamils are severe threat to Sri Lankan stability. We should argue for tougher action against them.
+subtitle: -3 resources
+choose-if: resources >= 3
 unavailable-subtitle: Not enough resources. 
-view-if: loud_speaker_cars = 0
-on-arrival: loud_speaker_cars += 1; resources -= 4; workers_slfp += 2; middle_slfp +=2; upper_slfp -= 0.5; 
+on-arrival: resources -= 3; sinhala_slfp += 4; sltamil_slfp -= 2; muslim_slfp += 2.5; sinhala_nationalism += 2.25; tamil_nationalism += 3;
 
-The jeeps certainly made our message well heard by bystanders and residents, though some more affluent residents have complained about the noise, can't blame them.
+Sinhalese and Muslims take the message well, Tamils however are antagonised by the messaging.
 
-//very effective for middle and working class but is hated by upper class
-
-@grafitti
-title: The sidewalks, bus stations and alleys are dotted by grafitti and other petty vandalism. Most are a-political and crude, while others are explicitly political.
-subtitle: -1 resources
-choose-if: resources >= 1
+@muslimsecurity
+title: Muslims particularily in the North-East have been in the crossfire between militants and police, the SLFP should campaign for greater security for Muslim communities.
+subtitle: -3 resources
+choose-if: resources >= 3
 unavailable-subtitle: Not enough resources. 
-on-arrival: grafitti += 1; resources -= 1; workers_slfp += 0.75; rural_slfp += 0.75;
+on-arrival: resources -= 3; muslim_slfp += 3.7; 
+{!
+if (Q.unp_in_government = 1){Q.muslim_unp -= 3}
+!}
 
-The "vandalism" makes our symbol and message more prevalent esspecially in the slums and villages. 
-
-//will be only minor effective on rural and working class
+Muslims appreciate our concern for their often ignored communities. [? if unp_in_government = 1 : This has also siphoned a few of them away from the incumbent UNP who they see as neglecting their concerns. ?]
 
 @theatre
 title: In rural areas of Sri Lanka, theatre, plays and musicals are an important part of community and a form of entertainment, perhaps we can organise our own events?
