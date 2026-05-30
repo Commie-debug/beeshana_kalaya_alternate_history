@@ -781,6 +781,8 @@ Nationalists Dissent
 
 = International News
 
+{!<img src="img/international_news.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+
 [? if year = 1981 and month = 1 and week = 1 : The Republic of Palau is declared in Micronesia. ?]
 
 [? if year = 1981 and month = 1 and week = 1 : Iranian forces have begun a counterattack on Iraqi forces near Dezful and Sousangerd attempting to push them out of Iran. ?]
