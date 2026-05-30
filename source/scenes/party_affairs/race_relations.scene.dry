@@ -15,6 +15,8 @@ Sri Lanka is a racially diverse nation, and arguably since even our formation in
 
 - @toughertamilline
 - @muslimsecurity
+- @sinhalanationalism
+- @mendties
 - @commercial
 - @campaign
 - @ideological
@@ -25,8 +27,6 @@ Sri Lanka is a racially diverse nation, and arguably since even our formation in
 - @television_2
 - @television_3
 - @posters
-- @post_cards
-- @theatre
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -46,31 +46,27 @@ title: Muslims particularily in the North-East have been in the crossfire betwee
 subtitle: -3 resources
 choose-if: resources >= 3
 unavailable-subtitle: Not enough resources. 
-on-arrival: resources -= 3; muslim_slfp += 3.7; 
-{!
-if (Q.unp_in_government = 1){Q.muslim_unp -= 3}
+on-arrival:{! resources -= 3; muslim_slfp += 3.7; 
+if (Q.unp_in_government = 1){Q.muslim_unp -= 3};
 !}
 
 Muslims appreciate our concern for their often ignored communities. [? if unp_in_government = 1 : This has also siphoned a few of them away from the incumbent UNP who they see as neglecting their concerns. ?]
 
-@theatre
-title: In rural areas of Sri Lanka, theatre, plays and musicals are an important part of community and a form of entertainment, perhaps we can organise our own events?
-subtitle: -4 resources
-choose-if: resources >= 4
-unavailable-subtitle: Not enough resources. 
-view-if: theatre = 0
-on-arrival: theatre += 1; resources -= 4; rural_slfp += 3; workers_slfp += 1.5;
+@sinhalanationalism
+title: The Tamil threat is a great risk for Sinhalese people, there should be no mercy for traitors to the motherland.
+subtitle: -3 resources
+choose-if: resources >= 3
+unavailable-subtitle: Not enough resources. The Left will not allow this.
+view-if: nationalist_strength > 60
+on-arrival: resources -= 3; sinhala_slfp += 5; sinhala_nationalism += 4.25; tamil_nationalism += 6;
 
-The songs, acting and general performance gather modest crowds, but they seem enthusiastic at the entertainment provided.
+This rhetoric harkens back to our old rhetoric decades ago, it still captures the populace but as expected, Tamils are repulsed. 
 
-//will be effective on the rural class,
-
-@post_cards
+@mendties
 title: A rather novel idea has been brought to our attention. Post cards, fantasy money, flags and other "collectables" presenting party leaders and symbols.
 subtitle: -2 resources
 choose-if: resources >= 2
-unavailable-subtitle: Not enough resources. 
-view-if: post_cards = 0
+unavailable-subtitle: Not enough resources.
 on-arrival: post_cards += 1; resources -= 2; middle_slfp += 2.5;
 
 While many question the efficacy of this strategy in spreading our message, loyal party followers are collecting in droves and our coming to rallies clad in blue, waving the party standard.
