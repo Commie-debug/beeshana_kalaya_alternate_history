@@ -9,7 +9,7 @@ card-image: img/racial_relations.jpg
 
 = Racial Relations
 
-WIP CARD, A ETHNIC COUNTERPART TO Media
+WIP CARD, A ETHNIC COUNTERPART TO Media, more option to be added soon
 
 Sri Lanka is a racially diverse nation, and arguably since even our formation in the 50s, ethnic identity and intrests have played a large role in politics. That still hasnt changed.
 
@@ -17,16 +17,7 @@ Sri Lanka is a racially diverse nation, and arguably since even our formation in
 - @muslimsecurity
 - @sinhalanationalism
 - @mendties
-- @commercial
-- @campaign
-- @ideological
-- @radio
-- @radio_2
-- @radio_3
-- @television
-- @television_2
-- @television_3
-- @posters
+- @indiantamilrights
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -47,7 +38,7 @@ subtitle: -3 resources
 choose-if: resources >= 3
 unavailable-subtitle: Not enough resources. 
 on-arrival:{! resources -= 3; muslim_slfp += 3.7; 
-if (Q.unp_in_government == 1){Q.current_gov = 'SLFP'};
+if (Q.unp_in_government == 1){Q.muslim_slfp -= 4};
 !}
 
 Muslims appreciate our concern for their often ignored communities. [? if unp_in_government = 1 : This has also siphoned a few of them away from the incumbent UNP who they see as neglecting their concerns. ?]
@@ -67,102 +58,16 @@ title: Perhaps we should attempt to mend the ties between Sinhalese and Sri Lank
 subtitle: -5 resources
 choose-if: resources >= 5
 unavailable-subtitle: Not enough resources. The Nationalists are too strong.
-view-if:  nationalist_strength < 30 and split_maitripala_victory != 3
+view-if: nationalist_strength < 30 and split_maitripala_victory != 3
 on-arrival: resources -= 5; muslim_slfp += 3.5; sinhala_slfp += 3; sltamil_slfp += 5; left_strength += 4; nationalist_dissent += 4; nationalist_strength -= 4; sinhala_nationalism -= 6.5; tamil_nationalism -= 6.5;
 
 Even party stalwarts like Mrs Bandaranaike are not convinced this is needed, the Nationalists are in uproar but a greater number of Muslims and Sri Lankan Tamils are being swayed towards us. At the very least we are better than the UNP for them.
 
-@posters
-title: Our posters, leaflets and flyers are outdated and need refinment for a changing electorate and their demands.
+@indiantamilrights
+title: The Indian Tamils have for too long had their greivances unaddressed by both Sinhalese and Tamil parties, the SLFP should be the ones to change that.
 subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources. 
-view-if: poster = 0
-on-arrival: poster += 2; resources -= 1; middle_slfp += 1.5; workers_slfp +=1.5; rural_slfp += 1.5; upper_slfp += 1.5;
+on-arrival: esources -= 1; itamil_slfp += 3; tamil_nationalism -= 2; itamil_cwc -= 1.25; cwc_relation -=5; itamil_unp -= 4;
 
-Our party members have unveiled a new "series" of posters with chatchy slogans and innovative art styles. This will surely make our party more presentable.
-
-//will be broadly effective
-
-@television
-title: With greater TV ownership among Sri Lankans, moving into the medium can be benefical in spreading our message directly in the form of ads or programs.
-subtitle: -3 resources
-choose-if: resources >= 3 and private_tv = 1
-unavailable-subtitle: The government maintains a monopoly on television. Not enough resources. 
-view-if: tv_ad = 0
-on-arrival: tv_ad += 1; resources -= 3; middle_slfp += 2; workers_slfp += 2.5; rural_slfp += 0.75; upper_slfp += 2.5;
-
-Our adoption of the TV for political messaging is rather unprecedented in Sri Lanka and already other parties are starting to adopt the medium as well, time will tell if it will be effective.
-
-//will be more effective for working class people and middle class people
-
-@television_2
-title: To keep up with the quality of private and public TV, we need to continue funding our operations.
-subtitle: -2 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-view-if: tv_ad > 0 and tv_ad <= 4
-on-arrival: radio += 1; resources -= 2; middle_slfp += 2.25; workers_slfp += 2.75; rural_slfp += 1.25; upper_slfp += 1.25; 
-
-Our ads, and programs are reaching nearlly everycorner of the country, our message is spreading far and wide.
-
-@television_3
-title: We should keep on supporting our TV operations.
-subtitle: Our operations are now running smoothly, if we regularily fund it we can continue to maintain and improve it. -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-view-if: tv_ad > 4 
-on-arrival: tv_ad += 1; resources -= 1; middle_slfp += 3; workers_slfp += 3.5; rural_slfp += 1.5; upper_slfp += 2; 
-
-We are continuing to invest in our TV operations.
-
-@commercial
-title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
-subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to socialist views.
-on-arrival: resources += 1; left_dissent += 10; nationalist_strength += 3;
-
-Our commercialized newspapers are able to bring in more funds. However, the Left express's their displeasure. The Nationalists are by contrast are mildly enthusiastic.
-
-@campaign
-title: The purpose of our media is to rally support for the SLFP.
-subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; middle_slfp += 0.75; workers_slfp += 0.75; rural_slfp += 0.75; upper_slfp += 0.75;
-
-Our campaign media makes the rounds but with it being such a broad sweep, the campaign is not as effective esspecially with how saturated the landscape has become.
-
-@ideological
-title: We will have vibrant ideological debate within our newspapers.
-subtitle: There will be space for the two sides to air their views.
-on-arrival: left_dissent -= 4; nationalist_dissent -= 4; middle_slfp -= 0.5; workers_slfp -= 0.5; rural_slfp -= 0.5; upper_slfp -= 0.5;
-
-With our internal feuding bleeding into our publications, the mood internally is somewhat improved, the public however are concerned about the lack of direction and instability.
-
-@radio
-title: Why not fund a radio station?
-subtitle: -2 resources
-choose-if: resources >= 2 and private_radio = 1
-unavailable-subtitle: The government maintains a monopoly on radio. Not enough resources. 
-view-if: radio = 0
-on-arrival: radio += 1; resources -= 2; middle_slfp += 0.75; workers_slfp += 0.75; rural_slfp += 0.75; upper_slfp += 0.75;
-
-Our new radio station allows us to connect to people in a more intimate setting than before, spreading our message along with music and other popular content. 
-
-@radio_2
-title: We must keep on building up our radio network.
-subtitle: -2 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-view-if: radio > 0 and radio <= 4
-on-arrival: radio += 1; resources -= 2; middle_slfp += 1.25; workers_slfp += 1.30; rural_slfp += 2.25; upper_slfp += 1.25; 
-
-Our new radio network has a mix of popular and political programming, and is proving a success.
-
-@radio_3
-title: We should keep on supporting our radio network.
-subtitle: The station is now running smoothly, if we regularily fund it we can continue to maintain and improve it. -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-view-if: radio > 4 
-on-arrival: radio += 1; resources -= 1; middle_slfp += 2; workers_slfp += 2.25; rural_slfp += 3.5; upper_slfp += 2; 
-
-We are continuing to invest in our radio station. 
+Some Indian Tamils have been moved to support us, but more importantly many are choosing to abandon the [? if unp_in_government = 1 : incumbent ?] UNP and their own CWC, the CWC in response has launched harsh attacks against us, deteriorating our relationship.
