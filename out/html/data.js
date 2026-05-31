@@ -270,7 +270,7 @@ const tooltipList = [{
     },
     {
     searchString: "Tamil",
-    explanationText: "<img src=img/logos/Sri_Lankan_Tamil_Logo.png> Tamil <br>தமிழர்"
+    explanationText: "<img src=img/logos/Sri_Lankan_Tamil_Logo.png> Sri Lankan Tamil <br> ஈழத் தமிழர் "
     },
     {
     searchString: "Muslims",
