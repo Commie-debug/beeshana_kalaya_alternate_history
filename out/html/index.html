@@ -19,12 +19,12 @@
   <body>
 
     <div id="music-controls">
-        <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1" 
-            oninput="window.AudioManager.setVolume('music', parseFloat(this.value))">
         <button id="music-toggle-btn" onclick="window.toggleMusicButton()" title="Toggle Music" aria-label="Toggle Music">
             <img id="music-on-icon" src="img/logos/Radio_On.png" width="50" height="40" alt="Music On"/>
             <img id="music-off-icon" src="img/logos/Radio_Off.png" width="50" height="40" alt="Music Off" style="display:none"/>
         </button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1" 
+            oninput="window.AudioManager.setVolume('music', parseFloat(this.value))">
     </div>
     
     <div class="background" id="bg2">

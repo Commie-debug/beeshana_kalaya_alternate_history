@@ -526,9 +526,17 @@ img.inline-img.icon {
     padding: 6px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 6px;
+}
+
+#volume-slider {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    height: 45px;
+    width: 20px;
+    cursor: pointer;
 }
 
 #music-toggle-btn {
@@ -539,12 +547,6 @@ img.inline-img.icon {
     line-height: 0;
 }
 
-#volume-slider {
-    writing-mode: vertical-lr;
-    direction: rtl;
-    height: 80px;
-    cursor: pointer;
-}
 #music-controls:hover {
     background: rgba(220, 220, 220, 0.95);
 }
