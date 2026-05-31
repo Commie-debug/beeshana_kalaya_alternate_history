@@ -532,10 +532,8 @@ img.inline-img.icon {
 }
 
 #volume-slider {
-    writing-mode: vertical-lr;
-    direction: rtl;
-    height: 45px;
-    width: 20px;
+    height: 20px;
+    width: 60px;
     cursor: pointer;
 }
 
