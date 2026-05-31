@@ -137,6 +137,7 @@
 
         if (layer.audio) {
             var old = layer.audio;
+            old.onended = null;
             var fadeOut = setInterval(function() {
                 if (old.volume > 0.05) {
                     old.volume = Math.max(0, old.volume - 0.05);
@@ -144,26 +145,27 @@
                     old.pause();
                     clearInterval(fadeOut);
                 }
-            }, 50);
-        }
+        }, 50);
+    }
 
-        setTimeout(function() {
-            layer.audio = new Audio(layer.playlist[layer.currentIndex]);
-            layer.audio.volume = 0;
-            layer.audio.play().catch(function() {});
-            var fadeIn = setInterval(function() {
-                if (layer.audio.volume < targetVol - 0.05) {
-                    layer.audio.volume = Math.min(targetVol, layer.audio.volume + 0.05);
-                } else {
-                    layer.audio.volume = targetVol;
-                    clearInterval(fadeIn);
-                }
-            }, 50);
-            layer.audio.addEventListener('ended', function() {
-                layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
-                playLayer(layerName);
-            });
-        }, 800);
+    setTimeout(function() {
+        var newAudio = new Audio(layer.playlist[layer.currentIndex]);
+        layer.audio = newAudio;
+        newAudio.volume = 0;
+        newAudio.play().catch(function() {});
+        var fadeIn = setInterval(function() {
+            if (newAudio.volume < targetVol - 0.05) {
+                newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
+            } else {
+                newAudio.volume = targetVol;
+                clearInterval(fadeIn);
+            }
+        }, 50);
+        newAudio.onended = function() {
+            layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+            playLayer(layerName);
+        };
+    }, 800);
     }
 
     function stopLayer(layerName) {
@@ -211,20 +213,42 @@
             playLayer(name);
         },
 
-       playSong: function(path, layerName) {
+        playSong: function(path, layerName) {
             var name = layerName || 'music';
             var layer = layers[name];
-            layer.audio = layer.audio; 
-            var forcedPlaylist = [path];
-            var oldPlaylist = layer.playlist;
-            var oldIndex = layer.currentIndex;
-            layer.playlist = forcedPlaylist;
-            layer.currentIndex = 0;
-            playLayer(name);
-            layer.audio.addEventListener('ended', function() {
-                layer.playlist = oldPlaylist;
-                layer.currentIndex = (oldIndex + 1) % oldPlaylist.length;
-            });
+            var targetVol = muted ? 0 : layer.volume;
+
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null; // remove existing ended listener
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
+            }
+
+            setTimeout(function() {
+                var newAudio = new Audio(path);
+                layer.audio = newAudio;
+                newAudio.volume = 0;
+                newAudio.play().catch(function() {});
+                var fadeIn = setInterval(function() {
+                    if (newAudio.volume < targetVol - 0.05) {
+                        newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
+                    } else {
+                        newAudio.volume = targetVol;
+                        clearInterval(fadeIn);
+                    }
+                }, 50);
+                newAudio.onended = function() {
+                    layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+                    playLayer(name);
+                };
+            }, 800);
         },
 
         addSong: function(layerName, path) {
