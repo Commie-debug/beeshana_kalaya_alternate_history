@@ -1792,6 +1792,7 @@ Would you like to skip the intro? (Recomended for first time playthroughs)
 
 
 @1981_intro_1
+on-arrival: {! AudioManager.start(); AudioManager.playSong('music/special/SLBC_News_Theme.mp3'); !}
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -1850,6 +1851,8 @@ Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from par
 
 @1981_main
 new-page: true
+on-arrival: {! AudioManager.start(); AudioManager.playSong('music/special/SLBC_News_Theme.mp3'); !}
+
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = Week [+ week +] [+ month : month +] [+ year +] 

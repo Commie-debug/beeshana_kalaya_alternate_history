@@ -97,114 +97,137 @@
 
   // Custom Audio Manager curtosy of Puddle on discord
   var AudioManager = (function() {
-        var layers = {
-            music: {
-                playlist: [
-                    'music/basic/Sri_Lanka_Anthem.mp3',
-                    'music/basic/Vimukthi_Gee.mp3',
-                    'music/basic/SLFP_Song.mp3',
-                    'music/basic/Bandaranaike_song.mp3',
-                    'music/basic/Siu_Digin_Galana_Andure.mp3'
-                ],
-                currentIndex: 0,
-                audio: null,
-                volume: 1.0,
-                enabled: true
-            },
-            ambient: {
-                playlist: [],
-                currentIndex: 0,
-                audio: null,
-                volume: 0.4,
-                enabled: false
-            }
-        };
-
-        var muted = false;
-
-        function shuffle(arr) {
-            for (var i = arr.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
-            }
+    var layers = {
+        music: {
+            playlist: [
+                'music/basic/Sri_Lanka_Anthem.mp3',
+                'music/basic/Vimukthi_Gee.mp3',
+                'music/basic/SLFP_Song.mp3',
+                'music/basic/Bandaranaike_song.mp3',
+                'music/basic/Siu_Digin_Galana_Andure.mp3'
+            ],
+            currentIndex: 0,
+            audio: null,
+            volume: 1.0,
+            enabled: true
+        },
+        ambient: {
+            playlist: [],
+            currentIndex: 0,
+            audio: null,
+            volume: 0.4,
+            enabled: false
         }
+    };
 
-        function playLayer(layerName) {
-            var layer = layers[layerName];
-            if (!layer || !layer.enabled || layer.playlist.length === 0) return;
-            if (layer.audio) { layer.audio.pause(); }
-            layer.audio = new Audio(layer.playlist[layer.currentIndex]);
+    var muted = false;
+    var started = false;
+
+    function shuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+        }
+    }
+
+    function playLayer(layerName) {
+        var layer = layers[layerName];
+        if (!layer || !layer.enabled || layer.playlist.length === 0) return;
+        if (layer.audio) { layer.audio.pause(); }
+        layer.audio = new Audio(layer.playlist[layer.currentIndex]);
+        layer.audio.volume = muted ? 0 : layer.volume;
+        layer.audio.play().catch(function() {});
+        layer.audio.addEventListener('ended', function() {
+            layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+            playLayer(layerName);
+        });
+    }
+
+    function stopLayer(layerName) {
+        var layer = layers[layerName];
+        if (layer && layer.audio) {
+            layer.audio.pause();
+            layer.audio = null;
+        }
+    }
+
+    return {
+        started: false,
+
+        init: function() {
+            shuffle(layers.music.playlist);
+        },
+
+        start: function() {
+            if (!this.started) {
+                this.started = true;
+                playLayer('music');
+            }
+        },
+
+        mute: function() {
+            muted = true;
+            for (var name in layers) {
+                if (layers[name].audio) layers[name].audio.volume = 0;
+            }
+        },
+
+        unmute: function() {
+            muted = false;
+            for (var name in layers) {
+                if (layers[name].audio) layers[name].audio.volume = layers[name].volume;
+            }
+        },
+
+        isMuted: function() { return muted; },
+
+        skip: function(layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+            playLayer(name);
+        },
+
+        playSong: function(path, layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) layer.audio.pause();
+            layer.audio = new Audio(path);
             layer.audio.volume = muted ? 0 : layer.volume;
             layer.audio.play().catch(function() {});
             layer.audio.addEventListener('ended', function() {
                 layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
-                playLayer(layerName);
+                playLayer(name);
             });
-        }
+        },
 
-        function stopLayer(layerName) {
-            var layer = layers[layerName];
-            if (layer && layer.audio) {
-                layer.audio.pause();
-                layer.audio = null;
+        addSong: function(layerName, path) {
+            layers[layerName].playlist.push(path);
+        },
+
+        removeSong: function(layerName, path) {
+            var pl = layers[layerName].playlist;
+            var idx = pl.indexOf(path);
+            if (idx > -1) pl.splice(idx, 1);
+        },
+
+        enableLayer: function(layerName) {
+            layers[layerName].enabled = true;
+            playLayer(layerName);
+        },
+
+        disableLayer: function(layerName) {
+            layers[layerName].enabled = false;
+            stopLayer(layerName);
+        },
+
+        setVolume: function(layerName, vol) {
+            layers[layerName].volume = vol;
+            if (layers[layerName].audio && !muted) {
+                layers[layerName].audio.volume = vol;
             }
         }
-
-        return {
-            init: function() {
-                shuffle(layers.music.playlist);
-                playLayer('music');
-            },
-
-            mute: function() {
-                muted = true;
-                for (var name in layers) {
-                    if (layers[name].audio) layers[name].audio.volume = 0;
-                }
-            },
-
-            unmute: function() {
-                muted = false;
-                for (var name in layers) {
-                    if (layers[name].audio) layers[name].audio.volume = layers[name].volume;
-                }
-            },
-
-            isMuted: function() { return muted; },
-
-            skip: function(layerName) {
-                var layer = layers[layerName || 'music'];
-                layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
-                playLayer(layerName || 'music');
-            },
-
-            addSong: function(layerName, path) {
-                layers[layerName].playlist.push(path);
-            },
-
-            removeSong: function(layerName, path) {
-                var pl = layers[layerName].playlist;
-                var idx = pl.indexOf(path);
-                if (idx > -1) pl.splice(idx, 1);
-            },
-
-            enableLayer: function(layerName) {
-                layers[layerName].enabled = true;
-                playLayer(layerName);
-            },
-
-            disableLayer: function(layerName) {
-                layers[layerName].enabled = false;
-                stopLayer(layerName);
-            },
-
-            setVolume: function(layerName, vol) {
-                layers[layerName].volume = vol;
-                if (layers[layerName].audio && !muted) {
-                    layers[layerName].audio.volume = vol;
-                }
-            }
-        };
+    };
   }());
 
   window.disableAudio = function() {
