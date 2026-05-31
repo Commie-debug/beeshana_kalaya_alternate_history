@@ -206,6 +206,11 @@
         skip: function(layerName) {
             var name = layerName || 'music';
             var layer = layers[name];
+            if (layer.audio) {
+                layer.audio.onended = null;
+                layer.audio.pause();
+                layer.audio = null;
+            }
             layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
             playLayer(name);
         },
