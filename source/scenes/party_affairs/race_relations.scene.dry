@@ -15,20 +15,81 @@ Sri Lanka is a racially diverse nation, and arguably since even our formation in
 
 - @toughertamilline
 - @muslimsecurity
+- @minorityconstit
 - @sinhalanationalism
+- @nationalistmonks
+- @pujakarana
+- @pujahindukarana
+- @pujachristkarana
+- @pujamuslimkarana
 - @mendties
 - @indiantamilrights
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 - @cancel_advisor_action
 
+@nationalistmonks
+title: Buddhism and its preeminent status should be celebrated and defended against the other foreign beliefs. There are plenty of monks who would be happy to share the same message. Hell Sinhalese are the preeminent people of the island.
+subtitle: -2 resources
+choose-if: resources >= 2 and nationalist_strength > 30;
+unavailable-subtitle: Not enough resources. The Nationalists are not powerful enough
+on-arrival: resources -= 2; sinhala_slfp += 4; slfp_bhikku += 2; sinhala_nationalism += 3.25; tamil_nationalism += 2.9; muslim_slfp -= 2.8; itamil_slfp -= 2.8; sltamil_slfp -= 2.8; nationalist_strength += 7; left_strength -= 5; left_dissent += 7;
+
+Minorities are appalled and the Nationalists are emboldened, ethnic tensions have slightly risen and Sinhalese nationalists are ecstatic. Was this worth it?
+
+@pujamuslimkarana
+title: Islam is almost entirely centered on the Muslims, our left-wing economic policies have previously harmed Muslims merchants and buisnesses in the past. In addition our roots in buddhism will make any efforts difficult.
+subtitle: -2 resources
+choose-if: resources >= 2 
+unavailable-subtitle: Not enough resources. 
+on-arrival: resources -= 2; muslim_slfp += 3; 
+
+[? if slmc_formed = 0 : The lack of a Muslim party sways many to support us, but as previously stated our previous policies and traditional support base make these moves limited. ?]
+
+[? if slmc_formed = 1 : A decent few are moved towards us even with the existance of the SLMC, but as previously stated our previous policies and traditional support base make these moves limited. ?]
+ 
+@pujachristkarana
+title: Christianity in uniquely spread out among both Sinhalese and Sri Lankan Tamil communities and have tried for peace. Our hostility to them in the past will make any efforts difficult.
+subtitle: -2 resources
+choose-if: resources >= 2 
+unavailable-subtitle: Not enough resources. 
+on-arrival: resources -= 2; sinhala_slfp += 2; sltamil_slfp += 3; tamil_nationalism -= 2.5; sinhala_nationalism -= 2.5; slfp_christclergy += 1; lankan_tamil_caste_prevalance -= 4; sinhalese_caste_prevalance -= 2.5;
+
+The clergymen are rightfully skeptical of us, we did afterall nationalise their private schools. Still some are swayed to support us, esspecially middle class proggressives.
+
+@pujahindukarana
+title: Hinduism is also important for both Tamil communities, though the rise of militancy and their often secular nature is eroding the priests influence. Our roots in buddhism will make any efforts difficult.
+subtitle: -2 resources
+choose-if: resources >= 2 
+unavailable-subtitle: Not enough resources. 
+on-arrival: resources -= 2; itamil_slfp += 3; sltamil_slfp += 3; tamil_nationalism -= 1.5; slfp_hindupriest += 1; lankan_tamil_caste_prevalance += 4; indian_tamil_caste_prevalance += 2;
+
+We sponsered a few rituals, the priests for their part are greatful and attempt to push their gatherings towards us, knowing our historical allignment, the results were not great.
+
+@pujakarana
+title: Buddhism is of great importance to the Sinhalese, we should sponser a few events and support friendly bhikkus, in return they may subtely or overtly platform us to their following. Our roots in buddhism will make any efforts particularily rewarding.
+subtitle: -2 resources
+choose-if: resources >= 2 
+unavailable-subtitle: Not enough resources. 
+on-arrival: resources -= 2; sinhala_slfp += 4; sinhala_nationalism += 2.25; slfp_bhikku += 1; sinhalese_caste_prevalance += 2;
+
+The puja (ritual) went well and the monks spoke well, this strategy is very similar to how we first gathered support in the 50s, results will be expected.
+
+@minorityconstit
+title: Our albeit limited representation in local government should be used to integrate and interact with minority communities.
+subtitle: -2 resources
+choose-if: resources >= 2 and slfp_local_gov = 1
+unavailable-subtitle: Not enough resources. We cannot participate in local government
+on-arrival: resources -= 2; itamil_slfp += 3; tamil_nationalism -= 2; sltamil_slfp += 3; muslim_slfp += 3; sinhala_nationalism -= 2.25; sinhala_slfp -= 1.25;
+
+We have allocated resources to improve the lot of minorities within our constituencies, fostering greater connection between the groups and Sinhalese.
 
 @toughertamilline
 title: The militant and terrorist elements among Tamils are severe threat to Sri Lankan stability. We should argue for tougher action against them.
 subtitle: -3 resources
 choose-if: resources >= 3
 unavailable-subtitle: Not enough resources. 
-on-arrival: resources -= 3; sinhala_slfp += 4; sltamil_slfp -= 2; muslim_slfp += 2.5; sinhala_nationalism += 2.25; tamil_nationalism += 3;
+on-arrival: resources -= 3; sinhala_slfp += 4; sltamil_slfp -= 2; muslim_slfp += 2.5; sinhala_nationalism += 2.25; tamil_nationalism += 3; nationalist_strength += 3;
 
 Sinhalese and Muslims take the message well, Tamils however are antagonised by the messaging.
 
@@ -57,7 +118,7 @@ on-arrival: resources -= 3; sinhala_slfp += 5; sinhala_nationalism += 4.25; tami
 This rhetoric harkens back to our old rhetoric decades ago, it still captures the populace but as expected, Tamils are repulsed. 
 
 @mendties
-title: Perhaps we should attempt to mend the ties between Sinhalese and Sri Lankan Tamil. The violence between us has gone too far, **the buck stops here**.
+title: Perhaps we should attempt to mend the ties between Sinhalese and Sri Lankan Tamil through inter-ethnic events. The violence between us has gone too far, **the buck stops here**.
 subtitle: -5 resources
 choose-if: resources >= 5 nationalist_strength < 30 and split_maitripala_victory != 3
 unavailable-subtitle: Not enough resources. The Nationalists are too strong.
@@ -70,6 +131,6 @@ title: The Indian Tamils have for too long had their greivances unaddressed by b
 subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources. 
-on-arrival: esources -= 1; itamil_slfp += 3; tamil_nationalism -= 2; itamil_cwc -= 1.25; cwc_relation -=5; itamil_unp -= 4;
+on-arrival: resources -= 2; itamil_slfp += 3; tamil_nationalism -= 2; itamil_cwc -= 1.25; cwc_relation -=5; itamil_unp -= 4;
 
 Some Indian Tamils have been moved to support us, but more importantly many are choosing to abandon the [? if unp_in_government = 1 : incumbent ?] UNP and their own CWC, the CWC in response has launched harsh attacks against us, deteriorating our relationship.

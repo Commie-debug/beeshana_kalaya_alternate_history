@@ -85,6 +85,11 @@ Q.appealed_injunction = 0;
 Q.slfp_union = 5;
 //can only be formed by slfp if not in power, jvp revolts and dissapearences are in fullswing
 Q.mothers_front = 0;
+//relationship with buddhist monks, hindu priests, christian and muslim imams
+Q.slfp_bhikku = 0;
+Q.slfp_hindupriest = 0;
+Q.slfp_christclergy = 0;
+Q.slfp_imam = 0;
 
 //media
 Q.radio = 0;
