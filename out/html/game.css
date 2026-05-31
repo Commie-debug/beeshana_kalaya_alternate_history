@@ -515,20 +515,37 @@ img.inline-img.icon {
   opacity: 0.8;
 }
 
-#music-toggle-btn {
+#music-controls {
     position: fixed;
     top: 10px;
     left: 10px;
     z-index: 3;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255,255,255,0.9);
     border: 2px solid #555;
     border-radius: 8px;
-    padding: 4px 6px;
+    padding: 6px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+#music-toggle-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
     cursor: pointer;
     line-height: 0;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
-#music-toggle-btn:hover {
+
+#volume-slider {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    height: 80px;
+    cursor: pointer;
+}
+#music-controls:hover {
     background: rgba(220, 220, 220, 0.95);
 }
 
