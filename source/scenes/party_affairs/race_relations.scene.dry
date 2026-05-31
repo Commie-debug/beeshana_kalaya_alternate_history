@@ -120,7 +120,7 @@ This rhetoric harkens back to our old rhetoric decades ago, it still captures th
 @mendties
 title: Perhaps we should attempt to mend the ties between Sinhalese and Sri Lankan Tamil through inter-ethnic events. The violence between us has gone too far, **the buck stops here**.
 subtitle: -5 resources
-choose-if: resources >= 5 nationalist_strength < 30 and split_maitripala_victory != 3
+choose-if: resources >= 5 and nationalist_strength < 30 and split_maitripala_victory != 3
 unavailable-subtitle: Not enough resources. The Nationalists are too strong.
 on-arrival: resources -= 5; muslim_slfp += 3.5; sinhala_slfp += 3; sltamil_slfp += 5; left_strength += 4; nationalist_dissent += 4; nationalist_strength -= 4; sinhala_nationalism -= 6.5; tamil_nationalism -= 6.5;
 
