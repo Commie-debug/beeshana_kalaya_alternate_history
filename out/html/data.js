@@ -510,7 +510,7 @@ const tooltipList = [{
     },
     {
     searchString: "Israel",
-    explanationText: "<img src=img/logos/Israel_Logo.png> State of <br> Israel <br> מְדִינַת יִשְׂרָאֵל"
+    explanationText: "<img src=img/logos/Israel_Logo.png> State of Israel <br> מְדִינַת יִשְׂרָאֵל"
     },
     {
     searchString: "Japan",

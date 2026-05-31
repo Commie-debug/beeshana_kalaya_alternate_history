@@ -1792,7 +1792,6 @@ Would you like to skip the intro? (Recomended for first time playthroughs)
 
 
 @1981_intro_1
-audio: special_music/SLBC_News_Theme.mp3
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -1850,7 +1849,6 @@ Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from par
 - @1981_main: Start game
 
 @1981_main
-audio: shuffle music/basic/Sri_Lanka_Anthem.mp3 music/basic/Siu_Digin_Galana_Andure.mp3 music/basic/Vimukthi_Gee.mp3 music/basic/SLFP_Song.mp3 music/basic/Bandaranaike_song.mp3 
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
