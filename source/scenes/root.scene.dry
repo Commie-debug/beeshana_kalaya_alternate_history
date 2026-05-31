@@ -1792,7 +1792,7 @@ Would you like to skip the intro? (Recomended for first time playthroughs)
 
 
 @1981_intro_1
-on-arrival: {! AudioManager.start(); window.AudioManager.playSong('special_music/SLBC_News_Theme.mp3'); !}
+on-arrival: {! window.AudioManager.start(); window.AudioManager.playSong('special_music/SLBC_News_Theme.mp3'); !}
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -1851,7 +1851,7 @@ Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from par
 
 @1981_main
 new-page: true
-on-display: {! AudioManager.start(); window.AudioManager.playSong('music/basic/Sri_Lanka_Anthem.mp3'); !}
+on-display: {! window.AudioManager.start(); window.AudioManager.playSong('music/basic/Sri_Lanka_Anthem.mp3'); !}
 
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 

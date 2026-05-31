@@ -184,10 +184,7 @@
         },
 
         start: function() {
-            if (!this.started) {
-                this.started = true;
-                playLayer('music');
-            }
+            this.started = true;
         },
 
         mute: function() {
