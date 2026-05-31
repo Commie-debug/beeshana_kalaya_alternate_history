@@ -490,7 +490,7 @@ const tooltipList = [{
     },
     {
     searchString: "India",
-    explanationText: "<img src=img/logos/India_Logo.png> Republic of India"
+    explanationText: "<img src=img/logos/India_Logo.png> Republic of India <br> भारत गणराज्य <br> இந்தியக் குடியரசு"
     },
     {
     searchString: "US",
@@ -506,23 +506,23 @@ const tooltipList = [{
     },
     {
     searchString: "Israel",
-    explanationText: "<img src=img/logos/Israel_Logo.png> State of <br> Israel"
+    explanationText: "<img src=img/logos/Israel_Logo.png> State of <br> Israel <br> מְדִינַת יִשְׂרָאֵל"
     },
     {
     searchString: "Japan",
-    explanationText: "<img src=img/logos/Japan_Logo.png> Japan"
+    explanationText: "<img src=img/logos/Japan_Logo.png> Japan <br> 日本"
     },
     {
     searchString: "China",
-    explanationText: "<img src=img/logos/China_Logo.png> Peoples Republic <br> of China"
+    explanationText: "<img src=img/logos/China_Logo.png> Peoples Republic <br> of China <br> 中华人民共和国"
     },
     {
     searchString: "Pakistan",
-    explanationText: "<img src=img/logos/Pakistan_Logo.png> Islamic Republic <br> of Pakistan"
+    explanationText: "<img src=img/logos/Pakistan_Logo.png> Islamic Republic <br> of Pakistan <br> اسلامی جمہوریہ پاكستان"
     },
     {
     searchString: "USSR",
-    explanationText: "<img src=img/logos/USSR_Logo.png> Union of Soviet <br> Socialist Republics"
+    explanationText: "<img src=img/logos/USSR_Logo.png> Union of Soviet <br> Socialist Republics <br> Союз Советских <br> Социалистических Республик"
     },
     {
     searchString: "SAARC",
