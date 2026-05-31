@@ -894,7 +894,7 @@ Nationalists Dissent
 
 [? if year = 1983 and month = 3 and week = 3 : An estimated one million people march in cities across Western Europe in protests against the deployment of US nuclear missiles. ?]
 
-[? if year = 1983 and month = 4 and week = 1 : Harold Wilson, former British Prime Minister, dies in London. ?]
+[? if year = 1983 and month = 4 and week = 1 : Harold Wilson, former British Prime Minister, dies in London at the age of 79. ?]
 
 [? if year = 1983 and month = 4 and week = 3 : A suicide bombing destroys the United States Embassy in Beirut killing dozens. ?]
 
@@ -924,9 +924,11 @@ Nationalists Dissent
 
 [? if year = 1983 and month = 10 and week = 3 : United States invades Grenada following an internal crisis in the Caribbean nation. ?]
 
-[? if year = 1983 and month = 11 and week = 1 : NATO conducts the Able Archer 83 nuclear command exercise, which Soviet intelligence mistakes for preparation for a real strike. ?]
+[? if year = 1983 and month = 11 and week = 1 : NATO conducts the Able Archer 83 nuclear command exercise ?]
 
-[? if year = 1983 and month = 11 and week = 3 : NATO conducts the Able Archer 83 nuclear command exercise. ?]
+[? if year = 1983 and month = 11 and week = 1 : Fighting erupts in Tripoli, Lebanon between members of the PLO. ?]
+
+[? if year = 1983 and month = 11 and week = 3 : Turkish Republic of Northern Cyprus declares independence from Turkish occupied Cyprus. ?]
 
 [? if year = 1983 and month = 12 and week = 1 : The United States deploys Pershing II nuclear missiles to West Germany. ?]
 
