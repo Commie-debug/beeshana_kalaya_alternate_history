@@ -96,7 +96,7 @@
 
 
   // Custom Audio Manager curtosy of Puddle on discord
-  var AudioManager = (function() {
+  window.AudioManager = (function() {
     var layers = {
         music: {
             playlist: [
