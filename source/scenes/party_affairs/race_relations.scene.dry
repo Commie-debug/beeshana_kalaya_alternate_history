@@ -31,7 +31,7 @@ Sri Lanka is a racially diverse nation, and arguably since even our formation in
 @nationalistmonks
 title: Buddhism and its preeminent status should be celebrated and defended against the other foreign beliefs. There are plenty of monks who would be happy to share the same message. Hell Sinhalese are the preeminent people of the island.
 subtitle: -2 resources
-choose-if: resources >= 2 and nationalist_strength > 30;
+choose-if: resources >= 2 and nationalist_strength > 30
 unavailable-subtitle: Not enough resources. The Nationalists are not powerful enough
 on-arrival: resources -= 2; sinhala_slfp += 4; slfp_bhikku += 2; sinhala_nationalism += 3.25; tamil_nationalism += 2.9; muslim_slfp -= 2.8; itamil_slfp -= 2.8; sltamil_slfp -= 2.8; nationalist_strength += 7; left_strength -= 5; left_dissent += 7;
 
