@@ -180,7 +180,6 @@
         started: false,
 
         init: function() {
-            shuffle(layers.music.playlist);
         },
 
         start: function() {
