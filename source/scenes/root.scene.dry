@@ -1792,7 +1792,7 @@ Would you like to skip the intro? (Recomended for first time playthroughs)
 
 
 @1981_intro_1
-on-arrival: {! AudioManager.start(); window.AudioManager.playSong('music/special/SLBC_News_Theme.mp3'); !}
+on-arrival: {! AudioManager.start(); window.AudioManager.playSong('special_music/SLBC_News_Theme.mp3'); !}
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
