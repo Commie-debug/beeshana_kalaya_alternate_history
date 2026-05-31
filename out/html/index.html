@@ -22,6 +22,9 @@
       <img id="music-on-icon" src="img/logos/Radio_On.png" width="50" height="40" alt="Music On"/>
       <img id="music-off-icon" src="img/logos/Radio_Off.png" width="50" height="40" alt="Music Off" style="display:none"/>
     </button>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1" 
+    oninput="window.AudioManager.setVolume('music', parseFloat(this.value))"
+    style="position: fixed; top: 15px; left: 60px; z-index: 3; width: 80px; cursor: pointer;">
     
     <div class="background" id="bg2">
     </div>
