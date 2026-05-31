@@ -944,9 +944,9 @@ Nationalists Dissent
 
 [? if year = 1984 and month = 3 and week = 1 : Ethiopian government officials acknowledge a severe famine is underway with millions at risk of starvation in the north of the country. ?]
 
-[? if year = 1984 and month = 3 and week = 3 : Mining strikes spread across Britain as workers protest pit closures under Margaret Thatcher's government. ?]
+[? if year = 1984 and month = 3 and week = 3 : Miner's strikes spread across Britain as workers protest pit closures under Margaret Thatcher's government. ?]
 
-[? if year = 1984 and month = 4 and week = 1 : Gunshots from the Libyan embassy in London kill a police officer during a protest outside, causing a diplomatic crisis. ?]
+[? if year = 1984 and month = 4 and week = 1 : Gunshots from the Libyan embassy in London kill a police officer during a protest outside, sparking a diplomatic crisis. ?]
 
 [? if year = 1984 and month = 4 and week = 3 : The British government severs diplomatic relations with Libya following the fatal shooting of a policewoman outside the Libyan embassy in London. ?]
 
@@ -968,7 +968,7 @@ Nationalists Dissent
 
 [? if year = 1984 and month = 9 and week = 1 : A famine in Ethiopia is now confirmed as catastrophic with aid agencies warning of mass starvation across the country. ?]
 
-[? if year = 1984 and month = 9 and week = 3 : A massive suicide bombing attacks the US Embassy annex in East Beirut. ?]
+[? if year = 1984 and month = 9 and week = 3 : A massive suicide bombing hits the US Embassy annex in East Beirut. ?]
 
 [? if year = 1984 and month = 10 and week = 1 : Ronald Reagan wins re-election in a historic landslide, carrying 49 of 50 states against Democratic challenger Walter Mondale. ?]
 
@@ -982,7 +982,7 @@ Nationalists Dissent
 
 [? if year = 1984 and month = 12 and week = 3 : Rajiv Gandhi wins a landslide victory in Indian elections called following the assassination of his mother Indira Gandhi. ?]
 
-[? if year = 1985 and month = 1 and week = 1 : The Soviet Union and the United States reopen arms control negotiations in Geneva. ?]
+[? if year = 1985 and month = 1 and week = 1 : The Soviet Union and the United States reopen arms control negotiations in Geneva Switzerland. ?]
 
 [? if year = 1985 and month = 1 and week = 3 : The British and French governments announce plans to construct a tunnel beneath the English Channel linking the two countries. ?]
 
@@ -1117,6 +1117,8 @@ Nationalists Dissent
 [? if year = 1987 and month = 9 and week = 3 : Palestinian protesters and "fedayeen" clash with Israeli forces in occupied Palestine escalate into a general "intifada". ?]
 
 [? if year = 1987 and month = 10 and week = 1 : Powerful storms batter Britain and northern France causing widespread destruction in what becomes known as the Great Storm. ?]
+
+[? if year = 1987 and month = 10 and week = 1 : President of Burkina Faso, Thomas Sankara is assassinated in a coup d'état. ?]
 
 [? if year = 1987 and month = 10 and week = 3 : Global stock markets crash with the Dow Jones Industrial Average falling over 22 percent in one day. ?]
 
