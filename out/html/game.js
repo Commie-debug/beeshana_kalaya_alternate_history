@@ -133,14 +133,37 @@
     function playLayer(layerName) {
         var layer = layers[layerName];
         if (!layer || !layer.enabled || layer.playlist.length === 0) return;
-        if (layer.audio) { layer.audio.pause(); }
-        layer.audio = new Audio(layer.playlist[layer.currentIndex]);
-        layer.audio.volume = muted ? 0 : layer.volume;
-        layer.audio.play().catch(function() {});
-        layer.audio.addEventListener('ended', function() {
-            layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
-            playLayer(layerName);
-        });
+        var targetVol = muted ? 0 : layer.volume;
+
+        if (layer.audio) {
+            var old = layer.audio;
+            var fadeOut = setInterval(function() {
+                if (old.volume > 0.05) {
+                    old.volume = Math.max(0, old.volume - 0.05);
+                } else {
+                    old.pause();
+                    clearInterval(fadeOut);
+                }
+            }, 50);
+        }
+
+        setTimeout(function() {
+            layer.audio = new Audio(layer.playlist[layer.currentIndex]);
+            layer.audio.volume = 0;
+            layer.audio.play().catch(function() {});
+            var fadeIn = setInterval(function() {
+                if (layer.audio.volume < targetVol - 0.05) {
+                    layer.audio.volume = Math.min(targetVol, layer.audio.volume + 0.05);
+                } else {
+                    layer.audio.volume = targetVol;
+                    clearInterval(fadeIn);
+                }
+            }, 50);
+            layer.audio.addEventListener('ended', function() {
+                layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+                playLayer(layerName);
+            });
+        }, 800);
     }
 
     function stopLayer(layerName) {
@@ -188,16 +211,19 @@
             playLayer(name);
         },
 
-        playSong: function(path, layerName) {
+       playSong: function(path, layerName) {
             var name = layerName || 'music';
             var layer = layers[name];
-            if (layer.audio) layer.audio.pause();
-            layer.audio = new Audio(path);
-            layer.audio.volume = muted ? 0 : layer.volume;
-            layer.audio.play().catch(function() {});
+            layer.audio = layer.audio; 
+            var forcedPlaylist = [path];
+            var oldPlaylist = layer.playlist;
+            var oldIndex = layer.currentIndex;
+            layer.playlist = forcedPlaylist;
+            layer.currentIndex = 0;
+            playLayer(name);
             layer.audio.addEventListener('ended', function() {
-                layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
-                playLayer(name);
+                layer.playlist = oldPlaylist;
+                layer.currentIndex = (oldIndex + 1) % oldPlaylist.length;
             });
         },
 
