@@ -534,6 +534,7 @@ img.inline-img.icon {
 #volume-slider {
     height: 20px;
     width: 60px;
+    accent-color: #000000;
     cursor: pointer;
 }
 
