@@ -2,7 +2,7 @@ title: Game Over.
 new-page: true
 go-to: eg_menu
 on-arrival: {!
-{! window.AudioManager.playSongOnce('special_music/Yadamin_Banda.mp3'); !}
+window.AudioManager.playSongOnce('special_music/Yadamin_Banda.mp3'); 
 Q.game_over = 1;
 // Achievements:
 // Große Koalition - form a grand coalition
