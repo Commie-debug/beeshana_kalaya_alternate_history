@@ -252,6 +252,41 @@
             }, 800);
         },
 
+        playSongOnce: function(path, layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            var targetVol = muted ? 0 : layer.volume;
+
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
+            }
+
+            setTimeout(function() {
+                var newAudio = new Audio(path);
+                layer.audio = newAudio;
+                newAudio.volume = 0;
+                newAudio.play().catch(function() {});
+                var fadeIn = setInterval(function() {
+                    if (newAudio.volume < targetVol - 0.05) {
+                        newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
+                    } else {
+                        newAudio.volume = targetVol;
+                        clearInterval(fadeIn);
+                    }
+                }, 50);
+                newAudio.onended = null; // nothing plays after
+            }, 800);
+        },
+
         addSong: function(layerName, path) {
             layers[layerName].playlist.push(path);
         },
