@@ -189,14 +189,14 @@
         mute: function() {
             muted = true;
             for (var name in layers) {
-                if (layers[name].audio) layers[name].audio.volume = 0;
+                if (layers[name].audio) layers[name].audio.pause();
             }
         },
 
         unmute: function() {
             muted = false;
             for (var name in layers) {
-                if (layers[name].audio) layers[name].audio.volume = layers[name].volume;
+                if (layers[name].audio) layers[name].audio.play().catch(function() {});
             }
         },
 
