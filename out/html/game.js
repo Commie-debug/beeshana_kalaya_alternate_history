@@ -131,41 +131,41 @@
     }
 
     function playLayer(layerName) {
-        var layer = layers[layerName];
-        if (!layer || !layer.enabled || layer.playlist.length === 0) return;
-        var targetVol = muted ? 0 : layer.volume;
+            var layer = layers[layerName];
+            if (!layer || !layer.enabled || layer.playlist.length === 0) return;
+            var targetVol = muted ? 0 : layer.volume;
 
-        if (layer.audio) {
-            var old = layer.audio;
-            old.onended = null;
-            var fadeOut = setInterval(function() {
-                if (old.volume > 0.05) {
-                    old.volume = Math.max(0, old.volume - 0.05);
-                } else {
-                    old.pause();
-                    clearInterval(fadeOut);
-                }
-        }, 50);
-    }
-
-    setTimeout(function() {
-        var newAudio = new Audio(layer.playlist[layer.currentIndex]);
-        layer.audio = newAudio;
-        newAudio.volume = 0;
-        newAudio.play().catch(function() {});
-        var fadeIn = setInterval(function() {
-            if (newAudio.volume < targetVol - 0.05) {
-                newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
-            } else {
-                newAudio.volume = targetVol;
-                clearInterval(fadeIn);
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
             }
-        }, 50);
-        newAudio.onended = function() {
-            layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
-            playLayer(layerName);
-        };
-    }, 800);
+
+            setTimeout(function() {
+                var newAudio = new Audio(layer.playlist[layer.currentIndex]);
+                layer.audio = newAudio;
+                newAudio.volume = 0;
+                newAudio.play().catch(function() {});
+                var fadeIn = setInterval(function() {
+                    if (newAudio.volume < targetVol - 0.05) {
+                        newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
+                    } else {
+                        newAudio.volume = targetVol;
+                        clearInterval(fadeIn);
+                    }
+                }, 50);
+                newAudio.onended = function() {
+                    layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+                    playLayer(layerName);
+                };
+            }, 800);
     }
 
     function stopLayer(layerName) {
@@ -211,6 +211,18 @@
                 layer.audio = null;
             }
             layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+            playLayer(name);
+        },
+
+        previous: function(layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) {
+                layer.audio.onended = null;
+                layer.audio.pause();
+                layer.audio = null;
+            }
+            layer.currentIndex = (layer.currentIndex - 1 + layer.playlist.length) % layer.playlist.length;
             playLayer(name);
         },
 

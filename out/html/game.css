@@ -562,6 +562,18 @@ img.inline-img.icon {
     color: #000;
 }
 
+#music-prev-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 2px 4px;
+    color: #555;
+}
+#music-prev-btn:hover {
+    color: #000;
+}
+
 .overlay {
     background: rgba(0,0,0,0.7);
     display: none;
