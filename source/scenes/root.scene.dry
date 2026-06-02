@@ -1783,11 +1783,14 @@ this.state.disableSaves = true;
 !}
 go-to: skip_intro
 
+@1981_main
+go-to: skip_intro
+
 @skip_intro
 
 Would you like to skip the intro? (Recomended for first time playthroughs)
 
-- @1981_main: Yes
+- @1981_start: Yes
 - @1981_intro_1: No
 
 
@@ -1847,9 +1850,9 @@ on-display: {!
 
 Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from parliament has split the party. While she and Chandrika push for democratic socialism, the nationalist faction—led by Maitripala and Anura demands closer UNP ties and embraces Sinhalese hardliners. The party holds together—for now. But as tensions rise, a split seems inevitable.
 
-- @1981_main: Start game
+- @1981_start: Start game
 
-@1981_main
+@1981_start
 new-page: true
 on-display: {! window.AudioManager.start(); window.AudioManager.playSong('music/basic/Sri_Lanka_Anthem.mp3'); !}
 
