@@ -520,7 +520,7 @@ img.inline-img.icon {
     top: 10px;
     left: 10px;
     z-index: 3;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.471);
     border: 2px solid #555;
     border-radius: 8px;
     padding: 6px;
@@ -547,7 +547,7 @@ img.inline-img.icon {
 }
 
 #music-controls:hover {
-    background: rgba(220, 220, 220, 0.95);
+    background: rgba(255, 255, 255, 0.366);
 }
 
 #music-skip-btn {
