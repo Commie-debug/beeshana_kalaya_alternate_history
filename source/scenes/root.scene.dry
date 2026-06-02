@@ -45,9 +45,9 @@ Q.old_demographics = 0;
 Q.use_decimals = 0;
 
 // party resources
-Q.resources = 2;
+Q.resources = 3;
 // party dues
-Q.dues = 2;
+Q.dues = 4;
 
 // the state of the party
 // overall dissent reduces every increase in party support.
