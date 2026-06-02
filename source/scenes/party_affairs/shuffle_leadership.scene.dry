@@ -100,7 +100,7 @@ view-if: n_advisors < 3
 
 @add_sirimavo
 title: Sirimavo Bandaranaike
-subtitle: Mrs Bandaranaike is our party leader and former prime minister. {!<br><br>!}[? if difficulty < 0 : Actions - Improve relations with the old allies, Prime Minister ?]
+subtitle: Mrs Bandaranaike is our party leader and former prime minister. {!<br><br>!} Actions - Improve relations with the old allies, Prime Minister
 is-card: true
 card-image: img/portraits/BandaranaikeSirimavo.jpg
 view-if: sirimavo_advisor = 0 and n_advisors < 3 
@@ -115,7 +115,7 @@ Sirimavo Bandaranaike is now an advisor.
 
 @add_maithripala
 title: Maithripala Senanayake 
-subtitle: Maithripala Senanayake is a moderate nationalist with a focus on rural development and progressive social policies. {!<br><br>!}[? if difficulty < 0 : Actions - Rural rallying, Prime Minister, Promote nationalism ?]
+subtitle: Maithripala Senanayake is a moderate nationalist with a focus on rural development and progressive social policies. {!<br><br>!} Actions - Rural rallying, Prime Minister, Promote nationalism
 is-card: true
 card-image: img/portraits/SenanayakeMaithripala.jpg
 tags: national_advisor
@@ -129,7 +129,7 @@ Maithripala Senanayake is now an advisor.
 
 @add_chandrika
 title: Chandrika Kumaratunge
-subtitle: Mrs Kumaratunge is the daughter of party leader Mr Bandaranaike and husband to Vijaya Kumaratunge. {!<br><br>!}[? if difficulty < 0 : Actions - Heal the split, Tamil appeal ?]
+subtitle: Mrs Kumaratunge is the daughter of party leader Mr Bandaranaike and husband to Vijaya Kumaratunge. {!<br><br>!} Actions - Heal the split, Tamil appeal
 is-card: true
 card-image: national_advisor
 view-if: chandrika_advisor = 0 and n_advisors < 3 and left_split = 0

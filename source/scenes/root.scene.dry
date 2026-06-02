@@ -1761,16 +1761,16 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of Sri Lanka, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1981_easy: Begin (easy difficulty)
-- @1981_main: Begin (normal difficulty)
+- @1981_easy: Begin (normal difficulty)
+- @1981_main: Begin (hard difficulty)
 - @1981_historical: Begin (historical mode)
 
 @1981_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 5; budget = 5;
 go-to: skip_intro
 
 @1981_historical
-subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
+subtitle: Saving & loading disabled, reduced resources, dues, budget and ability to change advisors locked behind cards and events. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
@@ -1779,6 +1779,7 @@ this.state.disableSaves = true;
 go-to: skip_intro
 
 @1981_main
+subtitle: Reduced resources, dues, budget and ability to change advisors locked behind cards and events.
 go-to: skip_intro
 
 @skip_intro
