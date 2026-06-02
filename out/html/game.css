@@ -516,7 +516,7 @@ img.inline-img.icon {
 }
 
 #music-controls {
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
     z-index: 3;
