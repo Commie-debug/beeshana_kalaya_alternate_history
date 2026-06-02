@@ -1763,15 +1763,10 @@ For more information on the politics and government of Sri Lanka, see the "Libra
 
 - @1981_easy: Begin (easy difficulty)
 - @1981_main: Begin (normal difficulty)
-- @1981_hard: Begin (hard difficulty)
 - @1981_historical: Begin (historical mode)
 
 @1981_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; budget = 5;
-go-to: skip_intro
-
-@1981_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
 go-to: skip_intro
 
 @1981_historical
