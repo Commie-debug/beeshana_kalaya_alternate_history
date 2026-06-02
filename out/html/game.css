@@ -550,6 +550,18 @@ img.inline-img.icon {
     background: rgba(220, 220, 220, 0.95);
 }
 
+#music-skip-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 2px 4px;
+    color: #555;
+}
+#music-skip-btn:hover {
+    color: #000;
+}
+
 .overlay {
     background: rgba(0,0,0,0.7);
     display: none;

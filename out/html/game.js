@@ -340,10 +340,6 @@
   };
 
   document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('music-toggle-btn').ondblclick = function(e) {
-        e.preventDefault();
-        AudioManager.skip('music');
-    };
     document.getElementById('music-toggle-btn').onclick = function(e) {
         window.toggleMusicButton();
     };
