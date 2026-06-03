@@ -98,7 +98,7 @@ on-arrival: {!
 
 @1983
 on-arrival:{!
-
+  // waow
 !}
 
 **Do you approve the Bill entitled the Fourth Amendment to the Constitution published in Gazette Extraordinary No 218/23 of November 13, 1982, which provides inter alia that unless sooner dissolved the First parliament shall continue until August 4, 1989, and no longer and shall thereupon stand dissolved?.**
@@ -143,8 +143,8 @@ on-arrival:{!
 
 {!<tr><th>Choice</th><th>Supporting Parties</th><th>Vote %</th></tr>!}
 
-{!<tr><td>Yes</td><td><span style="color: #006400;">UNP, CWC</span></td><td>54.66%</td></tr>!} ?]
-{!<tr><td>No</td><td><span style="color: #fd0101;">SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC</span></td><td>45.34%</td></tr>!} ?]
+{!<tr><td>Yes</td><td><span style="color: #006400;">UNP, CWC</span></td><td>54.66%</td></tr>!} 
+{!<tr><td>No</td><td><span style="color: #fd0101;">SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC</span></td><td>45.34%</td></tr>!} 
 
 {!</table>!}
 
