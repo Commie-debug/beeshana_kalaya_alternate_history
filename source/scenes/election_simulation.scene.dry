@@ -143,8 +143,8 @@ on-arrival:{!
 
 {!<tr><th>Choice</th><th>Supporting Parties</th><th>Vote %</th></tr>!}
 
-{!<tr><td><span style="color: #006400;">**Yes**</span></td><td><span>"UNP, CWC"</span></td><td>54.66%</td></tr>!}
-{!<tr><td><span style="color: #fd0101;">**No**</span></td><td><span>"SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC"</span></td><td>45.34%</td></tr>!}
+{!<tr><td><span style="font-weight: bold; color: #006400" >Yes</span></td><td><span>UNP, CWC</span></td><td>54.66%</td></tr>!}
+{!<tr><td><span style="font-weight: bold; color: #fd0101" >No</span>SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC</span></td><td>45.34%</td></tr>!}
 {!</table>!}
 
 
@@ -215,7 +215,7 @@ on-display: {!
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF8080'> </div> !} NSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #000000'> </div> !} ULPP{!</td><td>!} 0 {!</td><td>!} 1.21% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #DAEA67'> </div> !} <span style="font-weight: bold; color: #DAEA67" >ULPP</span>{!</td><td>!} 0 {!</td><td>!} 1.21% {!</td><td></td></tr>!}
 {!<tr><td><div class="box" style='background-color: #CE2029'> </div> !} DPLF {!</td><td>!} 0 {!</td><td>!} 0.33% {!</td><td></td></tr>!}
 {!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC{!</td><td>!} 0 {!</td><td>!} 0.14% {!</td><td></td></tr>!}
 
