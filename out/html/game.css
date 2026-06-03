@@ -1047,6 +1047,18 @@ table {
 .seat.npp {
     fill: #9F005D;
 }
+.seat.eprlf {
+    fill: #FF4500;
+}
+.seat.telo {
+    fill: #893F45;
+}
+.seat.endlf {
+    fill: #FF5E5E;
+}
+.seat.ucpf {
+    fill: #9C1600;
+}
 .seat.vacant {
     fill: #808080;
 }
