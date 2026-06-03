@@ -1,0 +1,7 @@
+@polls display code : FrancoGamer on discord
+
+Basic custom display tooltip and automatic text highlighter : Original name on discord
+
+Basic code for right side sliding bar : Visionary - Noske Bibi'st on discord
+
+Inspiration for custom radio : Egehan on discord
