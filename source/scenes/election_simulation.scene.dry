@@ -114,6 +114,6 @@ go-to: election_parliament_algorithm
 
 
 @1988
-go-to: go-to: election_presidential_algorithm
+go-to: election_presidential_algorithm
 
 
