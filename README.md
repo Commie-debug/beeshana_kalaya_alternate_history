@@ -2,4 +2,4 @@ An alternate history game set in Sri Lanka during the turbulent 1980s. Playing a
 
 Can you win back power from the UNP?, and can you bring Sri Lanka from the brink?
 
-This game is a large-scale modification of Social Democracy: Anby AutumnChan
+This game is a large-scale modification of Social Democracy: An Alternate History by AutumnChen
