@@ -7,101 +7,77 @@ title: Election Simulation
 
 @1982
 on-arrival: {!
-Q.parties = ['slfp', 'unp', 'jvp', 'actc', 'lssp', 'nssp'];
-Q.ethnic_weight = 0.6;
-Q.class_weight = 0.4;
+    //1982 presidential election 
 
-// All the values regarding individuals are purely hypotethical in order to replicate the national vote amounts as per the 1982 elections wikipedia page
-Q.slfp_pres_yes = 1;
-Q.slfp_pres_candidate = "Hector Kobbekaduwa";
-Q.unp_pres_yes = 1;
-Q.unp_pres_candidate = "J.R. Jayewardene";
-Q.jvp_pres_yes = 1;
-Q.jvp_pres_candidate = "Rohana Wijeweera";
-Q.actc_pres_yes = 1;
-Q.actc_pres_candidate = "Kumar Ponnambalam";
-Q.lssp_pres_yes = 1;
-Q.lssp_pres_candidate = "Colvin R. de Silva";
-Q.nssp_pres_yes = 1;
-Q.nssp_pres_candidate = "Vasudeva Nanayakkara";
-Q.cwc_pres_yes = 1;
-Q.cwc_pres_endorsement = "unp";
-Q.tulf_pres_yes = 0;
+    var UNP = '#006400';
+    var SLFP = '#00008B';
+    var ACTC = '#FDCC01';
+    var NONE = '#808080';
 
-Q.sinhala_unp = 57;
-Q.sinhala_slfp = 37;
-Q.sinhala_jvp = 5;
-Q.sinhala_actc = 0;
-Q.sinhala_lssp = 1;
-Q.sinhala_nssp = 0;
-Q.sinhala_nonvoter = 10;
-
-Q.sltamil_unp = 15;
-Q.sltamil_slfp = 5;
-Q.sltamil_jvp = 0;
-Q.sltamil_actc = 55;
-Q.sltamil_lssp = 2;
-Q.sltamil_nssp = 1;
-Q.sltamil_nonvoter = 50;
-
-Q.itamil_unp = 20;
-Q.itamil_slfp = 60;
-Q.itamil_jvp = 0;
-Q.itamil_actc = 5;
-Q.itamil_lssp = 2;
-Q.itamil_nssp = 1;
-Q.itamil_nonvoter = 15;
-
-Q.muslim_unp = 52;
-Q.muslim_slfp = 40;
-Q.muslim_jvp = 1;
-Q.muslim_actc = 2;
-Q.muslim_lssp = 1;
-Q.muslim_nssp = 1;
-Q.muslim_nonvoter = 10;
-
-Q.other_unp = 45;
-Q.other_slfp = 35;
-Q.other_jvp = 5;
-Q.other_actc = 5;
-Q.other_lssp = 2;
-Q.other_nssp = 1;
-Q.other_nonvoter = 15;
-
-Q.upper_unp = 75;
-Q.upper_slfp = 18;
-Q.upper_jvp = 2;
-Q.upper_actc = 1;
-Q.upper_lssp = 1;
-Q.upper_nssp = 1;
-Q.upper_nonvoter = 5;
-
-Q.middle_unp = 62;
-Q.middle_slfp = 30;
-Q.middle_jvp = 4;
-Q.middle_actc = 1;
-Q.middle_lssp = 1;
-Q.middle_nssp = 1;
-Q.middle_nonvoter = 8;
-
-Q.workers_unp = 48;
-Q.workers_slfp = 42;
-Q.workers_jvp = 5;
-Q.workers_actc = 1;
-Q.workers_lssp = 2;
-Q.workers_nssp = 1;
-Q.workers_nonvoter = 12;
-
-Q.rural_unp = 42;
-Q.rural_slfp = 50;
-Q.rural_jvp = 4;
-Q.rural_actc = 1;
-Q.rural_lssp = 1;
-Q.rural_nssp = 1;
-Q.rural_nonvoter = 12;
+    // National results table variables
+    Q.pres_results_count = 6;
+    Q.pres_result_0_candidate = "J.R. Jayewardene";
+    Q.pres_result_0_party = "UNP";
+    Q.pres_result_0_votes = 52.91;
+    Q.pres_result_0_color = '#006400';
+    Q.pres_result_0_endorsers = "";
+    Q.pres_result_1_candidate = "Hector Kobbekaduwa";
+    Q.pres_result_1_party = "SLFP";
+    Q.pres_result_1_votes = 39.07;
+    Q.pres_result_1_color = '#00008B';
+    Q.pres_result_1_endorsers = "CWC, LSSP";
+    Q.pres_result_2_candidate = "Rohana Wijeweera";
+    Q.pres_result_2_party = "JVP";
+    Q.pres_result_2_votes = 4.19;
+    Q.pres_result_2_color = '#FF2226';
+    Q.pres_result_2_endorsers = "";
+    Q.pres_result_3_candidate = "Kumar Ponnambalam";
+    Q.pres_result_3_party = "ACTC";
+    Q.pres_result_3_votes = 2.67;
+    Q.pres_result_3_color = '#FDCC01';
+    Q.pres_result_3_endorsers = "";
+    Q.pres_result_4_candidate = "Colvin R. de Silva";
+    Q.pres_result_4_party = "LSSP";
+    Q.pres_result_4_votes = 0.90;
+    Q.pres_result_4_color = '#A91101';
+    Q.pres_result_4_endorsers = "";
+    Q.pres_result_5_candidate = "Vasudeva Nanayakkara";
+    Q.pres_result_5_party = "NSSP";
+    Q.pres_result_5_votes = 0.26;
+    Q.pres_result_5_color = '#FF8080';
+    Q.pres_result_5_endorsers = "";
 !}
-go-to: election_presidential_algorithm
 
+= Presidential Election Results
+
+**Voter Turnout:** 81.06%
+
+{!<svg id="election-results-map" viewBox="0 0 450 850" width="280" height="530" style="display:block; margin:auto; border: 3px solid #3B3B3B;">
+  <style>
+    .election-district { stroke: #000000; stroke-width: 2px; }
+  </style>
+
+  <text x="225" y="833" text-anchor="middle" font-size="18" fill="#333">Districts colored by winning party</text>
+
+  <path class="election-district" style="fill: #006400;" d="m 223.16712,369.89075 3.02,2.4 0.25,0.99 ..."/>
+
+  <path class="election-district" style="fill: !}"#006400"{!;" d="m 223.16712,369.89075 3.02,2.4 0.25,0.99 0.41,-0.6 1.03,0.76 -0.22,5.37 1.91,1.17 2.15,0.37 0.11,-3.23 3.17,-1.4 1.14,0.53 1.03,1.94 2.91,-0.18 2.68,1.92 -3.88999,1.71 -0.86001,2.9 -2.04,3.12 -1.96,12.49 0.23001,2.17 -1.75,6.06 -1.79001,0.95 0.43,2.5 -2,0.97 -0.81999,-1.12 -2.58001,0.67 -1.54,2.05 0.95,1.08 -0.42,10.67 2.15001,6.48 -0.94,2.31 -1.77001,-1.03 3.58001,3.57 5.24,-0.34 0.89999,1.6 2.34,-1.65 3.23,-0.29 1.01,-2.22 2.25,-1.78 0.49,2.06 1.08,0.63 1.9,-0.35 1.34,1.99 1.34,-7.16 4.62,-0.15 4.3,1.53 2.97,-1.08 7.59,-0.5 1.79,-1.13 0,0 0.71,4.64 -1.03,2 1.06,2.25 0.38,3.28 -2.62,3.68 -0.76,3.69 0,0 0.27,2.67 -0.84,2.86 0.41001,2.49 -1.08,3.77 0.5,15.83 0,0 -2.89,-0.33 -2.91,0.66 -2.45,-0.55 -0.23,1.59 -1.95,1.57 -0.86001,2.47 -1.75,-0.71 -0.61,1.29 -1.72,-3.28 -2.29,0.32 -1.73,1.56 -3.09,-1.87 -2.53,0.46 -2.1,1.89 -3.9,0.65 -2.72,2.49 0.3,1.51 -1.32,0.26 -2.33,2.23 -2.35,-0.47 -0.95,-1.58 -1.99,-0.75 -0.67,-1.43 -1.48,0.02 -2.65,-2.99 -1.55,-0.24 0.09,-1.41 -1.05,-0.6 -5.36,3.48 2.22,6.31 -1.09,2.41 -0.15,3.82 -1.54,1.66 -5.47,0.59 -3.47,-0.11 -2.61,-2.42 -3.3,-1.07 -2.05,-2.52 -2.95,-1.27 -1.3,-1.52 -1.15,-0.02 -1.79,-2.11 -1.15,-0.35 -0.25,-2.67 -1.27,-0.79 0,0 -0.31,-2.33 1.12,-1.62 1.1,0.07 -0.86,-1.75 0.43,-4.47 -0.9,-0.73 0.1,-0.81 -1.3,0.19 0.46,-1.69 -1.57,-2.77 -1.08,-0.37 0.48,-1.11 -0.49,-1.36 2.24,-4.46 2.22,-0.62 -1.06,-3.96 1.47,-2.46 -1.93,-2.19 -0.33,-2.45 -1.96,-0.66 -1.2,-1.66 -0.77,-3.85 1.34,-0.61 0.16,-1.24 -0.89,-2.35 -0.14,-4.94 -2.33,-0.52 0.11,-5.75 -3.44,-4.68 -0.41,-2.49 -2.86,-0.22 -1.43,-1.88 -0.32,-5.1 0.94,-1.37 0,0 0.18,-2.22 4.93,-0.25 8.22,-4.37 2.17,-3.93 2.87,0.24 0.58,1.83 1.36,0.48 3.24,-2.59 1.38,0 0.03,-2.84 3.24,-1.19 -1.32,-2.36 4.37,-3.05 -0.24,-6.35 0.72,-0.34 0.45,-2.37 1.98,-0.68 2.77,1.36 4.75,-7.1 1.44,0.06 1.22,-1.51 z"/>
+
+</svg>!}
+
+
+**National Results:**
+
+{!<table style="text-align:left; border-spacing: 0.5em;">!}
+{!<tr><th>Candidate</th><th>Party</th><th>Vote %</th><th>Supporting Parties</th></tr>!}
+
+[? if pres_results_count >= 1 : {!<tr><td>!}[+ pres_result_0_candidate +]{!</td><td><span style="color:!}[+ pres_result_0_color +]{!;">!}**[+ pres_result_0_party +]**{!</span></td><td>!}**[+ pres_result_0_votes +]%**{!</td><td>!}[+ pres_result_0_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 2 : {!<tr><td>!}[+ pres_result_1_candidate +]{!</td><td><span style="color:!}[+ pres_result_1_color +]{!;">!}[+ pres_result_1_party +]{!</span></td><td>!}[+ pres_result_1_votes +]%{!</td><td>!}[+ pres_result_1_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 3 : {!<tr><td>!}[+ pres_result_2_candidate +]{!</td><td><span style="color:!}[+ pres_result_2_color +]{!;">!}[+ pres_result_2_party +]{!</span></td><td>!}[+ pres_result_2_votes +]%{!</td><td>!}[+ pres_result_2_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 4 : {!<tr><td>!}[+ pres_result_3_candidate +]{!</td><td><span style="color:!}[+ pres_result_3_color +]{!;">!}[+ pres_result_3_party +]{!</span></td><td>!}[+ pres_result_3_votes +]%{!</td><td>!}[+ pres_result_3_endorsers +]{!</td></tr>!} ?]
+[? if pres_results_count >= 5 : {!<tr><td>!}[+ pres_result_4_candidate +]{!</td><td><span style="color:!}[+ pres_result_4_color +]{!;">!}[+ pres_result_4_party +]{!</span></td><td>!}[+ pres_result_4_votes +]%{!</td><td>!}[+ pres_result_4_endorsers +]{!</td></tr>!} ?]
+
+{!</table>!}
 
 @1983
 go-to: election_presidential_algorithm

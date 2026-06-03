@@ -516,7 +516,7 @@ img.inline-img.icon {
 }
 
 #music-controls {
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
     z-index: 51;
@@ -532,7 +532,7 @@ img.inline-img.icon {
 }
 
 #music-controls:hover {
-    background:rgb(177, 177, 177);
+    background:rgb(214, 214, 214);
 }
 
 #volume-slider {

@@ -338,7 +338,7 @@ Q.eprlf_pres_endorsement = '';
 //presidential election variables
 //default candidates
 Q.slfp_pres_candidate = 'Hector Kobbekaduwa';
-Q.unp_pres_candidate = 'JR Jayawardene';
+Q.unp_pres_candidate = 'JR Jayewardene';
 Q.jvp_pres_candidate = 'Rohana Wijeweera';
 Q.cpsl_pres_candidate = 'Pieter Keuneman';
 Q.lssp_pres_candidate = 'Colvin R. de Silva';
@@ -399,7 +399,7 @@ Q.slfp_pres_victory = 0;
 Q.n_pres_elections = 0;
 
 
-Q.unp_leader = "JR Jayawardene";
+Q.unp_leader = "JR Jayewardene";
 Q.slfp_leader = "Sirimavo Bandaranaike";
 Q.slfp_parliament_leader = "Anura Bandaranaike";
 Q.jvp_leader = "Rohana Wijeweera";
@@ -1535,7 +1535,7 @@ Q.party_support_records = [];
 Q.economic_records = [];
 
 // State of the government
-Q.president = "JR Jayawardene";
+Q.president = "JR Jayewardene";
 Q.president_party = "UNP";
 // starting prime_minister: Ranasinghe Premadasa
 Q.prime_minister = "Ranasinghe Premadasa";
@@ -1567,7 +1567,7 @@ Q.president_tension = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-Q.defence_minister = 'JR Jayawardene';
+Q.defence_minister = 'JR Jayewardene';
 Q.defence_minister_party = 'UNP';
 Q.justice_minister = 'Nissanka Wijeyeratne';
 Q.justice_minister_party = 'UNP';
@@ -1585,7 +1585,7 @@ Q.labour_minister = 'C. P. J. Seneviratne';
 Q.labour_minister_party = 'UNP';
 Q.social_minister = 'Asoka Karunaratne';
 Q.social_minister_party = 'UNP';
-Q.economic_minister = 'JR Jayawardene';
+Q.economic_minister = 'JR Jayewardene';
 Q.economic_minister_party = 'UNP';
 Q.culture_minister = 'E. L. B. Hurulle';
 Q.culture_minister_party = 'UNP';
