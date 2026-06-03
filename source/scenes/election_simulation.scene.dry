@@ -143,9 +143,8 @@ on-arrival:{!
 
 {!<tr><th>Choice</th><th>Supporting Parties</th><th>Vote %</th></tr>!}
 
-{!<tr><td>Yes</td><td><span style="color: #006400;">UNP, CWC</span></td><td>54.66%</td></tr>!} 
-{!<tr><td>No</td><td><span style="color: #fd0101;">SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC</span></td><td>45.34%</td></tr>!} 
-
+{!<tr><td><span style="color: #006400;">Yes</span></td><td><span>UNP, CWC</span></td><td>54.66%</td></tr>!}
+{!<tr><td><span style="color: #fd0101;">No</span></td><td><span>SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC</span></td><td>45.34%</td></tr>!}
 {!</table>!}
 
 
