@@ -374,6 +374,7 @@ Q.sinhala_nationalism_disp = Math.round(Q.sinhala_nationalism);
 Q.tamil_nationalism_disp = Math.round(Q.tamil_nationalism);
 Q.gov_support_disp = Math.round(Q.gov_support);
 
+= Polls
 
 !}
 
@@ -651,7 +652,7 @@ Support for the government: [+ gov_support_disp +]%
 
 </div>
 
-= Classes
+= Class:
 
 <div id="class_table" onmouseover="scrollhor('class_table');" style="overflow-y: scroll;">
 

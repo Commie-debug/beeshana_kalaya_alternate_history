@@ -151,16 +151,13 @@ on-arrival:{!
 @1989
 on-arrival: {!
     //hardbaked historical metrics from the 1989 election
-    Q.parl_turnout = 63.6;
-    Q.total_seats_distributed = 225;
-    Q.majority_needed = 113;
 
     var _newData = [];
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
 
-    _addP('usa',   'USA (SLMP)',  3);
+    _addP('usa',   'USA',  3);
     _addP('slfp',  'SLFP',        67);
     _addP('mep',   'MEP',         3);
     _addP('slmc',  'SLMC',        4);
@@ -179,19 +176,11 @@ on-arrival: {!
     } else {
         window._parliAnimate = false;
     }
-
-    Q.unp_votes_pct = "50.7";
-    Q.slfp_votes_pct = "31.9";
-    Q.eros_votes_pct = "4.1";
-    Q.slmc_votes_pct = "3.6";
-    Q.mep_votes_pct = "1.6";
 !}
 
 = 1989 Parliamentary Election Results
 
-**Voter Turnout:** [+ parl_turnout +]%
-
-Voter turnout stabilized at expected operational parameters despite active local disruptions and boycott actions.
+**Voter Turnout:** 63.6%
 
 {!<svg id="status_parliament" style="width: 100%; height: 240px; display: block; margin: 0 auto;"></svg>
 <script>
@@ -211,32 +200,32 @@ Voter turnout stabilized at expected operational parameters despite active local
 })();
 </script>!}
 
-**Parliament Composition ([+ total_seats_distributed +] seats)**
+**Parliament Composition (225 seats)**
 
 {!<table>!}
-{!<tr><td>Party / Coalition Grouping</td><td>Seats</td><td>Vote %</td><td></td></tr>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#006400'> </div> !} UNP {!</td><td>!} 125 {!</td><td>!} [+ unp_votes_pct +]% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 125 {!</td><td>!} 50.71% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} **SLFP** {!</td><td>!} **67** {!</td><td>!} **31.90%** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #FF2400'> </div> !} EROS {!</td><td>!} 13 {!</td><td>!} 4.11% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #2DCF3E'> </div> !} SLMC {!</td><td>!} 4 {!</td><td>!} 3.61% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #FF3915'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 1.63% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#00008B; outline: 2px; outline-style: solid;'> </div> !} **SLFP** {!</td><td>!} **67** {!</td><td>!} **[+ slfp_votes_pct +]%** {!</td><td></td></tr>!}
+{!<tr style="background-color: transparent;"><td><strong>Tamil United Liberation Front Alliance</strong></td><td><strong></strong></td><td><strong>3.37%</strong></td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF4500'> </div> !} EPRLF {!</td><td>!} 7 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #F7D917'> </div> !} TULF {!</td><td>!} 2 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF5E5E'> </div> !} ENDLF {!</td><td>!} 1 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #893F45'> </div> !} TELO {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FF2400'> </div> !} EROS {!</td><td>!} 13 {!</td><td>!} [+ eros_votes_pct +]% {!</td><td></td></tr>!}
+{!<tr style="background-color: transparent;"><td><strong>United Socialist Alliance (USA)</strong></td><td><strong></strong></td><td><strong>2.86%</strong></td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #663399'> </div> !} SLMP {!</td><td>!} 3 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF8080'> </div> !} NSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td><strong>Tamil United Liberation Front Alliance</strong></td><td><strong></strong></td><td><strong>%</strong></td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#FF4500'> </div> !} EPRLF {!</td><td>!} 7 {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#F7D917'> </div> !} TULF {!</td><td>!} 2 {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#FF5E5E'> </div> !} ENDLF {!</td><td>!} 1 {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#893F45'> </div> !} TELO {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#2DCF3E'> </div> !} SLMC {!</td><td>!} 4 {!</td><td>!} [+ slmc_votes_pct +]% {!</td><td></td></tr>!}
-
-{!<tr style="background-color: transparent;"><td><strong>United Socialist Alliance (USA)</strong></td><td><strong></strong></td><td><strong>%</strong></td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#663399'> </div> !} SLMP {!</td><td>!} 3 {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#65000B'> </div> !} CPSL {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#A91101'> </div> !} LSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#FF8080'> </div> !} NSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#FF3915'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} [+ mep_votes_pct +]% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} ULPP{!</td><td>!} 0 {!</td><td>!} 1.21% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #CE2029'> </div> !} DPLF {!</td><td>!} 0 {!</td><td>!} 0.33% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC{!</td><td>!} 0 {!</td><td>!} 0.14% {!</td><td></td></tr>!}
 
 {!</table>!}
 
