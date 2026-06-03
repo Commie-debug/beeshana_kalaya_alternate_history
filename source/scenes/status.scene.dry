@@ -6,6 +6,7 @@ var _newData = [];
 function _addP(id, legend, seats) {
     if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
 }
+
 _addP('slfp', 'SLFP', Q.slfp_r);
 _addP('slpp', 'SLPP', Q.slpp_r);
 _addP('slmp', 'SLMP', Q.slmp_r);
