@@ -198,17 +198,21 @@ on-display: {!
 {!<table>!}
 {!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 125 {!</td><td>!} 50.71% {!</td><td></td></tr>!}
+{!<tr style="background-color: transparent;"><td><strong>UNP & CWC</strong></td><td><strong></strong></td><td><strong>50.71%</strong></td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 121 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #E52B50'> </div> !} CWC {!</td><td>!} 4 {!</td><td>!} -% {!</td><td></td></tr>!}
+
 {!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} **SLFP** {!</td><td>!} **67** {!</td><td>!} **31.90%** {!</td><td></td></tr>!}
 {!<tr><td><div class="box" style='background-color: #FF2400'> </div> !} EROS {!</td><td>!} 13 {!</td><td>!} 4.11% {!</td><td></td></tr>!}
-{!<tr><td><div class="box" style='background-color: #2DCF3E'> </div> !} SLMC {!</td><td>!} 4 {!</td><td>!} 3.61% {!</td><td></td></tr>!}
-{!<tr><td><div class="box" style='background-color: #FF3915'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 1.63% {!</td><td></td></tr>!}
 
 {!<tr style="background-color: transparent;"><td><strong>TULF-led alliance</strong></td><td><strong></strong></td><td><strong>3.37%</strong></td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF4500'> </div> !} EPRLF {!</td><td>!} 7 {!</td><td>!} -% {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #F7D917'> </div> !} TULF {!</td><td>!} 2 {!</td><td>!} -% {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF5E5E'> </div> !} ENDLF {!</td><td>!} 1 {!</td><td>!} -% {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #893F45'> </div> !} TELO {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #2DCF3E'> </div> !} SLMC {!</td><td>!} 4 {!</td><td>!} 3.61% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #FF3915'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 1.63% {!</td><td></td></tr>!}
 
 {!<tr style="background-color: transparent;"><td><strong>United Socialist Alliance</strong></td><td><strong></strong></td><td><strong>2.86%</strong></td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #663399'> </div> !} SLMP {!</td><td>!} 3 {!</td><td>!} -% {!</td><td></td></tr>!}
