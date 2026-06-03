@@ -9,73 +9,98 @@ set-jump: post_election
 
 @1982
 on-arrival: {!
-Q.workers = 46; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.parties = ['slfp', 'unp', 'jvp', 'actc', 'lssp', 'nssp'];
+Q.ethnic_weight = 0.6;
+Q.class_weight = 0.4;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+// All the values regarding individuals are purely hypotethical in order to replicate the national vote amounts as per the 1982 elections wikipedia page
+Q.slfp_pres_yes = 1;
+Q.slfp_pres_candidate = "Hector Kobbekaduwa";
+Q.unp_pres_yes = 1;
+Q.unp_pres_candidate = "J.R. Jayewardene";
+Q.jvp_pres_yes = 1;
+Q.jvp_pres_candidate = "Rohana Wijeweera";
+Q.actc_pres_yes = 1;
+Q.actc_pres_candidate = "Kumar Ponnambalam";
+Q.lssp_pres_yes = 1;
+Q.lssp_pres_candidate = "Colvin R. de Silva";
+Q.nssp_pres_yes = 1;
+Q.nssp_pres_candidate = "Vasudeva Nanayakkara";
+Q.cwc_pres_yes = 1;
+Q.cwc_pres_endorsement = "unp";
+Q.tulf_pres_yes = 0;
 
-// Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 65;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.sinhala_unp = 57;
+Q.sinhala_slfp = 37;
+Q.sinhala_jvp = 5;
+Q.sinhala_actc = 0;
+Q.sinhala_lssp = 1;
+Q.sinhala_nssp = 0;
+Q.sinhala_nonvoter = 10;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.sltamil_unp = 15;
+Q.sltamil_slfp = 5;
+Q.sltamil_jvp = 0;
+Q.sltamil_actc = 55;
+Q.sltamil_lssp = 2;
+Q.sltamil_nssp = 1;
+Q.sltamil_nonvoter = 50;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 0;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.itamil_unp = 20;
+Q.itamil_slfp = 60;
+Q.itamil_jvp = 0;
+Q.itamil_actc = 5;
+Q.itamil_lssp = 2;
+Q.itamil_nssp = 1;
+Q.itamil_nonvoter = 15;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.muslim_unp = 52;
+Q.muslim_slfp = 40;
+Q.muslim_jvp = 1;
+Q.muslim_actc = 2;
+Q.muslim_lssp = 1;
+Q.muslim_nssp = 1;
+Q.muslim_nonvoter = 10;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.other_unp = 45;
+Q.other_slfp = 35;
+Q.other_jvp = 5;
+Q.other_actc = 5;
+Q.other_lssp = 2;
+Q.other_nssp = 1;
+Q.other_nonvoter = 15;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 5;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 10;
+Q.upper_unp = 75;
+Q.upper_slfp = 18;
+Q.upper_jvp = 2;
+Q.upper_actc = 1;
+Q.upper_lssp = 1;
+Q.upper_nssp = 1;
+Q.upper_nonvoter = 5;
+
+Q.middle_unp = 62;
+Q.middle_slfp = 30;
+Q.middle_jvp = 4;
+Q.middle_actc = 1;
+Q.middle_lssp = 1;
+Q.middle_nssp = 1;
+Q.middle_nonvoter = 8;
+
+Q.workers_unp = 48;
+Q.workers_slfp = 42;
+Q.workers_jvp = 5;
+Q.workers_actc = 1;
+Q.workers_lssp = 2;
+Q.workers_nssp = 1;
+Q.workers_nonvoter = 12;
+
+Q.rural_unp = 42;
+Q.rural_slfp = 50;
+Q.rural_jvp = 4;
+Q.rural_actc = 1;
+Q.rural_lssp = 1;
+Q.rural_nssp = 1;
+Q.rural_nonvoter = 12;
 !}
 go-to: election_algorithm
 set-jump: post_election

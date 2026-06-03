@@ -1,58 +1,114 @@
 title: Election
 on-arrival: {!
-// calculate normalized class voting amounts (0 to 100)
-for (var c of Q.classes) {
-    var class_votes = 0;
+
+var ethnic_groups = ['sinhala', 'sltamil', 'itamil', 'muslim', 'other'];
+var class_groups = ['upper', 'middle', 'worker', 'rural'];
+
+var ethnic_weight = Q.ethnic_weight || 0.6;
+var class_weight = Q.class_weight || 0.4;
+
+// normalize ethnic support
+for (var ethnic of ethnic_groups) {
+    var ethnic_total = 0;
+    var nonvoter = Q[ethnic + '_nonvoter'] || 0;
+    if (nonvoter < 0) nonvoter = 0;
+    ethnic_total += nonvoter;
     for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
-        class_votes += Q[c+'_'+party];
+        var support = Q[ethnic + '_' + party] || 0;
+        if (support < 0) support = 0;
+        ethnic_total += support;
     }
+    Q[ethnic + '_nonvoter_norm'] = (ethnic_total > 0) ? nonvoter / ethnic_total : 0;
     for (var party of Q.parties) {
-        Q[c + '_' + party + '_normalized'] = 100*Q[c+'_'+party]/class_votes;
-        Q[c + '_' + party + '_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
+        var support = Q[ethnic + '_' + party] || 0;
+        if (support < 0) support = 0;
+        Q[ethnic + '_' + party + '_norm'] = (ethnic_total > 0) ? support / ethnic_total : 0;
     }
 }
 
-// 1. calculate support for each of the parties
+// normalize class support
+var class_var_map = { 'upper': 'upper', 'middle': 'middle', 'worker': 'workers', 'rural': 'rural' };
+for (var cls of class_groups) {
+    var class_total = 0;
+    var cls_var = class_var_map[cls];
+    var nonvoter = Q[cls_var + '_nonvoter'] || 0;
+    if (nonvoter < 0) nonvoter = 0;
+    class_total += nonvoter;
+    for (var party of Q.parties) {
+        var support = Q[cls_var + '_' + party] || 0;
+        if (support < 0) support = 0;
+        class_total += support;
+    }
+    Q[cls + '_nonvoter_norm'] = (class_total > 0) ? nonvoter / class_total : 0;
+    for (var party of Q.parties) {
+        var support = Q[cls_var + '_' + party] || 0;
+        if (support < 0) support = 0;
+        Q[cls + '_' + party + '_norm'] = (class_total > 0) ? support / class_total : 0;
+    }
+}
+
+// national demographic composition
+var national_ethnic = {
+    'sinhala': Q.national_sinhala || 74,
+    'sltamil': Q.national_sltamil || 11,
+    'itamil':  Q.national_itamil  || 5,
+    'muslim':  Q.national_muslim  || 7,
+    'other':   Q.national_other   || 3
+};
+var national_class = {
+    'upper':  Q.national_upper  || 5,
+    'middle': Q.national_middle || 20,
+    'worker': Q.national_worker || 35,
+    'rural':  Q.national_rural  || 40
+};
+
+// calculate nonvoter rate
+var national_nonvoter_ethnic = 0;
+for (var ethnic of ethnic_groups) {
+    national_nonvoter_ethnic += (national_ethnic[ethnic] / 100) * (Q[ethnic + '_nonvoter_norm'] || 0);
+}
+var national_nonvoter_class = 0;
+for (var cls of class_groups) {
+    national_nonvoter_class += (national_class[cls] / 100) * (Q[cls + '_nonvoter_norm'] || 0);
+}
+var nonvoter_rate = (ethnic_weight * national_nonvoter_ethnic) + (class_weight * national_nonvoter_class);
+Q.pres_turnout = Math.round((1 - nonvoter_rate) * 1000) / 10;
+
+// calculate party support
+var party_support = {};
 var total_support = 0;
 for (var party of Q.parties) {
-    var party_support = 0;
-    for (var c of Q.classes) {
-        // but this version is somewhat more entertaining and allows for wilder swings in votes.
-        // the other option basically necessitates a multi-class strategy. while the first option allows for a working-class-only strategy.
-        if (Q.old_demographics) {
-            // okay i'm pretty sure this is wrong, and the hard version is correct
-            // basically this allows for "spillover" effects in other demographics.
-            // so you can campaign among say the workers and 
-            party_support += Q[c]*Q[c+'_'+party];
-            // However, there should be a cap on how much party support you can get in a certain demo.
-        } else  {
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        }
+    var ethnic_support = 0;
+    for (var ethnic of ethnic_groups) {
+        ethnic_support += (national_ethnic[ethnic] / 100) * (Q[ethnic + '_' + party + '_norm'] || 0);
     }
-    Q[party + '_support'] = party_support;
-    total_support += party_support;
+    var class_support = 0;
+    for (var cls of class_groups) {
+        class_support += (national_class[cls] / 100) * (Q[cls + '_' + party + '_norm'] || 0);
+    }
+    party_support[party] = (ethnic_weight * ethnic_support) + (class_weight * class_support);
+    total_support += party_support[party];
 }
-// 2. normalize support (fraction)
-// 3. Round to integers
-// TODO: round to 1 decimal instead of rounding to integers
-// to do that, we multiply party_normalized*1000 and divide the rounded number by 10.
+
+// convert to vote percentages
 for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    Q[party+'_votes_dec'] = Math.round(Q[party+'_normalized']*1000)/10;
-    if (Q.use_decimals) {
-        Q[party+'_votes'] = Q[party+'_votes_dec'];
-        Q[party + '_votes_disp'] = Q[party+'_votes'];
-    } else {
-        Q[party+'_votes'] = Math.round(Q[party+'_normalized']*100);
-        Q[party + '_votes_disp'] = Q[party+'_votes_dec'].toFixed(1);
-    }
-    //Q[party+'_votes'] = Q[party+'_votes_dec'];
-    // display
+    var votes = (total_support > 0) ? Math.round((party_support[party] / total_support) * 1000) / 10 : 0;
+    Q[party + '_votes'] = votes;
+    Q[party + '_votes_disp'] = votes.toFixed(1);
 }
+
+// sort results
+var results = [];
+for (var party of Q.parties) {
+    results.push({ party: party, votes: Q[party + '_votes'] });
+}
+results.sort(function(a, b) { return b.votes - a.votes; });
+
+Q.sim_first_party = results[0] ? results[0].party.toUpperCase() : '';
+Q.sim_first_votes = results[0] ? results[0].votes : 0;
+Q.sim_second_party = results[1] ? results[1].party.toUpperCase() : '';
+Q.sim_second_votes = results[1] ? results[1].votes : 0;
+
 !}
 go-to: jumpScene
 
-# note: this is a helpful utility to deal with elections and so on.
