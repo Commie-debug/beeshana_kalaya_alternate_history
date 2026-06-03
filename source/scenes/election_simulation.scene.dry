@@ -193,7 +193,7 @@ on-display: {!
 
 **Parliament Composition (225 seats)**
 
-{!<svg id="status_parliament" style="width: 100%; height: 225px; display: block; margin: 0 auto;"></svg>!}
+{!<svg id="status_parliament" style="width: 100%; height: 200px; display: block; margin: 0 auto;"></svg>!}
 
 {!<table>!}
 {!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
