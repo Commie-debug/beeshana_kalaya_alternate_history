@@ -374,9 +374,9 @@ Q.sinhala_nationalism_disp = Math.round(Q.sinhala_nationalism);
 Q.tamil_nationalism_disp = Math.round(Q.tamil_nationalism);
 Q.gov_support_disp = Math.round(Q.gov_support);
 
-= Polls
-
 !}
+
+= Polls
 
 Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
 
