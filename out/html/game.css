@@ -520,7 +520,7 @@ img.inline-img.icon {
     top: 10px;
     left: 10px;
     z-index: 51;
-    background: #f3f3f368;
+    background: #f3f3f367 !important;
     border: 2px solid #555;
     border-radius: 8px;
     padding: 6px;
