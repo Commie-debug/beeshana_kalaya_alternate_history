@@ -103,7 +103,7 @@ Q.rural_nssp = 1;
 Q.rural_nonvoter = 12;
 !}
 go-to: election_presidential_algorithm
-set-jump: post_election
+
 
 @1983
 on-arrival: {!
@@ -184,8 +184,8 @@ Q.dnvp_r = 14;
 Q.nsdap_r = 10;
 Q.other_r = 5;
 !}
-go-to: election_algorithm
-set-jump: post_election
+go-to: election_presidential_algorithm
+
 
 @1989
 on-arrival: {!
@@ -266,8 +266,8 @@ Q.dnvp_r = 14;
 Q.nsdap_r = 10;
 Q.other_r = 5;
 !}
-go-to: election_algorithm
-set-jump: post_election
+go-to: election_parliament_algorithm
+
 
 @1988
 on-arrival: {!
@@ -348,80 +348,6 @@ Q.dnvp_r = 14;
 Q.nsdap_r = 10;
 Q.other_r = 5;
 !}
-go-to: election_algorithm
-set-jump: post_election
+go-to: go-to: election_presidential_algorithm
 
-@post_election
-on-arrival: {!
-// set congress proportion to votes
-Q.spd_r = Q.spd_votes;
-Q.z_r = Q.z_votes;
-Q.kpd_r = Q.kpd_votes;
-Q.ddp_r = Q.ddp_votes;
-Q.dvp_r = Q.dvp_votes;
-Q.dnvp_r = Q.dnvp_votes;
-Q.nsdap_r = Q.nsdap_votes;
-Q.other_r = Q.other_votes;
-
-// The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
-}
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
-}
-
-// coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r;
-// this is an absurd concept lol
-Q.united_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
-// aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-!}
-
-The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
- 
-**Election results:**
-
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]
-
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
-
-# 1928: 10, 1930: 13
-KPD: [+ kpd_r +]
-
-# 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]
-
-# 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
-
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
-
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
-
-# 1928: 9, 1930: 10
-Other: [+ other_r +]
-
-**Potential coalitions:**
-
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
-
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
-
-Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
-
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
 
