@@ -150,19 +150,16 @@ on-arrival:{!
 
 @1989
 on-arrival: {!
-    // Hardbaked historical metrics from the 1989 Sri Lankan Parliamentary Election
+    //hardbaked historical metrics from the 1989 election
     Q.parl_turnout = 63.6;
     Q.total_seats_distributed = 225;
     Q.majority_needed = 113;
 
-    // Constructing the dynamic visual matrix data array for the D3 Arc Graph representation
-    // Directly passing the exact historical seat numbers into the visualization array
     var _newData = [];
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
 
-    // Left-to-Right political layout logic order injection using exact seat counts
     _addP('usa',   'USA (SLMP)',  3);
     _addP('slfp',  'SLFP',        67);
     _addP('mep',   'MEP',         3);
@@ -183,12 +180,11 @@ on-arrival: {!
         window._parliAnimate = false;
     }
 
-    // Clear legacy change formatting string variables
-    Q.str_change_unp = "0";
-    Q.str_change_slfp = "0";
-    Q.str_change_eros = "0";
-    Q.str_change_slmc = "0";
-    Q.str_change_mep = "0";
+    Q.unp_votes_pct = "50.7";
+    Q.slfp_votes_pct = "31.9";
+    Q.eros_votes_pct = "4.1";
+    Q.slmc_votes_pct = "3.6";
+    Q.mep_votes_pct = "1.6";
 !}
 
 = 1989 Parliamentary Election Results
@@ -218,29 +214,29 @@ Voter turnout stabilized at expected operational parameters despite active local
 **Parliament Composition ([+ total_seats_distributed +] seats)**
 
 {!<table>!}
-{!<tr><td>Party / Coalition Grouping</td><td>Seats Won</td><td>Vote %</td><td>Change</td></tr>!}
+{!<tr><td>Party / Coalition Grouping</td><td>Seats</td><td>Vote %</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td><strong>United National Party (UNP)</strong></td><td><strong>125</strong></td><td><strong>50.7%</strong></td><td>[+ str_change_unp +]</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#006400'> </div> !} UNP {!</td><td>!} 125 {!</td><td>!} [+ unp_votes_pct +]% {!</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td><strong>Sri Lanka Freedom Party (SLFP)</strong></td><td><strong>67</strong></td><td><strong>31.9%</strong></td><td>[+ str_change_slfp +]</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#00008B; outline: 2px; outline-style: solid;'> </div> !} **SLFP** {!</td><td>!} **67** {!</td><td>!} **[+ slfp_votes_pct +]%** {!</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td><strong>Eelam Revolutionary Organisation of Students (EROS)</strong></td><td><strong>13</strong></td><td><strong>4.1%</strong></td><td>[+ str_change_eros +]</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FF2400'> </div> !} EROS {!</td><td>!} 13 {!</td><td>!} [+ eros_votes_pct +]% {!</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td colspan="4"><strong>Tamil United Liberation Front Alliance</strong></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#FF4500; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Eelam People's Revolutionary Liberation Front (EPRLF)</td><td>7</td><td>-</td><td>-</td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#F7D917; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Tamil United Liberation Front (TULF)</td><td>2</td><td>-</td><td>-</td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#FF5E5E; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Eelam National Democratic Liberation Front (ENDLF)</td><td>1</td><td>-</td><td>-</td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#893F45; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Tamil Eelam Liberation Organization (TELO)</td><td>0</td><td>-</td><td>-</td></tr>!}
+{!<tr style="background-color: transparent;"><td><strong>Tamil United Liberation Front Alliance</strong></td><td><strong></strong></td><td><strong>%</strong></td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#FF4500'> </div> !} EPRLF {!</td><td>!} 7 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#F7D917'> </div> !} TULF {!</td><td>!} 2 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#FF5E5E'> </div> !} ENDLF {!</td><td>!} 1 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#893F45'> </div> !} TELO {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td><strong>Sri Lanka Muslim Congress (SLMC)</strong></td><td><strong>4</strong></td><td><strong>3.6%</strong></td><td>[+ str_change_slmc +]</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#2DCF3E'> </div> !} SLMC {!</td><td>!} 4 {!</td><td>!} [+ slmc_votes_pct +]% {!</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td colspan="4"><strong>United Socialist Alliance (USA)</strong></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#663399; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Sri Lanka Mahajana Party (SLMP)</td><td>3</td><td>-</td><td>-</td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#65000B; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Communist Party of Sri Lanka (CPSL)</td><td>0</td><td>-</td><td>-</td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#A91101; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Lanka Sama Samaja Party (LSSP)</td><td>0</td><td>-</td><td>-</td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style="background-color:#FF8080; display:inline-block; width:12px; height:12px; margin-right:5px;"></div> Nava Sama Samaja Party (NSSP)</td><td>0</td><td>-</td><td>-</td></tr>!}
+{!<tr style="background-color: transparent;"><td><strong>United Socialist Alliance (USA)</strong></td><td><strong></strong></td><td><strong>%</strong></td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#663399'> </div> !} SLMP {!</td><td>!} 3 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#65000B'> </div> !} CPSL {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#A91101'> </div> !} LSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color:#FF8080'> </div> !} NSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
 
-{!<tr style="background-color: transparent;"><td><strong>Mahajana Eksath Peramuna (MEP)</strong></td><td><strong>3</strong></td><td><strong>1.6%</strong></td><td>[+ str_change_mep +]</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FF3915'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} [+ mep_votes_pct +]% {!</td><td></td></tr>!}
 
 {!</table>!}
 
