@@ -150,40 +150,26 @@ on-arrival:{!
 
 @1989
 on-arrival: {!
-    //hardbaked historical metrics from the 1989 election
-
     var _newData = [];
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
-
     _addP('usa',   'USA',  3);
-    _addP('slfp',  'SLFP',        67);
-    _addP('mep',   'MEP',         3);
-    _addP('slmc',  'SLMC',        4);
-    _addP('endlf', 'ENDLF',       1);
-    _addP('tulf',  'TULF',        2);
-    _addP('eprlf', 'EPRLF',       7);
-    _addP('eros',  'EROS',        13);
-    _addP('unp',   'UNP',         125);
-
+    _addP('slfp',  'SLFP', 67);
+    _addP('mep',   'MEP',  3);
+    _addP('slmc',  'SLMC', 4);
+    _addP('endlf', 'ENDLF',1);
+    _addP('tulf',  'TULF', 2);
+    _addP('eprlf', 'EPRLF',7);
+    _addP('eros',  'EROS', 13);
+    _addP('unp',   'UNP',  125);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
-    if (_changed) {
-        window._parliSig = _newSig;
-        window._parliAnimate = true;
-    } else {
-        window._parliAnimate = false;
-    }
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
 !}
-
-= 1989 Parliamentary Election Results
-
-**Voter Turnout:** 63.6%
-
-{!<svg id="status_parliament" style="width: 100%; height: 240px; display: block; margin: 0 auto;"></svg>
-<script>
+on-display: {!
 (function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
@@ -198,9 +184,15 @@ on-arrival: {!
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
 })();
-</script>!}
+!}
+
+= 1989 Parliamentary Election Results
+
+**Voter Turnout:** 63.6%
 
 **Parliament Composition (225 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 240px; display: block; margin: 0 auto;"></svg>!}
 
 {!<table>!}
 {!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
