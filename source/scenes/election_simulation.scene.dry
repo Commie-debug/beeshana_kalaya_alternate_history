@@ -102,7 +102,7 @@ Q.rural_lssp = 1;
 Q.rural_nssp = 1;
 Q.rural_nonvoter = 12;
 !}
-go-to: election_algorithm
+go-to: election_presidential_algorithm
 set-jump: post_election
 
 @1983
