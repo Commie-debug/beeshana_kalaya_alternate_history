@@ -650,6 +650,18 @@
             var ideologyText = getIdeologyText(Q.ucpf_ideology);
             return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
         }
+
+        if (searchString === 'ULPP' && Q.ulpp_relation !== undefined) {
+            var relationText = getRelationshipText(Q.ulpp_relation);
+            var ideologyText = getIdeologyText(Q.ulpp_ideology);
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+        }
+
+        if (searchString === 'DUNF' && Q.dunf_relation !== undefined) {
+            var relationText = getRelationshipText(Q.dunf_relation);
+            var ideologyText = getIdeologyText(Q.dunf_ideology);
+            return baseTooltip.explanationText + '<br>Ideology: ' + ideologyText + '<br>Relation: ' + relationText;
+        }
         
         if (searchString === 'CPSL' && Q.cpsl_relation !== undefined) {
             var relationText = getRelationshipText(Q.cpsl_relation);
