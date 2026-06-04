@@ -552,6 +552,10 @@ const tooltipList = [{
     searchString: "SAARC",
     explanationText: "<img src=img/logos/SAARC_Logo.png> South Asian Association <br> for Regional Cooperation"
     },
+    {
+    searchString: "PLO",
+    explanationText: "<img src=img/logos/PLO_Logo.png> Palestine Liberation Organization"
+    },
 ];
 
 
