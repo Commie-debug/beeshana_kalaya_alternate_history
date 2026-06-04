@@ -1252,25 +1252,23 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 1 and week = 1 : The Republic of Palau is declared in Micronesia. ?]
 
-[? if year = 1981 and month = 1 and week = 1 : Iranian forces have begun a counterattack on Iraqi forces near Dezful and Sousangerd attempting to push them out of Iran. ?]
+[? if year = 1981 and month = 1 and week = 1 : Iranian forces have begun a counterattack on Iraqi positions near Dezful and Sousangerd in an attempt to push them out of Iran, the Iraqi invasion of Iran is on its 4th month. ?]
 
-[? if year = 1981 and month = 1 and week = 1 : FMLN forces seized radio stations in El Salvador's capital San Salvador in a large escalation in a nearly 2 year long insurgency. ?]
+[? if year = 1981 and month = 1 and week = 1 : FMLN forces seized radio stations in El Salvador's capital San Salvador in a large escalation in a nearly 2 year long insurgency by the Soviet backed insurgents against the nations military junta. ?]
 
 [? if year = 1981 and month = 1 and week = 3 : The Iran Hostage Crisis ends after 444 days as American hostages are released from Tehran. ?]
 
-[? if year = 1981 and month = 1 and week = 3 : Ronald Reagan is inaugurated as President of the United States. ?]
+[? if year = 1981 and month = 1 and week = 3 : Ronald Reagan is inaugurated as the 40th President of the United States of America. ?]
 
-[? if year = 1981 and month = 2 and week = 1 : Spanish parliament is stormed by armed officers in an attempted military coup as the nation transitions to democracy. ?]
+[? if year = 1981 and month = 2 and week = 1 : Spanish parliament is stormed by armed officers in an attempted military coup. ?]
 
 [? if year = 1981 and month = 2 and week = 3 : Greece formally joins the European Economic Community as its tenth member state. ?]
 
-[? if year = 1981 and month = 3 and week = 1 : Martial law is declared in Poland as the government attempts to contain the growing Solidarity trade union movement. ?]
-
 [? if year = 1981 and month = 3 and week = 3 : US President Ronald Reagan survives an assassination attempt outside the Washington Hilton Hotel. ?]
 
-[? if year = 1981 and month = 4 and week = 1 : Bobby Sands begins a hunger strike in Northern Ireland demanding reinstatement of political prisoner status for Irish republican prisoners. ?]
+[? if year = 1981 and month = 4 and week = 1 : A hunger strike by prisoners begins in Northern Ireland demanding reinstatement of political prisoner status for Irish republican prisoners. ?]
 
-[? if year = 1981 and month = 4 and week = 3 : The first Space Shuttle mission launches successfully with Columbia completing two days in orbit before landing in California. ?]
+[? if year = 1981 and month = 4 and week = 3 : The first Space Shuttle mission launches successfully with the Columbia completing two days in orbit before landing in California. ?]
 
 [? if year = 1981 and month = 5 and week = 1 : Pope John Paul II is shot and seriously wounded in an assassination attempt at St Peter's Square. ?]
 
@@ -1304,15 +1302,15 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 12 and week = 3 : First Secretary of the Polish United Workers Party, Wojciech Jaruzelski declares martial law in Poland. ?]
 
-[? if year = 1982 and month = 1 and week = 1 : The United States imposes new sanctions on the Soviet Union over events in Poland. ?]
+[? if year = 1982 and month = 1 and week = 1 : The United States imposes new sanctions on the Soviet Union over recent events in Poland. ?]
 
 [? if year = 1982 and month = 1 and week = 3 : The breakup of American telecommunications giant AT&T is announced following a landmark antitrust settlement. ?]
 
-[? if year = 1982 and month = 2 and week = 1 : Syrian government forces massacre thousands of civilians in the city of Hama while suppressing a Muslim Brotherhood uprising. ?]
+[? if year = 1982 and month = 2 and week = 1 : Syrian government forces massacre thousands of civilians in the city of Hama during the suppression of a Muslim Brotherhood uprising. ?]
 
 [? if year = 1982 and month = 2 and week = 3 : The unemployment rate in Britain reaches its highest level since the 1930s as recession deepens across the country. ?]
 
-[? if year = 1982 and month = 3 and week = 1 : El Salvador holds elections under ongoing civil war conditions as the United States backs the government against FMLN guerrillas. ?]
+[? if year = 1982 and month = 3 and week = 1 : El Salvador holds elections under ongoing civil war conditions as the United States backs the government against FMLN insurgents. ?]
 
 [? if year = 1982 and month = 3 and week = 3 : Argentina's ruling military junta faces growing unrest and demonstrations in the capital Buenos Aires. ?]
 
@@ -1322,7 +1320,7 @@ Nationalists Dissent
 
 [? if year = 1982 and month = 5 and week = 1 : British nuclear submarine HMS Conqueror sinks the Argentine cruiser ARA General Belgrano during clashes in the Falklands. ?]
 
-[? if year = 1982 and month = 5 and week = 3 : British forces land at San Carlos Bay in the Falkland Islands opening a ground campaign against Argentine defenders. ?]
+[? if year = 1982 and month = 5 and week = 3 : British forces land at San Carlos Bay in the Falkland Islands opening a ground campaign against Argentine positions. ?]
 
 [? if year = 1982 and month = 6 and week = 1 : Israel invades Lebanon to expel the PLO from southern Lebanon. ?]
 
@@ -1332,9 +1330,9 @@ Nationalists Dissent
 
 [? if year = 1982 and month = 7 and week = 3 : The world's first commercial compact disc players go on sale in Japan produced by Sony. ?]
 
-[? if year = 1982 and month = 8 and week = 1 : The first commercial compact disc players go on sale in Japan, with Sony and Philips launching the new audio format simultaneously. ?]
+[? if year = 1982 and month = 8 and week = 1 : Sony and Philips launch a new audio format simultaneously. ?]
 
-[? if year = 1982 and month = 8 and week = 3 : PLO fighters evacuate Beirut under international supervision following the Israeli siege of the city. ?]
+[? if year = 1982 and month = 9 and week = 1 : PLO fighters evacuate Beirut under international supervision following the Israeli siege of the city. ?]
 
 [? if year = 1982 and month = 9 and week = 1 : Mexico announces it cannot meet its foreign debt obligations. ?]
 
@@ -1346,33 +1344,33 @@ Nationalists Dissent
 
 [? if year = 1982 and month = 11 and week = 1 : Yuri Andropov becomes General Secretary of the Communist Party of the Soviet Union following the death of previous General Secretary Leonid Brezhnev. ?]
 
-[? if year = 1982 and month = 11 and week = 3 : The Vietnam Veterans Memorial is dedicated in Washington D.C. to widespread emotional public response. ?]
+[? if year = 1982 and month = 11 and week = 3 : The Vietnam Veterans Memorial is dedicated in Washington D.C. ?]
 
-[? if year = 1982 and month = 12 and week = 1 : The world premiere of Gandhi is held in New Delhi with international attention focused on India's independence movement. ?]
+[? if year = 1982 and month = 12 and week = 1 : The world premiere of the autobiographical movie Gandhi is held in New Delhi. ?]
 
 [? if year = 1982 and month = 12 and week = 3 : The United States deploys the first Pershing II nuclear missiles to Western Europe prompting large anti-nuclear protests. ?]
 
 [? if year = 1983 and month = 1 and week = 1 : The ARPANET officially adopts TCP/IP protocols. ?]
 
-[? if year = 1983 and month = 1 and week = 3 : West German federal elections return Helmut Kohl's centre-right coalition to power with a strengthened majority. ?]
+[? if year = 1983 and month = 1 and week = 3 : West German federal elections returns Helmut Kohl's centre-right coalition to power with a strengthened majority. ?]
 
-[? if year = 1983 and month = 2 and week = 1 : Bushfires devastate the Australian states of Victoria and South Australia on Ash Wednesday killing over 70 people. ?]
+[? if year = 1983 and month = 2 and week = 1 : Bushfires devastate the Australian states of Victoria and South Australia on "Ash Wednesday" killing over 70 people. ?]
 
-[? if year = 1983 and month = 2 and week = 3 : The final episode of M*A*S*H airs in the United States to record television audiences. ?]
+[? if year = 1983 and month = 2 and week = 3 : The final episode of MASH airs in the United States to record television audiences. ?]
 
 [? if year = 1983 and month = 3 and week = 1 : Ronald Reagan publicly announces the Strategic Defense Initiative, a proposed US anti-ballistic missile system. ?]
 
 [? if year = 1983 and month = 3 and week = 3 : An estimated one million people march in cities across Western Europe in protests against the deployment of US nuclear missiles. ?]
 
-[? if year = 1983 and month = 4 and week = 1 : Harold Wilson, former British Prime Minister, dies in London at the age of 79. ?]
+[? if year = 1983 and month = 4 and week = 1 : Former British Prime Minister Harold Wilson dies in London at the age of 79. ?]
 
-[? if year = 1983 and month = 4 and week = 3 : A suicide bombing destroys the United States Embassy in Beirut killing dozens. ?]
+[? if year = 1983 and month = 4 and week = 3 : A suicide bombing hits the United States Embassy in Beirut killing dozens. ?]
 
-[? if year = 1983 and month = 5 and week = 1 : Margaret Thatcher wins re-election amid the patriotic surge following the Falklands War. ?]
+[? if year = 1983 and month = 5 and week = 1 : Margaret Thatcher wins re-election amid a patriotic surge following the Falklands War. ?]
 
 [? if year = 1983 and month = 5 and week = 3 : The newly discovered virus responsible for AIDS is officially named the Human Immunodeficiency Virus by international scientists. ?]
 
-[? if year = 1983 and month = 6 and week = 1 : Yuri Andropov is formally confirmed as head of state of the Soviet Union in addition to his role as party leader. ?]
+[? if year = 1983 and month = 6 and week = 1 : Yuri Andropov is formally confirmed as head of state of the Soviet Union in addition to his role as General Secretary. ?]
 
 [? if year = 1983 and month = 6 and week = 3 : Sally Ride becomes the first American woman in space aboard Space Shuttle Challenger. ?]
 
@@ -1398,15 +1396,15 @@ Nationalists Dissent
 
 [? if year = 1983 and month = 11 and week = 1 : Fighting erupts in Tripoli, Lebanon between members of the PLO. ?]
 
-[? if year = 1983 and month = 11 and week = 3 : Turkish Republic of Northern Cyprus declares independence from Turkish occupied Cyprus. ?]
+[? if year = 1983 and month = 11 and week = 3 : The Turkish Republic of Northern Cyprus declares independence from Turkish occupied Cyprus. ?]
 
 [? if year = 1983 and month = 12 and week = 1 : The United States deploys Pershing II nuclear missiles to West Germany. ?]
 
-[? if year = 1983 and month = 12 and week = 3 : Argentina returns to civilian democratic rule as Raul Alfonsin is inaugurated as president following years of military dictatorship. ?]
+[? if year = 1983 and month = 12 and week = 3 : Argentina returns to civilian rule as Raul Alfonsin is inaugurated as president following years of military dictatorship. ?]
 
 [? if year = 1984 and month = 1 and week = 1 : Brunei joins the Association of Southeast Asian Nations as its sixth member following independence from Britain. ?]
 
-[? if year = 1984 and month = 1 and week = 3 : Apple releases the Macintosh personal computer with a major international advertising campaign. ?]
+[? if year = 1984 and month = 1 and week = 3 : Apple releases the Macintosh personal computer. ?]
 
 [? if year = 1984 and month = 2 and week = 1 : CPSU General Secretary Yuri Andropov dies and is succeeded by Konstantin Chernenko. ?]
 
@@ -1420,17 +1418,15 @@ Nationalists Dissent
 
 [? if year = 1984 and month = 4 and week = 3 : The British government severs diplomatic relations with Libya following the fatal shooting of a policewoman outside the Libyan embassy in London. ?]
 
-[? if year = 1984 and month = 5 and week = 1 : Soviet officials announce they will boycott the Los Angeles Olympics. ?]
+[? if year = 1984 and month = 5 and week = 1 : Soviet officials announce that they will be boycotting the Los Angeles Olympics later in the year. ?]
 
 [? if year = 1984 and month = 5 and week = 3 : South Africa declares a state of emergency in the Vaal Triangle as anti-apartheid townships violence intensifies. ?]
 
 [? if year = 1984 and month = 6 and week = 1 : The Indian Army storms the Golden Temple in Amritsar following its occupation by Sikh militants. ?]
 
-[? if year = 1984 and month = 6 and week = 3 : Toxic chemical leaks from the Union Carbide plant in Bhopal, India, in what will become the world's worst industrial disaster. ?]
+[? if year = 1984 and month = 7 and week = 1 : Nicaragua's Sandinista government holds its first general election since the fall of the Somoza dynasty in mid 1979. Daniel Ortega of the FMLN returns to the presidency. ?]
 
-[? if year = 1984 and month = 7 and week = 1 : Nicaragua's Sandinista government holds its first general election since the revolution, returning Daniel Ortega to the presidency. ?]
-
-[? if year = 1984 and month = 7 and week = 3 : The Summer Olympics open in Los Angeles amid a large scale boycott led by the Soviet Union with other socialist and non-aligned nations. ?]
+[? if year = 1984 and month = 7 and week = 3 : The Summer Olympics open in Los Angeles amid a large scale boycott led by the Soviet Union with the support of other socialist and non-aligned nations. ?]
 
 [? if year = 1984 and month = 8 and week = 1 : Upper Volta is officially renamed to Burkina Faso by President Thomas Sankara. ?]
 
@@ -1446,17 +1442,17 @@ Nationalists Dissent
 
 [? if year = 1984 and month = 11 and week = 1 : Anti-Sikh riots erupt across northern India following the assassination of Indira Gandhi. ?]
 
-[? if year = 1984 and month = 11 and week = 3 : Pop musicians release the charity single Do They Know It's Christmas raising millions for Ethiopian famine relief. ?]
+[? if year = 1984 and month = 11 and week = 3 : Pop musicians release the charity single "Do They Know It's Christmas" raising millions for Ethiopian famine relief. ?]
 
 [? if year = 1984 and month = 12 and week = 1 : Toxic gas leaks from the Union Carbide pesticide plant in Bhopal, India killing thousands. ?]
 
-[? if year = 1984 and month = 12 and week = 3 : Rajiv Gandhi wins a landslide victory in Indian elections called following the assassination of his mother Indira Gandhi. ?]
+[? if year = 1984 and month = 12 and week = 3 : Rajiv Gandhi of the INC wins a landslide victory in Indian elections called early following the assassination of his mother Indira Gandhi. ?]
 
 [? if year = 1985 and month = 1 and week = 1 : The Soviet Union and the United States reopen arms control negotiations in Geneva Switzerland. ?]
 
 [? if year = 1985 and month = 1 and week = 3 : The British and French governments announce plans to construct a tunnel beneath the English Channel linking the two countries. ?]
 
-[? if year = 1985 and month = 2 and week = 1 : South African President P.W. Botha rejects calls to release Nelson Mandela and warns against interference in South African affairs. ?]
+[? if year = 1985 and month = 2 and week = 1 : South African President P.W. Botha rejects calls to release Nelson Mandela and warns against interference in South African internal affairs. ?]
 
 [? if year = 1985 and month = 2 and week = 3 : Hezbollah publicly announces its formation in Lebanon to fight against Israeli forces. ?]
 
@@ -1468,7 +1464,7 @@ Nationalists Dissent
 
 [? if year = 1985 and month = 4 and week = 3 : The Soviet Union announces a temporary freeze on the deployment of intermediate range nuclear missiles in Europe. ?]
 
-[? if year = 1985 and month = 5 and week = 1 : West Germany and Israel establish full diplomatic relations for the first time on the fortieth anniversary of the end of the Second World War. ?]
+[? if year = 1985 and month = 5 and week = 1 : West Germany and Israel establish full diplomatic relations for the first time on the fortieth anniversary of the end of the Second World War and the Holocaust. ?]
 
 [? if year = 1985 and month = 5 and week = 3 : A fire at Bradford City Stadium in England kills 56 football supporters. ?]
 
@@ -1478,7 +1474,7 @@ Nationalists Dissent
 
 [? if year = 1985 and month = 7 and week = 1 : French intelligence agents sink the Greenpeace vessel Rainbow Warrior in Auckland harbour, killing a photographer onboard. ?]
 
-[? if year = 1985 and month = 7 and week = 3 : Live Aid concerts are held in London and Philadelphia to raise money for famine relief in Ethiopia. ?]
+[? if year = 1985 and month = 7 and week = 3 : Further Live Aid concerts are held in London and Philadelphia to raise money for famine relief in Ethiopia. ?]
 
 [? if year = 1985 and month = 8 and week = 1 : Japanese Airlines Flight 123 crashes into Mount Takamagahara killing 520 people. ?]
 
@@ -1486,7 +1482,7 @@ Nationalists Dissent
 
 [? if year = 1985 and month = 9 and week = 1 : The wreck of the RMS Titanic is located on the floor of the North Atlantic by a joint American and French expedition. ?]
 
-[? if year = 1985 and month = 9 and week = 3 : A magnitude 8.0 earthquake devastates Mexico City, causing widespread building collapses. ?]
+[? if year = 1985 and month = 9 and week = 3 : A magnitude 8.0 earthquake devastates Mexico City, causing widespread building collapses and numerous casualties. ?]
 
 [? if year = 1985 and month = 10 and week = 1 : Palestinian militants hijack the Italian cruise liner Achille Lauro in the Mediterranean, killing an American passenger. ?]
 
@@ -1498,7 +1494,7 @@ Nationalists Dissent
 
 [? if year = 1985 and month = 12 and week = 1 : The General Agreement on Tariffs and Trade opens a new round of global trade negotiations in Punta del Este, Uruguay. ?]
 
-[? if year = 1985 and month = 12 and week = 3 : The first Internet domain name is registered as the commercial potential of computer networking begins to be recognised. ?]
+[? if year = 1985 and month = 12 and week = 3 : The first Internet domain name is registered ?]
 
 [? if year = 1986 and month = 1 and week = 1 : Spain and Portugal formally join the European Economic Community, expanding it to twelve member states. ?]
 
@@ -1508,13 +1504,11 @@ Nationalists Dissent
 
 [? if year = 1986 and month = 2 and week = 3 : Ferdinand Marcos flees the Philippines following a popular uprising against his long-term rule. ?]
 
-[? if year = 1986 and month = 3 and week = 1 : The Soviet Vega probes send back close images of Halley's Comet. ?]
+[? if year = 1986 and month = 3 and week = 1 : The Soviet Vega probes send back close-up images of Halley's Comet. ?]
 
 [? if year = 1986 and month = 3 and week = 3 : Corazon Aquino is inaugurated as President of the Philippines following the collapse of the Marcos regime. ?]
 
 [? if year = 1986 and month = 4 and week = 1 : The United States bombs targets in Tripoli and Benghazi, Libya following a series of terrorist attacks linked to Muammar Gaddafi. ?]
-
-[? if year = 1986 and month = 4 and week = 3 : The United States bombs targets in Tripoli and Benghazi, Libya. ?]
 
 [? if year = 1986 and month = 4 and week = 3 : Reactor Four at the Chernobyl Nuclear Power Plant explodes in Soviet Ukraine. ?]
 
@@ -1542,9 +1536,9 @@ Nationalists Dissent
 
 [? if year = 1986 and month = 10 and week = 3 : Ronald Reagan and Mikhail Gorbachev meet in Iceland for the Reykjavík Summit. ?]
 
-[? if year = 1986 and month = 11 and week = 1 : The Iran–Contra affair becomes public after reports reveal secret US arms sales to Iran. ?]
+[? if year = 1986 and month = 11 and week = 1 : A new scandal geins in Washington after reports reveal secret US arms sales to Iran. ?]
 
-[? if year = 1986 and month = 11 and week = 3 : The Iran-Contra scandal deepens as it emerges profits from the arms sales were secretly funnelled to Nicaraguan rebels. ?]
+[? if year = 1986 and month = 11 and week = 3 : The Iran-Contra scandal deepens as it emerges profits from the arms sales to Iran were secretly funnelled to Nicaraguan "contra" rebels. ?]
 
 [? if year = 1986 and month = 12 and week = 1 : Soviet dissident Andrei Sakharov returns to Moscow after years of internal exile. ?]
 
@@ -1564,11 +1558,11 @@ Nationalists Dissent
 
 [? if year = 1987 and month = 4 and week = 1 : The United States Senate begins televised hearings into the Iran–Contra affair. ?]
 
-[? if year = 1987 and month = 4 and week = 3 : Gorbachev announces a programme of political openness known as Glasnost alongside his existing economic reform programme. ?]
+[? if year = 1987 and month = 4 and week = 3 : Gorbachev announces a programme of political openness known as Glasnost alongside his existing economic reform programme (Perestroika). ?]
 
-[? if year = 1987 and month = 5 and week = 1 : Military coup has been carried out in Fiji. ?]
+[? if year = 1987 and month = 5 and week = 1 : A military coup has been carried out in Fiji. ?]
 
-[? if year = 1987 and month = 5 and week = 3 : A West German teenager lands a small plane in Red Square in Moscow after flying undetected through Soviet air defences, causing a major scandal. ?]
+[? if year = 1987 and month = 5 and week = 3 : A West German teenager lands a small plane in Red Square in Moscow after flying undetected through Soviet air defences. ?]
 
 [? if year = 1987 and month = 6 and week = 1 : Margaret Thatcher wins a third consecutive general election securing another large Conservative majority in parliament. ?]
 
@@ -1578,31 +1572,31 @@ Nationalists Dissent
 
 [? if year = 1987 and month = 7 and week = 3 : An Iraqi missile attack on an American naval vessel in the Persian Gulf kills 37 sailors, straining US-Iraqi relations. ?]
 
-[? if year = 1987 and month = 8 and week = 1 : The Iran-Iraq War continues with both sides attacking civilian shipping in the Persian Gulf in what becomes known as the Tanker War. ?]
+[? if year = 1987 and month = 8 and week = 1 : The Iran-Iraq War continues with both sides attacking civilian shipping in the Persian Gulf in what is being dubbed, the "tanker war". ?]
 
 [? if year = 1987 and month = 8 and week = 3 : Rudolf Hess dies in Spandau Prison as the last imprisoned senior Nazi official. ?]
 
 [? if year = 1987 and month = 9 and week = 1 : The Montreal Protocol is signed by nations across the world committing to phase out chemicals responsible for destroying the ozone layer. ?]
 
-[? if year = 1987 and month = 9 and week = 3 : Palestinian protesters and "fedayeen" clash with Israeli forces in occupied Palestine escalate into a general "intifada". ?]
+[? if year = 1987 and month = 9 and week = 3 : Palestinian protesters and "fedayeen" clash with Israeli forces in the occupied Palestinian territories. ?]
 
-[? if year = 1987 and month = 10 and week = 1 : Powerful storms batter Britain and northern France causing widespread destruction in what becomes known as the Great Storm. ?]
+[? if year = 1987 and month = 10 and week = 1 : Powerful storms batter Britain and northern France causing widespread destruction in what is being dubbed the "Great Storm". ?]
 
 [? if year = 1987 and month = 10 and week = 1 : President of Burkina Faso, Thomas Sankara is assassinated in a coup d'état. ?]
 
 [? if year = 1987 and month = 10 and week = 3 : Global stock markets crash with the Dow Jones Industrial Average falling over 22 percent in one day. ?]
 
-[? if year = 1987 and month = 11 and week = 1 : The world population officially surpasses five billion according to United Nations estimates. ?]
+[? if year = 1987 and month = 11 and week = 1 : The world population officially surpasses five billion according to a United Nations estimate. ?]
 
 [? if year = 1987 and month = 11 and week = 3 : An IRA bomb kills eleven civilians attending a Remembrance Day ceremony in Enniskillen, Northern Ireland. ?]
 
 [? if year = 1987 and month = 12 and week = 1 : Ronald Reagan and Mikhail Gorbachev sign the INF Treaty in Washington D.C. ?]
 
-[? if year = 1987 and month = 12 and week = 3 : Palestinian and Israeli clashes in the occupied territories intensify as the First Intifada spreads across the West Bank and Gaza. ?]
+[? if year = 1987 and month = 12 and week = 3 : Palestinian and Israeli clashes in the occupied territories intensify as the "intifada" (struggle) spreads across the occupied territories. ?]
 
 [? if year = 1988 and month = 1 and week = 1 : South Korean President Chun Doo-hwan transfers power to his elected successor Roh Tae-woo following months of pro-democracy demonstrations. ?]
 
-[? if year = 1988 and month = 1 and week = 3 : The Soviet Union begins withdrawing troops from Afghanistan after nearly a decade of intervention. ?]
+[? if year = 1988 and month = 1 and week = 3 : The Soviet Union begins a limited withdrawl of troops from Afghanistan after nearly a decade of intervention. ?]
 
 [? if year = 1988 and month = 2 and week = 1 : Protests erupt in the Armenian SSR demanding the transfer of Nagorno-Karabakh from the Azerbaijani SSR to the Armenian SSR. ?]
 
@@ -1612,13 +1606,13 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 3 and week = 3 : Iraqi aircraft drop chemical weapons on the Kurdish town of Halabja, killing thousands of civilians. ?]
 
-[? if year = 1988 and month = 4 and week = 1 : The Geneva Accords on Afghanistan are signed by Pakistan and Afghanistan. ?]
+[? if year = 1988 and month = 4 and week = 1 : The Geneva Accords on Afghanistan are signed by Pakistan and the Afghan government. ?]
 
 [? if year = 1988 and month = 4 and week = 3 : A massive explosion at a Pakistani military base near Islamabad destroys a large stockpile of weapons and ammunition killing hundreds. ?]
 
 [? if year = 1988 and month = 5 and week = 1 : Soviet troops begin their formal withdrawal from Afghanistan in accordance with the Geneva Accords. ?]
 
-[? if year = 1988 and month = 5 and week = 3 : France conducts a controversial military assault on separatists in New Caledonia. ?]
+[? if year = 1988 and month = 5 and week = 3 : France conducts a military assault on separatists in the pacific French territory of New Caledonia. ?]
 
 [? if year = 1988 and month = 6 and week = 1 : Benazir Bhutto returns to Pakistan to massive crowds demanding an end to military rule. ?]
 
@@ -1626,11 +1620,13 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 7 and week = 1 : Iran Air Flight 655 is shot down by the USS Vincennes over the Persian Gulf. ?]
 
-[? if year = 1988 and month = 7 and week = 3 : Libyan-backed terrorists bomb a Pan Am aircraft over the Scottish town of Lockerbie killing all 270 on board. ?]
+[? if year = 1988 and month = 7 and week = 3 : A bomb detonates on a Pan Am aircraft over the Scottish town of Lockerbie killing all 270 on board. The UK blames the attacks on the Libyan government.?]
 
-[? if year = 1988 and month = 8 and week = 1 : Massive demonstrations against military rule erupt in Myanmar. Pakistani President General Zia Al Huq has died following a plane crash. ?]
+[? if year = 1988 and month = 8 and week = 1 : Massive demonstrations against military rule erupt in Myanmar. ?]
 
-[? if year = 1988 and month = 8 and week = 3 : Iran and Iraq accept a UN-backed ceasefire ending the Iran–Iraq War after a long 8 years. ?]
+[? if year = 1988 and month = 8 and week = 1 : Pakistani President General Zia Al Huq has died following a plane crash. ?]
+
+[? if year = 1988 and month = 8 and week = 3 : Iran and Iraq accept a UN-backed ceasefire ending the constant state of war since 1980 after a long 8 years. ?]
 
 [? if year = 1988 and month = 9 and week = 1 : The military in Myanmar violently suppresses pro-democracy demonstrations killing thousands of protesters. ?]
 
@@ -1648,11 +1644,11 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 12 and week = 3 : Pan Am Flight 103 explodes over Lockerbie after a bomb detonates onboard the aircraft. ?]
 
-[? if year = 1989 and month = 1 and week = 1 : Soviet troops complete their withdrawal from Afghanistan after almost ten years of war. ?]
+[? if year = 1989 and month = 1 and week = 1 : Soviet troops complete their withdrawal from Afghanistan after almost ten years of intervension. ?]
 
 [? if year = 1989 and month = 1 and week = 3 : Emperor Hirohito of Japan dies after 62 years on the throne and is succeeded by his son Akihito. ?]
 
-[? if year = 1989 and month = 2 and week = 1 : Hungary's ruling communist party votes to allow free multiparty elections in a dramatic break with the Eastern Bloc. ?]
+[? if year = 1989 and month = 2 and week = 1 : Hungary's ruling Socialist Workers' Party votes to allow free multiparty elections in a dramatic break with the rest of the Eastern Bloc. ?]
 
 [? if year = 1989 and month = 2 and week = 3 : Ayatollah Khomeini issues a fatwa calling for the death of author Salman Rushdie over his novel The Satanic Verses. ?]
 
@@ -1664,19 +1660,17 @@ Nationalists Dissent
 
 [? if year = 1989 and month = 4 and week = 3 : Student-led demonstrations demanding political reform begin in Beijing's Tiananmen Square. ?]
 
-[? if year = 1989 and month = 5 and week = 1 : Hungary begins dismantling border fortifications along border with Austria. ?]
+[? if year = 1989 and month = 5 and week = 1 : Hungary begins dismantling border fortifications along their border with Austria. ?]
 
 [? if year = 1989 and month = 5 and week = 3 : Thousands of Chinese students march to Tiananmen Square as the protest movement continues to swell despite government warnings. ?]
 
 [? if year = 1989 and month = 6 and week = 1 : Chinese troops enter Tiananmen Square following and intensifying violent clashes in the city. ?]
 
-[? if year = 1989 and month = 6 and week = 3 : Solidarity wins a landslide victory in Poland's partially free elections, dealing a crushing blow to the communist government. ?]
+[? if year = 1989 and month = 6 and week = 3 : Solidarity wins a landslide victory in Poland's partially free elections. ?]
 
 [? if year = 1989 and month = 7 and week = 1 : Ayatollah Khomeini, Supreme Leader of Iran, dies and is succeeded by Ali Khamenei. ?]
 
 [? if year = 1989 and month = 7 and week = 3 : Poland elects the first non-communist government in the Eastern Bloc since the 1940s. ?]
-
-[? if year = 1989 and month = 8 and week = 1 : East German refugees flood into West German embassies across Eastern Europe demanding to be allowed to emigrate west. ?]
 
 [? if year = 1989 and month = 8 and week = 3 : Hundreds of thousands form the Baltic Way human chain across Estonia, Latvia and Lithuania. ?]
 
@@ -1686,55 +1680,55 @@ Nationalists Dissent
 
 [? if year = 1989 and month = 10 and week = 1 : Large Monday demonstrations continue in East Germany demanding democratic reforms. ?]
 
-[? if year = 1989 and month = 10 and week = 3 : Hungary formally dissolves its communist party and declares itself a democratic republic. ?]
+[? if year = 1989 and month = 10 and week = 3 : The Hungarian Socialist Workers' Party dissolves as Hungary officially and declares itself a democratic republic. ?]
 
-[? if year = 1989 and month = 11 and week = 1 : East German authorities open border crossings in Berlin, crowds were seen beginning to dismantle the Berlin Wall. ?]
+[? if year = 1989 and month = 11 and week = 1 : East German authorities open border crossings in Berlin, crowds are later seen beginning to dismantle the infamous Berlin Wall. ?]
 
-[? if year = 1989 and month = 11 and week = 3 : Czechoslovakia's communist government collapses following massive street protests in what becomes known as the Velvet Revolution. ?]
+[? if year = 1989 and month = 11 and week = 3 : Czechoslovakia's communist government collapses following massive street protests. ?]
 
 [? if year = 1989 and month = 12 and week = 1 : US President Bush and Soviet leader Gorbachev declare the Cold War effectively over following a summit meeting in Malta. ?]
 
-[? if year = 1989 and month = 12 and week = 3 : President of Romania Nicolae Ceaușescu was overthrown and shortly executed in a large scale revolt. ?]
+[? if year = 1989 and month = 12 and week = 3 : President of Romania Nicolae Ceaușescu was overthrown and shortly executed in a large scale revolt against his autocratic rule. ?]
 
-[? if year = 1989 and month = 12 and week = 3 : US forces invade Panama to remove the defacto military leader Manuel Noriega. ?]
+[? if year = 1989 and month = 12 and week = 3 : US forces invade Panama to remove its defacto military leader Manuel Noriega. ?]
 
-[? if year = 1990 and month = 1 and week = 1 : The Romanian government is formed by the National Salvation Front following the fall of Ceausescu, though former communists remain prominent. ?]
+[? if year = 1990 and month = 1 and week = 1 : A new Romanian government is formed by the National Salvation Front following the fall of Ceausescu. ?]
 
 [? if year = 1990 and month = 1 and week = 3 : Soviet troops enter Baku in Azerbaijan to suppress nationalist unrest. ?]
 
 [? if year = 1990 and month = 2 and week = 1 : Nelson Mandela is released from Victor Verster Prison after 27 years of imprisonment. ?]
 
-[? if year = 1990 and month = 2 and week = 3 : Yemeni unification talks between North and South Yemen reach agreement on forming a single state. ?]
+[? if year = 1990 and month = 2 and week = 3 : Yemeni unification talks between North and South Yemen reach an agreement on forming a single state. ?]
 
 [? if year = 1990 and month = 3 and week = 1 : Lithuania declares independence from the Soviet Union. ?]
 
-[? if year = 1990 and month = 3 and week = 3 : Namibia gains independence from South Africa, completing the decolonisation of the African continent. ?]
+[? if year = 1990 and month = 3 and week = 3 : Namibia gains independence from South Africa. ?]
 
 [? if year = 1990 and month = 4 and week = 1 : The Space Shuttle Discovery deploys the Hubble Space Telescope into orbit. ?]
 
 [? if year = 1990 and month = 4 and week = 3 : The Soviet Union imposes an economic blockade on Lithuania in response to its declaration of independence. ?]
 
-[? if year = 1990 and month = 5 and week = 1 : Violeta Chamorro defeats the Sandinistas in Nicaragua's presidential election. ?]
+[? if year = 1990 and month = 5 and week = 1 : Violeta Chamorro defeats incumbent Daniel Ortega in Nicaragua's presidential election. ?]
 
 [? if year = 1990 and month = 5 and week = 3 : East and West Germany agree on terms for full economic and monetary union ahead of a planned political reunification. ?]
 
-[? if year = 1990 and month = 6 and week = 1 : Boris Yeltsin is elected president of the Russian Republic in a vote that further undermines Gorbachev's authority. ?]
+[? if year = 1990 and month = 6 and week = 1 : Boris Yeltsin is elected president of the RSFSR in a vote that further undermines Gorbachev's authority. ?]
 
 [? if year = 1990 and month = 6 and week = 3 : The Schengen Agreement comes into effect between several Western European states. ?]
 
 [? if year = 1990 and month = 7 and week = 1 : East Germany adopts the West German Deutsche Mark ahead of a planned reunification. ?]
 
-[? if year = 1990 and month = 7 and week = 3 : The Two Plus Four Treaty is signed by the two German states and the four wartime Allied powers, clearing the path for German reunification. ?]
+[? if year = 1990 and month = 7 and week = 3 : The Two Plus Four Treaty is signed by the two German states and the former occupying Allied powers in WW2 (France, UK, USA & USSR), clearing the path for German reunification. ?]
 
 [? if year = 1990 and month = 8 and week = 1 : Iraqi forces invade Kuwait and rapidly occupy the country. ?]
 
 [? if year = 1990 and month = 8 and week = 3 : The United Nations Security Council votes to impose sweeping sanctions on Iraq following its invasion of Kuwait. ?]
 
-[? if year = 1990 and month = 9 and week = 1 : Saddam Hussein calls for jihad against foreign forces gathering in Saudi Arabia. ?]
+[? if year = 1990 and month = 9 and week = 1 : Saddam Hussein calls for jihad against foreign forces gathering in Saudi Arabia what is speculated to be a Korean style intervention. ?]
 
-[? if year = 1990 and month = 9 and week = 3 : A large multinational military force continues to build up in Saudi Arabia in preparation for a possible war to liberate Kuwait. ?]
+[? if year = 1990 and month = 9 and week = 3 : A large multinational military force continues to build up in Saudi Arabia in preparation for a possible intervention to liberate Kuwait. ?]
 
-[? if year = 1990 and month = 10 and week = 1 : East Germany is annexed into West Germany as the two states reunify into a single German state. ?]
+[? if year = 1990 and month = 10 and week = 1 : East Germany is annexed into West Germany reuniting Germany for the first time in 45 years since the end of WW2. ?]
 
 [? if year = 1990 and month = 10 and week = 3 : The United Nations Security Council authorises member states to use force to expel Iraqi troops from Kuwait if they have not withdrawn by January 1991. ?]
 
@@ -1744,4 +1738,4 @@ Nationalists Dissent
 
 [? if year = 1990 and month = 12 and week = 1 : The first ever World Wide Web page is created by British scientist Tim Berners-Lee at the CERN laboratory in Geneva. ?]
 
-[? if year = 1990 and month = 12 and week = 3 : Lech Wałęsa is elected President of Poland in the country's first direct presidential election. ?]
+[? if year = 1990 and month = 12 and week = 3 : Liberal candidate Lech Wałęsa is elected President of Poland in the country's first direct presidential election. ?]
