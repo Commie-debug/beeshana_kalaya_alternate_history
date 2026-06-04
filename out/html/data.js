@@ -140,7 +140,7 @@ const colourList = [{
     },
     {
         word: "MEP",
-        style: "color: #FF3915; font-weight: bold;"
+        style: "color: #f98538; font-weight: bold;"
     },
     {
         word: "EROS",

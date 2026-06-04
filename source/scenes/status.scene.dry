@@ -194,7 +194,7 @@ for (var i = 0; i < 8; i++) {
 
 <span class="tooltip-text" title="Nava Sama Samaja Party" style="color: #FF8080;">**NSSP**</span>: [+ nssp_relation : relationships +]
 
-[? if mep_formed = 1 : <span class="tooltip-text" title="Mahajana Eksath Peramuna" style="color: #FF3915;">**MEP**</span>: [+ mep_relation : relationships +] ?]
+[? if mep_formed = 1 : <span class="tooltip-text" title="Mahajana Eksath Peramuna" style="color: #f98538;">**MEP**</span>: [+ mep_relation : relationships +] ?]
 
 [? if dunf_formed = 1 : <span class="tooltip-text" title="Democratic United National Front" style="color: #128812;">**DUNF**</span>: [+ dunf_relation : relationships +] ?]
 

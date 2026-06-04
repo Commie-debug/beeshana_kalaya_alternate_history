@@ -495,7 +495,7 @@ go-to: menu
 
 <span style="color: #FF8080;">**NSSP**</span> - *Nava Sama Samaja Party (New Equal Society Party)* - Formed in 1977 following a split from the <span style="color: #A91101;">**LSSP**</span>, the <span style="color: #FF8080;">**NSSP**</span> embraces Trotskyist ideology with a focus on self-determination and anti-authoritarianism. It has established itself as a vocal advocate for Tamil rights and democratic socialism.
 
-[? if mep_formed: <span style="color: #FF3915;">**MEP**</span> - *Mahajana Eksath Peramuna* - Originally formed in 1956, it has recently been reactivated, emphasizing Sinhalese nationalism and ethnic chauvism. It is a minor political party. Ironically it shares the same name as the alliane=ce by which the SLFP first came to power in the 1950s.?]
+[? if mep_formed: <span style="color: #f98538;">**MEP**</span> - *Mahajana Eksath Peramuna* - Originally formed in 1956, it has recently been reactivated, emphasizing Sinhalese nationalism and ethnic chauvism. It is a minor political party. Ironically it shares the same name as the alliane=ce by which the SLFP first came to power in the 1950s.?]
 
 [? if dunf_formed: <span style="color: #128812;">**DUNF**</span> - *Democratic United National Front* - A newly formed splinter party from the UNP, formed following the recent failure to impeach [? if president = 'JR Jayewardene' : President Jayewardene ?][? if president = Ranasinghe Premadasa : President Premadasa ?]. The resulting fallout lead to the explusion of numerous "rebels" from the UNP including Lalith Athulathmudali and Gamini Dissanayake who joined forces to form the DUNF. The DUNF is a conservative, pro-market party like the UNP, the difference between the two is its anti-coruption and anti-authoritarianism. ?]
 

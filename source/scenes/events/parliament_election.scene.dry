@@ -680,7 +680,7 @@ var partyColors = {
     'UNP': '#006400', 'SLFP': '#00008B', 'TULF': '#F7D917', 'CWC': '#E52B50',
     'ACTC': '#FDCC01', 'CPSL': '#65000B', 'JVP': '#FF2226', 'LSSP': '#A91101',
     'NSSP': '#FF8080', 'SLPP': '#800020', 'SLMP': '#663399', 'SLMC': '#2DCF3E',
-    'NPP': '#9F005D', 'MEP': '#FF3915', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#9C1600' , 'UCPF': '#9C1600', 'ULPP': '#DAEA67', 'DUNF': '#128812', 'TELO': '#893F45', 'EPRLF': '#FF4500', 'ENDLF': '#FF5E5E'
+    'NPP': '#9F005D', 'MEP': '#f98538', 'EROS': '#FF2400', 'DPLF': '#CE2029', 'PFLT': '#9C1600' , 'UCPF': '#9C1600', 'ULPP': '#DAEA67', 'DUNF': '#128812', 'TELO': '#893F45', 'EPRLF': '#FF4500', 'ENDLF': '#FF5E5E'
 };
 
 //seats calc for any and all active coalitions
@@ -1101,7 +1101,7 @@ go-to: coalition_menu
             [? if slmp_formed : {!<th><span style="color: #663399;">SLMP</span></th>!} ?]
             [? if slmc_formed : {!<th><span style="color: #2DCF3E;">SLMC</span></th>!} ?]
             [? if npp_formed : {!<th><span style="color: #9F005D;">NPP</span></th>!} ?]
-            [? if mep_formed : {!<th><span style="color: #FF3915;">MEP</span></th>!} ?]
+            [? if mep_formed : {!<th><span style="color: #f98538;">MEP</span></th>!} ?]
             [? if eros_formed : {!<th><span style="color: #FF2400;">EROS</span></th>!} ?]
             [? if dplf_formed : {!<th><span style="color: #CE2029;">DPLF</span></th>!} ?]
             [? if pflt_formed : {!<th><span style="color: #DC143C;">PFLT</span></th>!} ?]
@@ -1592,7 +1592,7 @@ go-to: coalition_menu
         [? if slmp_formed and slmp_national_list_seats >= 1 : {!<tr><td><span style="color: #663399;">!}**SLMP**{!</span></td><td>!}[+ slmp_national_list_seats +]{!</td></tr>!} ?]
         [? if slmc_formed and slmc_national_list_seats >= 1 : {!<tr><td><span style="color: #2DCF3E;">!}**SLMC**{!</span></td><td>!}[+ slmc_national_list_seats +]{!</td></tr>!} ?]
         [? if npp_formed and npp_national_list_seats >= 1 : {!<tr><td><span style="color: #9F005D;">!}**NPP**{!</span></td><td>!}[+ npp_national_list_seats +]{!</td></tr>!} ?]
-        [? if mep_formed and mep_national_list_seats >= 1 : {!<tr><td><span style="color: #FF3915;">!}**MEP**{!</span></td><td>!}[+ mep_national_list_seats +]{!</td></tr>!} ?]
+        [? if mep_formed and mep_national_list_seats >= 1 : {!<tr><td><span style="color: #f98538;">!}**MEP**{!</span></td><td>!}[+ mep_national_list_seats +]{!</td></tr>!} ?]
         [? if eros_formed and eros_national_list_seats >= 1 : {!<tr><td><span style="color: #FF2400;">!}**EROS**{!</span></td><td>!}[+ eros_national_list_seats +]{!</td></tr>!} ?]
         [? if dplf_formed and dplf_national_list_seats >= 1 : {!<tr><td><span style="color: #CE2029;">!}**DPLF**{!</span></td><td>!}[+ dplf_national_list_seats +]{!</td></tr>!} ?]
         [? if pflt_formed and pflt_national_list_seats >= 1 : {!<tr><td><span style="color: #DC143C;">!}**PFLT**{!</span></td><td>!}[+ pflt_national_list_seats +]{!</td></tr>!} ?]
