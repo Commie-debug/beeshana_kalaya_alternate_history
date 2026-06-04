@@ -366,11 +366,11 @@ const tooltipList = [{
     },
     {
     searchString: "ULPP",
-    explanationText: "<img src=img/logos/MEP_Logo.png> United Lanka People's Party "
+    explanationText: "<img src=img/logos/ULPP_Logo.png> United Lanka <br> People's Party"
     },
     {
     searchString: "DUNF",
-    explanationText: "<img src=img/logos/DUNF_Logo.png> Democratic United National Front "
+    explanationText: "<img src=img/logos/DUNF_Logo.png> Democratic United <br> National Front"
     },
     {
     searchString: "EROS",

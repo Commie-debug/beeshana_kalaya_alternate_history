@@ -1,7 +1,7 @@
 @polls display code : FrancoGamer on discord
 
-Basic custom display tooltip and automatic text highlighter : Original name on discord
+Basic custom display tooltip and automatic text highlighter : Originalname, developer of Dyanmic Social Democracy on discord
 
 Basic code for right side sliding bar : Visionary - Noske Bibi'st on discord
 
-Inspiration for custom radio : Egehan on discord
+Inspiration for custom radio and parliament display in status bar: Egehan, developer of Anatolian Dawn on discord
