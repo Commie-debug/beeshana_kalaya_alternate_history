@@ -419,44 +419,554 @@ go-to: menu
 on-arrival: {!
 Q.sinhala_nationalism_disp = Math.round(Q.sinhala_nationalism);
 Q.tamil_nationalism_disp = Math.round(Q.tamil_nationalism);
-Q.socialism_disp = Math.round(Q.socialism);
 Q.gov_support_disp = Math.round(Q.gov_support);
+
 !}
 
-**Public Opinion**
+= Polls
 
 Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
 
 Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
 
-Support for socialism: [+ socialism_disp +]%
-
 Support for the government: [+ gov_support_disp +]%
 
-= Ethnicity:
+= Ethnicity: 
 
-This whole thing needs to be revamped at some point
+<div id="ethnicity_table" onmouseover="scrollhor('ethnicity_table');" style="overflow-y: scroll;">
 
-Sinhalese: None: [+ sinhala_nonvoter +]%, SLFP: [+ sinhala_slfp +]%, JVP: [+ sinhala_jvp +]%, CPSL: [+ sinhala_cpsl +]%, LSSP: [+ sinhala_lssp +]%, NSSP: [+ sinhala_nssp +]%, TULF: [+ sinhala_tulf +]%, CWC: [+ sinhala_cwc +]%, UNP: [+ sinhala_unp +]%, ACTC: [+ sinhala_actc +]%, [? if slpp_formed: SLPP: [+ sinhala_slpp +] % ?][? if slmp_formed: SLMP: [+ sinhala_slmp +]% ?][? if slmc_formed: SLMC: [+ sinhala_slmc +]% ?][? if npp_formed: NPP: [+ sinhala_npp +]% ?][? if mep_formed: MEP: [+ sinhala_mep +]% ?][? if eros_formed: EROS: [+ sinhala_eros +]% ?][? if dplf_formed: DPLF: [+ sinhala_dplf +]% ?][? if pflt_formed: PFLT: [+ sinhala_pflt +]% ?][? if ucpf_formed: UCPF: [+ sinhala_ucpf +]% ?]
+<table>
+               <tr>
+                  <th></th>     
+               
+                  <td>SLFP</td>
 
-Sri Lankan Tamil: None: [+ sltamil_nonvoter +]%, SLFP: [+ sltamil_slfp +]%, JVP: [+ sltamil_jvp +]%, CPSL: [+ sltamil_cpsl +]%, LSSP: [+ sltamil_lssp +]%, NSSP: [+ sltamil_nssp +]%, TULF: [+ sltamil_tulf +]%, CWC: [+ sltamil_cwc +]%, UNP: [+ sltamil_unp +]%, ACTC: [+ sltamil_actc +]%, [? if slpp_formed: SLPP: [+ sltamil_slpp +]% ?][? if slmp_formed: SLMP: [+ sltamil_slmp +]% ?][? if slmc_formed: SLMC: [+ sltamil_slmc +]% ?][? if npp_formed: NPP: [+ sltamil_npp +]% ?][? if mep_formed: MEP: [+ sltamil_mep +]% ?][? if eros_formed: EROS: [+ sltamil_eros +]% ?][? if dplf_formed: DPLF: [+ sltamil_dplf +]% ?][? if pflt_formed: PFLT: [+ sltamil_pflt +]% ?][? if ucpf_formed: UCPF: [+ sltamil_ucpf +]% ?]
+                  <td>JVP</td>
 
-Muslim: None: [+ muslim_nonvoter +]%, SLFP: [+ muslim_slfp +]%, JVP: [+ muslim_jvp +]%, CPSL: [+ muslim_cpsl +]%, LSSP: [+ muslim_lssp +]%, NSSP: [+ muslim_nssp +]%, TULF: [+ muslim_tulf +]%, CWC: [+ muslim_cwc +]%, UNP: [+ muslim_unp +]%, ACTC: [+ muslim_actc +]%, [? if slpp_formed: SLPP: [+ muslim_slpp +]% ?][? if slmp_formed: SLMP: [+ muslim_slmp +]% ?][? if slmc_formed: SLMC: [+ muslim_slmc +]% ?][? if npp_formed: NPP: [+ muslim_npp +]% ?][? if mep_formed: MEP: [+ muslim_mep +]% ?][? if eros_formed: EROS: [+ muslim_eros +]% ?][? if dplf_formed: DPLF: [+ muslim_dplf +]% ?][? if pflt_formed: PFLT: [+ muslim_pflt +]% ?][? if ucpf_formed: UCPF: [+ muslim_ucpf +]% ?]
+                  <td>CPSL</td>
 
-Indian Tamil: None: [+ itamil_nonvoter +]%, SLFP: [+ itamil_slfp +]%, JVP: [+ itamil_jvp +]%, CPSL: [+ itamil_cpsl +]%, LSSP: [+ itamil_lssp +]%, NSSP: [+ itamil_nssp +]%, TULF: [+ itamil_tulf +]%, CWC: [+ itamil_cwc +]%, UNP: [+ itamil_unp +]%, ACTC: [+ itamil_actc +]%, [? if slpp_formed: SLPP: [+ itamil_slpp +]% ?][? if slmp_formed: SLMP: [+ itamil_slmp +]% ?][? if slmc_formed: SLMC: [+ itamil_slmc +]% ?][? if npp_formed: NPP: [+ itamil_npp +]% ?][? if mep_formed: MEP: [+ itamil_mep +]% ?][? if eros_formed: EROS: [+ itamil_eros +]% ?][? if dplf_formed: DPLF: [+ itamil_dplf +]% ?][? if pflt_formed: PFLT: [+ itamil_pflt +]% ?][? if ucpf_formed: UCPF: [+ itamil_ucpf +]% ?]
+                  <td>LSSP</td>
 
-Others: None: [+ other_nonvoter +]%, SLFP: [+ other_slfp +]%, JVP: [+ other_jvp +]%, CPSL: [+ other_cpsl +]%, LSSP: [+ other_lssp +]%, NSSP: [+ other_nssp +]%, TULF: [+ other_tulf +]%, CWC: [+ other_cwc +]%, UNP: [+ other_unp +]%, ACTC: [+ other_actc +]%, [? if slpp_formed: SLPP: [+ other_slpp +]% ?][? if slmp_formed: SLMP: [+ other_slmp +]% ?][? if slmc_formed: SLMC: [+ other_slmc +]% ?][? if npp_formed: NPP: [+ other_npp +]% ?][? if mep_formed: MEP: [+ other_mep +]% ?][? if eros_formed: EROS: [+ other_eros +]% ?][? if dplf_formed: DPLF: [+ other_dplf +]% ?][? if pflt_formed: PFLT: [+ other_pflt +]% ?][? if ucpf_formed: UCPF: [+ other_ucpf +]% ?]
+                  <td>NSSP</td>
 
-= Classes:
+                  <td>TULF</td>
 
-Working Class: None: [+ workers_nonvoter +]%, SLFP: [+ workers_slfp +]%, JVP: [+ workers_jvp +]%, CPSL: [+ workers_cpsl +]%, LSSP: [+ workers_lssp +]%, NSSP: [+ workers_nssp +]%, TULF: [+ workers_tulf +]%, CWC: [+ workers_cwc +]%, UNP: [+ workers_unp +]%, ACTC: [+ workers_actc +]%, [? if slpp_formed: SLPP: [+ workers_slpp +]% ?][? if slmp_formed: SLMP: [+ workers_slmp +]% ?][? if slmc_formed: SLMC: [+ workers_slmc +]% ?][? if npp_formed: NPP: [+ workers_npp +]% ?][? if mep_formed: MEP: [+ workers_mep +]% ?][? if eros_formed: EROS: [+ workers_eros +]% ?][? if dplf_formed: DPLF: [+ workers_dplf +]% ?][? if pflt_formed: PFLT: [+ workers_pflt +]% ?] [? if ucpf_formed: UCPF: [+ workers_ucpf +]% ?]
+                  <td>CWC</td>
 
-Middle Class: None: [+ middle_nonvoter +]%, SLFP: [+ middle_slfp +]%, JVP: [+ middle_jvp +]%, CPSL: [+ middle_cpsl +]%, LSSP: [+ middle_lssp +]%, NSSP: [+ middle_nssp +]%, TULF: [+ middle_tulf +]%, CWC: [+ middle_cwc +]%, UNP: [+ middle_unp +]%, ACTC: [+ middle_actc +]%, [? if slpp_formed: SLPP: [+ middle_slpp +]% ?][? if slmp_formed: SLMP: [+ middle_slmp +]% ?][? if slmc_formed: SLMC: [+ middle_slmc +]% ?][? if npp_formed: NPP: [+ middle_npp +]% ?][? if mep_formed: MEP: [+ middle_mep +]% ?][? if eros_formed: EROS: [+ middle_eros +]% ?][? if dplf_formed: DPLF: [+ middle_dplf +]% ?][? if pflt_formed: PFLT: [+ middle_pflt +]% ?][? if ucpf_formed: UCPF: [+ middle_ucpf +]% ?]
+                  <td>UNP</td>
 
-Rural: None: [+ rural_nonvoter +]%, SLFP: [+ rural_slfp +]%, JVP: [+ rural_jvp +]%, CPSL: [+ rural_cpsl +]%, LSSP: [+ rural_lssp +]%, NSSP: [+ rural_nssp +]%, TULF: [+ rural_tulf +]%, CWC: [+ rural_cwc +]%, UNP: [+ rural_unp +]%, ACTC: [+ rural_actc +]%, [? if slpp_formed: SLPP: [+ rural_slpp +]% ?][? if slmp_formed: SLMP: [+ rural_slmp +]% ?][? if slmc_formed: SLMC: [+ rural_slmc +]% ?][? if npp_formed: NPP: [+ rural_npp +]% ?][? if mep_formed: MEP: [+ rural_mep +]% ?][? if eros_formed: EROS: [+ rural_eros +]% ?][? if dplf_formed: DPLF: [+ rural_dplf +]% ?][? if pflt_formed: PFLT: [+ rural_pflt +]% ?][? if ucpf_formed: UCPF: [+ rural_ucpf +]% ?]
+                  <td>ACTC</td>
 
-Upper Class: None: [+ upper_nonvoter +]%, SLFP: [+ upper_slfp +]%, JVP: [+ upper_jvp +]%, CPSL: [+ upper_cpsl +]%, LSSP: [+ upper_lssp +]%, NSSP: [+ upper_nssp +]%, TULF: [+ upper_tulf +]%, CWC: [+ upper_cwc +]%, UNP: [+ upper_unp +]%, ACTC: [+ upper_actc +]%, [? if slpp_formed: SLPP: [+ upper_slpp +]% ?][? if slmp_formed: SLMP: [+ upper_slmp +]% ?][? if slmc_formed: SLMC: [+ upper_slmc +]% ?][? if npp_formed: NPP: [+ upper_npp +]% ?][? if mep_formed: MEP: [+ upper_mep +]% ?][? if eros_formed: EROS: [+ upper_eros +]% ?][? if dplf_formed: DPLF: [+ upper_dplf +]% ?][? if pflt_formed: PFLT: [+ upper_pflt +]% ?][? if ucpf_formed: UCPF: [+ upper_ucpf +]% ?]
+                  [? if slpp_formed: <td>SLPP</td> ?]
 
+                  [? if slmp_formed: <td>SLMP</td> ?]
+                  
+                  [? if slmc_formed: <td>SLMC</td> ?]
+
+                  [? if npp_formed: <td>NPP</td> ?]
+
+                  [? if nep_formed: <td>MEP</td> ?]
+
+                  [? if dunf_formed: <td>DUNF</td> ?]
+
+                  [? if ulpp_formed: <td>ULPP</td> ?]
+
+                  [? if eros_formed: <td>EROS</td> ?]
+
+                  [? if eprlf_formed: <td>EPRLF</td> ?]
+
+                  [? if telo_formed: <td>ENDLF</td> ?]
+
+                  [? if endlf_formed: <td>ENDLF</td> ?]
+
+                  [? if dplf_formed: <td>DPLF</td> ?]
+                  
+                  [? if pflt_formed: <td>PFLT</td> ?]
+
+                  [? if ucpf_formed: <td>UCPF</td> ?]
+
+                  <td>Nonvoters</td>
+
+               </tr>
+               <tr>
+                  <th>Sinhalese</th>
+
+                  <td>[+ sinhala_slfp +]%</td>
+
+                  <td>[+ sinhala_jvp +]%</td>
+                  <td>[+ sinhala_cpsl +]%</td>
+                  <td>[+ sinhala_lssp +]%</td>
+
+                  <td>[+ sinhala_nssp +]%</td>
+                  <td>[+ sinhala_tulf +]%</td>
+                  <td>[+ sinhala_cwc +]%</td>
+
+                  <td>[+ sinhala_unp +]%</td>
+                  <td>[+ sinhala_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ sinhala_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ sinhala_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ sinhala_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ sinhala_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ sinhala_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ sinhala_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ sinhala_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ sinhala_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ sinhala_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ sinhala_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ sinhala_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ sinhala_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ sinhala_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ sinhala_ucpf +]%</td> ?]
+
+                  <td>[+ sinhala_nonvoter +]%</td>
+
+               </tr>
+               <tr>
+                  <th>Sri Lankan Tamil</th>
+
+                  <td>[+ sltamil_slfp +]%</td>
+
+                  <td>[+ sltamil_jvp +]%</td>
+                  <td>[+ sltamil_cpsl +]%</td>
+                  <td>[+ sltamil_lssp +]%</td>
+
+                  <td>[+ sltamil_nssp +]%</td>
+                  <td>[+ sltamil_tulf +]%</td>
+                  <td>[+ sltamil_cwc +]%</td>
+
+                  <td>[+ sltamil_unp +]%</td>
+                  <td>[+ sltamil_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ sltamil_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ sltamil_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ sltamil_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ sltamil_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ sltamil_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ sltamil_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ sltamil_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ sltamil_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ sltami_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ sltamil_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ sltamil_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ sltamil_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ sltamil_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ sltamil_ucpf +]%</td> ?]
+
+                  <td>[+ sltamil_nonvoter +]%</td>
+               </tr>
+               <tr>
+                  <th>Muslims</th>
+
+                  <td>[+ muslim_slfp +]%</td>
+
+                  <td>[+ muslim_jvp +]%</td>
+                  <td>[+ muslim_cpsl +]%</td>
+                  <td>[+ muslim_lssp +]%</td>
+
+                  <td>[+ muslim_nssp +]%</td>
+                  <td>[+ muslim_tulf +]%</td>
+                  <td>[+ muslim_cwc +]%</td>
+
+                  <td>[+ muslim_unp +]%</td>
+                  <td>[+ muslim_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ muslim_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ muslim_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ muslim_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ muslim_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ muslim_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ muslim_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ muslim_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ muslim_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ muslim_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ muslim_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ muslim_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ muslim_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ muslim_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ muslim_ucpf +]%</td> ?]
+
+                  <td>[+ muslim_nonvoter +]%</td>
+               </tr>
+               <tr>
+                  <th>Indian Tamil</th>
+
+                  <td>[+ itamil_slfp +]%</td>
+
+                  <td>[+ itamiljvp +]%</td>
+                  <td>[+ itamil_cpsl +]%</td>
+                  <td>[+ itamil_lssp +]%</td>
+
+                  <td>[+ itamil_nssp +]%</td>
+                  <td>[+ itamil_tulf +]%</td>
+                  <td>[+ itamil_cwc +]%</td>
+
+                  <td>[+ itamil_unp +]%</td>
+                  <td>[+ itamil_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ itamil_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ itamil_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ itamil_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ itamil_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ itamil_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ itamil_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ itamil_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ itamil_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ itamil_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ itamil_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ itamil_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ itamil_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ itamil_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ itamil_ucpf +]%</td> ?]
+
+                  <td>[+ itamil_nonvoter +]%</td>
+               </tr>
+               <tr>
+                  <th>Others</th>
+
+                  <td>[+ other_slfp +]%</td>
+
+                  <td>[+ other_jvp +]%</td>
+                  <td>[+ other_cpsl +]%</td>
+                  <td>[+ other_lssp +]%</td>
+
+                  <td>[+ other_nssp +]%</td>
+                  <td>[+ other_tulf +]%</td>
+                  <td>[+ other_cwc +]%</td>
+
+                  <td>[+ other_unp +]%</td>
+                  <td>[+ other_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ other_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ other_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ other_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ other_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ other_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ other_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ other_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ other_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ other_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ other_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ other_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ other_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ other_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ other_ucpf +]%</td> ?]
+
+                  <td>[+ other_nonvoter +]%</td>
+               </tr>
+            </table>
+
+</div>
+
+= Class:
+
+<div id="class_table" onmouseover="scrollhor('class_table');" style="overflow-y: scroll;">
+
+<table>
+               <tr>
+                  <th></th>     
+               
+                  <td>SLFP</td>
+
+                  <td>JVP</td>
+
+                  <td>CPSL</td>
+
+                  <td>LSSP</td>
+
+                  <td>NSSP</td>
+
+                  <td>TULF</td>
+
+                  <td>CWC</td>
+
+                  <td>UNP</td>
+
+                  <td>ACTC</td>
+
+                  [? if slpp_formed: <td>SLPP</td> ?]
+
+                  [? if slmp_formed: <td>SLMP</td> ?]
+                  
+                  [? if slmc_formed: <td>SLMC</td> ?]
+
+                  [? if npp_formed: <td>NPP</td> ?]
+
+                  [? if mep_formed: <td>MEP</td> ?]
+
+                  [? if dunf_formed: <td>DUNF</td> ?]
+
+                  [? if ulpp_formed: <td>ULPP</td> ?]
+
+                  [? if eros_formed: <td>EROS</td> ?]
+
+                  [? if eprlf_formed: <td>EPRLF</td> ?]
+
+                  [? if telo_formed: <td>TELO</td> ?]
+
+                  [? if endlf_formed: <td>ENDLF</td> ?]
+
+                  [? if dplf_formed: <td>DPLF</td> ?]
+                  
+                  [? if pflt_formed: <td>PFLT</td> ?]
+
+                  [? if ucpf_formed: <td>UCPF</td> ?]
+
+                  <td>Nonvoters</td>
+
+               </tr>
+               <tr>
+                  <th>Workers</th>
+
+                  <td>[+ workers_slfp +]%</td>
+
+                  <td>[+ workers_jvp +]%</td>
+                  <td>[+ workers_cpsl +]%</td>
+                  <td>[+ workers_lssp +]%</td>
+
+                  <td>[+ workers_nssp +]%</td>
+                  <td>[+ workers_tulf +]%</td>
+                  <td>[+ workers_cwc +]%</td>
+
+                  <td>[+ workers_unp +]%</td>
+                  <td>[+ workers_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ workers_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ workers_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ workers_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ workers_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ workers_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ workers_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ workers_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ workers_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ workers_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ workers_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ workers_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ workers_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ workers_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ workers_ucpf +]%</td> ?]
+
+                  <td>[+ workers_nonvoter +]%</td>
+
+               </tr>
+               <tr>
+                  <th>Middle Class</th>
+
+                  <td>[+ middle_slfp +]%</td>
+
+                  <td>[+ middle_jvp +]%</td>
+                  <td>[+ middle_cpsl +]%</td>
+                  <td>[+ middle_lssp +]%</td>
+
+                  <td>[+ middle_nssp +]%</td>
+                  <td>[+ middle_tulf +]%</td>
+                  <td>[+ middle_cwc +]%</td>
+
+                  <td>[+ middle_unp +]%</td>
+                  <td>[+ middle_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ middle_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ middle_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ middle_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ middle_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ middle_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ middle_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ middle_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ middle_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ middle_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ middle_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ middle_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ middle_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ middle_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ middle_ucpf +]%</td> ?]
+
+                  <td>[+ middle_nonvoter +]%</td>
+               </tr>
+               <tr>
+                  <th>Rural</th>
+
+                  <td>[+ rural_slfp +]%</td>
+
+                  <td>[+ rural_jvp +]%</td>
+                  <td>[+ rural_cpsl +]%</td>
+                  <td>[+ rural_lssp +]%</td>
+
+                  <td>[+ rural_nssp +]%</td>
+                  <td>[+ rural_tulf +]%</td>
+                  <td>[+ rural_cwc +]%</td>
+
+                  <td>[+ rural_unp +]%</td>
+                  <td>[+ rural_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ rural_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ rural_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ rural_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ rural_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ rural_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ rural_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ rural_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ rural_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ rural_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ rural_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ rural_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ rural_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ rural_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ rural_ucpf +]%</td> ?]
+
+                  <td>[+ rural_nonvoter +]%</td>
+               </tr>
+               <tr>
+                  <th>Upper</th>
+
+                  <td>[+ upper_slfp +]%</td>
+
+                  <td>[+ upperjvp +]%</td>
+                  <td>[+ upper_cpsl +]%</td>
+                  <td>[+ upper_lssp +]%</td>
+
+                  <td>[+ upper_nssp +]%</td>
+                  <td>[+ upper_tulf +]%</td>
+                  <td>[+ upper_cwc +]%</td>
+
+                  <td>[+ upper_unp +]%</td>
+                  <td>[+ upper_actc +]%</td>
+
+                  [? if slpp_formed: <td>[+ upper_slpp +]%</td> ?]
+
+                  [? if slmp_formed: <td>[+ upper_slmp +]%</td> ?]
+                  
+                  [? if slmc_formed: <td>[+ upper_slmc +]%</td> ?]
+
+                  [? if npp_formed: <td>[+ upper_npp +]%</td> ?]
+
+                  [? if mep_formed: <td>[+ upper_mep +]%</td> ?]
+
+                  [? if dunf_formed: <td>[+ upper_dunf +]%</td> ?]
+
+                  [? if ulpp_formed: <td>[+ upper_ulpp +]%</td> ?]
+
+                  [? if eros_formed: <td>[+ upper_eros +]%</td> ?]
+
+                  [? if eprlf_formed: <td>[+ upper_eprlf +]%</td> ?]
+
+                  [? if telo_formed: <td>[+ upper_telo +]%</td> ?]
+
+                  [? if endlf_formed: <td>[+ upper_endlf +]%</td> ?]
+
+                  [? if dplf_formed: <td>[+ upper_dplf +]%</td> ?]
+                  
+                  [? if pflt_formed: <td>[+ upper_pflt +]%</td> ?]
+
+                  [? if ucpf_formed: <td>[+ upper_ucpf +]%</td> ?]
+
+                  <td>[+ upper_nonvoter +]%</td>
+               </tr>
+            </table>
+</div>
 
 @parties
 go-to: menu
