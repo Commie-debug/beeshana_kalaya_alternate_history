@@ -217,12 +217,12 @@ on-display: {!
 {!<tr><td><div class="box" style='background-color: #FF3915'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 1.63% {!</td><td></td></tr>!}
 
 {!<tr style="background-color: transparent;"><td><strong>United Socialist Alliance</strong></td><td><strong></strong></td><td><strong>2.86%</strong></td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #663399'> </div> !} SLMP {!</td><td>!} 3 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #663399'> </div> !} SLMP {!</td><td>!} 2 {!</td><td>!} -% {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF8080'> </div> !} NSSP {!</td><td>!} 0 {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #FF8080'> </div> !} NSSP {!</td><td>!} 1 {!</td><td>!} -% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #DAEA67'> </div> !} <span style="font-weight: bold; color: #DAEA67" >ULPP</span>{!</td><td>!} 0 {!</td><td>!} 1.21% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #DAEA67'> </div> !} ULPP {!</td><td>!} 0 {!</td><td>!} 1.21% {!</td><td></td></tr>!}
 {!<tr><td><div class="box" style='background-color: #CE2029'> </div> !} DPLF {!</td><td>!} 0 {!</td><td>!} 0.33% {!</td><td></td></tr>!}
 {!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC{!</td><td>!} 0 {!</td><td>!} 0.14% {!</td><td></td></tr>!}
 
