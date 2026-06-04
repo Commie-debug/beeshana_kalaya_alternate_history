@@ -5,3 +5,5 @@ Basic custom display tooltip and automatic text highlighter : Originalname, deve
 Basic code for right side sliding bar : Visionary - Noske Bibi'st on discord
 
 Inspiration for custom radio and parliament display in status bar: Egehan, developer of Anatolian Dawn on discord
+
+Inspiration for leader and people portrait tooltips: BrokenArrow, developer of Road to Ithaca and the Dendry Nexus extension for VS code on discord

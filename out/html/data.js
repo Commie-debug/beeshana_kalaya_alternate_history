@@ -556,6 +556,122 @@ const tooltipList = [{
     searchString: "PLO",
     explanationText: "<img src=img/logos/PLO_Logo.png> Palestine Liberation Organization"
     },
+    
+    //portraits below
+    {
+    searchString: "JR Jayewardene",
+    explanationText: "<img src=img/WIP.png> Junius Richard Jayewardene"
+    },
+    {
+    searchString: "Ranasinghe Premadasa",
+    explanationText: "<img src=img/WIP.png> Ranasinghe Premadasa"
+    },
+    {
+    searchString: "A. Amirthalingam",
+    explanationText: "<img src=img/WIP.png> Appapillai Amirthalingam"
+    },
+    {
+    searchString: "A Amirthalingam",
+    explanationText: "<img src=img/WIP.png> Appapillai Amirthalingam"
+    },
+    {
+    searchString: "Sirimavo Bandaranaike",
+    explanationText: "<img src=img/WIP.png> Sirima Ratwatte Dias Bandaranaike"
+    },
+    {
+    searchString: "Sirimavo",
+    explanationText: "<img src=img/WIP.png> Sirima Ratwatte Dias Bandaranaike"
+    },
+    {
+    searchString: "Mrs Bandaranaike",
+    explanationText: "<img src=img/WIP.png> Sirima Ratwatte Dias Bandaranaike"
+    },
+    {
+    searchString: "Anura Bandaranaike",
+    explanationText: "<img src=img/WIP.png> Anura Priyadarshi Solomon Dias Bandaranaike"
+    },
+    {
+    searchString: "Anura",
+    explanationText: "<img src=img/WIP.png> Anura Priyadarshi Solomon Dias Bandaranaike"
+    },
+    {
+    searchString: "Chandrika",
+    explanationText: "<img src=img/WIP.png> Chandrika Bandaranaike Kumaratunga"
+    },
+    {
+    searchString: "Chandrika Kumaratunga",
+    explanationText: "<img src=img/WIP.png> Chandrika Bandaranaike Kumaratunga"
+    },
+    {
+    searchString: "Maithripala Senanayake",
+    explanationText: "<img src=img/WIP.png> Maithripala Senanayake"
+    },
+    {
+    searchString: "Rohana Wijeweera",
+    explanationText: "<img src=img/WIP.png> Patabendi Don Jinadasa Nandasiri Wijeweera"
+    },
+    {
+    searchString: "Rohana",
+    explanationText: "<img src=img/WIP.png> Patabendi Don Jinadasa Nandasiri Wijeweera"
+    },
+    {
+    searchString: "Wijeweera",
+    explanationText: "<img src=img/WIP.png> Patabendi Don Jinadasa Nandasiri Wijeweera"
+    },
+    {
+    searchString: "Hector Kobbekaduwa",
+    explanationText: "<img src=img/WIP.png> Hector Senarath Rajakaruna Bandara Kobbekaduwa"
+    },
+    {
+    searchString: "Kobbekaduwa",
+    explanationText: "<img src=img/WIP.png> Hector Senarath Rajakaruna Bandara Kobbekaduwa"
+    },
+    {
+    searchString: "Pieter Keuneman",
+    explanationText: "<img src=img/WIP.png> Pieter Gerald Bartholomeusz Keuneman"
+    },
+    {
+    searchString: "Colvin R. de Silva",
+    explanationText: "<img src=img/WIP.png> Colvin Reginald de Silva"
+    },
+    {
+    searchString: "Vasudeva Nanayakkara",
+    explanationText: "<img src=img/WIP.png> Vasudeva Nanayakkara"
+    },
+    {
+    searchString: "Kumar Ponnambalam",
+    explanationText: "<img src=img/WIP.png> Gaasinather Gangaser Ponnambalam"
+    },
+    {
+    searchString: "Ponnambalam",
+    explanationText: "<img src=img/WIP.png> Gaasinather Gangaser Ponnambalam"
+    },
+    {
+    searchString: "Savumiamoorthy Thondaman",
+    explanationText: "<img src=img/WIP.png> Savumiamoorthy Thondaman"
+    },
+    {
+    searchString: "Thondaman",
+    explanationText: "<img src=img/WIP.png> Savumiamoorthy Thondaman"
+    },
+    {
+    searchString: "Vijaya Kumaratunge",
+    explanationText: "<img src=img/WIP.png> Kovilage Anton Vijaya Kumaranatunga"
+    },
+    {
+    searchString: "Vijaya",
+    explanationText: "<img src=img/WIP.png> Kovilage Anton Vijaya Kumaranatunga"
+    },
+    {
+    searchString: "Vellupillai Prabhakran",
+    explanationText: "<img src=img/WIP.png> Vellupillai Prabhakran"
+    },
+    {
+    searchString: "Prabhakran",
+    explanationText: "<img src=img/WIP.png> Vellupillai Prabhakran"
+    },
+
+
 ];
 
 
