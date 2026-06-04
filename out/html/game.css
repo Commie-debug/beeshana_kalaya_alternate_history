@@ -1038,6 +1038,12 @@ table {
 .seat.mep {
     fill: #FF3915;
 }
+.seat.ulpp {
+    fill: #DAEA67;
+}
+.seat.dunf {
+    fill: #128812;
+}
 .seat.pflt {
     fill: #DC143C;
 }

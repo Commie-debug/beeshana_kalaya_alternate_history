@@ -545,6 +545,10 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/USSR_Logo.png> Union of Soviet <br> Socialist Republics <br> Союз Советских <br> Социалистических Республик"
     },
     {
+    searchString: "Soviet Union",
+    explanationText: "<img src=img/logos/USSR_Logo.png> Union of Soviet <br> Socialist Republics <br> Союз Советских <br> Социалистических Республик"
+    },
+    {
     searchString: "SAARC",
     explanationText: "<img src=img/logos/SAARC_Logo.png> South Asian Association <br> for Regional Cooperation"
     },
