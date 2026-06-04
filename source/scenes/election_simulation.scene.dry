@@ -88,11 +88,13 @@ on-arrival: {!
 {!<table style="text-align:left; border-spacing: 0.5em;">!}
 {!<tr><th>Candidate</th><th>Party</th><th>Vote %</th><th>Supporting Parties</th></tr>!}
 
-[? if pres_results_count >= 1 : {!<tr><td>!}[+ pres_result_0_candidate +]{!</td><td><span style="color:!}[+ pres_result_0_color +]{!;">!}**[+ pres_result_0_party +]**{!</span></td><td>!}**[+ pres_result_0_votes +]%**{!</td><td>!}[+ pres_result_0_endorsers +]{!</td></tr>!} ?]
-[? if pres_results_count >= 2 : {!<tr><td>!}[+ pres_result_1_candidate +]{!</td><td><span style="color:!}[+ pres_result_1_color +]{!;">!}[+ pres_result_1_party +]{!</span></td><td>!}[+ pres_result_1_votes +]%{!</td><td>!}[+ pres_result_1_endorsers +]{!</td></tr>!} ?]
-[? if pres_results_count >= 3 : {!<tr><td>!}[+ pres_result_2_candidate +]{!</td><td><span style="color:!}[+ pres_result_2_color +]{!;">!}[+ pres_result_2_party +]{!</span></td><td>!}[+ pres_result_2_votes +]%{!</td><td>!}[+ pres_result_2_endorsers +]{!</td></tr>!} ?]
-[? if pres_results_count >= 4 : {!<tr><td>!}[+ pres_result_3_candidate +]{!</td><td><span style="color:!}[+ pres_result_3_color +]{!;">!}[+ pres_result_3_party +]{!</span></td><td>!}[+ pres_result_3_votes +]%{!</td><td>!}[+ pres_result_3_endorsers +]{!</td></tr>!} ?]
-[? if pres_results_count >= 5 : {!<tr><td>!}[+ pres_result_4_candidate +]{!</td><td><span style="color:!}[+ pres_result_4_color +]{!;">!}[+ pres_result_4_party +]{!</span></td><td>!}[+ pres_result_4_votes +]%{!</td><td>!}[+ pres_result_4_endorsers +]{!</td></tr>!} ?]
+{!<tr><td>!}[+ pres_result_0_candidate +]{!</td><td><span style="color:!}[+ pres_result_0_color +]{!;">!}**[+ pres_result_0_party +]**{!</span></td><td>!}**[+ pres_result_0_votes +]%**{!</td><td>!}[+ pres_result_0_endorsers +]{!</td></tr>!} 
+{!<tr><td>!}[+ pres_result_1_candidate +]{!</td><td><span style="color:!}[+ pres_result_1_color +]{!;">!}[+ pres_result_1_party +]{!</span></td><td>!}[+ pres_result_1_votes +]%{!</td><td>!}[+ pres_result_1_endorsers +]{!</td></tr>!} 
+{!<tr><td>!}[+ pres_result_2_candidate +]{!</td><td><span style="color:!}[+ pres_result_2_color +]{!;">!}[+ pres_result_2_party +]{!</span></td><td>!}[+ pres_result_2_votes +]%{!</td><td>!}[+ pres_result_2_endorsers +]{!</td></tr>!} 
+{!<tr><td>!}[+ pres_result_3_candidate +]{!</td><td><span style="color:!}[+ pres_result_3_color +]{!;">!}[+ pres_result_3_party +]{!</span></td><td>!}[+ pres_result_3_votes +]%{!</td><td>!}[+ pres_result_3_endorsers +]{!</td></tr>!} 
+{!<tr><td>!}[+ pres_result_4_candidate +]{!</td><td><span style="color:!}[+ pres_result_4_color +]{!;">!}[+ pres_result_4_party +]{!</span></td><td>!}[+ pres_result_4_votes +]%{!</td><td>!}[+ pres_result_4_endorsers +]{!</td></tr>!} 
+{!<tr><td>!}[+ pres_result_5_candidate +]{!</td><td><span style="color:!}[+ pres_result_5_color +]{!;">!}[+ pres_result_5_party +]{!</span></td><td>!}[+ pres_result_5_votes +]%{!</td><td>!}[+ pres_result_5_endorsers +]{!</td></tr>!}
+
 
 {!</table>!}
 
@@ -144,7 +146,7 @@ on-arrival:{!
 {!<tr><th>Choice</th><th>Supporting Parties</th><th>Vote %</th></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #006400; outline: 2px; outline-style: solid;'> </div> !} Yes {!</td><td>!} UNP, CWC {!</td><td>!} **54.66%** {!</td><td></td></tr>!}
-{!<tr><td><div class="box" style='background-color: #fd0101; outline: 2px; outline-style: solid;'> </div> !} No {!</td><td>!} SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC {!</td><td>!} **45.34%** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #fd0101; outline: 2px; outline-style: solid;'> </div> !} No {!</td><td>!} SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC {!</td><td>!} **45.34%** {!</td><td></td></tr>!}
 
 {!</table>!}
 
