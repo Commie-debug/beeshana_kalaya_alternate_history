@@ -819,32 +819,37 @@
         if (searchString === 'Sri Lanka Armed Forces' && Q.slaf_strength !== undefined) {
             var strength = Q.slaf_strength ? Q.slaf_strength : '0';
             var morale = getLoyaltyText(Q.slaf_morale);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+            var readiness = getMilitancyText(Q.slaf_readiness)
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
         }
 
         if (searchString === 'Special Task Force' && Q.stf_strength !== undefined) {
             var strength = Q.stf_strength ? Q.stf_strength : '0';
             var morale = getLoyaltyText(Q.stf_morale);
             var status = getStatusText(Q.stf_gstatus);
-            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+            var readiness = getMilitancyText(Q.stf_readiness)
+            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
         }
       
         if (searchString === 'Sri Lanka Police' && Q.slp_strength !== undefined) {
             var strength = Q.slp_strength ? Q.slp_strength : '0';
             var morale = getLoyaltyText(Q.slp_morale);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+            var readiness = getMilitancyText(Q.slp_readiness)
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
         }
         
         if (searchString === 'Civil Security' && Q.homeg_civilsec_strength !== undefined) {
             var strength = Q.homeg_civilsec_strength ? Q.homeg_civilsec_strength : '0';
             var morale = getLoyaltyText(Q.homeg_civilsec_morale);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+            var readiness = getMilitancyText(Q.homeg_civilsec_readiness)
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
         }
         
         if (searchString === 'Home Guard' && Q.homeg_civilsec_strength !== undefined) {
             var strength = Q.homeg_civilsec_strength ? Q.homeg_civilsec_strength : '0';
             var morale = getLoyaltyText(Q.homeg_civilsec_morale);
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
+            var readiness = getMilitancyText(Q.homeg_civilsec_readiness)
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
         }
 
         if (searchString === 'IPKF' && Q.ipkf_size !== undefined) {
