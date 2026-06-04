@@ -828,28 +828,28 @@
             var morale = getLoyaltyText(Q.stf_morale);
             var status = getStatusText(Q.stf_gstatus);
             var readiness = getMilitancyText(Q.stf_readiness)
-            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
+            return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness: ' + readiness;
         }
       
         if (searchString === 'Sri Lanka Police' && Q.slp_strength !== undefined) {
             var strength = Q.slp_strength ? Q.slp_strength : '0';
             var morale = getLoyaltyText(Q.slp_morale);
             var readiness = getMilitancyText(Q.slp_readiness)
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness: ' + readiness;
         }
         
         if (searchString === 'Civil Security' && Q.homeg_civilsec_strength !== undefined) {
             var strength = Q.homeg_civilsec_strength ? Q.homeg_civilsec_strength : '0';
             var morale = getLoyaltyText(Q.homeg_civilsec_morale);
             var readiness = getMilitancyText(Q.homeg_civilsec_readiness)
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness: ' + readiness;
         }
         
         if (searchString === 'Home Guard' && Q.homeg_civilsec_strength !== undefined) {
             var strength = Q.homeg_civilsec_strength ? Q.homeg_civilsec_strength : '0';
             var morale = getLoyaltyText(Q.homeg_civilsec_morale);
             var readiness = getMilitancyText(Q.homeg_civilsec_readiness)
-            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness:' + readiness;
+            return baseTooltip.explanationText + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale + '<br>Readiness: ' + readiness;
         }
 
         if (searchString === 'IPKF' && Q.ipkf_size !== undefined) {
