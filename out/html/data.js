@@ -171,6 +171,14 @@ const colourList = [{
         style: "color: #FF4500; font-weight: bold;"
     },
     {
+        word: "DUNF",
+        style: "color: #128812; font-weight: bold;"
+    },
+    {
+        word: "ULPP",
+        style: "color: #DAEA67; font-weight: bold;"
+    },
+    {
         word: "INC",
         style: "color: #76D7EA; font-weight: bold;"
     },
@@ -355,6 +363,14 @@ const tooltipList = [{
     {
     searchString: "MEP",
     explanationText: "<img src=img/logos/MEP_Logo.png> Mahajana Eksath Peramuna <br> (Peoples United Front)"
+    },
+    {
+    searchString: "ULPP",
+    explanationText: "<img src=img/logos/MEP_Logo.png> United Lanka Peoples Party "
+    },
+    {
+    searchString: "DUNF",
+    explanationText: "<img src=img/logos/MEP_Logo.png> Democratic United National Front "
     },
     {
     searchString: "EROS",
