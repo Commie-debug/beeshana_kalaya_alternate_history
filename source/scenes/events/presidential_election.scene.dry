@@ -103,7 +103,7 @@ Q.pres_endorsing_parties = {};
 
 //defineparties
 var base_parties = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc'];
-var formable_parties = ['slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf'];
+var formable_parties = ['slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf', 'endlf', 'telo', 'eprlf', 'dunf', 'ulpp'];
 var all_party_names = base_parties.slice();
 
 //addformablepartiesifformed
@@ -596,7 +596,7 @@ var display_districts = [
 ];
 
 var all_parties_for_map = ['slfp', 'unp', 'tulf', 'actc', 'jvp', 'cwc', 'cpsl', 'lssp', 'nssp', 
-                           'slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf'];
+                           'slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf', 'endlf', 'eprlf', 'telo', 'dunf', 'ulpp'];
 
 for (var d = 0; d < display_districts.length; d++) {
     var dist = display_districts[d];
