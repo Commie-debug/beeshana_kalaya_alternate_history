@@ -143,8 +143,8 @@ on-arrival:{!
 
 {!<tr><th>Choice</th><th>Supporting Parties</th><th>Vote %</th></tr>!}
 
-{!<tr><td><span style="font-weight: bold; color: #006400" >Yes</span></td><td>UNP, CWC</td><td>54.66%</td></tr>!}
-{!<tr><td><span style="font-weight: bold; color: #fd0101" >No</span></td><td>SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC</td><td>45.34%</td></tr>!}
+{!<tr><td><div class="box" style='background-color: #006400; outline: 2px; outline-style: solid;'> </div> !} Yes {!</td><td>!} UNP, CWC {!</td><td>!} **54.66%** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #fd0101; outline: 2px; outline-style: solid;'> </div> !} No {!</td><td>!} SLFP, TULF, JVP, LSSP, CPSL, NSSP, ACTC, SLMC {!</td><td>!} **45.34%** {!</td><td></td></tr>!}
 
 {!</table>!}
 
