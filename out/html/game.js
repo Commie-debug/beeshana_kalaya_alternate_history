@@ -117,7 +117,7 @@
             audio: null,
             volume: 0.4,
             enabled: false
-        }.
+        }
         sfx: {
             playlist: [],
             currentIndex: 0,
