@@ -117,6 +117,13 @@
             audio: null,
             volume: 0.4,
             enabled: false
+        }.
+        sfx: {
+            playlist: [],
+            currentIndex: 0,
+            audio: null,
+            volume: 0.6,
+            enabled: true
         }
     };
 
@@ -203,7 +210,12 @@
         isMuted: function() { return muted; },
 
         skip: function(layerName) {
-            window.AudioManager.playSongOnce('music/sfx/radio_static.mp3', 'sfx');
+            var sfxLayer = layers['sfx'];
+            if (sfxLayer && sfxLayer.enabled) {
+                var sfxAudio = new Audio('music/sfx/radio_static.mp3');
+                sfxAudio.volume = sfxLayer.volume;
+                sfxAudio.play().catch(function() {});
+            }
             var name = layerName || 'music';
             var layer = layers[name];
             if (layer.audio) {
@@ -225,7 +237,12 @@
         },
 
         previous: function(layerName) {
-            window.AudioManager.playSongOnce('music/sfx/radio_static.mp3', 'sfx');
+            var sfxLayer = layers['sfx'];
+            if (sfxLayer && sfxLayer.enabled) {
+                var sfxAudio = new Audio('music/sfx/radio_static.mp3');
+                sfxAudio.volume = sfxLayer.volume;
+                sfxAudio.play().catch(function() {});
+            }
             var name = layerName || 'music';
             var layer = layers[name];
             if (layer.audio) {
