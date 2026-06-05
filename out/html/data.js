@@ -572,39 +572,39 @@ const tooltipList = [{
     },
     {
     searchString: "A Amirthalingam",
-    explanationText: "<img src=img/WIP.png> Appapillai Amirthalingam"
+    explanationText: "<img src=img/WIP.jpg> Appapillai Amirthalingam"
     },
     {
     searchString: "Sirimavo Bandaranaike",
-    explanationText: "<img src=img/WIP.png> Sirima Ratwatte Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
     },
     {
     searchString: "Sirimavo",
-    explanationText: "<img src=img/WIP.png> Sirima Ratwatte Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
     },
     {
     searchString: "Mrs Bandaranaike",
-    explanationText: "<img src=img/WIP.png> Sirima Ratwatte Dias Bandaranaike"
+    explanationText: "<img src=imgimg/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
     },
     {
     searchString: "Anura Bandaranaike",
-    explanationText: "<img src=img/WIP.png> Anura Priyadarshi Solomon Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeAnura.jpg> Anura Priyadarshi Solomon Dias Bandaranaike"
     },
     {
     searchString: "Anura",
-    explanationText: "<img src=img/WIP.png> Anura Priyadarshi Solomon Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeAnura.jpg> Anura Priyadarshi Solomon Dias Bandaranaike"
     },
     {
     searchString: "Chandrika",
-    explanationText: "<img src=img/WIP.png> Chandrika Bandaranaike Kumaratunga"
+    explanationText: "<img src=img/portraits/KumaratungeChandrika.jpg> Chandrika Bandaranaike Kumaratunga"
     },
     {
     searchString: "Chandrika Kumaratunga",
-    explanationText: "<img src=img/WIP.png> Chandrika Bandaranaike Kumaratunga"
+    explanationText: "<img src=img/portraits/KumaratungeChandrika.jpg> Chandrika Bandaranaike Kumaratunga"
     },
     {
     searchString: "Maithripala Senanayake",
-    explanationText: "<img src=img/WIP.png> Maithripala Senanayake"
+    explanationText: "<img src=img/portraits/SenanayakeMaithripala.jpg> Maithripala Senanayake"
     },
     {
     searchString: "Rohana Wijeweera",
@@ -632,6 +632,10 @@ const tooltipList = [{
     },
     {
     searchString: "Colvin R. de Silva",
+    explanationText: "<img src=img/WIP.png> Colvin Reginald de Silva"
+    },
+    {
+    searchString: "Colvin R de Silva",
     explanationText: "<img src=img/WIP.png> Colvin Reginald de Silva"
     },
     {
@@ -669,6 +673,10 @@ const tooltipList = [{
     {
     searchString: "Prabhakran",
     explanationText: "<img src=img/WIP.png> Vellupillai Prabhakran"
+    },
+    {
+    searchString: "Uma Maheswaran",
+    explanationText: "<img src=img/WIP.png> Kadirgamapillai (Kathirkamar) Nallainathan"
     },
 
 
