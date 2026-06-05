@@ -203,27 +203,47 @@
         isMuted: function() { return muted; },
 
         skip: function(layerName) {
+            window.AudioManager.playSongOnce('music/sfx/radio_static.mp3', 'sfx');
             var name = layerName || 'music';
             var layer = layers[name];
             if (layer.audio) {
-                layer.audio.onended = null;
-                layer.audio.pause();
-                layer.audio = null;
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
             }
             layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
-            playLayer(name);
+            setTimeout(function() {
+                playLayer(name);
+            }, 800);
         },
 
         previous: function(layerName) {
+            window.AudioManager.playSongOnce('music/sfx/radio_static.mp3', 'sfx');
             var name = layerName || 'music';
             var layer = layers[name];
             if (layer.audio) {
-                layer.audio.onended = null;
-                layer.audio.pause();
-                layer.audio = null;
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
             }
             layer.currentIndex = (layer.currentIndex - 1 + layer.playlist.length) % layer.playlist.length;
-            playLayer(name);
+            setTimeout(function() {
+                playLayer(name);
+            }, 800);
         },
 
         playSong: function(path, layerName) {
