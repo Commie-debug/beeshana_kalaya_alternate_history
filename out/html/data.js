@@ -701,6 +701,10 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/UN_Logo.png> United Nations <br> منظمة الأمم المتحدة <br> 联合国 <br> Organisation des Nations unies <br> Организация Объединённых Наций <br> Organización de las Naciones Unidas"
     },
     {
+    searchString: "UN",
+    explanationText: "<img src=img/logos/UN_Logo.png> United Nations <br> منظمة الأمم المتحدة <br> 联合国 <br> Organisation des Nations unies <br> Организация Объединённых Наций <br> Organización de las Naciones Unidas"
+    },
+    {
     searchString: "Iran",
     explanationText: "<img src=img/logos/Iran_Logo.png> Islamic Republic of Iran <br> جمهوری اسلامی ایران"
     },
