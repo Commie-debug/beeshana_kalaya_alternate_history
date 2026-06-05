@@ -1314,7 +1314,7 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 1 and week = 3 : Ronald Reagan is inaugurated as the 40th President of the United States of America. ?]
 
-[? if year = 1981 and month = 2 and week = 1 : Spanish parliament is stormed by armed officers in an attempted military coup. ?]
+[? if year = 1981 and month = 2 and week = 1 : Parliament of Spain is stormed by armed officers in an attempted military coup. ?]
 
 [? if year = 1981 and month = 2 and week = 3 : Greece formally joins the European Economic Community as its tenth member state. ?]
 
@@ -1348,7 +1348,7 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 10 and week = 3 : Hosni Mubarak is sworn in as President of Egypt following the assassination of Anwar Sadat. ?]
 
-[? if year = 1981 and month = 11 and week = 1 : Antigua and Barbuda gains independence from the United Kingdom. ?]
+[? if year = 1981 and month = 11 and week = 1 : Antigua & Barbuda gains independence from the United Kingdom. ?]
 
 [? if year = 1981 and month = 11 and week = 3 : The United States and Soviet Union open arms reduction talks in Geneva amid growing nuclear anxiety in Western Europe. ?]
 
@@ -1400,7 +1400,7 @@ Nationalists Dissent
 
 [? if year = 1982 and month = 11 and week = 3 : The Vietnam Veterans Memorial is dedicated in Washington D.C. ?]
 
-[? if year = 1982 and month = 12 and week = 1 : The world premiere of the autobiographical movie Gandhi is held in New Delhi. ?]
+[? if year = 1982 and month = 12 and week = 1 : The world premiere of the autobiographical movie Gandhi is held in New Delhi, India. ?]
 
 [? if year = 1982 and month = 12 and week = 3 : The United States deploys the first Pershing II nuclear missiles to Western Europe prompting large anti-nuclear protests. ?]
 
@@ -1408,7 +1408,7 @@ Nationalists Dissent
 
 [? if year = 1983 and month = 1 and week = 3 : West German federal elections returns Helmut Kohl's centre-right coalition to power with a strengthened majority. ?]
 
-[? if year = 1983 and month = 2 and week = 1 : Bushfires devastate the Australian states of Victoria and South Australia on "Ash Wednesday" killing over 70 people. ?]
+[? if year = 1983 and month = 2 and week = 1 : Bushfires in Australia devastates the states of Victoria and South Australia on "Ash Wednesday" killing over 70 people. ?]
 
 [? if year = 1983 and month = 2 and week = 3 : The final episode of MASH airs in the United States to record television audiences. ?]
 
@@ -1450,7 +1450,7 @@ Nationalists Dissent
 
 [? if year = 1983 and month = 11 and week = 1 : Fighting erupts in Tripoli, Lebanon between members of the PLO. ?]
 
-[? if year = 1983 and month = 11 and week = 3 : The Turkish Republic of Northern Cyprus declares independence from Turkish occupied Cyprus. ?]
+[? if year = 1983 and month = 11 and week = 3 : Northern Cyprus declares independence from Turkish occupied Cyprus, 9 years since Turkey's invasion of Cyprus. ?]
 
 [? if year = 1983 and month = 12 and week = 1 : The United States deploys Pershing II nuclear missiles to West Germany. ?]
 
@@ -1554,7 +1554,7 @@ Nationalists Dissent
 
 [? if year = 1986 and month = 1 and week = 3 : The Space Shuttle Challenger explodes shortly after launch, killing all seven astronauts onboard. ?]
 
-[? if year = 1986 and month = 2 and week = 1 : Swedish Prime Minister Olof Palme is shot dead on a Stockholm street while walking home from the cinema with his wife. ?]
+[? if year = 1986 and month = 2 and week = 1 : Prime Minister of Sweden Olof Palme is shot dead on a Stockholm street while walking home from the cinema with his wife. ?]
 
 [? if year = 1986 and month = 2 and week = 3 : Ferdinand Marcos flees the Philippines following a popular uprising against his long-term rule. ?]
 
@@ -1564,7 +1564,7 @@ Nationalists Dissent
 
 [? if year = 1986 and month = 4 and week = 1 : The United States bombs targets in Tripoli and Benghazi, Libya following a series of terrorist attacks supposedly linked to Libyan leader Muammar Gaddafi. ?]
 
-[? if year = 1986 and month = 4 and week = 3 : Reactor Four at the Chernobyl Nuclear Power Plant explodes in Soviet Ukraine. ?]
+[? if year = 1986 and month = 4 and week = 3 : Reactor Four at the Chernobyl Nuclear Power Plant explodes in the Ukrainian SSR. ?]
 
 [? if year = 1986 and month = 5 and week = 1 : A reactor accident at the Chernobyl plant continues spreading radioactive fallout across Europe. ?]
 
@@ -1572,7 +1572,7 @@ Nationalists Dissent
 
 [? if year = 1986 and month = 6 and week = 1 : The United Nations General Assembly holds its first special session on disarmament amid growing nuclear anxieties. ?]
 
-[? if year = 1986 and month = 6 and week = 3 : Diego Maradona scores the "Hand of God" goal against England at the FIFA World Cup. ?]
+[? if year = 1986 and month = 6 and week = 3 : Diego Maradona scores the "Hand of God" goal against England at the FIFA World Cup in Mexico. ?]
 
 [? if year = 1986 and month = 7 and week = 1 : New Zealand passes legislation making the country nuclear-free. ?]
 
@@ -1686,7 +1686,7 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 9 and week = 3 : The Summer Olympics open in Seoul, South Korea almost a year since the end of de-facto military rule. ?]
 
-[? if year = 1988 and month = 10 and week = 1 : Chilean voters reject military dictator Augusto Pinochet's continued rule in a national referendum. ?]
+[? if year = 1988 and month = 10 and week = 1 : Voters in Chile reject military dictator Augusto Pinochet's continued rule in a national referendum. ?]
 
 [? if year = 1988 and month = 10 and week = 3 : Benazir Bhutto is elected Prime Minister of Pakistan, becoming the first woman to lead a Muslim-majority nation. ?]
 
@@ -1696,7 +1696,7 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 12 and week = 1 : A powerful earthquake devastates the Armenia SSR, USSR destroying much of the city of Spitak. ?]
 
-[? if year = 1988 and month = 12 and week = 3 : Pan Am Flight 103 explodes over Lockerbie after a bomb detonates onboard the aircraft. ?]
+[? if year = 1988 and month = 12 and week = 3 : Pan Am Flight 103 explodes over Lockerbie, UK after a bomb detonates onboard the aircraft. ?]
 
 [? if year = 1989 and month = 1 and week = 1 : Soviet troops complete their withdrawal from Afghanistan after almost ten years of intervention. ?]
 
@@ -1756,7 +1756,7 @@ Nationalists Dissent
 
 [? if year = 1990 and month = 3 and week = 1 : Lithuania declares independence from the Soviet Union. ?]
 
-[? if year = 1990 and month = 3 and week = 3 : Namibia gains independence from South Africa. ?]
+[? if year = 1990 and month = 3 and week = 3 : Namibia gains independence from South Africa after 23 years of war involving South Africa and the intervention of Cuba. ?]
 
 [? if year = 1990 and month = 4 and week = 1 : The Space Shuttle Discovery deploys the Hubble Space Telescope into orbit. ?]
 
@@ -1766,7 +1766,7 @@ Nationalists Dissent
 
 [? if year = 1990 and month = 5 and week = 3 : East and West Germany agree on terms for full economic and monetary union ahead of a planned political reunification. ?]
 
-[? if year = 1990 and month = 6 and week = 1 : Boris Yeltsin is elected president of the RSFSR in a vote that further undermines Gorbachev's authority. ?]
+[? if year = 1990 and month = 6 and week = 1 : Boris Yeltsin is elected president of the Russian SFSR in a vote that further undermines Gorbachev's authority. ?]
 
 [? if year = 1990 and month = 6 and week = 3 : The Schengen Agreement comes into effect between several Western European states. ?]
 

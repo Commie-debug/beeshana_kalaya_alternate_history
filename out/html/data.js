@@ -796,10 +796,141 @@ const tooltipList = [{
     searchString: "El Salvador",
     explanationText: "<img src=img/logos/El_Salvador_Logo.png> Republic of El Salvador <br> República de El Salvador"
     },
+    {
+    searchString: "Greece",
+    explanationText: "<img src=img/logos/Greece_Logo.png> Hellenic Republic <br> Ελληνική Δημοκρατία"
+    },
+    {
+    searchString: "Spain",
+    explanationText: "<img src=img/logos/Spain_Logo.png> Kingdom of Spain <br> Reino de España"
+    },
+    {
+    searchString: "Syrian",
+    explanationText: "<img src=img/logos/Syria_Logo.png> Syrian Arab Republic <br> اَلْجُمْهُورِيَّةُ ٱلْعَرَبِيَّةُ ٱلْسُوْرِيَّة "
+    },
+    {
+    searchString: "Mexico",
+    explanationText: "<img src=img/logos/Mexico_Logo.png> United Mexican States <br> Estados Unidos Mexicanos"
+    },
+    {
+    searchString: "Australia",
+    explanationText: "<img src=img/logos/Australia_Logo.png> Commonwealth of Australia"
+    },
+    {
+    searchString: "Palau",
+    explanationText: "<img src=img/logos/Palau_Logo.png> Republic of Palau <br> Beluu er a Belau"
+    },
+    {
+    searchString: "Finland",
+    explanationText: "<img src=img/logos/Finland_Logo.png> Republic of Finland <br> Suomen tasavalta"
+    },
+    {
+    searchString: "Antigua & Barbuda",
+    explanationText: "<img src=img/logos/Antigua_and_Barbuda_Logo.png> Antigua and Barbuda <br> Aanteega an' Baabyuuda"
+    },
+    {
+    searchString: "Grenada",
+    explanationText: "<img src=img/logos/Grenada_Logo.png> People's Revolutionary Government of Grenada <br> Suomen tasavalta"
+    },
+    {
+    searchString: "NATO",
+    explanationText: "<img src=img/logos/NATO_Logo.png> North Atlantic Treaty Organization"
+    },
+    {
+    searchString: "Northern Cyprus",
+    explanationText: "<img src=img/logos/TRN_Cyprus_Logo.png> Turkish Republic of Northern Cyprus <br> Kuzey Kıbrıs Türk Cumhuriyeti "
+    },
+    {
+    searchString: "Brunei",
+    explanationText: "<img src=img/logos/Brunei_Logo.png> Brunei Darussalam <br> Negara Brunei Darussalam <br> نݢارا بروني دارالسلام "
+    },
+    {
+    searchString: "Burkina Faso",
+    explanationText: "<img src=img/logos/Burkina_Faso_Logo.png> Burkina Faso <br> 𞤄𞤵𞤪𞤳𞤭𞤲𞤢 𞤊𞤢𞤧𞤮𞥅 <br> ߓߙߎߞߌߣߊ߫ ߝߊ߬ߛߏ߫ "
+    },
+    {
+    searchString: "Uganda",
+    explanationText: "<img src=img/logos/Uganda_Logo.png> Republic of Uganda <br> Jamhuri ya Uganda"
+    },
+    {
+    searchString: "Portugal",
+    explanationText: "<img src=img/logos/Portugal_Logo.png> Portuguese Republic <br> República Portuguesa "
+    },
+    {
+    searchString: "Sweden",
+    explanationText: "<img src=img/logos/Sweden_Logo.png> Kingdom of Sweden <br> Konungariket Sverige "
+    },
+    {
+    searchString: "Ukrainian SSR",
+    explanationText: "<img src=img/logos/Ukraine_Logo.png> Ukrainian Soviet Socialist Republic <br> Українська Радянська Соціалістична Республіка  "
+    },
+    {
+    searchString: "New Zealand",
+    explanationText: "<img src=img/logos/New_Zealand_Logo.png> New Zealand <br> Aotearoa "
+    },
+    {
+    searchString: "Iceland",
+    explanationText: "<img src=img/logos/Iceland_Logo.png> Republic of Iceland <br> Lýðveldið Ísland "
+    },
+    {
+    searchString: "Taiwan",
+    explanationText: "<img src=img/logos/Taiwan_Logo.png> Republic of not China <br> 中華民國 "
+    },
+    {
+    searchString: "Chile",
+    explanationText: "<img src=img/logos/Chile_Logo.png> Republic of Chile <br> República de Chile "
+    },
+    {
+    searchString: "Maldives",
+    explanationText: "<img src=img/logos/Maldives_Logo.png> Republic of Maldives <br> ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ "
+    },
+    {
+    searchString: "Austria",
+    explanationText: "<img src=img/logos/Austria_Logo.png> Republic of Austria <br> Republik Österreich "
+    },
+    {
+    searchString: "Lithuania",
+    explanationText: "<img src=img/logos/Lithuania_Logo.png> Lithuanian Soviet Socialist Republic <br> Lietuvos Tarybų Socialistinė Respublika "
+    },
+    {
+    searchString: "Estonia",
+    explanationText: "<img src=img/logos/Estonia_Logo.png> Estonian Soviet Socialist Republic <br> Eesti Nõukogude Sotsialistlik Vabariik "
+    },
+    {
+    searchString: "Latvia",
+    explanationText: "<img src=img/logos/Latvia_Logo.png> Latvian Soviet Socialist Republic <br> Latvijas Padomju Sociālistiskā Republika "
+    },
+    {
+    searchString: "Czechoslovakia",
+    explanationText: "<img src=img/logos/Czechoslovakia_Logo.png> Czechoslovak Socialist Republic <br> Československá socialistická republika "
+    },
+    {
+    searchString: "Panama",
+    explanationText: "<img src=img/logos/Panama_Logo.png> Republic of Panama <br> República de Panamá "
+    },
+    {
+    searchString: "Namibia",
+    explanationText: "<img src=img/logos/Namibia_Logo.png> Republic of Namibia <br> Orepublika yaNamibia <br> Republiki Namibiab dib <br> Orepublika yaNamibia "
+    },
+    {
+    searchString: "Cuba",
+    explanationText: "<img src=img/logos/Cuba_Logo.png> Republic of Cuba <br> República de Cuba "
+    },
+    {
+    searchString: "Saudi Arabia",
+    explanationText: "<img src=img/logos/Saudi_Arabia_Logo.png> Kingdom of Saudi Arabia <br> المملكة العربية السعودية "
+    },
+    {
+    searchString: "Turkey",
+    explanationText: "<img src=img/logos/Cuba_Logo.png> Republic of Turkey <br> Türkiye Cumhuriyeti "
+    },
+    {
+    searchString: "Cyprus",
+    explanationText: "<img src=img/logos/Cyprus_Logo.png> Republic of Cyprus <br> Κυπριακή Δημοκρατία  "
+    },
 
 
 
-    
     //portraits below
     {
     searchString: "JR Jayewardene",
