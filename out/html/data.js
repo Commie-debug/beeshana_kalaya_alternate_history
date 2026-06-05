@@ -533,6 +533,10 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/UK_Logo.png> United Kingdom of <br> Great Britian & <br> Northern Ireland"
     },
     {
+    searchString: "United Kingdom",
+    explanationText: "<img src=img/logos/UK_Logo.png> United Kingdom of <br> Great Britian & <br> Northern Ireland"
+    },
+    {
     searchString: "Britain",
     explanationText: "<img src=img/logos/UK_Logo.png> United Kingdom of <br> Great Britian & <br> Northern Ireland"
     },
@@ -678,7 +682,7 @@ const tooltipList = [{
     },
     {
     searchString: "United Nations",
-    explanationText: "<img src=img/logos/Ethiopia_Logo.png> United Nations <br> منظمة الأمم المتحدة <br> 联合国 <br> Organisation des Nations unies <br> Организация Объединённых Наций <br> Organización de las Naciones Unidas"
+    explanationText: "<img src=img/logos/UN_Logo.png> United Nations <br> منظمة الأمم المتحدة <br> 联合国 <br> Organisation des Nations unies <br> Организация Объединённых Наций <br> Organización de las Naciones Unidas"
     },
     {
     searchString: "Iran",
@@ -746,7 +750,7 @@ const tooltipList = [{
     },
     {
     searchString: "East Germany",
-    explanationText: "<img src=img/logos/East_Germany_Logo.png> Hungarian People's Republic <br> Deutsche Demokratische Republik "
+    explanationText: "<img src=img/logos/East_Germany_Logo.png> German Democratic Republic <br> Deutsche Demokratische Republik "
     },
     {
     searchString: "Romania",

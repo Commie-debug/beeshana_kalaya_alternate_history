@@ -1654,7 +1654,7 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 2 and week = 1 : Protests erupt in the Armenian SSR demanding the transfer of Nagorno-Karabakh from the Azerbaijan SSR to the Armenian SSR. ?]
 
-[? if year = 1988 and month = 2 and week = 3 : Ethnic violence between Armenians and Azeri's erupts in the town of Sumgait in the Soviet Union. ?]
+[? if year = 1988 and month = 2 and week = 3 : Ethnic violence between Armenian's and Azeri's erupts in the town of Sumgait in the Soviet Union. ?]
 
 [? if year = 1988 and month = 3 and week = 1 : The Intermediate Nuclear Forces Treaty comes into force as the United States and Soviet Union begin destroying their short and medium range missiles. ?]
 
@@ -1670,7 +1670,7 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 6 and week = 1 : Benazir Bhutto returns to Pakistan to massive crowds demanding an end to military rule. ?]
 
-[? if year = 1988 and month = 6 and week = 3 : Gorbachev proposes sweeping constitutional reforms at the Soviet Communist Party Conference including the creation of a new parliamentary assembly. ?]
+[? if year = 1988 and month = 6 and week = 3 : Gorbachev proposes sweeping constitutional reforms at the 19th CPSU Conference including the creation of a new parliamentary assembly. ?]
 
 [? if year = 1988 and month = 7 and week = 1 : Iran Air Flight 655 is shot down by the USS Vincennes over the Persian Gulf. ?]
 
@@ -1698,7 +1698,7 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 12 and week = 3 : Pan Am Flight 103 explodes over Lockerbie after a bomb detonates onboard the aircraft. ?]
 
-[? if year = 1989 and month = 1 and week = 1 : Soviet troops complete their withdrawal from Afghanistan after almost ten years of intervension. ?]
+[? if year = 1989 and month = 1 and week = 1 : Soviet troops complete their withdrawal from Afghanistan after almost ten years of intervention. ?]
 
 [? if year = 1989 and month = 1 and week = 3 : Emperor Hirohito of Japan dies after 62 years on the throne and is succeeded by his son Akihito. ?]
 
