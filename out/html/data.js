@@ -214,6 +214,14 @@ const colourList = [{
         word: "ENDLF",
         style: "color: #FF5E5E; font-weight: bold;"
     },
+    {
+        word: "Naxal",
+        style: "color: #b20000; font-weight: bold;"
+    },
+    {
+        word: "Naxalite",
+        style: "color: #b20000; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -499,6 +507,14 @@ const tooltipList = [{
     {
     searchString: "UCPF",
     explanationText: "<img src=img/logos/UCPF_Logo.png> Up Country <br> Peoples Front"
+    },
+    {
+    searchString: "Naxal",
+    explanationText: "<img src=img/logos/Naxal_Logo.png> Naxalite-Maoist(Indian Maoist insurgents)"
+    },
+    {
+    searchString: "Naxalite",
+    explanationText: "<img src=img/logos/Naxal_Logo.png> Naxalite-Maoist(Indian Maoist insurgents)"
     },
     {
     searchString: "Non Alligned Movement",
@@ -830,7 +846,7 @@ const tooltipList = [{
     },
     {
     searchString: "Grenada",
-    explanationText: "<img src=img/logos/Grenada_Logo.png> People's Revolutionary Government of Grenada <br> Suomen tasavalta"
+    explanationText: "<img src=img/logos/Grenada_Logo.png> People's Revolutionary Government of Grenada "
     },
     {
     searchString: "NATO",
@@ -922,11 +938,11 @@ const tooltipList = [{
     },
     {
     searchString: "Turkey",
-    explanationText: "<img src=img/logos/Cuba_Logo.png> Republic of Turkey <br> Türkiye Cumhuriyeti "
+    explanationText: "<img src=img/logos/Turkey_Logo.png> Republic of Turkey <br> Türkiye Cumhuriyeti "
     },
     {
     searchString: "Cyprus",
-    explanationText: "<img src=img/logos/Cyprus_Logo.png> Republic of Cyprus <br> Κυπριακή Δημοκρατία  "
+    explanationText: "<img src=img/logos/Cyprus_Logo.png> Republic of Cyprus <br> Κυπριακή Δημοκρατία "
     },
 
 
