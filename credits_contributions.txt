@@ -1,4 +1,4 @@
-@polls display code : FrancoGamer on discord
+"@polls" display code : FrancoGamer on discord
 
 Basic custom display tooltip and automatic text highlighter : Originalname, developer of Dyanmic Social Democracy on discord
 
@@ -7,3 +7,5 @@ Basic code for right side sliding bar : Visionary - Noske Bibi'st on discord
 Inspiration for custom radio and parliament display in status bar: Egehan, developer of Anatolian Dawn on discord
 
 Inspiration for leader and people portrait tooltips: BrokenArrow, developer of Road to Ithaca and the Dendry Nexus extension for VS code on discord
+
+Basic code and inspiration for the parliament tooltips: Also BrokenArrow on discord
