@@ -233,7 +233,7 @@
             layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
             setTimeout(function() {
                 playLayer(name);
-            }, 800);
+            }, 400);
         },
 
         previous: function(layerName) {
@@ -260,7 +260,7 @@
             layer.currentIndex = (layer.currentIndex - 1 + layer.playlist.length) % layer.playlist.length;
             setTimeout(function() {
                 playLayer(name);
-            }, 800);
+            }, 400);
         },
 
         playSong: function(path, layerName) {
@@ -298,7 +298,7 @@
                     layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
                     playLayer(name);
                 };
-            }, 800);
+            }, 400);
         },
 
         playSongOnce: function(path, layerName) {
@@ -333,7 +333,7 @@
                     }
                 }, 50);
                 newAudio.onended = null; // nothing plays after
-            }, 800);
+            }, 400);
         },
 
         addSong: function(layerName, path) {
