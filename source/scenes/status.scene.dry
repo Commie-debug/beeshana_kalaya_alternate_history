@@ -1778,7 +1778,7 @@ Nationalists Dissent
 
 [? if year = 1990 and month = 8 and week = 3 : The United Nations Security Council votes to impose sweeping sanctions on Iraq following its invasion of Kuwait. ?]
 
-[? if year = 1990 and month = 9 and week = 1 : Saddam Hussein calls for jihad against foreign forces gathering in Saudi Arabia what is speculated to be a Korean style intervention. ?]
+[? if year = 1990 and month = 9 and week = 1 : Saddam Hussein calls for jihad against foreign forces gathering in Saudi Arabia for what is speculated to be a Korean war style intervention. ?]
 
 [? if year = 1990 and month = 9 and week = 3 : A large multinational military force continues to build up in Saudi Arabia in preparation for a possible intervention to liberate Kuwait. ?]
 
