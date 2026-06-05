@@ -11,7 +11,7 @@ The request for an injuction by Maitripala against Sirimavo over her restricting
 - @court: Let us see their final verdict
 
 @court
-go-to: siri_win if left_strength > nationalist_strength; maitri_win if nationalist_strength > left_strength; siri_win
+go-to: siri_win if (left_strength > nationalist_strength); maitri_win if (nationalist_strength >= left_strength);
 
 @siri_win
 on-arrival: split_sirimavo_victory += 1; left_strength += 5; nationalist_strength -= 7;
