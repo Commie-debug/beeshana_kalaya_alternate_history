@@ -242,14 +242,13 @@ d3.parliament = function() {
 
                 var imgHtml = img && img.img ? '<img src="' + img.img + '" style="height:36px; width:auto; margin-right:8px; object-fit:contain;">' : '';
 
-                tooltip.html(
-                    '<div style="display:flex; align-items:center;">' +
-                    imgHtml +
-                    '<div><span style="color:' + partyColor + '; font-weight:bold;">' + partyName + '</span><br>' +
-                    '<span>' + nSeats + ' seat' + (nSeats !== 1 ? 's' : '') + '</span></div>' +
-                    '</div>'
-                ).classed("visible", true);
-                tooltip.style("border-color", partyColor);
+                var img = tooltipList ? tooltipList.find(function(t) {
+                    return t.searchString && t.searchString.toUpperCase() === partyId.toUpperCase();
+                }) : null;
+                var tooltipContent = window.getDynamicTooltipContent(partyId.toUpperCase(), img);
+                tooltip.html(tooltipContent + '<br>' + nSeats + ' seat' + (nSeats !== 1 ? 's' : '')).classed("visible", true);
+                tooltip.style("border-color", partyData ? (partyData.color || '#000') : '#000');
+                3. game.css — add the parliament tooltip styles:
             });
 
             hitCirclesEnter.on("mousemove", function(event) {

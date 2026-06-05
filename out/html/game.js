@@ -899,7 +899,10 @@
         }
         
         return baseTooltip.explanationText;
+        
     }
+    
+    window.getDynamicTooltipContent = getDynamicTooltipContent;
   
     function applyWholesome(str) {
         const allWords = new Set([
