@@ -445,10 +445,12 @@
     } else {
         $('#animate_no')[0].checked = true;
     }
-    if (disable_audio) {
-        $('#audio_no')[0].checked = true;
-    } else {
-        $('#audio_yes')[0].checked = true;
+    if ($('#audio_no')[0]) {
+        if (disable_audio) {
+            $('#audio_no')[0].checked = true;
+        } else {
+            $('#audio_yes')[0].checked = true;
+        }
     }
     if (show_portraits) {
         $('#images_yes')[0].checked = true;
