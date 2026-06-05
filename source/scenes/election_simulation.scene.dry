@@ -11,7 +11,7 @@ on-arrival: {!
 
     // National results table variables
     Q.pres_results_count = 6;
-    Q.pres_result_0_candidate = "J.R. Jayewardene";
+    Q.pres_result_0_candidate = "J.R Jayewardene";
     Q.pres_result_0_party = "UNP";
     Q.pres_result_0_votes = 52.91;
     Q.pres_result_0_color = '#006400';

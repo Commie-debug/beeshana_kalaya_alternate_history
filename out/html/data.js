@@ -671,20 +671,18 @@ const tooltipList = [{
     explanationText: "<img src=img/portraits/Kumaranatunga_Vijaya.jpg> Kovilage Anton Vijaya Kumaranatunga"
     },
     {
-    searchString: "Vellupillai Prabhakran",
-    explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Vellupillai Prabhakran"
+    searchString: "Velupillai Prabhakaran",
+    explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Velupillai Prabhakaran"
     },
     {
-    searchString: "Prabhakran",
-    explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Vellupillai Prabhakran"
+    searchString: "Prabhakaran",
+    explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Velupillai Prabhakaran"
     },
     {
     searchString: "Uma Maheswaran",
     explanationText: "<img src=img/portraits/Maheswaran_Uma.jpg> Kadirgamapillai (Kathirkamar) Nallainathan"
     },
 ];
-
-
 
 
 
