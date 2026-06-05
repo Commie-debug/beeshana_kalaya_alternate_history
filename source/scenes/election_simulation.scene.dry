@@ -157,13 +157,14 @@ on-arrival: {!
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
-    _addP('slmp',  'SLMP',  3);
+    _addP('slmp',  'SLMP',  2);
     _addP('slfp',  'SLFP', 67);
     _addP('mep',   'MEP',  3);
     _addP('slmc',  'SLMC', 4);
     _addP('endlf', 'ENDLF',1);
     _addP('tulf',  'TULF', 2);
     _addP('eprlf', 'EPRLF',7);
+    _addP('nssp',  'NSSP',  1);
     _addP('eros',  'EROS', 13);
     _addP('unp',   'UNP',  125);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
