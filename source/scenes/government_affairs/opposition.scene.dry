@@ -261,7 +261,7 @@ The <span style="color: #FF2226;">**JVP**</span> operates on the fringes of parl
 
 @opposition_unp_dissidents
 subtitle: Risky - may backfire.
-on-arrival: {! Q.dissident_roll = Math.random(); !}
+on-arrival: {! dissident_roll = Math.random(); !}
 go-to: dissidents_success if dissident_roll < 0.3; dissidents_failure if dissident_roll >= 0.3
 
 @dissidents_success

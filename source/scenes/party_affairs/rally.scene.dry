@@ -17,7 +17,7 @@ The <span style="color: #006400;">**UNP's**</span> affilated union (JSS) have ar
 - @easy_discard
 
 @slfpt_protect
-on-arrival: {! Q.slfpt_success = Q.slfpt_strength * Q.slfpt_militancy - Q.jss_strength * Q.jss_militancy; !}
+on-arrival: {! slfpt_success = slfpt_strength * slfpt_militancy - jss_strength * jss_militancy; !}
 go-to: slfpt_protect_win if slfpt_success >= 0; slfpt_protect_lose if slfpt_success < 0
 
 @slfpt_protect_win
@@ -41,7 +41,7 @@ We are forced to cancel the rally. The <span style="color: #006400;">**UNP**</sp
 - @return: Continue...
 
 @jvp_counter
-on-arrival: {! Q.jvp_disruption_roll = Math.random(); !}
+on-arrival: {! jvp_disruption_roll = Math.random(); !}
 go-to: jvp_counter_major if jvp_disruption_roll < 0.4; main_rally if jvp_disruption_roll >= 0.4
 
 @jvp_counter_major
@@ -60,7 +60,7 @@ go-to: main_rally
 We proceed with our rally, drowning out the <span style="color: #FF2226;">**JVP**</span> hecklers.
 
 @confront_jvp
-on-arrival: {! Q.debate_roll = Math.random(); !}
+on-arrival: {! debate_roll = Math.random(); !}
 go-to: debate_win if debate_roll < 0.5; debate_lose if debate_roll >= 0.5
 
 @debate_win
