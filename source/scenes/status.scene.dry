@@ -1734,7 +1734,7 @@ Nationalists Dissent
 
 [? if year = 1989 and month = 10 and week = 1 : Large Monday demonstrations continue in East Germany demanding democratic reforms. ?]
 
-[? if year = 1989 and month = 10 and week = 3 : The Hungarian Socialist Workers' Party dissolves as Hungary officially and declares itself a democratic republic. ?]
+[? if year = 1989 and month = 10 and week = 3 : The Hungarian Socialist Workers' Party dissolves as Hungary officially declares itself a democratic republic. ?]
 
 [? if year = 1989 and month = 11 and week = 1 : East German authorities open border crossings in Berlin, crowds are later seen beginning to dismantle the infamous Berlin Wall. ?]
 
