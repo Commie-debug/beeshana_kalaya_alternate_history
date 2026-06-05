@@ -248,7 +248,6 @@ d3.parliament = function() {
                 var tooltipContent = window.getDynamicTooltipContent(partyId.toUpperCase(), img);
                 tooltip.html(tooltipContent + '<br>' + nSeats + ' seat' + (nSeats !== 1 ? 's' : '')).classed("visible", true);
                 tooltip.style("border-color", partyData ? (partyData.color || '#000') : '#000');
-                3. game.css — add the parliament tooltip styles:
             });
 
             hitCirclesEnter.on("mousemove", function(event) {
