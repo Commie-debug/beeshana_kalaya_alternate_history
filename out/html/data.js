@@ -517,6 +517,14 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/USA_Logo.png> United States <br> of America"
     },
     {
+    searchString: "United States",
+    explanationText: "<img src=img/logos/USA_Logo.png> United States <br> of America"
+    },
+    {
+    searchString: "American",
+    explanationText: "<img src=img/logos/USA_Logo.png> United States <br> of America"
+    },
+    {
     searchString: "USA",
     explanationText: "<img src=img/logos/USA_Logo.png> United States <br> of America"
     },
@@ -525,7 +533,19 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/UK_Logo.png> United Kingdom of <br> Great Britian & <br> Northern Ireland"
     },
     {
+    searchString: "Britain",
+    explanationText: "<img src=img/logos/UK_Logo.png> United Kingdom of <br> Great Britian & <br> Northern Ireland"
+    },
+    {
+    searchString: "British",
+    explanationText: "<img src=img/logos/UK_Logo.png> United Kingdom of <br> Great Britian & <br> Northern Ireland"
+    },
+    {
     searchString: "Israel",
+    explanationText: "<img src=img/logos/Israel_Logo.png> State of Israel <br> מְדִינַת יִשְׂרָאֵל"
+    },
+    {
+    searchString: "Israeli",
     explanationText: "<img src=img/logos/Israel_Logo.png> State of Israel <br> מְדִינַת יִשְׂרָאֵל"
     },
     {
@@ -533,11 +553,23 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/Japan_Logo.png> Japan <br> 日本"
     },
     {
+    searchString: "Japanese",
+    explanationText: "<img src=img/logos/Japan_Logo.png> Japan <br> 日本"
+    },
+    {
     searchString: "China",
     explanationText: "<img src=img/logos/China_Logo.png> Peoples Republic <br> of China <br> 中华人民共和国"
     },
     {
+    searchString: "Chinese",
+    explanationText: "<img src=img/logos/China_Logo.png> Peoples Republic <br> of China <br> 中华人民共和国"
+    },
+    {
     searchString: "Pakistan",
+    explanationText: "<img src=img/logos/Pakistan_Logo.png> Islamic Republic <br> of Pakistan <br> اسلامی جمہوریہ پاكستان"
+    },
+    {
+    searchString: "Pakistani",
     explanationText: "<img src=img/logos/Pakistan_Logo.png> Islamic Republic <br> of Pakistan <br> اسلامی جمہوریہ پاكستان"
     },
     {
@@ -549,13 +581,220 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/USSR_Logo.png> Union of Soviet <br> Socialist Republics <br> Союз Советских <br> Социалистических Республик"
     },
     {
+    searchString: "Soviet",
+    explanationText: "<img src=img/logos/USSR_Logo.png> Union of Soviet <br> Socialist Republics <br> Союз Советских <br> Социалистических Республик"
+    },
+    {
     searchString: "SAARC",
     explanationText: "<img src=img/logos/SAARC_Logo.png> South Asian Association <br> for Regional Cooperation"
     },
     {
     searchString: "PLO",
-    explanationText: "<img src=img/logos/PLO_Logo.png> Palestine Liberation Organization"
+    explanationText: "<img src=img/logos/PLO_Logo.png> Palestine Liberation Organization <br> منظمة التحرير الفلسطينية"
     },
+    {
+    searchString: "Palestinian",
+    explanationText: "<img src=img/logos/PLO_Logo.png> Palestine Liberation Organization <br> منظمة التحرير الفلسطينية"
+    },
+    {
+    searchString: "Palestine",
+    explanationText: "<img src=img/logos/PLO_Logo.png> Palestine Liberation Organization <br> منظمة التحرير الفلسطينية"
+    },
+    {
+    searchString: "IRA",
+    explanationText: "<img src=img/logos/PIRA_Logo.png> Provisional Irish Republican Army <br> Óglaigh na hÉireann"
+    },
+    {
+    searchString: "France",
+    explanationText: "<img src=img/logos/France_Logo.png> French Republic <br> République française"
+    },
+    {
+    searchString: "French",
+    explanationText: "<img src=img/logos/France_Logo.png> French Republic <br> République française"
+    },
+    {
+    searchString: "Lebanon",
+    explanationText: "<img src=img/logos/Lebanon_Logo.png> Lebanese Republic <br> الجمهورية اللبنانية"
+    },
+    {
+    searchString: "Lebanese",
+    explanationText: "<img src=img/logos/Lebanon_Logo.png> Lebanese Republic <br> الجمهورية اللبنانية"
+    },
+    {
+    searchString: "Argentina",
+    explanationText: "<img src=img/logos/Argentina_Logo.png> Argentine Republic <br> República Argentina"
+    },
+    {
+    searchString: "Argentine",
+    explanationText: "<img src=img/logos/Argentina_Logo.png> Argentine Republic <br> República Argentina"
+    },
+    {
+    searchString: "West Germany",
+    explanationText: "<img src=img/logos/West_Germany.png> Federal Republic of Germany <br> Bundesrepublik Deutschland"
+    },
+    {
+    searchString: "West German",
+    explanationText: "<img src=img/logos/West_Germany.png> Federal Republic of Germany <br> Bundesrepublik Deutschland"
+    },
+    {
+    searchString: "Poland",
+    explanationText: "<img src=img/logos/Poland_Logo.png> Polish People's Republic <br> Polska Rzeczpospolita Ludowa"
+    },
+    {
+    searchString: "Polish",
+    explanationText: "<img src=img/logos/Poland_Logo.png> Polish People's Republic <br> Polska Rzeczpospolita Ludowa"
+    },
+    {
+    searchString: "Philippine",
+    explanationText: "<img src=img/logos/Philippines_Logo.png> Republic of the Philippines <br> Republika ng Pilipinas <br> República de Filipinas"
+    },
+    {
+    searchString: "Philippines",
+    explanationText: "<img src=img/logos/Philippines_Logo.png> Republic of the Philippines <br> Republika ng Pilipinas <br> República de Filipinas"
+    },
+    {
+    searchString: "Libya",
+    explanationText: "<img src=img/logos/Libya_Logo.png Great Socialist People's <br> Libyan Arab Jamahiriya <br> اَلْجَمَاهِيرِيَّة ٱلْعَرَبِيَّة ٱللِّيبِيَّة ٱلشَّعْبِيَّة ٱلْإِشْتِرَاكِيَّة ٱلْعُظْمَى"
+    },
+    {
+    searchString: "Libyan",
+    explanationText: "<img src=img/logos/Libya_Logo.png> Great Socialist People's <br> Libyan Arab Jamahiriya <br> اَلْجَمَاهِيرِيَّة ٱلْعَرَبِيَّة ٱللِّيبِيَّة ٱلشَّعْبِيَّة ٱلْإِشْتِرَاكِيَّة ٱلْعُظْمَى"
+    },
+    {
+    searchString: "South Africa",
+    explanationText: "<img src=img/logos/South_Africa_Logo.png> Republic of South Africa <br> Republiek van Suid-Afrika"
+    },
+    {
+    searchString: "South African",
+    explanationText: "<img src=img/logos/South_Africa_Logo.png> Republic of South Africa <br> Republiek van Suid-Afrika"
+    },
+    {
+    searchString: "Ethiopia",
+    explanationText: "<img src=img/logos/Ethiopia_Logo.png> Provisional Military Government of Socialist Ethiopia <br> የኅብረተሰብአዊት ፡ ኢትዮጵያ ፡ ጊዜያዊ ፡ ወታደራዊ ፡ መንግሥት"
+    },
+    {
+    searchString: "Ethiopian",
+    explanationText: "<img src=img/logos/Ethiopia_Logo.png> Provisional Military Government of Socialist Ethiopia <br> የኅብረተሰብአዊት ፡ ኢትዮጵያ ፡ ጊዜያዊ ፡ ወታደራዊ ፡ መንግሥት"
+    },
+    {
+    searchString: "United Nations",
+    explanationText: "<img src=img/logos/Ethiopia_Logo.png> United Nations <br> منظمة الأمم المتحدة <br> 联合国 <br> Organisation des Nations unies <br> Организация Объединённых Наций <br> Organización de las Naciones Unidas"
+    },
+    {
+    searchString: "Iran",
+    explanationText: "<img src=img/logos/Iran_Logo.png> Islamic Republic of Iran <br> جمهوری اسلامی ایران"
+    },
+    {
+    searchString: "Iranian",
+    explanationText: "<img src=img/logos/Iran_Logo.png> Islamic Republic of Iran <br> جمهوری اسلامی ایران"
+    },
+    {
+    searchString: "Iraq",
+    explanationText: "<img src=img/logos/Iraq_Logo.png> Iraqi Republic <br> الجمهورية العراقية"
+    },
+    {
+    searchString: "Iraqi",
+    explanationText: "<img src=img/logos/Iraq_Logo.png> Iraqi Republic <br> الجمهورية العراقية"
+    },
+    {
+    searchString: "Armenia",
+    explanationText: "<img src=img/logos/Armenia_Logo.png> Armenian Soviet Socialist Republic <br> Հայկական Սովետական Սոցիալիստական Հանրապետություն"
+    },
+    {
+    searchString: "Armenian",
+    explanationText: "<img src=img/logos/Armenia_Logo.png> Armenian Soviet Socialist Republic <br> Հայկական Սովետական Սոցիալիստական Հանրապետություն"
+    },
+    {
+    searchString: "Azerbaijan",
+    explanationText: "<img src=img/logos/Azerbaijan_Logo.png> Azerbaijan Soviet Socialist Republic <br> Азәрбајҹан Совет Сосиалист Республикасы"
+    },
+    {
+    searchString: "Azeri",
+    explanationText: "<img src=img/logos/Azerbaijan_Logo.png> Azerbaijan Soviet Socialist Republic <br> Азәрбајҹан Совет Сосиалист Республикасы"
+    },
+    {
+    searchString: "Afghanistan",
+    explanationText: "<img src=img/logos/Afghanistan_Logo.png> Democratic Republic of Afghanistan <br> د افغانستان ډموکراتيک جمهوريت <br> جمهورى دموکراتیک افغانستان"
+    },
+    {
+    searchString: "Afghan",
+    explanationText: "<img src=img/logos/Afghanistan_Logo.png> Democratic Republic of Afghanistan <br> د افغانستان ډموکراتيک جمهوريت <br> جمهورى دموکراتیک افغانستان"
+    },
+    {
+    searchString: "Afghani",
+    explanationText: "<img src=img/logos/Afghanistan_Logo.png> Democratic Republic of Afghanistan <br> د افغانستان ډموکراتيک جمهوريت <br> جمهورى دموکراتیک افغانستان"
+    },
+    {
+    searchString: "Myanmar",
+    explanationText: "<img src=img/logos/Myanmar_Logo.png> Socialist Republic of the Union of Burma <br> ပြည်ထောင်စု ဆိုရှယ်လစ်သမ္မတ မြန်မာနိုင်ငံတော် "
+    },
+    {
+    searchString: "South Korea",
+    explanationText: "<img src=img/logos/South_Korea_Logo.png> Republic of Korea <br> 대한민국 "
+    },
+    {
+    searchString: "South Korean",
+    explanationText: "<img src=img/logos/South_Korea_Logo.png> Republic of Korea <br> 대한민국 "
+    },
+    {
+    searchString: "Hungary",
+    explanationText: "<img src=img/logos/Hungary_Logo.png> Hungarian People's Republic <br> Magyar Népköztársaság "
+    },
+    {
+    searchString: "East German",
+    explanationText: "<img src=img/logos/East_Germany_Logo.png> German Democratic Republic <br> Deutsche Demokratische Republik "
+    },
+    {
+    searchString: "East Germany",
+    explanationText: "<img src=img/logos/East_Germany_Logo.png> Hungarian People's Republic <br> Deutsche Demokratische Republik "
+    },
+    {
+    searchString: "Romania",
+    explanationText: "<img src=img/logos/Romania_Logo.png> Socialist Republic of Romania <br> Republica Socialistă România "
+    },
+    {
+    searchString: "Romanian",
+    explanationText: "<img src=img/logos/Romania_Logo.png> Socialist Republic of Romania <br> Republica Socialistă România "
+    },
+    {
+    searchString: "North Yemen",
+    explanationText: "<img src=img/logos/North_Yemen_Logo.png> Yemen Arab Republic <br> الجمهورية العربية اليمنية"
+    },
+    {
+    searchString: "South Yemen",
+    explanationText: "<img src=img/logos/South_Yemen_Logo.png> People's Democratic Republic of Yemen <br> جمهورية اليمَنَ الدِّيمقراطية الشعبيّة "
+    },
+    {
+    searchString: "Nicaragua",
+    explanationText: "<img src=img/logos/Nicaragua_Logo.png> Republic of Nicaragua <br> República de Nicaragua "
+    },
+    {
+    searchString: "Kuwait",
+    explanationText: "<img src=img/logos/Kuwait_Logo.png> State of Kuwait <br> دَوْلَةُ الكويت "
+    },
+    {
+    searchString: "Egypt",
+    explanationText: "<img src=img/logos/Egypt_Logo.png> Arab Republic of Egypt <br> جمهورية مصر العربية "
+    },
+    {
+    searchString: "Ireland",
+    explanationText: "<img src=img/logos/Ireland_Logo.png> Ireland/Republic of Ireland <br> Éire/Poblacht na hÉireann "
+    },
+    {
+    searchString: "Irish",
+    explanationText: "<img src=img/logos/Ireland_Logo.png> Ireland/Republic of Ireland <br> Éire/Poblacht na hÉireann "
+    },
+    {
+    searchString: "Northern Ireland",
+    explanationText: "<img src=img/logos/UK_Logo.png> Northern Ireland <br> Tuaisceart Éireann <br> Norlin Airlann"
+    },
+    {
+    searchString: "El Salvador",
+    explanationText: "<img src=img/logos/El_Salvador_Logp.png> Republic of El Salvador <br> República de El Salvador"
+    },
+
+
+
     
     //portraits below
     {

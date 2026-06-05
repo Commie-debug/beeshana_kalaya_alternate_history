@@ -1320,7 +1320,7 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 3 and week = 3 : US President Ronald Reagan survives an assassination attempt outside the Washington Hilton Hotel. ?]
 
-[? if year = 1981 and month = 4 and week = 1 : A hunger strike by prisoners begins in Northern Ireland demanding reinstatement of political prisoner status for Irish republican prisoners. ?]
+[? if year = 1981 and month = 4 and week = 1 : A hunger strike by prisoners begins in Northern Ireland demanding reinstatement of political prisoner status for Irish republican prisoners including members of the IRA. ?]
 
 [? if year = 1981 and month = 4 and week = 3 : The first Space Shuttle mission launches successfully with the Columbia completing two days in orbit before landing in California. ?]
 
@@ -1344,7 +1344,7 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 9 and week = 3 : France abolishes the death penalty under the newly elected Socialist government of Francois Mitterrand. ?]
 
-[? if year = 1981 and month = 10 and week = 1 : Egyptian President Anwar Sadat is assassinated during a military parade commemorating the 1973 Arab-Israeli War. ?]
+[? if year = 1981 and month = 10 and week = 1 : President of Egypt, Anwar Sadat is assassinated during a military parade commemorating the 1973 Arab-Israeli War. ?]
 
 [? if year = 1981 and month = 10 and week = 3 : Hosni Mubarak is sworn in as President of Egypt following the assassination of Anwar Sadat. ?]
 
@@ -1374,9 +1374,9 @@ Nationalists Dissent
 
 [? if year = 1982 and month = 5 and week = 1 : British nuclear submarine HMS Conqueror sinks the Argentine cruiser ARA General Belgrano during clashes in the Falklands. ?]
 
-[? if year = 1982 and month = 5 and week = 3 : British forces land at San Carlos Bay in the Falkland Islands opening a ground campaign against Argentine positions. ?]
+[? if year = 1982 and month = 5 and week = 3 : British forces land at San Carlos Bay in the Falkland Islands opening a ground campaign against Argentinian positions. ?]
 
-[? if year = 1982 and month = 6 and week = 1 : Israel invades Lebanon to expel the PLO from southern Lebanon. ?]
+[? if year = 1982 and month = 6 and week = 1 : Israeli forces invade Lebanon to expel the PLO prescence from its southern border with Israel. ?]
 
 [? if year = 1982 and month = 6 and week = 3 : Argentine forces in the Falkland Islands formally surrender to British troops ending the ten week war. ?]
 
@@ -1478,7 +1478,7 @@ Nationalists Dissent
 
 [? if year = 1984 and month = 6 and week = 1 : The Indian Army storms the Golden Temple in Amritsar following its occupation by Sikh militants. ?]
 
-[? if year = 1984 and month = 7 and week = 1 : Nicaragua's Sandinista government holds its first general election since the fall of the Somoza dynasty in mid 1979. Daniel Ortega of the FMLN returns to the presidency. ?]
+[? if year = 1984 and month = 7 and week = 1 : Nicaragua Sandinista government holds its first general election since the fall of the Somoza dynasty in mid 1979. Daniel Ortega of the Sandinista's returns to the presidency. ?]
 
 [? if year = 1984 and month = 7 and week = 3 : The Summer Olympics open in Los Angeles amid a large scale boycott led by the Soviet Union with the support of other socialist and non-aligned nations. ?]
 
@@ -1562,7 +1562,7 @@ Nationalists Dissent
 
 [? if year = 1986 and month = 3 and week = 3 : Corazon Aquino is inaugurated as President of the Philippines following the collapse of the Marcos regime. ?]
 
-[? if year = 1986 and month = 4 and week = 1 : The United States bombs targets in Tripoli and Benghazi, Libya following a series of terrorist attacks linked to Muammar Gaddafi. ?]
+[? if year = 1986 and month = 4 and week = 1 : The United States bombs targets in Tripoli and Benghazi, Libya following a series of terrorist attacks supposedly linked to Libyan leader Muammar Gaddafi. ?]
 
 [? if year = 1986 and month = 4 and week = 3 : Reactor Four at the Chernobyl Nuclear Power Plant explodes in Soviet Ukraine. ?]
 
@@ -1592,7 +1592,7 @@ Nationalists Dissent
 
 [? if year = 1986 and month = 11 and week = 1 : A new scandal geins in Washington after reports reveal secret US arms sales to Iran. ?]
 
-[? if year = 1986 and month = 11 and week = 3 : The Iran-Contra scandal deepens as it emerges profits from the arms sales to Iran were secretly funnelled to Nicaraguan "contra" rebels. ?]
+[? if year = 1986 and month = 11 and week = 3 : The Iran-Contra scandal deepens as it emerges profits from the arms sales to Iran were secretly funnelled to "contra" rebels in Nicaragua . ?]
 
 [? if year = 1986 and month = 12 and week = 1 : Soviet dissident Andrei Sakharov returns to Moscow after years of internal exile. ?]
 
@@ -1626,7 +1626,7 @@ Nationalists Dissent
 
 [? if year = 1987 and month = 7 and week = 3 : An Iraqi missile attack on an American naval vessel in the Persian Gulf kills 37 sailors, straining US-Iraqi relations. ?]
 
-[? if year = 1987 and month = 8 and week = 1 : The Iran-Iraq War continues with both sides attacking civilian shipping in the Persian Gulf in what is being dubbed, the "tanker war". ?]
+[? if year = 1987 and month = 8 and week = 1 : The Iran-Iraq War rages on with both sides attacking civilian shipping in the Persian Gulf in what is being dubbed, the "tanker war". ?]
 
 [? if year = 1987 and month = 8 and week = 3 : Rudolf Hess dies in Spandau Prison as the last imprisoned senior Nazi official. ?]
 
@@ -1650,11 +1650,11 @@ Nationalists Dissent
 
 [? if year = 1988 and month = 1 and week = 1 : South Korean President Chun Doo-hwan transfers power to his elected successor Roh Tae-woo following months of pro-democracy demonstrations. ?]
 
-[? if year = 1988 and month = 1 and week = 3 : The Soviet Union begins a limited withdrawl of troops from Afghanistan after nearly a decade of intervention. ?]
+[? if year = 1988 and month = 1 and week = 3 : The Soviet Union begins a partial withdrawl of troops from Afghanistan after nearly a decade of intervention. ?]
 
-[? if year = 1988 and month = 2 and week = 1 : Protests erupt in the Armenian SSR demanding the transfer of Nagorno-Karabakh from the Azerbaijani SSR to the Armenian SSR. ?]
+[? if year = 1988 and month = 2 and week = 1 : Protests erupt in the Armenian SSR demanding the transfer of Nagorno-Karabakh from the Azerbaijan SSR to the Armenian SSR. ?]
 
-[? if year = 1988 and month = 2 and week = 3 : Ethnic violence between Armenians and Azerbaijanis erupts in the town of Sumgait in the Soviet Union. ?]
+[? if year = 1988 and month = 2 and week = 3 : Ethnic violence between Armenians and Azeri's erupts in the town of Sumgait in the Soviet Union. ?]
 
 [? if year = 1988 and month = 3 and week = 1 : The Intermediate Nuclear Forces Treaty comes into force as the United States and Soviet Union begin destroying their short and medium range missiles. ?]
 
@@ -1728,7 +1728,7 @@ Nationalists Dissent
 
 [? if year = 1989 and month = 8 and week = 3 : Hundreds of thousands form the Baltic Way human chain across Estonia, Latvia and Lithuania. ?]
 
-[? if year = 1989 and month = 9 and week = 1 : Hungary officially opens its border with Austria allowing East Germans to move westward. ?]
+[? if year = 1989 and month = 9 and week = 1 : Hungary officially opens its border with Austria allowing East German citizens to move westward. ?]
 
 [? if year = 1989 and month = 9 and week = 3 : South Africa holds elections in which F.W. de Klerk replaces P.W. Botha as president amid growing international pressure over apartheid. ?]
 
@@ -1748,11 +1748,11 @@ Nationalists Dissent
 
 [? if year = 1990 and month = 1 and week = 1 : A new Romanian government is formed by the National Salvation Front following the fall of Ceausescu. ?]
 
-[? if year = 1990 and month = 1 and week = 3 : Soviet troops enter Baku in Azerbaijan to suppress nationalist unrest. ?]
+[? if year = 1990 and month = 1 and week = 3 : Soviet troops enter Baku in the Azerbaijan SSR to suppress nationalist unrest. ?]
 
 [? if year = 1990 and month = 2 and week = 1 : Nelson Mandela is released from Victor Verster Prison after 27 years of imprisonment. ?]
 
-[? if year = 1990 and month = 2 and week = 3 : Yemeni unification talks between North and South Yemen reach an agreement on forming a single state. ?]
+[? if year = 1990 and month = 2 and week = 3 : Yemeni unification talks between North Yemen and South Yemen reach an agreement on forming a single state. ?]
 
 [? if year = 1990 and month = 3 and week = 1 : Lithuania declares independence from the Soviet Union. ?]
 
@@ -1762,7 +1762,7 @@ Nationalists Dissent
 
 [? if year = 1990 and month = 4 and week = 3 : The Soviet Union imposes an economic blockade on Lithuania in response to its declaration of independence. ?]
 
-[? if year = 1990 and month = 5 and week = 1 : Violeta Chamorro defeats incumbent Daniel Ortega in Nicaragua's presidential election. ?]
+[? if year = 1990 and month = 5 and week = 1 : Violeta Chamorro defeats incumbent Daniel Ortega in presidential elections in Nicaragua. ?]
 
 [? if year = 1990 and month = 5 and week = 3 : East and West Germany agree on terms for full economic and monetary union ahead of a planned political reunification. ?]
 
