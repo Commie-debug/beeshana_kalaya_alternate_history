@@ -1112,11 +1112,9 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 = Military & State Paramilitaries
 
-Security Forces Strength: [+ security_forces_strenght : strength +]
+**Sri Lanka Armed Forces** - The Armed Forces comprise of the Army, Navy and Air Force, and are responsible for defending Sri Lanka from both external and internal threats. Trained in conventional warfare, counter-insurgency operations, border security and disaster response, they serve as the nation's primary military institution and may be deployed in support of the civil authorities during times of emergency.
 
-**Sri Lanka Armed Forces** 
-
-**Sri Lanka Police**
+**Sri Lanka Police** - The Sri Lanka Police are responsible for maintaining law and order throughout Sri Lanka. Their duties include crime prevention, criminal investigations, traffic regulation, public security, and the enforcement of national laws. Operating through stations across the island, they form the country's principal civilian law enforcement agency and are usually the first line of defense.
 
 [? if stf_formed = 1 : **STF** - *Special Task Force* - The STF are the recently formed "special forces" of the Sri Lankan police. They specialise in anti-irregular military, apprehension of armed and dangerous criminals, clandestine and covert operations and other tasks requiring special training. ?]
 
