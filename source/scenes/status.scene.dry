@@ -99,9 +99,9 @@ Parliament composition:
 [? if tulf_r >= 1 : <span class="tooltip-text" title="Tamil United Liberation Front" style="color: #F7D917;">**TULF**</span>: [+ tulf_r +] ?]
 [? if pflt_formed = 1 and pflt_r >= 1: <span class="tooltip-text" title="Peoples Front of Liberation Tigers">**PFLT**</span>: [+ pflt_r +] ?]
 [? if actc_r >= 1 : <span class="tooltip-text" title="All Ceylon Tamil Congress">**ACTC**</span>: [+ actc_r +] ?]
-[? if eros_formed = 1 and eros_r >= 1: <span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">**EROS**</span>: [+ eros_r +] ?]
-[? if dplf_formed = 1 and dplf_r >= 1: <span class="tooltip-text" title="Democratic Peoples Liberation Front">**DPFL**</span>: [+ dplf_r +] ?]
-[? if eprlf_formed = 1 and eprlf_r >= 1: <span class="tooltip-text" title=" Eelam Peoples Revolutionary Liberation Front">**EPRLF**</span>: [+ eprlf_r +] ?]
+[? if eros_formed = 1 and eros_r >= 1 : <span class="tooltip-text" title="Eelam Revolutionary Organisation Of Students">**EROS**</span>: [+ eros_r +] ?]
+[? if dplf_formed = 1 and dplf_r >= 1 : <span class="tooltip-text" title="Democratic Peoples Liberation Front">**DPFL**</span>: [+ dplf_r +] ?]
+[? if eprlf_formed = 1 and eprlf_r >= 1 : <span class="tooltip-text" title=" Eelam Peoples Revolutionary Liberation Front">**EPRLF**</span>: [+ eprlf_r +] ?]
 [? if telo_formed = 1 and telo_r >= 1: <span class="tooltip-text" title=" Tamil Eelam Liberation Organisation">**TELO**</span>: [+ telo_r +] ?]
 [? if endlf_formed = 1 and endlf_r >= 1: <span class="tooltip-text" title=" Eelam National Democratic Liberation Front">**ENDLF**</span>: [+ eprlf_r +] ?]
 [? if jvp_r >= 1 : <span class="tooltip-text" title="Janatha Vimukthi Peramuna">**JVP**</span>: [+ jvp_r +] ?]
@@ -178,9 +178,9 @@ for (var i = 0; i < 8; i++) {
 
 [? if dplf_formed = 1 : <span class="tooltip-text" title="Democratic Peoples Liberation Front" style="color: #CE2029;">**DPLF**</span>: [+ dplf_relation : relationships +] ?]
 
-[? if eprlf_formed = 1 : EPRLF: [+ eprlf_relation : relationships +] ?]
+[? if eprlf_formed = 1 : <span class="tooltip-text" title="Eelam Peoples Revolutionary Liberation Front" style="color: #FF4500;">**EPRLF**</span> : [+ eprlf_relation : relationships +] ?]
 
-[? if telo_formed = 1 : TELO: [+ telo_relation : relationships +] ?]
+[? if telo_formed = 1 : <span class="tooltip-text" title="Tamil Eelam Liberation Organisation" style="color: #893F45;">**TELO**</span>: [+ telo_relation : relationships +] ?]
 
 [? if endlf_formed = 1 : ENDLF: [+ endlf_relation : relationships +] ?]
 

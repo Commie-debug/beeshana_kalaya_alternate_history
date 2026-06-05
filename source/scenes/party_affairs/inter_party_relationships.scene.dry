@@ -12,20 +12,106 @@ max-visits: 100
 
 The <span style="color: #00008B;">**SLFP**</span> has never governed without a coalition to support it. In the past we have allied with nationalists, communists or even trotskyists. With our precarious position and the rapid changes to in the nation, we may need to form new bonds or strenghten our older alliances.
 
-- @jvp: Strengthen our bonds with the revolutionary marxist <span style="color: #FF2226;">**JVP**</span>. This may be difficult knowing our shared histories.
-- @tamil: Strengthen our bonds with the Tamil political parties like the <span style="color: #F7D917;">**TULF**</span> and <span style="color: #FDCC01;">**ACTC**</span>. The <span style="color: #0F52BA;">**Nationalists**</span> will not be happy with this.
-- @communist: Work towards repairing relationships with the <span style="color: #65000B;">**CPSL**</span>, <span style="color: #A91101;">**LSSP**</span> and maybe even the smaller <span style="color: #FF8080;">**NSSP**</span>.
-- @itamil: We could try forming a positive relationship with the Indian Tamil <span style="color: #E52B50;">**CWC**</span>. Once again our previous policy of repatriation will make this difficult.
+- @mep: The left-wing Sinhalese Nationalist MEP has been reactivated after a long dormancy. They share many of our positions thus cooperation is only natural.
+- @unp_splinter: Recent splinters from the UNP have organised themselves as a nationalist opposition to the UNP. Cooperating with and gaining the support of esspecially their well-known leaders can be useful for us. 
+- @jvp: Reconcile with the revolutionary socialist <span style="color: #FF2226;">**JVP**</span>. This may be difficult knowing our shared histories.
+- @tamil: Work with with the Tamil political parties like the <span style="color: #F7D917;">**TULF**</span> and <span style="color: #FDCC01;">**ACTC**</span>. The <span style="color: #0F52BA;">**Nationalists**</span> will not be happy with this.
+- @pflt: Now hears a funny idea, work with the former LTTE!!, ridiculous no?
+- @former_tigers: Since the ceasefire and the IPKF deployment, a number of former Tamil militant groups have disarmed and joined mainstream politics. The LTTE is hostile to them but the groups have at least some popularity even if its declining.
+- @communist: Work towards repairing relationships with the <span style="color: #65000B;">**CPSL**</span>, <span style="color: #A91101;">**LSSP**</span> and even the smaller <span style="color: #FF8080;">**NSSP**</span>.
+- @itamil: We could move to forming a positive relationship with the Indian Tamil <span style="color: #E52B50;">**CWC**</span>. Once again our previous policy of repatriation will make this difficult.
+- @ucpf: The newly formed UCPF acts as the main opposition to the CWC within the Indian Tamil community. [? if cwc_relation < 29.9 : Given our less than friendly relationship with the CWC, working with the UCPF may be more useful ?][? if cwc_relation >= 29.9 : Working with the UCPF may unintentionally strain our working relationship with the CWC ?]
 - @muslim: The newly formed <span style="color: #2DCF3E;">**SLMC**</span> presents a new possible ally. At least we have generally been indifferent to Muslim concerns?
 - @spd_alone: The SLFP can stand alone for now.
 - @easy_discard
 
+@mep
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: mep_formed = 1 
+on-arrival: resources -= 2; mep_relation += 2.5*(1-dissent);
+
+The MEP is cautious to work with us, we must remember that before being a center-left party, they are a Sinhalese Nationalist party, any concessions to the Tamils may jeprodize our relationship.
+
+
+@unp_splinter
+subtitle: -2 resources
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources.
+view-if: ulpp_formed = 1 or dunf_formed = 1 
+on-arrival: {!
+    if (dunf_formed == 1 && ulpp_formed == 1){
+        resources -= 2
+        dunf_relation += 3*(1-dissent);
+        ulpp_relation += 3*(1-dissent);
+
+    }
+    else{
+        if (dunf_formed == 1 && ulpp_formed == 0){
+            resources -= 2
+            dunf_relation += 3*(1-dissent);
+        }
+        else{
+            if (dunf_formed == 0 && ulpp_formed == 1){
+                resources -= 2
+                ulpp_relation += 3*(1-dissent);
+            } 
+        }
+    }
+
+!};
+
+
+@pflt
+subtitle: -2 resources
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources.
+view-if: pflt_formed = 1 and siri_win = 3 
+on-arrival: resources -= 2; pflt_relation += 1.5*(1-dissent);
+
+How tf did you convince them to even accept the invitation?
+
+# Change later to only work if the left won, vijaya is alive/visited jaffna and ltte accepted to try join politics. 
+
+
+@former_tigers
+subtitle: -3 resources
+choose-if: resources >= 3
+unavailable-subtitle: Not enough resources.
+view-if: telo_formed = 1 and eprlf_formed = 1 and endlf_formed = 1 and dplf_formed = 1 and eros_formed = 1
+on-arrival: resources -= 3; telo_relation += 3*(1-dissent); eprlf_relation += 3*(1-dissent); endlf_relation += 2*(1-dissent); dplf_relation += 2*(1-dissent); eros_relation += 1.5*(1-dissent);
+
+Despite our well known past regarding their fellow Tamils, the former militants are not picky on who they make friends with knowing the threat that the LTTE poses to them.
+
+@ucpf
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: ucpf_formed = 1
+on-arrival: resources -= 1; cwc_relation -= 2*(1-dissent); ucpf_relation += 3*(1-dissent);
+
+The UCPF is more than willing to work with us, the CWC as expected did not take our cooperation with the best of intent.
 
 @jvp
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; jvp_relation += 3*(1-dissent);
+on-arrival: {!
+    if (npp_formed == 1) {
+        npp_relation += 4*(1-dissent);
+        resources -= 1;
+        jvp_relation += 3*(1-dissent);
+        left_strength += 6;
+    }
+    else{
+        resources -= 1;
+        jvp_relation += 3*(1-dissent);
+        left_strength += 6;
+
+    }
+!}
+
 
 The JVP are seemingly confused about our intentions. The JVP and their supporters have not forgotten our suppression of their revolt. However, connections are made at the grassroots and local levels.
 
@@ -44,7 +130,7 @@ The CWC is incredibly dismissive of the overtures, they simply do not trust us. 
 @muslim
 subtitle: -1 resources
 choose-if: resources >= 1
-view if: slmc_formed = 1
+view-if: slmc_formed = 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; slmc_relation += 4*(1-dissent);
 
@@ -56,17 +142,17 @@ The Muslim congress is still rather friendly with the UNP, but hopefully with fu
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; tulf_relation += 3*(1-dissent); actc_relation += 3*(1-dissent);
+on-arrival: resources -= 1; tulf_relation += 3*(1-dissent); actc_relation += 3*(1-dissent); nationalist_strength -= 6;
 
 The Tamil parties accept our overtures but understandably, they are cautious of embrassing us. To them our policies on Tamils are near indistinguishable from the UNP and any further improvment in our relationship will need us to confront this.
 
 # FUTURE, ADD PATHS FOR IF SLFP is nationalist, if they are the tamil parties may not care or even be angry at you. Also changes if the SLFP passes/supports anti-tamil laws in parliament or for greater military pressure on the militants. Greater support can be gained if SLFP becomes more pro-tamil.
 
 @communist
-subtitle: -1 resources
-choose-if: resources >= 1
+subtitle: -2 resources
+choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; lssp_relation += 6; cpsl_relation += 8;
+on-arrival: resources -= 2; lssp_relation += 3*(1-dissent); cpsl_relation += 4*(1-dissent); nationalist_strength -= 6; nssp_relation += 2*(1-dissent);
 
 The CPSL and LSSP welcome our overtures, our previous cooperation and somewhat shared goals convinces their leadership of the benefits of working togheter.
 
