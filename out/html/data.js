@@ -790,7 +790,7 @@ const tooltipList = [{
     },
     {
     searchString: "El Salvador",
-    explanationText: "<img src=img/logos/El_Salvador_Logp.png> Republic of El Salvador <br> República de El Salvador"
+    explanationText: "<img src=img/logos/El_Salvador_Logo.png> Republic of El Salvador <br> República de El Salvador"
     },
 
 
