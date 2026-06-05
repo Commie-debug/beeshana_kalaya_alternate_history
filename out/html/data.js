@@ -560,19 +560,23 @@ const tooltipList = [{
     //portraits below
     {
     searchString: "JR Jayewardene",
-    explanationText: "<img src=img/WIP.png> Junius Richard Jayewardene"
+    explanationText: "<img src=img/portraits/Jayewardene_JR.jpg> Junius Richard Jayewardene"
+    },
+    {
+    searchString: "Jayewardene",
+    explanationText: "<img src=img/portraits/Jayewardene_JR.jpg> Junius Richard Jayewardene"
     },
     {
     searchString: "Ranasinghe Premadasa",
-    explanationText: "<img src=img/WIP.png> Ranasinghe Premadasa"
+    explanationText: "<img src=img/portraits/Premadasa_Ranasinghe.jpg> Ranasinghe Premadasa"
     },
     {
     searchString: "A. Amirthalingam",
-    explanationText: "<img src=img/WIP.png> Appapillai Amirthalingam"
+    explanationText: "<img src=img/portraits/Amirthalingam_Appapillai.jpg> Appapillai Amirthalingam"
     },
     {
     searchString: "A Amirthalingam",
-    explanationText: "<img src=img/WIP.jpg> Appapillai Amirthalingam"
+    explanationText: "<img src=img/portraits/Amirthalingam_Appapillai.jpg> Appapillai Amirthalingam"
     },
     {
     searchString: "Sirimavo Bandaranaike",
@@ -599,8 +603,8 @@ const tooltipList = [{
     explanationText: "<img src=img/portraits/KumaratungeChandrika.jpg> Chandrika Bandaranaike Kumaratunga"
     },
     {
-    searchString: "Chandrika Kumaratunga",
-    explanationText: "<img src=img/portraits/KumaratungeChandrika.jpg> Chandrika Bandaranaike Kumaratunga"
+    searchString: "Chandrika Kumaranatunga",
+    explanationText: "<img src=img/portraits/KumaranatungeChandrika.jpg> Chandrika Bandaranaike Kumaratunga"
     },
     {
     searchString: "Maithripala Senanayake",
@@ -608,78 +612,76 @@ const tooltipList = [{
     },
     {
     searchString: "Rohana Wijeweera",
-    explanationText: "<img src=img/WIP.png> Patabendi Don Jinadasa Nandasiri Wijeweera"
+    explanationText: "<img src=img/portraits/Wijeweera_Rohana.jpg> Patabendi Don Jinadasa Nandasiri Wijeweera"
     },
     {
     searchString: "Rohana",
-    explanationText: "<img src=img/WIP.png> Patabendi Don Jinadasa Nandasiri Wijeweera"
+    explanationText: "<img src=img/portraits/Wijeweera_Rohana.jpg> Patabendi Don Jinadasa Nandasiri Wijeweera"
     },
     {
     searchString: "Wijeweera",
-    explanationText: "<img src=img/WIP.png> Patabendi Don Jinadasa Nandasiri Wijeweera"
+    explanationText: "<img src=img/portraits/Wijeweera_Rohana.jpg> Patabendi Don Jinadasa Nandasiri Wijeweera"
     },
     {
     searchString: "Hector Kobbekaduwa",
-    explanationText: "<img src=img/WIP.png> Hector Senarath Rajakaruna Bandara Kobbekaduwa"
+    explanationText: "<img src=img/portraits/Kobbekaduwa_Hector.jpg> Hector Senarath Rajakaruna Bandara Kobbekaduwa"
     },
     {
     searchString: "Kobbekaduwa",
-    explanationText: "<img src=img/WIP.png> Hector Senarath Rajakaruna Bandara Kobbekaduwa"
+    explanationText: "<img src=img/portraits/Kobbekaduwa_Hector.jpg> Hector Senarath Rajakaruna Bandara Kobbekaduwa"
     },
     {
     searchString: "Pieter Keuneman",
-    explanationText: "<img src=img/WIP.png> Pieter Gerald Bartholomeusz Keuneman"
+    explanationText: "<img src=img/portraits/Keuneman_Pieter.jpg> Pieter Gerald Bartholomeusz Keuneman"
     },
     {
     searchString: "Colvin R. de Silva",
-    explanationText: "<img src=img/WIP.png> Colvin Reginald de Silva"
+    explanationText: "<img src=img/portraits/Colvin_de_Silva.jpg> Colvin Reginald de Silva"
     },
     {
     searchString: "Colvin R de Silva",
-    explanationText: "<img src=img/WIP.png> Colvin Reginald de Silva"
+    explanationText: "<img src=img/portraits/Colvin_de_Silva.jpg> Colvin Reginald de Silva"
     },
     {
     searchString: "Vasudeva Nanayakkara",
-    explanationText: "<img src=img/WIP.png> Vasudeva Nanayakkara"
+    explanationText: "<img src=img/portraits/Nanayakkara_Vasudeva.jpg> Vasudeva Nanayakkara"
     },
     {
     searchString: "Kumar Ponnambalam",
-    explanationText: "<img src=img/WIP.png> Gaasinather Gangaser Ponnambalam"
+    explanationText: "<img src=img/portraits/Ponnambalam_Kumar.jpg> Gaasinather Gangaser Ponnambalam"
     },
     {
     searchString: "Ponnambalam",
-    explanationText: "<img src=img/WIP.png> Gaasinather Gangaser Ponnambalam"
+    explanationText: "<img src=img/portraits/Ponnambalam_Kumar.jpg> Gaasinather Gangaser Ponnambalam"
     },
     {
     searchString: "Savumiamoorthy Thondaman",
-    explanationText: "<img src=img/WIP.png> Savumiamoorthy Thondaman"
+    explanationText: "<img src=img/portraits/Thondaman_Savumiamoorthy.jpg> Savumiamoorthy Thondaman"
     },
     {
     searchString: "Thondaman",
-    explanationText: "<img src=img/WIP.png> Savumiamoorthy Thondaman"
+    explanationText: "<img src=img/portraits/Thondaman_Savumiamoorthy.jpg> Savumiamoorthy Thondaman"
     },
     {
-    searchString: "Vijaya Kumaratunge",
-    explanationText: "<img src=img/WIP.png> Kovilage Anton Vijaya Kumaranatunga"
+    searchString: "Vijaya Kumaranatunga",
+    explanationText: "<img src=img/portraits/Kumaranatunga_Vijaya.jpg> Kovilage Anton Vijaya Kumaranatunga"
     },
     {
     searchString: "Vijaya",
-    explanationText: "<img src=img/WIP.png> Kovilage Anton Vijaya Kumaranatunga"
+    explanationText: "<img src=img/portraits/Kumaranatunga_Vijaya.jpg> Kovilage Anton Vijaya Kumaranatunga"
     },
     {
     searchString: "Vellupillai Prabhakran",
-    explanationText: "<img src=img/WIP.png> Vellupillai Prabhakran"
+    explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Vellupillai Prabhakran"
     },
     {
     searchString: "Prabhakran",
-    explanationText: "<img src=img/WIP.png> Vellupillai Prabhakran"
+    explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Vellupillai Prabhakran"
     },
     {
     searchString: "Uma Maheswaran",
-    explanationText: "<img src=img/WIP.png> Kadirgamapillai (Kathirkamar) Nallainathan"
+    explanationText: "<img src=img/portraits/Maheswaran_Uma.jpg> Kadirgamapillai (Kathirkamar) Nallainathan"
     },
-
-
 ];
 
 
