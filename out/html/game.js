@@ -1059,7 +1059,6 @@ window.updateSidebarRight = function() {
 
   window.onload = function() {
     window.dendryUI.toggle_audio(false);
-    AudioManager.enableLayer('sfx');
     AudioManager.init();
     window.dendryUI.loadSettings({show_portraits: false});
     window.statusTab = "status";
