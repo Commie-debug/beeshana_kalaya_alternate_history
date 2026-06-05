@@ -584,7 +584,7 @@ const tooltipList = [{
     },
     {
     searchString: "Mrs Bandaranaike",
-    explanationText: "<img src=imgimg/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
     },
     {
     searchString: "Anura Bandaranaike",
