@@ -44,12 +44,14 @@ title: Government Affairs
 go-to: govtn if new_parliament = 0; govt if new_parliament = 1
 
 @govtn
+title: Government Affairs
 card-image: img/parliament_1.jpg
 is-deck: true
 
 - #govt_affairs
 
 @govt
+title: Government Affairs
 card-image: img/img/parliament_2.jpg
 is-deck: true
 
