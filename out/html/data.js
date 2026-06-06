@@ -1076,6 +1076,10 @@ const tooltipList = [{
     searchString: "Uma Maheswaran",
     explanationText: "<img src=img/portraits/Maheswaran_Uma.jpg> Kadirgamapillai (Kathirkamar) Nallainathan"
     },
+    {
+    searchString: "Ossie Abeygunasekera",
+    explanationText: "<img src=img/portraits/Abeygunasekera_Ossie.jpg> Kahangama Withanage Oswin Nandimithra Abeyagoonasekera"
+    },
 ];
 
 
