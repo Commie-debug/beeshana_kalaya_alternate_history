@@ -1,0 +1,113 @@
+title: Queen Elizabeth visits Sri Lanka
+view-if: year = 1982 and month = 4 and week = 3
+max-visits: 1
+tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/parliament_2.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Moving to the new parliament
+
+Since the 60s, both us and the UNP have discussed to possibility of moving parliament to a new location. The existing parliament in Galle Face is quickly becoming inadequete.
+
+The offical process began with the Dudely government and continued under Sirimavo's government. But before the foundation stone could be laid by Mrs Bandaranaike, the project was abruptly cancelled for financial reasons.
+
+Under UNP, the process was restarted and greatly expidited and following a vote in 1979, approval was given. World renowned architect Geoffrey Bawa was commissioned to design the new complex.
+
+The newly completed complex is situated in the new (though not official) capital Sri Jayawardenepura Kotte and specifically on an island within a 5 hectare sized island inside of Diyawanna Oya (Diyawanna Lake).
+
+The building is a fusion of Sri Lankan vernacular architecture adapted to modern sensibilities. The complex's symmetry, starkly contrasts with the organic form of the lake it is located in.
+
+As part of procedures for its opening on April 29th, President Jayewardene, Prime Minister Premadasa, MP from Kotte Anandatissa de Alwis (who was instrumental in moving parliament) and a few selected members of opposition are expected to speak.
+
+At the moment the confirmed selected opposition MP's are Leader of the opposition A. Amirthalingam (TULF) and Sarath Muttetuwegama (CPSL).
+
+Regarding the SLFP, the situation is confused. Last year injunction order over a dispute at Darley Road resulted in [? if (split_maitripala_victory > split_sirimavo_victory) or (split_maitripala_victory = split_sirimavo_victory) : the Maithripala faction winning ?][? if split_maitripala_victory < split_sirimavo_victory : the Sirimavo faction winning ?][? if appealed_injunction = 1 and split_sirimavo_victory = 1 : though Sirimavo appealed this decision and managed to win ?][? if appealed_injunction = 1 and split_sirimavo_victory = 0 : though Sirimavo appealed resulting in her losing again ?].
+
+The parliamentary committee regarding the MP dispute has been pushed back to accomodate the opening of the new parliament and is thus still not decided.
+
+Legallity aside, JR and the UNP by far prefer the Maithripala faction to win out. To help this, Maithripala is been considered to be selected as the sole SLFP speaker for the 29th of April.
+
+- @yesmaitri: Selecting Maithripala greatly helps his case for being the true leader of the SLFP. He graciously accepts and begins drafting his speech to the annoyance of the Left.
+- @suremaitri: Selecting Maithripala is controversial but the Left decides not to contest on this issue. It is better to save our time and resources on other problems.
+- @nomaitri: Maithripala cannot be the speaker for the SLFP on such an important day seeing as his dismissal by the Sirimavo faction is still up in the air. The role should instead be given to an SLFP MP whose membership is not in dispute such as MP from Attanagalla, Lakshman Jayakody.
+
+
+@suremaitri
+on-arrival: nationalist_strength += 7; nationalist_dissent -= 10; left_strength -= 5; left_dissent += 10; 
+face-image: img/JR_Address_Parl.jpg
+
+JR makes his speech. He talked about the importance of the site and the city of Sri Jayawardenepura Kotte. He explains how it was an important place for local kings such as Bhuvenekabahu V, he gives particular importance to Parakramabahu VI, the 3rd & final Sinhalese king to unify the entire island between 1410 and 1467. 
+
+"He gave it supremacy over other subject kingdoms in the country, contributed to its golden era of poetry, and during his 55 years of rule made this period rich in literature, incidents, and achievements". It was only with the Portugese arrival that the capital moved to Kandy. He ended the speech in call for civility "In this Temple of Democracy let us so conduct ourselves for the welfare of the many that generations yet unborn may say that within this Chamber our words and conduct represented our finest hours."
+
+Prime Minister Premadasa echoed JR and also gave significant praise to architect Geoffrey Bawa, linking the complex to a return to "a glorious past" from before colonialism. Leader of the opposition A. Amirthalingam used his speech to point out the Sri Lankan Tamil link to the kingdom of Kotte which JR praised, noting that several members of their royal family had tamil lineage. In response Speaker of parliament M. A. Bakeer Markar retorted that Amirthalingam should then change his name to Amirtharatne(Sinhalese version of his name). Amirthalingam ignored this and soon after finished his speech.
+
+The lone CPSL MP Sarath Muttetuwegama used his time to ridicule the opulance of the complex in stark contrast to the difficulties faced by regular Sri Lankans. He also lambasted the manner in which the 1980 general strike was suppressed by the UNP and what he percieves as rsing authoritarianism centered on the presidency. The lake he said, was a symbolic and literal moat seperating power from the regular people.
+
+Our representitive Maithripala Senanayake juxtaposed MP Sarath by praising the complex and its architect while still carrying many of the same critiques as the CPSL MP. He also strategically implied that his faction represents the true SLFP.
+
+In addition to opening parliament, Sri Jayawardenepura Kotte was also offically declared as the Capital of Sri Lanka, though Colombo still contains most commercial and government buildings.
+
+@yesmaitri
+on-arrival: nationalist_strength += 4; nationalist_dissent -= 10; left_strength -= 5; left_dissent += 10;
+face-image: img/JR_Address_Parl.jpg
+
+JR makes his speech. He talked about the importance of the site and the city of Sri Jayawardenepura Kotte. He explains how it was an important place for local kings such as Bhuvenekabahu V, he gives particular importance to Parakramabahu VI, the 3rd & final Sinhalese king to unify the entire island between 1410 and 1467. 
+
+"He gave it supremacy over other subject kingdoms in the country, contributed to its golden era of poetry, and during his 55 years of rule made this period rich in literature, incidents, and achievements". It was only with the Portugese arrival that the capital moved to Kandy. He ended the speech in call for civility "In this Temple of Democracy let us so conduct ourselves for the welfare of the many that generations yet unborn may say that within this Chamber our words and conduct represented our finest hours."
+
+Prime Minister Premadasa echoed JR and also gave significant praise to architect Geoffrey Bawa, linking the complex to a return to "a glorious past" from before colonialism. Leader of the opposition A. Amirthalingam used his speech to point out the Sri Lankan Tamil link to the kingdom of Kotte which JR praised, noting that several members of their royal family had tamil lineage. In response Speaker of parliament M. A. Bakeer Markar retorted that Amirthalingam should then change his name to Amirtharatne(Sinhalese version of his name). Amirthalingam ignored this and soon after finished his speech.
+
+The lone CPSL MP Sarath Muttetuwegama used his time to ridicule the opulance of the complex in stark contrast to the difficulties faced by regular Sri Lankans. He also lambasted the manner in which the 1980 general strike was suppressed by the UNP and what he percieves as rsing authoritarianism centered on the presidency. The lake he says, was a symbolic and literal moat seperating power from the regular people.
+
+Our representitive Maithripala Senanayake juxtaposed MP Sarath by praising the complex and its architect while still carrying many of the same critiques as the CPSL MP. He also strategically implied that his faction represents the true SLFP.
+
+In addition to opening parliament, Sri Jayawardenepura Kotte was also offically declared as the Capital of Sri Lanka, though Colombo still contains most commercial and government buildings.
+
+@nomaitri
+go-to: maitrided if ((radio >= 2 or campaign_media >= 3 or grafiti >= 3) and left_strength > nationalist_strength ); maitridefyes if (radio < 2 or campaign_media < 2 or grafiti < 2)
+
+@maitrided
+on-arrival: nationalist_strength -= 5; nationalist_dissent += 10; left_strength += 7; left_dissent -= 10;
+
+The Left has been able to make a "major stink" around this in local media thanks to their previous investments. JR not wanting the negative press so close to the important day decides to change plans and instead select the MP from Attanagalla, Lakshman Jayakody.
+
+JR makes his speech. He talked about the importance of the site and the city of Sri Jayawardenepura Kotte. He explains how it was an important place for local kings such as Bhuvenekabahu V, he gives particular importance to Parakramabahu VI, the 3rd & final Sinhalese king to unify the entire island between 1410 and 1467. 
+
+"He gave it supremacy over other subject kingdoms in the country, contributed to its golden era of poetry, and during his 55 years of rule made this period rich in literature, incidents, and achievements". It was only with the Portugese arrival that the capital moved to Kandy. He ended the speech in call for civility "In this Temple of Democracy let us so conduct ourselves for the welfare of the many that generations yet unborn may say that within this Chamber our words and conduct represented our finest hours."
+
+Prime Minister Premadasa echoed JR and also gave significant praise to architect Geoffrey Bawa, linking the complex to a return to "a glorious past" from before colonialism. Leader of the opposition A. Amirthalingam used his speech to point out the Sri Lankan Tamil link to the kingdom of Kotte which JR praised, noting that several members of their royal family had tamil lineage. In response Speaker of parliament M. A. Bakeer Markar retorted that Amirthalingam should then change his name to Amirtharatne(Sinhalese version of his name). Amirthalingam ignored this and soon after finished his speech.
+
+The lone CPSL MP Sarath Muttetuwegama used his time to ridicule the opulance of the complex in stark contrast to the difficulties faced by regular Sri Lankans. He also lambasted the manner in which the 1980 general strike was suppressed by the UNP and what he percieves as rsing authoritarianism centered on the presidency. 
+
+Our representitive Lakshman Jayakody largely echoes the sentiment raised by the CPSL MP. The lake he says, was a symbolic and literal moat seperating power from the regular people. He also strategically implies that Mr Bandaranaike's faction represents the true SLFP.
+
+In addition to opening parliament, Sri Jayawardenepura Kotte was also offically declared as the Capital of Sri Lanka, though Colombo still contains most commercial and government buildings.
+
+
+@maitridefyes
+on-arrival: nationalist_strength += 7; nationalist_dissent -= 10; left_strength -= 5; left_dissent += 10; 
+
+The Left tries to raise attention in hopes of grabbing local media attention, but the effort was unsuccessfull, Maitripala will go ahead and be the SLFP speaker for the day.
+
+JR makes his speech. He talked about the importance of the site and the city of Sri Jayawardenepura Kotte. He explains how it was an important place for local kings such as Bhuvenekabahu V, he gives particular importance to Parakramabahu VI, the 3rd & final Sinhalese king to unify the entire island between 1410 and 1467. 
+
+"He gave it supremacy over other subject kingdoms in the country, contributed to its golden era of poetry, and during his 55 years of rule made this period rich in literature, incidents, and achievements". It was only with the Portugese arrival that the capital moved to Kandy. He ended the speech in call for civility "In this Temple of Democracy let us so conduct ourselves for the welfare of the many that generations yet unborn may say that within this Chamber our words and conduct represented our finest hours."
+
+Prime Minister Premadasa echoed JR and also gave significant praise to architect Geoffrey Bawa, linking the complex to a return to "a glorious past" from before colonialism. Leader of the opposition A. Amirthalingam used his speech to point out the Sri Lankan Tamil link to the kingdom of Kotte which JR praised, noting that several members of their royal family had tamil lineage. In response Speaker of parliament M. A. Bakeer Markar retorted that Amirthalingam should then change his name to Amirtharatne(Sinhalese version of his name). Amirthalingam ignored this and soon after finished his speech.
+
+The lone CPSL MP Sarath Muttetuwegama used his time to ridicule the opulance of the complex in stark contrast to the difficulties faced by regular Sri Lankans. He also lambasted the manner in which the 1980 general strike was suppressed by the UNP and what he percieves as rsing authoritarianism centered on the presidency. The lake he says, was a symbolic and literal moat seperating power from the regular people.
+
+Our representitive Maithripala Senanayake juxtaposed MP Sarath by praising the complex and its architect while still carrying many of the same critiques as the CPSL MP. He also strategically implied that his faction represents the true SLFP.
+
+In addition to opening parliament, Sri Jayawardenepura Kotte was also offically declared as the Capital of Sri Lanka, though Colombo still contains most commercial and government buildings.
