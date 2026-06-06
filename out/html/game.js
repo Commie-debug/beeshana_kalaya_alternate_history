@@ -464,26 +464,33 @@
     }
   };
 
-  // POLL DISPLAY GRACIOUSLY PROVIDED BY FRANCOGAMER ON DISCORD 
-  scrollhor = function (tableid) {
-    (function() {
+  // POLL DISPLAY GRACIOUSLY PROVIDED BY FRANCOGAMER ON DISCORD and later modified by PUDDLE on discord
+  scrollhor = function(tableid) {
+        var el = document.getElementById(tableid);
+
         function scrollHorizontally(e) {
-            e = window.event || e;
-            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            this.scrollLeft -= (delta * 40); // Multiplied by 40
-            e.preventDefault();
+            e = e || window.event;
+            var delta = e.deltaY || 0;
+            if (!delta && e.wheelDelta) {
+                delta = -e.wheelDelta;
+            }
+            if (!delta && e.detail) {
+                delta = e.detail * 40;
+            }
+            el.scrollLeft += delta * 0.5;
+            if (e.preventDefault) {
+                e.preventDefault();
+            }
+            e.returnValue = false;
         }
-        if (document.getElementById(tableid).addEventListener) {
-            // IE9, Chrome, Safari, Opera
-            document.getElementById(tableid).addEventListener('mousewheel', scrollHorizontally, false);
-            // Firefox
-            document.getElementById(tableid).addEventListener('DOMMouseScroll', scrollHorizontally, false);
-        } else {
-            // IE 6/7/8
-            document.getElementById(tableid).attachEvent('onmousewheel', scrollHorizontally);
+        if (el.addEventListener) {
+            el.addEventListener('wheel', scrollHorizontally, { passive: false });
+            el.addEventListener('mousewheel', scrollHorizontally, false);
+            el.addEventListener('DOMMouseScroll', scrollHorizontally, false);
+        } else if (el.attachEvent) {
+            el.attachEvent('onmousewheel', scrollHorizontally);
         }
-    })();
-  }
+  };
 
   
   // This function allows you to modify the text before it's displayed.
