@@ -1098,9 +1098,6 @@ table {
 .seat.ucpf {
     fill: #9C1600;
 }
-.seat.vacant {
-    fill: #808080;
-}
 .seat.itak {
     fill: #ffd000;
 }
@@ -1142,6 +1139,9 @@ table {
 }
 .seat.independent {
     fill: #808080;
+}
+.seat.vacant {
+    fill: #dfdfdf;
 }
 
 
