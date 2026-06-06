@@ -22,9 +22,9 @@ on-arrival: {!
     _addP('unp',  'UNP', 42);
     _addP('lssp',   'LSSP',  10);
     _addP('bsp',   'BSP-BLP',  5);
-    _addP('cpsl',   'CPC',  3);
+    _addP('cpc',   'CPC',  3);
     _addP('actc',   'ACTC',  7);
-    _addP('cwc',   'CIC',  6);
+    _addP('cic',   'CIC',  6);
     _addP('clp',   'CLP',  1);
     _addP('independent',  'Independent', 21);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
@@ -75,7 +75,7 @@ on-display: {!
 
 {!<tr><td><div class="box" style='background-color: #000000'> </div> !} United Lanka Congress {!</td><td>!} 0 {!</td><td>!} 0.21% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Swaraj Party {!</td><td>!} 1 {!</td><td>!} 0.07% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Swaraj Party {!</td><td>!} 0 {!</td><td>!} 0.07% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 21 {!</td><td>!} 29.11% {!</td><td></td></tr>!}
 
@@ -92,7 +92,7 @@ on-arrival: {!
     _addP('unp',  'UNP', 54);
     _addP('slfp',  'SLFP', 9);
     _addP('lssp',   'LSSP',  9);
-    _addP('cpsl',   'CPSL',  4);
+    _addP('cpc',   'CPSL',  4);
     _addP('actc',   'ACTC',  4);
     _addP('itak',   'ITAK',  2);
     _addP('clp',   'CLP',  1);
@@ -145,7 +145,7 @@ on-display: {!
 
 {!<tr><td><div class="box" style='background-color: #db4949'> </div> !} CLP {!</td><td>!} 1 {!</td><td>!} 1.16% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Buddhist Republican Party {!</td><td>!} 1 {!</td><td>!} 0.17% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Buddhist Republican Party {!</td><td>!} 0 {!</td><td>!} 0.17% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 12 {!</td><td>!} 14.04% {!</td><td></td></tr>!}
 
@@ -162,7 +162,7 @@ on-arrival: {!
     _addP('slfp',  'SLFP', 51);
     _addP('unp',  'UNP', 8);
     _addP('lssp',   'LSSP',  14);
-    _addP('cpsl',   'CPSL',  3);
+    _addP('cpc',   'CPC',  3);
     _addP('itak',   'ITAK',  10);
     _addP('actc',   'ACTC',  1);
     _addP('tsf',   'TSF',  1);
@@ -238,7 +238,7 @@ on-arrival: {!
     _addP('unp',  'UNP', 50);
     _addP('slfp',  'SLFP', 46);
     _addP('lssp',   'LSSP',  10);
-    _addP('cpsl',   'CPSL',  3);
+    _addP('cpc',   'CPC',  3);
     _addP('ldp',   'LDP',  4);
     _addP('spfc',   'SPFC',  1);
     _addP('mep',   'MEP',  10);
@@ -335,7 +335,7 @@ on-arrival: {!
     _addP('slfp',  'SLFP', 75);
     _addP('unp',  'UNP', 30);
     _addP('lssp',   'LSSP',  12);
-    _addP('cpsl',   'CPSL',  4);
+    _addP('cpc',   'CPC',  4);
     _addP('itak',   'ITAK',  16);
     _addP('actc',   'ACTC',  1);
     _addP('mep',   'MEP',  3);
@@ -409,7 +409,7 @@ on-arrival: {!
     _addP('unp',  'UNP', 66);
     _addP('slfp',  'SLFP', 41);
     _addP('lssp',   'LSSP',  10);
-    _addP('cpsl',   'CPSL',  4);
+    _addP('cpc',   'CPC',  4);
     _addP('slfsp',   'SLFSP',  5);
     _addP('itak',   'ITAK',  14);
     _addP('actc',   'ACTC',  1);
@@ -481,7 +481,7 @@ on-arrival: {!
     _addP('slfp',  'SLFP', 91);
     _addP('unp',  'UNP', 17);
     _addP('lssp',   'LSSP',  19);
-    _addP('cpsl',   'CPSL',  6);
+    _addP('cpc',   'CPC',  6);
     _addP('itak',   'ITAK',  13);
     _addP('actc',   'ACTC',  3);
     _addP('independent',  'Independent', 2);

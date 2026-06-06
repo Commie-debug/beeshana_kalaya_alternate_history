@@ -267,6 +267,10 @@ const colourList = [{
         style: "color: #65000B; font-weight: bold;"
     },
     {
+        word: "BSP-BLP",
+        style: "color: #af0000; font-weight: bold;"
+    },
+    {
         word: "CIC",
         style: "color: #E52B50; font-weight: bold;"
     },

@@ -1134,6 +1134,12 @@ table {
 .seat.bsp {
     fill: #af0000;
 }
+.seat.cic {
+    fill: #E52B50;
+}
+.seat.cpc {
+    fill: #65000B;
+}
 .seat.independent {
     fill: #808080;
 }
