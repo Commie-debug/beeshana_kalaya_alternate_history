@@ -238,6 +238,38 @@ const colourList = [{
         word: "LDP",
         style: "color: #404dff; font-weight: bold;"
     },
+    {
+        word: "SPFC",
+        style: "color: #ff6040; font-weight: bold;"
+    },
+    {
+        word: "BBF",
+        style: "color: #008eb2; font-weight: bold;"
+    },
+    {
+        word: "SLNF",
+        style: "color: #1e4fff; font-weight: bold;"
+    },
+    {
+        word: "TSF",
+        style: "color: #d5bb12; font-weight: bold;"
+    },
+    {
+        word: "TRF",
+        style: "color: #d5a112; font-weight: bold;"
+    },
+    {
+        word: "CLP",
+        style: "color: #db4949; font-weight: bold;"
+    },
+    {
+        word: "CPC",
+        style: "color: #65000B; font-weight: bold;"
+    },
+    {
+        word: "CIC",
+        style: "color: #E52B50; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -566,6 +598,28 @@ const tooltipList = [{
     searchString: "TSF",
     explanationText: " Tamil Speaking Front "
     },
+    {
+    searchString: "TRF",
+    explanationText: " Tamil Resistance Front "
+    },
+    {
+    searchString: "CLP",
+    explanationText: " Ceylon Labour Party "
+    },
+    {
+    searchString: "CPC",
+    explanationText: "<img src=img/logos/CPSL_Logo.png> Communist Party of Ceylon "
+    },
+    {
+    searchString: "CIC",
+    explanationText: "<img src=img/logos/CWC_Logo.png> Ceylon Indian Congress "
+    },
+    {
+    searchString: "BSP-BLP",
+    explanationText: "<img src=img/logos/CPSL_Logo.png> Bolshevik Socialist Party <br> - <br> Bolshevik-Leninist Party of India, Ceylon & Burma "
+    },
+
+
 
 
     {

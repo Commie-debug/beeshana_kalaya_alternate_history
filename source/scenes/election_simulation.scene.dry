@@ -1,5 +1,8 @@
 title: Election Simulation
 
+- @1947: 1947 Parliamentary Election 
+- @1952: 1952 Parliamentary Election
+- @1956: 1956 Parliamentary Election
 - @1960_March: March 1960 Parliamentary Election
 - @1960_July: July 1960 Parliamentary Election
 - @1965: 1965 Parliamentary Election
@@ -9,6 +12,222 @@ title: Election Simulation
 - @1983: 1983 National Referendum
 - @1988: 1988 Presidential Election
 - @1989: 1989 Parliamentary Election
+
+@1947
+on-arrival: {!
+    var _newData = [];
+    function _addP(id, legend, seats) {
+        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+    }
+    _addP('unp',  'UNP', 42);
+    _addP('lssp',   'LSSP',  10);
+    _addP('bsp',   'BSP-BLP',  5);
+    _addP('cpsl',   'CPC',  3);
+    _addP('actc',   'ACTC',  7);
+    _addP('cwc',   'CIC',  6);
+    _addP('clp',   'CLP',  1);
+    _addP('independent',  'Independent', 21);
+    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = _newData;
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
+!}
+on-display: {!
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 450;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.50));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+!}
+
+= 1947 British Ceylon Parliamentary Election Results
+
+**Parliament Composition (95 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+
+{!<table>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 42 {!</td><td>!} 39.81% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 10 {!</td><td>!} 10.81% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #af0000'> </div> !} BSP-BLP {!</td><td>!} 5 {!</td><td>!} 6.0% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 7 {!</td><td>!} 4.37% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #E52B50'> </div> !} CIC {!</td><td>!} 6 {!</td><td>!} 3.83% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPC {!</td><td>!} 3 {!</td><td>!} 3.73% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #db4949'> </div> !} CLP {!</td><td>!} 1 {!</td><td>!} 2.06% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} United Lanka Congress {!</td><td>!} 0 {!</td><td>!} 0.21% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Swaraj Party {!</td><td>!} 1 {!</td><td>!} 0.07% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 21 {!</td><td>!} 29.11% {!</td><td></td></tr>!}
+
+{!</table>!}
+
+Th
+
+@1952
+on-arrival: {!
+    var _newData = [];
+    function _addP(id, legend, seats) {
+        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+    }
+    _addP('unp',  'UNP', 54);
+    _addP('slfp',  'SLFP', 9);
+    _addP('lssp',   'LSSP',  9);
+    _addP('cpsl',   'CPSL',  4);
+    _addP('actc',   'ACTC',  4);
+    _addP('itak',   'ITAK',  2);
+    _addP('clp',   'CLP',  1);
+    _addP('independent',  'Independent', 12);
+    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = _newData;
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
+!}
+on-display: {!
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 450;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.50));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+!}
+
+= 1952 Ceylonese Parliamentary Election Results
+
+**Parliament Composition (95 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+
+{!<table>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 54 {!</td><td>!} 44.08% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **9** {!</td><td>!} **15.52%** {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 9 {!</td><td>!} 13.11% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPC - VLSSP {!</td><td>!} 4 {!</td><td>!} 5.78% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 4 {!</td><td>!} 2.77% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 2 {!</td><td>!} 1.95% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Republican Party {!</td><td>!} 0 {!</td><td>!} 1.42% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #db4949'> </div> !} CLP {!</td><td>!} 1 {!</td><td>!} 1.16% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Buddhist Republican Party {!</td><td>!} 1 {!</td><td>!} 0.17% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 12 {!</td><td>!} 14.04% {!</td><td></td></tr>!}
+
+{!</table>!}
+
+The recently formed SLFP wins 9 seats while the CIC is eliminated from parliament and the LSSP loses seats to the UNP thanks to the repatriation of Indian Tamils
+
+@1956
+on-arrival: {!
+    var _newData = [];
+    function _addP(id, legend, seats) {
+        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+    }
+    _addP('slfp',  'SLFP', 51);
+    _addP('unp',  'UNP', 8);
+    _addP('lssp',   'LSSP',  14);
+    _addP('cpsl',   'CPSL',  3);
+    _addP('itak',   'ITAK',  10);
+    _addP('actc',   'ACTC',  1);
+    _addP('tsf',   'TSF',  1);
+    _addP('trf',   'TRF',  1);
+    _addP('independent',  'Independent', 6);
+    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = _newData;
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
+!}
+on-display: {!
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 450;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.50));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+!}
+
+= 1956 Ceylonese Parliamentary Election Results
+
+**Parliament Composition (95 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+
+{!<table>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
+
+{!<tr style="background-color: transparent;"><td><strong>Mahajana Eksath Peramuna(Peoples United Front)</strong></td><td><strong>51</strong></td><td><strong>50.71%</strong></td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **-%** {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B'> </div> !} Sinhala Language Front {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B'> </div> !} Viplavaraki Lanka Sama Samaja Party {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B'> </div> !} Smaller socialist, nationalist parties {!</td><td>!} -% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 8 {!</td><td>!} 27.91% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 14 {!</td><td>!} 10.36% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 10 {!</td><td>!} 5.39% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPC {!</td><td>!} 3 {!</td><td>!} 4.52% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #d5bb12'> </div> !} TSF {!</td><td>!} 1 {!</td><td>!} 0.99% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #db4949'> </div> !} CLP {!</td><td>!} 1 {!</td><td>!} 0.68% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 1 {!</td><td>!} 0.34% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #d5a112'> </div> !} TRF {!</td><td>!} 1 {!</td><td>!} 0.30% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 9.99% {!</td><td></td></tr>!}
+
+{!</table>!}
+
+The SLFP led Mahajana Eksath Peramuna alliance wins a majority, deposing the UNP for the first time since independence.
+
 
 @1960_March
 on-arrival: {!
@@ -71,7 +290,7 @@ on-display: {!
 
 {!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 15 {!</td><td>!} 5.7% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 3 {!</td><td>!} 4.37% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPC {!</td><td>!} 3 {!</td><td>!} 4.37% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #404dff'> </div> !} LDP {!</td><td>!} 4 {!</td><td>!} 0.98% {!</td><td></td></tr>!}
 
@@ -163,7 +382,7 @@ on-display: {!
 
 {!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 16 {!</td><td>!} 6.95% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 4 {!</td><td>!} 2.93% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPC {!</td><td>!} 4 {!</td><td>!} 2.93% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 3.47% {!</td><td></td></tr>!}
 
@@ -177,7 +396,7 @@ on-display: {!
 
 {!</table>!}
 
-SLFP secures a single party majority with the tactical cooperation of the CPSL and LSSP via a "no-contest" pact. Though the later two did not join government, they supported the SLFP and its policies. Sirimavo Bandaranaike is elected Prime Minister, the first female head of state in the world. 
+SLFP secures a single party majority with the tactical cooperation of the CPC and LSSP via a "no-contest" pact. Though the later two did not join government, they supported the SLFP and its policies. Sirimavo Bandaranaike is elected Prime Minister, the first female head of state in the world. 
 
 Ceylon also becomes the first nation to have both heads of state be female (Queen Elizabeth II was still monarch). In 1964 a weakened SLFP invited the LSSP into government.
 
@@ -239,7 +458,7 @@ on-display: {!
 
 {!<tr><td><div class="box" style='background-color: #c23434'> </div> !} SLFSP {!</td><td>!} 5 {!</td><td>!} 3.22% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 4 {!</td><td>!} 2.71% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPC {!</td><td>!} 4 {!</td><td>!} 2.71% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 3 {!</td><td>!} 2.44% {!</td><td></td></tr>!}
 
@@ -301,7 +520,7 @@ on-display: {!
 {!<tr style="background-color: transparent;"><td><strong>United Front</strong></td><td><strong></strong></td><td><strong>50.71%</strong></td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **91** {!</td><td>!} **36.86%** {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 19 {!</td><td>!} 8.68% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 6 {!</td><td>!} 3.39% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #65000B'> </div> !} CPC {!</td><td>!} 6 {!</td><td>!} 3.39% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 17 {!</td><td>!} 37.91% {!</td><td></td></tr>!}
 

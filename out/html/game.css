@@ -1125,6 +1125,15 @@ table {
 .seat.tsf {
     fill: #d5bb12;
 }
+.seat.trf {
+    fill: #d5a112;
+}
+.seat.clp {
+    fill: #db4949;
+}
+.seat.bsp {
+    fill: #af0000;
+}
 .seat.independent {
     fill: #808080;
 }
