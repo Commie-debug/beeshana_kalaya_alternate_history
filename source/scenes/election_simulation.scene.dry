@@ -16,16 +16,19 @@ on-arrival: {!
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
-    _addP('unp',  'UNP', 30);
-    _addP('slfp',  'SLFP', 75);
-    _addP('lssp',   'LSSP',  12);
-    _addP('cpsl',   'CPSL',  4);
-    _addP('itak',   'ITAK',  16);
+    _addP('unp',  'UNP', 50);
+    _addP('slfp',  'SLFP', 46);
+    _addP('lssp',   'LSSP',  10);
+    _addP('cpsl',   'CPSL',  3);
+    _addP('ldp',   'LDP',  4);
+    _addP('spfc',   'SPFC',  1);
+    _addP('mep',   'MEP',  10);
+    _addP('bbf',   'BBF',  1);
+    _addP('itak',   'ITAK',  15);
     _addP('actc',   'ACTC',  1);
-    _addP('mep',   'MEP',  3);
     _addP('nlf',   'NLF',  2);
-    _addP('ldp',   'LDP',  2);
-    _addP('independent',  'Independent', 6);
+    _addP('slnf',   'SLNF',  1);
+    _addP('independent',  'Independent', 7);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -58,30 +61,51 @@ on-display: {!
 {!<table>!}
 {!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **75** {!</td><td>!} **33.22%** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 50 {!</td><td>!} 29.39% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 30 {!</td><td>!} 37.19% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **46** {!</td><td>!} **20.92%** {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 12 {!</td><td>!} 7.31% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 10 {!</td><td>!} 10.52% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 16 {!</td><td>!} 6.95% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 10 {!</td><td>!} 10.49% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 4 {!</td><td>!} 2.93% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 15 {!</td><td>!} 5.7% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 3.47% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 3 {!</td><td>!} 4.37% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 1 {!</td><td>!} 1.52% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #404dff'> </div> !} LDP {!</td><td>!} 4 {!</td><td>!} 0.98% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #404dff'> </div> !} LDP {!</td><td>!} 2 {!</td><td>!} 0.98% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 1 {!</td><td>!} 1.24% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #193db1'> </div> !} NLF {!</td><td>!} 2 {!</td><td>!} 0.46% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #ff6040'> </div> !} SPFC {!</td><td>!} 1 {!</td><td>!} 0.75% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 6.42% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Sinhala National Association {!</td><td>!} 0 {!</td><td>!} 0.45% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000'> </div> !} Ceylon Independent Congress {!</td><td>!} 0 {!</td><td>!} 0.37% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #193db1'> </div> !} NLF {!</td><td>!} 2 {!</td><td>!} 0.36% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #1e4fff;'> </div> !} SLNF {!</td><td>!} 1 {!</td><td>!} 0.36% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #008eb2;'> </div> !} BBF {!</td><td>!} 1 {!</td><td>!} 0.32% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000;'> </div> !} Ceylon Democratic Congress {!</td><td>!} 0 {!</td><td>!} 0.29% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #d5bb12;'> </div> !} TSF {!</td><td>!} 0 {!</td><td>!} 0.28% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000;'> </div> !} Udarata Peramuna(Up-Country Front) {!</td><td>!} 0 {!</td><td>!} 0.22% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000;'> </div> !} Buddhist Republican Party {!</td><td>!} 0 {!</td><td>!} 0.04% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000;'> </div> !} Sri Lanka Dharma Rajya Party(Sri Lanka Righteous State Party) {!</td><td>!} 0 {!</td><td>!} 0.02% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #000000;'> </div> !} Ceylon Socialist Party {!</td><td>!} 0 {!</td><td>!} 0.01% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 7 {!</td><td>!} 9.14% {!</td><td></td></tr>!}
 
 {!</table>!}
 
-SLFP secures a single party majority with the tactical cooperation of the CPSL and LSSP via a "no-contest" pact. Though the later two did not join government, they supported the SLFP and its policies. In 1964 a weakened SLFP invited the LSSP into government.
-
+Neither the UNP or SLFP gained a majority. Elections were called again for July of 1960.
 
 @1960_July
 on-arrival: {!
@@ -153,7 +177,9 @@ on-display: {!
 
 {!</table>!}
 
-SLFP secures a single party majority with the tactical cooperation of the CPSL and LSSP via a "no-contest" pact. Though the later two did not join government, they supported the SLFP and its policies. In 1964 a weakened SLFP invited the LSSP into government.
+SLFP secures a single party majority with the tactical cooperation of the CPSL and LSSP via a "no-contest" pact. Though the later two did not join government, they supported the SLFP and its policies. Sirimavo Bandaranaike is elected Prime Minister, the first female head of state in the world. 
+
+Ceylon also becomes the first nation to have both heads of state be female (Queen Elizabeth II was still monarch). In 1964 a weakened SLFP invited the LSSP into government.
 
 @1965
 on-arrival: {!

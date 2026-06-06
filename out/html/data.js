@@ -226,6 +226,18 @@ const colourList = [{
         word: "ITAK",
         style: "color: #ffd000; font-weight: bold;"
     },
+    {
+        word: "NLF",
+        style: "color: #193db1; font-weight: bold;"
+    },
+    {
+        word: "SLFSP",
+        style: "color: #c23434; font-weight: bold;"
+    },
+    {
+        word: "LDP",
+        style: "color: #404dff; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -537,6 +549,22 @@ const tooltipList = [{
     {
     searchString: "LDP",
     explanationText: "<img src=img/logos/LDP_Logo.png> Lanka Prajathanthravadi Pakshaya <br> Lanka Democratic Party "
+    },
+    {
+    searchString: "SPFC",
+    explanationText: " Socialist Peoples Front of Ceylon "
+    },
+    {
+    searchString: "BBF",
+    explanationText: " Bosath Bandaranaike Front "
+    },
+    {
+    searchString: "SLNF",
+    explanationText: " Sri Lanka National Front "
+    },
+    {
+    searchString: "TSF",
+    explanationText: " Tamil Speaking Front "
     },
 
 

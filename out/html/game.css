@@ -1113,6 +1113,18 @@ table {
 .seat.ldp {
     fill: #404dff;
 }
+.seat.spfc {
+    fill: #ff6040;
+}
+.seat.bbf {
+    fill: #008eb2;
+}
+.seat.slnf {
+    fill: #1e4fff;
+}
+.seat.tsf {
+    fill: #d5bb12;
+}
 .seat.independent {
     fill: #808080;
 }
