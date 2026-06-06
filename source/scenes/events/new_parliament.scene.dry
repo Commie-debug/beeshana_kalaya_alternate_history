@@ -27,6 +27,10 @@ The newly completed complex is situated in the new (though not official) capital
 
 The building is a fusion of Sri Lankan vernacular architecture adapted to modern sensibilities. The complex's symmetry, starkly contrasts with the organic form of the lake it is located in.
 
+- @coolbuilding
+
+@coolbuilding
+
 As part of procedures for its opening on April 29th, President Jayewardene, Prime Minister Premadasa, MP from Kotte Anandatissa de Alwis (who was instrumental in moving parliament) and a few selected members of opposition are expected to speak.
 
 At the moment the confirmed selected opposition MP's are Leader of the opposition A. Amirthalingam (TULF) and Sarath Muttetuwegama (CPSL).
@@ -79,6 +83,7 @@ go-to: maitrided if ((radio >= 2 or campaign_media >= 3 or grafiti >= 3) and lef
 
 @maitrided
 on-arrival: nationalist_strength -= 5; nationalist_dissent += 10; left_strength += 7; left_dissent -= 10;
+face-image: img/JR_Address_Parl.jpg
 
 The Left has been able to make a "major stink" around this in local media thanks to their previous investments. JR not wanting the negative press so close to the important day decides to change plans and instead select the MP from Attanagalla, Lakshman Jayakody.
 
@@ -97,6 +102,7 @@ In addition to opening parliament, Sri Jayawardenepura Kotte was also offically 
 
 @maitridefyes
 on-arrival: nationalist_strength += 7; nationalist_dissent -= 10; left_strength -= 5; left_dissent += 10; 
+face-image: img/JR_Address_Parl.jpg
 
 The Left tries to raise attention in hopes of grabbing local media attention, but the effort was unsuccessfull, Maitripala will go ahead and be the SLFP speaker for the day.
 
