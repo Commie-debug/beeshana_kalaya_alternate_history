@@ -21,7 +21,7 @@ on-arrival: {!
     }
     _addP('unp',  'UNP', 42);
     _addP('lssp',   'LSSP',  10);
-    _addP('bsp',   'BSP-BLP',  5);
+    _addP('bsp-blp',   'BSP-BLP',  5);
     _addP('cpc',   'CPC',  3);
     _addP('actc',   'ACTC',  7);
     _addP('cic',   'CIC',  6);
@@ -81,7 +81,7 @@ on-display: {!
 
 {!</table>!}
 
-Th
+DS Senanayake's UNP failed to get a majority but managed to form a government with the ACTC. Ceylon would gain independence as a dominion in 1948.
 
 @1952
 on-arrival: {!
