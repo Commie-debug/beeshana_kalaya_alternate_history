@@ -43,28 +43,28 @@ on-arrival: {!
     if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
     else { window._parliAnimate = false; }
 !}
-
-
-= 1947 British Ceylon Parliamentary Election Results
-
-**Parliament Composition (95 seats)**
-
-{!<svg id="sim_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>
-<script>
+on-display: {!
 setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
-    var el = document.getElementById('sim_parliament');
+    var el = document.getElementById('status_parliament');
     if (!el) return;
     var w = el.parentElement.offsetWidth || 450;
     el.setAttribute('width', w);
     el.setAttribute('height', Math.round(w * 0.50));
     var parl = d3.parliament();
     parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
-    parl.enter.fromCenter(false).smallToBig(false);
-    parl.exit.toCenter(false).bigToSmall(false);
-    d3.select('#sim_parliament').datum(window._parliData).call(parl);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
 }, 150);
-</script>!}
+!}
+
+= 1947 British Ceylon Parliamentary Election Results
+
+**Parliament Composition (95 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
 {!<table>!}
 {!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
