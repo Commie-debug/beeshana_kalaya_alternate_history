@@ -1,4 +1,4 @@
-title: Queen Elizabeth visits Sri Lanka
+title: Parliments moves to a new location
 view-if: year = 1982 and month = 4 and week = 3
 max-visits: 1
 tags: event
