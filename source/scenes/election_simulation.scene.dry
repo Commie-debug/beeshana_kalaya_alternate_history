@@ -44,7 +44,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -57,7 +57,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = 1947 British Ceylon Parliamentary Election Results
@@ -117,7 +117,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -130,7 +130,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = 1952 Ceylonese Parliamentary Election Results
@@ -191,7 +191,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -204,7 +204,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = 1956 Ceylonese Parliamentary Election Results
@@ -273,7 +273,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -286,7 +286,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = March 1960 Ceylonese Parliamentary Election Results
@@ -370,7 +370,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -383,7 +383,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = July 1960 Ceylonese Parliamentary Election Results
@@ -447,7 +447,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -460,7 +460,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = 1965 Ceylonese Parliamentary Election Results
@@ -519,7 +519,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -532,7 +532,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = 1970 Ceylonese Parliamentary Election Results
@@ -582,7 +582,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -595,7 +595,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = 1977 Sri Lankan Parliamentary Election Results
@@ -627,8 +627,6 @@ Landslide UNP victory, in coalition with CWC.
 @1982
 on-arrival: {!
     //1982 presidential election 
-
-    // National results table variables
     Q.pres_results_count = 6;
     Q.pres_result_0_candidate = "J.R Jayewardene";
     Q.pres_result_0_party = "UNP";
@@ -874,7 +872,7 @@ on-arrival: {!
     else { window._parliAnimate = false; }
 !}
 on-display: {!
-(function() {
+setTimeout(function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
@@ -887,7 +885,7 @@ on-display: {!
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
     d3.select('#status_parliament').datum(window._parliData).call(parl);
-})();
+}, 150);
 !}
 
 = 1989 Sri Lankan Parliamentary Election Results
