@@ -42,25 +42,24 @@ unavailable-subtitle: Not enough resources.
 view-if: ulpp_formed = 1 or dunf_formed = 1 
 on-arrival: {!
     if (dunf_formed == 1 && ulpp_formed == 1){
-        resources -= 2
+        resources -= 2;
         dunf_relation += 3*(1-dissent);
         ulpp_relation += 3*(1-dissent);
 
     }
     else{
         if (dunf_formed == 1 && ulpp_formed == 0){
-            resources -= 2
+            resources -= 2;
             dunf_relation += 3*(1-dissent);
         }
         else{
             if (dunf_formed == 0 && ulpp_formed == 1){
-                resources -= 2
+                resources -= 2;
                 ulpp_relation += 3*(1-dissent);
             } 
         }
     }
-
-!};
+!}
 
 
 @pflt
