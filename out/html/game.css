@@ -1104,6 +1104,15 @@ table {
 .seat.itak {
     fill: #ffd000;
 }
+.seat.slfsp {
+    fill: #c23434;
+}
+.seat.nlf {
+    fill: #193db1;
+}
+.seat.ldp {
+    fill: #404dff;
+}
 .seat.independent {
     fill: #808080;
 }

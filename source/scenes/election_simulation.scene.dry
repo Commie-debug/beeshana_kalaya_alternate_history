@@ -1,11 +1,231 @@
 title: Election Simulation
 
+- @1960_March: March 1960 Parliamentary Election
+- @1960_July: July 1960 Parliamentary Election
+- @1965: 1965 Parliamentary Election
 - @1970: 1970 Parliamentary Election
 - @1977: 1977 Parliamentary Election
 - @1982: 1982 Presidential Election
 - @1983: 1983 National Referendum
 - @1988: 1988 Presidential Election
 - @1989: 1989 Parliamentary Election
+
+@1960_March
+on-arrival: {!
+    var _newData = [];
+    function _addP(id, legend, seats) {
+        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+    }
+    _addP('unp',  'UNP', 30);
+    _addP('slfp',  'SLFP', 75);
+    _addP('lssp',   'LSSP',  12);
+    _addP('cpsl',   'CPSL',  4);
+    _addP('itak',   'ITAK',  16);
+    _addP('actc',   'ACTC',  1);
+    _addP('mep',   'MEP',  3);
+    _addP('nlf',   'NLF',  2);
+    _addP('ldp',   'LDP',  2);
+    _addP('independent',  'Independent', 6);
+    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = _newData;
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
+!}
+on-display: {!
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 450;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.50));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+!}
+
+= March 1960 Ceylonese Parliamentary Election Results
+
+**Parliament Composition (151 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+
+{!<table>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **75** {!</td><td>!} **33.22%** {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 30 {!</td><td>!} 37.19% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 12 {!</td><td>!} 7.31% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 16 {!</td><td>!} 6.95% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 4 {!</td><td>!} 2.93% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 3.47% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 1 {!</td><td>!} 1.52% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #404dff'> </div> !} LDP {!</td><td>!} 2 {!</td><td>!} 0.98% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #193db1'> </div> !} NLF {!</td><td>!} 2 {!</td><td>!} 0.46% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 6.42% {!</td><td></td></tr>!}
+
+{!</table>!}
+
+SLFP secures a single party majority with the tactical cooperation of the CPSL and LSSP via a "no-contest" pact. Though the later two did not join government, they supported the SLFP and its policies. In 1964 a weakened SLFP invited the LSSP into government.
+
+
+@1960_July
+on-arrival: {!
+    var _newData = [];
+    function _addP(id, legend, seats) {
+        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+    }
+    _addP('slfp',  'SLFP', 75);
+    _addP('unp',  'UNP', 30);
+    _addP('lssp',   'LSSP',  12);
+    _addP('cpsl',   'CPSL',  4);
+    _addP('itak',   'ITAK',  16);
+    _addP('actc',   'ACTC',  1);
+    _addP('mep',   'MEP',  3);
+    _addP('nlf',   'NLF',  2);
+    _addP('ldp',   'LDP',  2);
+    _addP('independent',  'Independent', 6);
+    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = _newData;
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
+!}
+on-display: {!
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 450;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.50));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+!}
+
+= July 1960 Ceylonese Parliamentary Election Results
+
+**Parliament Composition (151 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+
+{!<table>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **75** {!</td><td>!} **33.22%** {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 30 {!</td><td>!} 37.19% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 12 {!</td><td>!} 7.31% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 16 {!</td><td>!} 6.95% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 4 {!</td><td>!} 2.93% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 3 {!</td><td>!} 3.47% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 1 {!</td><td>!} 1.52% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #404dff'> </div> !} LDP {!</td><td>!} 2 {!</td><td>!} 0.98% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #193db1'> </div> !} NLF {!</td><td>!} 2 {!</td><td>!} 0.46% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 6.42% {!</td><td></td></tr>!}
+
+{!</table>!}
+
+SLFP secures a single party majority with the tactical cooperation of the CPSL and LSSP via a "no-contest" pact. Though the later two did not join government, they supported the SLFP and its policies. In 1964 a weakened SLFP invited the LSSP into government.
+
+@1965
+on-arrival: {!
+    var _newData = [];
+    function _addP(id, legend, seats) {
+        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+    }
+    _addP('unp',  'UNP', 66);
+    _addP('slfp',  'SLFP', 41);
+    _addP('lssp',   'LSSP',  10);
+    _addP('cpsl',   'CPSL',  4);
+    _addP('slfsp',   'SLFSP',  5);
+    _addP('itak',   'ITAK',  14);
+    _addP('actc',   'ACTC',  1);
+    _addP('mep',   'MEP',  1);
+    _addP('nlf',   'NLF',  1);
+    _addP('independent',  'Independent', 6);
+    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = _newData;
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
+!}
+on-display: {!
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 450;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.50));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+!}
+
+= 1965 Ceylonese Parliamentary Election Results
+
+**Parliament Composition (151 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+
+{!<table>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 66 {!</td><td>!} 39.31% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **41** {!</td><td>!} **30.18%** {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 10 {!</td><td>!} 7.47% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #ffd000'> </div> !} ITAK {!</td><td>!} 14 {!</td><td>!} 5.38% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #c23434'> </div> !} SLFSP {!</td><td>!} 5 {!</td><td>!} 3.22% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 4 {!</td><td>!} 2.71% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 3 {!</td><td>!} 2.44% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 0 {!</td><td>!} 0.93% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #193db1'> </div> !} NLF {!</td><td>!} 1 {!</td><td>!} 0.46% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 6.42% {!</td><td></td></tr>!}
+
+{!</table>!}
+
+UNP fails to win a majority, UNP thus forms a "National Front" government with the SLFSP, NLF, MEP and external support of ITAK.
 
 @1970
 on-arrival: {!

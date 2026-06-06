@@ -526,6 +526,18 @@ const tooltipList = [{
     searchString: "ITAK",
     explanationText: "<img src=img/logos/ITAK_Logo.png> Ilankai Tamil Arasu Kachchi <br> Sri Lanka Tamil Federal Party"
     },
+    {
+    searchString: "NLF",
+    explanationText: "<img src=img/logos/NLF_Logo.png> Jathika Vimukthi Peramuna <br> National Liberation Front"
+    },
+    {
+    searchString: "SLFSP",
+    explanationText: "<img src=img/logos/SLFSP_Logo.png> Sri Lanka Freedom Socialist Party "
+    },
+    {
+    searchString: "LDP",
+    explanationText: "<img src=img/logos/LDP_Logo.png> Lanka Prajathanthravadi Pakshaya <br> Lanka Democratic Party "
+    },
 
 
     {
