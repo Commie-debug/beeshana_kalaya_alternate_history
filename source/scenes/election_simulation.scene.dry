@@ -1,9 +1,70 @@
 title: Election Simulation
 
+- @1977: 1977 Parliamentary Election
 - @1982: 1982 Presidential Election
 - @1983: 1983 Referendum
 - @1988: 1988 Presidential Election
 - @1989: 1989 Parliamentary Election
+
+@1977
+on-arrival: {!
+    var _newData = [];
+    function _addP(id, legend, seats) {
+        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
+    }
+    if (id === 'independent') {
+            party.color = '#808080';
+    }
+    _addP('slfp',  'SLFP', 8);
+    _addP('tulf',  'TULF', 18);
+    _addP('mep',   'CWC',  1);
+    _addP('unp',   'UNP',  141);
+    _addP('independent',  'independent', 1);
+    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = _newData;
+    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
+    else { window._parliAnimate = false; }
+!}
+on-display: {!
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 450;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.50));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+!}
+
+= 1977 Parliamentary Election Results
+
+**Parliament Composition (168 seats)**
+
+{!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+
+{!<table>!}
+{!<tr><td>Party/Coalition </td><td>Seats</td><td>Vote%</td><td></td></tr>!}
+
+
+{!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 141 {!</td><td>!} 50.92% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} **SLFP** {!</td><td>!} **8** {!</td><td>!} **29.72%** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #F7D917'> </div> !} TULF {!</td><td>!} 18 {!</td><td>!} 6.75% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #A91101'> </div> !} LSSP {!</td><td>!} 0 {!</td><td>!} 3.61% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #65000B'> </div> !} CPSL {!</td><td>!} 0 {!</td><td>!} 1.98% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #E52B50'> </div> !} CWC {!</td><td>!} 1 {!</td><td>!} 1.00% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 0 {!</td><td>!} 0.36% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 1 {!</td><td>!} 5.65% {!</td><td></td></tr>!}
+
+{!</table>!}
+
+Landslide UNP victory, ruled in coalition with the CWC
 
 @1982
 on-arrival: {!
