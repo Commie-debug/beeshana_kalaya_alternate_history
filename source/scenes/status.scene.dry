@@ -248,11 +248,11 @@ ACTC: [+ actc_ideology : ideology +]
 
 [? if dplf_formed = 1 : DPLF: [+ dplf_ideology : ideology +] ?]
 
-[? if eprlf_formed = 1 : UCPF: [+ eprlf_ideology : ideology +] ?]
+[? if eprlf_formed = 1 : EPRLF: [+ eprlf_ideology : ideology +] ?]
 
-[? if telo_formed = 1 : UCPF: [+ telo_ideology : ideology +] ?]
+[? if telo_formed = 1 : TELO: [+ telo_ideology : ideology +] ?]
 
-[? if endlf_formed = 1 : UCPF: [+ endlf_ideology : ideology +] ?]
+[? if endlf_formed = 1 : ENDLF: [+ endlf_ideology : ideology +] ?]
 
 CPSL: [+ cpsl_ideology : ideology +]
 
