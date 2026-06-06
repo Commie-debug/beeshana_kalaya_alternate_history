@@ -19,7 +19,7 @@ on-arrival: {!
     _addP('tulf',  'TULF', 18);
     _addP('mep',   'CWC',  1);
     _addP('unp',   'UNP',  141);
-    _addP('independent',  'independent', 1);
+    _addP('independent',  'Independent', 1);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
