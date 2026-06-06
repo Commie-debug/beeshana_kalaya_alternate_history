@@ -1101,6 +1101,9 @@ table {
 .seat.vacant {
     fill: #808080;
 }
+.seat.itak {
+    fill: #ffd000;
+}
 .seat.independent {
     fill: #808080;
 }

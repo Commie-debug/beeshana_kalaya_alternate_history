@@ -222,6 +222,10 @@ const colourList = [{
         word: "Naxalite",
         style: "color: #b20000; font-weight: bold;"
     },
+    {
+        word: "ITAK",
+        style: "color: #ffd000; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -516,6 +520,14 @@ const tooltipList = [{
     searchString: "Naxalite",
     explanationText: "<img src=img/logos/Naxal_Logo.png> Naxalite-Maoist(Indian Maoist insurgents)"
     },
+
+    //historical parties for election simulation 
+    {
+    searchString: "ITAK",
+    explanationText: "<img src=img/logos/ITAK_Logo.png> Ilankai Tamil Arasu Kachchi <br> Sri Lanka Tamil Federal Party"
+    },
+
+
     {
     searchString: "Non Alligned Movement",
     explanationText: "<img src=img/logos/NAM_Logo.png> Non Alligned Movement"
