@@ -12,9 +12,6 @@ on-arrival: {!
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
-    if (id === 'independent') {
-            party.color = '#808080';
-    }
     _addP('slfp',  'SLFP', 8);
     _addP('tulf',  'TULF', 18);
     _addP('mep',   'CWC',  1);
