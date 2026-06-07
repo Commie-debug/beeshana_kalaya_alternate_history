@@ -95,9 +95,9 @@ setTimeout(function() {
 
 DS Senanayake's UNP failed to get a majority but managed to form a government with the ACTC. Ceylon would gain independence as a dominion in 1948.
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1952: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1952: Next election...
 
 @1952
 on-arrival: {!
@@ -169,9 +169,9 @@ setTimeout(function() {
 
 The recently formed SLFP wins 9 seats while the CIC is eliminated from parliament and the LSSP loses seats to the UNP thanks to the repatriation of Indian Tamils
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1956: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1956: Next election...
 
 @1956
 on-arrival: {!
@@ -248,9 +248,9 @@ setTimeout(function() {
 
 The SLFP led Mahajana Eksath Peramuna alliance wins a majority, deposing the UNP for the first time since independence.
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1960_March: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1960_March: Next election...
 
 @1960_March
 on-arrival: {!
@@ -349,9 +349,9 @@ setTimeout(function() {
 
 Neither the UNP or SLFP gained a majority. Elections were called again for July of 1960.
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1960_July: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1960_July: Next election...
 
 @1960_July
 on-arrival: {!
@@ -427,9 +427,9 @@ SLFP secures a single party majority with the tactical cooperation of the CPC an
 
 Ceylon also becomes the first nation to have both heads of state be female (Queen Elizabeth II was still monarch). In 1964 a weakened SLFP invited the LSSP into government.
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1965: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1965: Next election...
 
 @1965
 on-arrival: {!
@@ -503,9 +503,9 @@ setTimeout(function() {
 
 UNP fails to win a majority, UNP thus forms a "National Front" government with the SLFSP, NLF, MEP and external support of ITAK.
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1970: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1970: Next election...
 
 @1970
 on-arrival: {!
@@ -569,9 +569,9 @@ setTimeout(function() {
 
 Total United Front victory.
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1977: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1977: Next election...
 
 @1977
 on-arrival: {!
@@ -629,13 +629,12 @@ setTimeout(function() {
 
 Landslide UNP victory, in coalition with CWC.
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1982: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1982: Next election...
 
 @1982
 on-arrival: {!
-    //1982 presidential election 
     Q.pres_results_count = 6;
     Q.pres_result_0_candidate = "J.R Jayewardene";
     Q.pres_result_0_party = "UNP";
@@ -723,9 +722,9 @@ on-arrival: {!
 
 {!</table>!}
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1983: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1983: Next election...
 
 @1983
 
@@ -776,15 +775,12 @@ on-arrival: {!
 
 {!</table>!}
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1988: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1988: Next election...
 
 @1988
 on-arrival: {!
-    //1982 presidential election 
-
-    // National results table variables
     Q.pres_results_count = 3;
     Q.pres_result_0_candidate = "Ranasinghe Premadasa";
     Q.pres_result_0_party = "UNP";
@@ -880,9 +876,9 @@ on-arrival: {!
 
 {!</table>!}
 
-- @selection: ← Back to archive
-- @return: Leave..
-- @1989: Next election →
+- @selection: Back to selection menu...
+- @return: Leave...
+- @1989: Next election...
 
 @1989
 on-arrival: {!
@@ -962,4 +958,5 @@ setTimeout(function() {
 
 {!</table>!}
 
-- @return: Leave..
+- @selection: Back to selection menu...
+- @return: Leave...
