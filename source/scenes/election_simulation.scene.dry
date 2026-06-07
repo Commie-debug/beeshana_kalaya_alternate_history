@@ -27,6 +27,7 @@ Herein contains an archive of every election (and singular referendum) in indepe
 go-to: 1947
 
 @1947
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -101,6 +102,7 @@ DS Senanayake's UNP failed to get a majority but managed to form a government wi
 - @1952: Next election...
 
 @1952
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -175,6 +177,7 @@ The recently formed SLFP wins 9 seats while the CIC is eliminated from parliamen
 - @1956: Next election...
 
 @1956
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -254,6 +257,7 @@ The SLFP led Mahajana Eksath Peramuna alliance wins a majority, deposing the UNP
 - @1960_March: Next election...
 
 @1960_March
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -355,6 +359,7 @@ Neither the UNP or SLFP gained a majority. Elections were called again for July 
 - @1960_July: Next election...
 
 @1960_July
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -433,6 +438,7 @@ Ceylon also becomes the first nation to have both heads of state be female (Quee
 - @1965: Next election...
 
 @1965
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -509,6 +515,7 @@ UNP fails to win a majority, UNP thus forms a "National Front" government with t
 - @1970: Next election...
 
 @1970
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -575,6 +582,7 @@ Total United Front victory.
 - @1977: Next election...
 
 @1977
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
@@ -635,6 +643,7 @@ Landslide UNP victory, in coalition with CWC.
 - @1982: Next election...
 
 @1982
+new-page: true
 on-arrival: {!
     Q.pres_results_count = 6;
     Q.pres_result_0_candidate = "J.R Jayewardene";
@@ -728,6 +737,7 @@ on-arrival: {!
 - @1983: Next election...
 
 @1983
+new-page: true
 
 **Do you approve the Bill entitled the Fourth Amendment to the Constitution published in Gazette Extraordinary No 218/23 of November 13, 1982, which provides inter alia that unless sooner dissolved the First parliament shall continue until August 4, 1989, and no longer and shall thereupon stand dissolved?.**
 
@@ -781,6 +791,7 @@ on-arrival: {!
 - @1988: Next election...
 
 @1988
+new-page: true
 on-arrival: {!
     Q.pres_results_count = 3;
     Q.pres_result_0_candidate = "Ranasinghe Premadasa";
@@ -882,6 +893,7 @@ on-arrival: {!
 - @1989: Next election...
 
 @1989
+new-page: true
 on-arrival: {!
     var _newData = [];
     function _addP(id, legend, seats) {
