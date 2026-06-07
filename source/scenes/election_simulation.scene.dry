@@ -6,6 +6,7 @@ Herein contains an archive of every election (and singular referendum) in indepe
 
 - @timeline: View elections in chronological order (1947-->1989)......
 - @selection: Browse elections freely.....
+- @return: Leave...
 
 @selection
 
@@ -224,7 +225,7 @@ setTimeout(function() {
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B; outline: 2px; outline-style: solid;'> </div> !} SLFP {!</td><td>!} **-%** {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B'> </div> !} Sinhala Language Front {!</td><td>!} -% {!</td><td></td></tr>!}
 {!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B'> </div> !} Viplavaraki Lanka Sama Samaja Party {!</td><td>!} -% {!</td><td></td></tr>!}
-{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B'> </div> !} Smaller socialist, nationalist parties {!</td><td>!} -% {!</td><td></td></tr>!}
+{!<tr><td style="padding-left: 20px;"><div class="box" style='background-color: #00008B'> </div> !} Smaller left-wing & nationalist parties {!</td><td>!} -% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #006400'> </div> !} UNP {!</td><td>!} 8 {!</td><td>!} 27.91% {!</td><td></td></tr>!}
 
