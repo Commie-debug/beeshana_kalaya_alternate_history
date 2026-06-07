@@ -356,6 +356,18 @@
             stopLayer(layerName);
         },
 
+        pause: function(layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) layer.audio.pause();
+        },
+
+        resume: function(layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) layer.audio.play().catch(function() {});
+        },
+
         setVolume: function(layerName, vol) {
             layers[layerName].volume = vol;
             if (layers[layerName].audio && !muted) {
