@@ -9,6 +9,7 @@ Herein contains an archive of every election (and singular referendum) in indepe
 - @return: Leave...
 
 @selection
+new-page: true
 
 - @1947: 1947 Parliamentary Election 
 - @1952: 1952 Parliamentary Election
