@@ -275,6 +275,10 @@ const colourList = [{
         word: "CIC",
         style: "color: #E52B50; font-weight: bold;"
     },
+    {
+        word: "VLSSP",
+        style: "color: #8b0000; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -586,6 +590,10 @@ const tooltipList = [{
     {
     searchString: "LDP",
     explanationText: "<img src=img/logos/LDP_Logo.png> Lanka Prajathanthravadi Pakshaya <br> Lanka Democratic Party "
+    },
+    {
+    searchString: "VLSSP",
+    explanationText: "Viplavakari Lanka Sama Samaja Party <br> Revolutionary Lanka Equal Society Party"
     },
     {
     searchString: "SPFC",
