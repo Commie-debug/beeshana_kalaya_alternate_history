@@ -416,6 +416,7 @@ for (var i = 0; i < district_names_pres.length; i++) {
     
     var district_nonvoter_rate = (ethnic_weight * district_nonvoter_ethnic) + (class_weight * district_nonvoter_class);
     var turnout_factor = 1 - district_nonvoter_rate;
+    Q[district_name + '_turnout'] = Math.round(turnout_factor * 1000) / 10;
     
     total_nonvoter_weighted += district_nonvoter_rate * district_pop_weight;
     
@@ -750,6 +751,7 @@ go-to: pres_result_display
     {!<table style="text-align:center; border-spacing: 0.2em; font-size: 0.8em;">!}
         {!<tr>!}
             {!<th>District</th>!}
+            {!<th>Turnout</th>!}
             [? if slfp_pres_independent = 1 : {!<th><span style="color: #00008B;">SLFP</span></th>!} ?]
             [? if unp_pres_independent = 1 : {!<th><span style="color: #006400;">UNP</span></th>!} ?]
             [? if tulf_pres_independent = 1 : {!<th><span style="color: #F7D917;">TULF</span></th>!} ?]

@@ -293,6 +293,7 @@ for (var i = 0; i < Q.district_names.length; i++) {
     
     var district_nonvoter_rate = (ethnic_weight * district_nonvoter_ethnic) + (class_weight * district_nonvoter_class);
     var turnout_factor = 1 - district_nonvoter_rate;
+    Q[district_name + '_turnout'] = Math.round(turnout_factor * 1000) / 10;
     
     //accumulate for overall turnout calculation
     var district_pop_weight = Q[district_name + '_pop_weight'] || 0;
@@ -1087,6 +1088,7 @@ go-to: coalition_menu
     {!<table style="text-align:center; border-spacing: 0.2em; font-size: 0.8em;">!}
         {!<tr>!}
             {!<th>District</th>!}
+            {!<th>Turnout</th>!}
             {!<th>Seats</th>!}
             {!<th><span style="color: #00008B;">SLFP</span></th>!}
             {!<th><span style="color: #006400;">UNP</span></th>!}
@@ -1108,6 +1110,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Colombo**{!</td>!}
+            {!<td>!}**[+ colombo_d_turnout +]%**{!</td>!}
             {!<td>!}[+ colombo_d_district_seats +]{!</td>!}
             {!<td>!}[+ colombo_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ colombo_d_unp_seats +]{!</td>!}
@@ -1129,6 +1132,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Gampaha**{!</td>!}
+            {!<td>!}**[+ gampaha_d_turnout +]%**{!</td>!}
             {!<td>!}[+ gampaha_d_district_seats +]{!</td>!}
             {!<td>!}[+ gampaha_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ gampaha_d_unp_seats +]{!</td>!}
@@ -1150,6 +1154,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kalutara**{!</td>!}
+            {!<td>!}**[+ kalutara_d_turnout +]%**{!</td>!}
             {!<td>!}[+ kalutara_d_district_seats +]{!</td>!}
             {!<td>!}[+ kalutara_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ kalutara_d_unp_seats +]{!</td>!}
@@ -1171,6 +1176,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Jaffna** (incl. Kilinochchi){!</td>!}
+            {!<td>!}**[+ jaffna_d_turnout +]%**{!</td>!}
             {!<td>!}[+ jaffna_electoral_d_district_seats +]{!</td>!}
             {!<td>!}[+ jaffna_electoral_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ jaffna_electoral_d_unp_seats +]{!</td>!}
@@ -1192,6 +1198,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Vanni** (Mannar, Mullaitivu, Vavuniya){!</td>!}
+            {!<td>!}**[+ wanni_d_turnout +]%**{!</td>!}
             {!<td>!}[+ wanni_electoral_d_district_seats +]{!</td>!}
             {!<td>!}[+ wanni_electoral_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ wanni_electoral_d_unp_seats +]{!</td>!}
@@ -1213,6 +1220,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Trincomalee**{!</td>!}
+            {!<td>!}**[+ trincomalee_d_turnout +]%**{!</td>!}
             {!<td>!}[+ trincomalee_d_district_seats +]{!</td>!}
             {!<td>!}[+ trincomalee_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ trincomalee_d_unp_seats +]{!</td>!}
@@ -1234,6 +1242,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Batticaloa**{!</td>!}
+            {!<td>!}**[+ batticaloa_d_turnout +]%**{!</td>!}
             {!<td>!}[+ batticaloa_d_district_seats +]{!</td>!}
             {!<td>!}[+ batticaloa_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ batticaloa_d_unp_seats +]{!</td>!}
@@ -1255,6 +1264,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ampara**{!</td>!}
+            {!<td>!}**[+ ampara_d_turnout +]%**{!</td>!}
             {!<td>!}[+ ampara_d_district_seats +]{!</td>!}
             {!<td>!}[+ ampara_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ ampara_d_unp_seats +]{!</td>!}
@@ -1276,6 +1286,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kandy**{!</td>!}
+            {!<td>!}**[+ kandy_d_turnout +]%**{!</td>!}
             {!<td>!}[+ kandy_d_district_seats +]{!</td>!}
             {!<td>!}[+ kandy_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ kandy_d_unp_seats +]{!</td>!}
@@ -1297,6 +1308,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matale**{!</td>!}
+            {!<td>!}**[+ matale_d_turnout +]%**{!</td>!}
             {!<td>!}[+ matale_d_district_seats +]{!</td>!}
             {!<td>!}[+ matale_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ matale_d_unp_seats +]{!</td>!}
@@ -1318,6 +1330,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Nuwara Eliya**{!</td>!}
+            {!<td>!}**[+ nuwaraeliya_d_turnout +]%**{!</td>!}
             {!<td>!}[+ nuwaraeliya_d_district_seats +]{!</td>!}
             {!<td>!}[+ nuwaraeliya_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ nuwaraeliya_d_unp_seats +]{!</td>!}
@@ -1339,6 +1352,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Galle**{!</td>!}
+            {!<td>!}**[+ galle_d_turnout +]%**{!</td>!}
             {!<td>!}[+ galle_d_district_seats +]{!</td>!}
             {!<td>!}[+ galle_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ galle_d_unp_seats +]{!</td>!}
@@ -1360,6 +1374,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matara**{!</td>!}
+            {!<td>!}**[+ matara_d_turnout +]%**{!</td>!}
             {!<td>!}[+ matara_d_district_seats +]{!</td>!}
             {!<td>!}[+ matara_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ matara_d_unp_seats +]{!</td>!}
@@ -1381,6 +1396,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Hambantota**{!</td>!}
+            {!<td>!}**[+ hambantota_d_turnout +]%**{!</td>!}
             {!<td>!}[+ hambantota_d_district_seats +]{!</td>!}
             {!<td>!}[+ hambantota_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ hambantota_d_unp_seats +]{!</td>!}
@@ -1402,6 +1418,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kurunegala**{!</td>!}
+            {!<td>!}**[+ kurunegala_d_turnout +]%**{!</td>!}
             {!<td>!}[+ kurunegala_d_district_seats +]{!</td>!}
             {!<td>!}[+ kurunegala_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ kurunegala_d_unp_seats +]{!</td>!}
@@ -1423,6 +1440,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Puttalam**{!</td>!}
+            {!<td>!}**[+ puttalam_d_turnout +]%**{!</td>!}
             {!<td>!}[+ puttalam_d_district_seats +]{!</td>!}
             {!<td>!}[+ puttalam_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ puttalam_d_unp_seats +]{!</td>!}
@@ -1444,6 +1462,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Anuradhapura**{!</td>!}
+            {!<td>!}**[+ anuradhapura_d_turnout +]%**{!</td>!}
             {!<td>!}[+ anuradhapura_d_district_seats +]{!</td>!}
             {!<td>!}[+ anuradhapura_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ anuradhapura_d_unp_seats +]{!</td>!}
@@ -1465,6 +1484,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Polonnaruwa**{!</td>!}
+            {!<td>!}**[+ polonnaruwa_d_turnout +]%**{!</td>!}
             {!<td>!}[+ polonnaruwa_d_district_seats +]{!</td>!}
             {!<td>!}[+ polonnaruwa_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ polonnaruwa_d_unp_seats +]{!</td>!}
@@ -1486,6 +1506,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Badulla**{!</td>!}
+            {!<td>!}**[+ badulla_d_turnout +]%**{!</td>!}
             {!<td>!}[+ badulla_d_district_seats +]{!</td>!}
             {!<td>!}[+ badulla_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ badulla_d_unp_seats +]{!</td>!}
@@ -1507,6 +1528,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Monaragala**{!</td>!}
+            {!<td>!}**[+ monaragala_d_turnout +]%**{!</td>!}
             {!<td>!}[+ monaragala_d_district_seats +]{!</td>!}
             {!<td>!}[+ monaragala_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ monaragala_d_unp_seats +]{!</td>!}
@@ -1528,6 +1550,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ratnapura**{!</td>!}
+            {!<td>!}**[+ ratnapura_d_turnout +]%**{!</td>!}
             {!<td>!}[+ ratnapura_d_district_seats +]{!</td>!}
             {!<td>!}[+ ratnapura_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ ratnapura_d_unp_seats +]{!</td>!}
@@ -1549,6 +1572,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kegalle**{!</td>!}
+            {!<td>!}**[+ kegalle_d_turnout +]%**{!</td>!}
             {!<td>!}[+ kegalle_d_district_seats +]{!</td>!}
             {!<td>!}[+ kegalle_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ kegalle_d_unp_seats +]{!</td>!}
