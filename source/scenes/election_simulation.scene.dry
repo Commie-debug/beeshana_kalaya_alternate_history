@@ -930,7 +930,8 @@ on-arrival: {!
     _addP('eprlf', 'EPRLF',7);
     _addP('nssp',  'NSSP',  1);
     _addP('eros',  'EROS', 13);
-    _addP('unp',   'UNP',  125);
+    _addP('cwc',   'CWC',  4);
+    _addP('unp',   'UNP',  121);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
