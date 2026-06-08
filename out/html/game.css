@@ -1143,6 +1143,9 @@ table {
 .seat.vacant {
     fill: #dfdfdf;
 }
+.seat.appointed {
+    fill: #C5A059;
+}
 
 
 .tooltip-text {

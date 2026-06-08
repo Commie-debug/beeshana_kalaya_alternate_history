@@ -42,6 +42,7 @@ on-arrival: {!
     _addP('cic',   'CIC',  6);
     _addP('clp',   'CLP',  1);
     _addP('independent',  'Independent', 21);
+    _addP('appointed',  'Appointed', 6);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -67,7 +68,7 @@ setTimeout(function() {
 
 = 1947 British Ceylon Parliamentary Election Results
 
-**Parliament Composition (95 seats)**
+**Parliament Composition (101 seats)**
 
 {!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
@@ -94,6 +95,8 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 21 {!</td><td>!} 29.11% {!</td><td></td></tr>!}
 
+{!<tr><td><div class="box" style='background-color: #C5A059'> </div> !} Appointed {!</td><td>!} 6 {!</td><td></td></tr>!}
+
 {!</table>!}
 
 DS Senanayake's UNP failed to get a majority but managed to form a government with the ACTC. Ceylon would gain independence as a dominion in 1948.
@@ -117,6 +120,7 @@ on-arrival: {!
     _addP('itak',   'ITAK',  2);
     _addP('clp',   'CLP',  1);
     _addP('independent',  'Independent', 12);
+    _addP('appointed',  'Appointed', 6);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -142,7 +146,7 @@ setTimeout(function() {
 
 = 1952 Ceylonese Parliamentary Election Results
 
-**Parliament Composition (95 seats)**
+**Parliament Composition (101 seats)**
 
 {!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
@@ -169,6 +173,8 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 12 {!</td><td>!} 14.04% {!</td><td></td></tr>!}
 
+{!<tr><td><div class="box" style='background-color: #C5A059'> </div> !} Appointed {!</td><td>!} 6 {!</td><td></td></tr>!}
+
 {!</table>!}
 
 The recently formed SLFP wins 9 seats while the CIC is eliminated from parliament and the LSSP loses seats to the UNP thanks to the repatriation of Indian Tamils
@@ -193,6 +199,7 @@ on-arrival: {!
     _addP('tsf',   'TSF',  1);
     _addP('trf',   'TRF',  1);
     _addP('independent',  'Independent', 6);
+    _addP('appointed',  'Appointed', 6);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -218,7 +225,7 @@ setTimeout(function() {
 
 = 1956 Ceylonese Parliamentary Election Results
 
-**Parliament Composition (95 seats)**
+**Parliament Composition (101 seats)**
 
 {!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
@@ -249,6 +256,8 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 9.99% {!</td><td></td></tr>!}
 
+{!<tr><td><div class="box" style='background-color: #C5A059'> </div> !} Appointed {!</td><td>!} 6 {!</td><td></td></tr>!}
+
 {!</table>!}
 
 The SLFP led Mahajana Eksath Peramuna alliance wins a majority, deposing the UNP for the first time since independence.
@@ -277,6 +286,7 @@ on-arrival: {!
     _addP('nlf',   'NLF',  2);
     _addP('slnf',   'SLNF',  1);
     _addP('independent',  'Independent', 7);
+    _addP('appointed',  'Appointed', 6);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -302,7 +312,7 @@ setTimeout(function() {
 
 = March 1960 Ceylonese Parliamentary Election Results
 
-**Parliament Composition (151 seats)**
+**Parliament Composition (157 seats)**
 
 {!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
@@ -351,6 +361,8 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 7 {!</td><td>!} 9.14% {!</td><td></td></tr>!}
 
+{!<tr><td><div class="box" style='background-color: #C5A059'> </div> !} Appointed {!</td><td>!} 6 {!</td><td></td></tr>!}
+
 {!</table>!}
 
 Neither the UNP or SLFP gained a majority. Elections were called again for July of 1960.
@@ -376,6 +388,7 @@ on-arrival: {!
     _addP('nlf',   'NLF',  2);
     _addP('ldp',   'LDP',  2);
     _addP('independent',  'Independent', 6);
+    _addP('appointed',  'Appointed', 6);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -401,7 +414,7 @@ setTimeout(function() {
 
 = July 1960 Ceylonese Parliamentary Election Results
 
-**Parliament Composition (151 seats)**
+**Parliament Composition (157 seats)**
 
 {!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
@@ -427,6 +440,8 @@ setTimeout(function() {
 {!<tr><td><div class="box" style='background-color: #193db1'> </div> !} NLF {!</td><td>!} 2 {!</td><td>!} 0.46% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 6.42% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #C5A059'> </div> !} Appointed {!</td><td>!} 6 {!</td><td></td></tr>!}
 
 {!</table>!}
 
@@ -455,6 +470,7 @@ on-arrival: {!
     _addP('mep',   'MEP',  1);
     _addP('nlf',   'NLF',  1);
     _addP('independent',  'Independent', 6);
+    _addP('appointed',  'Appointed', 6);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -480,7 +496,7 @@ setTimeout(function() {
 
 = 1965 Ceylonese Parliamentary Election Results
 
-**Parliament Composition (151 seats)**
+**Parliament Composition (157 seats)**
 
 {!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
@@ -507,6 +523,8 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 6 {!</td><td>!} 6.42% {!</td><td></td></tr>!}
 
+{!<tr><td><div class="box" style='background-color: #C5A059'> </div> !} Appointed {!</td><td>!} 6 {!</td><td></td></tr>!}
+
 {!</table>!}
 
 UNP fails to win a majority, UNP thus forms a "National Front" government with the SLFSP, NLF, MEP and external support of ITAK.
@@ -529,6 +547,7 @@ on-arrival: {!
     _addP('itak',   'ITAK',  13);
     _addP('actc',   'ACTC',  3);
     _addP('independent',  'Independent', 2);
+    _addP('appointed',  'Appointed', 6);
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
     window._parliData = _newData;
@@ -554,7 +573,7 @@ setTimeout(function() {
 
 = 1970 Ceylonese Parliamentary Election Results
 
-**Parliament Composition (151 seats)**
+**Parliament Composition (157 seats)**
 
 {!<svg id="status_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
 
@@ -573,6 +592,8 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 0 {!</td><td>!} 0.93% {!</td><td></td></tr>!}
 {!<tr><td><div class="box" style='background-color: #949494'> </div> !} Independent {!</td><td>!} 2 {!</td><td>!} 4.99% {!</td><td></td></tr>!}
+
+{!<tr><td><div class="box" style='background-color: #C5A059'> </div> !} Appointed {!</td><td>!} 6 {!</td><td></td></tr>!}
 
 {!</table>!}
 

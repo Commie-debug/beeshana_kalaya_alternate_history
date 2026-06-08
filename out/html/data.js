@@ -279,6 +279,10 @@ const colourList = [{
         word: "VLSSP",
         style: "color: #8b0000; font-weight: bold;"
     },
+    {
+        word: "Appointed",
+        style: "color: #C5A059; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -630,6 +634,10 @@ const tooltipList = [{
     {
     searchString: "BSP-BLP",
     explanationText: "<img src=img/logos/CPSL_Logo.png> Bolshevik Sama Samaja Party<br> & <br>Bolshevik-Leninist Party of India, Ceylon & Burma "
+    },
+    {
+    searchString: "Appointed",
+    explanationText: "Appointed by the Governer-General "
     },
 
 
