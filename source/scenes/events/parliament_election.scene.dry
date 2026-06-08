@@ -1176,7 +1176,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Jaffna** (incl. Kilinochchi){!</td>!}
-            {!<td>!}**[+ jaffna_d_turnout +]%**{!</td>!}
+            {!<td>!}**[+ jaffna_electoral_d_turnout +]%**{!</td>!}
             {!<td>!}[+ jaffna_electoral_d_district_seats +]{!</td>!}
             {!<td>!}[+ jaffna_electoral_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ jaffna_electoral_d_unp_seats +]{!</td>!}
@@ -1198,7 +1198,7 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Vanni** (Mannar, Mullaitivu, Vavuniya){!</td>!}
-            {!<td>!}**[+ wanni_d_turnout +]%**{!</td>!}
+            {!<td>!}**[+ wanni_electoral_d_turnout +]%**{!</td>!}
             {!<td>!}[+ wanni_electoral_d_district_seats +]{!</td>!}
             {!<td>!}[+ wanni_electoral_d_slfp_seats +]{!</td>!}
             {!<td>!}[+ wanni_electoral_d_unp_seats +]{!</td>!}

@@ -835,7 +835,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Jaffna** (incl. Kilinochchi){!</td>!}
-            {!<td>!}**[+ jaffna_d_turnout +]%**{!</td>!}
+            {!<td>!}**[+ jaffna_electoral_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -856,7 +856,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Vanni** (Mannar, Mullaitivu, Vavuniya){!</td>!}
-            {!<td>!}**[+ wanni_d_turnout +]%**{!</td>!}
+            {!<td>!}**[+ wanni_electoral_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_tulf_votes +]%{!</td>!} ?]
