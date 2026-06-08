@@ -772,6 +772,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Colombo**{!</td>!}
+            {!<td>!}**[+ colombo_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ colombo_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -792,6 +793,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Gampaha**{!</td>!}
+            {!<td>!}**[+ gampaha_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ gampaha_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -812,6 +814,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kalutara**{!</td>!}
+            {!<td>!}**[+ kalutara_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ kalutara_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -832,6 +835,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Jaffna** (incl. Kilinochchi){!</td>!}
+            {!<td>!}**[+ jaffna_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ jaffna_electoral_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -852,6 +856,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Vanni** (Mannar, Mullaitivu, Vavuniya){!</td>!}
+            {!<td>!}**[+ wanni_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ wanni_electoral_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -872,6 +877,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Trincomalee**{!</td>!}
+            {!<td>!}**[+ trincomalee_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ trincomalee_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -892,6 +898,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Batticaloa**{!</td>!}
+            {!<td>!}**[+ batticaloa_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ batticaloa_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -912,6 +919,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ampara**{!</td>!}
+            {!<td>!}**[+ ampara_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ ampara_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -932,6 +940,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kandy**{!</td>!}
+            {!<td>!}**[+ kandy_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ kandy_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -952,6 +961,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matale**{!</td>!}
+            {!<td>!}**[+ matale_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ matale_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ matale_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -972,6 +982,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Nuwara Eliya**{!</td>!}
+            {!<td>!}**[+ nuwaraeliya_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ nuwaraeliya_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -992,6 +1003,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Galle**{!</td>!}
+            {!<td>!}**[+ galle_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ galle_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ galle_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1012,6 +1024,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Matara**{!</td>!}
+            {!<td>!}**[+ matara_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ matara_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ matara_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1032,6 +1045,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Hambantota**{!</td>!}
+            {!<td>!}**[+ hambantota_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ hambantota_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1052,6 +1066,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kurunegala**{!</td>!}
+            {!<td>!}**[+ kurunegala_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ kurunegala_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1072,6 +1087,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Puttalam**{!</td>!}
+            {!<td>!}**[+ puttalam_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ puttalam_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1092,6 +1108,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Anuradhapura**{!</td>!}
+            {!<td>!}**[+ anuradhapura_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ anuradhapura_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1112,6 +1129,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Polonnaruwa**{!</td>!}
+            {!<td>!}**[+ polonnaruwa_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ polonnaruwa_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1132,6 +1150,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Badulla**{!</td>!}
+            {!<td>!}**[+ badulla_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ badulla_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1152,6 +1171,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Monaragala**{!</td>!}
+            {!<td>!}**[+ monaragala_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ monaragala_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1172,6 +1192,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Ratnapura**{!</td>!}
+            {!<td>!}**[+ ratnapura_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ ratnapura_d_pres_tulf_votes +]%{!</td>!} ?]
@@ -1192,6 +1213,7 @@ go-to: pres_result_display
         {!</tr>!}
         {!<tr>!}
             {!<td>!}**Kegalle**{!</td>!}
+            {!<td>!}**[+ kegalle_d_turnout +]%**{!</td>!}
             [? if slfp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_slfp_votes +]%{!</td>!} ?]
             [? if unp_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_unp_votes +]%{!</td>!} ?]
             [? if tulf_pres_independent = 1 : {!<td>!}[+ kegalle_d_pres_tulf_votes +]%{!</td>!} ?]
