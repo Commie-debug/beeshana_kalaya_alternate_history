@@ -248,7 +248,7 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #d5bb12'> </div> !} TSF {!</td><td>!} 1 {!</td><td>!} 0.99% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #db4949'> </div> !} CLP {!</td><td>!} 1 {!</td><td>!} 0.68% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #db4949'> </div> !} CLP {!</td><td>!} 0 {!</td><td>!} 0.68% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 1 {!</td><td>!} 0.34% {!</td><td></td></tr>!}
 
