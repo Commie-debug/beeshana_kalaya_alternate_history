@@ -10,4 +10,4 @@ Inspiration for leader and people portrait tooltips: BrokenArrow, developer of R
 
 Basic code and inspiration for the parliamentary tooltips: Also BrokenArrow on discord
 
-Idea for and help conceptualising
+Idea for and help conceptualising voter district-wise voter turnout: Username, developer of the upcoming 1920s British Labour party mod
