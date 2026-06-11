@@ -517,7 +517,7 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color: #FDCC01'> </div> !} ACTC {!</td><td>!} 3 {!</td><td>!} 2.44% {!</td><td></td></tr>!}
 
-{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 0 {!</td><td>!} 0.93% {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #f98538'> </div> !} MEP {!</td><td>!} 1 {!</td><td>!} 2.39% {!</td><td></td></tr>!}
 
 {!<tr><td><div class="box" style='background-color: #193db1'> </div> !} NLF {!</td><td>!} 1 {!</td><td>!} 0.46% {!</td><td></td></tr>!}
 
