@@ -597,31 +597,31 @@ const tooltipList = [{
     },
     {
     searchString: "VLSSP",
-    explanationText: "Viplavakari Lanka Sama Samaja Party <br> Revolutionary Lanka Equal Society Party"
+    explanationText: "<img src=img/logos/VLSSP_Logo.png> Viplavakari Lanka Sama Samaja Party <br> Revolutionary Lanka Equal Society Party"
     },
     {
     searchString: "SPFC",
-    explanationText: " Socialist Peoples Front of Ceylon "
+    explanationText: "<img src=img/logos/SPFC_Logo.png> Socialist Peoples Front of Ceylon "
     },
     {
     searchString: "BBF",
-    explanationText: " Bosath Bandaranaike Front "
+    explanationText: "<img src=img/logos/BBF_Logo.png> Bosath Bandaranaike Front "
     },
     {
     searchString: "SLNF",
-    explanationText: " Sri Lanka National Front "
+    explanationText: "<img src=img/logos/SLNF_Logo.png> Sri Lanka National Front "
     },
     {
     searchString: "TSF",
-    explanationText: " Tamil Speaking Front "
+    explanationText: "<img src=img/logos/TSF_Logo.png> Tamil Speaking Front "
     },
     {
     searchString: "TRF",
-    explanationText: " Tamil Resistance Front "
+    explanationText: "<img src=img/logos/TRF_Logo.png> Tamil Resistance Front "
     },
     {
     searchString: "CLP",
-    explanationText: " Ceylon Labour Party "
+    explanationText: "<img src=img/logos/CLP_Logo.png> Ceylon Labour Party "
     },
     {
     searchString: "CPC",
@@ -633,7 +633,7 @@ const tooltipList = [{
     },
     {
     searchString: "BSP-BLP",
-    explanationText: "<img src=img/logos/CPSL_Logo.png> Bolshevik Sama Samaja Party<br> - <br>Bolshevik-Leninist Party of India, Ceylon & Burma "
+    explanationText: "<img src=img/logos/BSP_BLP_Logo.png> Bolshevik Sama Samaja Party<br> - <br>Bolshevik-Leninist Party of India, Ceylon & Burma "
     },
     {
     searchString: "Appointed",
