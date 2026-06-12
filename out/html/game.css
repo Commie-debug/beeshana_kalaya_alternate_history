@@ -574,6 +574,14 @@ img.inline-img.icon {
     color: #000;
 }
 
+#music-prev-btn:active img {
+    content: url("img/logos/BSP_BLP_Logo.png");
+}
+
+#music-skip-btn:active img {
+    content: url("img/logos/BSP_BLP_Logo.png");
+}
+
 .overlay {
     background: rgba(0,0,0,0.7);
     display: none;
