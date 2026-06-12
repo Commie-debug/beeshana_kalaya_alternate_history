@@ -575,11 +575,11 @@ img.inline-img.icon {
 }
 
 #music-prev-btn:active img {
-    content: url("img/logos/BSP_BLP_Logo.png");
+    content: url("img/logos/Previous_Song_Pressed.png");
 }
 
 #music-skip-btn:active img {
-    content: url("img/logos/BSP_BLP_Logo.png");
+    content: url("img/logos/Skip_Song_Pressed.png");
 }
 
 .overlay {
