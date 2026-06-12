@@ -369,12 +369,11 @@
         },
 
         setVolume: function(layerName, vol) {
-            var layersToSet = layerName === 'music' ? ['music', 'ambient', 'sfx'] : [layerName];
-            for (var i = 0; i < layersToSet.length; i++) {
-                var name = layersToSet[i];
-                layers[name].volume = vol;
-                if (layers[name].audio && !muted) {
-                    layers[name].audio.volume = vol;
+            var names = layerName === 'music' ? ['music', 'ambient', 'sfx'] : [layerName];
+            for (var i = 0; i < names.length; i++) {
+                layers[names[i]].volume = vol;
+                if (layers[names[i]].audio && !muted) {
+                    layers[names[i]].audio.volume = vol;
                 }
             }
         },
