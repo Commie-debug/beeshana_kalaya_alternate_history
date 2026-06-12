@@ -423,6 +423,26 @@
       }
   };
 
+  window.initVolumeKnob = function() {
+    var knob = document.getElementById('volume-knob');
+    if (!knob) return;
+    var val = 1.0, dragging = false, lastY = 0;
+
+    function update() {
+        knob.style.transform = 'rotate(' + (-130 + val * 260) + 'deg)';
+        ['music','ambient','sfx'].forEach(function(l) { window.AudioManager.setVolume(l, val); });
+    }
+
+    knob.onmousedown = function(e) { dragging = true; lastY = e.clientY; };
+    window.addEventListener('mousemove', function(e) {
+        if (!dragging) return;
+        val = Math.min(1, Math.max(0, val + (lastY - e.clientY)/100));
+        lastY = e.clientY; update();
+    });
+    window.addEventListener('mouseup', function() { dragging = false; });
+    update();
+};
+
   window.enableImages = function() {
       window.dendryUI.show_portraits = true;
       window.dendryUI.saveSettings();
@@ -1123,6 +1143,7 @@ window.updateSidebarRight = function() {
     });
     observer.observe(document.getElementById('content'), { childList: true, subtree: true });
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
+    window.initVolumeKnob();
   };
 
 }());
