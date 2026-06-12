@@ -523,12 +523,12 @@ img.inline-img.icon {
     background: var(--content-bg-color);
     border: 1px solid rgba(0,0,0,0.18);
     border-radius: 6px;
-    padding: 6px 8px;
+    padding: 3px 3px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.2);
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 6px;
+    gap: 3px;
 }
 
 #volume-slider {
