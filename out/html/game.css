@@ -536,6 +536,9 @@ img.inline-img.icon {
     width: 60px;
     accent-color: #000000;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    draggable: false;
 }
 
 #music-toggle-btn {
