@@ -424,24 +424,44 @@
   };
 
   window.initVolumeKnob = function() {
-    var knob = document.getElementById('volume-knob');
-    if (!knob) return;
-    var val = 1.0, dragging = false, lastY = 0;
+        var knob = document.getElementById('volume-knob');
+        if (!knob) return;
+        var val = 1.0, dragging = false;
+        var lastAngle = null;
 
-    function update() {
-        knob.style.transform = 'rotate(' + (-130 + val * 260) + 'deg)';
-        ['music','ambient','sfx'].forEach(function(l) { window.AudioManager.setVolume(l, val); });
-    }
+        function getAngle(e) {
+            var rect = knob.getBoundingClientRect();
+            var cx = rect.left + rect.width / 2;
+            var cy = rect.top + rect.height / 2;
+            return Math.atan2(e.clientY - cy, e.clientX - cx);
+        }
 
-    knob.onmousedown = function(e) { dragging = true; lastY = e.clientY; };
-    window.addEventListener('mousemove', function(e) {
-        if (!dragging) return;
-        val = Math.min(1, Math.max(0, val + (lastY - e.clientY)/100));
-        lastY = e.clientY; update();
-    });
-    window.addEventListener('mouseup', function() { dragging = false; });
-    update();
-};
+        function update() {
+            var deg = -130 + val * 260;
+            knob.style.transform = 'rotate(' + deg + 'deg)';
+            ['music','ambient','sfx'].forEach(function(l) { window.AudioManager.setVolume(l, val); });
+        }
+
+        knob.onmousedown = function(e) {
+            dragging = true;
+            lastAngle = getAngle(e);
+            e.preventDefault();
+        };
+
+        window.addEventListener('mousemove', function(e) {
+            if (!dragging) return;
+            var angle = getAngle(e);
+            var delta = angle - lastAngle;
+            if (delta > Math.PI) delta -= Math.PI * 2;
+            if (delta < -Math.PI) delta += Math.PI * 2;
+            lastAngle = angle;
+            val = Math.min(1, Math.max(0, val + delta / (Math.PI * 2)));
+            update();
+        });
+
+        window.addEventListener('mouseup', function() { dragging = false; });
+        update();
+    };
 
   window.enableImages = function() {
       window.dendryUI.show_portraits = true;
