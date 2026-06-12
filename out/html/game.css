@@ -531,10 +531,6 @@ img.inline-img.icon {
     gap: 6px;
 }
 
-#music-controls:hover {
-    background:rgb(214, 214, 214);
-}
-
 #volume-slider {
     height: 20px;
     width: 60px;
