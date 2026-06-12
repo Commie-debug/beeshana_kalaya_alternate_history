@@ -30,7 +30,7 @@
             <img src="img/logos/Skip_Song.png" width="40" height="40" alt="Previous Song">
         </button>
         <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1" 
-            oninput="window.AudioManager.setVolume('music', parseFloat(this.value))">
+            oninput="['music','ambient','sfx'].forEach(function(l){ window.AudioManager.setVolume(l, parseFloat(this.value)); }.bind(this))"
     </div>
     
     <div class="background" id="bg2">
