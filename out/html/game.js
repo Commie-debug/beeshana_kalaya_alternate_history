@@ -455,7 +455,7 @@
             if (delta > Math.PI) delta -= Math.PI * 2;
             if (delta < -Math.PI) delta += Math.PI * 2;
             lastAngle = angle;
-            val = Math.min(1, Math.max(0, val + delta / (Math.PI * 2)));
+            val = Math.min(1, Math.max(0, val + (delta / (Math.PI * 2)) * 2));
             update();
         });
 
