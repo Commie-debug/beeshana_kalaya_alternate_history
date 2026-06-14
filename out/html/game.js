@@ -328,8 +328,10 @@
                         clearInterval(fadeIn);
                     }
                 }, 50);
-                newAudio.onended = null; // nothing plays after
-            }, 400);
+                newAudio.onended = function() {
+                    layer.audio = null; // clear reference so resume doesn't replay it
+                };
+            }, 800);
         },
 
         addSong: function(layerName, path) {
