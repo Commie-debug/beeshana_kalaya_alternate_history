@@ -953,7 +953,7 @@ img {
     flex-direction: column;
     gap: 3px;
     padding: 6px 0;
-    color: var(--content-bg-color);
+    color: #bd6624;
     background-color: var(--content-bg-color);
     box-shadow: -2px 0 8px rgba(0,0,0,0.2);
     z-index: 50;
@@ -979,7 +979,7 @@ img {
     height: 100%;
     z-index: 49;
     overflow: hidden;
-    background-color: #3b1f0a;
+    background-color: var(--content-bg-color);
     overflow-y: auto;
     padding: 0em;
     box-shadow: -4px 0 16px rgba(0,0,0,0.4);
