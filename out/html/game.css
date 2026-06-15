@@ -953,7 +953,7 @@ img {
     flex-direction: column;
     gap: 3px;
     padding: 6px 0;
-    color: #bd6624;
+    color: var(--content-bg-color);
     background-color: var(--content-bg-color);
     box-shadow: -2px 0 8px rgba(0,0,0,0.2);
     z-index: 50;
