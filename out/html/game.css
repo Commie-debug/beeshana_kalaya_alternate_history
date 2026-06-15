@@ -946,7 +946,6 @@ img {
     display: flex;
     flex-direction: row;
     z-index: 50;
-    color: #bd5c24;
 }
 
 #right-panel-tab-strip {
