@@ -1075,6 +1075,22 @@ const tooltipList = [{
     searchString: "Cyprus",
     explanationText: "<img src=img/logos/Cyprus_Logo.png> Republic of Cyprus <br> Κυπριακή Δημοκρατία "
     },
+    {
+    searchString: "Bulgaria",
+    explanationText: "<img src=img/logos/Bulgaria_Logo.png> People's Republic of Bulgaria <br> Народна република България "
+    },
+    {
+    searchString: "Albania",
+    explanationText: "<img src=img/logos/Albania_Logo.png> People's Socialist Republic of Albania <br> Republika Popullore Socialiste e Shqipërisë "
+    },
+    {
+    searchString: "Yugoslavia",
+    explanationText: "<img src=img/logos/Albania_Logo.png> Socialist Federal Republic of Yugoslavia <br> Социјалистичка Федеративна Република Југославија <br> Социјалистичка Федеративна Република Југославија <br> Socialistična federativna republika Jugoslavija "
+    },
+    {
+    searchString: "Vietnam",
+    explanationText: "<img src=img/logos/Vietnam_Logo.png> Socialist Republic of Viet Nam <br> Cộng hòa Xã hội chủ nghĩa Việt Nam "
+    },
 
 
 
