@@ -639,6 +639,10 @@ const tooltipList = [{
     searchString: "Appointed",
     explanationText: "Appointed by the Governor-General "
     },
+    {
+    searchString: "Tamil Eelam",
+    explanationText: "<img src=img/logos/provinces/North_Eastern_Map.png> The proposed independent Tamil state in the north east of Sri Lanka. Both the TULF and the militants advocate for it. "
+    },
 
 
 
