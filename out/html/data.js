@@ -479,11 +479,11 @@ const tooltipList = [{
     },
     {
     searchString: "INC",
-    explanationText: "<img src=img/logos/INC_Logo.png> Indian National Congress"
+    explanationText: "<img src=img/logos/INC_Logo.png> Indian National Congress <br> भारतीय राष्ट्रीय कांग्रेस"
     },
     {
     searchString: "NF",
-    explanationText: "<img src=img/logos/India_NF_Logo.png> National Front (India)"
+    explanationText: "<img src=img/logos/India_NF_Logo.png> National Front (India) <br> राष्ट्रीय मोर्चा"
     },
     {
     searchString: "Sri Lanka Police",
