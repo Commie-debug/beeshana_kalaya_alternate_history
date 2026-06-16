@@ -283,6 +283,14 @@ const colourList = [{
         word: "Appointed",
         style: "color: #C5A059; font-weight: bold;"
     },
+    {
+        word: "AIADMK",
+        style: "color: #00FF00; font-weight: bold;"
+    },
+    {
+        word: "DMK",
+        style: "color: #FF0000; font-weight: bold;"
+    },
 ];
 
 const tooltipList = [{
@@ -364,6 +372,10 @@ const tooltipList = [{
     {
     searchString: "Vedda",
     explanationText: "<img src=img/logos/vedda.jpg> Vedda's"
+    },
+    {
+    searchString: "Tamil Eelam",
+    explanationText: "<img src=img/logos/provinces/North_Eastern_Map.png> The proposed independent Tamil state in the north east of Sri Lanka. Both the TULF and the militants advocate for it. "
     },
     {
     searchString: "SLFP",
@@ -577,6 +589,17 @@ const tooltipList = [{
     searchString: "Naxalite",
     explanationText: "<img src=img/logos/Naxal_Logo.png> Naxalite-Maoist(Indian Maoist insurgents)"
     },
+    {
+    searchString: "DMK",
+    explanationText: "<img src=img/logos/DMK_Logo.png> Dravida Munnetra Kazhagam <br> திராவிட முன்னேற்றக் கழகம்"
+    },
+    {
+    searchString: "AIADMK",
+    explanationText: "<img src=img/logos/AIADMK_Logo.png> All India Anna Dravida Munnetra Kazhagam <br> அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்"
+    },
+
+
+
 
     //historical parties for election simulation 
     {
@@ -638,10 +661,6 @@ const tooltipList = [{
     {
     searchString: "Appointed",
     explanationText: "Appointed by the Governor-General "
-    },
-    {
-    searchString: "Tamil Eelam",
-    explanationText: "<img src=img/logos/provinces/North_Eastern_Map.png> The proposed independent Tamil state in the north east of Sri Lanka. Both the TULF and the militants advocate for it. "
     },
 
 

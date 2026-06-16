@@ -46,7 +46,7 @@ on-arrival: {!
 
 {!<img src="img/map_2.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
-**Update: Iraq**
+**Update: Finland**
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
@@ -1213,9 +1213,15 @@ Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
 [? if ipkf_formed = 1 : IPKF: [+ ipkf_formed : gstatus +], Strenght: [+ ipkf_size +] thousand troops, Morale: [+ ipkf_morale_2 : loyalty +] ?]
 
+Indian Prime Minister: [+ india_pm +]
+
 Indian ruling party: [+ india_government +]
 
-Indian Prime Minister: [+ india_pm +]
+Tamil Nadu Chief Minister: [+ tamil_nadu_leader +]
+
+Tamil Nadu State ruling party: [+ tamil_nadu_government +]
+
+Tamil Nadu State support for Tamil Militants: [+ tamil_nadu_tamil_support +]
 
 
 @party
