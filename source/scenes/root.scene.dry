@@ -777,7 +777,7 @@ Q.india_pm = "Indira Gandhi";
 //tamil nadu state government
 //Other option is the DMK
 Q.tamil_nadu_government = 'AIADMK';
-Q.tamil_nadu_leader = 'M. G. Ramachandran';
+Q.tamil_nadu_leader = 'M G Ramachandran';
 Q.tamil_nadu_tamil_support = 0.2;
 
 //District data

@@ -1246,7 +1246,30 @@ const tooltipList = [{
     searchString: "Ossie Abeygunasekera",
     explanationText: "<img src=img/portraits/Abeygunasekera_Ossie.jpg> Kahangama Withanage Oswin Nandimithra Abeyagoonasekera"
     },
+    {
+    searchString: "Rajiv Gandhi",
+    explanationText: "<img src=img/portraits/Gandhi_Rajiv.jpg> Rajiv Ratna Gandhi"
+    },
+    {
+    searchString: "Indira Gandhi",
+    explanationText: "<img src=img/portraits/Gandhi_Indira.jpg> Indira Priyadarshini Gandhi"
+    },
+    {
+    searchString: "VP Singh",
+    explanationText: "<img src=img/portraits/Singh_VP.jpg> Vishwanath Pratap Singh"
+    },
+    {
+    searchString: "M G Ramachandran",
+    explanationText: "<img src=img/portraits/Ramachandran_MG.jpg> Maruthur Gopalan Ramachandran"
+    },
+    {
+    searchString: "VN Janaki",
+    explanationText: "<img src=img/portraits/Janaki_VN.jpg> Vaikom Narayani Janaki Ramachandran"
+    },
+    {
+    searchString: "M Karunanidhi",
+    explanationText: "<img src=img/portraits/Karunanidhi_M.jpg> Muthuvel Karunanidhi"
+    },
 ];
-
 
 
