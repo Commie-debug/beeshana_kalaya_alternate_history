@@ -1174,6 +1174,9 @@ on-arrival: {!
 if (Q.india_tamil_support) {
     Q.india_tamil_support_2 = Q.india_tamil_support.toFixed(1);
 }
+if (Q.tamil_nadu_tamil_support) {
+    Q.tamil_nadu_tamil_support_2 = Q.tamil_nadu_tamil_support.toFixed(1);
+}
 if (Q.ipkf_morale) {
     Q.ipkf_morale_2 = Q.ipkf_morale.toFixed(1);
 }
@@ -1221,7 +1224,7 @@ Tamil Nadu Chief Minister: [+ tamil_nadu_leader +]
 
 Tamil Nadu State ruling party: [+ tamil_nadu_government +]
 
-Tamil Nadu State support for Tamil Militants: [+ tamil_nadu_tamil_support +]
+Tamil Nadu State support for Tamil Militants: [+ tamil_nadu_tamil_support_2 : militancy +]
 
 
 @party
