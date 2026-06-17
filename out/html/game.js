@@ -104,7 +104,8 @@
                 'music/basic/Vimukthi_Gee.mp3',
                 'music/basic/SLFP_Song.mp3',
                 'music/basic/Bandaranaike_song.mp3',
-                'music/basic/Siu_Digin_Galana_Andure.mp3'
+                'music/basic/Siu_Digin_Galana_Andure.mp3',
+                'out/html/music/basic/Epa_Gee_Nada_Denna.mp3'
             ],
             currentIndex: 0,
             audio: null,
