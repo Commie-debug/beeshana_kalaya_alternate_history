@@ -1221,9 +1221,9 @@ Indian ruling party: [+ india_government +]
 
 Tamil Nadu Chief Minister: [+ tamil_nadu_leader +]
 
-Tamil Nadu State ruling party: [+ tamil_nadu_government +]
+Tamil Nadu ruling party: [+ tamil_nadu_government +]
 
-Tamil Nadu State support for Tamil Militants: [+ tamil_nadu_tamil_support_2 : militancy +]
+Tamil Nadu support for Tamil Militants: [+ tamil_nadu_tamil_support_2 : militancy +]
 
 
 @party
