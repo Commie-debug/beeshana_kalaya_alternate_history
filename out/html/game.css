@@ -217,7 +217,7 @@ img.inline-img.icon {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin-left: 600px;
+  margin-left: 700px;
   max-width: 700px;
 }
 
@@ -245,7 +245,7 @@ img.inline-img.icon {
 }
 .tools.left {
   float: left;
-  left: 4em;
+  left: 5em;
   position: relative;
   overflow: visible;
   box-shadow: -4px 4px 16px rgba(0,0,0,0.35), 2px 2px 8px rgba(0,0,0,0.15);
