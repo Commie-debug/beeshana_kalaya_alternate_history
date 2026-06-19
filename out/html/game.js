@@ -618,7 +618,7 @@
         if (value == 9) return '<span style="color: #20B2AA;">Muslim Minority Politics</span>';
         if (value == 10) return '<span style="color: #FF69B4;">Social Democracy</span>';
         if (value == 11) return '<span style="color: #FFA500;">Tamil Nationalism</span>';
-        if (value == 12) return '<span style="color: #FF6347;">Left Wing Populism</span>';
+        if (value == 12) return '<span style="color: #ff4747;">Left Wing Populism</span>';
         if (value == 13) return '<span style="color: #228B22;">Conservatism</span>';
         if (value == 14) return '<span style="color: #32CD32;">Neo Liberalism</span>';
         if (value == 15) return '<span style="color: #800080;">Anti-Imperialism</span>';
