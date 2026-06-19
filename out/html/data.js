@@ -1108,7 +1108,7 @@ const tooltipList = [{
     },
     {
     searchString: "Yugoslavia",
-    explanationText: "<img src=img/logos/Albania_Logo.png> Socialist Federal Republic of Yugoslavia <br> Социјалистичка Федеративна Република Југославија <br> Социјалистичка Федеративна Република Југославија <br> Socialistična federativna republika Jugoslavija "
+    explanationText: "<img src=img/logos/Yugoslavia_Logo.png> Socialist Federal Republic of Yugoslavia <br> Социјалистичка Федеративна Република Југославија <br> Социјалистичка Федеративна Република Југославија <br> Socialistična federativna republika Jugoslavija "
     },
     {
     searchString: "Vietnam",
