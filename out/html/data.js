@@ -1114,6 +1114,10 @@ const tooltipList = [{
     searchString: "Vietnam",
     explanationText: "<img src=img/logos/Vietnam_Logo.png> Socialist Republic of Viet Nam <br> Cộng hòa Xã hội chủ nghĩa Việt Nam "
     },
+    {
+    searchString: "FMLN",
+    explanationText: "<img src=img/logos/FMLN_Logo.png> Farabundo Martí National Liberation Front <br> Frente Farabundo Martí para la Liberación Nacional "
+    },
 
 
 
