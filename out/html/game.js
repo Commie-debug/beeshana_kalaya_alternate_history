@@ -364,6 +364,16 @@
             if (layer.audio) layer.audio.play().catch(function() {});
         },
 
+        stop: function(layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) {
+                layer.audio.onended = null;
+                layer.audio.pause();
+                layer.audio = null;
+            }
+        },
+
         setVolume: function(layerName, vol) {
             var names = layerName === 'music' ? ['music', 'ambient', 'sfx'] : [layerName];
             for (var i = 0; i < names.length; i++) {
@@ -493,7 +503,7 @@
     overlay.style.opacity = '1';
     overlay.style.pointerEvents = 'all';
 
-    window.AudioManager.playSongOnce('music/basic/some_song.mp3', 'music');
+    window.AudioManager.playSongOnce('special_music/Tutorial_Spook.mp3', 'music');
 
     var originalState = {
         rightPanelOpen: document.getElementById('page').classList.contains('right-panel-open'),
@@ -542,6 +552,11 @@
         var el = document.querySelector(selector);
         positionSpotlightOnEl(el);
         setTimeout(callback, 800);
+    }
+
+    function resizeSpotlight(newSize) {
+        spotlight.style.width = newSize + 'px';
+        spotlight.style.height = newSize + 'px';
     }
 
     function showText(text, duration, callback) {
@@ -656,16 +671,17 @@
         },
         function(next) {
             setTimeout(function(){
-                shiftSpotlight(20, 0); 
+                shiftSpotlight(200, 0); 
                 showText('Government Affairs work similarly, but we won\'t take one now.', 4000, function() { safeNext(next); });
             },600);
         },
         function(next) {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            shiftSpotlight(-100, 0); 
             setTimeout(function() {
-                spotlightOnSelector('#advisors-panel', function() {
-                    showText('Advisors can be used periodically for special actions.', 4000, next);
-                });
+                resizeSpotlight(400);
+                showText('Advisors can be used periodically for special actions.', 4000, next);
+
             }, 800);
             window.changeTab('status', 'main_tab');
         }
@@ -685,6 +701,7 @@
         if (tutorialEnded) return;
         tutorialEnded = true;
         window.tutorialActive = false;
+        window.AudioManager.stop('music');
         window.scrollTo({ top: originalState.scrollY, behavior: 'smooth' });
         spotlight.style.width = '0px';
         spotlight.style.height = '0px';
