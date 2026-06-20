@@ -553,6 +553,10 @@ img.inline-img.icon {
     opacity: 1;
 }
 
+body.tutorial-no-scroll {
+    overflow: hidden;
+}
+
 #music-controls {
     position: absolute;
     top: 10px;

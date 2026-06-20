@@ -485,6 +485,7 @@
 
   window.startTutorial = function() {
     window.tutorialActive = true;
+    document.body.classList.add('tutorial-no-scroll');
     var overlay = document.getElementById('tutorial-overlay');
     var spotlight = document.getElementById('tutorial-spotlight');
     var textBox = document.getElementById('tutorial-text-box');
@@ -518,6 +519,13 @@
             }
         }
         return null;
+    }
+
+    function shiftSpotlight(dx, dy) {
+        var currentLeft = parseFloat(spotlight.style.left) || 0;
+        var currentTop = parseFloat(spotlight.style.top) || 0;
+        spotlight.style.left = (currentLeft + dx) + 'px';
+        spotlight.style.top = (currentTop + dy) + 'px';
     }
 
     function positionSpotlightOnEl(el) {
@@ -554,14 +562,14 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
             setTimeout(function() {
                 spotlightOnSelector('#music-controls', function() {
-                    showText('This is the music control panel.', 4000, next);
+                    showText('This is the music control panel. Use it to rewind, pause, skip or by using the knob to change the volume of music.', 4000, next);
                 });
             }, 600);
         },
         function(next) {
             window.toggleRightPanel();
             spotlightOnSelector('#right-panel', function() {
-                showText('The right panel shows map.', 4000, function() {
+                showText('The right panel shows the map of Sri Lanka split among districts. You can click a district and see details on it.', 4000, function() {
                     window.toggleRightPanel();
                     setTimeout(next, 800);
                 });
@@ -570,7 +578,7 @@
         function(next) {
             window.changeTab('status.politics', 'politics_tab');
             spotlightOnSelector('#politics_tab', function() {
-                showText('This tab shows politics.', 4000, next);
+                showText('This tab shows the parties relationship with other parties, current coalitions and party ideologies.', 4000, next);
             });
         },
         function(next) {
@@ -620,7 +628,6 @@
             spotlightOnSelector('#news_tab', function() {
                 showText('This tab shows you the "goings on" in the rest of the world, sometimes these events may even effect Sri Lanka.', 4000, next);
             });
-            window.changeTab('status', 'main_tab');
         },
         function(next) {
             var btn = findByText('#content a', 'Begin (normal difficulty)');
@@ -635,8 +642,7 @@
             positionSpotlightOnEl(skipBtn);
             setTimeout(function() {
                 if (skipBtn) skipBtn.click();
-                showText('We will also skip the intro, though it is recomended for new playthroughs.', 3000, function() { safeNext(next); });
-                safeNext(next);
+                showText('We will also skip the intro, though it is recomended for new playthroughs.', 4000, function() { safeNext(next); });
             }, 800);
         },
         function(next) {
@@ -649,13 +655,10 @@
             }, 600);
         },
         function(next) {
-            setTimeout(function() {
-                var card = findFirstCardInDeck('Government Affairs');
-                positionSpotlightOnEl(card);
-                spotlightOnSelector('.deck', function() {
-                    showText('This deck\'s cards deal with government matters, the cards and choices are reduced when you are not in power.', 4000, function() { safeNext(next); });
-                });
-            }, 600);
+            setTimeout(function(){
+                shiftSpotlight(20, 0); 
+                showText('Government Affairs work similarly, but we won\'t take one now.', 4000, function() { safeNext(next); });
+            },600);
         },
         function(next) {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
@@ -664,6 +667,7 @@
                     showText('Advisors can be used periodically for special actions.', 4000, next);
                 });
             }, 800);
+            window.changeTab('status', 'main_tab');
         }
     ];
 
@@ -689,6 +693,7 @@
             overlay.style.opacity = '0';
             overlay.style.pointerEvents = 'none';
             setTimeout(function() {
+                document.body.classList.remove('tutorial-no-scroll');
                 overlay.style.display = 'none';
                 textBox.classList.remove('visible');
             }, 600);
