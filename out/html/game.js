@@ -591,7 +591,7 @@
             });
         },
         function(next) {
-            window.changeTab('status', 'main_tabb');
+            window.changeTab('status', 'main_tab');
             spotlightOnSelector('#main_tab', function() {
                 showText('This tab shows you the date, party resources, dissent and important details on the government.', 4000, next);
             });
