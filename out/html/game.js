@@ -647,7 +647,7 @@
         function(next) {
             window.changeTab('status.news', 'news_tab');
             spotlightOnSelector('#news_tab', function() {
-                showText('This tab shows you the "goings on" in the rest of the world, sometimes these events may even effect Sri Lanka.', 4000, next);
+                showText('This tab shows you the "goings on" in the rest of the world, sometimes these events may even effect Sri Lanka.', 4200, next);
             });
         },
         function(next) {
@@ -655,7 +655,7 @@
             positionSpotlightOnEl(btn);
             setTimeout(function() {
                 if (btn) btn.click();
-                showText('Let\'s pick normal difficulty.', 3000, function() { safeNext(next); });
+                showText('Let\'s pick normal difficulty.', 2000, function() { safeNext(next); });
             }, 800);
         },
         function(next) {
@@ -671,19 +671,19 @@
                 var card = findFirstCardInDeck('Party Affairs');
                 positionSpotlightOnEl(card);
                 setTimeout(function() {
-                    showText('This deck\'s cards deal with internal and external party matters such as dues, relationships to other parties, etc.', 4000, function() { safeNext(next); });
+                    showText('This deck\'s cards deal with internal and external party matters such as dues, relationships to other parties, etc.', 4200, function() { safeNext(next); });
                 }, 800);
             }, 600);
         },
         function(next) {
             setTimeout(function(){
                 shiftSpotlight(160, 0); 
-                showText('Government Affairs work similarly, but we won\'t take one now.', 4000, function() { safeNext(next); });
+                showText('Government Affairs work similarly, its cards deal with government policies and actions. When the party is not in government, the deck is limited', 4200, function() { safeNext(next); });
             },600);
         },
         function(next) {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            shiftSpotlight(-60, 0); 
+            shiftSpotlight(-10, 0); 
             setTimeout(function() {
                 resizeSpotlight(500);
                 showText('Advisors can be used periodically for special actions that are both powerfull, and crucially do not use up your time. Remember that every advisor has an affiliation to a faction', 5000, next);
@@ -711,7 +711,7 @@
         window.scrollTo({ top: originalState.scrollY, behavior: 'smooth' });
         spotlight.style.width = '0px';
         spotlight.style.height = '0px';
-        showText('Tutorial complete,♡♡♡ i hope you enjoy the game :> ♡♡♡', 2500, function() {
+        showText('Tutorial completed, ♡♡♡ i hope you enjoy this game :> ♡♡♡', 3000, function() {
             window.dendryUI.dendryEngine.goToScene('root.start');
             overlay.style.opacity = '0';
             overlay.style.pointerEvents = 'none';
