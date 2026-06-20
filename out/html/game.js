@@ -639,28 +639,6 @@
     }
 };
 
-    var i = 0;
-    function runStep() {
-        if (i >= steps.length) { endTutorial(); return; }
-        steps[i](function() {
-            i++;
-            runStep();
-        });
-    }
-    setTimeout(runStep, 1000);
-
-    function endTutorial() {
-        if (!originalState.rightPanelOpen) window.toggleRightPanel();
-        window.changeTab(originalState.activeTab, 'main_tab');
-        window.dendryUI.dendryEngine.goToScene('skip_intro'); // or whatever scene shows the difficulty choice
-
-        overlay.style.opacity = '0';
-        setTimeout(function() {
-            overlay.style.display = 'none';
-        }, 600);
-    }
-};
-
   // populates the checkboxes in the options view
   window.populateOptions = function() {
     var disable_bg = window.dendryUI.disable_bg;
