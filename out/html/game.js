@@ -683,7 +683,7 @@
         },
         function(next) {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            shiftSpotlight(-10, 0); 
+            shiftSpotlight(-100, 0); 
             setTimeout(function() {
                 resizeSpotlight(500);
                 showText('Advisors can be used periodically for special actions that are both powerfull, and crucially do not use up your time. Remember that every advisor has an affiliation to a faction', 5000, next);
