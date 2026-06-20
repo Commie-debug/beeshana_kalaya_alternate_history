@@ -492,7 +492,7 @@
     overlay.style.opacity = '1';
     overlay.style.pointerEvents = 'all';
 
-    window.AudioManager.playSong('music/special/creepy_intro.mp3');
+    window.AudioManager.playSongOnce('music/basic/some_song.mp3', 'music');
 
     var originalState = {
         rightPanelOpen: document.getElementById('page').classList.contains('right-panel-open'),
@@ -574,6 +574,57 @@
             });
         },
         function(next) {
+            window.changeTab('status.paramilitaries', 'paramilitary_tab');
+            spotlightOnSelector('#paramilitary_tab', function() {
+                showText('This tab shows the paramilitaries, tamil rebels and the offical security forces.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.tamil', 'tamil_tab');
+            spotlightOnSelector('#tamil_tab', function() {
+                showText('This tab shows everything relavent to the Tamil unrest in the northeast.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.economy', 'economy_tab');
+            spotlightOnSelector('#economy_tab', function() {
+                showText('This tab shows statistics on the economy and the sectors of Sri Lanka\'s economy.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.interior', 'interior_tab');
+            spotlightOnSelector('#interior_tab', function() {
+                showText('This tab shows gives information on current policies done by the government as well as the problems certain groups have.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.foreign', 'foreign_tab');
+            spotlightOnSelector('#foreign_tab', function() {
+                showText('This tab shows Sri Lanka\'s current standing with other nations, in addition to an emphasis on India and its Tamil Nadu state.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.polls', 'poll_tab');
+            spotlightOnSelector('#poll_tab', function() {
+                showText('This tab shows the current level\'s of public support for parties based on both ethnicity and class.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.party', 'party_tab');
+            spotlightOnSelector('#party_tab', function() {
+                showText('This tab shows the internal state of the party, the SLFP including leadership and the factional conflict.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.news', 'news_tab');
+            spotlightOnSelector('#news_tab', function() {
+                showText('This tab shows you the "goings on" in the rest of the world, sometimes these events may even effect our island nation.', 4000, next);
+            });
+        },
+        function(next){
+            window.changeTab('status', 'main_tab');
+        }
+        function(next) {
             var btn = findByText('#content a', 'Begin (normal difficulty)');
             positionSpotlightOnEl(btn);
             setTimeout(function() {
@@ -582,30 +633,29 @@
             }, 800);
         },
         function(next) {
+            var skipBtn = findByText('#content a', 'Yes');
+            positionSpotlightOnEl(skipBtn);
             setTimeout(function() {
-                var skipBtn = findByText('#content a', 'Yes');
-                positionSpotlightOnEl(skipBtn);
-                setTimeout(function() {
-                    if (skipBtn) skipBtn.click();
-                    showText('And skip the intro.', 3000, function() { safeNext(next); });
-                    safeNext(next);
-                }, 800);
-            }, 600);
+                if (skipBtn) skipBtn.click();
+                showText('We will also skip the intro, though it is recomended for new playthroughs.', 3000, function() { safeNext(next); });
+                safeNext(next);
+            }, 800);
         },
         function(next) {
             setTimeout(function() {
                 var card = findFirstCardInDeck('Party Affairs');
                 positionSpotlightOnEl(card);
                 setTimeout(function() {
-                    if (card) card.click();
-                    showText('Cards.', 4000, function() { safeNext(next); });
+                    showText('This deck\'s cards deal with internal and external party matters such as dues, relationships to other parties, etc.', 4000, function() { safeNext(next); });
                 }, 800);
             }, 600);
         },
         function(next) {
             setTimeout(function() {
+                var card = findFirstCardInDeck('Government Affairs');
+                positionSpotlightOnEl(card);
                 spotlightOnSelector('.deck', function() {
-                    showText('Government Affairs work similarly, but we won\'t take one now.', 4000, function() { safeNext(next); });
+                    showText('This deck\'s cards deal with government matters, the cards and choices are reduced when you are not in power.', 4000, function() { safeNext(next); });
                 });
             }, 600);
         },
@@ -636,7 +686,7 @@
         window.scrollTo({ top: originalState.scrollY, behavior: 'smooth' });
         spotlight.style.width = '0px';
         spotlight.style.height = '0px';
-        showText('Tutorial complete.', 2500, function() {
+        showText('Tutorial complete,♡♡♡ i hope you enjoy the game :> ♡♡♡', 2500, function() {
             window.dendryUI.dendryEngine.goToScene('root.start');
             overlay.style.opacity = '0';
             overlay.style.pointerEvents = 'none';
