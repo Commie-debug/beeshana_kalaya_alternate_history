@@ -480,6 +480,62 @@
       window.dendryUI.saveSettings();
   };
 
+  //intro sequence code
+  window.startTutorial = function() {
+    var overlay = document.getElementById('tutorial-overlay');
+    var spotlight = document.getElementById('tutorial-spotlight');
+    var textBox = document.getElementById('tutorial-text-box');
+    overlay.style.display = 'block';
+
+    window.AudioManager.playSong('music/special/creepy_intro.mp3');
+
+    var steps = [
+        { selector: '#music-controls', text: 'This is the music control panel. You can pause, skip, and adjust volume here.' },
+        { selector: '#stats-link', text: 'The Library contains historical information about Sri Lanka.' },
+        { selector: '#stats_sidebar', text: 'This sidebar shows your current political status.' },
+        { selector: '#right-panel', text: 'The right panel shows national news and information.' }
+    ];
+
+    var stepIndex = 0;
+
+    function showStep() {
+        if (stepIndex >= steps.length) {
+            endTutorial();
+            return;
+        }
+        var step = steps[stepIndex];
+        var el = document.querySelector(step.selector);
+        if (!el) { stepIndex++; showStep(); return; }
+        var rect = el.getBoundingClientRect();
+        var size = Math.max(rect.width, rect.height) + 40;
+        spotlight.style.width = size + 'px';
+        spotlight.style.height = size + 'px';
+        spotlight.style.left = (rect.left + rect.width/2 - size/2) + 'px';
+        spotlight.style.top = (rect.top + rect.height/2 - size/2) + 'px';
+
+        textBox.textContent = step.text;
+        textBox.classList.add('visible');
+
+        setTimeout(function() {
+            textBox.classList.remove('visible');
+            setTimeout(function() {
+                stepIndex++;
+                showStep();
+            }, 600);
+        }, 4000);
+    }
+
+    setTimeout(showStep, 1000);
+
+    function endTutorial() {
+        overlay.style.opacity = '0';
+        setTimeout(function() {
+            overlay.style.display = 'none';
+            overlay.style.opacity = '1';
+        }, 600);
+    }
+};
+
   // populates the checkboxes in the options view
   window.populateOptions = function() {
     var disable_bg = window.dendryUI.disable_bg;

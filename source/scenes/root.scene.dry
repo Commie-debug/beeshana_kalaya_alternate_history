@@ -11,6 +11,7 @@ go-to: start_menu_2
 @start_menu_2
 
 - @start: Start game
+- @tutorial: Tutorial Sequence
 - @election_simulation: Election simulation
 - @credits: Credits
 - @game_over.achievements
@@ -1919,3 +1920,8 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 = Week [+ week +] [+ month : month +] [+ year +] 
 
 The situation is bleak, the UNP continues to strenghten its grip. There are upcoming local elections, it may be benefical to make a stand there. 
+
+
+@tutorial
+on-arrival: {! window.startTutorial(); !}
+go-to: start_menu_2
