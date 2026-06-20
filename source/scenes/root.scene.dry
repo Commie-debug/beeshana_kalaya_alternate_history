@@ -1924,4 +1924,4 @@ The situation is bleak, the UNP continues to strenghten its grip. There are upco
 
 @tutorial
 on-arrival: {! window.startTutorial(); !}
-go-to: start_menu_2
+go-to: start
