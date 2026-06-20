@@ -487,20 +487,20 @@
     var textBox = document.getElementById('tutorial-text-box');
     overlay.style.display = 'block';
     overlay.style.opacity = '1';
+    overlay.style.pointerEvents = 'all';
 
     window.AudioManager.playSong('music/special/creepy_intro.mp3');
 
     var originalState = {
         rightPanelOpen: document.getElementById('page').classList.contains('right-panel-open'),
-        activeTab: window.statusTab
+        activeTab: window.statusTab,
+        scrollY: window.scrollY
     };
 
     function findByText(selector, text) {
         var els = document.querySelectorAll(selector);
         for (var i = 0; i < els.length; i++) {
-            if (els[i].textContent.indexOf(text) !== -1) {
-                return els[i];
-            }
+            if (els[i].textContent.indexOf(text) !== -1) return els[i];
         }
         return null;
     }
@@ -516,7 +516,7 @@
     }
 
     function positionSpotlightOnEl(el) {
-        if (!el) return;
+        if (!el) { spotlight.style.width = '0px'; spotlight.style.height = '0px'; return; }
         var rect = el.getBoundingClientRect();
         var size = Math.max(rect.width, rect.height) + 40;
         spotlight.style.width = size + 'px';
@@ -540,26 +540,32 @@
         }, duration);
     }
 
+    function safeNext(next) {
+        setTimeout(next, 100);
+    }
+
     var steps = [
         function(next) {
-            spotlightOnSelector('#music-controls', function() {
-                showText('This is the music control panel. Use it to skip, rewind or pause all music and sound. Use the knob to change the volume as well.', 4000, next);
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(function() {
+                spotlightOnSelector('#music-controls', function() {
+                    showText('This is the music control panel.', 4000, next);
+                });
+            }, 600);
         },
         function(next) {
             window.toggleRightPanel();
             spotlightOnSelector('#right-panel', function() {
-                showText('The right panel shows Sri Lanka and it\'s composite districts, click on one to view the districts details.', 4000, function() {
-                    window.toggleRightPanel(); //push it back in
+                showText('The right panel shows national news.', 4000, function() {
+                    window.toggleRightPanel();
                     setTimeout(next, 800);
                 });
             });
         },
-        //one for each tab button
         function(next) {
             window.changeTab('status.politics', 'politics_tab');
             spotlightOnSelector('#politics_tab', function() {
-                showText('This tab shows the parties relationship with other parties as well as coalitions and ideologies.', 4000, next);
+                showText('This tab shows political tracking.', 4000, next);
             });
         },
         function(next) {
@@ -567,7 +573,7 @@
             positionSpotlightOnEl(btn);
             setTimeout(function() {
                 if (btn) btn.click();
-                showText('Let\'s pick normal difficulty. We will also skip the intro', 3000, next);
+                showText('Let\'s pick normal difficulty.', 3000, function() { safeNext(next); });
             }, 800);
         },
         function(next) {
@@ -576,9 +582,9 @@
                 positionSpotlightOnEl(skipBtn);
                 setTimeout(function() {
                     if (skipBtn) skipBtn.click();
-                    next();
+                    safeNext(next);
                 }, 800);
-            }, 500);
+            }, 600);
         },
         function(next) {
             setTimeout(function() {
@@ -586,21 +592,52 @@
                 positionSpotlightOnEl(card);
                 setTimeout(function() {
                     if (card) card.click();
-                    showText('Cards represent a choice for you the party. You can use it, return it to your hand or skip it.', 4000, next);
+                    showText('Cards represent advisor actions. Taking one uses it up.', 4000, function() { safeNext(next); });
                 }, 800);
-            }, 500);
+            }, 600);
         },
         function(next) {
-            spotlightOnSelector('.deck', function() {
-                showText('Government Affairs work similarly, but we won\'t take one now.', 4000, next);
-            });
+            setTimeout(function() {
+                spotlightOnSelector('.deck', function() {
+                    showText('Government Affairs work similarly, but we won\'t take one now.', 4000, function() { safeNext(next); });
+                });
+            }, 600);
         },
         function(next) {
-            spotlightOnSelector('#advisors-panel', function() {
-                showText('Advisors can also be used periodically for actions that are both powerfull and which wont use your time. But remember that each of them has an affilition to a faction.', 4000, next);
-            });
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            setTimeout(function() {
+                spotlightOnSelector('#advisors-panel', function() {
+                    showText('Advisors can be used periodically for special actions.', 4000, next);
+                });
+            }, 800);
         }
     ];
+
+    var i = 0;
+    function runStep() {
+        if (i >= steps.length) { endTutorial(); return; }
+        steps[i](function() {
+            i++;
+            runStep();
+        });
+    }
+    setTimeout(runStep, 1000);
+
+    function endTutorial() {
+        window.scrollTo({ top: originalState.scrollY, behavior: 'smooth' });
+        spotlight.style.width = '0px';
+        spotlight.style.height = '0px';
+        showText('Tutorial complete.', 2500, function() {
+            window.dendryUI.dendryEngine.goToScene('skip_intro');
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+            setTimeout(function() {
+                overlay.style.display = 'none';
+                textBox.classList.remove('visible');
+            }, 600);
+        });
+    }
+};
 
     var i = 0;
     function runStep() {

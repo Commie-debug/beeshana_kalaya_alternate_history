@@ -521,7 +521,7 @@ img.inline-img.icon {
     inset: 0;
     z-index: 998;
     background: rgba(0,0,0,0.5);
-    pointer-events: none;
+    pointer-events: all;
     transition: opacity 0.6s ease;
 }
 
