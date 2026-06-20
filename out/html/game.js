@@ -556,7 +556,7 @@
         function(next) {
             window.toggleRightPanel();
             spotlightOnSelector('#right-panel', function() {
-                showText('The right panel shows national news.', 4000, function() {
+                showText('The right panel shows map.', 4000, function() {
                     window.toggleRightPanel();
                     setTimeout(next, 800);
                 });
@@ -565,7 +565,7 @@
         function(next) {
             window.changeTab('status.politics', 'politics_tab');
             spotlightOnSelector('#politics_tab', function() {
-                showText('This tab shows political tracking.', 4000, next);
+                showText('This tab shows politics.', 4000, next);
             });
         },
         function(next) {
@@ -582,6 +582,7 @@
                 positionSpotlightOnEl(skipBtn);
                 setTimeout(function() {
                     if (skipBtn) skipBtn.click();
+                    showText('And skip the intro.', 3000, function() { safeNext(next); });
                     safeNext(next);
                 }, 800);
             }, 600);
@@ -628,7 +629,7 @@
         spotlight.style.width = '0px';
         spotlight.style.height = '0px';
         showText('Tutorial complete.', 2500, function() {
-            window.dendryUI.dendryEngine.goToScene('skip_intro');
+            window.dendryUI.dendryEngine.goToScene('start');
             overlay.style.opacity = '0';
             overlay.style.pointerEvents = 'none';
             setTimeout(function() {
