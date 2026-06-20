@@ -499,6 +499,8 @@
         activeTab: window.statusTab,
         scrollY: window.scrollY
     };
+    
+    var tutorialEnded = false;
 
     function findByText(selector, text) {
         var els = document.querySelectorAll(selector);
