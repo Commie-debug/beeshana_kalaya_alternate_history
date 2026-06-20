@@ -591,6 +591,12 @@
             });
         },
         function(next) {
+            window.changeTab('status', 'main_tabb');
+            spotlightOnSelector('#main_tab', function() {
+                showText('This tab shows you the date, party resources, dissent and important details on the government.', 4000, next);
+            });
+        },
+        function(next) {
             window.changeTab('status.politics', 'politics_tab');
             spotlightOnSelector('#politics_tab', function() {
                 showText('This tab shows the parties relationship with other parties, current coalitions and party ideologies.', 4000, next);
@@ -605,13 +611,13 @@
         function(next) {
             window.changeTab('status.tamil', 'tamil_tab');
             spotlightOnSelector('#tamil_tab', function() {
-                showText('This tab shows everything relavent to the Tamil unrest in the northeast.', 4000, next);
+                showText('This tab shows details and groups relavent to the Tamil unrest in the northeast.', 4000, next);
             });
         },
         function(next) {
             window.changeTab('status.economy', 'economy_tab');
             spotlightOnSelector('#economy_tab', function() {
-                showText('This tab shows statistics on, and the sectors of Sri Lanka\'s economy.', 4000, next);
+                showText('This tab shows statistics on, and the sectors of Sri Lanka\'s economy.', 3500, next);
             });
         },
         function(next) {
@@ -671,16 +677,16 @@
         },
         function(next) {
             setTimeout(function(){
-                shiftSpotlight(200, 0); 
+                shiftSpotlight(160, 0); 
                 showText('Government Affairs work similarly, but we won\'t take one now.', 4000, function() { safeNext(next); });
             },600);
         },
         function(next) {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            shiftSpotlight(-100, 0); 
+            shiftSpotlight(-60, 0); 
             setTimeout(function() {
-                resizeSpotlight(400);
-                showText('Advisors can be used periodically for special actions.', 4000, next);
+                resizeSpotlight(500);
+                showText('Advisors can be used periodically for special actions that are both powerfull, and crucially do not use up your time. Remember that every advisor has an affiliation to a faction', 5000, next);
 
             }, 800);
             window.changeTab('status', 'main_tab');
