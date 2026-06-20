@@ -623,7 +623,7 @@
         },
         function(next){
             window.changeTab('status', 'main_tab');
-        }
+        },
         function(next) {
             var btn = findByText('#content a', 'Begin (normal difficulty)');
             positionSpotlightOnEl(btn);
