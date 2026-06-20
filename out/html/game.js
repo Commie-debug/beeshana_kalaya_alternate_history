@@ -576,7 +576,7 @@
         function(next) {
             window.changeTab('status.paramilitaries', 'paramilitary_tab');
             spotlightOnSelector('#paramilitary_tab', function() {
-                showText('This tab shows the paramilitaries, tamil rebels and the offical security forces.', 4000, next);
+                showText('This tab shows info on the paramilitaries, tamil rebels and the security forces.', 4000, next);
             });
         },
         function(next) {
@@ -588,19 +588,19 @@
         function(next) {
             window.changeTab('status.economy', 'economy_tab');
             spotlightOnSelector('#economy_tab', function() {
-                showText('This tab shows statistics on the economy and the sectors of Sri Lanka\'s economy.', 4000, next);
+                showText('This tab shows statistics on, and the sectors of Sri Lanka\'s economy.', 4000, next);
             });
         },
         function(next) {
             window.changeTab('status.interior', 'interior_tab');
             spotlightOnSelector('#interior_tab', function() {
-                showText('This tab shows gives information on current policies done by the government as well as the problems certain groups have.', 4000, next);
+                showText('This tab gives information on current policies done by the government as well the issues certain groups have.', 4000, next);
             });
         },
         function(next) {
             window.changeTab('status.foreign', 'foreign_tab');
             spotlightOnSelector('#foreign_tab', function() {
-                showText('This tab shows Sri Lanka\'s current standing with other nations, in addition to an emphasis on India and its Tamil Nadu state.', 4000, next);
+                showText('This tab shows Sri Lanka\'s current standing with other nations, in addition to India and its Tamil Nadu state.', 4000, next);
             });
         },
         function(next) {
@@ -612,16 +612,14 @@
         function(next) {
             window.changeTab('status.party', 'party_tab');
             spotlightOnSelector('#party_tab', function() {
-                showText('This tab shows the internal state of the party, the SLFP including leadership and the factional conflict.', 4000, next);
+                showText('This tab shows the internal state of the party including leadership and details on the factional conflict.', 4000, next);
             });
         },
         function(next) {
             window.changeTab('status.news', 'news_tab');
             spotlightOnSelector('#news_tab', function() {
-                showText('This tab shows you the "goings on" in the rest of the world, sometimes these events may even effect our island nation.', 4000, next);
+                showText('This tab shows you the "goings on" in the rest of the world, sometimes these events may even effect Sri Lanka.', 4000, next);
             });
-        },
-        function(next){
             window.changeTab('status', 'main_tab');
         },
         function(next) {
