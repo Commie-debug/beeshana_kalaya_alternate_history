@@ -481,7 +481,10 @@
   };
 
   //intro sequence code
+  window.tutorialActive = false;
+
   window.startTutorial = function() {
+    window.tutorialActive = true;
     var overlay = document.getElementById('tutorial-overlay');
     var spotlight = document.getElementById('tutorial-spotlight');
     var textBox = document.getElementById('tutorial-text-box');
@@ -625,6 +628,9 @@
     setTimeout(runStep, 1000);
 
     function endTutorial() {
+        if (tutorialEnded) return;
+        tutorialEnded = true;
+        window.tutorialActive = false;
         window.scrollTo({ top: originalState.scrollY, behavior: 'smooth' });
         spotlight.style.width = '0px';
         spotlight.style.height = '0px';

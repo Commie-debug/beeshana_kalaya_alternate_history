@@ -1914,7 +1914,8 @@ Even within the SLFP, chaos reigns. Sirimavo Bandaranaike’s expulsion from par
 
 @1981_start
 new-page: true
-on-display: {! window.AudioManager.start(); window.AudioManager.playSong('music/basic/Sri_Lanka_Anthem.mp3'); !}
+on-display: if (!window.tutorialActive) { window.AudioManager.start(); window.AudioManager.playSong('music/basic/Sri_Lanka_Anthem.mp3'); } 
+
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = Week [+ week +] [+ month : month +] [+ year +] 
