@@ -10,8 +10,7 @@ go-to: start_menu_2
 
 @start_menu_2
 
-- @start: Start game
-- @tutorial: Tutorial Sequence
+- @start: Start game & Tutorial
 - @election_simulation: Election simulation
 - @credits: Credits
 - @game_over.achievements
@@ -1825,6 +1824,7 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of Sri Lanka, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
+- @tutorial: Tutorial Sequence
 - @1981_easy: Begin (normal difficulty)
 - @1981_main: Begin (hard difficulty)
 - @1981_historical: Begin (historical mode)

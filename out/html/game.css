@@ -528,7 +528,7 @@ img.inline-img.icon {
 #tutorial-spotlight {
     position: absolute;
     border-radius: 50%;
-    box-shadow: 0 0 0 9999px rgba(0,0,0,0.85);
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.60);
     background: transparent;
     transition: top 0.8s ease, left 0.8s ease, width 0.8s ease, height 0.8s ease;
 }
