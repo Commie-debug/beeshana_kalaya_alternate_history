@@ -593,7 +593,7 @@
                 positionSpotlightOnEl(card);
                 setTimeout(function() {
                     if (card) card.click();
-                    showText('Cards represent advisor actions. Taking one uses it up.', 4000, function() { safeNext(next); });
+                    showText('Cards.', 4000, function() { safeNext(next); });
                 }, 800);
             }, 600);
         },
@@ -629,7 +629,7 @@
         spotlight.style.width = '0px';
         spotlight.style.height = '0px';
         showText('Tutorial complete.', 2500, function() {
-            window.dendryUI.dendryEngine.goToScene('start');
+            window.dendryUI.dendryEngine.goToScene('root.start');
             overlay.style.opacity = '0';
             overlay.style.pointerEvents = 'none';
             setTimeout(function() {
