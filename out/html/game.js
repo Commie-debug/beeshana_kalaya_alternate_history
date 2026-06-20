@@ -486,52 +486,126 @@
     var spotlight = document.getElementById('tutorial-spotlight');
     var textBox = document.getElementById('tutorial-text-box');
     overlay.style.display = 'block';
+    overlay.style.opacity = '1';
 
     window.AudioManager.playSong('music/special/creepy_intro.mp3');
 
-    var steps = [
-        { selector: '#music-controls', text: 'This is the music control panel. You can pause, skip, and adjust volume here.' },
-        { selector: '#stats-link', text: 'The Library contains historical information about Sri Lanka.' },
-        { selector: '#stats_sidebar', text: 'This sidebar shows your current political status.' },
-        { selector: '#right-panel', text: 'The right panel shows national news and information.' }
-    ];
+    var originalState = {
+        rightPanelOpen: document.getElementById('page').classList.contains('right-panel-open'),
+        activeTab: window.statusTab
+    };
 
-    var stepIndex = 0;
-
-    function showStep() {
-        if (stepIndex >= steps.length) {
-            endTutorial();
-            return;
+    function findByText(selector, text) {
+        var els = document.querySelectorAll(selector);
+        for (var i = 0; i < els.length; i++) {
+            if (els[i].textContent.indexOf(text) !== -1) {
+                return els[i];
+            }
         }
-        var step = steps[stepIndex];
-        var el = document.querySelector(step.selector);
-        if (!el) { stepIndex++; showStep(); return; }
+        return null;
+    }
+
+    function findFirstCardInDeck(deckLabel) {
+        var decks = document.querySelectorAll('.deck');
+        for (var i = 0; i < decks.length; i++) {
+            if (decks[i].textContent.indexOf(deckLabel) !== -1) {
+                return decks[i].querySelector('a.card');
+            }
+        }
+        return null;
+    }
+
+    function positionSpotlightOnEl(el) {
+        if (!el) return;
         var rect = el.getBoundingClientRect();
         var size = Math.max(rect.width, rect.height) + 40;
         spotlight.style.width = size + 'px';
         spotlight.style.height = size + 'px';
         spotlight.style.left = (rect.left + rect.width/2 - size/2) + 'px';
         spotlight.style.top = (rect.top + rect.height/2 - size/2) + 'px';
-
-        textBox.textContent = step.text;
-        textBox.classList.add('visible');
-
-        setTimeout(function() {
-            textBox.classList.remove('visible');
-            setTimeout(function() {
-                stepIndex++;
-                showStep();
-            }, 600);
-        }, 4000);
     }
 
-    setTimeout(showStep, 1000);
+    function spotlightOnSelector(selector, callback) {
+        var el = document.querySelector(selector);
+        positionSpotlightOnEl(el);
+        setTimeout(callback, 800);
+    }
+
+    function showText(text, duration, callback) {
+        textBox.textContent = text;
+        textBox.classList.add('visible');
+        setTimeout(function() {
+            textBox.classList.remove('visible');
+            setTimeout(callback, 600);
+        }, duration);
+    }
+
+    var steps = [
+        function(next) {
+            spotlightOnSelector('#music-controls', function() {
+                showText('This is the music control panel.', 4000, next);
+            });
+        },
+        function(next) {
+            window.toggleRightPanel();
+            spotlightOnSelector('#right-panel', function() {
+                showText('The right panel shows national news.', 4000, next);
+            });
+        },
+        function(next) {
+            window.changeTab('status.politics', 'politics_tab');
+            spotlightOnSelector('#politics_tab', function() {
+                showText('This tab shows political tracking.', 4000, next);
+            });
+        },
+        function(next) {
+            var btn = findByText('#content a', 'Begin (normal difficulty)');
+            positionSpotlightOnEl(btn);
+            setTimeout(function() {
+                if (btn) btn.click();
+                showText('Let\'s pick normal difficulty.', 3000, next);
+            }, 800);
+        },
+        function(next) {
+            setTimeout(function() {
+                var card = findFirstCardInDeck('Party Affairs');
+                positionSpotlightOnEl(card);
+                setTimeout(function() {
+                    if (card) card.click();
+                    showText('Cards represent advisor actions. Taking one uses it up.', 4000, next);
+                }, 800);
+            }, 500);
+        },
+        function(next) {
+            spotlightOnSelector('.deck', function() {
+                showText('Government Affairs work similarly, but we won\'t take one now.', 4000, next);
+            });
+        },
+        function(next) {
+            spotlightOnSelector('#advisors-panel', function() {
+                showText('Advisors can be used periodically for special actions.', 4000, next);
+            });
+        }
+    ];
+
+    var i = 0;
+    function runStep() {
+        if (i >= steps.length) { endTutorial(); return; }
+        steps[i](function() {
+            i++;
+            runStep();
+        });
+    }
+    setTimeout(runStep, 1000);
 
     function endTutorial() {
+        if (!originalState.rightPanelOpen) window.toggleRightPanel();
+        window.changeTab(originalState.activeTab, 'main_tab');
+        window.dendryUI.dendryEngine.goToScene('root');
+
         overlay.style.opacity = '0';
         setTimeout(function() {
             overlay.style.display = 'none';
-            overlay.style.opacity = '1';
         }, 600);
     }
 };
