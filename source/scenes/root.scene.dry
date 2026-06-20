@@ -10,7 +10,7 @@ go-to: start_menu_2
 
 @start_menu_2
 
-- @start: Start game & Tutorial
+- @start: Start game
 - @election_simulation: Election simulation
 - @credits: Credits
 - @game_over.achievements
