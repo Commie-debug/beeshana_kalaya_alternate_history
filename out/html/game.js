@@ -506,6 +506,7 @@
     var overlay = document.getElementById('tutorial-overlay');
     var spotlight = document.getElementById('tutorial-spotlight');
     var textBox = document.getElementById('tutorial-text-box');
+    window.AudioManager.playSongOnce('music/sfx/lightsout.mp3', 'sfx'); 
     overlay.style.display = 'block';
     overlay.style.opacity = '1';
     overlay.style.pointerEvents = 'all';
