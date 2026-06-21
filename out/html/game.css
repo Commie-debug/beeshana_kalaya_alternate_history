@@ -621,13 +621,6 @@ body.tutorial-no-scroll {
     color: #000;
 }
 
-#music-prev-btn:active img {
-    content: url("img/logos/Previous_Song_Pressed.png");
-}
-
-#music-skip-btn:active img {
-    content: url("img/logos/Skip_Song_Pressed.png");
-}
 
 .overlay {
     background: rgba(0,0,0,0.7);
