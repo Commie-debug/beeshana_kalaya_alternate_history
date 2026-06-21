@@ -1362,6 +1362,8 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 12 and week = 1 : The world's first successful permanent artificial heart implant is carried out on a patient in Salt Lake City, Utah. ?]
 
+[? if year = 1981 and month = 12 and week = 1 : The UN security council unanimously votes and declares the Israeli Golan Heights Law, which effectively annexed the Golan Heights, is "null and void and without international legal effect". The Golan Heights are interntaionally recognised as Syrian territory occupied by Israel since 1967.?]
+
 [? if year = 1981 and month = 12 and week = 3 : First Secretary of the Polish United Workers Party, Wojciech Jaruzelski declares martial law in Poland. ?]
 
 [? if year = 1982 and month = 1 and week = 1 : The United States imposes new sanctions on the Soviet Union over recent events in Poland. ?]
