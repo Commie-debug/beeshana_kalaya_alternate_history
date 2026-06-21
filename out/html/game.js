@@ -298,6 +298,15 @@
         playSongOnce: function(path, layerName) {
             var name = layerName || 'music';
             var layer = layers[name];
+
+            if (name === 'sfx') {
+                if (!layer.enabled) return;
+                var sfxAudio = new Audio(path);
+                sfxAudio.volume = muted ? 0 : layer.volume;
+                sfxAudio.play().catch(function() {});
+                return;
+            }
+
             var targetVol = muted ? 0 : layer.volume;
 
             if (layer.audio) {
@@ -326,9 +335,7 @@
                         clearInterval(fadeIn);
                     }
                 }, 50);
-                newAudio.onended = function() {
-                    layer.audio = null; // clear reference so resume doesn't replay it
-                };
+                newAudio.onended = null;
             }, 800);
         },
 
@@ -671,14 +678,14 @@
                 var card = findFirstCardInDeck('Party Affairs');
                 positionSpotlightOnEl(card);
                 setTimeout(function() {
-                    showText('This deck\'s cards deal with internal and external party matters such as dues, relationships to other parties, etc.', 4200, function() { safeNext(next); });
+                    showText('This deck\'s cards deal with internal and external party matters such as dues, relationships to other parties, etc. Most cards will take a week to do while others do not take any time.', 6000, function() { safeNext(next); });
                 }, 800);
             }, 600);
         },
         function(next) {
             setTimeout(function(){
                 shiftSpotlight(160, 0); 
-                showText('Government Affairs work similarly, its cards deal with government policies and actions. When the party is not in government, the deck is limited', 4200, function() { safeNext(next); });
+                showText('Government Affairs work similarly, its cards deal with government policies and actions. When the party is not in government, the deck is limited. These cards will always take some time to do.', 5000, function() { safeNext(next); });
             },600);
         },
         function(next) {
@@ -686,7 +693,7 @@
             shiftSpotlight(-100, 0); 
             setTimeout(function() {
                 resizeSpotlight(500);
-                showText('Advisors can be used periodically for special actions that are both powerfull, and crucially do not use up your time. Remember that every advisor has an affiliation to a faction', 5000, next);
+                showText('Advisors can be used periodically for special actions that are both powerfull, and crucially do not use up your time. Remember that every advisor has an affiliation to a faction', 6000, next);
 
             }, 800);
             window.changeTab('status', 'main_tab');
