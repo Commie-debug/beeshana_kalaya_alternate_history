@@ -721,6 +721,7 @@
         spotlight.style.height = '0px';
         showText('Tutorial completed, ♡♡♡ i hope you enjoy this game :> ♡♡♡', 3000, function() {
             window.dendryUI.dendryEngine.goToScene('root.start');
+            window.AudioManager.playSongOnce('music/sfx/lightsout.mp3', 'sfx'); 
             overlay.style.opacity = '0';
             overlay.style.pointerEvents = 'none';
             setTimeout(function() {
