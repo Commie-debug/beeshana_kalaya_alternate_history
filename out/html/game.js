@@ -718,7 +718,7 @@
         window.scrollTo({ top: originalState.scrollY, behavior: 'smooth' });
         spotlight.style.width = '0px';
         spotlight.style.height = '0px';
-        showText('Tutorial completed, ♡♡♡ i hope you enjoy this game :> ♡♡♡', 3000, function() {
+        showText('Tutorial completed, ♡♡♡ i hope you enjoy the game :> ♡♡♡', 3000, function() {
             window.dendryUI.dendryEngine.goToScene('root.start');
             window.AudioManager.stop('music');
             window.AudioManager.playSongOnce('music/sfx/lightsout.mp3', 'sfx'); 
