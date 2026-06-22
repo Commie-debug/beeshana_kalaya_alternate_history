@@ -670,6 +670,13 @@ Q.JEDB_rubber_investments = 0;
 //rubber development board
 Q.RDB_improved = 0;
 
+//ftz
+Q.katunayake_ftz_expanded = 0;
+//at the start only the katunayake ftz is done, player or UNP can create more FTZ's like irl in biyagama
+Q.new_ftzs_built = 0;
+//foreign investment and ussage of the ftz's
+Q.ftz_investment = 0;
+
 //interior policies
 //Indian Tamil policies
 //Wheter they have all atained SL citizenship
