@@ -175,13 +175,13 @@ Q.npp_ideology = 2;
 Q.mep_ideology = 5;
 Q.eros_ideology = 11;
 Q.dplf_ideology = 11;
-Q.pflt_ideology = 11;
+Q.pflt_ideology = 18;
 Q.ucpf_ideology = 8;
 Q.telo_ideology = 11;
-Q.eprlf_ideology = 11;
-Q.endlf_ideology = 11;
+Q.eprlf_ideology = 17;
+Q.endlf_ideology = 17;
 Q.dunf_ideology = 13;
-Q.ulpp_ideology = 5;
+Q.ulpp_ideology = 13;
 
 //party colours as a list incase
 Q.partyColors = {
