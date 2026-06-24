@@ -915,6 +915,195 @@ const colourList = [
         word: "FMLN",
         style: "font-weight: bold;"
     },
+        {
+        word: "JR Jayewardene",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Jayewardene",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ranasinghe Premadasa",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "A. Amirthalingam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "A Amirthalingam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Sirimavo Bandaranaike",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Sirimavo",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Mrs Bandaranaike",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Anura Bandaranaike",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Anura",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Chandrika",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Chandrika Kumaranatunga",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Maithripala Senanayake",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Rohana Wijeweera",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Rohana",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Wijeweera",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Hector Kobbekaduwa",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Kobbekaduwa",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Pieter Keuneman",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Colvin R. de Silva",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Colvin R de Silva",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Vasudeva Nanayakkara",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Kumar Ponnambalam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ponnambalam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Savumiamoorthy Thondaman",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Thondaman",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Vijaya Kumaranatunga",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Vijaya",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Velupillai Prabhakaran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Prabhakaran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Uma Maheswaran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ossie Abeygunasekera",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Rajiv Gandhi",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Indira Gandhi",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "VP Singh",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "M G Ramachandran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "VN Janaki",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "M Karunanidhi",
+        style: "font-weight: bold;"
+    },
 ];
 
 
@@ -1898,195 +2087,6 @@ const tooltipList = [{
     {
     searchString: "M Karunanidhi",
     explanationText: "<img src=img/portraits/Karunanidhi_M.jpg> Muthuvel Karunanidhi"
-    },
-        {
-        word: "JR Jayewardene",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Jayewardene",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Ranasinghe Premadasa",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "A. Amirthalingam",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "A Amirthalingam",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Sirimavo Bandaranaike",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Sirimavo",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Mrs Bandaranaike",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Anura Bandaranaike",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Anura",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Chandrika",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Chandrika Kumaranatunga",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Maithripala Senanayake",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Rohana Wijeweera",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Rohana",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Wijeweera",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Hector Kobbekaduwa",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Kobbekaduwa",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Pieter Keuneman",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Colvin R. de Silva",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Colvin R de Silva",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Vasudeva Nanayakkara",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Kumar Ponnambalam",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Ponnambalam",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Savumiamoorthy Thondaman",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Thondaman",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Vijaya Kumaranatunga",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Vijaya",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Velupillai Prabhakaran",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Prabhakaran",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Uma Maheswaran",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Ossie Abeygunasekera",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Rajiv Gandhi",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "Indira Gandhi",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "VP Singh",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "M G Ramachandran",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "VN Janaki",
-        style: "font-weight: bold;"
-    },
-
-    {
-        word: "M Karunanidhi",
-        style: "font-weight: bold;"
     },
 ];
 
