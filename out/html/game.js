@@ -876,7 +876,7 @@
         if (value == 14) return '<span style="color: #32CD32;">Neo Liberalism</span>';
         if (value == 15) return '<span style="color: #800080;">Anti-Imperialism</span>';
         if (value == 16) return '<span style="color: #2E0854;">Unitary Stateism</span>';
-        if (value == 17) return '<span style="color: #FFA500;">Pro-Indian Tamil Nationalism</span>';
+        if (value == 17) return '<span style="color: #ffb222;">Pro-Indian Tamil Nationalism</span>';
         if (value == 18) return '<span style="color: #FFA500;">Militant Tamil Eelam Separatism</span>';
         return 'Unknown';
     }
