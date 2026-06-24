@@ -1,4 +1,5 @@
-const colourList = [{
+const colourList = [
+    {
         word: "Sri Lanka Armed Forces",
         style: "color: #002FA7; font-weight: bold;"
     },
@@ -291,7 +292,631 @@ const colourList = [{
         word: "DMK",
         style: "color: #FF0000; font-weight: bold;"
     },
+    {
+        word: "Tourism",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Mining",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Tea",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Agriculture",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Textile & apparel",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Fishing",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Rubber",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Sinhalese",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Indian Tamil",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Sri Lankan Tamil",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Tamil",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Muslims",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Kafirs",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Burghers",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Vedda",
+        style: "font-weight: bold;"
+    },
+        {
+        word: "Non Alligned Movement",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "NAM",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "India",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "US",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "United States",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "American",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "USA",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "UK",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "United Kingdom",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Britain",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "British",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Israel",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Israeli",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Japan",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Japanese",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "China",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Chinese",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Pakistan",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Pakistani",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "USSR",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Soviet Union",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Soviet",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "SAARC",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "PLO",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Palestinian",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Palestine",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "IRA",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "France",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "French",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Lebanon",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Lebanese",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Argentina",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Argentine",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "West Germany",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "West German",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Poland",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Polish",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Philippine",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Philippines",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Libya",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Libyan",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "South Africa",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "South African",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ethiopia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ethiopian",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "United Nations",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "UN",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Iran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Iranian",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Iraq",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Iraqi",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Armenia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Armenian",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Azerbaijan",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Azeri",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Afghanistan",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Afghan",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Afghani",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Myanmar",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "South Korea",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "South Korean",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Hungary",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "East German",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "East Germany",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Romania",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Romanian",
+        style: "font-weight: bold;"
+    },
+        {
+        word: "North Yemen",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "South Yemen",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Nicaragua",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Kuwait",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Egypt",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ireland",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Irish",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Northern Ireland",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "El Salvador",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Greece",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Spain",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Syrian",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Mexico",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Australia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Palau",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Finland",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Antigua & Barbuda",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Grenada",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "NATO",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Northern Cyprus",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Brunei",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Burkina Faso",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Uganda",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Portugal",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Sweden",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ukrainian SSR",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "New Zealand",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Iceland",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Taiwan",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Chile",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Maldives",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Austria",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Lithuania",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Estonia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Latvia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Czechoslovakia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Panama",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Namibia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Cuba",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Saudi Arabia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Turkey",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Cyprus",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Bulgaria",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Albania",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Yugoslavia",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Vietnam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "FMLN",
+        style: "font-weight: bold;"
+    },
 ];
+
 
 const tooltipList = [{
     searchString: "Sri Lanka Armed Forces",
@@ -1273,6 +1898,195 @@ const tooltipList = [{
     {
     searchString: "M Karunanidhi",
     explanationText: "<img src=img/portraits/Karunanidhi_M.jpg> Muthuvel Karunanidhi"
+    },
+        {
+        word: "JR Jayewardene",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Jayewardene",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ranasinghe Premadasa",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "A. Amirthalingam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "A Amirthalingam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Sirimavo Bandaranaike",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Sirimavo",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Mrs Bandaranaike",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Anura Bandaranaike",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Anura",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Chandrika",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Chandrika Kumaranatunga",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Maithripala Senanayake",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Rohana Wijeweera",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Rohana",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Wijeweera",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Hector Kobbekaduwa",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Kobbekaduwa",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Pieter Keuneman",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Colvin R. de Silva",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Colvin R de Silva",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Vasudeva Nanayakkara",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Kumar Ponnambalam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ponnambalam",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Savumiamoorthy Thondaman",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Thondaman",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Vijaya Kumaranatunga",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Vijaya",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Velupillai Prabhakaran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Prabhakaran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Uma Maheswaran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Ossie Abeygunasekera",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Rajiv Gandhi",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "Indira Gandhi",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "VP Singh",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "M G Ramachandran",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "VN Janaki",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "M Karunanidhi",
+        style: "font-weight: bold;"
     },
 ];
 
