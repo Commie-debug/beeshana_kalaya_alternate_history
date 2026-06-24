@@ -1133,9 +1133,9 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 [? if ipkf_formed = 1 : **IPKF** - *Indian Peacekeeping Force* - The Indian Armed Forces detachment depolyed in the north-east of Sri Lanka to maintain peace and prevent conflict between the tamil militants and the Sri Lanka Armed forces. ?]
 
-[? if tna_formed = 1 : **TNA** - *Tamil National Army* - The TNA is an Indian sponsored tamil militant group formed to assist the IPKF against the LTTE insurgency. They also exist to support the newly elected North-Eastern provincial government. ?]
+[? if tna_formed = 1 : **TNA** - *Tamil National Army* - The TNA is an Indian sponsored tamil milita formed to assist the IPKF against the LTTE insurgency. They also exist to support the newly elected North-Eastern provincial government. ?]
 
-[? if endlf_formed = 1 : **ENDLF** - *Eelam National Democratic Liberation Front* - The ENDLF is an Indian sponsored tamil militant group formed from splinter groups of other tamil militant groups. They are very anti-LTTE, which garners them the support of the IPKF. The ENDLF also functions as a political party. ?]
+[? if endlf_formed = 1 : **ENDLF** - *Eelam National Democratic Liberation Front* - The ENDLF is an Indian sponsored tamil militant group formed from splinter groups of other tamil militant groups. They are very anti-LTTE, and they garner support of the IPKF. The ENDLF also functions as a political party. ?]
 
 @factions
 
