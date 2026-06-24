@@ -1334,6 +1334,8 @@ Nationalists Dissent
 
 [? if year = 1981 and month = 5 and week = 1 : Pope John Paul II is shot and seriously wounded in an assassination attempt at St Peter's Square. ?]
 
+[? if year = 1981 and month = 5 and week = 1 : Socialist candidate Francois Mitterrand secures victory during presidential elections in France. He is now the first left-wing president of the post WW2 French republic. ?]
+
 [? if year = 1981 and month = 5 and week = 3 : Bobby Sands, Irish republican prisoner and newly elected MP, dies after 66 days on hunger strike in the Maze Prison. ?]
 
 [? if year = 1981 and month = 6 and week = 1 : Israel bombs and destroys the Iraqi Osirak nuclear reactor in a surprise airstrike near Baghdad. ?]
