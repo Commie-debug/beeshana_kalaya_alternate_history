@@ -72,3 +72,502 @@ Industries: [+ district_industries +]
 
 Herein contains relevant information about the people, government, politics, military and economy of Sri Lanka
 
+@news 
+
+= International news
+
+{!<img src="img/international_news.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+
+[? if year = 1981 and month = 1 and week = 1 : The Republic of Palau is declared in Micronesia. ?]
+
+[? if year = 1981 and month = 1 and week = 1 : Iranian forces have begun a counterattack on Iraqi positions near Dezful and Sousangerd in an attempt to push them out of Iran, the Iraqi invasion of Iran is on its 4th month. ?]
+
+[? if year = 1981 and month = 1 and week = 1 : FMLN forces seized radio stations in El Salvador's capital San Salvador in a large escalation in a nearly 2 year long insurgency by the Soviet backed insurgents against the nations military junta. ?]
+
+[? if year = 1981 and month = 1 and week = 3 : The Iran Hostage Crisis ends after 444 days as American hostages are released from Tehran. ?]
+
+[? if year = 1981 and month = 1 and week = 3 : Ronald Reagan is inaugurated as the 40th President of the United States of America. ?]
+
+[? if year = 1981 and month = 2 and week = 1 : Parliament of Spain is stormed by armed officers in an attempted military coup. ?]
+
+[? if year = 1981 and month = 2 and week = 3 : Greece formally joins the European Economic Community as its tenth member state. ?]
+
+[? if year = 1981 and month = 3 and week = 3 : US President Ronald Reagan survives an assassination attempt outside the Washington Hilton Hotel. ?]
+
+[? if year = 1981 and month = 4 and week = 1 : A hunger strike by prisoners begins in Northern Ireland demanding reinstatement of political prisoner status for Irish republican prisoners including members of the IRA. ?]
+
+[? if year = 1981 and month = 4 and week = 3 : The first Space Shuttle mission launches successfully with the Columbia completing two days in orbit before landing in California. ?]
+
+[? if year = 1981 and month = 5 and week = 1 : Pope John Paul II is shot and seriously wounded in an assassination attempt at St Peter's Square. ?]
+
+[? if year = 1981 and month = 5 and week = 1 : Socialist candidate Francois Mitterrand secures victory during presidential elections in France. He is now the first left-wing president of the post WW2 French republic. ?]
+
+[? if year = 1981 and month = 5 and week = 3 : Bobby Sands, Irish republican prisoner and newly elected MP, dies after 66 days on hunger strike in the Maze Prison. ?]
+
+[? if year = 1981 and month = 6 and week = 1 : Israel bombs and destroys the Iraqi Osirak nuclear reactor in a surprise airstrike near Baghdad. ?]
+
+[? if year = 1981 and month = 6 and week = 3 : The Centers for Disease Control reports cases of a new disease it labels "4H disease", "lymphadenopathy" or "opportunistic infections". ?]
+
+[? if year = 1981 and month = 7 and week = 1 : Prince Charles marries Lady Diana Spencer in a globally televised ceremony at St Paul's Cathedral attended by numerous heads of state including President JR Jayewardene and Prime Minister Ranasinghe Premadasa. ?]
+
+[? if year = 1981 and month = 7 and week = 3 : Riots erupt across several British cities including Brixton and Toxteth as racial tensions and unemployment boil over. ?]
+
+[? if year = 1981 and month = 8 and week = 1 : The remaining nine Irish republican hunger strikers end their protest following the deaths of ten prisoners in total. ?]
+
+[? if year = 1981 and month = 8 and week = 3 : IBM releases its first Personal Computer. ?]
+
+[? if year = 1981 and month = 9 and week = 1 : Sandra Day O'Connor becomes the first woman appointed to the United States Supreme Court. ?]
+
+[? if year = 1981 and month = 9 and week = 3 : France abolishes the death penalty under the newly elected Socialist government of Francois Mitterrand. ?]
+
+[? if year = 1981 and month = 10 and week = 1 : President of Egypt, Anwar Sadat is assassinated during a military parade commemorating the 1973 Arab-Israeli War. ?]
+
+[? if year = 1981 and month = 10 and week = 3 : Hosni Mubarak is sworn in as President of Egypt following the assassination of Anwar Sadat. ?]
+
+[? if year = 1981 and month = 11 and week = 1 : Antigua & Barbuda gains independence from the United Kingdom. ?]
+
+[? if year = 1981 and month = 11 and week = 3 : The United States and Soviet Union open arms reduction talks in Geneva amid growing nuclear anxiety in Western Europe. ?]
+
+[? if year = 1981 and month = 12 and week = 1 : The world's first successful permanent artificial heart implant is carried out on a patient in Salt Lake City, Utah. ?]
+
+[? if year = 1981 and month = 12 and week = 1 : The UN security council unanimously votes and declares the Israeli Golan Heights Law, which effectively annexed the Golan Heights, is "null and void and without international legal effect". The Golan Heights are interntaionally recognised as Syrian territory occupied by Israel since 1967.?]
+
+[? if year = 1981 and month = 12 and week = 3 : First Secretary of the Polish United Workers Party, Wojciech Jaruzelski declares martial law in Poland. ?]
+
+[? if year = 1982 and month = 1 and week = 1 : The United States imposes new sanctions on the Soviet Union over recent events in Poland. ?]
+
+[? if year = 1982 and month = 1 and week = 3 : The breakup of American telecommunications giant AT&T is announced following a landmark antitrust settlement. ?]
+
+[? if year = 1982 and month = 2 and week = 1 : Syrian government forces massacre thousands of civilians in the city of Hama during the suppression of a Muslim Brotherhood uprising. ?]
+
+[? if year = 1982 and month = 2 and week = 3 : The unemployment rate in Britain reaches its highest level since the 1930s as recession deepens across the country. ?]
+
+[? if year = 1982 and month = 3 and week = 1 : El Salvador holds elections under ongoing civil war conditions as the United States backs the government against FMLN insurgents. ?]
+
+[? if year = 1982 and month = 3 and week = 3 : Argentina's ruling military junta faces growing unrest and demonstrations in the capital Buenos Aires. ?]
+
+[? if year = 1982 and month = 4 and week = 1 : Argentine forces have landed on the Falkland, South Georgia and the South Sandwich Islands. ?]
+
+[? if year = 1982 and month = 4 and week = 3 : A British naval task force departs for the South Atlantic to retake the Falkland Islands from Argentine occupation. ?]
+
+[? if year = 1982 and month = 5 and week = 1 : British nuclear submarine HMS Conqueror sinks the Argentine cruiser ARA General Belgrano during clashes in the Falklands. ?]
+
+[? if year = 1982 and month = 5 and week = 3 : British forces land at San Carlos Bay in the Falkland Islands opening a ground campaign against Argentinian positions. ?]
+
+[? if year = 1982 and month = 6 and week = 1 : Israeli forces invade Lebanon to expel the PLO prescence from its southern border with Israel. ?]
+
+[? if year = 1982 and month = 6 and week = 3 : Argentine forces in the Falkland Islands formally surrender to British troops ending the ten week war. ?]
+
+[? if year = 1982 and month = 7 and week = 1 : Lebanese President-elect Bachir Gemayel is assassinated in Beirut. ?]
+
+[? if year = 1982 and month = 7 and week = 3 : The world's first commercial compact disc players go on sale in Japan produced by Sony. ?]
+
+[? if year = 1982 and month = 8 and week = 1 : Sony and Philips launch a new audio format simultaneously. ?]
+
+[? if year = 1982 and month = 9 and week = 1 : PLO fighters evacuate Beirut under international supervision following the Israeli siege of the city. ?]
+
+[? if year = 1982 and month = 9 and week = 1 : Mexico announces it cannot meet its foreign debt obligations. ?]
+
+[? if year = 1982 and month = 9 and week = 3 : Lebanese Christian militiamen massacre Palestinian civilians in the Sabra and Shatila refugee camps of Beirut. ?]
+
+[? if year = 1982 and month = 10 and week = 1 : The military dictatorship in Poland formally bans the Solidarity trade union. ?]
+
+[? if year = 1982 and month = 10 and week = 3 : Spain formally applies for membership of the European Economic Community. ?]
+
+[? if year = 1982 and month = 11 and week = 1 : Yuri Andropov becomes General Secretary of the Communist Party of the Soviet Union following the death of previous General Secretary Leonid Brezhnev. ?]
+
+[? if year = 1982 and month = 11 and week = 3 : The Vietnam Veterans Memorial is dedicated in Washington D.C. ?]
+
+[? if year = 1982 and month = 12 and week = 1 : The world premiere of the autobiographical movie Gandhi is held in New Delhi, India. ?]
+
+[? if year = 1982 and month = 12 and week = 3 : The United States deploys the first Pershing II nuclear missiles to Western Europe prompting large anti-nuclear protests. ?]
+
+[? if year = 1983 and month = 1 and week = 1 : The ARPANET officially adopts TCP/IP protocols. ?]
+
+[? if year = 1983 and month = 1 and week = 3 : West German federal elections returns Helmut Kohl's centre-right coalition to power with a strengthened majority. ?]
+
+[? if year = 1983 and month = 2 and week = 1 : Bushfires in Australia devastates the states of Victoria and South Australia on "Ash Wednesday" killing over 70 people. ?]
+
+[? if year = 1983 and month = 2 and week = 3 : The final episode of MASH airs in the United States to record television audiences. ?]
+
+[? if year = 1983 and month = 3 and week = 1 : Ronald Reagan publicly announces the Strategic Defense Initiative, a proposed US anti-ballistic missile system. ?]
+
+[? if year = 1983 and month = 3 and week = 3 : An estimated one million people march in cities across Western Europe in protests against the deployment of US nuclear missiles. ?]
+
+[? if year = 1983 and month = 4 and week = 1 : Former British Prime Minister Harold Wilson dies in London at the age of 79. ?]
+
+[? if year = 1983 and month = 4 and week = 3 : A suicide bombing hits the United States Embassy in Beirut killing dozens. ?]
+
+[? if year = 1983 and month = 5 and week = 1 : Margaret Thatcher wins re-election amid a patriotic surge following the Falklands War. ?]
+
+[? if year = 1983 and month = 5 and week = 3 : The newly discovered virus responsible for AIDS is officially named the Human Immunodeficiency Virus by international scientists. ?]
+
+[? if year = 1983 and month = 6 and week = 1 : Yuri Andropov is formally confirmed as head of state of the Soviet Union in addition to his role as General Secretary. ?]
+
+[? if year = 1983 and month = 6 and week = 3 : Sally Ride becomes the first American woman in space aboard Space Shuttle Challenger. ?]
+
+[? if year = 1983 and month = 7 and week = 1 : Poland officially lifts martial law. ?]
+
+[? if year = 1983 and month = 7 and week = 3 : A Soviet officer unilaterally decides not to report a false alarm on the USSR's early warning system that incorrectly detected an incoming American nuclear strike. ?]
+
+[? if year = 1983 and month = 8 and week = 1 : The first World Athletics Championships are held in Helsinki, Finland. ?]
+
+[? if year = 1983 and month = 8 and week = 3 : Philippine opposition leader Benigno Aquino Jr is assassinated upon returning to Manila. ?]
+
+[? if year = 1983 and month = 9 and week = 1 : Soviet fighter aircraft shoot down a Korean Air Lines Flight after it enters Soviet airspace near Sakhalin Island. ?]
+
+[? if year = 1983 and month = 9 and week = 3 : A bomb planted by Sikh militants destroys an Air India flight off the coast of Ireland killing all aboard. ?]
+
+[? if year = 1983 and month = 10 and week = 1 : The Nobel Peace Prize is awarded to Lech Walesa, leader of Poland's banned Solidarity trade union. ?]
+
+[? if year = 1983 and month = 10 and week = 3 : Suicide bombers attack US and French military barracks in Beirut killing 241 American and 58 French peacekeepers. ?]
+
+[? if year = 1983 and month = 10 and week = 3 : United States invades Grenada following an internal crisis in the Caribbean nation. ?]
+
+[? if year = 1983 and month = 11 and week = 1 : NATO conducts the Able Archer 83 nuclear command exercise ?]
+
+[? if year = 1983 and month = 11 and week = 1 : Fighting erupts in Tripoli, Lebanon between members of the PLO. ?]
+
+[? if year = 1983 and month = 11 and week = 3 : Northern Cyprus declares independence from Turkish occupied Cyprus, 9 years since Turkey's invasion of Cyprus. ?]
+
+[? if year = 1983 and month = 12 and week = 1 : The United States deploys Pershing II nuclear missiles to West Germany. ?]
+
+[? if year = 1983 and month = 12 and week = 3 : Argentina returns to civilian rule as Raul Alfonsin is inaugurated as president following years of military dictatorship. ?]
+
+[? if year = 1984 and month = 1 and week = 1 : Brunei joins the Association of Southeast Asian Nations as its sixth member following independence from Britain. ?]
+
+[? if year = 1984 and month = 1 and week = 3 : Apple releases the Macintosh personal computer. ?]
+
+[? if year = 1984 and month = 2 and week = 1 : CPSU General Secretary Yuri Andropov dies and is succeeded by Konstantin Chernenko. ?]
+
+[? if year = 1984 and month = 2 and week = 3 : US and French peacekeeping forces complete their withdrawal from Beirut following the devastating barracks bombings. ?]
+
+[? if year = 1984 and month = 3 and week = 1 : Ethiopian government officials acknowledge a severe famine is underway with millions at risk of starvation in the north of the country. ?]
+
+[? if year = 1984 and month = 3 and week = 3 : Miner's strikes spread across Britain as workers protest pit closures under Margaret Thatcher's government. ?]
+
+[? if year = 1984 and month = 4 and week = 1 : Gunshots from the Libyan embassy in London kill a police officer during a protest outside, sparking a diplomatic crisis. ?]
+
+[? if year = 1984 and month = 4 and week = 3 : The British government severs diplomatic relations with Libya following the fatal shooting of a policewoman outside the Libyan embassy in London. ?]
+
+[? if year = 1984 and month = 5 and week = 1 : Soviet officials announce that they will be boycotting the Los Angeles Olympics later in the year. ?]
+
+[? if year = 1984 and month = 5 and week = 3 : South Africa declares a state of emergency in the Vaal Triangle as anti-apartheid townships violence intensifies. ?]
+
+[? if year = 1984 and month = 6 and week = 1 : The Indian Army storms the Golden Temple in Amritsar following its occupation by Sikh militants. ?]
+
+[? if year = 1984 and month = 7 and week = 1 : Nicaragua Sandinista government holds its first general election since the fall of the Somoza dynasty in mid 1979. Daniel Ortega of the Sandinista's returns to the presidency. ?]
+
+[? if year = 1984 and month = 7 and week = 3 : The Summer Olympics open in Los Angeles amid a large scale boycott led by the Soviet Union with the support of other socialist and non-aligned nations. ?]
+
+[? if year = 1984 and month = 8 and week = 1 : Upper Volta is officially renamed to Burkina Faso by President Thomas Sankara. ?]
+
+[? if year = 1984 and month = 8 and week = 3 : The IRA detonates a bomb at the Grand Hotel in Brighton during the Conservative Party conference, narrowly failing to kill Prime Minister Thatcher. ?]
+
+[? if year = 1984 and month = 9 and week = 1 : A famine in Ethiopia is now confirmed as catastrophic with aid agencies warning of mass starvation across the country. ?]
+
+[? if year = 1984 and month = 9 and week = 3 : A massive suicide bombing hits the US Embassy annex in East Beirut. ?]
+
+[? if year = 1984 and month = 10 and week = 1 : Ronald Reagan wins re-election in a historic landslide, carrying 49 of 50 states against Democratic challenger Walter Mondale. ?]
+
+[? if year = 1984 and month = 10 and week = 3 : Indian Prime Minister Indira Gandhi is assassinated by her Sikh bodyguards. ?]
+
+[? if year = 1984 and month = 11 and week = 1 : Anti-Sikh riots erupt across northern India following the assassination of Indira Gandhi. ?]
+
+[? if year = 1984 and month = 11 and week = 3 : Pop musicians release the charity single "Do They Know It's Christmas" raising millions for Ethiopian famine relief. ?]
+
+[? if year = 1984 and month = 12 and week = 1 : Toxic gas leaks from the Union Carbide pesticide plant in Bhopal, India killing thousands. ?]
+
+[? if year = 1984 and month = 12 and week = 3 : Rajiv Gandhi of the INC wins a landslide victory in Indian elections called early following the assassination of his mother Indira Gandhi. ?]
+
+[? if year = 1985 and month = 1 and week = 1 : The Soviet Union and the United States reopen arms control negotiations in Geneva Switzerland. ?]
+
+[? if year = 1985 and month = 1 and week = 3 : The British and French governments announce plans to construct a tunnel beneath the English Channel linking the two countries. ?]
+
+[? if year = 1985 and month = 2 and week = 1 : South African President P.W. Botha rejects calls to release Nelson Mandela and warns against interference in South African internal affairs. ?]
+
+[? if year = 1985 and month = 2 and week = 3 : Hezbollah publicly announces its formation in Lebanon to fight against Israeli forces. ?]
+
+[? if year = 1985 and month = 3 and week = 1 : Mikhail Gorbachev becomes General Secretary of the Communist Party of the Soviet Union. ?]
+
+[? if year = 1985 and month = 3 and week = 3 : British and American scientists announce the discovery of a significant hole in the ozone layer above Antarctica. ?]
+
+[? if year = 1985 and month = 4 and week = 1 : The Coca-Cola Company introduces "New Coke" prompting widespread backlash. ?]
+
+[? if year = 1985 and month = 4 and week = 3 : The Soviet Union announces a temporary freeze on the deployment of intermediate range nuclear missiles in Europe. ?]
+
+[? if year = 1985 and month = 5 and week = 1 : West Germany and Israel establish full diplomatic relations for the first time on the fortieth anniversary of the end of the Second World War and the Holocaust. ?]
+
+[? if year = 1985 and month = 5 and week = 3 : A fire at Bradford City Stadium in England kills 56 football supporters. ?]
+
+[? if year = 1985 and month = 6 and week = 1 : Palestinian militants hijack TWA Flight 847 out of Athens and hold 39 American passengers hostage for 17 days. ?]
+
+[? if year = 1985 and month = 6 and week = 3 : Air India Flight 182 explodes off the Irish coast after a bomb planted by Sikh militants detonates onboard. ?]
+
+[? if year = 1985 and month = 7 and week = 1 : French intelligence agents sink the Greenpeace vessel Rainbow Warrior in Auckland harbour, killing a photographer onboard. ?]
+
+[? if year = 1985 and month = 7 and week = 3 : Further Live Aid concerts are held in London and Philadelphia to raise money for famine relief in Ethiopia. ?]
+
+[? if year = 1985 and month = 8 and week = 1 : Japanese Airlines Flight 123 crashes into Mount Takamagahara killing 520 people. ?]
+
+[? if year = 1985 and month = 8 and week = 3 : South Africa declares a nationwide state of emergency as anti-apartheid unrest spreads across the country. ?]
+
+[? if year = 1985 and month = 9 and week = 1 : The wreck of the RMS Titanic is located on the floor of the North Atlantic by a joint American and French expedition. ?]
+
+[? if year = 1985 and month = 9 and week = 3 : A magnitude 8.0 earthquake devastates Mexico City, causing widespread building collapses and numerous casualties. ?]
+
+[? if year = 1985 and month = 10 and week = 1 : Palestinian militants hijack the Italian cruise liner Achille Lauro in the Mediterranean, killing an American passenger. ?]
+
+[? if year = 1985 and month = 10 and week = 3 : Uganda's new government under Yoweri Museveni begins peace negotiations after years of violent upheaval under Milton Obote and Idi Amin. ?]
+
+[? if year = 1985 and month = 11 and week = 1 : Colombia's Palace of Justice is seized by M-19 guerrillas and retaken by the army in a siege leaving over 100 dead. ?]
+
+[? if year = 1985 and month = 11 and week = 3 : Ronald Reagan and Mikhail Gorbachev hold their first summit meeting in Geneva. ?]
+
+[? if year = 1985 and month = 12 and week = 1 : The General Agreement on Tariffs and Trade opens a new round of global trade negotiations in Punta del Este, Uruguay. ?]
+
+[? if year = 1985 and month = 12 and week = 3 : The first Internet domain name is registered ?]
+
+[? if year = 1986 and month = 1 and week = 1 : Spain and Portugal formally join the European Economic Community, expanding it to twelve member states. ?]
+
+[? if year = 1986 and month = 1 and week = 3 : The Space Shuttle Challenger explodes shortly after launch, killing all seven astronauts onboard. ?]
+
+[? if year = 1986 and month = 2 and week = 1 : Prime Minister of Sweden Olof Palme is shot dead on a Stockholm street while walking home from the cinema with his wife. ?]
+
+[? if year = 1986 and month = 2 and week = 3 : Ferdinand Marcos flees the Philippines following a popular uprising against his long-term rule. ?]
+
+[? if year = 1986 and month = 3 and week = 1 : The Soviet Vega probes send back close-up images of Halley's Comet. ?]
+
+[? if year = 1986 and month = 3 and week = 3 : Corazon Aquino is inaugurated as President of the Philippines following the collapse of the Marcos regime. ?]
+
+[? if year = 1986 and month = 4 and week = 1 : The United States bombs targets in Tripoli and Benghazi, Libya following a series of terrorist attacks supposedly linked to Libyan leader Muammar Gaddafi. ?]
+
+[? if year = 1986 and month = 4 and week = 3 : Reactor Four at the Chernobyl Nuclear Power Plant explodes in the Ukrainian SSR. ?]
+
+[? if year = 1986 and month = 5 and week = 1 : A reactor accident at the Chernobyl plant continues spreading radioactive fallout across Europe. ?]
+
+[? if year = 1986 and month = 5 and week = 3 : Soviet authorities begin evacuating hundreds of thousands of people from the region surrounding the stricken Chernobyl nuclear plant. ?]
+
+[? if year = 1986 and month = 6 and week = 1 : The United Nations General Assembly holds its first special session on disarmament amid growing nuclear anxieties. ?]
+
+[? if year = 1986 and month = 6 and week = 3 : Diego Maradona scores the "Hand of God" goal against England at the FIFA World Cup in Mexico. ?]
+
+[? if year = 1986 and month = 7 and week = 1 : New Zealand passes legislation making the country nuclear-free. ?]
+
+[? if year = 1986 and month = 7 and week = 3 : A state of emergency is extended across South Africa as the government intensifies its crackdown on anti-apartheid activists. ?]
+
+[? if year = 1986 and month = 8 and week = 1 : The United States Congress votes to impose economic sanctions on South Africa over apartheid despite President Reagan's veto. ?]
+
+[? if year = 1986 and month = 8 and week = 3 : South African police intensify crackdowns under the nationwide state of emergency. ?]
+
+[? if year = 1986 and month = 9 and week = 1 : Desmond Tutu becomes the first Black Archbishop of Cape Town, South Africa. ?]
+
+[? if year = 1986 and month = 9 and week = 3 : Palestinian gunmen open fire on worshippers at a synagogue in Istanbul, killing 22 people. ?]
+
+[? if year = 1986 and month = 10 and week = 1 : A train collision in the French Alps kills dozens of passengers on a holiday excursion. ?]
+
+[? if year = 1986 and month = 10 and week = 3 : Ronald Reagan and Mikhail Gorbachev meet in Iceland for the Reykjavík Summit. ?]
+
+[? if year = 1986 and month = 11 and week = 1 : A new scandal geins in Washington after reports reveal secret US arms sales to Iran. ?]
+
+[? if year = 1986 and month = 11 and week = 3 : The Iran-Contra scandal deepens as it emerges profits from the arms sales to Iran were secretly funnelled to "contra" rebels in Nicaragua . ?]
+
+[? if year = 1986 and month = 12 and week = 1 : Soviet dissident Andrei Sakharov returns to Moscow after years of internal exile. ?]
+
+[? if year = 1986 and month = 12 and week = 3 : Large student-led demonstrations demanding democratic reform erupt across major Chinese cities. ?]
+
+[? if year = 1987 and month = 1 and week = 1 : Church of England envoy Terry Waite is taken hostage in Beirut while attempting to negotiate the release of other Western hostages. ?]
+
+[? if year = 1987 and month = 1 and week = 3 : China experiences large scale student demonstrations demanding political reforms. ?]
+
+[? if year = 1987 and month = 2 and week = 1 : The trial of former Nazi officer Klaus Barbie begins in France. ?]
+
+[? if year = 1987 and month = 2 and week = 3 : The car ferry Herald of Free Enterprise capsizes outside Zeebrugge harbour in Belgium, killing nearly 200 passengers and crew. ?]
+
+[? if year = 1987 and month = 3 and week = 1 : The Soviet Union announces it will withdraw from Afghanistan if a peace agreement can be reached with the United States and Pakistan. ?]
+
+[? if year = 1987 and month = 3 and week = 3 : AIDS activist groups stage large demonstrations demanding faster government action on the epidemic. ?]
+
+[? if year = 1987 and month = 4 and week = 1 : The United States Senate begins televised hearings into the Iran–Contra affair. ?]
+
+[? if year = 1987 and month = 4 and week = 3 : Gorbachev announces a programme of political openness known as Glasnost alongside his existing economic reform programme (Perestroika). ?]
+
+[? if year = 1987 and month = 5 and week = 1 : A military coup has been carried out in Fiji. ?]
+
+[? if year = 1987 and month = 5 and week = 3 : A West German teenager lands a small plane in Red Square in Moscow after flying undetected through Soviet air defences. ?]
+
+[? if year = 1987 and month = 6 and week = 1 : Margaret Thatcher wins a third consecutive general election securing another large Conservative majority in parliament. ?]
+
+[? if year = 1987 and month = 6 and week = 3 : Ronald Reagan calls on Soviet leader Mikhail Gorbachev to "tear down this wall" during a speech in West Berlin. ?]
+
+[? if year = 1987 and month = 7 and week = 1 : Taiwan lifts martial law after nearly four decades of authoritarian Kuomintang rule. ?]
+
+[? if year = 1987 and month = 7 and week = 3 : An Iraqi missile attack on an American naval vessel in the Persian Gulf kills 37 sailors, straining US-Iraqi relations. ?]
+
+[? if year = 1987 and month = 8 and week = 1 : The Iran-Iraq War rages on with both sides attacking civilian shipping in the Persian Gulf in what is being dubbed, the "tanker war". ?]
+
+[? if year = 1987 and month = 8 and week = 3 : Rudolf Hess dies in Spandau Prison as the last imprisoned senior Nazi official. ?]
+
+[? if year = 1987 and month = 9 and week = 1 : The Montreal Protocol is signed by nations across the world committing to phase out chemicals responsible for destroying the ozone layer. ?]
+
+[? if year = 1987 and month = 9 and week = 3 : Palestinian protesters and "fedayeen" clash with Israeli forces in the occupied Palestinian territories. ?]
+
+[? if year = 1987 and month = 10 and week = 1 : Powerful storms batter Britain and northern France causing widespread destruction in what is being dubbed the "Great Storm". ?]
+
+[? if year = 1987 and month = 10 and week = 1 : President of Burkina Faso, Thomas Sankara is assassinated in a coup d'état. ?]
+
+[? if year = 1987 and month = 10 and week = 3 : Global stock markets crash with the Dow Jones Industrial Average falling over 22 percent in one day. ?]
+
+[? if year = 1987 and month = 11 and week = 1 : The world population officially surpasses five billion according to a United Nations estimate. ?]
+
+[? if year = 1987 and month = 11 and week = 3 : An IRA bomb kills eleven civilians attending a Remembrance Day ceremony in Enniskillen, Northern Ireland. ?]
+
+[? if year = 1987 and month = 12 and week = 1 : Ronald Reagan and Mikhail Gorbachev sign the INF Treaty in Washington D.C. ?]
+
+[? if year = 1987 and month = 12 and week = 3 : Palestinian and Israeli clashes in the occupied territories intensify as the "intifada" (struggle) spreads across the occupied territories. ?]
+
+[? if year = 1988 and month = 1 and week = 1 : South Korean President Chun Doo-hwan transfers power to his elected successor Roh Tae-woo following months of pro-democracy demonstrations. ?]
+
+[? if year = 1988 and month = 1 and week = 3 : The Soviet Union begins a partial withdrawl of troops from Afghanistan after nearly a decade of intervention. ?]
+
+[? if year = 1988 and month = 2 and week = 1 : Protests erupt in the Armenian SSR demanding the transfer of Nagorno-Karabakh from the Azerbaijan SSR to the Armenian SSR. ?]
+
+[? if year = 1988 and month = 2 and week = 3 : Ethnic violence between Armenian's and Azeri's erupts in the town of Sumgait in the Soviet Union. ?]
+
+[? if year = 1988 and month = 3 and week = 1 : The Intermediate Nuclear Forces Treaty comes into force as the United States and Soviet Union begin destroying their short and medium range missiles. ?]
+
+[? if year = 1988 and month = 3 and week = 3 : Iraqi aircraft drop chemical weapons on the Kurdish town of Halabja, killing thousands of civilians. ?]
+
+[? if year = 1988 and month = 4 and week = 1 : The Geneva Accords on Afghanistan are signed by Pakistan and the Afghan government. ?]
+
+[? if year = 1988 and month = 4 and week = 3 : A massive explosion at a Pakistani military base near Islamabad destroys a large stockpile of weapons and ammunition killing hundreds. ?]
+
+[? if year = 1988 and month = 5 and week = 1 : Soviet troops begin their formal withdrawal from Afghanistan in accordance with the Geneva Accords. ?]
+
+[? if year = 1988 and month = 5 and week = 3 : France conducts a military assault on separatists in the pacific French territory of New Caledonia. ?]
+
+[? if year = 1988 and month = 6 and week = 1 : Benazir Bhutto returns to Pakistan to massive crowds demanding an end to military rule. ?]
+
+[? if year = 1988 and month = 6 and week = 3 : Gorbachev proposes sweeping constitutional reforms at the 19th CPSU Conference including the creation of a new parliamentary assembly. ?]
+
+[? if year = 1988 and month = 7 and week = 1 : Iran Air Flight 655 is shot down by the USS Vincennes over the Persian Gulf. ?]
+
+[? if year = 1988 and month = 7 and week = 3 : A bomb detonates on a Pan Am aircraft over the Scottish town of Lockerbie killing all 270 on board. The UK blames the attacks on the Libyan government.?]
+
+[? if year = 1988 and month = 8 and week = 1 : Massive demonstrations against military rule erupt in Myanmar. ?]
+
+[? if year = 1988 and month = 8 and week = 1 : Pakistani President General Zia Al Huq has died following a plane crash. ?]
+
+[? if year = 1988 and month = 8 and week = 3 : Iran and Iraq accept a UN-backed ceasefire ending the constant state of war since 1980 after a long 8 years. ?]
+
+[? if year = 1988 and month = 9 and week = 1 : The military in Myanmar violently suppresses pro-democracy demonstrations killing thousands of protesters. ?]
+
+[? if year = 1988 and month = 9 and week = 3 : The Summer Olympics open in Seoul, South Korea almost a year since the end of de-facto military rule. ?]
+
+[? if year = 1988 and month = 10 and week = 1 : Voters in Chile reject military dictator Augusto Pinochet's continued rule in a national referendum. ?]
+
+[? if year = 1988 and month = 10 and week = 3 : Benazir Bhutto is elected Prime Minister of Pakistan, becoming the first woman to lead a Muslim-majority nation. ?]
+
+[? if year = 1988 and month = 11 and week = 1 : Indian paratroopers land in the Maldives preventing an attempted coup conducted by PLOTE militants. ?]
+
+[? if year = 1988 and month = 11 and week = 3 : George H.W. Bush wins the United States presidential election defeating Democratic candidate Michael Dukakis. ?]
+
+[? if year = 1988 and month = 12 and week = 1 : A powerful earthquake devastates the Armenia SSR, USSR destroying much of the city of Spitak. ?]
+
+[? if year = 1988 and month = 12 and week = 3 : Pan Am Flight 103 explodes over Lockerbie, UK after a bomb detonates onboard the aircraft. ?]
+
+[? if year = 1989 and month = 1 and week = 1 : Soviet troops complete their withdrawal from Afghanistan after almost ten years of intervention. ?]
+
+[? if year = 1989 and month = 1 and week = 3 : Emperor Hirohito of Japan dies after 62 years on the throne and is succeeded by his son Akihito. ?]
+
+[? if year = 1989 and month = 2 and week = 1 : Hungary's ruling Socialist Workers' Party votes to allow free multiparty elections in a dramatic break with the rest of the Eastern Bloc. ?]
+
+[? if year = 1989 and month = 2 and week = 3 : Ayatollah Khomeini issues a fatwa calling for the death of author Salman Rushdie over his novel The Satanic Verses. ?]
+
+[? if year = 1989 and month = 3 and week = 1 : The Soviet Union holds its first competitive multi-candidate elections for the new Congress of People's Deputies. ?]
+
+[? if year = 1989 and month = 3 and week = 3 : The Exxon Valdez oil tanker runs aground in Alaska, causing a massive oil spill. ?]
+
+[? if year = 1989 and month = 4 and week = 1 : The Solidarity trade union is legalised in Poland ahead of partially free elections. ?]
+
+[? if year = 1989 and month = 4 and week = 3 : Student-led demonstrations demanding political reform begin in Beijing's Tiananmen Square. ?]
+
+[? if year = 1989 and month = 5 and week = 1 : Hungary begins dismantling border fortifications along their border with Austria. ?]
+
+[? if year = 1989 and month = 5 and week = 3 : Thousands of Chinese students march to Tiananmen Square as the protest movement continues to swell despite government warnings. ?]
+
+[? if year = 1989 and month = 6 and week = 1 : Chinese troops enter Tiananmen Square following and intensifying violent clashes in the city. ?]
+
+[? if year = 1989 and month = 6 and week = 3 : Solidarity wins a landslide victory in Poland's partially free elections. ?]
+
+[? if year = 1989 and month = 7 and week = 1 : Ayatollah Khomeini, Supreme Leader of Iran, dies and is succeeded by Ali Khamenei. ?]
+
+[? if year = 1989 and month = 7 and week = 3 : Poland elects the first non-communist government in the Eastern Bloc since the 1940s. ?]
+
+[? if year = 1989 and month = 8 and week = 3 : Hundreds of thousands form the Baltic Way human chain across Estonia, Latvia and Lithuania. ?]
+
+[? if year = 1989 and month = 9 and week = 1 : Hungary officially opens its border with Austria allowing East German citizens to move westward. ?]
+
+[? if year = 1989 and month = 9 and week = 3 : South Africa holds elections in which F.W. de Klerk replaces P.W. Botha as president amid growing international pressure over apartheid. ?]
+
+[? if year = 1989 and month = 10 and week = 1 : Large Monday demonstrations continue in East Germany demanding democratic reforms. ?]
+
+[? if year = 1989 and month = 10 and week = 3 : The Hungarian Socialist Workers' Party dissolves as Hungary officially declares itself a democratic republic. ?]
+
+[? if year = 1989 and month = 11 and week = 1 : East German authorities open border crossings in Berlin, crowds are later seen beginning to dismantle the infamous Berlin Wall. ?]
+
+[? if year = 1989 and month = 11 and week = 3 : Czechoslovakia's communist government collapses following massive street protests. ?]
+
+[? if year = 1989 and month = 12 and week = 1 : US President Bush and Soviet leader Gorbachev declare the Cold War effectively over following a summit meeting in Malta. ?]
+
+[? if year = 1989 and month = 12 and week = 3 : President of Romania Nicolae Ceaușescu was overthrown and shortly executed in a large scale revolt against his autocratic rule. ?]
+
+[? if year = 1989 and month = 12 and week = 3 : US forces invade Panama to remove its defacto military leader Manuel Noriega. ?]
+
+[? if year = 1990 and month = 1 and week = 1 : A new Romanian government is formed by the National Salvation Front following the fall of Ceausescu. ?]
+
+[? if year = 1990 and month = 1 and week = 3 : Soviet troops enter Baku in the Azerbaijan SSR to suppress nationalist unrest. ?]
+
+[? if year = 1990 and month = 2 and week = 1 : Nelson Mandela is released from Victor Verster Prison after 27 years of imprisonment. ?]
+
+[? if year = 1990 and month = 2 and week = 3 : Yemeni unification talks between North Yemen and South Yemen reach an agreement on forming a single state. ?]
+
+[? if year = 1990 and month = 3 and week = 1 : Lithuania declares independence from the Soviet Union. ?]
+
+[? if year = 1990 and month = 3 and week = 3 : Namibia gains independence from South Africa after 23 years of war involving South Africa and the intervention of Cuba. ?]
+
+[? if year = 1990 and month = 4 and week = 1 : The Space Shuttle Discovery deploys the Hubble Space Telescope into orbit. ?]
+
+[? if year = 1990 and month = 4 and week = 3 : The Soviet Union imposes an economic blockade on Lithuania in response to its declaration of independence. ?]
+
+[? if year = 1990 and month = 5 and week = 1 : Violeta Chamorro defeats incumbent Daniel Ortega in presidential elections in Nicaragua. ?]
+
+[? if year = 1990 and month = 5 and week = 3 : East and West Germany agree on terms for full economic and monetary union ahead of a planned political reunification. ?]
+
+[? if year = 1990 and month = 6 and week = 1 : Boris Yeltsin is elected president of the Russian SFSR in a vote that further undermines Gorbachev's authority. ?]
+
+[? if year = 1990 and month = 6 and week = 3 : The Schengen Agreement comes into effect between several Western European states. ?]
+
+[? if year = 1990 and month = 7 and week = 1 : East Germany adopts the West German Deutsche Mark ahead of a planned reunification. ?]
+
+[? if year = 1990 and month = 7 and week = 3 : The Two Plus Four Treaty is signed by the two German states and the former occupying Allied powers in WW2 (France, UK, USA & USSR), clearing the path for German reunification. ?]
+
+[? if year = 1990 and month = 8 and week = 1 : Iraqi forces invade Kuwait and rapidly occupy the country. ?]
+
+[? if year = 1990 and month = 8 and week = 3 : The United Nations Security Council votes to impose sweeping sanctions on Iraq following its invasion of Kuwait. ?]
+
+[? if year = 1990 and month = 9 and week = 1 : Saddam Hussein calls for jihad against foreign forces gathering in Saudi Arabia for what is speculated to be a Korean war style intervention. ?]
+
+[? if year = 1990 and month = 9 and week = 3 : A large multinational military force continues to build up in Saudi Arabia in preparation for a possible intervention to liberate Kuwait. ?]
+
+[? if year = 1990 and month = 10 and week = 1 : East Germany is annexed into West Germany reuniting Germany for the first time in 45 years since the end of WW2. ?]
+
+[? if year = 1990 and month = 10 and week = 3 : The United Nations Security Council authorises member states to use force to expel Iraqi troops from Kuwait if they have not withdrawn by January 1991. ?]
+
+[? if year = 1990 and month = 11 and week = 1 : Margaret Thatcher resigns as Prime Minister of the United Kingdom after internal party pressure. ?]
+
+[? if year = 1990 and month = 11 and week = 3 : John Major is elected leader of the Conservative Party and becomes Prime Minister of the United Kingdom. ?]
+
+[? if year = 1990 and month = 12 and week = 1 : The first ever World Wide Web page is created by British scientist Tim Berners-Lee at the CERN laboratory in Geneva. ?]
+
+[? if year = 1990 and month = 12 and week = 3 : Liberal candidate Lech Wałęsa is elected President of Poland in the country's first direct presidential election. ?]
