@@ -333,10 +333,6 @@ const colourList = [
         style: "font-weight: bold;"
     },
     {
-        word: "Tamil",
-        style: "font-weight: bold;"
-    },
-    {
         word: "Muslims",
         style: "font-weight: bold;"
     },
@@ -1166,10 +1162,6 @@ const tooltipList = [{
     {
     searchString: "Sri Lankan Tamil",
     explanationText: "<img src=img/logos/Sri_Lankan_Tamil_Logo.png> Sri Lankan Tamil <br> ஈழத் தமிழர்"
-    },
-    {
-    searchString: "Tamil",
-    explanationText: "<img src=img/logos/Sri_Lankan_Tamil_Logo.png> Sri Lankan Tamil <br> ஈழத் தமிழர் "
     },
     {
     searchString: "Muslims",

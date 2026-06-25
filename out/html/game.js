@@ -916,11 +916,6 @@
             return baseTooltip.explanationText + '<br>' + proptext + '% of the population';
         }
 
-        if (searchString === 'Tamil' && Q.sltamil_proportion !== undefined) {
-            var proptext = Q.sltamil_proportion;
-            return baseTooltip.explanationText + '<br>' + proptext + '% of the population';
-        }
-
         if (searchString === 'Indian Tamil' && Q.itamil_proportion !== undefined) {
             var proptext = Q.itamil_proportion;
             return baseTooltip.explanationText + '<br>' + proptext + '% of the population';
