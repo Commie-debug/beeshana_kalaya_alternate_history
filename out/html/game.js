@@ -653,12 +653,6 @@
             });
         },
         function(next) {
-            window.changeTab('status.news', 'news_tab');
-            spotlightOnSelector('#news_tab', function() {
-                showText('This tab shows you the "goings on" in the rest of the world, sometimes these events may even effect Sri Lanka.', 4200, next);
-            });
-        },
-        function(next) {
             var btn = findByText('#content a', 'Begin (normal difficulty)');
             positionSpotlightOnEl(btn);
             setTimeout(function() {
