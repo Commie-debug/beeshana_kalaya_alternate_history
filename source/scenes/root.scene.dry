@@ -13,8 +13,7 @@ go-to: start_menu_2
 - @start: Start game
 - @election_simulation: Election simulation
 - @credits: Credits
-
-//re-add @game_over.achievements later when done
+- @game_over.achievements
 
 @start
 on-arrival: {!
