@@ -1194,6 +1194,15 @@ table {
 .seat.appointed {
     fill: #C5A059;
 }
+.seat.no {
+    fill: #fd0101;
+}
+.seat.yes {
+    fill: #006400;
+}
+.seat.abstain {
+    fill: #b5b5b5;
+}
 
 
 .tooltip-text {

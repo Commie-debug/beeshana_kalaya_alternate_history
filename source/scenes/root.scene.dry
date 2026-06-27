@@ -1658,6 +1658,8 @@ Q.electoral_threshold = 0;
 Q.slfp_local_gov = 0;
 
 //ammendments
+//allowing presidents to call early election after 4 years
+Q.third_ammendment = 0;
 Q.national_list_added = 0;
 
 //broadcasting freedoms
