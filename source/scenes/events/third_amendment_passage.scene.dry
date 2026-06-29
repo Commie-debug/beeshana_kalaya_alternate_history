@@ -19,12 +19,22 @@ Minister of Education [+ education_minister +] interupts the reading, replying "
 
 The reading continued and soon after voting begin, the TULF has decided that they themselves would abstain from the vote. The lone CWC MP will most likely vote for, the lone CPSL MP Sarath Muttetuwegama is seemingly the only person in parliament who will vote against the ammendment.
 
-- @for: The SLFP's 4 Nationalists MP's shock the nation and even the UNP by voting in favour of the ammendment.
-- @against: The SLFP's 3 Left MP's rally and vote against the ammendment, joining the lone CPSL MP.
+- @for: The SLFP's 4 Nationalists MP's shock the nation and even the UNP by voting in favour of the ammendment. The Left in reaction, votes against.
+- @against: The SLFP's 3 Left MP's rally and vote against the ammendment, joining the lone CPSL MP. The Nationalists in reaction, votes for.
 - @abstain: The split prevents us from properly organising a vote on the ammendment, as expected we abstain.
 
 @for
 on-display: {!
+    Q.tulf_relation -= 3;
+    Q.cpsl_relation -= 3;
+    Q.lssp_relation -= 3;
+    Q.nssp_relation -= 3;
+    Q.actc_relation -= 2;
+
+    Q.nationalist_strength += 5;
+    Q.left_strength -= 5;
+    Q.left_dissent += 3;
+
 data = [
   {
       "id": "No",
@@ -37,14 +47,14 @@ data = [
       "id": "Yes",
       "legend": "Yes",
       "name": "yes",
-      "seats": 147,
+      "seats": 146,
       "color": "#0e6c00",
   },
   {
       "id": "Abstain",
       "legend": "Abstain",
       "name": "abstain",
-      "seats": 10,
+      "seats": 21,
       "color": "#8d8d8d",
   },
 ];
@@ -71,11 +81,28 @@ if (window && d3) {
 
 {!<svg id="parl_vote" style="width: 500px; height: 250px;"> </svg>!}
 
-The result was inevtiable, the ammendment has passed
+{!<table style="text-align:left; border-spacing: 0.5em;">!}
+{!<tr><th>Choice</th><th>Supporting Parties</th><th>Votes</th></tr>!}
+{!<tr><td><div class="box" style='background-color: #0e6c00; outline: 2px; outline-style: solid;'> </div> !} Yes {!</td><td>!} UNP, CWC,SLFP Nationalists {!</td><td>!} **146** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #ca1010; outline: 2px; outline-style: solid;'> </div> !} No {!</td><td>!} CPSL {!</td><td>!} **1** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #8d8d8d; outline: 2px; outline-style: solid;'> </div> !} Abstain {!</td><td>!} SLFP Left, TULF {!</td><td>!} **21** {!</td><td></td></tr>!}
+{!</table>!}
 
+The result was inevtiable, the ammendment has passed and almost immedietly, JR has called for early presidential elections. 
+
+Nominations for it will be taken in on September 17th and election day is set for 20th of October. Already other parties have begun preparing for the campaign, while we are still in the midst of a schism. Its hard not to see the elections being timed to capitalise on our internal disarray.
 
 @against
 on-display: {!
+    Q.tulf_relation += 3;
+    Q.cpsl_relation += 3;
+    Q.lssp_relation += 3;
+    Q.nssp_relation += 3;
+    Q.actc_relation += 2;
+
+    Q.left_strength += 5;
+    Q.nationalist_strength -= 5;
+    Q.nationalist_dissent += 3;
 data = [
   {
       "id": "No",
@@ -88,14 +115,14 @@ data = [
       "id": "Yes",
       "legend": "Yes",
       "name": "yes",
-      "seats": 143,
+      "seats": 142,
       "color": "#0e6c00",
   },
   {
       "id": "Abstain",
       "legend": "Abstain",
       "name": "abstain",
-      "seats": 10,
+      "seats": 22,
       "color": "#8d8d8d",
   },
 ];
@@ -122,8 +149,28 @@ if (window && d3) {
 
 {!<svg id="parl_vote" style="width: 500px; height: 250px;"> </svg>!}
 
+{!<table style="text-align:left; border-spacing: 0.5em;">!}
+{!<tr><th>Choice</th><th>Supporting Parties</th><th>Votes</th></tr>!}
+{!<tr><td><div class="box" style='background-color: #0e6c00; outline: 2px; outline-style: solid;'> </div> !} Yes {!</td><td>!} UNP, CWC {!</td><td>!} **142** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #ca1010; outline: 2px; outline-style: solid;'> </div> !} No {!</td><td>!} CPSL, SLFP Left {!</td><td>!} **4** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #8d8d8d; outline: 2px; outline-style: solid;'> </div> !} Abstain {!</td><td>!} SLFP Nationalists, TULF {!</td><td>!} **22** {!</td><td></td></tr>!}
+{!</table>!}
+
+The result was inevtiable, the ammendment has passed and almost immedietly, JR has called for early presidential elections. 
+
+Nominations for it will be taken in on September 17th and election day is set for 20th of October. Already other parties have begun preparing for the campaign, while we are still in the midst of a schism. Its hard not to see the elections being timed to capitalise on our internal disarray.
+
+
 @abstain
 on-display: {!
+    Q.tulf_relation += 2;
+    Q.cpsl_relation += 2;
+    Q.lssp_relation += 2;
+    Q.nssp_relation += 2;
+    Q.actc_relation += 2;
+
+    Q.nationalist_dissent -= 5;
+    Q.left_dissent -= 5;
 data = [
   {
       "id": "No",
@@ -136,7 +183,7 @@ data = [
       "id": "Yes",
       "legend": "Yes",
       "name": "yes",
-      "seats": 143,
+      "seats": 142,
       "color": "#0e6c00",
   },
   {
@@ -169,3 +216,14 @@ if (window && d3) {
 = Voting
 
 {!<svg id="parl_vote" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table style="text-align:left; border-spacing: 0.5em;">!}
+{!<tr><th>Choice</th><th>Supporting Parties</th><th>Votes</th></tr>!}
+{!<tr><td><div class="box" style='background-color: #0e6c00; outline: 2px; outline-style: solid;'> </div> !} Yes {!</td><td>!} UNP, CWC {!</td><td>!} **142** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #ca1010; outline: 2px; outline-style: solid;'> </div> !} No {!</td><td>!} CPSL {!</td><td>!} **1** {!</td><td></td></tr>!}
+{!<tr><td><div class="box" style='background-color: #8d8d8d; outline: 2px; outline-style: solid;'> </div> !} Abstain {!</td><td>!} SLFP, TULF {!</td><td>!} **25** {!</td><td></td></tr>!}
+{!</table>!}
+
+The result was inevtiable, the ammendment has passed and almost immedietly, JR has called for early presidential elections. 
+
+Nominations for it will be taken in on September 17th and election day is set for 20th of October. Already other parties have begun preparing for the campaign, while we are still in the midst of a schism. Its hard not to see the elections being timed to capitalise on our internal disarray.
