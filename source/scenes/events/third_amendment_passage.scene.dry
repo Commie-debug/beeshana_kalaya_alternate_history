@@ -99,37 +99,49 @@ setTimeout(function() {
 
 
 @abstain
-on-arrival: {!
-    var _newData = [];
-    function _addP(id, legend, seats) {
-        if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
-    }
-    _addP('no',  'No', 1);
-    _addP('yes',   'Yes',  143);
-    _addP('abstain',   'Abstain',  17);
-    var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
-    var _changed = (_newSig !== window._parliSig);
-    window._parliData = _newData;
-    if (_changed) { window._parliSig = _newSig; window._parliAnimate = true; }
-    else { window._parliAnimate = false; }
-!}
 on-display: {!
-setTimeout(function() {
-    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
-    var el = document.getElementById('new_parliament');
-    if (!el) return;
-    var w = el.parentElement.offsetWidth || 450;
-    el.setAttribute('width', w);
-    el.setAttribute('height', Math.round(w * 0.50));
-    var parl = d3.parliament();
-    parl.width(w).height(Math.round(w * 0.50)).innerRadiusCoef(0.4);
-    var animate = window._parliAnimate;
-    parl.enter.fromCenter(animate).smallToBig(animate);
-    parl.exit.toCenter(animate).bigToSmall(animate);
-    d3.select('#new_parliament').datum(window._parliData).call(parl);
-}, 150);
+data = [
+  {
+      "id": "No",
+      "legend": "No",
+      "name": "no",
+      "seats": 1,
+      "color": "#ca1010",
+  },  
+  {
+      "id": "Yes",
+      "legend": "Yes",
+      "name": "yes",
+      "seats": 143,
+      "color": "#0e6c00",
+  },
+  {
+      "id": "Yes",
+      "legend": "Yes",
+      "name": "yes",
+      "seats": 25,
+      "color": "#8d8d8d",
+  },
+];
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("parl_vote").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#parl_vote").datum(data).call(parliament);
+
+}
 !}
 
 = Voting
 
-{!<svg id="new_parliament" style="width: 100%; height: 280px; display: block; margin: 0 auto;"></svg>!}
+{!<svg id="parl_vote" style="width: 500px; height: 250px;"> </svg>!}
