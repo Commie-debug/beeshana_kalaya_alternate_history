@@ -1930,15 +1930,15 @@ const tooltipList = [{
     //portraits below
     {
     searchString: "JR Jayewardene",
-    explanationText: "<img src=img/portraits/Jayewardene_JR.jpg> Junius Richard Jayewardene"
+    explanationText: "<img src=img/portraits/Jayewardene_JR.jpg> Junius Richard Jayewardene, The Old Fox"
     },
     {
     searchString: "Jayewardene",
-    explanationText: "<img src=img/portraits/Jayewardene_JR.jpg> Junius Richard Jayewardene"
+    explanationText: "<img src=img/portraits/Jayewardene_JR.jpg> Junius Richard Jayewardene, The Old Fox"
     },
     {
     searchString: "Ranasinghe Premadasa",
-    explanationText: "<img src=img/portraits/Premadasa_Ranasinghe.jpg> Ranasinghe Premadasa"
+    explanationText: "<img src=img/portraits/Premadasa_Ranasinghe.jpg> Ranasinghe Premadasa, Keselwatte Kolla"
     },
     {
     searchString: "A. Amirthalingam",
@@ -1950,15 +1950,15 @@ const tooltipList = [{
     },
     {
     searchString: "Sirimavo Bandaranaike",
-    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike, Sri Lanka's Iron Lady"
     },
     {
     searchString: "Sirimavo",
-    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike, Sri Lanka's Iron Lady"
     },
     {
     searchString: "Mrs Bandaranaike",
-    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike"
+    explanationText: "<img src=img/portraits/BandaranaikeSirimavo.jpg> Sirima Ratwatte Dias Bandaranaike, Sri Lanka's Iron Lady"
     },
     {
     searchString: "Anura Bandaranaike",
