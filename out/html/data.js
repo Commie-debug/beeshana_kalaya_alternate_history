@@ -1466,7 +1466,7 @@ const tooltipList = [{
     },
     {
     searchString: "Appointed",
-    explanationText: "Appointed by the Governor-General "
+    explanationText: "<img src=img/logos/governer_general_Logo.png> Appointed by the Governor-General "
     },
 
 
