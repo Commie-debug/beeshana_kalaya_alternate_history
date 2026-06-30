@@ -35,6 +35,11 @@ on-display: {!
     Q.left_strength -= 5;
     Q.left_dissent += 3;
 
+    Q.next_pres_election_year = 1982;
+    Q.next_pres_election_month = 10;
+    Q.next_pres_election_week = 3;
+    Q.in_election = 1;
+
 data = [
   {
       "id": "No",
@@ -103,6 +108,12 @@ on-display: {!
     Q.left_strength += 5;
     Q.nationalist_strength -= 5;
     Q.nationalist_dissent += 3;
+
+    Q.next_pres_election_year = 1982;
+    Q.next_pres_election_month = 10;
+    Q.next_pres_election_week = 3;
+    Q.in_election = 1;
+    
 data = [
   {
       "id": "No",
@@ -171,6 +182,12 @@ on-display: {!
 
     Q.nationalist_dissent -= 5;
     Q.left_dissent -= 5;
+
+    Q.next_pres_election_year = 1982;
+    Q.next_pres_election_month = 10;
+    Q.next_pres_election_week = 3;
+    Q.in_election = 1;
+
 data = [
   {
       "id": "No",
