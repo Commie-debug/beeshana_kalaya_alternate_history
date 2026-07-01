@@ -338,7 +338,7 @@ Q.cwc_pres_endorsement = '';
 Q.actc_pres_endorsement = '';
 Q.slpp_pres_endorsement = '';
 Q.slmp_pres_endorsement = '';
-Q.slmc_pres_endorsement = 'unp';
+Q.slmc_pres_endorsement = '';
 Q.npp_pres_endorsement = '';
 Q.mep_pres_endorsement = '';
 Q.eros_pres_endorsement = '';
@@ -375,7 +375,7 @@ Q.endlf_pres_candidate = 'ENDLF CANDIDATE';
 Q.telo_pres_candidate = 'TELO CANDIDATE';
 Q.eprlf_pres_candidate = 'EPRLF CANDIDATE';
 Q.ulpp_pres_candidate = 'ULPP CANDIDATE';
-Q.dunf_pres_candidate = 'DUNF CANDIDATE';
+Q.dunf_pres_candidate = 'Lalith Athulathmudali';
 
 //party taking part in president elections
 Q.slfp_pres_yes = 1;
