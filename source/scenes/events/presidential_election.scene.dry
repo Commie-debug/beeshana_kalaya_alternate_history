@@ -617,9 +617,9 @@ for (var d = 0; d < display_districts.length; d++) {
     }
     
     //store winning color for this district
-    var win_color = '#E1B300'; //default gold if no winner
+    var win_color = '#b8b8b8'; //default gold if no winner
     if (winning_party !== '') {
-        win_color = Q.partyColors[winning_party.toUpperCase()] || '#E1B300';
+        win_color = Q.partyColors[winning_party.toUpperCase()] || '#b8b8b8';
     }
     Q[dist + '_winner_color'] = win_color;
 }
