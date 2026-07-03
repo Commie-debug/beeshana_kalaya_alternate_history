@@ -14,6 +14,10 @@ Our party is still divided between Sirimavo and Maitripala cliques, it is expect
 - @next: MP Lakshamn Jayakody makes his address, he reads a letter made by members of the UK House of Commons. The letter expresses concern over the proposed ammendment infringing on Sri Lankan democracy.
 
 @next
+on-arrival:{!
+    Q.tulf_pres_yes = 0;
+    Q.cwc_pres_endorsement = 'unp';
+!}
 
 Minister of Education [+ education_minister +] interupts the reading, replying "As far as this House is concerned we are sovereign, the people of this country are sovereign and we are exercising that power which the people of this country have given us. We are not interested in what the House of Commons has to say or what the Britishers have to say".
 
