@@ -1,18 +1,67 @@
 title: Nominations for the upcoming presidential elections are being submitted
 view-if: ((year = next_pres_election_year and month >= next_pres_election_month-1) or (year > next_pres_election_year)) and (week = next_pres_election_week)
 max-visits: 1
+new-page: true
 tags: event
 
-= Nominations for Presidential Elections
+= Presidential Election Nominees, [+ month : month +] [+ year +]
 
-#always a month before the presidential election
+With presidential elections approaching next month, the candidates for the presidency have been announced.
 
-Nominations are now being filled as candidates and their party faculty flood to the Election Commission building at Rajagiriya, Colombo.
+on-arrival: {!
 
-News starts coming back as to who has correctly filed their candidacy.
+var base_parties = ['unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc'];
+var formable_parties = ['slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf', 'endlf', 'telo', 'eprlf', 'dunf', 'ulpp'];
+var all_party_names = base_parties.slice();
 
-- @unp: The UNP
+for (var fp of formable_parties) {
+    if (Q[fp + '_formed']) all_party_names.push(fp);
+}
 
-@unp
+var candidates = {};
 
-wow
+for (var party of all_party_names) {
+    if (Q[party + '_pres_yes'] === 0) continue;
+    var endorsement = Q[party + '_pres_endorsement'];
+    var candidate = Q[party + '_pres_candidate'];
+    if (!endorsement || endorsement === '') {
+        if (candidate && candidate !== '') {
+            if (!candidates[candidate]) {
+                candidates[candidate] = { party: party, supporters: [] };
+            }
+            if (candidates[candidate].supporters.indexOf(party) === -1) {
+                candidates[candidate].supporters.push(party);
+            }
+        }
+    } else {
+        var endorsed_party = endorsement.toLowerCase();
+        var endorsed_candidate = Q[endorsed_party + '_pres_candidate'];
+        if (endorsed_candidate && endorsed_candidate !== '') {
+            if (!candidates[endorsed_candidate]) {
+                candidates[endorsed_candidate] = { party: endorsed_party, supporters: [] };
+            }
+            if (candidates[endorsed_candidate].supporters.indexOf(party) === -1) {
+                candidates[endorsed_candidate].supporters.push(party);
+            }
+        }
+    }
+}
+
+var html = '<table><tr><th>Candidate</th><th>Party</th><th>Supporting Parties</th></tr>';
+for (var cname in candidates) {
+    var c = candidates[cname];
+    var supporters = c.supporters.filter(function(s) { return s !== c.party; });
+    html += '<tr><td>' + cname + '</td><td>' + c.party.toUpperCase() + '</td><td>' + (supporters.length > 0 ? supporters.map(function(s) { return s.toUpperCase(); }).join(', ') : '-') + '</td></tr>';
+}
+html += '</table>';
+
+Q.nominees_html = html;
+
+!}
+
+{! document.write(Q.nominees_html); !}
+
+- @nominees_done: Noted.
+
+@nominees_done
+go-to: post_event
