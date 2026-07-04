@@ -644,6 +644,30 @@ body.tutorial-no-scroll {
     color: white;
 }
 
+/*stolen from dynamic*/
+.scrollable-box {
+  width: 540px;
+  /* Default width */
+  height: 200px;
+  /* Fixed height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
+/* Adjust only the width for smaller screens */
+@media (max-width: 600px) {
+  .scrollable-box {
+    width: 102%;
+    /* Make it adapt to screen size */
+    max-width: 540px;
+    /* Prevent it from getting too wide */
+  }
+}
+
+p.other {
+  display: block;
+}
+
 /*parliament tooltip code based/from road to ithaca*/
 .parliament-tooltip {
     position: absolute;
@@ -929,6 +953,8 @@ img {
   #mid_panel {
       margin: 0 auto;
   }
+
+
 
   /* cards are smaller on mobile */
   .card-img {

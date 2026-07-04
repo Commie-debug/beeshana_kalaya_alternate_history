@@ -326,7 +326,7 @@ Q.united_front_formed = 0;
 Q.unp_cwc_formed = 1;
 
 //empty mean they run independently or is in coalition
-//party name in lower case means they are being endorsed for president
+//party name in lower case means they are being endorsed for president, this is seperate from coalitions which will also function the same as endorsments
 Q.slfp_pres_endorsement = '';
 Q.unp_pres_endorsement = '';
 Q.jvp_pres_endorsement = '';
