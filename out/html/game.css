@@ -648,7 +648,7 @@ body.tutorial-no-scroll {
 .scrollable-box {
   width: 540px;
   /* Default width */
-  height: 200px;
+  height: 100px;
   /* Fixed height */
   overflow-y: auto;
   /* Enable vertical scrolling */
