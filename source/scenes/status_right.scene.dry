@@ -4,25 +4,7 @@ is-special: true
 
 = [+ district_name +] District
 
-Working class: [+ district_worker +]%
-
-Middle class: [+ district_middle +]%
-
-Upper class: [+ district_upper +]%
-
-Rural: [+ district_rural +]%
-
 {!<div style="display:flex;gap:1em;justify-content:center;margin:0.5em 0;"><div style="text-align:center;"><b style="font-size:0.85em;">Class</b><br><canvas id="class-pie" width="120" height="120"></canvas></div><div style="text-align:center;"><b style="font-size:0.85em;">Ethnicity</b><br><canvas id="ethnic-pie" width="120" height="120"></canvas></div></div>!}
-
-Sinhalese: [+ district_sinhala +]%
-
-Sri Lankan Tamil: [+ district_sltamil +]%
-
-Indian Tamil: [+ district_itamil +]%
-
-Muslims: [+ district_muslim +]%
-
-Others: [+ district_others +]%
 
 Control: [+ district_control : control +]
 
