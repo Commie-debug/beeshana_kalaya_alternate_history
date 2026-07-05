@@ -12,53 +12,9 @@ Upper class: [+ district_upper +]%
 
 Rural: [+ district_rural +]%
 
-{!
-(function() {
-    var classData = [
-        { label: 'Working class', value: Q.district_worker || 0, color: '#e74c3c' },
-        { label: 'Middle class', value: Q.district_middle || 0, color: '#3498db' },
-        { label: 'Upper class', value: Q.district_upper || 0, color: '#f1c40f' },
-        { label: 'Rural', value: Q.district_rural || 0, color: '#2ecc71' }
-    ];
-    var ethnicData = [
-        { label: 'Sinhalese', value: Q.district_sinhala || 0, color: '#e67e22' },
-        { label: 'Sri Lankan Tamil', value: Q.district_sltamil || 0, color: '#9b59b6' },
-        { label: 'Indian Tamil', value: Q.district_itamil || 0, color: '#1abc9c' },
-        { label: 'Muslim', value: Q.district_muslim || 0, color: '#34495e' },
-        { label: 'Other', value: Q.district_other || 0, color: '#95a5a6' }
-    ];
+{!<div style="display:flex;gap:1em;justify-content:center;margin:0.5em 0;"><div style="text-align:center;"><b style="font-size:0.85em;">Class</b><br><canvas id="class-pie" width="120" height="120"></canvas></div><div style="text-align:center;"><b style="font-size:0.85em;">Ethnicity</b><br><canvas id="ethnic-pie" width="120" height="120"></canvas></div></div>!}
 
-    function drawPie(canvasId, data) {
-        var canvas = document.getElementById(canvasId);
-        if (!canvas) return;
-        var ctx = canvas.getContext('2d');
-        var total = data.reduce(function(s, d) { return s + d.value; }, 0);
-        if (total === 0) return;
-        var startAngle = -Math.PI / 2;
-        var cx = canvas.width / 2, cy = canvas.height / 2, r = Math.min(cx, cy) - 5;
-        data.forEach(function(d) {
-            var slice = (d.value / total) * 2 * Math.PI;
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.arc(cx, cy, r, startAngle, startAngle + slice);
-            ctx.closePath();
-            ctx.fillStyle = d.color;
-            ctx.fill();
-            startAngle += slice;
-        });
-    }
-
-    setTimeout(function() {
-        drawPie('class-pie', classData);
-        drawPie('ethnic-pie', ethnicData);
-    }, 100);
-})();
-!}
-
-{!<div style="display:flex; gap:1em; justify-content:center; margin: 0.5em 0;">!}
-{!<div style="text-align:center;"><div style="font-weight:bold; font-size:0.85em; margin-bottom:4px;">Class</div><canvas id="class-pie" width="120" height="120"></canvas></div>!}
-{!<div style="text-align:center;"><div style="font-weight:bold; font-size:0.85em; margin-bottom:4px;">Ethnicity</div><canvas id="ethnic-pie" width="120" height="120"></canvas></div>!}
-{!</div>!}
+{! setTimeout(window.drawDistrictPies, 200); !}
 
 Sinhalese: [+ district_sinhala +]%
 

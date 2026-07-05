@@ -1248,6 +1248,39 @@
   // This function allows you to do something in response to signals.
   window.handleSignal = function(signal, event, scene_id) {
   };
+   
+  // piecharts
+  window.drawDistrictPies = function() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    function drawPie(id, data) {
+        var c = document.getElementById(id);
+        if (!c) return;
+        var ctx = c.getContext('2d');
+        var total = data.reduce(function(s, d) { return s + d.value; }, 0);
+        if (!total) return;
+        var a = -Math.PI / 2, cx = 60, cy = 60, r = 55;
+        data.forEach(function(d) {
+            var s = (d.value / total) * 2 * Math.PI;
+            ctx.beginPath(); ctx.moveTo(cx, cy);
+            ctx.arc(cx, cy, r, a, a + s);
+            ctx.closePath(); ctx.fillStyle = d.color; ctx.fill();
+            a += s;
+        });
+    }
+    drawPie('class-pie', [
+        { value: Q.district_worker || 0, color: '#e74c3c' },
+        { value: Q.district_middle || 0, color: '#3498db' },
+        { value: Q.district_upper || 0, color: '#f1c40f' },
+        { value: Q.district_rural || 0, color: '#2ecc71' }
+    ]);
+    drawPie('ethnic-pie', [
+        { value: Q.district_sinhala || 0, color: '#e67e22' },
+        { value: Q.district_sltamil || 0, color: '#9b59b6' },
+        { value: Q.district_itamil || 0, color: '#1abc9c' },
+        { value: Q.district_muslim || 0, color: '#34495e' },
+        { value: Q.district_others || 0, color: '#95a5a6' }
+    ]);
+};
   
   // This function runs on a new page. Right now, this auto-saves.
   window.onNewPage = function() {
