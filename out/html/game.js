@@ -1289,29 +1289,22 @@
         if (oldTip) oldTip.remove();
         var tip = document.createElement('div');
         tip.id = id + '-tip';
-        tip.style.cssText = 'position:fixed;display:none;background:var(--content-bg-color);border:1px solid #aaa;border-radius:4px;padding:4px 8px;font-size:0.8em;z-index:9999;pointer-events:none;';
+        tip.style.cssText = 'position:fixed;display:none;background:var(--content-bg-color);border:1px solid #aaa;border-radius:4px;padding:6px 8px;font-size:0.8em;z-index:9999;pointer-events:none;';
+
+        var rows = data.map(function(d) {
+            var pct = total > 0 ? Math.round((d.value / total) * 1000) / 10 : 0;
+            return '<tr><td><span style="display:inline-block;width:10px;height:10px;background:' + d.color + ';margin-right:4px;border-radius:2px;"></span></td><td style="padding-right:8px;">' + d.label + '</td><td>' + pct + '%</td></tr>';
+        }).join('');
+        tip.innerHTML = '<table style="border-collapse:collapse;">' + rows + '</table>';
         document.body.appendChild(tip);
 
-        c.onmousemove = function(e) {
-            var rect = c.getBoundingClientRect();
-            var mx = e.clientX - rect.left - cx;
-            var my = e.clientY - rect.top - cy;
-            var dist = Math.sqrt(mx*mx + my*my);
-            if (dist > r) { tip.style.display = 'none'; return; }
-            var angle = Math.atan2(my, mx);
-            if (angle < -Math.PI/2) angle += 2*Math.PI;
-            var found = null;
-            slices.forEach(function(sl) {
-                var start = sl.start < -Math.PI/2 ? sl.start + 2*Math.PI : sl.start;
-                var end = sl.end < start ? sl.end + 2*Math.PI : sl.end;
-                var a2 = angle < start ? angle + 2*Math.PI : angle;
-                if (a2 >= start && a2 <= end) found = sl;
-            });
-            if (!found) { tip.style.display = 'none'; return; }
-            var pct = Math.round((found.data.value / found.total) * 1000) / 10;
-            tip.innerHTML = '<span style="display:inline-block;width:10px;height:10px;background:' + found.data.color + ';margin-right:4px;"></span>' + found.data.label + ': ' + pct + '%';
+        c.onmouseenter = function(e) {
             tip.style.display = 'block';
-            tip.style.left = (e.clientX + 10) + 'px';
+            tip.style.left = (e.clientX + 12) + 'px';
+            tip.style.top = (e.clientY - 20) + 'px';
+        };
+        c.onmousemove = function(e) {
+            tip.style.left = (e.clientX + 12) + 'px';
             tip.style.top = (e.clientY - 20) + 'px';
         };
         c.onmouseleave = function() { tip.style.display = 'none'; };
