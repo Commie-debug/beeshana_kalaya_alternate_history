@@ -1310,6 +1310,7 @@ window.updateSidebarRight = function() {
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
     var html = dendryUI.contentToHTML.convert(displayContent);
     $('#qualities_right').html(window.displayText(html));
+    setTimeout(window.drawDistrictPies, 200);
   };
 
   window.changeTab = function(newTab, tabId) {

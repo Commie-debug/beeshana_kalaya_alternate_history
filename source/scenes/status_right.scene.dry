@@ -14,8 +14,6 @@ Rural: [+ district_rural +]%
 
 {!<div style="display:flex;gap:1em;justify-content:center;margin:0.5em 0;"><div style="text-align:center;"><b style="font-size:0.85em;">Class</b><br><canvas id="class-pie" width="120" height="120"></canvas></div><div style="text-align:center;"><b style="font-size:0.85em;">Ethnicity</b><br><canvas id="ethnic-pie" width="120" height="120"></canvas></div></div>!}
 
-{! setTimeout(window.drawDistrictPies, 200); !}
-
 Sinhalese: [+ district_sinhala +]%
 
 Sri Lankan Tamil: [+ district_sltamil +]%
