@@ -1152,6 +1152,22 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/Rubber_Logo.png> Rubber tapping plantation"
     },
     {
+    searchString: "Manufacturing",
+    explanationText: "<img src=img/logos/Manufacturing_Logo.png> Cracker manufacturing"
+    },
+    {
+    searchString: "Ports",
+    explanationText: "<img src=img/logos/Ports_Logo.png> Colombo Port"
+    },
+    {
+    searchString: "Commerce & Trade",
+    explanationText: "<img src=img/logos/Market_Logo.png> Vegetable market stall"
+    },
+    {
+    searchString: "Banking",
+    explanationText: "<img src=img/logos/Banking_Logo.png> Commercial Bank branch"
+    },
+    {
     searchString: "Sinhalese",
     explanationText: "<img src=img/logos/Sinhalese_Logo.png> Sinhalese <br> සිංහල"
     },

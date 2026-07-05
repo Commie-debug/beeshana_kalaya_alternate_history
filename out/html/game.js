@@ -1313,6 +1313,36 @@
     drawPie('class-pie', classData);
     drawPie('ethnic-pie', ethnicData);
 };
+
+window.renderDistrictIndustries = function() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    var container = document.getElementById('district-industries');
+    if (!container) return;
+    var industryIcons = {
+        'Tourism':              'img/logos/Tourism_Logo.png>',
+        'Textile & apparel':    'img/logos/Textile_Logo.png',
+        'Fishing':              'img/logos/Fishing_Logo.png',
+        'Agriculture':          'img/logos/Agriculture_Logo.png',
+        'Rubber':               'img/logos/Rubber_Logo.png',
+        'Tea':                  'img/logos/Tea_Logo.png',
+        'Mining':               'img/logos/Mining_Logo.png',
+        'Manufacturing':        'img/logos/Manufacturing_Logo.png',
+        'Ports':                'img/logos/Ports_Logo.png',
+        'Banking':              'img/logos/Banking_Logo.png',
+        'Commerce & Trade':     'img/logos/Market_Logo.png',
+
+    };
+    var industries = Q.district_industries || [];
+    var html = '<div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;">';
+    industries.forEach(function(ind) {
+        var icon = industryIcons[ind] || '';
+        html += '<span style="display:inline-flex;align-items:center;gap:4px;background:var(--tab-bg-color);border:1px solid var(--border-color);padding:2px 6px;font-size:0.8em;">' +
+            (icon ? '<img src="' + icon + '" style="width:14px;height:14px;object-fit:contain;" onerror="this.style.display=\'none\'">' : '') +
+            ind + '</span>';
+    });
+    html += '</div>';
+    container.innerHTML = html;
+};
   
   // This function runs on a new page. Right now, this auto-saves.
   window.onNewPage = function() {
@@ -1342,7 +1372,8 @@ window.updateSidebarRight = function() {
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
     var html = dendryUI.contentToHTML.convert(displayContent);
     $('#qualities_right').html(window.displayText(html));
-    setTimeout(window.drawDistrictPies, 200);
+    window.drawDistrictPies();
+    window.renderDistrictIndustries();
   };
 
   window.changeTab = function(newTab, tabId) {

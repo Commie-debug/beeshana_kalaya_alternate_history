@@ -670,6 +670,33 @@ Q.JEDB_rubber_investments = 0;
 //rubber development board
 Q.RDB_improved = 0;
 
+Q.ports = 60;
+Q.ports_national = 3;
+Q.expand_colombo_port = 0;
+Q.expand_galle_port = 0;
+Q.expand_hambantota_port = 0;
+Q.expand_trinco_port = 0;
+Q.improve_port_infastructure = 0;
+
+Q.banking = 40;
+Q.banking_national = 1;
+Q.banking_overseas = 0;
+Q.expand_stock_market = 0;
+Q.banking_more_loans = 0;
+Q.electronic_banking = 0;
+
+Q.manufacturing = 50;
+Q.manufacturing_national = 2;
+Q.manufacturing_expanded_zones = 0;
+Q.manufacturing_reduced_import_relliance = 0;
+Q.expand_manufacturing_infastructure = 0;
+
+Q.commerce = 50;
+Q.commerce_national = 0;
+Q.commerce_promote_exports = 0;
+Q.commerce_reduce_red_tape = 0;
+Q.commerce_lower_customs = 0;
+
 //ftz
 Q.katunayake_ftz_expanded = 0;
 //at the start only the katunayake ftz is done, player or UNP can create more FTZ's like irl in biyagama
@@ -741,9 +768,6 @@ Q.labour_union_lssp_control = 20;
 Q.labour_union_cwc_control = 15;
 Q.labour_union_jvp_control = 8;
 Q.labour_union_independent_control = 10;
-
-//addition of nationalisation level of each sector
-Q.total_nationalisation = Q.rubber_national + Q.textile_national + Q.fishing_national + Q.agriculture_national + Q.tea_national + Q.mining_national + Q.tourism_national;
 
 //students
 //uses strenght qdisplay
@@ -830,7 +854,7 @@ Q.colombo_d_rural = 12;
 Q.colombo_d_control = 10;
 Q.colombo_d_infastructure = 0.85;
 Q.colombo_d_seats = 21;
-Q.colombo_d_industries = ['Tourism', 'Textile & apparel', 'Fishing', 'Agriculture', 'Rubber'];
+Q.colombo_d_industries = ['Tourism', 'Textile & apparel', 'Fishing', 'Agriculture', 'Rubber', 'Manufacturing', 'Ports', 'Commerce & Trade', 'Banking'];
 Q.colombo_d_pop_weight = 11.44;
 
 //gampaha
@@ -848,7 +872,7 @@ Q.gampaha_d_rural = 47;
 Q.gampaha_d_control = 10;
 Q.gampaha_d_infastructure = 0.70;
 Q.gampaha_d_seats = 17;
-Q.gampaha_d_industries = ['Agriculture', 'Textile & apparel', 'Fishing', 'Rubber'];
+Q.gampaha_d_industries = ['Agriculture', 'Textile & apparel', 'Fishing', 'Rubber', 'Manufacturing', 'Commerce & Trade', 'Banking'];
 Q.gampaha_d_pop_weight = 9.36;
 
 //kalutara
@@ -866,7 +890,7 @@ Q.kalutara_d_rural = 67;
 Q.kalutara_d_control = 10;
 Q.kalutara_d_infastructure = 0.60;
 Q.kalutara_d_seats = 11;
-Q.kalutara_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Rubber'];
+Q.kalutara_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Rubber', 'Manufacturing'];
 Q.kalutara_d_pop_weight = 5.59;
 
 //Northern province
@@ -885,7 +909,7 @@ Q.jaffna_d_rural = 63;
 Q.jaffna_d_control = 10;
 Q.jaffna_d_infastructure = 0.50;
 Q.jaffna_d_seats = 11;
-Q.jaffna_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
+Q.jaffna_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Commerce & Trade', 'Banking'];
 Q.jaffna_d_pop_weight = 4.98;
 
 //kilinochchi
@@ -921,7 +945,7 @@ Q.mannar_d_rural = 79;
 Q.mannar_d_control = 10;
 Q.mannar_d_infastructure = 0.30;
 Q.mannar_d_seats = 5;
-Q.mannar_d_industries = ['Fishing', 'Agriculture'];
+Q.mannar_d_industries = ['Fishing', 'Agriculture', 'Ports'];
 Q.mannar_d_pop_weight = 0.72;
 
 //mullaitivu
@@ -1012,7 +1036,7 @@ Q.trincomalee_d_rural = 73;
 Q.trincomalee_d_control = 10;
 Q.trincomalee_d_infastructure = 0.40;
 Q.trincomalee_d_seats = 4;
-Q.trincomalee_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
+Q.trincomalee_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Manufacturing', 'Ports', 'Commerce & Trade'];
 Q.trincomalee_d_pop_weight = 1.72;
 
 //Central province
@@ -1031,7 +1055,7 @@ Q.kandy_d_rural = 61;
 Q.kandy_d_control = 10;
 Q.kandy_d_infastructure = 0.55;
 Q.kandy_d_seats = 12;
-Q.kandy_d_industries = ['Tourism', 'Agriculture', 'Tea', 'Rubber'];
+Q.kandy_d_industries = ['Tourism', 'Agriculture', 'Tea', 'Rubber', 'Manufacturing', 'Commerce & Trade', 'Banking'];
 Q.kandy_d_pop_weight = 7.06;
 
 //matale
@@ -1086,7 +1110,7 @@ Q.galle_d_rural = 70;
 Q.galle_d_control = 10;
 Q.galle_d_infastructure = 0.55;
 Q.galle_d_seats = 11;
-Q.galle_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Rubber'];
+Q.galle_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Rubber', 'Manufacturing', 'Ports', 'Commerce & Trade', 'Banking'];
 Q.galle_d_pop_weight = 5.48;
 
 //matara
@@ -1104,7 +1128,7 @@ Q.matara_d_rural = 74;
 Q.matara_d_control = 10;
 Q.matara_d_infastructure = 0.45;
 Q.matara_d_seats = 9;
-Q.matara_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Tea', 'Rubber'];
+Q.matara_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Tea', 'Rubber', 'Commerce & Trade'];
 Q.matara_d_pop_weight = 4.33;
 
 //hambantota
@@ -1122,7 +1146,7 @@ Q.hambantota_d_rural = 80;
 Q.hambantota_d_control = 10;
 Q.hambantota_d_infastructure = 0.35;
 Q.hambantota_d_seats = 7;
-Q.hambantota_d_industries = ['Tourism', 'Fishing', 'Agriculture'];
+Q.hambantota_d_industries = ['Tourism', 'Fishing', 'Agriculture', 'Ports'];
 Q.hambantota_d_pop_weight = 2.86;
 
 //North Western province
@@ -1141,7 +1165,7 @@ Q.kurunegala_d_rural = 74;
 Q.kurunegala_d_control = 10;
 Q.kurunegala_d_infastructure = 0.45;
 Q.kurunegala_d_seats = 15;
-Q.kurunegala_d_industries = ['Agriculture', 'Mining', 'Rubber'];
+Q.kurunegala_d_industries = ['Agriculture', 'Mining', 'Rubber', 'Manufacturing', 'Commerce & Trade'];
 Q.kurunegala_d_pop_weight = 8.16;
 
 //puttalam
