@@ -1252,34 +1252,73 @@
   // piecharts
   window.drawDistrictPies = function() {
     var Q = window.dendryUI.dendryEngine.state.qualities;
+    
+    var classData = [
+        { label: 'Working class', value: Q.district_worker || 0, color: '#ff1900' },
+        { label: 'Middle class', value: Q.district_middle || 0, color: '#3498db' },
+        { label: 'Upper class', value: Q.district_upper || 0, color: '#f1c40f' },
+        { label: 'Rural', value: Q.district_rural || 0, color: '#2ecc71' }
+    ];
+    var ethnicData = [
+        { label: 'Sinhalese', value: Q.district_sinhala || 0, color: '#ffe100' },
+        { label: 'Sri Lankan Tamil', value: Q.district_sltamil || 0, color: '#ffa200' },
+        { label: 'Indian Tamil', value: Q.district_itamil || 0, color: '#1abc9c' },
+        { label: 'Muslim', value: Q.district_muslim || 0, color: '#059400' },
+        { label: 'Others', value: Q.district_others || 0, color: '#b700ff' }
+    ];
+
     function drawPie(id, data) {
         var c = document.getElementById(id);
         if (!c) return;
         var ctx = c.getContext('2d');
+        ctx.clearRect(0, 0, c.width, c.height);
         var total = data.reduce(function(s, d) { return s + d.value; }, 0);
         if (!total) return;
         var a = -Math.PI / 2, cx = 60, cy = 60, r = 55;
+        var slices = [];
         data.forEach(function(d) {
             var s = (d.value / total) * 2 * Math.PI;
             ctx.beginPath(); ctx.moveTo(cx, cy);
             ctx.arc(cx, cy, r, a, a + s);
             ctx.closePath(); ctx.fillStyle = d.color; ctx.fill();
+            slices.push({ start: a, end: a + s, data: d, total: total });
             a += s;
         });
+
+        var oldTip = document.getElementById(id + '-tip');
+        if (oldTip) oldTip.remove();
+        var tip = document.createElement('div');
+        tip.id = id + '-tip';
+        tip.style.cssText = 'position:fixed;display:none;background:var(--content-bg-color);border:1px solid #aaa;border-radius:4px;padding:4px 8px;font-size:0.8em;z-index:9999;pointer-events:none;';
+        document.body.appendChild(tip);
+
+        c.onmousemove = function(e) {
+            var rect = c.getBoundingClientRect();
+            var mx = e.clientX - rect.left - cx;
+            var my = e.clientY - rect.top - cy;
+            var dist = Math.sqrt(mx*mx + my*my);
+            if (dist > r) { tip.style.display = 'none'; return; }
+            var angle = Math.atan2(my, mx);
+            if (angle < -Math.PI/2) angle += 2*Math.PI;
+            var found = null;
+            slices.forEach(function(sl) {
+                var start = sl.start < -Math.PI/2 ? sl.start + 2*Math.PI : sl.start;
+                var end = sl.end < start ? sl.end + 2*Math.PI : sl.end;
+                var a2 = angle < start ? angle + 2*Math.PI : angle;
+                if (a2 >= start && a2 <= end) found = sl;
+            });
+            if (!found) { tip.style.display = 'none'; return; }
+            var pct = Math.round((found.data.value / found.total) * 1000) / 10;
+            tip.innerHTML = '<span style="display:inline-block;width:10px;height:10px;background:' + found.data.color + ';margin-right:4px;"></span>' + found.data.label + ': ' + pct + '%';
+            tip.style.display = 'block';
+            tip.style.left = (e.clientX + 10) + 'px';
+            tip.style.top = (e.clientY - 20) + 'px';
+        };
+        c.onmouseleave = function() { tip.style.display = 'none'; };
     }
-    drawPie('class-pie', [
-        { value: Q.district_worker || 0, color: '#e74c3c' },
-        { value: Q.district_middle || 0, color: '#3498db' },
-        { value: Q.district_upper || 0, color: '#f1c40f' },
-        { value: Q.district_rural || 0, color: '#2ecc71' }
-    ]);
-    drawPie('ethnic-pie', [
-        { value: Q.district_sinhala || 0, color: '#e67e22' },
-        { value: Q.district_sltamil || 0, color: '#9b59b6' },
-        { value: Q.district_itamil || 0, color: '#1abc9c' },
-        { value: Q.district_muslim || 0, color: '#34495e' },
-        { value: Q.district_others || 0, color: '#95a5a6' }
-    ]);
+
+    drawPie('class-pie', classData);
+    drawPie('ethnic-pie', ethnicData);
 };
   
   // This function runs on a new page. Right now, this auto-saves.
