@@ -1526,7 +1526,7 @@ const tooltipList = [{
     },
     {
     searchString: "Japan",
-    explanationText: "<img src=img/logos/Japan_Logo.png> Japan <br> 日本"
+    explanationText: "<img src=img/logos/Japan_Logo.png> State of Japan <br> 日本国"
     },
     {
     searchString: "Japanese",
