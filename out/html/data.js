@@ -321,6 +321,22 @@ const colourList = [
         style: "font-weight: bold;"
     },
     {
+        word: "Manufacturing",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Ports",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Banking",
+        style: "font-weight: bold;"
+    },
+    {
+        word: "Commerce & Trade",
+        style: "font-weight: bold;"
+    },
+    {
         word: "Sinhalese",
         style: "font-weight: bold;"
     },

@@ -1319,7 +1319,7 @@ window.renderDistrictIndustries = function() {
     var container = document.getElementById('district-industries');
     if (!container) return;
     var industryIcons = {
-        'Tourism':              'img/logos/Tourism_Logo.png>',
+        'Tourism':              'img/logos/Tourism_Logo.png',
         'Textile & apparel':    'img/logos/Textile_Logo.png',
         'Fishing':              'img/logos/Fishing_Logo.png',
         'Agriculture':          'img/logos/Agriculture_Logo.png',
@@ -1330,15 +1330,14 @@ window.renderDistrictIndustries = function() {
         'Ports':                'img/logos/Ports_Logo.png',
         'Banking':              'img/logos/Banking_Logo.png',
         'Commerce & Trade':     'img/logos/Market_Logo.png',
-
     };
     var industries = Q.district_industries || [];
-    var html = '<div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;">';
+    var html = '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;">';
     industries.forEach(function(ind) {
         var icon = industryIcons[ind] || '';
-        html += '<span style="display:inline-flex;align-items:center;gap:4px;background:var(--tab-bg-color);border:1px solid var(--border-color);padding:2px 6px;font-size:0.8em;">' +
-            (icon ? '<img src="' + icon + '" style="width:14px;height:14px;object-fit:contain;" onerror="this.style.display=\'none\'">' : '') +
-            ind + '</span>';
+        html += '<span style="display:inline-flex;flex-direction:column;align-items:center;background:var(--tab-bg-color);border:1px solid var(--border-color);padding:4px 8px;font-size:0.8em;text-align:center;">' +
+            (icon ? '<img src="' + icon + '" style="width:36px;height:36px;object-fit:contain;margin-bottom:4px;" onerror="this.style.display=\'none\'">' : '') +
+            applyWholesome(ind) + '</span>';
     });
     html += '</div>';
     container.innerHTML = html;
