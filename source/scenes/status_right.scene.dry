@@ -14,6 +14,18 @@ Seats in parliament: [+ district_seats +] [? if district_name = "Jaffna" or dist
 
 Industries: [+ district_industries +]
 
+Industries:
+
+{!
+var industries = Q.district_industries || [];
+var html = '<div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;">';
+industries.forEach(function(ind) {
+    html += '<span style="background:var(--tab-bg-color);border:1px solid var(--border-color);border-radius:12px;padding:2px 8px;font-size:0.8em;">' + ind + '</span>';
+});
+html += '</div>';
+document.write(html);
+!}
+
 {!<svg id="sri-lanka-map" viewBox="0 0 450 850" width="200" height="380" style="display:block; margin:auto; border: 3px solid #3B3B3B;">
   <style>
     .district { fill: #E1B300; stroke: #000000; stroke-width: 2px; }
