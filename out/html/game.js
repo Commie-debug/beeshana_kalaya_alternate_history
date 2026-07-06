@@ -1291,7 +1291,7 @@
         parl.enter.fromCenter(false).smallToBig(false);
         parl.exit.toCenter(false).bigToSmall(false);
         d3.select('#district-parl-svg').datum(data).call(parl);
-    }, 150);
+    });
 };
 
 //district control
