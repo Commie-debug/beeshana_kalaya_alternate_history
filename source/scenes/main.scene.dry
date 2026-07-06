@@ -170,6 +170,8 @@ if (Q.advisor_action_timer <= 0) {
 
 [? if year = 1983 and month = 10 and week = 1 : The Nobel Peace Prize is awarded to Lech Walesa, leader of Poland's banned Solidarity trade union. ?]
 
+[? if year = 1983 and month = 10 and week = 1 : A powerful bomb tore through the Martyrs' Mausoleum in Rangoon, Myanmar killing several South Korean and Burmese officials just moments before the arrival of South Korean President Chun Doo-hwan. Current suspicions are on North Korean agents. ?]
+
 [? if year = 1983 and month = 10 and week = 3 : Suicide bombers attack US and French military barracks in Beirut killing 241 American and 58 French peacekeepers. ?]
 
 [? if year = 1983 and month = 10 and week = 3 : United States invades Grenada following an internal crisis in the Caribbean nation. ?]

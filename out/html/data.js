@@ -665,7 +665,17 @@ const colourList = [
     },
 
     {
+        word: "North Korea",
+        style: "font-weight: bold;"
+    },
+
+    {
         word: "South Korean",
+        style: "font-weight: bold;"
+    },
+
+    {
+        word: "North Korean",
         style: "font-weight: bold;"
     },
 
@@ -1747,6 +1757,14 @@ const tooltipList = [{
     {
     searchString: "South Korean",
     explanationText: "<img src=img/logos/South_Korea_Logo.png> Republic of Korea <br> 대한민국 "
+    },
+    {
+    searchString: "North Korean",
+    explanationText: "<img src=img/logos/Nouth_Korea_Logo.png> Democratic People's Republic of Korea <br> 조선민주주의인민공화국 "
+    },
+    {
+    searchString: "North Korean",
+    explanationText: "<img src=img/logos/Nouth_Korea_Logo.png> Democratic People's Republic of Korea <br> 조선민주주의인민공화국 "
     },
     {
     searchString: "Hungary",
