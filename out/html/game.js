@@ -1259,7 +1259,7 @@
     var otherSeats = totalSeats - districtSeats;
     var data = [];
     if (districtSeats > 0) data.push({ id: 'district_seats', legend: 'This district', seats: districtSeats });
-    if (otherSeats > 0) data.push({ id: 'grey', legend: 'Other districts', seats: otherSeats });
+    if (otherSeats > 0) data.push({ id: 'independent', legend: 'Other districts', seats: otherSeats });
 
     var svgId = 'district-parl-svg';
     container.innerHTML = '<div style="text-align:center;font-size:0.85em;margin-bottom:2px;"><b>' + districtSeats + '</b> / ' + totalSeats + ' seats</div>' +
@@ -1277,7 +1277,21 @@
         parl.enter.fromCenter(false).smallToBig(false);
         parl.exit.toCenter(false).bigToSmall(false);
         d3.select('#' + svgId).datum(data).call(parl);
-    });
+
+        var name = Q.district_name || '';
+        var msg = '';
+        if (name === 'Jaffna' || name === 'Kilinochchi') {
+            msg = '(Shared between Jaffna and Kilinochchi)';
+        } else if (name === 'Mullaitivu' || name === 'Mannar' || name === 'Vavuniya') {
+            msg = '(Shared between Mannar, Mullaitivu and Vavuniya)';
+        }
+        if (msg) {
+            var msgEl = document.createElement('div');
+            msgEl.style.cssText = 'text-align:center;font-size:0.75em;margin-top:4px;font-style:italic;';
+            msgEl.textContent = msg;
+            container.appendChild(msgEl);
+        }
+    }, 150);
 };
 
 //district control
