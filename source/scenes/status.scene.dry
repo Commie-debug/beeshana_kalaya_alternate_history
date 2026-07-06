@@ -1166,9 +1166,9 @@ Banking: [+ banking : sectordev +]
 
 Banking Nationalisation: [+ banking_national : nationalisation +]
 
-Commerce: [+ commerce : sectordev +]
+Commerce & Trade: [+ commerce : sectordev +]
 
-Commerce Nationalisation: [+ commerce_national : nationalisation +]
+Commerce & Trade Nationalisation: [+ commerce_national : nationalisation +]
 
 Manufacturing: [+ manufacturing : sectordev +]
 
