@@ -1314,6 +1314,35 @@
     drawPie('ethnic-pie', ethnicData);
 };
 
+window.renderDistrictParliament = function() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    var container = document.getElementById('district-parliament');
+    if (!container) return;
+    var totalSeats = Q.national_list_added ? 225 : 196;
+    var districtSeats = Q.district_seats || 0;
+    var otherSeats = totalSeats - districtSeats;
+    var data = [];
+    if (districtSeats > 0) data.push({ id: 'slfp', legend: 'This district', seats: districtSeats });
+    if (otherSeats > 0) data.push({ id: 'grey', legend: 'Other districts', seats: otherSeats });
+
+    var svgId = 'district-parl-svg';
+    container.innerHTML = '<div style="text-align:center;font-size:0.85em;margin-bottom:2px;">Parliament seats: <b>' + districtSeats + '</b> / ' + totalSeats + '</div>' +
+        '<svg id="' + svgId + '" style="width:100%;height:100px;display:block;"></svg>';
+
+    setTimeout(function() {
+        var el = document.getElementById(svgId);
+        if (!el || !d3 || !d3.parliament) return;
+        var w = el.parentElement.offsetWidth || 200;
+        el.setAttribute('width', w);
+        el.setAttribute('height', 100);
+        var parl = d3.parliament();
+        parl.width(w).height(100).innerRadiusCoef(0.4);
+        parl.enter.fromCenter(false).smallToBig(false);
+        parl.exit.toCenter(false).bigToSmall(false);
+        d3.select('#' + svgId).datum(data).call(parl);
+    }, 150);
+};
+
 window.renderDistrictIndustries = function() {
     var Q = window.dendryUI.dendryEngine.state.qualities;
     var container = document.getElementById('district-industries');
@@ -1373,6 +1402,7 @@ window.updateSidebarRight = function() {
     $('#qualities_right').html(window.displayText(html));
     window.drawDistrictPies();
     window.renderDistrictIndustries();
+    window.renderDistrictParliament();
   };
 
   window.changeTab = function(newTab, tabId) {
