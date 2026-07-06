@@ -131,7 +131,7 @@ We still need to figure out now, who will be the SLFP candidate in next months p
 - @No: We should see who other parties have nominated first.
 
 @Hector
-choose-if: split_sirimavo_victory = 3
+choose-if: left_strength > nationalist_strength
 unavailable-subtitle: The Nationalists won the split.
 on-arrival: {!
     slfp_pres_candidate = "Hector Kobbekaduwa"
@@ -142,7 +142,7 @@ on-arrival: {!
 Hector Kobbekaduwa has been selected as the SLFP candidate for the presidetial elections.
 
 @Maitripala
-choose-if: split_maitripala_victory = 3
+choose-if: nationalist_strength > left_strength
 unavailable-subtitle: The Left won the split.
 on-arrival:{!
     slfp_pres_candidate = "Maitripala Senanayake"
