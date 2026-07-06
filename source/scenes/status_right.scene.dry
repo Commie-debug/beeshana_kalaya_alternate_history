@@ -12,7 +12,7 @@ Infastructure: [+ district_infastructure : eduinfa +]
 
 Seats in parliament: [+ district_seats +] [? if district_name = "Jaffna" or district_name = "Kilinochchi" : (Shared between Jaffna and Kilinochchi) ?] [? if district_name = "Mullaitivu" or district_name = "Mannar" or district_name = "Vavuniya" : (Shared between Mannar, Mullaitivu and Vavuniya) ?] 
 
-{!<div id="district-parliament"></div>!}
+{!<div style="display:flex;gap:0.5em;align-items:flex-start;margin-top:0.5em;"><div id="district-parliament" style="flex:1;"></div><div id="district-control" style="flex:1;"></div></div>!}
 
 Industries:
 
