@@ -1287,16 +1287,11 @@ window.renderDistrictControl = function() {
     if (!container) return;
     var control = Q.district_control || 0;
     var color = control >= 75 ? '#2ecc71' : control >= 50 ? '#f1c40f' : control >= 25 ? '#e67e22' : '#e74c3c';
-    var label = control >= 75 ? 'Strong' : control >= 50 ? 'Moderate' : control >= 25 ? 'Weak' : 'Minimal';
     container.innerHTML =
-        '<div style="text-align:center;font-size:0.85em;margin-bottom:2px;">Government Control</div>' +
-        '<div style="position:relative;background:#ddd;height:12px;border-radius:0;margin-bottom:4px;">' +
-            '<div style="width:' + control + '%;background:' + color + ';height:100%;"></div>' +
-        '</div>' +
-        '<div style="text-align:center;font-size:0.85em;">' + label + ' (' + control + '%)</div>' +
-        '<div style="display:flex;justify-content:center;margin-top:8px;">' +
+        '<div style="text-align:center;font-size:0.85em;margin-bottom:4px;">Control</div>' +
+        '<div style="display:flex;justify-content:center;">' +
             '<div style="width:80px;height:80px;border-radius:50%;background:conic-gradient(' + color + ' ' + control + '%, #ddd ' + control + '%);display:flex;align-items:center;justify-content:center;">' +
-                '<div style="width:50px;height:50px;border-radius:50%;background:var(--content-bg-color);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.9em;">' + control + '%</div>' +
+                '<div style="width:52px;height:52px;border-radius:50%;background:var(--content-bg-color);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.9em;">' + control + '%</div>' +
             '</div>' +
         '</div>';
 };
