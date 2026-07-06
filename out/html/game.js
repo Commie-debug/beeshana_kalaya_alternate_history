@@ -1277,7 +1277,7 @@
         parl.enter.fromCenter(false).smallToBig(false);
         parl.exit.toCenter(false).bigToSmall(false);
         d3.select('#' + svgId).datum(data).call(parl);
-    }, 150);
+    });
 };
 
 //district control
@@ -1286,12 +1286,17 @@ window.renderDistrictControl = function() {
     var container = document.getElementById('district-control');
     if (!container) return;
     var control = Q.district_control || 0;
-    var color = control >= 75 ? '#2ecc71' : control >= 50 ? '#f1c40f' : control >= 25 ? '#e67e22' : '#e74c3c';
+    var pct = Math.round((control / 10) * 100);
+    var color = control <= 1 ? '#FF0000' :
+                control <= 2 ? '#FF4500' :
+                control <= 4 ? '#FFD700' :
+                control <= 6 ? '#9ACD32' :
+                control <= 8 ? '#32CD32' : '#FF0000';
     container.innerHTML =
         '<div style="text-align:center;font-size:0.85em;margin-bottom:4px;">Control</div>' +
         '<div style="display:flex;justify-content:center;">' +
-            '<div style="width:80px;height:80px;border-radius:50%;background:conic-gradient(' + color + ' ' + control + '%, #ddd ' + control + '%);display:flex;align-items:center;justify-content:center;">' +
-                '<div style="width:52px;height:52px;border-radius:50%;background:var(--content-bg-color);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.9em;">' + control + '%</div>' +
+            '<div style="width:80px;height:80px;border-radius:50%;background:conic-gradient(' + color + ' ' + pct + '%, #ddd ' + pct + '%);display:flex;align-items:center;justify-content:center;">' +
+                '<div style="width:52px;height:52px;border-radius:50%;background:var(--content-bg-color);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.9em;">' + control + '/10</div>' +
             '</div>' +
         '</div>';
 };
