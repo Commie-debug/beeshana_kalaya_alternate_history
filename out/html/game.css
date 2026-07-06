@@ -1229,7 +1229,9 @@ table {
 .seat.abstain {
     fill: #b5b5b5;
 }
-
+.seat.district_seats {
+    fill: #ff0000;
+}
 
 .tooltip-text {
     text-decoration: underline;

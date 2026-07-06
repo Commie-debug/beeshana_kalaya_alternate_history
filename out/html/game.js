@@ -1258,7 +1258,7 @@
     var districtSeats = Q.district_seats || 0;
     var otherSeats = totalSeats - districtSeats;
     var data = [];
-    if (districtSeats > 0) data.push({ id: 'slfp', legend: 'This district', seats: districtSeats });
+    if (districtSeats > 0) data.push({ id: 'district_seats', legend: 'This district', seats: districtSeats });
     if (otherSeats > 0) data.push({ id: 'grey', legend: 'Other districts', seats: otherSeats });
 
     var svgId = 'district-parl-svg';
