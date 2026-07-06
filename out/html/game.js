@@ -1286,17 +1286,18 @@ window.renderDistrictControl = function() {
     var container = document.getElementById('district-control');
     if (!container) return;
     var control = Q.district_control || 0;
-    var pct = Math.round((control / 10) * 100);
-    var color = control <= 1 ? '#FF0000' :
-                control <= 2 ? '#FF4500' :
-                control <= 4 ? '#FFD700' :
-                control <= 6 ? '#9ACD32' :
-                control <= 8 ? '#32CD32' : '#FF0000';
+    var pct = Math.min(100, Math.max(0, (control / 10) * 100));
+    var color = control < 1 ? '#FF0000' :
+                control < 2 ? '#FF4500' :
+                control < 5 ? '#FFD700' :
+                control < 6 ? '#9ACD32' :
+                control < 9 ? '#32CD32' : '#FF0000';
+    var label = Math.round(control * 10) / 10 + '/10';
     container.innerHTML =
         '<div style="text-align:center;font-size:0.85em;margin-bottom:4px;">Control</div>' +
         '<div style="display:flex;justify-content:center;">' +
             '<div style="width:80px;height:80px;border-radius:50%;background:conic-gradient(' + color + ' ' + pct + '%, #ddd ' + pct + '%);display:flex;align-items:center;justify-content:center;">' +
-                '<div style="width:52px;height:52px;border-radius:50%;background:var(--content-bg-color);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.9em;">' + control + '/10</div>' +
+                '<div style="width:52px;height:52px;border-radius:50%;background:var(--content-bg-color);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85em;">' + label + '</div>' +
             '</div>' +
         '</div>';
 };
