@@ -1760,11 +1760,11 @@ const tooltipList = [{
     },
     {
     searchString: "North Korea",
-    explanationText: "<img src=img/logos/Nouth_Korea_Logo.png> Democratic People's Republic of Korea <br> 조선민주주의인민공화국 "
+    explanationText: "<img src=img/logos/North_Korea_Logo.png> Democratic People's Republic of Korea <br> 조선민주주의인민공화국 "
     },
     {
     searchString: "North Korean",
-    explanationText: "<img src=img/logos/Nouth_Korea_Logo.png> Democratic People's Republic of Korea <br> 조선민주주의인민공화국 "
+    explanationText: "<img src=img/logos/North_Korea_Logo.png> Democratic People's Republic of Korea <br> 조선민주주의인민공화국 "
     },
     {
     searchString: "Hungary",
