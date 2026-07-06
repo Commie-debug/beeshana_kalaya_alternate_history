@@ -1759,7 +1759,7 @@ const tooltipList = [{
     explanationText: "<img src=img/logos/South_Korea_Logo.png> Republic of Korea <br> 대한민국 "
     },
     {
-    searchString: "North Korean",
+    searchString: "North Korea",
     explanationText: "<img src=img/logos/Nouth_Korea_Logo.png> Democratic People's Republic of Korea <br> 조선민주주의인민공화국 "
     },
     {
