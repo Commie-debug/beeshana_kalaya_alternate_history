@@ -1305,7 +1305,7 @@ window.renderDistrictControl = function() {
                 control < 2 ? '#FF4500' :
                 control < 5 ? '#FFD700' :
                 control < 6 ? '#9ACD32' :
-                control < 9 ? '#32CD32' : ;
+                control < 9 ? '#32CD32' : '#FF0000';
     var label = Math.round(control * 10) / 10 + '/10';
     container.innerHTML =
         '<div style="text-align:center;font-size:0.85em;margin-bottom:4px;">Control</div>' +
