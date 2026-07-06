@@ -1261,36 +1261,36 @@
     if (districtSeats > 0) data.push({ id: 'district_seats', legend: 'This district', seats: districtSeats });
     if (otherSeats > 0) data.push({ id: 'independent', legend: 'Other districts', seats: otherSeats });
 
-    var svgId = 'district-parl-svg';
-    container.innerHTML = '<div style="text-align:center;font-size:0.85em;margin-bottom:2px;"><b>' + districtSeats + '</b> / ' + totalSeats + ' seats</div>' +
-        '<svg id="' + svgId + '" style="width:100%;display:block;"></svg>';
+    if (!document.getElementById('district-parl-svg')) {
+        container.innerHTML =
+            '<div id="district-parl-label" style="text-align:center;font-size:0.85em;margin-bottom:2px;"></div>' +
+            '<svg id="district-parl-svg" style="width:100%;display:block;"></svg>' +
+            '<div id="district-parl-msg" style="text-align:center;font-size:0.75em;margin-top:4px;font-style:italic;"></div>';
+    }
+
+    var label = document.getElementById('district-parl-label');
+    if (label) label.innerHTML = '<b>' + districtSeats + '</b> / ' + totalSeats + ' seats';
+
+    var name = Q.district_name || '';
+    var msg = '';
+    if (name === 'Jaffna' || name === 'Kilinochchi') msg = '(Shared between Jaffna and Kilinochchi)';
+    else if (name === 'Mullaitivu' || name === 'Mannar' || name === 'Vavuniya') msg = '(Shared between Mannar, Mullaitivu and Vavuniya)';
+    var msgEl = document.getElementById('district-parl-msg');
+    if (msgEl) msgEl.textContent = msg;
 
     setTimeout(function() {
-        var el = document.getElementById(svgId);
+        var el = document.getElementById('district-parl-svg');
         if (!el || !d3 || !d3.parliament) return;
         var w = el.parentElement.offsetWidth || 150;
         var h = Math.round(w * 0.6);
         el.setAttribute('width', w);
         el.setAttribute('height', h);
+        d3.select('#district-parl-svg').selectAll('*').remove();
         var parl = d3.parliament();
         parl.width(w).height(h).innerRadiusCoef(0.4);
         parl.enter.fromCenter(false).smallToBig(false);
         parl.exit.toCenter(false).bigToSmall(false);
-        d3.select('#' + svgId).datum(data).call(parl);
-
-        var name = Q.district_name || '';
-        var msg = '';
-        if (name === 'Jaffna' || name === 'Kilinochchi') {
-            msg = '(Shared between Jaffna and Kilinochchi)';
-        } else if (name === 'Mullaitivu' || name === 'Mannar' || name === 'Vavuniya') {
-            msg = '(Shared between Mannar, Mullaitivu and Vavuniya)';
-        }
-        if (msg) {
-            var msgEl = document.createElement('div');
-            msgEl.style.cssText = 'text-align:center;font-size:0.75em;margin-top:4px;font-style:italic;';
-            msgEl.textContent = msg;
-            container.appendChild(msgEl);
-        }
+        d3.select('#district-parl-svg').datum(data).call(parl);
     }, 150);
 };
 
@@ -1305,7 +1305,7 @@ window.renderDistrictControl = function() {
                 control < 2 ? '#FF4500' :
                 control < 5 ? '#FFD700' :
                 control < 6 ? '#9ACD32' :
-                control < 9 ? '#32CD32' : '#FF0000';
+                control < 9 ? '#32CD32' : ;
     var label = Math.round(control * 10) / 10 + '/10';
     container.innerHTML =
         '<div style="text-align:center;font-size:0.85em;margin-bottom:4px;">Control</div>' +
