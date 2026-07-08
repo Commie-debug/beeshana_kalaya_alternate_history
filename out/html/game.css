@@ -500,6 +500,17 @@ img.inline-img.icon {
   transform: translate(-50%, -100%);
 }
 
+body.dark-mode .mytooltip:hover {
+    background-color: rgb(60, 90, 160);
+}
+
+body.dark-mode .mytooltip .mytooltiptext {
+    background: #1a1a2e;
+    color: #e0e0e0;
+    border: 1px solid #7a3b3b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
 /* coalition cards system */
 .ccard{padding:10px 14px;border-radius:8px;margin-bottom:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.2);background:#FDFFDB}
 .chdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
@@ -698,6 +709,12 @@ p.other {
 }
 .seat.party-nothovered {
     opacity: 0.3;
+}
+body.dark-mode .parliament-tooltip {
+    background: #1a1a2e;
+    color: #e0e0e0;
+    border-color: #7a3b3b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .save_info {
@@ -997,7 +1014,6 @@ img {
         width: 100%;
     }
 }
-/* New stuff just for this game */
 
 #right-panel {
     position: fixed;
