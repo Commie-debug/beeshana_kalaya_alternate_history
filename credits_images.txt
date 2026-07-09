@@ -62,3 +62,13 @@ EPRLF: https://lankafocus.org/பத்மநாபா-ஆவணங்கள்/
 ENDLF: Custom made, no particular inspiration.
 EPDP: https://commons.wikimedia.org/wiki/File:Flag_of_Eelam_People’s_Democratic_Party.svg
 Governer-General: https://en.wikipedia.org/wiki/Governor-General_of_Ceylon#/media/File:Flag_of_the_Governor-General_of_Ceylon_(1952–1972).svg
+LTTE: https://en.wikipedia.org/wiki/File:Ltte_emblem.jpg
+JSS: https://www.facebook.com/jathikasevakasangamaya/about
+DJV: Modified https://en.wikipedia.org/wiki/Deshapremi_Janatha_Vyaparaya#/media/File:Patriotic_People's_Movement.svg
+SLAF: Combination of https://en.wikipedia.org/wiki/Sri_Lanka_Army#/media/File:Sri_Lanka_Army_Logo.png, https://en.wikipedia.org/wiki/Sri_Lanka_Navy#/media/File:Sri_Lanka_Naval_Seal.png & https://en.wikipedia.org/wiki/Sri_Lanka_Air_Force#/media/File:Badge_of_the_Sri_Lanka_Air_Force.png over the colours behind the emblem of https://en.wikipedia.org/wiki/Sri_Lanka_Army#/media/File:Flag_of_the_Sri_Lankan_Army.png
+Sri Lanka Police: https://en.wikipedia.org/wiki/Sri_Lanka_Police#/media/File:Sri_Lanka_Police_logo.svg
+Civil Security: https://en.wikipedia.org/wiki/Sri_Lanka_Civil_Security_Force#/media/File:Civil_Security_Department_SL_seal.png
+Home Guard: Badly cropped https://www.alamy.com/a-sri-lankan-home-guard-provides-security-to-an-outdoor-class-of-parakum-vidyalaya-in-vavuniya-about-210-kilometers-131-miles-north-of-colombo-sri-lanka-monday-may-8-2006-a-rash-of-fighting-between-the-rebels-and-government-forces-in-recent-weeks-has-threatened-to-reignite-a-decades-long-civil-war-in-sri-lanka-that-cost-65000-lives-before-a-cease-fire-brought-a-brief-respite-to-the-bloodshed-in-2002-ap-photosanath-priyantha-image541606954.html
+STF: https://en.wikipedia.org/wiki/Special_Task_Force_(Sri_Lanka)#/media/File:STF_SL_badge.png
+TNA: Custom made, based on the tradtional tamil colours of red on yellow.
+IPKF: Custom made, based on https://en.wikipedia.org/wiki/Indian_Peace_Keeping_Force#/media/File:Stamp_of_India_-_1990_-_Colnect_164138_-_Indian_Peace_Keeping_Operation_in_Sri_Lanka.jpeg
