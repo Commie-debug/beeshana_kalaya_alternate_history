@@ -651,6 +651,7 @@ Q.fishing = 25;
 Q.fishing_national = 0;
 Q.fishing_improvements = 0;
 Q.fishermen_loans = 0;
+Q.stit_fishermen_tourism = 0;
 Q.fishing_boat_advancements = 0;
 Q.increase_ministry_oversight = 0;
 
