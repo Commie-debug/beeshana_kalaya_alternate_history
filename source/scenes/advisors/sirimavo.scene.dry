@@ -33,6 +33,7 @@ on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_elec
 
 @end
 title: We are eepy boss
+subtitle: Test for ending game
 go-to: game_over
 
 We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
