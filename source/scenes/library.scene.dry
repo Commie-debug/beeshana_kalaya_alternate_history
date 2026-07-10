@@ -57,7 +57,6 @@ Herein contains relevant information about the government and politics of Sri La
 - @public_opinion: Public opinion (and projected election results)
 - @paramilitaries: Paramilitaries, militants and the military
 - @factions: Internal factions
-- @figures: Figures and charts
 - @backSpecialScene: Exit library.
 
 @map
@@ -205,7 +204,7 @@ go-to: menu
 
 President: [+ president +]
 
-{!<svg id="status_parliament" style="width: 100%; height: 130px; display: block;"></svg>
+{!<svg id="status_parliament" style="width: 100%; height: 220px; display: block;"></svg>
 <script>
 (function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
@@ -379,6 +378,22 @@ Rubber: [+ rubber : sectordev +], Rubber Nationalisation: [+ rubber_national : n
 
 Rubber is a declining but still important plantation crop, it is currently facing competition from synthetic alternatives and price volatility, a stark contrast from its importance 40 years earlier. It remains nationally relevant as an export and source of rural employment. Rubber cultivation is concentrated in the Wet Zone, particularly in Kalutara, Kegalle, Ratnapura, and parts of Gampaha district.
 
+Banking: [+ banking : sectordev +], Banking Nationalisation: [+ banking_national : nationalisation +]
+
+Banking since 1977 is increasingly headed in the direction of increased privatisation. Multiple private banks such as Commercial & Hatton National bank already exist and are becoming larger with greater flexibility provided by the government. Though the majority of banking is still under government oversight (Peoples Bank, Bank of Ceylon & National Savings Bank).
+
+Ports: [+ ports : sectordev +], Ports Nationalisation: [+ ports_national : nationalisation +]
+
+Sri Lanka's geographical position makes the island a vital node in global trade routes, esspecially between China, the middle east and Europe. Under the UNP, efforts are being made to expand and modernise facilities esspcially in Colombo. As part of this a unified, autonomous Sri Lanka Ports Authority was established to run operations. The recent changes have however increased tensions with the powerful port unions.
+
+Manufacturing: [+ manufacturing : sectordev +], Manufacturing Nationalisation: [+ manufacturing_national : nationalisation +]
+
+While manufacturing continues to be important for Sri Lanka, it is currently on a downward trend as foreign made goods slowly replace locally made ones. Consumer good's such as food, beverages, ceramic etc are eclipsing heavy industry. Heavy industry is mostly government run but increasingly privatised as it is proving to be a liability.
+
+Commerce & Trade: [+ commerce : sectordev +], Commerce & Trade Nationalisation: [+ commerce_national : nationalisation +]
+
+Commerce has never fared better than now. While in the past traders were often restricted on what can be imported and exported, the liberalisation has allowed for a vertiable "flood" or foreign goods brought by independent traders. Increased consumer spending has incentivised the building of new multi floor shopping centers in cities. There also exist's larger cooperations such as John-Keels and foreign ones such as Hayleys & Singer.
+
 = FTZ (Free Trade Zones)
 
 A cornerstone in the UNP's economic liberalisation. They are essentially designated manufacturing and industrial areas managed by the Greater Colombo Economic Commission. They offer more advanced infastructure, leanient laws and lowered taxes to attract foreign direct investment.
@@ -423,6 +438,7 @@ go-to: menu
 **Others**: This grouping consists of many groups such as the Burghers(Descendents of Europeans and locals), Kafirs(Desendents of African slaves and soliders brought by the Portuguese), the ethnic Chinese and the indigeoneus "Vedda" whose history predates all other groups. The majority of this grouping reside in their own communities inside the major cities. They make up around 0.78% of the population.
 
 @public_opinion
+go-to: menu
 on-arrival: {!
 Q.sinhala_nationalism_disp = Math.round(Q.sinhala_nationalism);
 Q.tamil_nationalism_disp = Math.round(Q.tamil_nationalism);
@@ -1026,6 +1042,7 @@ go-to: menu
 
 
 @paramilitaries
+go-to: menu
 on-arrival: {!
 if (Q.slfpt_strength) {
     Q.slfpt_strength_2 = Q.slfpt_strength.toFixed(1);
@@ -1099,7 +1116,7 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 **JSS** - *Jathika Sevaka Sangamaya (National Employees Union)* - A prominent UNP affiliated trade union. It also acts as a def-facto paramilitary for the UNP. Their members are linked to numerous attacks on opposition and dissenters.
 
-[? if djv_formed = 1 : **DJV** - *Deshapremi Janatha Vyaparaya (Patriotic People's Movement)* - The armed wing of the JVP, it engages in assasinations, arsons, murder and all manner of other methods to destabalise the state. ?]
+[? if djv_formed = 1 : **DJV** - *Deshapremi Janatha Vyaparaya (Patriotic People's Movement)* - The armed wing of the JVP, it engages in assasinations, arson, murder and all manner of other methods to destabalise the state. ?]
 
 [? if blackcats_formed = 1 : **Black Cats** - One of numerous shadowy armed groups combatting the JVP and other dissenting voices. ?]
 
@@ -1138,6 +1155,7 @@ Militarization: [+ jvpt_militancy : militancy +]
 [? if endlf_formed = 1 : **ENDLF** - *Eelam National Democratic Liberation Front* - The ENDLF is an Indian sponsored tamil militant group formed from splinter groups of other tamil militant groups. They are very anti-LTTE, and they garner support of the IPKF. The ENDLF also functions as a political party. ?]
 
 @factions
+go-to: menu
 
 **Internal factions of the SLFP**
 
@@ -1151,138 +1169,5 @@ The Left consists of the parties left wing socialist and social democratic tradi
 
 The Nationalsist consist of the right wing of the SLFP. Sinhalese Buddhist Nationalism and at the very least, and opposition to tamils is prevalent.
 
-@figures
-title: Figures and Charts
-go-to: menu
-on-arrival: z_minus_bvp_r = z_r - 3;
-on-display: {!
-data = [
-    {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Q.kpd_r*5,
-    }];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
-            });
-}
-data = data.concat([
-    {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Q.spd_r*5,
-    },
-    {
-        "id": "ddp",
-        "legend": "DDP",
-        "name": "DDP",
-        "seats": Q.ddp_r*5,
-    },
-    {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": (Q.z_r - 3)*5,
-    },
-    {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": 3*5,
-    },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Q.other_r*5,
-    },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Q.dnvp_r*5,
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Q.nsdap_r*5,
-    },
-]);
-if (d3 && window) {
-    // get screen width
-    var width = 500;
-    var height = 500;
-    var screenWidth = document.getElementById('content').offsetWidth;
-    if (screenWidth < width - 50) {
-        width = screenWidth - 50;
-        height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
-    }
-    var parliament = d3.parliament();
-    parliament.width(width).height(height).innerRadiusCoef(0.4);
-    parliament.enter.fromCenter(true).smallToBig(true);
-    parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
 
-    var lines = d3.linegraph(false, false,
-            Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
-    lines.width(width).height(400);
-    //var svg = lines(Q.election_records);
-    if (Q.election_records.length > 0) {
-        d3.select("#election_history").datum(Q.election_records).call(lines);
-    }
-    //document.getElementById('election_history').innerHTML = svg.outerHTML;
-
-    // party support records should not have so many ticks
-    if (!Q.historical_mode || Q.game_over) {
-        var lines_2 = d3.linegraph(true, true,
-            Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
-        lines_2.width(width).height(400);
-        d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
-    }
-
-    // economic stats
-    var minInflation = d3.min(Q.economic_records, d => d.inflation);
-    var maxUnemployment = d3.max(Q.economic_records, d => d.unemployment);
-    var lines_3 = d3.linegraph(true, true, ['inflation', 'unemployment'],
-            {'inflation': '#0000FF', 'unemployment': '#FF0000'},
-            {'inflation': 'Inflation', 'unemployment': 'Unemployment'},
-            maxUnemployment + 5, minInflation - 5, 21);
-    lines_3.width(width).height(300);
-    d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
-}
-!}
-
-= Election history
-
-[? if year = 1928 and month < 5 : No new elections yet. ?]
-
-{!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!}
-
-= Party support history
-
-[? if historical_mode: Not available in historical mode. ?]
-
-{!<svg id="party_support_history" style="width: 500px; height: 400px;"> </svg>!}
-
-= Economic history
-
-{!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
 

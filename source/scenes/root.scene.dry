@@ -660,6 +660,8 @@ Q.textile_investments = 0;
 Q.apparel_production_contracts = 0;
 //joint meaning between sri lankan(like MAS holdings) and a foreign company 
 Q.apparel_production_joint_ventures = 0;
+//Greater Colombo Economic Commission
+Q.expand_GCEC_powers = 0;
 
 Q.rubber = 50;
 Q.rubber_national = 1;
@@ -676,11 +678,21 @@ Q.expand_colombo_port = 0;
 Q.expand_galle_port = 0;
 Q.expand_hambantota_port = 0;
 Q.expand_trinco_port = 0;
+Q.port_union_tension = 0;
 Q.improve_port_infastructure = 0;
+Q.ports_foreign_investment = 0;
+//sri lanka ports authority
+Q.fund_slpa = 0;
+Q.expand_slpa = 0;
+//expand facilities to allow for larger containers to drop off cargo at SL ports to be split into small vessels for elsewhere
+Q.hub_n_spoke_facilities = 0;
 
 Q.banking = 40;
 Q.banking_national = 1;
-Q.banking_overseas = 0;
+Q.more_foreign_banks = 0;
+Q.offshore_banking = 0;
+Q.expand_banking_overseas = 0;
+Q.expand_public_banking_overseas = 0;
 Q.expand_stock_market = 0;
 Q.banking_more_loans = 0;
 Q.electronic_banking = 0;
@@ -690,12 +702,27 @@ Q.manufacturing_national = 2;
 Q.manufacturing_expanded_zones = 0;
 Q.manufacturing_reduced_import_relliance = 0;
 Q.expand_manufacturing_infastructure = 0;
+Q.food_manufacturing = 0;
+Q.ceramic_porcelin_manufacturing = 0;
+//rubber products like gloves for export rather than direct export of raw rubber
+Q.expanded_rubber_products = 0;
+//how modernised heavy industry is, only way to keep it from being a liability
+Q.heavy_industry_modernisation = 0;
+Q.electronics_facilities = 0;
 
 Q.commerce = 50;
 Q.commerce_national = 0;
 Q.commerce_promote_exports = 0;
+Q.commerce_allow_more_imports = 0;
+Q.commerce_more_foreign_goods = 0;
 Q.commerce_reduce_red_tape = 0;
 Q.commerce_lower_customs = 0;
+//wheter the new cooperations are tolerated or not
+Q.commerce_cooperations_toleration = 0;
+Q.commerce_greater_enterpreneur = 0;
+//like majestic city and liberty plaza
+Q.commerce_shopping_malls = 0;
+Q.commerce_retail_expansion = 0;
 
 //ftz
 Q.katunayake_ftz_expanded = 0;
