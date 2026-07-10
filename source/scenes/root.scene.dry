@@ -663,6 +663,8 @@ Q.apparel_production_contracts = 0;
 Q.apparel_production_joint_ventures = 0;
 //Greater Colombo Economic Commission
 Q.expand_GCEC_powers = 0;
+//change name to the Board of Investment, expandingits oversight to whole island rather than just Colombo
+Q.reform_GCEC = 0;
 
 Q.rubber = 50;
 Q.rubber_national = 1;
