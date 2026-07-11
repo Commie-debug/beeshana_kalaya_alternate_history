@@ -339,6 +339,15 @@
             }, 800);
         },
 
+        playOneShot: function(path, layerName) {
+            var name = layerName || 'sfx';
+            var layer = layers[name];
+            var vol = muted ? 0 : layer.volume;
+            var sound = new Audio(path);
+            sound.volume = vol;
+            sound.play().catch(function() {});
+        },
+
         addSong: function(layerName, path) {
             layers[layerName].playlist.push(path);
         },
