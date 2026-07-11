@@ -20,7 +20,7 @@ new-page: true
 - @1970: 1970 Parliamentary Election
 - @1977: 1977 Parliamentary Election
 - @1982: 1982 Presidential Election
-- @1983: 1983 National Referendum
+- @1982: 1982 National Referendum
 - @1988: 1988 Presidential Election
 - @1989: 1989 Parliamentary Election
 
@@ -758,8 +758,10 @@ on-arrival: {!
 - @return: Leave...
 - @1983: Next election...
 
-@1983
+@1982
 new-page: true
+
+= 1982 Sri Lankan parliamentary term extension referendum
 
 **Do you approve the Bill entitled the Fourth Amendment to the Constitution published in Gazette Extraordinary No 218/23 of November 13, 1982, which provides inter alia that unless sooner dissolved the First parliament shall continue until August 4, 1989, and no longer and shall thereupon stand dissolved?.**
 
