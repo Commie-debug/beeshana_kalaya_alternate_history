@@ -452,7 +452,7 @@
         function update() {
             var deg = -130 + val * 260;
             knob.style.transform = 'rotate(' + deg + 'deg)';
-            ['music','ambient','sfx'].forEach(function(l) { window.AudioManager.setVolume(l, val); });
+            { window.AudioManager.setVolume(l, val); };
         }
 
         knob.onmousedown = function(e) {
