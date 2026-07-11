@@ -2084,6 +2084,13 @@ document.addEventListener('mouseover', e => {
     }
 });
 
+document.addEventListener('click', function(e) {
+    var choiceLink = e.target.closest('right-panel-tab-strip');
+    if (choiceLink) {
+        AudioManager.playOneShot('music/sfx/button_click.mp3', 'sfx');
+    }
+},true);
+
 window.addEventListener('dendryload', function() {
     window.updateMusicBtn();
 });
