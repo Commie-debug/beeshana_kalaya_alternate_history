@@ -382,7 +382,7 @@
         },
 
         setVolume: function(layerName, vol) {
-            var names = layerName === 'music' ? ['music', 'ambient', 'sfx'] : [layerName];
+            var names = layerName === 'all' ? Object.keys(layers) : [layerName];
             for (var i = 0; i < names.length; i++) {
                 layers[names[i]].volume = vol;
                 if (layers[names[i]].audio && !muted) {
