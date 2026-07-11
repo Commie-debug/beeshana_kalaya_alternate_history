@@ -461,7 +461,7 @@
         function update() {
             var deg = -130 + val * 260;
             knob.style.transform = 'rotate(' + deg + 'deg)';
-            { window.AudioManager.setVolume(l, val); };
+            window.AudioManager.setVolume('all', val);
         }
 
         knob.onmousedown = function(e) {
