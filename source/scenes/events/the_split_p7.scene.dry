@@ -20,19 +20,19 @@ go-to: siri_win if split_sirimavo_victory == 2; maitri_win if split_maitripala_v
 @siri_win
 on-arrival: {!
 
-split_sirimavo_victory += 1; 
-left_strength += 7; 
-nationalist_strength -= 7; 
-sinhala_slfp += 8; 
-sltamil_slfp += 3; 
-itamil_slfp += 3; 
-muslim_slfp += 4; 
-rural_slfp += 5; 
-workers_slfp += 7; 
-upper_slfp -= 2; 
-middle_slfp += 6; s
-ocialism += 5; 
-the_split = 0;
+Q.split_sirimavo_victory += 1; 
+Q.left_strength += 7; 
+Q.nationalist_strength -= 7; 
+Q.sinhala_slfp += 8; 
+Q.sltamil_slfp += 3; 
+Q.itamil_slfp += 3; 
+Q.muslim_slfp += 4; 
+Q.rural_slfp += 5; 
+Q.Q.workers_slfp += 7; 
+Q.upper_slfp -= 2; 
+Q.middle_slfp += 6; s
+Q.socialism += 5; 
+Q.the_split = 0;
 
 setTimeout(function() {
     if (window.statusTab === 'status.party') {
@@ -51,18 +51,18 @@ In hopes to reconcile and reunite the two wings, Sirimavo accepted his support a
 @maitri_win
 on-arrival: {!
 
-split_maitripala_victory += 1; 
-nationalist_strength += 7; 
-left_strength -= 7; 
-sinhala_slfp += 10; 
-sltamil_slfp -= 4; 
-itamil_slfp -= 2; 
-muslim_slfp += 2; 
-rural_slfp += 6; 
-workers_slfp += 3; 
-upper_slfp += 5; 
-middle_slfp += 5; 
-sinhala_nationalism += 7;
+Q.split_maitripala_victory += 1; 
+Q.nationalist_strength += 7; 
+Q.left_strength -= 7; 
+Q.sinhala_slfp += 10; 
+Q.sltamil_slfp -= 4; 
+Q.itamil_slfp -= 2; 
+Q.muslim_slfp += 2; 
+Q.rural_slfp += 6; 
+Q.workers_slfp += 3; 
+Q.upper_slfp += 5; 
+Q.middle_slfp += 5; 
+Q.sinhala_nationalism += 7;
 
 setTimeout(function() {
     if (window.statusTab === 'status.party') {
@@ -80,10 +80,10 @@ Maitripala Senanayake and his "SLFP" as the true and legal SLFP. The development
 @maitri_succeeds
 on-arrival: {! 
 
-slfp_leader = "Maitripala Senanayake"; 
-nationalist_strength += 3; 
-left_dissent += 4; 
-the_split = 0;
+Q.slfp_leader = "Maitripala Senanayake"; 
+Q.nationalist_strength += 3; 
+Q.left_dissent += 4; 
+Q.the_split = 0;
 
 setTimeout(function() {
     if (window.statusTab === 'status.party') {
@@ -102,10 +102,10 @@ This all but guarentees Maithripala Sirisena will be our candidate in next month
 @sirimavo_retained
 on-arrival: {!
 
-slfp_leader = "Sirimavo Bandaranaike"; 
-left_strength += 3; 
-nationalist_dissent += 4; 
-the_split = 0;
+Q.slfp_leader = "Sirimavo Bandaranaike"; 
+Q.left_strength += 3; 
+Q.nationalist_dissent += 4; 
+Q.the_split = 0;
 
 setTimeout(function() {
     if (window.statusTab === 'status.party') {
@@ -134,9 +134,9 @@ We still need to figure out now, who will be the SLFP candidate in next months p
 choose-if: left_strength > nationalist_strength
 unavailable-subtitle: The Nationalists won the split.
 on-arrival: {!
-    slfp_pres_candidate = "Hector Kobbekaduwa"
-    left_strength += 2
-    left_dissent -=3
+    Q.slfp_pres_candidate = "Hector Kobbekaduwa"
+    Q.left_strength += 2
+    Q.left_dissent -=3
 !}
 
 Hector Kobbekaduwa has been selected as the SLFP candidate for the presidetial elections.
@@ -145,9 +145,9 @@ Hector Kobbekaduwa has been selected as the SLFP candidate for the presidetial e
 choose-if: nationalist_strength > left_strength
 unavailable-subtitle: The Left won the split.
 on-arrival:{!
-    slfp_pres_candidate = "Maitripala Senanayake"
-    nationalist_strength += 2
-    nationalist_dissent -= 3
+    Q.slfp_pres_candidate = "Maitripala Senanayake"
+    Q.nationalist_strength += 2
+    Q.nationalist_dissent -= 3
 
 !}
 
@@ -157,9 +157,9 @@ Maithripala Senanayake has been selected as the SLFP candidate for the presideti
 
 @No
 on-arrival: {!
-    slfp_pres_candidate = "None"
-    nationalist_dissent += 5
-    left_dissent += 5
+    Q.slfp_pres_candidate = "None"
+    Q.nationalist_dissent += 5
+    Q.left_dissent += 5
 !}
 
 The SLFP will differ on this for now, neither the Left nor the Nationalists are happy about this.
