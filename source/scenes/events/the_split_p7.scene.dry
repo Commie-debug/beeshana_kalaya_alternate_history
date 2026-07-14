@@ -72,15 +72,15 @@ setTimeout(function() {
 
 !}
 
-Maitripala Senanayake and his "SLFP" as the true and legal SLFP. The developments come as a shock to Sirimavo's "SLFP". The dogmatic Sirimavo threatened to launch her own party but her supporters have already realised that by spliting the SLFP vote, neither Maitripala or Sirimavo can hope to compete with the far more united UNP.
+Maithripala Senanayake and his "SLFP" as the true and legal SLFP. The developments come as a shock to Sirimavo's "SLFP". The dogmatic Sirimavo threatened to launch her own party but her supporters have already realised that by spliting the SLFP vote, neither Maitripala or Sirimavo can hope to compete with the far more united UNP.
 
-- @maitri_succeeds: Maitripala Senanayake agrees to reintegrate Sirimavo's SLFP, in exchange he becomes the new leader of the SLFP.
-- @sirimavo_retained: Maitripala Senanayake agrees to reintegrate Sirimavo's SLFP, however the Left is still strong and he is not nearly as popular or recognisable as Sirimavo. He agrees to have Sirimavo continue as leader of the SLFP though the parties direction is still determined by the Nationalists.
+- @maitri_succeeds: Maithripala Senanayake agrees to reintegrate Sirimavo's SLFP, in exchange he becomes the new leader of the SLFP.
+- @sirimavo_retained: Maithripala Senanayake agrees to reintegrate Sirimavo's SLFP, however the Left is still strong and he is not nearly as popular or recognisable as Sirimavo. He agrees to have Sirimavo continue as leader of the SLFP though the parties direction is still determined by the Nationalists.
 
 @maitri_succeeds
 on-arrival: {! 
 
-Q.slfp_leader = "Maitripala Senanayake"; 
+Q.slfp_leader = "Maithripala Senanayake"; 
 Q.nationalist_strength += 3; 
 Q.left_dissent += 4; 
 Q.the_split = 0;
@@ -95,7 +95,7 @@ setTimeout(function() {
 
 Rarely has Sirimavo accepted defeat without a fight. But with elections coming up she has to accept the change. The Left are enraged but there is little they can or want to do. Sirimavo nows acts as an almost opposition within the SLFP, if this is her fate in her late husbands party or the beggining of a front to depose Maitri is to be seen, what can be confirmed is Sirimavo is taking a step away from offical party activities.
 
-This all but guarentees Maithripala Sirisena will be our candidate in next months election.
+This all but guarentees Maithripala Senanayake will be our candidate in next months election.
 
 - @select: It is time to select our united candidate.
 
