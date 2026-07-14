@@ -45,7 +45,7 @@ on-arrival: {!
 
 {!<img src="img/map_2.jpg" style="width: 94%; height: auto; border: 4px solid #876; padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
-**Update: FUCKING WORK pls**
+**Update: FUCKING WORK dumbass**
 
 Week [+ week +] [+ month : month +] [+ year +] 
 
@@ -1256,7 +1256,7 @@ Q.nationalist_dissent_pct = Q.nationalist_dissent / 50 * 100;
 
 [? if the_split == 1 : Disputed  Party Leader: Sirimavo Bandaranaike(Left) & Maithripala Sirisena(Nationalists) ?]
 
-[? if the_split ==0 : Party Leader: ?][+ slfp_leader +]
+[? if the_split == 0 : Party Leader: ?][+ slfp_leader +]
 
 Parliamentary Leader: [+ slfp_parliament_leader +]
 
