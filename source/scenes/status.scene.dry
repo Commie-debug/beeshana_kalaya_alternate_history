@@ -1258,9 +1258,9 @@ Q.nationalist_dissent_pct = Q.nationalist_dissent / 50 * 100;
 
 [? if the_split = 1 : **Disputed Leadership** ?]
 
-Maithripala Senanayake (Nationalists Faction)
+[? if the_split = 1 :Maithripala Senanayake (Nationalists Faction) ?]
 
-Sirimavo Bandaranaike (Left Faction)
+[? if the_split = 1 : Sirimavo Bandaranaike (Left Faction) ?]
 
 [? if (split_sirimavo_victory = 2) or (split_maitripala_victory = 2) : Party Leader ?]
 
