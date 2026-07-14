@@ -15,7 +15,7 @@ Whoever he sides with can field there own candidate in the presidential election
 - @comminsioner: And after months of deliberation he chooses....
 
 @comminsioner
-go-to: siri_win if split_sirimavo_victory == 2; maitri_win if split_maitripala_victory == 2; siri_win if split_sirimavo_victory == 1 and (left_strength > nationalist_strength); maitri_win if split_maitripala_victory == 1 and (left_strength < nationalist_strength); siri_win
+go-to: siri_win if split_sirimavo_victory = 2; maitri_win if split_maitripala_victory = 2; siri_win if split_sirimavo_victory = 1 and (left_strength > nationalist_strength); maitri_win if split_maitripala_victory = 1 and (left_strength < nationalist_strength); siri_win
 
 @siri_win
 on-arrival: {!
@@ -85,12 +85,6 @@ Q.nationalist_strength += 3;
 Q.left_dissent += 4; 
 Q.the_split = 0;
 
-setTimeout(function() {
-    if (window.statusTab === 'status.party') {
-        window.updateSidebar();
-    }
-}, 50);
-
 !}
 
 Rarely has Sirimavo accepted defeat without a fight. But with elections coming up she has to accept the change. The Left are enraged but there is little they can or want to do. Sirimavo nows acts as an almost opposition within the SLFP, if this is her fate in her late husbands party or the beggining of a front to depose Maitri is to be seen, what can be confirmed is Sirimavo is taking a step away from offical party activities.
@@ -106,12 +100,6 @@ Q.slfp_leader = "Sirimavo Bandaranaike";
 Q.left_strength += 3; 
 Q.nationalist_dissent += 4; 
 Q.the_split = 0;
-
-setTimeout(function() {
-    if (window.statusTab === 'status.party') {
-        window.updateSidebar();
-    }
-}, 50);
 
 !}
 
