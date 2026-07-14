@@ -123,6 +123,7 @@ We still need to figure out now, who will be the SLFP candidate in next months p
 
 
 @select
+on-arrival: the_split = 0;
 
 //add more later
 
