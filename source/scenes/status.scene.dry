@@ -43,7 +43,7 @@ on-arrival: {!
 
 = Status
 
-{!<img src="img/map_2.jpg" style="width: 94%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/map_2.jpg" style="width: 94%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 **Update: Frog **
 
@@ -157,7 +157,7 @@ for (var i = 0; i < 8; i++) {
 
 = Politics
 
-{!<img src="img/politics.jpg" style="width: 70%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/politics.jpg" style="width: 70%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 = Inter-party Relations
 
@@ -325,7 +325,7 @@ if (Q.ipkf_morale) {
 
 = Political Paramilitaries
 
-{!<img src="img/paramilitaries.jpg" style="width: 85%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/paramilitaries.jpg" style="width: 85%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 <span class="tooltip-text" title="Thugs affiliated with the SLFP" style="color: #00008B;">**SLFP Thugs**</span> Strength: [+ slfpt_strength_2 : group_strength +], Militarization: [+ slfpt_militancy : militancy +]
 
@@ -343,7 +343,7 @@ if (Q.ipkf_morale) {
 
 = Tamil Militant Groups
 
-{!<img src="img/tamil_militants.jpg" style="width: 85%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/tamil_militants.jpg" style="width: 85%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 <span class="tooltip-text" title="Liberation Tigers Of Tamil Eelam" style="color: #DC143C;">**LTTE**</span> Strength: [+ ltte_strength_2 : group_strength +], Militarization: [+ ltte_militancy : militancy +]
 
@@ -357,7 +357,7 @@ if (Q.ipkf_morale) {
 
 = Military & State Paramilitaries
 
-{!<img src="img/military.jpg" style="width: 94%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+{!<img src="img/military.jpg" style="width: 94%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 War Exhaustion: [+ war_exhaustion : coalition_dissent +]
 
@@ -951,7 +951,7 @@ if (Q.eprlf_strength) {
 
 = Tamil Situation
 
-{!<img src="img/tamil_situation.webp" style="width: 94%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
+{!<img src="img/tamil_situation.webp" style="width: 94%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);">!}
 
 Current situation in the North-East: [+ tamil_war : war +]
 
@@ -981,7 +981,7 @@ Control of Jaffna: [+ jaffna_control +]
 
 = Interior Policies
 
-{!<img src="img/interior.jpg" style="width: 85%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/interior.jpg" style="width: 85%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 = Labour
 
@@ -1112,7 +1112,7 @@ if (Q.total_nationalisation_2) {
 
 = Economy
 
-{!<img src="img/economy.jpg" style="width: 83%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/economy.jpg" style="width: 83%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 Inflation: [+ inflation_2 +]%
 
@@ -1199,7 +1199,7 @@ if (Q.ipkf_morale) {
 
 = Foreign Relations
 
-{!<img src="img/foreign.jpg" style="width: 84%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/foreign.jpg" style="width: 84%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 India: [+ india_relation : relationships +]
 
@@ -1225,7 +1225,7 @@ USSR: [+ ussr_relation : relationships +]
 
 = Indian Involvement
 
-{!<img src="img/tamil_militants_2.jpg" style="width: 80%; height: auto; border: 4px solid rgb(0, 0, 0); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
+{!<img src="img/tamil_militants_2.jpg" style="width: 80%; height: auto; border: 4px solid rgb(43, 43, 43); padding: 4px; background-color: var(--content-bg-color); box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3); display: block; margin: 0 auto;">!}
 
 Indian support for Tamil militants: [+ india_tamil_support_2 : militancy +]
 
