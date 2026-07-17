@@ -475,7 +475,7 @@ img.inline-img.icon {
   position: fixed;
   z-index: 999999;
   width: 130px;
-  background: #fff4e6;
+  background: #d8ddef;
   color: #3b1f0a;
   text-align: left;
   border-radius: 8px;
@@ -685,7 +685,7 @@ p.other {
     position: absolute;
     z-index: 999999;
     width: 120px;
-    background: #fff4e6;
+    background: #d8ddef;
     color: #3b1f0a;
     text-align: center;
     border-radius: 8px;
@@ -712,7 +712,7 @@ p.other {
     opacity: 0.3;
 }
 body.dark-mode .parliament-tooltip {
-    background: #1a1a2e;
+    background: rgb(60, 90, 160);
     color: #e0e0e0;
     border-color: #8093ff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
