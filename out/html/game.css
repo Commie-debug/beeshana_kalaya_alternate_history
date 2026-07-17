@@ -28,7 +28,7 @@ body.dark-mode {
   --border-color: #fff;
   --content-bg-color: #242424;
   --text-color: #fff;
-  --link-color: #ff8080;
+  --link-color: #8093ff;
   --link-hover-color: rgba(100, 100, 100, 0.1);
   --tab-bg-color: #555555;
   --tab-color: #505050;
@@ -482,7 +482,7 @@ img.inline-img.icon {
   padding: 12px 14px;
   opacity: 0;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
-  border: 1px solid #b22222;
+  border: 1px solid #2235b2;
   pointer-events: none;
   font-size: 14px !important;
   line-height: 1.5em !important;
@@ -508,7 +508,7 @@ body.dark-mode .mytooltip:hover {
 body.dark-mode .mytooltip .mytooltiptext {
     background: #1a1a2e;
     color: #e0e0e0;
-    border: 1px solid #7a3b3b;
+    border: 1px solid #8093ff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
