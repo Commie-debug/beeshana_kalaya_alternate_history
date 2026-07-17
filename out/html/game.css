@@ -692,7 +692,7 @@ p.other {
     padding: 12px 14px;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
-    border: 1px solid #b22222;
+    border: 1px solid #2235b2;
     pointer-events: none;
     font-size: 14px;
     line-height: 1.5em;
