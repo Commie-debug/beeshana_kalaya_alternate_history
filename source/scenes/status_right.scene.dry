@@ -4,9 +4,9 @@ is-special: true
 
 = [+ district_name +] District
 
-{!<div style="display:flex;gap:1em;justify-content:center;margin:0.5em 0;"><div style="text-align:center;"><b style="font-size:0.85em;">Class</b><br><canvas id="class-pie" width="120" height="120"></canvas></div><div style="text-align:center;"><b style="font-size:0.85em;">Ethnicity</b><br><canvas id="ethnic-pie" width="120" height="120"></canvas></div></div>!}
+{!<div style="display:flex;gap:1em;justify-content:center;margin:0.5em 0;"><div style="text-align:center;"><b style="font-size:0.85em;">Class</b><br><canvas id="class-pie" width="120" height="120"></canvas></div><div style="text-align:center;"><b style="font-size:0.85em;">Ethnicity</b><br><canvas id="ethnic-pie" width="120" height="120"></canvas></div><div style="text-align:center;" id="district-control"></div></div>!}
 
-{!<div style="display:flex;gap:0.5em;align-items:flex-start;margin-top:0.5em;"><div id="district-parliament" style="flex:1;"></div><div id="district-control" style="flex:1;"></div></div>!}
+{!<div style="margin-top:0.5em;"><div id="district-parliament"></div></div>!}
 
 Infastructure: [+ district_infastructure : eduinfa +]
 
