@@ -1059,6 +1059,8 @@ img {
     z-index: 49;
     overflow: hidden;
     background-color: var(--content-bg-color);
+    background-size: cover;
+    background-position: center;
     overflow-y: auto;
     padding: 0em;
     box-shadow: -4px 0 16px rgba(0,0,0,0.4);

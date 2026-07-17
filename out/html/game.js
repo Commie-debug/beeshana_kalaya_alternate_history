@@ -1258,6 +1258,16 @@
   window.handleSignal = function(signal, event, scene_id) {
   };
 
+  //right bar background setting
+  window.setRightPanelBackground = function(imagePath) {
+    var panel = document.getElementById('right-panel-body');
+    if (imagePath) {
+        panel.style.backgroundImage = "url('" + imagePath + "')";
+    } else {
+        panel.style.backgroundImage = "";
+    }
+};
+
   //district parliament
   window.renderDistrictParliament = function() {
     var Q = window.dendryUI.dendryEngine.state.qualities;
@@ -1586,6 +1596,7 @@ window.updateSidebarRight = function() {
 // Western Province
 function Colombo_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/Red_Mosque.png');
   Q.district_name = "Colombo";
   Q.district_sinhala = Q.colombo_d_sinhala;
   Q.district_sltamil = Q.colombo_d_sltamil;
