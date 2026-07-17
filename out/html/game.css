@@ -1066,6 +1066,12 @@ img {
     box-shadow: -4px 0 16px rgba(0,0,0,0.4);
 }
 
+#status_parliament,
+#district-parl-svg {
+    background-color: var(--content-bg-color);
+    border-radius: 6px;
+}
+
 #page.right-panel-open #right-panel-body {
     width: 320px;
     padding: 0.6em;
