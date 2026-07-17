@@ -715,6 +715,7 @@ body.dark-mode .parliament-tooltip {
     background: #1a1a2e;
     color: #e0e0e0;
     border-color: #8093ff;
+    border: 1px solid #2235b2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
