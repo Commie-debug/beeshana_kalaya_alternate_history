@@ -712,7 +712,7 @@ p.other {
     opacity: 0.3;
 }
 body.dark-mode .parliament-tooltip {
-    background: rgb(60, 90, 160);
+    background: #1a1a2e;
     color: #e0e0e0;
     border-color: #8093ff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
