@@ -1350,7 +1350,8 @@ window.renderDistrictControl = function() {
         ctx.clearRect(0, 0, c.width, c.height);
         var total = data.reduce(function(s, d) { return s + d.value; }, 0);
         if (!total) return;
-        var a = -Math.PI / 2, cx = 60, cy = 60, r = 55;
+        var cx = c.width / 2, cy = c.height / 2, r = (Math.min(c.width, c.height) / 2) - 5;
+        var a = -Math.PI / 2;
         var slices = [];
         data.forEach(function(d) {
             var s = (d.value / total) * 2 * Math.PI;
