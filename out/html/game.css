@@ -1070,6 +1070,7 @@ img {
 #sri-lanka-map {
     background-color: var(--content-bg-color);
     border-radius: 6px;
+    border-color: #1a1a2e;
 }
 
 #page.right-panel-open #right-panel-body {
