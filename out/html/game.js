@@ -1301,7 +1301,7 @@
         var el = document.getElementById('district-parl-svg');
         if (!el || !d3 || !d3.parliament) return;
         var w = el.parentElement.offsetWidth || 150;
-        var h = Math.round(w * 0.6);
+        var h = Math.round(w * 0.5);
         el.setAttribute('width', w);
         el.setAttribute('height', h);
         d3.select('#district-parl-svg').selectAll('*').remove();
