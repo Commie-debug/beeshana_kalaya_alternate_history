@@ -1263,6 +1263,7 @@ table {
 }
 .seat.district_seats {
     fill: #ff0000;
+    stroke: var(--border-color);
 }
 
 .tooltip-text {
