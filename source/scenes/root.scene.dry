@@ -1269,7 +1269,7 @@ Q.monaragala_d_rural = 83;
 Q.monaragala_d_control = 10;
 Q.monaragala_d_infastructure = 0.30;
 Q.monaragala_d_seats = 5;
-Q.monaragala_d_industries = ['Agriculture', 'Mining'];
+Q.monaragala_d_industries = ['Agriculture', 'Mining', 'Rubber'];
 Q.monaragala_d_pop_weight = 1.84;
 
 //badulla
