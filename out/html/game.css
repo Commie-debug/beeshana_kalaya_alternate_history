@@ -1059,6 +1059,7 @@ img {
     z-index: 49;
     overflow: hidden;
     background-color: var(--content-bg-color);
+    color: var(--text-color);
     background-size: cover;
     background-position: center;
     overflow-y: auto;

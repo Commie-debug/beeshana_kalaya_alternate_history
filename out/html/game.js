@@ -1376,7 +1376,7 @@ window.renderDistrictControl = function() {
         if (oldTip) oldTip.remove();
         var tip = document.createElement('div');
         tip.id = id + '-tip';
-        tip.style.cssText = 'position:fixed;display:none;background:var(--content-bg-color);border:1px solid #aaa;border-radius:4px;padding:6px 8px;font-size:0.8em;z-index:9999;pointer-events:none;';
+        tip.style.cssText = 'position:fixed;display:none;background:var(--content-bg-color);color:var(--text-color);border:1px solid #aaa;border-radius:4px;padding:6px 8px;font-size:0.8em;z-index:9999;pointer-events:none;';
 
         var rows = data.map(function(d) {
             var pct = total > 0 ? Math.round((d.value / total) * 1000) / 10 : 0;
