@@ -1596,7 +1596,7 @@ window.updateSidebarRight = function() {
 // Western Province
 function Colombo_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
-  window.setRightPanelBackground('img/Red_Mosque.png');
+  window.setRightPanelBackground('img/district_backgrounds/Colombo_bg.png');
   Q.district_name = "Colombo";
   Q.district_sinhala = Q.colombo_d_sinhala;
   Q.district_sltamil = Q.colombo_d_sltamil;
@@ -1616,6 +1616,7 @@ function Colombo_info() {
 
 function Gampaha_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Gampaha_bg.png');
   Q.district_name = "Gampaha";
   Q.district_sinhala = Q.gampaha_d_sinhala;
   Q.district_sltamil = Q.gampaha_d_sltamil;
@@ -1635,6 +1636,7 @@ function Gampaha_info() {
 
 function Kalutara_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Kalutara_bg.png');
   Q.district_name = "Kalutara";
   Q.district_sinhala = Q.kalutara_d_sinhala;
   Q.district_sltamil = Q.kalutara_d_sltamil;
@@ -1655,6 +1657,7 @@ function Kalutara_info() {
 // Central Province
 function Kandy_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Kandy_bg.png');
   Q.district_name = "Kandy";
   Q.district_sinhala = Q.kandy_d_sinhala;
   Q.district_sltamil = Q.kandy_d_sltamil;
@@ -1674,6 +1677,7 @@ function Kandy_info() {
 
 function Matale_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Matale_bg.png');
   Q.district_name = "Matale";
   Q.district_sinhala = Q.matale_d_sinhala;
   Q.district_sltamil = Q.matale_d_sltamil;
@@ -1693,6 +1697,7 @@ function Matale_info() {
 
 function NuwaraEliya_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Nuwara_Eliya_bg.png');
   Q.district_name = "Nuwara Eliya";
   Q.district_sinhala = Q.nuwaraeliya_d_sinhala;
   Q.district_sltamil = Q.nuwaraeliya_d_sltamil;
@@ -1713,6 +1718,7 @@ function NuwaraEliya_info() {
 // Southern Province
 function Galle_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Galle_bg.png');
   Q.district_name = "Galle";
   Q.district_sinhala = Q.galle_d_sinhala;
   Q.district_sltamil = Q.galle_d_sltamil;
@@ -1732,6 +1738,7 @@ function Galle_info() {
 
 function Matara_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Matara_bg.png');
   Q.district_name = "Matara";
   Q.district_sinhala = Q.matara_d_sinhala;
   Q.district_sltamil = Q.matara_d_sltamil;
@@ -1751,6 +1758,7 @@ function Matara_info() {
 
 function Hambantota_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Hambantota_bg.png');
   Q.district_name = "Hambantota";
   Q.district_sinhala = Q.hambantota_d_sinhala;
   Q.district_sltamil = Q.hambantota_d_sltamil;
@@ -1771,6 +1779,7 @@ function Hambantota_info() {
 // Northern Province
 function Jaffna_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Jaffna_bg.png');
   Q.district_name = "Jaffna";
   Q.district_sinhala = Q.jaffna_d_sinhala;
   Q.district_sltamil = Q.jaffna_d_sltamil;
@@ -1790,6 +1799,7 @@ function Jaffna_info() {
 
 function Kilinochchi_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Killinochchi_bg.png');
   Q.district_name = "Kilinochchi";
   Q.district_sinhala = Q.kilinochchi_d_sinhala;
   Q.district_sltamil = Q.kilinochchi_d_sltamil;
@@ -1809,6 +1819,7 @@ function Kilinochchi_info() {
 
 function Mannar_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Mannar_bg.png');
   Q.district_name = "Mannar";
   Q.district_sinhala = Q.mannar_d_sinhala;
   Q.district_sltamil = Q.mannar_d_sltamil;
@@ -1828,6 +1839,7 @@ function Mannar_info() {
 
 function Mullaitivu_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Mullaitivu_bg.png');
   Q.district_name = "Mullaitivu";
   Q.district_sinhala = Q.mullaitivu_d_sinhala;
   Q.district_sltamil = Q.mullaitivu_d_sltamil;
@@ -1847,6 +1859,7 @@ function Mullaitivu_info() {
 
 function Vavuniya_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Vavuniya_bg.png');
   Q.district_name = "Vavuniya";
   Q.district_sinhala = Q.vavuniya_d_sinhala;
   Q.district_sltamil = Q.vavuniya_d_sltamil;
@@ -1867,6 +1880,7 @@ function Vavuniya_info() {
 // Eastern Province
 function Batticaloa_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Batticaloa_bg.png');
   Q.district_name = "Batticaloa";
   Q.district_sinhala = Q.batticaloa_d_sinhala;
   Q.district_sltamil = Q.batticaloa_d_sltamil;
@@ -1886,6 +1900,7 @@ function Batticaloa_info() {
 
 function Ampara_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Ampara_bg.png');
   Q.district_name = "Ampara";
   Q.district_sinhala = Q.ampara_d_sinhala;
   Q.district_sltamil = Q.ampara_d_sltamil;
@@ -1905,6 +1920,7 @@ function Ampara_info() {
 
 function Trincomalee_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Trincomalee_bg.png');
   Q.district_name = "Trincomalee";
   Q.district_sinhala = Q.trincomalee_d_sinhala;
   Q.district_sltamil = Q.trincomalee_d_sltamil;
@@ -1925,6 +1941,7 @@ function Trincomalee_info() {
 // North Western Province
 function Kurunegala_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Kurunegala_bg.png');
   Q.district_name = "Kurunegala";
   Q.district_sinhala = Q.kurunegala_d_sinhala;
   Q.district_sltamil = Q.kurunegala_d_sltamil;
@@ -1944,6 +1961,7 @@ function Kurunegala_info() {
 
 function Puttalam_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Puttalam_bg.png');
   Q.district_name = "Puttalam";
   Q.district_sinhala = Q.puttalam_d_sinhala;
   Q.district_sltamil = Q.puttalam_d_sltamil;
@@ -1964,6 +1982,7 @@ function Puttalam_info() {
 // North Central Province
 function Anuradhapura_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Anuradhapura_bg.png');
   Q.district_name = "Anuradhapura";
   Q.district_sinhala = Q.anuradhapura_d_sinhala;
   Q.district_sltamil = Q.anuradhapura_d_sltamil;
@@ -1983,6 +2002,7 @@ function Anuradhapura_info() {
 
 function Polonnaruwa_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Polonnaruwa_bg.png');
   Q.district_name = "Polonnaruwa";
   Q.district_sinhala = Q.polonnaruwa_d_sinhala;
   Q.district_sltamil = Q.polonnaruwa_d_sltamil;
@@ -2003,6 +2023,7 @@ function Polonnaruwa_info() {
 // Uva Province
 function Badulla_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Badulla_bg.png');
   Q.district_name = "Badulla";
   Q.district_sinhala = Q.badulla_d_sinhala;
   Q.district_sltamil = Q.badulla_d_sltamil;
@@ -2022,6 +2043,7 @@ function Badulla_info() {
 
 function Monaragala_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Monaragala_bg.png');
   Q.district_name = "Monaragala";
   Q.district_sinhala = Q.monaragala_d_sinhala;
   Q.district_sltamil = Q.monaragala_d_sltamil;
@@ -2042,6 +2064,7 @@ function Monaragala_info() {
 // Sabaragamuwa Province
 function Ratnapura_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Ratnapura_bg.png');
   Q.district_name = "Ratnapura";
   Q.district_sinhala = Q.ratnapura_d_sinhala;
   Q.district_sltamil = Q.ratnapura_d_sltamil;
@@ -2061,6 +2084,7 @@ function Ratnapura_info() {
 
 function Kegalle_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
+  window.setRightPanelBackground('img/district_backgrounds/Ke_bg.png');
   Q.district_name = "Kegalle";
   Q.district_sinhala = Q.kegalle_d_sinhala;
   Q.district_sltamil = Q.kegalle_d_sltamil;
