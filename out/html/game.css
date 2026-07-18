@@ -2,6 +2,7 @@ body {
   --bg-color: #f3f3e3;
   --border-color: #000;
   --content-bg-color: #f3f3f3;
+  --content-bg-color-translucent: rgba(243, 243, 243, 0.7);
   --text-color: #431;
   --link-color: #2646fa;
   --link-hover-color: rgba(0, 0, 0, 0.05);
@@ -27,6 +28,7 @@ body.dark-mode {
   --bg-color: #000;
   --border-color: #fff;
   --content-bg-color: #242424;
+  --content-bg-color-translucent: rgba(36, 36, 36, 0.7);
   --text-color: #fff;
   --link-color: #8093ff;
   --link-hover-color: rgba(100, 100, 100, 0.1);
@@ -1071,7 +1073,7 @@ img {
 
 #district-parliament,
 #sri-lanka-map {
-    background-color: var(--content-bg-color);
+    background-color: var(--content-bg-color-translucent);
     border-radius: 6px;
     border-color: #1a1a2e;
 }
