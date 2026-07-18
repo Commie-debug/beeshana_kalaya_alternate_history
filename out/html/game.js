@@ -1422,7 +1422,7 @@ window.renderDistrictIndustries = function() {
     var html = '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;">';
     industries.forEach(function(ind) {
         var icon = industryIcons[ind] || '';
-        html += '<span style="display:inline-flex;flex-direction:column;align-items:center;background:var(--content-bg-color-translucent);border:1px solid var(--border-color);padding:4px 8px;font-size:0.8em;text-align:center;">' +
+        html += '<span style="display:inline-flex;flex-direction:column;align-items:center;background:var(--content-bg-color-translucent);border:1px solid var(--tab-bg-color);padding:4px 8px;font-size:0.8em;text-align:center;">' +
             (icon ? '<img src="' + icon + '" style="width:36px;height:36px;object-fit:contain;margin-bottom:4px;" onerror="this.style.display=\'none\'">' : '') +
             applyWholesome(ind) + '</span>';
     });
