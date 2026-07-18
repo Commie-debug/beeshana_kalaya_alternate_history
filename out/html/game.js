@@ -1208,6 +1208,26 @@
             var status = getStatusText(Q.ipkf_gstatus);
             return baseTooltip.explanationText + '<br>' + status + '<br>Strength: ' + strength + 'k<br>Morale: ' + morale;
         }
+
+        if (searchString === 'Tamil nationalism' && Q.tamil_nationalism_disp !== undefined) {
+            var proptext = Math.round(Q.tamil_nationalism);
+            return baseTooltip.explanationText + '<br>' + proptext + '% support among Tamils';
+        }
+
+        if (searchString === 'Sinhalese nationalism' && sinhala_nationalism_disp !== undefined) {
+            var proptext = Math.round(Q.sinhala_nationalism);
+            return baseTooltip.explanationText + '<br>' + proptext + '% support among Sinhalese';
+        }
+
+        if (searchString === 'Sinhalese buddhist nationalism' && sinhala_nationalism_disp !== undefined) {
+            var proptext = Math.round(Q.sinhala_nationalism);
+            return baseTooltip.explanationText + '<br>' + proptext + '% support among Sinhalese';
+        }
+
+        if (searchString === 'Sinhalese Buddhist nationalism' && sinhala_nationalism_disp !== undefined) {
+            var proptext = Math.round(Q.sinhala_nationalism);
+            return baseTooltip.explanationText + '<br>' + proptext + '% support among Sinhalese';
+        }
         
         return baseTooltip.explanationText;
         

@@ -1445,6 +1445,22 @@ const tooltipList = [{
     searchString: "AIADMK",
     explanationText: "<img src=img/logos/AIADMK_Logo.png> All India Anna Dravida Munnetra Kazhagam <br> அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்"
     },
+    {
+    searchString: "Tamil nationalism",
+    explanationText: "An ideology of great variance. Broadly it focuses on Sri Lankan Tamil culture and a notion that the community forms a distinct nation seperate of the Sinhalese and that thus, they deserve autonomy of even independence. Emerging in response to British sponsored Protestant missionary activity, the ideology does not place a heavy focus on religion. Its proponents are either political or even militant."
+    },
+    {
+    searchString: "Sinhalese nationalism",
+    explanationText: "An ideology that focuses on Sinhalese culture and Buddhism. It emerged during the Buddhist revival of the late 19th century as a response to Christian dominance over the island under the British. Sinhalese hegemony and supremacy over Sri Lanka is emphasised to the detriment of mostly Tamils."
+    },
+    {
+    searchString: "Sinhalese buddhist nationalism",
+    explanationText: "An ideology that focuses on Sinhalese culture and Buddhism. It emerged during the Buddhist revival of the late 19th century as a response to Christian dominance over the island under the British. Sinhalese hegemony and supremacy over Sri Lanka is emphasised to the detriment of mostly Tamils."
+    },
+    {
+    searchString: "Sinhalese Buddhist nationalism",
+    explanationText: "An ideology that focuses on Sinhalese culture and Buddhism. It emerged during the Buddhist revival of the late 19th century as a response to Christian dominance over the island under the British. Sinhalese hegemony and supremacy over Sri Lanka is emphasised to the detriment of mostly Tamils."
+    },
 
 
 
