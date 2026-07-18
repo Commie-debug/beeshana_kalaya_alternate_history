@@ -2084,7 +2084,7 @@ function Ratnapura_info() {
 
 function Kegalle_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;
-  window.setRightPanelBackground('img/district_backgrounds/Ke_bg.png');
+  window.setRightPanelBackground('img/district_backgrounds/Kegalle_bg.png');
   Q.district_name = "Kegalle";
   Q.district_sinhala = Q.kegalle_d_sinhala;
   Q.district_sltamil = Q.kegalle_d_sltamil;
