@@ -1,0 +1,21 @@
+title: Through song
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: songs_timer <= 0 and (split_sirimavo_victory > 2 or split_maitripala_victory > 2)
+max-visits: 100
+on-arrival: month_actions += 1; media_timer += 6;
+card-image: img/slbc.jpg
+#subtitle: Setting the direction for our newspapers and radio.
+
+= Through Song
+
+The JVP since their re-legalisation in 1977 has organised semi-regular concerts across Sri Lanka under the stewardship of the Society for Socialist Culture. It is called *Vimukthi Gee*(Songs of liberation).
+
+This is unique as no other party on the island has *so far* organised anything similar. It is also unique in having garned much support from both Sinhalese and Sri Lankan Tamil communities, in fact the concerts regularily play both Sinhala and Tamil songs. 
+
+The UNP matches the songs with its power in government, it banned concerts during the disturbances in 1981. In addition, several concerts that werent prevented became sights of intimidation directed by the JSS and even government linked youth organisations.
+
+With the internal schism being over *for now* perhaps it is time to match the JVP and adapt to a new form of political messaging.
+
+#need to finish writing this one

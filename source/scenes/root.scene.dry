@@ -1738,7 +1738,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
             'iron_front', 'media', 'enemies', 'racial',
-            'party_organizations', 'rally', 'thugs',
+            'party_organizations', 'songs', 'rally', 'thugs',
             'shuffle_leadership', 'labour_unions', 'student_unions', 'streetfighting', 'party_disunity',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
@@ -1761,6 +1761,7 @@ Q.confronting_nazis_timer = 0;
 Q.crisis_program_timer = 0;
 Q.fundraising_timer = 0;
 Q.ideology_timer = 0;
+Q.songs_timer = 0;
 Q.inter_party_relationships_timer = 0;
 Q.international_relations_timer = 0;
 Q.iron_front_timer = 0;
