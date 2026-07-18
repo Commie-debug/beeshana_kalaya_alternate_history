@@ -1330,7 +1330,7 @@ window.renderDistrictControl = function() {
         '<div style="text-align:center;font-size:0.85em;margin-bottom:4px;">Control</div>' +
         '<div style="display:flex;justify-content:center;">' +
             '<div style="width:80px;height:80px;border-radius:50%;background:conic-gradient(' + color + ' ' + pct + '%, #ddd ' + pct + '%);display:flex;align-items:center;justify-content:center;">' +
-                '<div style="width:52px;height:52px;border-radius:50%;background:var(--content-bg-color);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85em;">' + label + '</div>' +
+                '<div style="width:52px;height:52px;border-radius:50%;background:var(--content-bg-color-translucent);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85em;">' + label + '</div>' +
             '</div>' +
         '</div>';
 };
@@ -1422,7 +1422,7 @@ window.renderDistrictIndustries = function() {
     var html = '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;">';
     industries.forEach(function(ind) {
         var icon = industryIcons[ind] || '';
-        html += '<span style="display:inline-flex;flex-direction:column;align-items:center;background:var(--tab-bg-color);border:1px solid var(--border-color);padding:4px 8px;font-size:0.8em;text-align:center;">' +
+        html += '<span style="display:inline-flex;flex-direction:column;align-items:center;background:var(--content-bg-color-translucent);border:1px solid var(--border-color);padding:4px 8px;font-size:0.8em;text-align:center;">' +
             (icon ? '<img src="' + icon + '" style="width:36px;height:36px;object-fit:contain;margin-bottom:4px;" onerror="this.style.display=\'none\'">' : '') +
             applyWholesome(ind) + '</span>';
     });
