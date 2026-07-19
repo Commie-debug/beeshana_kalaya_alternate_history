@@ -1365,4 +1365,4 @@ on-departure: {!
 
 The new President will now take office. The political landscape of Sri Lanka shifts accordingly.
 
-[? if cohabitation = 1 : The period of cohabitation begins. Tensions between the presidency and parliament are likely to increase. ?]
+[? if cohabitation = 1 : A period of cohabitation begins. Tensions between the presidency and parliament are likely to increase. ?]

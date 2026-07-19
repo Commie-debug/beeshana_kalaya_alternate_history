@@ -1214,17 +1214,17 @@
             return baseTooltip.explanationText + '<br>' + proptext + '% support among Tamils';
         }
 
-        if (searchString === 'Sinhalese nationalism' && sinhala_nationalism_disp !== undefined) {
+        if (searchString === 'Sinhalese nationalism' && Q.sinhala_nationalism_disp !== undefined) {
             var proptext = Math.round(Q.sinhala_nationalism);
             return baseTooltip.explanationText + '<br>' + proptext + '% support among Sinhalese';
         }
 
-        if (searchString === 'Sinhalese buddhist nationalism' && sinhala_nationalism_disp !== undefined) {
+        if (searchString === 'Sinhalese buddhist nationalism' && Q.sinhala_nationalism_disp !== undefined) {
             var proptext = Math.round(Q.sinhala_nationalism);
             return baseTooltip.explanationText + '<br>' + proptext + '% support among Sinhalese';
         }
 
-        if (searchString === 'Sinhalese Buddhist nationalism' && sinhala_nationalism_disp !== undefined) {
+        if (searchString === 'Sinhalese Buddhist nationalism' && Q.sinhala_nationalism_disp !== undefined) {
             var proptext = Math.round(Q.sinhala_nationalism);
             return baseTooltip.explanationText + '<br>' + proptext + '% support among Sinhalese';
         }
