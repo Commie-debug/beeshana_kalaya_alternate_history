@@ -206,6 +206,7 @@ News starts coming back as to who has correctly filed their candidacy.
 - @view: Let's view the options
 
 @view
+
 {!<table style="text-align:left; border-spacing: 0.5em;">!}
 {!<tr><th>Candidate</th><th>Party</th><th>Supporting Parties</th></tr>!}
 
