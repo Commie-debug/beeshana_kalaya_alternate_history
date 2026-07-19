@@ -152,28 +152,6 @@ for (var p of all_party_names) {
     }
 }
 
-for (var i = 0; i < 12; i++) {
-    if (i < independentParties.length) {
-        var p = independentParties[i];
-        var cand = Q[p + '_pres_candidate'];
-        Q['nominee_' + i + '_candidate'] = cand;
-        Q['nominee_' + i + '_party'] = p.toUpperCase();
-        Q['nominee_' + i + '_color'] = Q.partyColors[p.toUpperCase()] || '#888888';
-        var endorsers = Q.pres_endorsing_parties[cand] || [];
-        var endorserNames = [];
-        for (var e of endorsers) {
-            endorserNames.push(e.toUpperCase());
-        }
-        Q['nominee_' + i + '_endorsers'] = endorserNames.join(', ');
-    } else {
-        Q['nominee_' + i + '_candidate'] = '';
-        Q['nominee_' + i + '_party'] = '';
-        Q['nominee_' + i + '_color'] = '';
-        Q['nominee_' + i + '_endorsers'] = '';
-    }
-}
-Q.nominee_count = independentParties.length;
-
 var nonParticipating = [];
 for (var p of all_party_names) {
     if (Q[p + '_pres_yes'] === 0) {
@@ -181,17 +159,32 @@ for (var p of all_party_names) {
     }
 }
 
-for (var i = 0; i < 20; i++) {
-    if (i < nonParticipating.length) {
-        var p = nonParticipating[i];
-        Q['nonpart_' + i + '_party'] = p.toUpperCase();
-        Q['nonpart_' + i + '_color'] = Q.partyColors[p.toUpperCase()] || '#888888';
-    } else {
-        Q['nonpart_' + i + '_party'] = '';
-        Q['nonpart_' + i + '_color'] = '';
+var tableHtml = '<table style="text-align:left; border-spacing: 0.5em;"><tr><th>Candidate</th><th>Party</th><th>Supporting Parties</th></tr>';
+for (var i = 0; i < independentParties.length; i++) {
+    var p = independentParties[i];
+    var cand = Q[p + '_pres_candidate'];
+    var partyUp = p.toUpperCase();
+    var color = Q.partyColors[partyUp] || '#888888';
+    var endorsers = Q.pres_endorsing_parties[cand] || [];
+    var endorserNames = [];
+    for (var e of endorsers) {
+        endorserNames.push(e.toUpperCase());
     }
+    tableHtml += '<tr><td><div class="box" style="background-color:' + color + '; outline: 2px; outline-style: solid;"> </div> ' + cand + '</td><td><span style="color:' + color + ';"><b>' + partyUp + '</b></span></td><td>' + endorserNames.join(', ') + '</td></tr>';
 }
-Q.nonpart_count = nonParticipating.length;
+tableHtml += '</table>';
+Q.nominees_html = tableHtml;
+
+var badgesHtml = '';
+for (var i = 0; i < nonParticipating.length; i++) {
+    var p = nonParticipating[i];
+    var partyUp = p.toUpperCase();
+    var color = Q.partyColors[partyUp] || '#888888';
+    badgesHtml += '<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style="background-color:' + color + '; outline: 2px; outline-style: solid;"> </div>' + partyUp + '</span>';
+}
+Q.nonparticipating_html = nonParticipating.length > 0
+    ? '<p><b>Parties not participating in this election:</b></p><div style="display:flex; flex-wrap:wrap; gap:0.5em; margin-top:0.5em;">' + badgesHtml + '</div>'
+    : '';
 !}
 
 = Nominees for Presidential Election [+ next_pres_election_month : month +], [+ next_pres_election_year +]
@@ -203,54 +196,9 @@ Nominations are now being filled as candidates and their party faculty flood to 
 
 News starts coming back as to who has correctly filed their candidacy.
 
-- @view: Let's view the options
+[+ nominees_html +]
 
-@view
-
-{!<table style="text-align:left; border-spacing: 0.5em;">!}
-{!<tr><th>Candidate</th><th>Party</th><th>Supporting Parties</th></tr>!}
-
-[? if nominee_count >= 1 : {!<tr><td><div class="box" style='background-color:!}[+nominee_0_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_0_candidate+]{!</td><td><span style="color:!}[+ nominee_0_color +]{!;">!}**[+ nominee_0_party +]**{!</span></td><td>!}[+ nominee_0_endorsers +]{!</td></tr>!} ?]
-[? if nominee_count >= 2 : {!<tr><td><div class="box" style='background-color:!}[+nominee_1_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_1_candidate+]{!</td><td><span style="color:!}[+ nominee_1_color +]{!;">!}**[+ nominee_1_party +]**{!</span></td><td>!}[+ nominee_1_endorsers +]{!</td></tr>!} ?]
-[? if nominee_count >= 3 : {!<tr><td><div class="box" style='background-color:!}[+nominee_2_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_2_candidate+]{!</td><td><span style="color:!}[+nominee_2_color +]{!;">!}**[+ nominee_2_party +]**{!</span></td><td>!}[+nominee_2_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 4 : {!<tr><td><div class="box" style='background-color:!}[+nominee_3_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_3_candidate+]{!</td><td><span style="color:!}[+nominee_3_color +]{!;">!}**[+ nominee_3_party +]**{!</span></td><td>!}[+nominee_3_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 5 : {!<tr><td><div class="box" style='background-color:!}[+nominee_4_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_4_candidate+]{!</td><td><span style="color:!}[+nominee_4_color +]{!;">!}**[+ nominee_4_party +]**{!</span></td><td>!}[+nominee_4_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 6 : {!<tr><td><div class="box" style='background-color:!}[+nominee_5_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_5_candidate+]{!</td><td><span style="color:!}[+nominee_5_color +]{!;">!}**[+ nominee_5_party +]**{!</span></td><td>!}[+nominee_5_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 7 : {!<tr><td><div class="box" style='background-color:!}[+nominee_6_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_6_candidate+]{!</td><td><span style="color:!}[+ nominee_6_color +]{!;">!}**[+ nominee_6_party +]**{!</span></td><td>!}[+nominee_6_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 8 : {!<tr><td><div class="box" style='background-color:!}[+nominee_7_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_7_candidate+]{!</td><td><span style="color:!}[+ nominee_7_color +]{!;">!}**[+ nominee_7_party +]**{!</span></td><td>!}[+nominee_7_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 9 : {!<tr><td><div class="box" style='background-color:!}[+nominee_8_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_8_candidate+]{!</td><td><span style="color:!}[+ nominee_8_color +]{!;">!}**[+ nominee_8_party +]**{!</span></td><td>!}[+nominee_8_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 10 : {!<tr><td><div class="box" style='background-color:!}[+nominee_9_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_9_candidate+]{!</td><td><span style="color:!}[ +nominee_9_color +]{!;">!}**[+nominee_9_party +]**{!</span></td><td>!}[+ nominee_9_endorsers +]{!</td></tr>!} ?]
-[? if nominee_count >= 11 : {!<tr><td><div class="box" style='background-color:!}[+nominee_10_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_10_candidate+]{!</td><td><span style="color:!}[+ nominee_10_color +]{!;">!}**[+ nominee_10_party +]**{!</span></td><td>!}[+nominee_10_endorsers+]{!</td></tr>!} ?]
-[? if nominee_count >= 12 : {!<tr><td><div class="box" style='background-color:!}[+nominee_11_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_11_candidate+]{!</td><td><span style="color:!}[+ nominee_11_color +]{!;">!}**[+ nominee_11_party +]**{!</span></td><td>!}[+nominee_11_endorsers+]{!</td></tr>!} ?]
-
-{!</table>!}
-
-[? if nonpart_count >= 1 :
-**Parties not participating in upcoming election:**
-
-{!<div style="display:flex; flex-wrap:wrap; gap:0.5em; margin-top:0.5em;">!}
-[? if nonpart_count >= 1 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_0_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_0_party+]{!</span>!} ?]
-[? if nonpart_count >= 2 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_1_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_1_party+]{!</span>!} ?]
-[? if nonpart_count >= 3 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_2_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_2_party+]{!</span>!} ?]
-[? if nonpart_count >= 4 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_3_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_3_party+]{!</span>!} ?]
-[? if nonpart_count >= 5 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_4_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_4_party+]{!</span>!} ?]
-[? if nonpart_count >= 6 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_5_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_5_party+]{!</span>!} ?]
-[? if nonpart_count >= 7 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_6_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_6_party+]{!</span>!} ?]
-[? if nonpart_count >= 8 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_7_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_7_party+]{!</span>!} ?]
-[? if nonpart_count >= 9 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_8_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_8_party+]{!</span>!} ?]
-[? if nonpart_count >= 10 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_9_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_9_party+]{!</span>!} ?]
-[? if nonpart_count >= 11 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_10_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_10_party+]{!</span>!} ?]
-[? if nonpart_count >= 12 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_11_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_11_party+]{!</span>!} ?]
-[? if nonpart_count >= 13 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_12_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_12_party+]{!</span>!} ?]
-[? if nonpart_count >= 14 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_13_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_13_party+]{!</span>!} ?]
-[? if nonpart_count >= 15 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_14_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_14_party+]{!</span>!} ?]
-[? if nonpart_count >= 16 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_15_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_15_party+]{!</span>!} ?]
-[? if nonpart_count >= 17 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_16_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_16_party+]{!</span>!} ?]
-[? if nonpart_count >= 18 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_17_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_17_party+]{!</span>!} ?]
-[? if nonpart_count >= 19 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_18_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_18_party+]{!</span>!} ?]
-[? if nonpart_count >= 20 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_19_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_19_party+]{!</span>!} ?]
-{!</div>!}
-?]
+[+ nonparticipating_html +]
 
 - @continue: Continue
 
