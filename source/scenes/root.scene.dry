@@ -100,8 +100,8 @@ Q.theatre = 0;
 Q.grafitti = 0;
 Q.loud_speaker_cars = 0;
 
-// inter-party relations
-Q.cpsl_relation = 50;
+// inter-party relations, cpsl should be 50
+Q.cpsl_relation = 100;
 Q.tulf_relation = 10;
 Q.jvp_relation = 15;
 Q.nssp_relation = 35;
