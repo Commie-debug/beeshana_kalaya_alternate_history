@@ -3,6 +3,196 @@ view-if: ((year = next_pres_election_year and month >= next_pres_election_month-
 max-visits: 1
 new-page: true
 tags: event
+on-arrival: {!
+Q.pres_candidates = [];
+Q.pres_candidate_parties = {};
+Q.pres_endorsing_parties = {};
+
+var base_parties = ['slfp', 'unp', 'jvp', 'cpsl', 'lssp', 'nssp', 'tulf', 'actc', 'cwc'];
+var formable_parties = ['slpp', 'slmp', 'slmc', 'npp', 'mep', 'eros', 'dplf', 'pflt', 'ucpf', 'endlf', 'telo', 'eprlf', 'dunf', 'ulpp'];
+var all_party_names = base_parties.slice();
+
+for (var fp of formable_parties) {
+    if (Q[fp + '_formed']) {
+        all_party_names.push(fp);
+    }
+}
+
+var partyToCoalition = {};
+var coalitionMembers = {};
+var coalitionLeader = {};
+
+for (var party of all_party_names) {
+    partyToCoalition[party] = -1;
+}
+
+if (Q.active_coalitions && Q.active_coalitions.length > 0) {
+    for (var c = 0; c < Q.active_coalitions.length; c++) {
+        var coalition = Q.active_coalitions[c];
+        coalitionMembers[c] = [];
+        if (coalition.members && coalition.members.length > 0) {
+            coalitionLeader[c] = coalition.members[0].toLowerCase();
+        }
+        for (var m = 0; m < coalition.members.length; m++) {
+            var memberParty = coalition.members[m].toLowerCase();
+            if (all_party_names.indexOf(memberParty) !== -1) {
+                partyToCoalition[memberParty] = c;
+                coalitionMembers[c].push(memberParty);
+            }
+        }
+    }
+}
+
+for (var pname of all_party_names) {
+    var cid = Q[pname + '_coalition_id'];
+    if (cid !== undefined && cid >= 0) {
+        partyToCoalition[pname] = cid;
+        if (!coalitionMembers[cid]) {
+            coalitionMembers[cid] = [];
+        }
+        if (coalitionMembers[cid].indexOf(pname) === -1) {
+            coalitionMembers[cid].push(pname);
+        }
+        if (!coalitionLeader[cid]) {
+            coalitionLeader[cid] = pname;
+        }
+    }
+}
+
+for (var party of all_party_names) {
+    if (Q[party + '_pres_yes'] === 0) continue;
+
+    var endorsement = Q[party + '_pres_endorsement'];
+    var candidate = Q[party + '_pres_candidate'];
+
+    if (!endorsement || endorsement === '') {
+        if (candidate && candidate !== '') {
+            if (Q.pres_candidates.indexOf(candidate) === -1) {
+                Q.pres_candidates.push(candidate);
+                Q.pres_candidate_parties[candidate] = party;
+                if (!Q.pres_endorsing_parties[candidate]) {
+                    Q.pres_endorsing_parties[candidate] = [];
+                }
+            }
+            if (Q.pres_endorsing_parties[candidate].indexOf(party) === -1) {
+                Q.pres_endorsing_parties[candidate].push(party);
+            }
+        }
+    } else {
+        var endorsed_party = endorsement.toLowerCase();
+        var endorsed_candidate = Q[endorsed_party + '_pres_candidate'];
+
+        if (endorsed_candidate && endorsed_candidate !== '') {
+            if (!Q.pres_endorsing_parties[endorsed_candidate]) {
+                Q.pres_endorsing_parties[endorsed_candidate] = [];
+            }
+            if (Q.pres_endorsing_parties[endorsed_candidate].indexOf(party) === -1) {
+                Q.pres_endorsing_parties[endorsed_candidate].push(party);
+            }
+        }
+    }
+}
+
+for (var cid in coalitionMembers) {
+    var leader = coalitionLeader[cid];
+    if (!leader) continue;
+    if (Q[leader + '_pres_yes'] === 0) continue;
+
+    var leaderCandidate = Q[leader + '_pres_candidate'];
+    if (!leaderCandidate || leaderCandidate === '') continue;
+
+    if (Q.pres_candidates.indexOf(leaderCandidate) === -1) {
+        Q.pres_candidates.push(leaderCandidate);
+        Q.pres_candidate_parties[leaderCandidate] = leader;
+    }
+
+    if (!Q.pres_endorsing_parties[leaderCandidate]) {
+        Q.pres_endorsing_parties[leaderCandidate] = [];
+    }
+
+    var members = coalitionMembers[cid];
+    for (var mem of members) {
+        if (Q[mem + '_pres_yes'] === 0) continue;
+        if (Q.pres_endorsing_parties[leaderCandidate].indexOf(mem) === -1) {
+            Q.pres_endorsing_parties[leaderCandidate].push(mem);
+        }
+    }
+}
+
+var all_parties_check = base_parties.concat(formable_parties);
+for (var p of all_parties_check) {
+    var isTakingPart = (Q[p + '_pres_yes'] !== 0);
+    var hasOwnCandidate = false;
+    var isInCoalition = (partyToCoalition[p] !== undefined && partyToCoalition[p] >= 0);
+    var isCoalitionLeader = false;
+    var isEndorsing = (Q[p + '_pres_endorsement'] && Q[p + '_pres_endorsement'] !== '');
+
+    for (var candidate of Q.pres_candidates) {
+        if (Q.pres_candidate_parties[candidate] === p) {
+            hasOwnCandidate = true;
+            break;
+        }
+    }
+
+    for (var cid in coalitionLeader) {
+        if (coalitionLeader[cid] === p) {
+            isCoalitionLeader = true;
+            break;
+        }
+    }
+
+    var showInResults = isTakingPart && hasOwnCandidate && !isEndorsing && (!isInCoalition || isCoalitionLeader);
+    Q[p + '_pres_independent'] = showInResults ? 1 : 0;
+}
+
+var independentParties = [];
+for (var p of all_party_names) {
+    if (Q[p + '_pres_independent'] === 1) {
+        independentParties.push(p);
+    }
+}
+
+for (var i = 0; i < 12; i++) {
+    if (i < independentParties.length) {
+        var p = independentParties[i];
+        var cand = Q[p + '_pres_candidate'];
+        Q['nominee_' + i + '_candidate'] = cand;
+        Q['nominee_' + i + '_party'] = p.toUpperCase();
+        Q['nominee_' + i + '_color'] = Q.partyColors[p.toUpperCase()] || '#888888';
+        var endorsers = Q.pres_endorsing_parties[cand] || [];
+        var endorserNames = [];
+        for (var e of endorsers) {
+            endorserNames.push(e.toUpperCase());
+        }
+        Q['nominee_' + i + '_endorsers'] = endorserNames.join(', ');
+    } else {
+        Q['nominee_' + i + '_candidate'] = '';
+        Q['nominee_' + i + '_party'] = '';
+        Q['nominee_' + i + '_color'] = '';
+        Q['nominee_' + i + '_endorsers'] = '';
+    }
+}
+Q.nominee_count = independentParties.length;
+
+var nonParticipating = [];
+for (var p of all_party_names) {
+    if (Q[p + '_pres_yes'] === 0) {
+        nonParticipating.push(p);
+    }
+}
+
+for (var i = 0; i < 20; i++) {
+    if (i < nonParticipating.length) {
+        var p = nonParticipating[i];
+        Q['nonpart_' + i + '_party'] = p.toUpperCase();
+        Q['nonpart_' + i + '_color'] = Q.partyColors[p.toUpperCase()] || '#888888';
+    } else {
+        Q['nonpart_' + i + '_party'] = '';
+        Q['nonpart_' + i + '_color'] = '';
+    }
+}
+Q.nonpart_count = nonParticipating.length;
+!}
 
 = Nominees for Presidential Election [+ next_pres_election_month : month +], [+ next_pres_election_year +]
 
@@ -13,8 +203,54 @@ Nominations are now being filled as candidates and their party faculty flood to 
 
 News starts coming back as to who has correctly filed their candidacy.
 
-- @unp: The UNP
+- @view: Let's view the options
 
-@unp
+@view
+{!<table style="text-align:left; border-spacing: 0.5em;">!}
+{!<tr><th>Candidate</th><th>Party</th><th>Supporting Parties</th></tr>!}
 
-wow JR
+[? if nominee_count >= 1 : {!<tr><td><div class="box" style='background-color:!}[+nominee_0_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_0_candidate+]{!</td><td><span style="color:!}[+ nominee_0_color +]{!;">!}**[+ nominee_0_party +]**{!</span></td><td>!}[+ nominee_0_endorsers +]{!</td></tr>!} ?]
+[? if nominee_count >= 2 : {!<tr><td><div class="box" style='background-color:!}[+nominee_1_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_1_candidate+]{!</td><td><span style="color:!}[+ nominee_1_color +]{!;">!}**[+ nominee_1_party +]**{!</span></td><td>!}[+ nominee_1_endorsers +]{!</td></tr>!} ?]
+[? if nominee_count >= 3 : {!<tr><td><div class="box" style='background-color:!}[+nominee_2_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_2_candidate+]{!</td><td><span style="color:!}[+nominee_2_color +]{!;">!}**[+ nominee_2_party +]**{!</span></td><td>!}[+nominee_2_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 4 : {!<tr><td><div class="box" style='background-color:!}[+nominee_3_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_3_candidate+]{!</td><td><span style="color:!}[+nominee_3_color +]{!;">!}**[+ nominee_3_party +]**{!</span></td><td>!}[+nominee_3_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 5 : {!<tr><td><div class="box" style='background-color:!}[+nominee_4_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_4_candidate+]{!</td><td><span style="color:!}[+nominee_4_color +]{!;">!}**[+ nominee_4_party +]**{!</span></td><td>!}[+nominee_4_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 6 : {!<tr><td><div class="box" style='background-color:!}[+nominee_5_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_5_candidate+]{!</td><td><span style="color:!}[+nominee_5_color +]{!;">!}**[+ nominee_5_party +]**{!</span></td><td>!}[+nominee_5_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 7 : {!<tr><td><div class="box" style='background-color:!}[+nominee_6_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_6_candidate+]{!</td><td><span style="color:!}[+ nominee_6_color +]{!;">!}**[+ nominee_6_party +]**{!</span></td><td>!}[+nominee_6_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 8 : {!<tr><td><div class="box" style='background-color:!}[+nominee_7_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_7_candidate+]{!</td><td><span style="color:!}[+ nominee_7_color +]{!;">!}**[+ nominee_7_party +]**{!</span></td><td>!}[+nominee_7_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 9 : {!<tr><td><div class="box" style='background-color:!}[+nominee_8_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_8_candidate+]{!</td><td><span style="color:!}[+ nominee_8_color +]{!;">!}**[+ nominee_8_party +]**{!</span></td><td>!}[+nominee_8_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 10 : {!<tr><td><div class="box" style='background-color:!}[+nominee_9_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_9_candidate+]{!</td><td><span style="color:!}[ +nominee_9_color +]{!;">!}**[+nominee_9_party +]**{!</span></td><td>!}[+ nominee_9_endorsers +]{!</td></tr>!} ?]
+[? if nominee_count >= 11 : {!<tr><td><div class="box" style='background-color:!}[+nominee_10_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_10_candidate+]{!</td><td><span style="color:!}[+ nominee_10_color +]{!;">!}**[+ nominee_10_party +]**{!</span></td><td>!}[+nominee_10_endorsers+]{!</td></tr>!} ?]
+[? if nominee_count >= 12 : {!<tr><td><div class="box" style='background-color:!}[+nominee_11_color+]{!; outline: 2px; outline-style: solid;'> </div> !}[+nominee_11_candidate+]{!</td><td><span style="color:!}[+ nominee_11_color +]{!;">!}**[+ nominee_11_party +]**{!</span></td><td>!}[+nominee_11_endorsers+]{!</td></tr>!} ?]
+
+{!</table>!}
+
+[? if nonpart_count >= 1 :
+**Parties not participating in upcoming election:**
+
+{!<div style="display:flex; flex-wrap:wrap; gap:0.5em; margin-top:0.5em;">!}
+[? if nonpart_count >= 1 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_0_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_0_party+]{!</span>!} ?]
+[? if nonpart_count >= 2 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_1_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_1_party+]{!</span>!} ?]
+[? if nonpart_count >= 3 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_2_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_2_party+]{!</span>!} ?]
+[? if nonpart_count >= 4 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_3_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_3_party+]{!</span>!} ?]
+[? if nonpart_count >= 5 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_4_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_4_party+]{!</span>!} ?]
+[? if nonpart_count >= 6 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_5_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_5_party+]{!</span>!} ?]
+[? if nonpart_count >= 7 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_6_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_6_party+]{!</span>!} ?]
+[? if nonpart_count >= 8 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_7_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_7_party+]{!</span>!} ?]
+[? if nonpart_count >= 9 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_8_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_8_party+]{!</span>!} ?]
+[? if nonpart_count >= 10 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_9_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_9_party+]{!</span>!} ?]
+[? if nonpart_count >= 11 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_10_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_10_party+]{!</span>!} ?]
+[? if nonpart_count >= 12 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_11_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_11_party+]{!</span>!} ?]
+[? if nonpart_count >= 13 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_12_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_12_party+]{!</span>!} ?]
+[? if nonpart_count >= 14 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_13_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_13_party+]{!</span>!} ?]
+[? if nonpart_count >= 15 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_14_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_14_party+]{!</span>!} ?]
+[? if nonpart_count >= 16 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_15_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_15_party+]{!</span>!} ?]
+[? if nonpart_count >= 17 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_16_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_16_party+]{!</span>!} ?]
+[? if nonpart_count >= 18 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_17_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_17_party+]{!</span>!} ?]
+[? if nonpart_count >= 19 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_18_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_18_party+]{!</span>!} ?]
+[? if nonpart_count >= 20 : {!<span style="display:inline-flex; align-items:center; gap:0.3em;"><div class="box" style='background-color:!}[+nonpart_19_color+]{!; outline: 2px; outline-style: solid;'> </div>!}[+nonpart_19_party+]{!</span>!} ?]
+{!</div>!}
+?]
+
+- @continue: Continue
+
+@continue
