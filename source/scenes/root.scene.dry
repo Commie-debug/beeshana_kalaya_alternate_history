@@ -287,6 +287,10 @@ Q.active_coalitions.push({
     lead: 'UNP',
     members: ['UNP', 'CWC'],
     name: 'UNP & CWC',
+});
+
+//temp cpsl slfp coalition
+Q.active_coalitions.push({
     lead: 'SLFP',
     members: ['SLFP', 'CPSL'],
     name: 'United Front',
