@@ -208,7 +208,7 @@ The candidates and the spread of support appeared to be as follows.
 - @return: We have done what we can to gather support for [+ slfp_pres_candidate +], it not comes down to the election.
 
 @cpsl_support
-view-if: cpsl_pres_endorsement != 'slfp' or cpsl_coalition_id != slfp_coalition_id
+view-if: cpsl_pres_endorsement != 'slfp' and cpsl_coalition_id != slfp_coalition_id
 max-visits: 1
 go-to: cpsl_support_yes if cpsl_relation > 70; cpsl_support_no 
 
