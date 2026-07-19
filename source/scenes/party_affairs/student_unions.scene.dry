@@ -6,6 +6,7 @@ is-card: true
 on-arrival: month_actions += 1; student_unions_timer = 6;
 max-visits: 100
 card-image: img/student_unions.jpg
+subtitle: The student movement is growing.
 
 = Student Unions
 

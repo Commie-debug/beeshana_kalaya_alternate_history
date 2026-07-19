@@ -6,7 +6,7 @@ view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 12;
 card-image: img/nonalligned_summit.jpg
 max-visits: 100
-#subtitle: Building ties with our fraternal socialist parties.
+subtitle: Building ties with the rest of the world.
 
 = International Relations
 

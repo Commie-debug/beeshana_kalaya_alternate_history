@@ -6,6 +6,7 @@ view-if: opposition_timer <= 0 and slfp_in_government = 0
 on-arrival: opposition_timer += 6; month_actions += 1
 tags: govt_affairs
 card-image: img/opposition.jpg
+subtitle: What can we do?
 
 = Opposition in Parliament
 

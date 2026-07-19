@@ -7,6 +7,7 @@ max-visits: 100
 on-arrival: month_actions += 1; rally_timer = 6
 card-image: img/rally.jpg
 go-to: main_rally; jss_disrupt if jss_strength > 40 and slfp_in_government = 0 and unp_in_government = 1; jvp_counter if jvp_relation < 20 and jvp_banned = 0
+subtitle: It is time to go to the streets.
 
 @jss_disrupt
 

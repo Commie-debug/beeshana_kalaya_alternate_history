@@ -6,7 +6,7 @@ view-if: songs_timer <= 0 and (split_sirimavo_victory > 2 or split_maitripala_vi
 max-visits: 100
 on-arrival: month_actions += 1; media_timer += 6;
 card-image: img/slbc.jpg
-#subtitle: Setting the direction for our newspapers and radio.
+subtitle: A new medium demand our response.
 
 = Through Song
 

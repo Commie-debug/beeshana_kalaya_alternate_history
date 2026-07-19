@@ -6,6 +6,7 @@ view-if: racial_timer <= 0
 max-visits: 100
 on-arrival: month_actions += 1; racial_timer += 6;
 card-image: img/racial_relations.jpg
+subtitle: The underlying tensions in Sri Lanka remain unresolved.
 
 = Racial Relations
 
@@ -22,7 +23,7 @@ Sri Lanka is a racially diverse nation, and arguably since even our formation in
 - @pujamuslimkarana
 - @mendties
 - @indiantamilrights
-- @return: We should not do anything with media at the moment.
+- @return: We should not do anything for now.
 - @easy_discard
 - @cancel_advisor_action
 

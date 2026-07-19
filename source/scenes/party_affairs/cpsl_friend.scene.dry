@@ -5,6 +5,7 @@ is-card: true
 view-if: cpsl_relation >= 65 and slfp_coalition_id != cpsl_coalition_id
 frequency: 50
 card-image: img/logos/CPSL_Logo.png
+subtitle: Our friends in the CPSL.
 
 = Communist Party Of Sri Lanka
 

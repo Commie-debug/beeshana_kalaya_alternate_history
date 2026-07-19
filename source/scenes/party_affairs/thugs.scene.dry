@@ -6,6 +6,7 @@ view-if: thugs_timer <= 0
 card-image: img/thugs.jpg
 on-arrival: month_actions += 1; thugs_timer += 6; 
 max-visits: 100
+subtitle: The unsavoury chaps we need to succeed.
 
 = Street Thugs
 

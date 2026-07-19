@@ -6,6 +6,7 @@ is-card: true
 card-image: img/campaign.jpg
 frequency: 50
 tags: party_affairs
+subtitle: The class vote.
 
 = Class Campaigning
 
