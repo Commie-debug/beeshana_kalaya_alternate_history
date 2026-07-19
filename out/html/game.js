@@ -1245,6 +1245,9 @@
         const escapedWords = [...allWords].map(word => 
             word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
         );
+
+        //fix for longer words not showing up if they contained smaller entry words inside of them
+        escapedWords.sort((a, b) => b.length - a.length);
         
         const regex = new RegExp(`\\b(${escapedWords.join('|')})\\b`, 'g');
     
