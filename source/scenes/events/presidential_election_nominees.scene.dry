@@ -3,6 +3,19 @@ view-if: ((year = next_pres_election_year and month >= next_pres_election_month-
 max-visits: 1
 new-page: true
 tags: event
+
+= Nominees for Presidential Election [+ next_pres_election_month : month +], [+ next_pres_election_year +]
+
+#always a month before the presidential election
+
+Nominations are were filled as candidates and their party faculty flooded to the Election Commission building at Rajagiriya, Colombo. The window to submit the application is razor thin and any misteps means they will not be on the ballot.
+
+News starts coming back as to who has correctly filed their candidacy.
+
+- @main_nomination: So what finally happened?
+
+@main_nomination
+new-page: true
 on-arrival: {!
 Q.pres_candidates = [];
 Q.pres_candidate_parties = {};
@@ -186,19 +199,28 @@ for (var i = 0; i < nonParticipating.length; i++) {
 Q.nonparticipating_html = '<p><b>Parties not participating in this election:</b></p><div style="display:flex; flex-wrap:wrap; gap:0.5em; margin-top:0.5em;">' + badgesHtml + '</div>';
 !}
 
-= Nominees for Presidential Election [+ next_pres_election_month : month +], [+ next_pres_election_year +]
-
-
-#always a month before the presidential election
-
-Nominations are now being filled as candidates and their party faculty flood to the Election Commission building at Rajagiriya, Colombo.
-
-News starts coming back as to who has correctly filed their candidacy.
+The candidates and the spread of support appeared to be as follows.
 
 [+ nominees_html +]
 
 [+ nonparticipating_html +]
 
-- @continue: Continue
+- @cpsl_support: The SLFP attempted to garner an endorsment from the CPSL.
+- @return: We have done what we can to gather support for [+ slfp_pres_candidate +], it not comes down to the election.
 
-@continue
+@cpsl_support
+view-if: cpsl_pres_endorsement != 'slfp' or cpsl_coalition_id != slfp_coalition_id
+max-visits: 1
+go-to: cpsl_support_yes if cpsl_relation > 70; cpsl_support_no 
+
+@cpsl_support_yes
+on-arrival: cpsl_pres_endorsement = 'slfp'
+go-to: main_nomination
+
+The CPSL agreed to support [+ slfp_pres_candidate +] in the election.
+
+@cpsl_support_no
+go-to: main_nomination
+
+The CPSL did not agree however and decided to continue their present support.
+
