@@ -15,7 +15,6 @@ News starts coming back as to who has correctly filed their candidacy.
 - @main_nomination: So what finally happened?
 
 @main_nomination
-new-page: true
 on-arrival: {!
 Q.pres_candidates = [];
 Q.pres_candidate_parties = {};
