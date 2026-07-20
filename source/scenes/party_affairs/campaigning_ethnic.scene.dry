@@ -29,12 +29,12 @@ on-arrival:resources -= 1;
 go-to: sinhalese_normal if state_of_emergency == 0; sinhalese_emergency if state_of_emergency == 1
 
 @sinhalese_emergency
-on-arrival: sinhala_slfp += 1.5*(1-dissent); 
+on-arrival: sinhala_slfp += 0.75*(1-dissent); 
 
 We have increased our campaigning among the Sinhalese, though the state of emergency has hindered our campaign.
 
 @sinhalese_normal
-on-arrival: sinhala_slfp += 3*(1-dissent); 
+on-arrival: sinhala_slfp += 1.5*(1-dissent); 
 
 We have increased our campaigning among the Sinhalese.
 
@@ -46,12 +46,12 @@ on-arrival: resources -= 1;
 go-to: tamilsl_normal if state_of_emergency == 0; tamilsl_emergency if state_of_emergency == 1
 
 @tamilsl_normal
-on-arrival: sltamil_slfp += 3*(1-dissent); 
+on-arrival: sltamil_slfp += 1.5*(1-dissent); 
 
 We have increased our campaigning among the Sri Lankan Tamils. 
 
 @tamilsl_emergency
-on-arrival: sltamil_slfp += 1.5*(1-dissent); 
+on-arrival: sltamil_slfp += 0.75*(1-dissent); 
 
 We have increased our campaigning among the Sri Lankan Tamils, though the state of emergency has hindered our campaign. 
 
@@ -63,12 +63,12 @@ on-arrival: resources -= 1;
 go-to: itamil_normal if state_of_emergency == 0; itamil_emergency if state_of_emergency == 1
 
 @itamil_normal
-on-arrival: itamil_slfp += 3*(1-dissent);
+on-arrival: itamil_slfp += 1.5*(1-dissent);
 
 We have increased our campaigning among the Indian Tamils. 
 
 @itamil_emergency
-on-arrival: itamil_slfp += 1.5*(1-dissent);
+on-arrival: itamil_slfp += 0.75*(1-dissent);
 
 We have increased our campaigning among the Indian Tamils, though the state of emergency has hindered our campaign. 
 
@@ -80,12 +80,12 @@ on-arrival: resources -= 1;
 go-to: muslim_normal if state_of_emergency == 0; muslim_emergency if state_of_emergency == 1
 
 @muslim_normal
-on-arrival: muslim_slfp += 3*(1-dissent); 
+on-arrival: muslim_slfp += 1.5*(1-dissent); 
 
 We have increased our campaigning among the Muslims.
 
 @muslim_emergency
-on-arrival: muslim_slfp += 1.5*(1-dissent); 
+on-arrival: muslim_slfp += 0.75*(1-dissent); 
 
 We have increased our campaigning among the Muslims, though the state of emergency has hindered our campaign. 
 
@@ -97,12 +97,12 @@ go-to: other_normal if state_of_emergency == 0; other_emergency if state_of_emer
 on-arrival: resources -= 1;
 
 @other_normal
-on-arrival: other_slfp += 3*(1-dissent); 
+on-arrival: other_slfp += 1.5*(1-dissent); 
 
 We have increased our campaigning among the smaller ethnic groups of Sri Lanka.
 
 @other_emergency
-on-arrival: other_slfp += 1.5*(1-dissent); 
+on-arrival: other_slfp += 0.75*(1-dissent); 
 
 We have increased our campaigning among the smaller ethnic groups of Sri Lanka, though the state of emergency has hindered our campaign. 
 
