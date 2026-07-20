@@ -2107,15 +2107,15 @@ const tooltipList = [{
     explanationText: "<img src=img/portraits/Kumaranatunga_Vijaya.jpg> Kovilage Anton Vijaya Kumaranatunga"
     },
     {
+    searchString: "Vijaya Kumaratunga",
+    explanationText: "<img src=img/portraits/Kumaranatunga_Vijaya.jpg> Kovilage Anton Vijaya Kumaranatunga"
+    },
+    {
     searchString: "Vijaya",
     explanationText: "<img src=img/portraits/Kumaranatunga_Vijaya.jpg> Kovilage Anton Vijaya Kumaranatunga"
     },
     {
-    searchString: "Velupillai Prabhakaran",
-    explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Velupillai Prabhakaran"
-    },
-    {
-    searchString: "Prabhakaran",
+    searchString: "Karikalan",
     explanationText: "<img src=img/portraits/Prabhakran_Vellupillai.jpg> Velupillai Prabhakaran"
     },
     {
