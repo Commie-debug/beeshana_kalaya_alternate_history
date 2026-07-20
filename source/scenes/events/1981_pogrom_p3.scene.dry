@@ -14,16 +14,16 @@ During the racket, several of the UNP backbenchers began hurling racist and raci
 - @passive: Members of the SLFP did not take part in the argument outside of urging calm within the assembly.
 
 @support
-on-arrival: nationalist_strength += 5; left_dissent += 3; sinhala_nationalism += 3*(1-dissent); sltamil_slfp -= 2*(1-dissent); itamil_slfp -= 2*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent);
+on-arrival: nationalist_strength += 5; left_dissent += 3; sinhala_nationalism += 3*(1-dissent); sltamil_slfp -= 2*(1-dissent); itamil_slfp -= 2*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent); sinhala_unp += 3*(1-dissent); 
 
 Outside parliament a small crowd had been agitating. Many repeating the same raciallly charged rhetoric against Tamils, even the unrelated Indian Tamils werent safe from the messaging. 
 
 @oppose
-on-arrival: left_strength += 5; nationalist_dissent += 3; sinhala_nationalism -= 2*(1-dissent); sltamil_slfp += 2*(1-dissent); itamil_slfp += 2*(1-dissent); tulf_relation += 2*(1-dissent); actc_relation += 2*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent);
+on-arrival: left_strength += 5; nationalist_dissent += 3; sinhala_nationalism -= 2*(1-dissent); sltamil_slfp += 2*(1-dissent); itamil_slfp += 2*(1-dissent); tulf_relation += 2*(1-dissent); actc_relation += 2*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent); sinhala_unp += 3*(1-dissent);  
 
 Outside parliament a small crowd had been agitating. Many repeating the same raciallly charged rhetoric against Tamils, even the unrelated Indian Tamils werent safe from the messaging.
 
 @passive
-on-arrival: nationalist_dissent -= 3; left_dissent -= 3; sinhala_nationalism += 3*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent);
+on-arrival: nationalist_dissent -= 3; left_dissent -= 3; sinhala_nationalism += 3*(1-dissent); sltamil_unp -= 3*(1-dissent); itamil_unp -= 3*(1-dissent); sinhala_unp += 3*(1-dissent);
 
 Outside parliament a small crowd had been agitating. Many repeating the same raciallly charged rhetoric against Tamils, even the unrelated Indian Tamils werent safe from the messaging.

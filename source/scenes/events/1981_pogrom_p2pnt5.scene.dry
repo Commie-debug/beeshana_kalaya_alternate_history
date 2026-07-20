@@ -15,7 +15,7 @@ On the day, as Amirthalingam stood to make his defense, the building went into c
 - @passive: SLFP MP's were unable to come up with anything subtstantive to say, this was incredibly unpopular for both the Left and Nationalists.
 
 @passive
-on-arrival: tulf_relation -= 5; cpsl -= 5; sltamil_unp -= 7; itamil_unp -= 7; gov_support -= 4; tamil_nationalism += 3; sinhala_nationalism += 5; sltamil_slfp -= 3; itamil_slfp -= 2;
+on-arrival: tulf_relation -= 5; cpsl -= 5; sltamil_unp -= 7; itamil_unp -= 7; gov_support -= 4; tamil_nationalism += 3; sinhala_nationalism += 5; sltamil_slfp -= 3; itamil_slfp -= 2; sinhala_unp += 3.5*(1-dissent);
 
 Our passivity is met with confusion among the other opposition parties. Sarath Muttetuwegama (CPSL) followed the arguing with a thorough condemnation of the motion and its lack of legality and precedent. He would leave the building like the TULF MP's
 
@@ -28,7 +28,7 @@ Voting finally came, Thondaman abstained, members of the SLFP voted against. We 
 The motion passed but as expected, nothing happened and A. Amirthalingam is still leader of the opposition. The motion has led to condemnations of the UNP from nearlly every other political outfit in the nation, their support has fallen among tamils and peoples confidence in the government is lowered. While we still voted against the motion, our lack of any coherent opposition in the debate and our unwillingness to join the CPSL and TULF walkout has lowered relations with the two.
 
 @against
-on-arrival: sltamil_unp -= 7; itamil_unp -= 7; gov_support -= 4; tamil_nationalism += 3; sinhala_nationalism += 5;
+on-arrival: sltamil_unp -= 7; itamil_unp -= 7; gov_support -= 4; tamil_nationalism += 3; sinhala_nationalism += 5; sinhala_unp += 3.5*(1-dissent);
 
 Speaker Bakeer Markar avoids any of the questions and points raised by the SLFP MP and instead says that the point was raised too late. Sarath Muttetuwegama (CPSL) rebutels that the speaker is letting government MP's run parliament without opposition input. Soon after, he and the SLFP MP's walkout of parliament in protest.
 
