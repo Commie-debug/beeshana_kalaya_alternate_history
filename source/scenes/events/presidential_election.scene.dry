@@ -3,7 +3,7 @@ new-page: true
 tags: event
 priority: -1
 view-if: ((year = next_pres_election_year and month >= next_pres_election_month) or (year > next_pres_election_year)) and (week = next_pres_election_week)
-on-departure: month_actions += 1; in_election = 0; next_pres_election_year = next_pres_election_year + 6; n_pres_elections += 1;
+on-departure: in_election = 0; next_pres_election_year = next_pres_election_year + 6; n_pres_elections += 1;
 set-jump: post_pres_election
 face-image: img/Election_Time.png
 
