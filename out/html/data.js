@@ -1339,7 +1339,7 @@ const tooltipList = [{
     },
     {
     searchString: "JSS",
-    explanationText: "<img src=img/logos/JSS_Logo.png> Jathika Sevaka Sangamaya"
+    explanationText: "<img src=img/logos/JSS_Logo.png> Jathika Sevaka Sangamaya <br> (National Workers Union)"
     },
     {
     searchString: "Civil Security",
