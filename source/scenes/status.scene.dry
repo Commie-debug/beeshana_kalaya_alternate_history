@@ -387,10 +387,6 @@ Q.gov_support_disp = Math.round(Q.gov_support);
 
 = Polls
 
-Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
-
-Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
-
 = Ethnicity: 
 
 <div id="ethnicity_table" onmouseover="scrollhor('ethnicity_table');" style="overflow-y: scroll;">
@@ -927,6 +923,10 @@ Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
                </tr>
             </table>
 </div>
+
+Support for Tamil nationalism: [+ tamil_nationalism_disp +]%
+
+Support for Sinhalese nationalism: [+ sinhala_nationalism_disp +]%
 
 @tamil
 on-arrival: {!
