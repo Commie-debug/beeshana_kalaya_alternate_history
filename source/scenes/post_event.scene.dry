@@ -146,23 +146,66 @@ for (var cls of Q.classes) {
         
         //calculate new total (should be close to 100)
         var new_total = Q[cls_var_name + '_nonvoter'];
-        var largest_party = Q.parties[0];
-        var largest_value = 0;
         for (var party of Q.parties) {
             new_total += Q[cls + '_' + party];
-            if (Q[cls + '_' + party] > largest_value) {
-                largest_value = Q[cls + '_' + party];
-                largest_party = party;
-            }
         }
         
-        //give remainder to largest party 
-        Q[cls + '_' + largest_party] = Math.round((Q[cls + '_' + largest_party] + (100 - new_total)) * 10) / 10;
+        //give remainder to non-voters
+        Q[cls_var_name + '_nonvoter'] = Math.round((Q[cls_var_name + '_nonvoter'] + (100 - new_total)) * 10) / 10;
     }
 }
 
 //normalize party support (ethnic)
 for (var ethnic of Q.ethnic) {
+
+    if (ethnic === 'itamil') {
+        var franchisement = Q.itamil_franchisement || 1;
+        if (franchisement < 1) franchisement = 1;
+        if (franchisement > 10) franchisement = 10;
+
+        var min_nonvoter = 55 - (franchisement - 1) * 5;
+        min_nonvoter = Math.round(min_nonvoter * 10) / 10;
+
+        //nonvoter can rise above the floor over time, but never fall below it
+        var current_nonvoter = Q.itamil_nonvoter || 0;
+        if (current_nonvoter < min_nonvoter) {
+            current_nonvoter = min_nonvoter;
+        }
+
+        var party_total = 0;
+        for (var party of Q.parties) {
+            if (Q['itamil_' + party] < 0) {
+                Q['itamil_' + party] = 0;
+            }
+            party_total += Q['itamil_' + party];
+        }
+
+        var available_share = 100 - current_nonvoter;
+
+        if (party_total > 0) {
+            for (var party of Q.parties) {
+                Q['itamil_' + party] = Math.round(available_share * Q['itamil_' + party] / party_total * 10) / 10;
+            }
+        }
+
+        Q.itamil_nonvoter = Math.round(current_nonvoter * 10) / 10;
+
+        //give remainder to non-voters, same as every other group
+        var new_total = Q.itamil_nonvoter;
+        for (var party of Q.parties) {
+            new_total += Q['itamil_' + party];
+        }
+
+        Q.itamil_nonvoter = Math.round((Q.itamil_nonvoter + (100 - new_total)) * 10) / 10;
+
+        //enforce the floor again in case rounding somehow pushed it below
+        if (Q.itamil_nonvoter < min_nonvoter) {
+            Q.itamil_nonvoter = min_nonvoter;
+        }
+
+        continue;
+    }
+
     var total_ethnic_support = 0;
     
     //include non-voters in the total
@@ -190,18 +233,12 @@ for (var ethnic of Q.ethnic) {
         
         //calculate new total 
         var new_total = Q[ethnic + '_nonvoter'];
-        var largest_party = Q.parties[0];
-        var largest_value = 0;
         for (var party of Q.parties) {
             new_total += Q[ethnic + '_' + party];
-            if (Q[ethnic + '_' + party] > largest_value) {
-                largest_value = Q[ethnic + '_' + party];
-                largest_party = party;
-            }
         }
         
-        //give remainder to largest party to ensure total = 100
-        Q[ethnic + '_' + largest_party] = Math.round((Q[ethnic + '_' + largest_party] + (100 - new_total)) * 10) / 10;
+        //give remainder to non-voters
+        Q[ethnic + '_nonvoter'] = Math.round((Q[ethnic + '_nonvoter'] + (100 - new_total)) * 10) / 10;
     }
 }
 Q.dissent = 0.01*total_dissent/total_strength;

@@ -736,8 +736,8 @@ Q.ftz_investment = 0;
 
 //interior policies
 //Indian Tamil policies
-//Wheter they have all atained SL citizenship
-Q.itamil_franchsiment = "No";
+//Wheter they have all atained SL citizenship, uses control qdisplay
+Q.itamil_franchsiment = 1;
 //overall Indian tamil dissent, increases the longer their situation doesnt improve and can lead to strikes or sabotage of the tea sector
 //uses dissent qdisplay
 Q.itamil_dissent = 30;
@@ -1402,16 +1402,16 @@ Q.sltamil_telo = 0;
 Q.sltamil_ulpp = 0;
 Q.sltamil_dunf = 0;
 
-Q.itamil_slfp = 1;      
+Q.itamil_slfp = 1;
 Q.itamil_jvp = 0;
-Q.itamil_cpsl = 2;      
-Q.itamil_lssp = 2;      
+Q.itamil_cpsl = 1;
+Q.itamil_lssp = 1;
 Q.itamil_nssp = 0;
-Q.itamil_tulf = 3;      
-Q.itamil_cwc = 50;      
-Q.itamil_unp = 10;    
+Q.itamil_tulf = 2;
+Q.itamil_cwc = 34;
+Q.itamil_unp = 6;
 Q.itamil_actc = 0;
-Q.itamil_nonvoter = 30; //Higher because no rights still
+Q.itamil_nonvoter = 55; //Higher because no rights still, this should be capped to 55 unless efforts are made to enfranchise itamils so any changes in support among itamils will be over the remaining 45% 
 //not formed parties;
 Q.itamil_slpp = 0;
 Q.itamil_slmp = 0;
@@ -1482,7 +1482,7 @@ Q.other_ulpp = 0;
 
 // Support for party by economic class group
 
-Q.workers_slfp = 26;    
+Q.workers_slfp = 22;    
 Q.workers_jvp = 12;     
 Q.workers_cpsl = 4;    
 Q.workers_lssp = 6;     
@@ -1491,7 +1491,7 @@ Q.workers_tulf = 5;
 Q.workers_cwc = 14;     
 Q.workers_unp = 22;     
 Q.workers_actc = 1;
-Q.workers_nonvoter = 8;
+Q.workers_nonvoter = 12;
 //not formed parties;
 Q.workers_slpp = 0;
 Q.workers_slmp = 0;
@@ -1561,15 +1561,15 @@ Q.upper_ulpp = 0;
 Q.upper_dunf = 0;
 
 Q.rural_slfp = 25;      
-Q.rural_jvp = 7;       
+Q.rural_jvp = 9;       
 Q.rural_cpsl = 1;
 Q.rural_lssp = 2;
 Q.rural_nssp = 0;
 Q.rural_tulf = 8;       
-Q.rural_cwc = 12;      
+Q.rural_cwc = 8;      
 Q.rural_unp = 34;       
 Q.rural_actc = 1;
-Q.rural_nonvoter = 10;
+Q.rural_nonvoter = 18;
 //not formed parties;
 Q.rural_slpp = 0;
 Q.rural_slmp = 0;
