@@ -1140,23 +1140,23 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 = Military & State Paramilitaries
 
-**Sri Lanka Armed Forces** - The Armed Forces comprise of the Army, Navy and Air Force, and are responsible for defending Sri Lanka from both external and internal threats. Trained in conventional warfare, counter-insurgency operations, border security and disaster response, they serve as the nation's primary military institution and may be deployed in support of the civil authorities during times of emergency.
+**Sri Lanka Armed Forces** - The Armed Forces are comprised of the Army, Navy and Air Force, and are responsible for defending Sri Lanka from both external and internal threats. Trained in conventional warfare, counter-insurgency operations, border security and disaster response, they serve as the nation's primary military institution and may be deployed in support of the civil authorities during times of emergency. The army arsenal consists of at present World War 2-era British surplus such as lee enfield bolt actions, brens machine guns, sten guns, QF 25 pounder artillery, a range of British mortars and several saladin and daimler armoured cars. The navy consists of several Chinese gunboats and patrol boats while the airforce has for now decomissioned our only jet planes (MiG 17) instead relying on transport aircraft and bell helicopters. The most experience they have had in active combat was in 1971 against the JVP and before that, actions against Japan in WW2. In the event of a large scale conflict the Armed Forces would be lacking.
 
-**Sri Lanka Police** - The Sri Lanka Police are responsible for maintaining law and order throughout Sri Lanka. Their duties include crime prevention, criminal investigations, traffic regulation, public security, and the enforcement of national laws. Operating through stations across the island, they form the country's principal civilian law enforcement agency and are usually the first line of defense.
+**Sri Lanka Police** - The Sri Lanka Police are responsible for maintaining law and order throughout Sri Lanka. Their duties include crime prevention, criminal investigations, traffic regulation, public security, and the enforcement of national laws. Operating through stations across the island, they form the country's principal civilian law enforcement agency and are usually the first line of defense. Their weapons are adhoc mixture of bolt actions, revolvers, shotguns or even as simple as a baton. 
 
 [? if stf_formed = 1 : **STF** - *Special Task Force* - The STF are the recently formed "special forces" of the Sri Lankan police. They specialise in anti-irregular military, apprehension of armed and dangerous criminals, clandestine and covert operations and other tasks requiring special training. ?]
 
-[? if civilsec_formed = 0 : **Home Guard** - They are a loosely structured state-organized, armed paramilitary volunteer force. Formed by local Sinhalese and Muslim villagers in the north-east provinces. Their main objective is to defend their villages and towns from tamil militant attacks. They are however lightly armed. ?]
+[? if civilsec_formed = 0 : **Home Guard** - They are a loosely structured state-organized, armed paramilitary volunteer force. Formed by local Sinhalese and Muslim villagers in the north-east provinces. Their main objective is to defend their villages and towns from tamil militant attacks. They are however poorly armed with only hunting shotguns and other small arms permitted through liscence. ?]
 
 [? if civilsec_formed = 1 : **Civil Security** - Reorganised from the former "Home Guard" units, they share the same goal in addition to supporting the military and keeping order.?]
 
-[? if epdp_formed = 1 : **EPDP** - *Eelam Peoples Democratic Party* - A recently formed group in the north-east. Nominally an anti-LTTE tamil group, they function as a state paramilitary. Their members are former guerillas who share a hatred for the LTTE. ?]
+[? if epdp_formed = 1 : **EPDP** - *Eelam Peoples Democratic Party* - A recently formed group in the north-east. Nominally an anti-LTTE tamil group, they de facto function as a state paramilitary. Their members are former guerillas who share a common hatred for the LTTE. The EPDP also functions as a political party. ?]
 
-[? if ipkf_formed = 1 : **IPKF** - *Indian Peacekeeping Force* - The Indian Armed Forces detachment depolyed in the north-east of Sri Lanka to maintain peace and prevent conflict between the tamil militants and the Sri Lanka Armed forces. ?]
+[? if ipkf_formed = 1 : **IPKF** - *Indian Peacekeeping Force* - The Indian Armed Forces detachment depolyed in the north-east of Sri Lanka to "maintain peace and prevent conflict between the tamil militants and the Sri Lanka Armed forces". ?]
 
 [? if tna_formed = 1 : **TNA** - *Tamil National Army* - The TNA is an Indian sponsored tamil milita formed to assist the IPKF against the LTTE insurgency. They also exist to support the newly elected North-Eastern provincial government. ?]
 
-[? if endlf_formed = 1 : **ENDLF** - *Eelam National Democratic Liberation Front* - The ENDLF is an Indian sponsored tamil militant group formed from splinter groups of other tamil militant groups. They are very anti-LTTE, and they garner support of the IPKF. The ENDLF also functions as a political party. ?]
+[? if endlf_formed = 1 : **ENDLF** - *Eelam National Democratic Liberation Front* - The ENDLF is an Indian sponsored tamil militant group formed from splinter groups of other tamil militant groups. They are anti-LTTE, and they garner the support of the IPKF to survive. The ENDLF also functions as a political party. ?]
 
 @factions
 go-to: menu
