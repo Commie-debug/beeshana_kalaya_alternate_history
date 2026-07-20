@@ -229,7 +229,7 @@ The candidates and the spread of support appeared at the time to be as follows.
 - @return: We have done what we can to gather support for [+ slfp_pres_candidate +], it now comes down to the voters.
 
 @jvp_support
-view-if: jvp_pres_yes = 1 and jvp_pres_endorsement != 'slfp' and jvp_coalition_id != slfp_coalition_id
+view-if: jvp_pres_yes = 1 and jvp_pres_endorsement != 'slfp' and (jvp_coalition_id = -1 or jvp_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: jvp_support_yes if jvp_relation > 70; jvp_support_no 
 
@@ -245,7 +245,7 @@ go-to: main_nomination
 The JVP sadly did not agree however and decided to continue their present support.
 
 @cpsl_support
-view-if: cpsl_pres_yes = 1 and cpsl_pres_endorsement != 'slfp' and cpsl_coalition_id != slfp_coalition_id
+view-if: cpsl_pres_yes = 1 and cpsl_pres_endorsement != 'slfp' and (cpsl_coalition_id = -1 or cpsl_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: cpsl_support_yes if cpsl_relation > 70; cpsl_support_no 
 
@@ -261,7 +261,7 @@ go-to: main_nomination
 The CPSL sadly did not agree however and decided to continue their present support.
 
 @lssp_support
-view-if: lssp_pres_yes = 1 and lssp_pres_endorsement != 'slfp' and lssp_coalition_id != slfp_coalition_id
+view-if: lssp_pres_yes = 1 and lssp_pres_endorsement != 'slfp' and (lssp_coalition_id = -1 or lssp_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: lssp_support_yes if lssp_relation > 70; lssp_support_no 
 
@@ -277,7 +277,7 @@ go-to: main_nomination
 The LSSP sadly did not agree however and decided to continue their present support.
 
 @nssp_support
-view-if: nssp_pres_yes = 1 and nssp_pres_endorsement != 'slfp' and nssp_coalition_id != slfp_coalition_id
+view-if: nssp_pres_yes = 1 and nssp_pres_endorsement != 'slfp' and (nssp_coalition_id = -1 or nssp_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: nssp_support_yes if nssp_relation > 70; nssp_support_no 
 
@@ -293,7 +293,7 @@ go-to: main_nomination
 The NSSP sadly did not agree however and decided to continue their present support.
 
 @tulf_support
-view-if: tulf_pres_yes = 1 and tulf_pres_endorsement != 'slfp' and tulf_coalition_id != slfp_coalition_id
+view-if: tulf_pres_yes = 1 and tulf_pres_endorsement != 'slfp' and (tulf_coalition_id = -1 or tulf_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: tulf_support_yes if tulf_relation > 70; tulf_support_no 
 
@@ -309,7 +309,7 @@ go-to: main_nomination
 The TULF sadly did not agree however and decided to continue their present support.
 
 @actc_support
-view-if: actc_pres_yes = 1 and actc_pres_endorsement != 'slfp' and actc_coalition_id != slfp_coalition_id
+view-if: actc_pres_yes = 1 and actc_pres_endorsement != 'slfp' and (actc_coalition_id = -1 or actc_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: actc_support_yes if actc_relation > 70; actc_support_no 
 
@@ -325,7 +325,7 @@ go-to: main_nomination
 The ACTC sadly did not agree however and decided to continue their present support.
 
 @cwc_support
-view-if: cwc_pres_yes = 1 and cwc_pres_endorsement != 'slfp' and cwc_coalition_id != slfp_coalition_id
+view-if: cwc_pres_yes = 1 and cwc_pres_endorsement != 'slfp' and (cwc_coalition_id = -1 or cwc_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: cwc_support_yes if cwc_relation > 70; cwc_support_no 
 
@@ -341,7 +341,7 @@ go-to: main_nomination
 The CWC sadly did not agree however and decided to continue their present support.
 
 @slpp_support
-view-if: slpp_formed = 1 and slpp_pres_yes = 1 and slpp_pres_endorsement != 'slfp' and slpp_coalition_id != slfp_coalition_id
+view-if: slpp_formed = 1 and slpp_pres_yes = 1 and slpp_pres_endorsement != 'slfp' and (slpp_coalition_id = -1 or slpp_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: slpp_support_yes if slpp_relation > 70; slpp_support_no 
 
@@ -357,7 +357,7 @@ go-to: main_nomination
 The SLPP sadly did not agree however and decided to continue their present support.
 
 @slmp_support
-view-if: slmp_formed = 1 and slmp_pres_yes = 1 and slmp_pres_endorsement != 'slfp' and slmp_coalition_id != slfp_coalition_id
+view-if: slmp_formed = 1 and slmp_pres_yes = 1 and slmp_pres_endorsement != 'slfp' and (slmp_coalition_id = -1 or slmp_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: slmp_support_yes if slmp_relation > 70; slmp_support_no 
 
@@ -373,7 +373,7 @@ go-to: main_nomination
 The SLMP sadly did not agree however and decided to continue their present support.
 
 @slmc_support
-view-if: slmc_formed = 1 and slmc_pres_yes = 1 and slmc_pres_endorsement != 'slfp' and slmc_coalition_id != slfp_coalition_id
+view-if: slmc_formed = 1 and slmc_pres_yes = 1 and slmc_pres_endorsement != 'slfp' and (slmc_coalition_id = -1 or slmc_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: slmc_support_yes if slmc_relation > 70; slmc_support_no 
 
@@ -389,7 +389,7 @@ go-to: main_nomination
 The SLMC sadly did not agree however and decided to continue their present support.
 
 @npp_support
-view-if: npp_formed = 1 and npp_pres_yes = 1 and npp_pres_endorsement != 'slfp' and npp_coalition_id != slfp_coalition_id
+view-if: npp_formed = 1 and npp_pres_yes = 1 and npp_pres_endorsement != 'slfp' and (npp_coalition_id = -1 or npp_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: npp_support_yes if npp_relation > 70; npp_support_no 
 
@@ -405,7 +405,7 @@ go-to: main_nomination
 The NPP sadly did not agree however and decided to continue their present support.
 
 @mep_support
-view-if: mep_formed = 1 and mep_pres_yes = 1 and mep_pres_endorsement != 'slfp' and mep_coalition_id != mep_coalition_id
+view-if: mep_formed = 1 and mep_pres_yes = 1 and mep_pres_endorsement != 'slfp' and (mep_coalition_id = -1 or mep_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: mep_support_yes if mep_relation > 70; mep_support_no 
 
@@ -421,7 +421,7 @@ go-to: main_nomination
 The MEP sadly did not agree however and decided to continue their present support.
 
 @eros_support
-view-if: eros_formed = 1 and eros_pres_yes = 1 and eros_pres_endorsement != 'slfp' and eros_coalition_id != slfp_coalition_id
+view-if: eros_formed = 1 and eros_pres_yes = 1 and eros_pres_endorsement != 'slfp' and (eros_coalition_id = -1 or eros_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: eros_support_yes if eros_relation > 70; eros_support_no 
 
@@ -437,7 +437,7 @@ go-to: main_nomination
 The EROS sadly did not agree however and decided to continue their present support.
 
 @dplf_support
-view-if: dplf_formed = 1 and dplf_pres_yes = 1 and dplf_pres_endorsement != 'slfp' and dplf_coalition_id != slfp_coalition_id
+view-if: dplf_formed = 1 and dplf_pres_yes = 1 and dplf_pres_endorsement != 'slfp' and (dplf_coalition_id = -1 or dplf_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: dplf_support_yes if dplf_relation > 70; dplf_support_no 
 
@@ -453,7 +453,7 @@ go-to: main_nomination
 The DPLF sadly did not agree however and decided to continue their present support.
 
 @pflt_support
-view-if: pflt_formed = 1 and pflt_pres_yes = 1 and pflt_pres_endorsement != 'slfp' and pflt_coalition_id != slfp_coalition_id
+view-if: pflt_formed = 1 and pflt_pres_yes = 1 and pflt_pres_endorsement != 'slfp' and (pflt_coalition_id = -1 or pflt_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: pflt_support_yes if pflt_relation > 70; pflt_support_no 
 
@@ -469,7 +469,7 @@ go-to: main_nomination
 The PFLT sadly did not agree however and decided to continue their present support.
 
 @ucpf_support
-view-if: ucpf_formed = 1 and ucpf_pres_yes = 1 and ucpf_pres_endorsement != 'slfp' and ucpf_coalition_id != slfp_coalition_id
+view-if: ucpf_formed = 1 and ucpf_pres_yes = 1 and ucpf_pres_endorsement != 'slfp' and (ucpf_coalition_id = -1 or ucpf_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: ucpf_support_yes if ucpf_relation > 70; ucpf_support_no 
 
@@ -485,7 +485,7 @@ go-to: main_nomination
 The UCPF sadly did not agree however and decided to continue their present support.
 
 @endlf_support
-view-if: endlf_formed = 1 and endlf_pres_yes = 1 and endlf_pres_endorsement != 'slfp' and endlf_coalition_id != slfp_coalition_id
+view-if: endlf_formed = 1 and endlf_pres_yes = 1 and endlf_pres_endorsement != 'slfp' and (endlf_coalition_id = -1 or endlf_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: endlf_support_yes if endlf_relation > 70; endlf_support_no 
 
@@ -501,7 +501,7 @@ go-to: main_nomination
 The ENDLF sadly did not agree however and decided to continue their present support.
 
 @telo_support
-view-if: telo_formed = 1 and telo_pres_yes = 1 and telo_pres_endorsement != 'slfp' and telo_coalition_id != slfp_coalition_id
+view-if: telo_formed = 1 and telo_pres_yes = 1 and telo_pres_endorsement != 'slfp' and (telo_coalition_id = -1 or telo_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: telo_support_yes if telo_relation > 70; telo_support_no 
 
@@ -517,7 +517,7 @@ go-to: main_nomination
 The TELO sadly did not agree however and decided to continue their present support.
 
 @eprlf_support
-view-if: eprlf_formed = 1 and eprlf_pres_yes = 1 and eprlf_pres_endorsement != 'slfp' and eprlf_coalition_id != slfp_coalition_id
+view-if: eprlf_formed = 1 and eprlf_pres_yes = 1 and eprlf_pres_endorsement != 'slfp' and (eprlf_coalition_id = -1 or eprlf_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: eprlf_support_yes if eprlf_relation > 70; eprlf_support_no 
 
@@ -533,7 +533,7 @@ go-to: main_nomination
 The EPRLF sadly did not agree however and decided to continue their present support.
 
 @dunf_support
-view-if: dunf_formed = 1 and dunf_pres_yes = 1 and dunf_pres_endorsement != 'slfp' and dunf_coalition_id != slfp_coalition_id
+view-if: dunf_formed = 1 and dunf_pres_yes = 1 and dunf_pres_endorsement != 'slfp' and (dunf_coalition_id = -1 or dunf_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: dunf_support_yes if dunf_relation > 70; dunf_support_no 
 
@@ -549,7 +549,7 @@ go-to: main_nomination
 The DUNF sadly did not agree however and decided to continue their present support.
 
 @ulpp_support
-view-if: ulpp_formed = 1 and ulpp_pres_yes = 1 and ulpp_pres_endorsement != 'slfp' and ulpp_coalition_id != slfp_coalition_id
+view-if: ulpp_formed = 1 and ulpp_pres_yes = 1 and ulpp_pres_endorsement != 'slfp' and (ulpp_coalition_id = -1 or ulpp_coalition_id != slfp_coalition_id)
 max-visits: 1
 go-to: ulpp_support_yes if ulpp_relation > 70; ulpp_support_no 
 
