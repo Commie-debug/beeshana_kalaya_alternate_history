@@ -1454,7 +1454,15 @@ const tooltipList = [{
     explanationText: "An ideology of great variance. Broadly it focuses on Sri Lankan Tamil culture and a notion that the community forms a distinct nation seperate of the Sinhalese and that thus, they deserve autonomy of even independence. Emerging in response to British sponsored Protestant missionary activity, the ideology does not place a heavy focus on religion. Its proponents are either political or even militant."
     },
     {
+    searchString: "Tamil Nationalism",
+    explanationText: "An ideology of great variance. Broadly it focuses on Sri Lankan Tamil culture and a notion that the community forms a distinct nation seperate of the Sinhalese and that thus, they deserve autonomy of even independence. Emerging in response to British sponsored Protestant missionary activity, the ideology does not place a heavy focus on religion. Its proponents are either political or even militant."
+    },
+    {
     searchString: "Sinhalese nationalism",
+    explanationText: "An ideology that focuses on Sinhalese culture and Buddhism. It emerged during the Buddhist revival of the late 19th century as a response to Christian dominance over the island under the British. Sinhalese hegemony and supremacy over Sri Lanka is emphasised to the detriment of mostly Tamils."
+    },
+    {
+    searchString: "Sinhalese Nationalism",
     explanationText: "An ideology that focuses on Sinhalese culture and Buddhism. It emerged during the Buddhist revival of the late 19th century as a response to Christian dominance over the island under the British. Sinhalese hegemony and supremacy over Sri Lanka is emphasised to the detriment of mostly Tamils."
     },
     {
@@ -1463,6 +1471,10 @@ const tooltipList = [{
     },
     {
     searchString: "Sinhalese Buddhist nationalism",
+    explanationText: "An ideology that focuses on Sinhalese culture and Buddhism. It emerged during the Buddhist revival of the late 19th century as a response to Christian dominance over the island under the British. Sinhalese hegemony and supremacy over Sri Lanka is emphasised to the detriment of mostly Tamils."
+    },
+    {
+    searchString: "Sinhalese Buddhist Nationalism",
     explanationText: "An ideology that focuses on Sinhalese culture and Buddhism. It emerged during the Buddhist revival of the late 19th century as a response to Christian dominance over the island under the British. Sinhalese hegemony and supremacy over Sri Lanka is emphasised to the detriment of mostly Tamils."
     },
 
