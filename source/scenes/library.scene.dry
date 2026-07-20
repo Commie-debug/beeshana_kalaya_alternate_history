@@ -1146,7 +1146,7 @@ Militarization: [+ jvpt_militancy : militancy +]
 
 [? if stf_formed = 1 : **STF** - *Special Task Force* - The STF are the recently formed "special forces" of the Sri Lankan police. They specialise in anti-irregular military, apprehension of armed and dangerous criminals, clandestine and covert operations and other tasks requiring special training. ?]
 
-[? if civilsec_formed = 0 : **Home Guard** - They are a loosely structured state-organized, armed paramilitary volunteer force. Formed by local sinhalese and muslim villagers in the north-east provinces. Their main objective is to defend their villages and towns from tamil militant attacks. ?]
+[? if civilsec_formed = 0 : **Home Guard** - They are a loosely structured state-organized, armed paramilitary volunteer force. Formed by local Sinhalese and Muslim villagers in the north-east provinces. Their main objective is to defend their villages and towns from tamil militant attacks. They are however lightly armed. ?]
 
 [? if civilsec_formed = 1 : **Civil Security** - Reorganised from the former "Home Guard" units, they share the same goal in addition to supporting the military and keeping order.?]
 
