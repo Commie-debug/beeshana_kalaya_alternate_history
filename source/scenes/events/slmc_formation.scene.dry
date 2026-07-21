@@ -5,22 +5,22 @@ max-visits: 1
 tags: event
 on-arrival: {!
 
+
+//since SLMC was not offically a party, its support is negligable but when it takes steps to become a full party its support will significantly rise
 Q.slmc_formed = 1; 
 Q.parties.push('slmc'); 
 Q.sinhala_slmc = 0; 
-Q.sltamil_slmc = 3; 
+Q.sltamil_slmc = 2; 
 Q.itamil_slmc = 0; 
-Q.muslim_slmc = 70; 
-Q.muslim_unp -= 60; 
+Q.muslim_slmc = 5; 
 Q.other_slmc = 0; 
-Q.workers_slmc = 8; 
-Q.middle_slmc = 10; 
-Q.upper_slmc = 5; 
-Q.rural_slmc = 12; 
+Q.workers_slmc = 0; 
+Q.middle_slmc = 3; 
+Q.upper_slmc = 2; 
+Q.rural_slmc = 2; 
 Q.slmc_relation = 50; 
 Q.slmc_r = 0; 
 Q.old_slmc_r = 0;
-
 Q.slmc_pres_yes = 0;
 Q.slmc_parl_yes = 0;
 
