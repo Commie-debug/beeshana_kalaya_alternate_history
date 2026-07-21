@@ -196,7 +196,7 @@ for (var i = 0; i < nonParticipating.length; i++) {
     var partyDisplay = window.displayText('<b>' + partyUp + '</b>');
     badgesHtml += '<span style="display:inline-flex; align-items:center; gap:0.3em;">' + partyDisplay + '</span>';
 }
-Q.nonparticipating_html = '<p><b>Parties not participating in this election:</b></p><div style="display:flex; flex-wrap:wrap; gap:0.5em; margin-top:0.5em;">' + badgesHtml + '</div>';
+Q.nonparticipating_html = '<p><b>Parties not participating or cannot take part in this election:</b></p><div style="display:flex; flex-wrap:wrap; gap:0.5em; margin-top:0.5em;">' + badgesHtml + '</div>';
 !}
 
 The candidates and the spread of support appeared at the time to be as follows.
