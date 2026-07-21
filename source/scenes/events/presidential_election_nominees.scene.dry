@@ -1,5 +1,5 @@
 title: Nominations for the upcoming presidential elections are being submitted
-view-if: ((year = next_pres_election_year and month >= next_pres_election_month-1) or (year > next_pres_election_year)) and (week = next_pres_election_week)
+view-if: ((year = next_pres_election_year and month >= (next_pres_election_month - 1)) or (year > next_pres_election_year)) and (week = next_pres_election_week)
 max-visits: 1
 new-page: true
 tags: event
