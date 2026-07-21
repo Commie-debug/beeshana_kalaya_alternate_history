@@ -21,6 +21,9 @@ Q.slmc_relation = 50;
 Q.slmc_r = 0; 
 Q.old_slmc_r = 0;
 
+Q.slmc_pres_yes = 0;
+Q.slmc_parl_yes = 0;
+
 !}
 
 = Sri Lanka Muslim Congress formed
