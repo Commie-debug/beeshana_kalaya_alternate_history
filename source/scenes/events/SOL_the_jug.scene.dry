@@ -1,8 +1,9 @@
 title: The Jug
 new-page: true
 is-card: true
-view-if: (slice_of_life = 1) and (year = 1981 and month = 3 and week = 1)
+view-if: slice_of_life = 1 and (year = 1981 and month = 3 and week = 1)
 max-visits: 1
+tags: event
 
 = Wellawatte, Colombo, March 1981
 
