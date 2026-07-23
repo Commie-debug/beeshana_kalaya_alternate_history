@@ -1,0 +1,5 @@
+title: Four Four Bravo
+view-if: year = 1981 and month = 2 and week = 1
+max-visits: 1
+tags: event
+new-page: true
