@@ -1617,6 +1617,17 @@ window.updateSidebarRight = function() {
 
 }());
 
+function enableSliceOfLife(){
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.slice_of_life = 1;
+
+}
+
+function disableSliceOfLife(){
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    Q.slice_of_life = 0;
+}
+
 // Western Province
 function Colombo_info() {
   var Q = window.dendryUI.dendryEngine.state.qualities;

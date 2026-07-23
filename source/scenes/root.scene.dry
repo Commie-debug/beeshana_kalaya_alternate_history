@@ -29,6 +29,8 @@ Q.day_actions = 0;
 
 Q.bg_image = "img/map_2.jpg";
 
+//slice of life events, can be turned off in the settings
+Q.slice_of_life = 1;
 
 Q.state_of_emergency = 0;
 
