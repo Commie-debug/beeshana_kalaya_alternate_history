@@ -12,10 +12,10 @@ subtitle: The class vote.
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @upper: Wealthy elites, landowners, business magnates, and high-ranking politicians.
-- @middle: Educated professionals and civil servants of the middle class.
 - @worker: Urban and industrial laborers (factory workers, plantation workers).
 - @rural: Farmers and villagers dependent on agriculture and mining.
+- @middle: Educated professionals and civil servants of the middle class.
+- @upper: Wealthy elites, landowners, business magnates, and high-ranking politicians.
 - @ethnic: Why not engage the people along ethnic lines.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
