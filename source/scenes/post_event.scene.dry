@@ -377,8 +377,6 @@ go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0
 
 = Week [+ week +] [+ month : month +] [+ year +]
 
-= Week 3 July 1983
-
 @events_choice
 
 - #event
