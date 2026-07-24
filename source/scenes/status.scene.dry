@@ -361,13 +361,17 @@ if (Q.ipkf_morale) {
 
 War Exhaustion: [+ war_exhaustion : coalition_dissent +]
 
-Sri Lanka Armed Forces: [+ slaf_strength +] thousand troops. Morale: [+ slaf_morale : loyalty +]. Readiness: [+ slaf_readiness : militancy +]
+Sri Lanka Armed Forces: Readiness: [+ slaf_readiness : militancy +]
 
 Sri Lanka Police: [+ slp_strength +] thousand members. Morale: [+ slp_morale : loyalty +]. Readiness: [+ slp_readiness : militancy +]
 
 [? if stf_formed = 1 : Special Task Force: [+ stf_strength +] thousand members. Morale: [+ stf_morale : loyalty +]. Readiness: [+ stf_readiness : militancy +] ?]
 
 [? if civilsec_formed = 0 : Home Guard ?][? if civilsec_formed = 1 : Civil Security ?]:[+ homeg_civilsec_strength +] thousand members. Morale: [+ homeg_civilsec_morale : loyalty +]. Readiness: [+ homeg_civilsec_readiness : militancy +]
+
+<tr>
+    <td> <hr> </td>
+</tr>
 
 [? if epdp_formed = 1 : EPDP: Strength: [+ epdp_strength_2 : group_strength +], Militarization: [+ epdp_militancy : militancy +] ?]
 

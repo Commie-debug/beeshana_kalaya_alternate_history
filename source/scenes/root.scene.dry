@@ -513,9 +513,22 @@ Q.slp_strength = 17;
 Q.slp_readiness = 0.15;
 Q.slp_morale = 0.7;
 
-Q.slaf_strength = 14.9;
-Q.slaf_readiness = 0.09;
+//divided armed forces into army, navy & airforce
+//unified armed forces morale
 Q.slaf_morale = 0.7;
+
+//army
+Q.slaf_ar_strenght = 10.5;
+Q.slaf_ar_readiness = 
+
+//navy
+Q.slaf_na_strenght =
+Q.slaf_na_readiness =
+
+//airforce
+Q.slaf_af_strenght =
+Q.slaf_af_readiness =
+
 
 //war exhastion, how tired the populace/society and the security forces are with the war (both the tamil and jvp)
 //uses the coalition dissent qdisplay
